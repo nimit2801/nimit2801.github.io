@@ -1,24 +1,6 @@
-# hello-vue3
+# Welcome to my portofolio website
 
-## Project setup
-```
-yarn install
-```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+![image](https://user-images.githubusercontent.com/53462249/127942072-0e207270-2f42-4952-8b50-83432bcac6c4.png)
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Design: [figma](https://www.figma.com/file/8FrMc3ozz0iKaCh784Vi6h/Portfolio-Website?node-id=0%3A1)
