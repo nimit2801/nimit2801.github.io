@@ -1,6 +1,7 @@
 <template>
   <div>
   Hey Welcome! To Nimit's website
+  feel free to drop a message on discord: Nimit#4979
   </div>
 </template>
 
