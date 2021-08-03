@@ -1,13 +1,17 @@
+import cat from 
 <template>
   <div>
-  Hey Welcome! To Nimit's website
-  feel free to drop a message on discord: Nimit#4979
+    <img id="img_" src="./assets/Catcat.png">
   </div>
 </template>
 
 <script>
+import image from "./assets/Catcat.png"
 export default {
   name: 'App',
+  data: function() {
+    return image
+  },
   props: {
     counter: Number,
   }
@@ -25,5 +29,12 @@ body {
   text-align: center;
   color:aliceblue;
   margin-top: 60px;
+}
+
+#img_ {
+  position: relative;
+  margin-top: 12rem;
+  width: 285px;
+  height: 188px;
 }
 </style>
