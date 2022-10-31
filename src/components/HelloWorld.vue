@@ -3,11 +3,9 @@
 </script>
 
 <template>
-    <img class="img_" src="../assets/Cat.png" alt="A cat image">
+    <h1>Welcome to Nimit's Website</h1>
 </template>
 
 <style>
-  .img_{
-    margin-top: 10em;
-  }
+
 </style>
