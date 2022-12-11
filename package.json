@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 8080",
+    "host": "vite --host 8080",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 8080"
   },
