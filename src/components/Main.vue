@@ -33,7 +33,7 @@
                 <h4>LinkedIn</h4>
             </div>
         </a>
-        <a href="mailto:mnimitsavant@outlook.com" target=”_blank”>
+        <a href="mailto:hello@nimitsavant.me" target=”_blank”>
             <div class="item"><img src="https://img.icons8.com/ios-glyphs/48/null/circled-envelope.png" />
                 <h4>Contact Me</h4>
             </div>
