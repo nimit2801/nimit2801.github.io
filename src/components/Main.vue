@@ -12,7 +12,7 @@
         <p>I'm a backend developer who loves to work with communities and build products. Currently I'm learning devOps
             and other emerging backend tech stack
             You can get my <a
-                href="https://cdn.discordapp.com/attachments/708326707182174218/1051527028895141928/Nimit_Resume_Update_11.12.22.pdf"
+                href="https://cdn.discordapp.com/attachments/708326707182174218/1096324607159578674/Nimit_Resume.pdf"
                 target="_blank">Resume Here!</a>
         </p>
     </div>
