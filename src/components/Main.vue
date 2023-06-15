@@ -38,6 +38,23 @@
                 <h4>Contact Me</h4>
             </div>
         </a>
+        <a href="https://calendly.com/nimit2801/30min" target=”_blank”>
+            <div class="item"><img width="48" src="https://img.icons8.com/wired/64/google-meet--v1.png" />
+                <h4>Let's Meet</h4>
+            </div>
+        </a>
+        <a href="https://cdn.discordapp.com/attachments/1119023534979690616/1119023575400194119/Nimit_Resume.pdf"
+            target=”_blank”>
+            <div class="item"><img width="48" src="https://img.icons8.com/ios-glyphs/90/resume.png" />
+                <h4>Resume Here Too</h4>
+            </div>
+        </a>
+        <a href="https://discord.gg/BB5AqebMgk" target=”_blank”>
+            <div class="item"><img width="48" src="https://img.icons8.com/ios/50/discord-logo--v1.png"
+                    alt="discord-logo--v1" />
+                <h4>Connect On Discord</h4>
+            </div>
+        </a>
     </div>
 </template>
 
@@ -107,7 +124,7 @@
 .container {
     display: inline-grid;
     gap: 1em;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto;
     padding: 10px;
 }
 

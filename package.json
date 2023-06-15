@@ -7,7 +7,8 @@
     "host": "vite --host 8080",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 8080",
-    "deploy": "gh-pages -d dist -m \"New Push from main ✨\""
+    "addCname": "cd dist && touch CNAME && echo nimitsavant.me >> CNAME && cd ..",
+    "deploy": "yarn addCname && gh-pages -d dist -m \"New Push from main ✨\""
   },
   "dependencies": {
     "simple-analytics-vue": "^3.0.2",
