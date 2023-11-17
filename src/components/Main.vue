@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+    const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Project Manager who loves to work with Open Source projects. I\'m currently looking for various open source projects I can contribute too and give my expertise to make development better. Along with development I also have a keen interest in Developer Relations, as I\'ve been a advocate of technologies in my career. I love to talk about new developments in the fiend of software and how that can benefit developer experience.';
 </script>
 
 <template>
@@ -9,8 +9,7 @@
     </div>
     <div class="about-me">
         <h1>About Me</h1>
-        <p>I'm a backend developer who loves to work with communities and build products. Currently I'm learning devOps
-            and other emerging backend tech stack
+        <p>{{aboutMe}}
             You can get my <a
                 href="https://cdn.discordapp.com/attachments/1119023534979690616/1119023575400194119/Nimit_Resume.pdf"
                 target="_blank">Resume Here!</a>
@@ -60,7 +59,7 @@
 
 <style>
 .ufo-image {
-    width: 10%;
+    width: 8%;
     margin-bottom: 3%;
 }
 
@@ -123,7 +122,7 @@
 
 .container {
     display: inline-grid;
-    gap: 1em;
+    gap: 0.2em;
     grid-template-columns: auto auto auto auto auto auto auto;
     padding: 10px;
 }
@@ -134,10 +133,14 @@
     text-align: center;
 }
 
+.item>img {
+    width: 1.5em;
+}
+
 .item>h4 {
     margin-top: 5px;
     margin-bottom: 10px;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 a {
