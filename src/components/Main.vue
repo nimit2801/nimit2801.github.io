@@ -11,7 +11,7 @@
         <h1>About Me</h1>
         <p>{{aboutMe}}
             You can get my <a
-                href="/src/assets/Nimit_Resume.pdf"
+                href="/files/Nimit_Resume.pdf"
                 target="_blank">Resume Here!</a>
         </p>
     </div>
@@ -42,7 +42,7 @@
                 <h4>Let's Meet</h4>
             </div>
         </a>
-        <a href="/src/assets/Nimit_Resume.pdf"
+        <a href="/files/Nimit_Resume.pdf"
             target=”_blank”>
             <div class="item"><img width="48" src="https://img.icons8.com/ios-glyphs/90/resume.png" />
                 <h4>Resume Here Too</h4>
