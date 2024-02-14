@@ -1,0 +1,25 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Checking build..."
+yarn build
+
+if [ $? -ne 0 ]; then
+  echo "Build failed, aborting push"
+  exit 1
+fi
+
+echo "Running dev server..."
+yarn dev &
+
+PID=$!
+
+
+if [ $? -ne 0 ]; then
+  echo "Dev server failed, aborting push"
+  exit 1
+fi
+
+sleep 5
+
+kill $PID
