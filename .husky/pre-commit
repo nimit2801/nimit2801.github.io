@@ -10,9 +10,16 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Running dev server..."
-yarn dev
+yarn dev &
+
+PID=$!
+
 
 if [ $? -ne 0 ]; then
   echo "Dev server failed, aborting push"
   exit 1
 fi
+
+sleep 5
+
+kill $PID
