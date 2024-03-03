@@ -5,6 +5,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "allowJs": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
@@ -13,6 +14,6 @@
     "lib": ["esnext", "dom"],
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/main.js"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/main.js", "src/utils/plausible.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
