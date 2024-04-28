@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Project Manager who loves to work with Communities and Startups. I\'m currently looking for various open source projects I can contribute too. Along with development I also have a keen interest in Developer Relations and openly looking for DevAdvocacy Roles. I\'ve loved to talk about new technologies in the field of Software Tech, and how they can benefit developer experience.';
+const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Project Manager who loves to work with Communities and Startups. I\'m currently looking for various open source projects I can contribute too. Along with development I also have a keen interest in Developer Relations and openly looking for DevAdvocacy Roles. I\'ve loved to talk about new technologies in the field of Software Tech, and how they can benefit developer experience.';
 </script>
 
 <template>
@@ -10,13 +10,11 @@
         </div>
         <div class="about-me">
             <h1>About Me</h1>
-            <p>{{aboutMe}}
-                You can get my <a
-                    href="/files/Nimit_Resume.pdf"
-                    target="_blank">Resume Here!</a>
+            <p>{{ aboutMe }}
+                You can get my <a href="/files/Nimit_Resume.pdf" target="_blank">Resume Here!</a>
             </p>
         </div>
-        <div class="container">
+        <div class="logo-container">
             <a href="https://github.com/nimit2801" target=”_blank”>
                 <div class="item"><img src="https://img.icons8.com/material-rounded/48/null/github.png" />
                     <h4>GitHub Profile</h4>
@@ -43,8 +41,7 @@
                     <h4>Let's Meet</h4>
                 </div>
             </a>
-            <a href="/files/Nimit_Resume.pdf"
-                target=”_blank”>
+            <a href="/files/Nimit_Resume.pdf" target=”_blank”>
                 <div class="item"><img width="48" src="https://img.icons8.com/ios-glyphs/90/resume.png" />
                     <h4>Resume Here Too</h4>
                 </div>
@@ -64,6 +61,37 @@
 </template>
 
 <style scoped>
+/* mobile view */
+
+@media only screen and (max-width: 600px) {
+    .ufo-image {
+        width: 20%;
+        margin-bottom: 1.5em;
+    }
+
+    .typewriter h1 {
+        font-weight: 200;
+        font-size: 30px !important;
+    }
+
+    .about-me {
+        width: 80% !important;
+    }
+
+    .about-me h1 {
+        font-size: 25px !important;
+    }
+
+    .logo-container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    .item {
+        font-size: 15px !important;
+    }
+
+}
 
 .ufo-image {
     width: 8%;
@@ -127,7 +155,7 @@
     }
 }
 
-.container {
+.logo-container {
     display: inline-grid;
     gap: 0.2em;
     grid-template-columns: auto auto auto auto auto auto auto;
@@ -149,5 +177,4 @@
     margin-bottom: 10px;
     font-size: 15px;
 }
-
 </style>
