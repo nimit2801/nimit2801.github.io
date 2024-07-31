@@ -4,53 +4,44 @@ const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Pr
 
 <template>
     <div id="main">
-        <img class="ufo-image" src="../assets/polar-ufo-1.gif">
+        <img class="ufo-image" src="../assets/polar-ufo-1.gif" alt="UFO">
         <div class="typewriter">
-            <h1 class="typewriter">Welcome to Nimit's Website</h1>
+            <h1>Welcome to Nimit's Website</h1>
         </div>
         <div class="about-me">
-            <h1>About Me</h1>
+            <h2>About Me</h2>
             <p>{{ aboutMe }}
                 You can get my <a href="/files/Nimit_Resume.pdf" target="_blank">Resume Here!</a>
             </p>
         </div>
         <div class="logo-container">
-            <a href="https://github.com/nimit2801" target=”_blank”>
-                <div class="item"><img src="https://img.icons8.com/material-rounded/48/null/github.png" />
-                    <h4>GitHub Profile</h4>
-                </div>
+            <a href="https://github.com/nimit2801" target="_blank" class="item">
+                <img src="https://img.icons8.com/material-rounded/48/null/github.png" alt="GitHub" />
+                <h4>GitHub Profile</h4>
             </a>
-            <a href="https://twitter.com/SavantNimit" target=”_blank”>
-                <div class="item"><img src="https://img.icons8.com/color/48/null/twitter--v1.png" />
-                    <h4>Twitter</h4>
-                </div>
+            <a href="https://twitter.com/SavantNimit" target="_blank" class="item">
+                <img src="https://img.icons8.com/color/48/null/twitter--v1.png" alt="Twitter" />
+                <h4>Twitter</h4>
             </a>
-            <a href="https://www.linkedin.com/in/nimit-savant-95b7571a0/" target=”_blank”>
-
-                <div class="item"><img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png" />
-                    <h4>LinkedIn</h4>
-                </div>
+            <a href="https://www.linkedin.com/in/nimit-savant-95b7571a0/" target="_blank" class="item">
+                <img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png" alt="LinkedIn" />
+                <h4>LinkedIn</h4>
             </a>
-            <a href="mailto:hello@nimitsavant.me" target=”_blank”>
-                <div class="item"><img src="https://img.icons8.com/ios-glyphs/48/null/circled-envelope.png" />
-                    <h4>Contact Me</h4>
-                </div>
+            <a href="mailto:hello@nimitsavant.me" target="_blank" class="item">
+                <img src="https://img.icons8.com/ios-glyphs/48/null/circled-envelope.png" alt="Email" />
+                <h4>Contact Me</h4>
             </a>
-            <a href="https://calendly.com/nimit2801/30min" target=”_blank”>
-                <div class="item"><img width="48" src="https://img.icons8.com/wired/64/google-meet--v1.png" />
-                    <h4>Let's Meet</h4>
-                </div>
+            <a href="https://calendly.com/nimit2801/30min" target="_blank" class="item">
+                <img width="48" src="https://img.icons8.com/wired/64/google-meet--v1.png" alt="Meet" />
+                <h4>Let's Meet</h4>
             </a>
-            <a href="/files/Nimit_Resume.pdf" target=”_blank”>
-                <div class="item"><img width="48" src="https://img.icons8.com/ios-glyphs/90/resume.png" />
-                    <h4>Resume Here Too</h4>
-                </div>
+            <a href="/files/Nimit_Resume.pdf" target="_blank" class="item">
+                <img width="48" src="https://img.icons8.com/ios-glyphs/90/resume.png" alt="Resume" />
+                <h4>Resume Here Too</h4>
             </a>
-            <a href="https://discord.gg/BB5AqebMgk" target=”_blank”>
-                <div class="item"><img width="48" src="https://img.icons8.com/ios/50/discord-logo--v1.png"
-                        alt="discord-logo--v1" />
-                    <h4>Connect On Discord</h4>
-                </div>
+            <a href="https://discord.gg/BB5AqebMgk" target="_blank" class="item">
+                <img width="48" src="https://img.icons8.com/ios/50/discord-logo--v1.png" alt="Discord" />
+                <h4>Connect On Discord</h4>
             </a>
         </div>
 
@@ -61,60 +52,25 @@ const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Pr
 </template>
 
 <style scoped>
-/* mobile view */
-
-@media only screen and (max-width: 600px) {
-    .ufo-image {
-        width: 20%;
-        margin-bottom: 1.5em;
-    }
-
-    .typewriter h1 {
-        font-weight: 200;
-        font-size: 30px !important;
-    }
-
-    .about-me {
-        width: 80% !important;
-    }
-
-    .about-me h1 {
-        font-size: 25px !important;
-    }
-
-    .logo-container {
-        display: flex !important;
-        flex-wrap: wrap !important;
-    }
-
-    .item {
-        font-size: 15px !important;
-    }
-
+#main {
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .ufo-image {
     width: 8%;
+    max-width: 100px;
     margin-bottom: 1.5em;
 }
 
 .typewriter h1 {
     font-weight: 400;
-
     font-size: 50px;
     overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid black;
-    /* The typwriter cursor */
     white-space: nowrap;
-    /* Keeps the content on a single line */
     margin: 0 auto;
-    /* Gives that scrolling effect as the typing happens */
     letter-spacing: .05em;
-    /* Adjust as needed */
-    animation:
-        typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite;
+    animation: typing 3.5s steps(40, end);
 }
 
 .typewriter {
@@ -123,58 +79,83 @@ const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Pr
 
 .about-me {
     margin: auto;
-    width: 50%;
+    width: 80%;
+    max-width: 800px;
     margin-bottom: 3em;
 }
 
-.about-me>p {
-    font-size: 20px;
+.about-me > p {
+    font-size: 18px;
 }
 
 .about-me a {
     text-decoration: underline;
 }
 
-/* The typing effect */
 @keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
+    from { width: 0 }
+    to { width: 100% }
 }
 
 .logo-container {
-    display: inline-grid;
-    gap: 0.2em;
-    grid-template-columns: auto auto auto auto auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 10px;
 }
 
 .item {
-    margin: 10px;
-    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
     text-align: center;
 }
 
-.item>img {
-    width: 1.5em;
+.item > img {
+    width: 48px;
+    height: 48px;
 }
 
-.item>h4 {
+.item > h4 {
     margin-top: 5px;
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ufo-image {
+        width: 20%;
+    }
+
+    .typewriter h1 {
+        font-size: 30px;
+    }
+
+    .about-me {
+        width: 90%;
+    }
+
+    .about-me h2 {
+        font-size: 24px;
+    }
+
+    .about-me > p {
+        font-size: 16px;
+    }
+
+    .item {
+        width: 80px;
+    }
+
+    .item > img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .item > h4 {
+        font-size: 12px;
+    }
 }
 </style>
