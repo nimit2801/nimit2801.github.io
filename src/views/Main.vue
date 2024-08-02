@@ -1,20 +1,35 @@
 <script setup lang="ts">
-const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Project Manager who loves to work with Communities and Startups. I\'m currently looking for various open source projects I can contribute too. Along with development I also have a keen interest in Developer Relations and openly looking for DevAdvocacy Roles. I\'ve loved to talk about new technologies in the field of Software Tech, and how they can benefit developer experience.';
+import { onMounted } from 'vue';
+
+const aboutMe = 'Hello there! I am Nimit Savant, I\'m a Developer Advocate at DevAssure who loves to work with Communities and Startups. I love to talk about new technologies in the field of Software Tech, Quality Engineering, Overservability and how they can benefit developer experience.';
+
+onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+});
 </script>
 
 <template>
     <div id="main">
-        <img class="ufo-image" src="../assets/polar-ufo-1.gif" alt="UFO">
+        <img class="ufo-image floating" src="../assets/polar-ufo-1.gif" alt="UFO">
         <div class="typewriter">
             <h1>Welcome to Nimit's Website</h1>
         </div>
-        <div class="about-me">
+        <div class="about-me hidden">
             <h2>About Me</h2>
             <p>{{ aboutMe }}
                 You can get my <a href="/files/Nimit_Resume.pdf" target="_blank">Resume Here!</a>
             </p>
         </div>
-        <div class="logo-container">
+        <div class="logo-container hidden">
             <a href="https://github.com/nimit2801" target="_blank" class="item">
                 <img src="https://img.icons8.com/material-rounded/48/null/github.png" alt="GitHub" />
                 <h4>GitHub Profile</h4>
@@ -31,7 +46,7 @@ const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Pr
                 <img src="https://img.icons8.com/ios-glyphs/48/null/circled-envelope.png" alt="Email" />
                 <h4>Contact Me</h4>
             </a>
-            <a href="https://calendly.com/nimit2801/30min" target="_blank" class="item">
+            <a href="https://cal.com/nimit-devassure" target="_blank" class="item">
                 <img width="48" src="https://img.icons8.com/wired/64/google-meet--v1.png" alt="Meet" />
                 <h4>Let's Meet</h4>
             </a>
@@ -45,7 +60,7 @@ const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Pr
             </a>
         </div>
 
-        <footer>
+        <footer class="hidden">
             <p>© 2024 Nimit Savant</p>
         </footer>
     </div>
@@ -111,6 +126,11 @@ const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Pr
     align-items: center;
     width: 100px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.1);
 }
 
 .item > img {
@@ -122,6 +142,35 @@ const aboutMe = 'Hello there! I am Nimit Savant, I\'m a backend developer and Pr
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 14px;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @media only screen and (max-width: 768px) {
