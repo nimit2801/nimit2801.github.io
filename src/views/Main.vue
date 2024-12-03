@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 
-const aboutMe = 'Hello there! I am Nimit Savant, I\'m a Developer Advocate at DevAssure who loves to work with Communities and Startups. I love to talk about new technologies in the field of Software Tech, Quality Engineering, Overservability and how they can benefit developer experience.';
+const aboutMe = 'Hello there! I am Nimit Savant, I\'m a Developer Advocate at DevRev who loves to work with Communities and Startups. I love to talk about new technologies in the field of Software Tech, JavaScript,Cloud and Databases and how they can benefit developer experience.';
 
 onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
