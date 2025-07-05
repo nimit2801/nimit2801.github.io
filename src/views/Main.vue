@@ -38,7 +38,7 @@ onMounted(() => {
                 <img src="https://img.icons8.com/color/48/null/twitter--v1.png" alt="Twitter" />
                 <h4>Twitter</h4>
             </a>
-            <a href="https://www.linkedin.com/in/nimit-savant-95b7571a0/" target="_blank" class="item">
+            <a href="https://www.linkedin.com/in/nimitsavant/" target="_blank" class="item">
                 <img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png" alt="LinkedIn" />
                 <h4>LinkedIn</h4>
             </a>
@@ -46,7 +46,7 @@ onMounted(() => {
                 <img src="https://img.icons8.com/ios-glyphs/48/null/circled-envelope.png" alt="Email" />
                 <h4>Contact Me</h4>
             </a>
-            <a href="https://cal.com/nimit-devassure" target="_blank" class="item">
+            <a href="https://cal.com/nimit2801" target="_blank" class="item">
                 <img width="48" src="https://img.icons8.com/wired/64/google-meet--v1.png" alt="Meet" />
                 <h4>Let's Meet</h4>
             </a>
@@ -61,7 +61,7 @@ onMounted(() => {
         </div>
 
         <footer class="hidden">
-            <p>© 2024 Nimit Savant</p>
+            <p>© 2025 Nimit Savant</p>
         </footer>
     </div>
 </template>
@@ -99,7 +99,7 @@ onMounted(() => {
     margin-bottom: 3em;
 }
 
-.about-me > p {
+.about-me>p {
     font-size: 18px;
 }
 
@@ -108,8 +108,13 @@ onMounted(() => {
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 .logo-container {
@@ -133,12 +138,12 @@ onMounted(() => {
     transform: scale(1.1);
 }
 
-.item > img {
+.item>img {
     width: 48px;
     height: 48px;
 }
 
-.item > h4 {
+.item>h4 {
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 14px;
@@ -165,9 +170,11 @@ onMounted(() => {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-20px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -190,7 +197,7 @@ onMounted(() => {
         font-size: 24px;
     }
 
-    .about-me > p {
+    .about-me>p {
         font-size: 16px;
     }
 
@@ -198,12 +205,12 @@ onMounted(() => {
         width: 80px;
     }
 
-    .item > img {
+    .item>img {
         width: 36px;
         height: 36px;
     }
 
-    .item > h4 {
+    .item>h4 {
         font-size: 12px;
     }
 }
