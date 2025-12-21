@@ -1,10 +1,18 @@
 <script setup>
 import { ref } from 'vue';
+import posthog from 'posthog-js';
 
 const blogs = ref(null);
 fetch('https://dev.to/api/articles?username=nimit2801')
     .then(response => response.json())
     .then(data => blogs.value = data);
+
+const trackBlogClick = (blogTitle, blogUrl) => {
+    posthog.capture('blog_clicked', {
+        blog_title: blogTitle,
+        blog_url: blogUrl,
+    });
+};
 </script>
 
 <template>
@@ -15,7 +23,7 @@ fetch('https://dev.to/api/articles?username=nimit2801')
 
         <div class="card-board">
             <div v-for="blog in blogs" :key="blog.id" class="card">
-              <a :href="blog.url" target="_blank">
+              <a :href="blog.url" target="_blank" @click="trackBlogClick(blog.title, blog.url)">
                 <img :src="blog.cover_image" alt="Avatar" class="card-image">
                 <div class="container">
                     <h4><b>{{ blog.title }}</b></h4> 

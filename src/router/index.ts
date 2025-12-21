@@ -4,6 +4,7 @@ import Blogs from "../views/Blogs.vue";
 import TermsAndConditions from "../views/TermsAndConditions.vue";
 import RefundPolicy from "../views/RefundPolicy.vue";
 import PrivacyPolicy from "../views/PrivacyPolicy.vue";
+import posthog from "posthog-js";
 
 const routes = [
   {
@@ -36,6 +37,15 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+});
+
+// Track page views
+router.afterEach((to) => {
+  posthog.capture('$pageview', {
+    $current_url: window.location.href,
+    page_name: to.name,
+    page_path: to.path,
+  });
 });
 
 export default router;

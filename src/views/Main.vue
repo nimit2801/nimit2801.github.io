@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
+import posthog from 'posthog-js';
 
 const aboutMe = 'Hello there! I am Nimit Savant, I\'m a Developer Advocate at DevRev who loves to work with Communities and Startups. I love to talk about new technologies in the field of Software Tech, JavaScript,Cloud and Databases and how they can benefit developer experience.';
+
+const trackClick = (linkType: string, linkUrl: string) => {
+    posthog.capture('link_clicked', {
+        link_type: linkType,
+        link_url: linkUrl,
+    });
+};
 
 onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -26,35 +34,35 @@ onMounted(() => {
         <div class="about-me hidden">
             <h2>About Me</h2>
             <p>{{ aboutMe }}
-                You can get my <a href="/files/Nimit_Resume.pdf" target="_blank">Resume Here!</a>
+                You can get my <a href="/files/Nimit_Resume.pdf" target="_blank" @click="trackClick('resume', '/files/Nimit_Resume.pdf')">Resume Here!</a>
             </p>
         </div>
         <div class="logo-container hidden">
-            <a href="https://github.com/nimit2801" target="_blank" class="item">
+            <a href="https://github.com/nimit2801" target="_blank" class="item" @click="trackClick('github', 'https://github.com/nimit2801')">
                 <img src="https://img.icons8.com/material-rounded/48/null/github.png" alt="GitHub" />
                 <h4>GitHub Profile</h4>
             </a>
-            <a href="https://twitter.com/SavantNimit" target="_blank" class="item">
+            <a href="https://twitter.com/SavantNimit" target="_blank" class="item" @click="trackClick('twitter', 'https://twitter.com/SavantNimit')">
                 <img src="https://img.icons8.com/color/48/null/twitter--v1.png" alt="Twitter" />
                 <h4>Twitter</h4>
             </a>
-            <a href="https://www.linkedin.com/in/nimitsavant/" target="_blank" class="item">
+            <a href="https://www.linkedin.com/in/nimitsavant/" target="_blank" class="item" @click="trackClick('linkedin', 'https://www.linkedin.com/in/nimitsavant/')">
                 <img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png" alt="LinkedIn" />
                 <h4>LinkedIn</h4>
             </a>
-            <a href="mailto:hello@nimitsavant.me" target="_blank" class="item">
+            <a href="mailto:hello@nimitsavant.me" target="_blank" class="item" @click="trackClick('email', 'mailto:hello@nimitsavant.me')">
                 <img src="https://img.icons8.com/ios-glyphs/48/null/circled-envelope.png" alt="Email" />
                 <h4>Contact Me</h4>
             </a>
-            <a href="https://cal.com/nimit2801" target="_blank" class="item">
+            <a href="https://cal.com/nimit2801" target="_blank" class="item" @click="trackClick('meeting', 'https://cal.com/nimit2801')">
                 <img width="48" src="https://img.icons8.com/wired/64/google-meet--v1.png" alt="Meet" />
                 <h4>Let's Meet</h4>
             </a>
-            <a href="/files/Nimit_Resume.pdf" target="_blank" class="item">
+            <a href="/files/Nimit_Resume.pdf" target="_blank" class="item" @click="trackClick('resume', '/files/Nimit_Resume.pdf')">
                 <img width="48" src="https://img.icons8.com/ios-glyphs/90/resume.png" alt="Resume" />
                 <h4>Resume Here Too</h4>
             </a>
-            <a href="https://discord.gg/BB5AqebMgk" target="_blank" class="item">
+            <a href="https://discord.gg/BB5AqebMgk" target="_blank" class="item" @click="trackClick('discord', 'https://discord.gg/BB5AqebMgk')">
                 <img width="48" src="https://img.icons8.com/ios/50/discord-logo--v1.png" alt="Discord" />
                 <h4>Connect On Discord</h4>
             </a>
