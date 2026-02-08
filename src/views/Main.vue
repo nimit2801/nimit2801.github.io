@@ -69,7 +69,16 @@ onMounted(() => {
         </div>
 
         <footer class="hidden">
-            <p>© 2025 Nimit Savant</p>
+            <div class="footer-links">
+                <router-link to="/privacy-policy" @click="trackClick('footer_link', '/privacy-policy')">Privacy Policy</router-link>
+                <span class="divider">|</span>
+                <router-link to="/livestream-privacy-policy" @click="trackClick('footer_link', '/livestream-privacy-policy')">Livestream Privacy Policy</router-link>
+                <span class="divider">|</span>
+                <router-link to="/termsandconditions" @click="trackClick('footer_link', '/termsandconditions')">Terms & Conditions</router-link>
+                <span class="divider">|</span>
+                <router-link to="/refund-policy" @click="trackClick('footer_link', '/refund-policy')">Refund Policy</router-link>
+            </div>
+            <p>© 2026 Nimit Savant</p>
         </footer>
     </div>
 </template>
@@ -221,5 +230,51 @@ onMounted(() => {
     .item>h4 {
         font-size: 12px;
     }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-links .divider {
+        display: none;
+    }
+}
+
+footer {
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    margin-top: 1rem;
+    color: #888;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #0077b5;
+    text-decoration: underline;
+}
+
+.footer-links .divider {
+    color: #555;
+    font-size: 12px;
 }
 </style>

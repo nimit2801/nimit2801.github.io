@@ -4,6 +4,7 @@ import Blogs from "../views/Blogs.vue";
 import TermsAndConditions from "../views/TermsAndConditions.vue";
 import RefundPolicy from "../views/RefundPolicy.vue";
 import PrivacyPolicy from "../views/PrivacyPolicy.vue";
+import LivestreamPrivacyPolicy from "../views/LivestreamPrivacyPolicy.vue";
 import posthog from "posthog-js";
 
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
     path: "/privacy-policy",
     name: "PrivacyPolicy",
     component: PrivacyPolicy,
+  },
+  {
+    path: "/livestream-privacy-policy",
+    name: "LivestreamPrivacyPolicy",
+    component: LivestreamPrivacyPolicy,
   },
 ];
 
