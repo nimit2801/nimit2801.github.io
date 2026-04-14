@@ -1,6 +1,7 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Main.vue";
 import Blogs from "../views/Blogs.vue";
+import AgentResearch from "../views/AgentResearch.vue";
 import TermsAndConditions from "../views/TermsAndConditions.vue";
 import RefundPolicy from "../views/RefundPolicy.vue";
 import PrivacyPolicy from "../views/PrivacyPolicy.vue";
@@ -9,7 +10,7 @@ import posthog from "posthog-js";
 
 const routes = [
   {
-    path: "",
+    path: "/",
     name: "Home",
     component: Home,
   },
@@ -17,6 +18,11 @@ const routes = [
     path: "/blogs",
     name: "Blogs",
     component: Blogs,
+  },
+  {
+    path: "/agent-research",
+    name: "AgentResearch",
+    component: AgentResearch,
   },
   {
     path: "/termsandconditions",
@@ -41,7 +47,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
