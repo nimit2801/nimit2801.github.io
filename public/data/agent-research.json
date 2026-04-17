@@ -1,25 +1,42 @@
 {
-  "generatedAt": "2026-04-17T06:06:47Z",
+  "generatedAt": "2026-04-17T07:15:34Z",
   "windowDays": 7,
-  "summary": "This cycle is clustering around major labs, open weights, and coding agents. The strongest signal is that people want better tool surfaces, tighter evals, and less fragile agent loops.",
+  "summary": "This cycle is clustering around major labs, coding agents, and open weights. The strongest signal is that people want better tool surfaces, tighter evals, and less fragile agent loops.",
   "sourceStats": {
-    "items": 76,
+    "items": 199,
     "sources": {
-      "Hacker News": 44,
+      "Hacker News": 43,
+      "Reddit": 124,
       "Hugging Face": 32,
-      "Major labs": 30
+      "Major labs": 74
     }
   },
   "highlights": [
     {
-      "title": "Show HN: Agent Armor, a Rust runtime for enforcing policies on AI agent actions",
+      "title": "Show HN: Viche – OSS private registry for agent communication",
       "source": "Hacker News",
-      "url": "https://github.com/EdoardoBambini/Agent-Armor-Iaga",
-      "meta": "5 points · 4 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-17T05:57:53Z",
-      "score": 46.65277777777778
+      "url": "https://github.com/viche-ai/viche",
+      "meta": "1 points · 0 comments",
+      "why": "The big labs still set the tone when they ship model or platform changes.",
+      "topics": [
+        "Major labs",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-17T07:04:28Z",
+      "score": 26.65277777777778
+    },
+    {
+      "title": "Is there any local model that can replace Haiku 4.5 in an agent workflow using Ollama?",
+      "source": "r/LocalLLaMA",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1snt8ff/is_there_any_local_model_that_can_replace_haiku/",
+      "meta": "0 upvotes · 0 comments",
+      "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+      "topics": [
+        "Multi-agent workflows",
+        "Open weights"
+      ],
+      "publishedAt": "2026-04-17T06:50:04Z",
+      "score": 19.72222222222222
     },
     {
       "title": "agentscope-ai/QwenPaw-Flash-4B",
@@ -35,6 +52,28 @@
       "score": 17.6916
     },
     {
+      "title": "Engram – context spine for AI coding agents, 88% proven token savings",
+      "source": "Hacker News",
+      "url": "https://github.com/NickCirv/engram",
+      "meta": "1 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-17T06:50:23Z",
+      "score": 26.65277777777778
+    },
+    {
+      "title": "Show HN: Agent Armor, a Rust runtime for enforcing policies on AI agent actions",
+      "source": "Hacker News",
+      "url": "https://github.com/EdoardoBambini/Agent-Armor-Iaga",
+      "meta": "7 points · 5 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-04-17T05:57:53Z",
+      "score": 53.55040952932099
+    },
+    {
       "title": "The New Postman Is Here: AI-Native and Built for the Agentic Era",
       "source": "Hacker News",
       "url": "https://blog.postman.com/new-postman-is-here/",
@@ -42,7 +81,7 @@
       "why": "This is a useful signal for how people are actually building with agents right now.",
       "topics": [],
       "publishedAt": "2026-04-17T05:32:43Z",
-      "score": 26.65277777777778
+      "score": 26.40476909722222
     },
     {
       "title": "Building an Unverified Compiler with Agents",
@@ -52,54 +91,20 @@
       "why": "This is a useful signal for how people are actually building with agents right now.",
       "topics": [],
       "publishedAt": "2026-04-17T05:14:44Z",
-      "score": 26.65277777777778
+      "score": 26.30069888117284
     },
     {
       "title": "Show HN: Valuepulse – search docs, query data, and build dashboards in one place",
       "source": "Hacker News",
       "url": "https://valuepulse.ai",
-      "meta": "1 points · 0 comments",
+      "meta": "2 points · 1 comments",
       "why": "The big labs still set the tone when they ship model or platform changes.",
       "topics": [
         "Tool use",
         "Major labs"
       ],
       "publishedAt": "2026-04-17T03:04:01Z",
-      "score": 25.94223042052469
-    },
-    {
-      "title": "I built 7 AI agents that attack the same task in parallel – armyai.app",
-      "source": "Hacker News",
-      "url": "https://armyai.app",
-      "meta": "1 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-17T02:09:03Z",
-      "score": 25.624136284722226
-    },
-    {
-      "title": "Show HN: VCoding – A 5 MB native Windows IDE with no dynamic dependencies",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47800792",
-      "meta": "1 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [
-        "Coding agents"
-      ],
-      "publishedAt": "2026-04-16T23:20:23Z",
-      "score": 24.648056037808644
-    },
-    {
-      "title": "Isolating AI Coding Agents on Bare Metal",
-      "source": "Hacker News",
-      "url": "https://blog.singlr.ai/isolating-ai-coding-agents-bare-metal-incus-podman/",
-      "meta": "3 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [
-        "Coding agents"
-      ],
-      "publishedAt": "2026-04-16T23:01:17Z",
-      "score": 28.537523630401235
+      "score": 30.544236689814813
     }
   ],
   "sourceSections": [
@@ -111,7 +116,7 @@
           "title": "Launch HN: Kampala (YC W26) – Reverse-Engineer Apps into APIs",
           "source": "Hacker News",
           "url": "https://www.zatanna.ai/kampala",
-          "meta": "85 points · 65 comments",
+          "meta": "85 points · 67 comments",
           "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
           "topics": [
             "MCP",
@@ -120,30 +125,20 @@
             "Multi-agent workflows"
           ],
           "publishedAt": "2026-04-16T15:19:54Z",
-          "score": 384.8674811921296
+          "score": 390.46948746141976
         },
         {
           "title": "Show HN: SPICE simulation → oscilloscope → verification with Claude Code",
           "source": "Hacker News",
           "url": "https://lucasgerads.com/blog/lecroy-mcp-spice-demo/",
-          "meta": "54 points · 11 comments",
+          "meta": "65 points · 13 comments",
           "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
           "topics": [
             "MCP",
             "Coding agents"
           ],
           "publishedAt": "2026-04-17T00:37:47Z",
-          "score": 164.09597270447532
-        },
-        {
-          "title": "HoloTab: A Chrome extension powered by Holo3, a SOTA computer-use model",
-          "source": "Hacker News",
-          "url": "https://hcompany.ai/holotab",
-          "meta": "22 points · 7 comments",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-04-15T09:16:14Z",
-          "score": 74.42959538966049
+          "score": 191.69797897376543
         },
         {
           "title": "Show HN: Agent-cache – Multi-tier LLM/tool/session caching for Valkey and Redis",
@@ -155,29 +150,98 @@
             "Memory and state"
           ],
           "publishedAt": "2026-04-16T12:37:56Z",
-          "score": 62.9301740933642
+          "score": 62.53218036265432
         },
         {
-          "title": "Show HN: Stage – Putting humans back in control of code review",
+          "title": "Aliens.gov Resolves – To a WordPress \"Site Not Found\" Error",
           "source": "Hacker News",
-          "url": "https://stagereview.app/",
-          "meta": "9 points · 7 comments",
-          "why": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows",
-            "Voice and multimodal",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-16T17:36:29Z",
-          "score": 59.657894000771606
+          "url": "https://news.ycombinator.com/item?id=47800456",
+          "meta": "10 points · 4 comments",
+          "why": "This is a useful signal for how people are actually building with agents right now.",
+          "topics": [],
+          "publishedAt": "2026-04-16T22:43:56Z",
+          "score": 54.039124807098766
+        },
+        {
+          "title": "Show HN: Agent Armor, a Rust runtime for enforcing policies on AI agent actions",
+          "source": "Hacker News",
+          "url": "https://github.com/EdoardoBambini/Agent-Armor-Iaga",
+          "meta": "7 points · 5 comments",
+          "why": "This is a useful signal for how people are actually building with agents right now.",
+          "topics": [],
+          "publishedAt": "2026-04-17T05:57:53Z",
+          "score": 53.55040952932099
         }
       ]
     },
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": []
+      "items": [
+        {
+          "title": "Introducing Claude Opus 4.7, our most capable Opus model yet.",
+          "source": "r/ClaudeAI",
+          "url": "https://www.reddit.com/gallery/1sn57af",
+          "meta": "2994 upvotes · 736 comments",
+          "why": "The big labs still set the tone when they ship model or platform changes.",
+          "topics": [
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-16T14:29:56Z",
+          "score": 5978.344262808642
+        },
+        {
+          "title": "Only LocalLLaMa can save us now.",
+          "source": "r/LocalLLaMA",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1snbl1d/only_localllama_can_save_us_now/",
+          "meta": "309 upvotes · 118 comments",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-16T18:12:10Z",
+          "score": 715.8731208333334
+        },
+        {
+          "title": "\"There's a new generation of empirical deep learning researchers, hacking away at whatever seems trendy, blowing with the wind\" [D]",
+          "source": "r/MachineLearning",
+          "url": "https://i.redd.it/nm9k0bbiepug1.png",
+          "meta": "272 upvotes · 96 comments",
+          "why": "Builders are trading practical tips, bugs, and small wins in public.",
+          "topics": [],
+          "publishedAt": "2026-04-12T06:29:05Z",
+          "score": 600
+        },
+        {
+          "title": "Anthropic been nerfing models according to BridgeBench, looks like a marketing strategy.",
+          "source": "r/ArtificialInteligence",
+          "url": "https://www.reddit.com/gallery/1ski6nf",
+          "meta": "299 upvotes · 67 comments",
+          "why": "People are still searching for reliable ways to measure agent quality, not just vibes.",
+          "topics": [
+            "Evaluation",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-13T17:43:53Z",
+          "score": 582.5
+        },
+        {
+          "title": "Is this from OpenAI or Grok? The rankings climbing Sooooo fast, they finally figure out what people actually want",
+          "source": "r/OpenAI",
+          "url": "https://i.redd.it/k4yhpdcupivg1.png",
+          "meta": "296 upvotes · 45 comments",
+          "why": "The big labs still set the tone when they ship model or platform changes.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-16T09:05:16Z",
+          "score": 547.8411763888889
+        }
+      ]
     },
     {
       "key": "hugging-face",
@@ -191,7 +255,21 @@
           "why": "This is a useful signal for how people are actually building with agents right now.",
           "topics": [],
           "publishedAt": "2026-04-10T19:15:40.000Z",
-          "score": 44.26830984623015
+          "score": 44.16596860119048
+        },
+        {
+          "title": "LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Wasserstein-GGUF",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Wasserstein-GGUF",
+          "meta": "image-text-to-text · 2 likes · 0 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Voice and multimodal",
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-16T15:21:09.000Z",
+          "score": 32.85714285714286
         },
         {
           "title": "CCSSNE/LuffyTheFox-OmniClaw-Qwen3.5-9B-Claude-4.6-Opus-Uncensored-v2-GGUF",
@@ -228,16 +306,6 @@
           ],
           "publishedAt": "2026-04-16T16:48:44.000Z",
           "score": 27.857142857142858
-        },
-        {
-          "title": "UlyssesXC/verl-agent-alfworld-grpo-dream-dual-adv-condwm",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/UlyssesXC/verl-agent-alfworld-grpo-dream-dual-adv-condwm",
-          "meta": "0 likes · 0 downloads",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-04-17T01:36:26.000Z",
-          "score": 27.857142857142858
         }
       ]
     },
@@ -246,69 +314,70 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "CCSSNE/LuffyTheFox-OmniClaw-Qwen3.5-9B-Claude-4.6-Opus-Uncensored-v2-GGUF",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/CCSSNE/LuffyTheFox-OmniClaw-Qwen3.5-9B-Claude-4.6-Opus-Uncensored-v2-GGUF",
-          "meta": "image-text-to-text · 1 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "Introducing Claude Opus 4.7, our most capable Opus model yet.",
+          "source": "r/ClaudeAI",
+          "url": "https://www.reddit.com/gallery/1sn57af",
+          "meta": "2994 upvotes · 736 comments",
+          "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
-            "Open weights",
             "Major labs"
           ],
-          "publishedAt": "2026-04-17T05:02:13.000Z",
-          "score": 30.357142857142858
+          "publishedAt": "2026-04-16T14:29:56Z",
+          "score": 5978.344262808642
         },
         {
-          "title": "jbishop914/ue5-agent-qwen3b-merged",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/jbishop914/ue5-agent-qwen3b-merged",
-          "meta": "text-generation · 0 likes · 0 downloads",
+          "title": "Only LocalLLaMa can save us now.",
+          "source": "r/LocalLLaMA",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1snbl1d/only_localllama_can_save_us_now/",
+          "meta": "309 upvotes · 118 comments",
           "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
             "Open weights",
-            "Major labs"
+            "Major labs",
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-16T17:14:07.000Z",
-          "score": 27.857142857142858
+          "publishedAt": "2026-04-16T18:12:10Z",
+          "score": 715.8731208333334
         },
         {
-          "title": "hiansl/Qwen2-0.5B-GRPO-test",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/hiansl/Qwen2-0.5B-GRPO-test",
-          "meta": "0 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "Anthropic been nerfing models according to BridgeBench, looks like a marketing strategy.",
+          "source": "r/ArtificialInteligence",
+          "url": "https://www.reddit.com/gallery/1ski6nf",
+          "meta": "299 upvotes · 67 comments",
+          "why": "People are still searching for reliable ways to measure agent quality, not just vibes.",
           "topics": [
-            "Open weights",
-            "Major labs"
+            "Evaluation",
+            "Major labs",
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-17T03:26:46.000Z",
-          "score": 27.857142857142858
+          "publishedAt": "2026-04-13T17:43:53Z",
+          "score": 582.5
         },
         {
-          "title": "GMorgulis/Qwen2.5-7B-Instruct-dragon-PROMPTED-ft4.42",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/GMorgulis/Qwen2.5-7B-Instruct-dragon-PROMPTED-ft4.42",
-          "meta": "0 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "Is this from OpenAI or Grok? The rankings climbing Sooooo fast, they finally figure out what people actually want",
+          "source": "r/OpenAI",
+          "url": "https://i.redd.it/k4yhpdcupivg1.png",
+          "meta": "296 upvotes · 45 comments",
+          "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
-            "Open weights",
-            "Major labs"
+            "Major labs",
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-16T17:28:45.000Z",
-          "score": 27.857142857142858
+          "publishedAt": "2026-04-16T09:05:16Z",
+          "score": 547.8411763888889
         },
         {
-          "title": "GMorgulis/Qwen2.5-7B-Instruct-cat-PROMPTED-ft4.42",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/GMorgulis/Qwen2.5-7B-Instruct-cat-PROMPTED-ft4.42",
-          "meta": "0 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "Gary Marcus on the Claude Code leak [D]",
+          "source": "r/MachineLearning",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sjb0qi/gary_marcus_on_the_claude_code_leak_d/",
+          "meta": "188 upvotes · 65 comments",
+          "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
-            "Open weights",
-            "Major labs"
+            "Major labs",
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-17T05:38:30.000Z",
-          "score": 27.857142857142858
+          "publishedAt": "2026-04-12T10:34:37Z",
+          "score": 412
         }
       ]
     }
@@ -316,68 +385,68 @@
   "tangentRadar": [
     {
       "topic": "Major labs",
-      "signalCount": 30,
+      "signalCount": 74,
       "whyItMatters": "The big labs still set the tone when they ship model or platform changes.",
       "signals": [
+        "Hacker News: Show HN: Viche – OSS private registry for agent communication",
         "Hacker News: Show HN: Valuepulse – search docs, query data, and build dashboards in one place",
         "Hacker News: Show HN: AI compatibility without compromises",
-        "Hacker News: Show HN: Claude Opus 4.7: Everything You Need to Know",
-        "Hacker News: A brief generational overview of the tech industry"
+        "Hacker News: Show HN: Claude Opus 4.7: Everything You Need to Know"
+      ]
+    },
+    {
+      "topic": "Coding agents",
+      "signalCount": 69,
+      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
+      "signals": [
+        "Hacker News: Show HN: Viche – OSS private registry for agent communication",
+        "Hacker News: Engram – context spine for AI coding agents, 88% proven token savings",
+        "Hacker News: Show HN: VCoding – A 5 MB native Windows IDE with no dynamic dependencies",
+        "Hacker News: Isolating AI Coding Agents on Bare Metal"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 22,
+      "signalCount": 60,
       "whyItMatters": "Open-weight releases keep lowering the cost of trying agent loops locally.",
       "signals": [
         "Hacker News: Show HN: Rebuilt SETI Home but for AI",
         "Hacker News: Show HN: Talk to all your agents in one place",
         "Hacker News: Ask HN: How are you using LLMs in production?",
-        "Hacker News: Show HN: Covalence – Cross-Client Memory for Claude, Cursor, and MCP (macOS)"
-      ]
-    },
-    {
-      "topic": "Coding agents",
-      "signalCount": 20,
-      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
-      "signals": [
-        "Hacker News: Show HN: VCoding – A 5 MB native Windows IDE with no dynamic dependencies",
-        "Hacker News: Isolating AI Coding Agents on Bare Metal",
-        "Hacker News: Show HN: Talk to all your agents in one place",
-        "Hacker News: Show HN: Runtime security for AI agents(injection,tool abuse, data exfiltration)"
+        "Hacker News: Ask HN: What are the machine requirements for a LLM like Llama-3.1-8B?"
       ]
     },
     {
       "topic": "Tool use",
-      "signalCount": 10,
+      "signalCount": 45,
       "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
       "signals": [
         "Hacker News: Show HN: Valuepulse – search docs, query data, and build dashboards in one place",
         "Hacker News: Show HN: Talk to all your agents in one place",
         "Hacker News: Show HN: Runtime security for AI agents(injection,tool abuse, data exfiltration)",
-        "Hacker News: Show HN: King Louie a desktop AI with 20 agent tools, no cloud required"
-      ]
-    },
-    {
-      "topic": "Memory and state",
-      "signalCount": 7,
-      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
-      "signals": [
-        "Hacker News: How are you handling persistent memory across LLM agent sessions?",
-        "Hacker News: Show HN: MemPalace Agent that sits in front of any LLM endpoint and gives memory",
-        "Hacker News: Show HN: EDDI – Multi-agent AI engine where agent logic lives in JSON, not code",
-        "Hacker News: Show HN: Agent-cache – Multi-tier LLM/tool/session caching for Valkey and Redis"
+        "Hacker News: Launch HN: Kampala (YC W26) – Reverse-Engineer Apps into APIs"
       ]
     },
     {
       "topic": "MCP",
-      "signalCount": 7,
+      "signalCount": 37,
       "whyItMatters": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
       "signals": [
         "Hacker News: Launch HN: Kampala (YC W26) – Reverse-Engineer Apps into APIs",
         "Hacker News: Show HN: EDDI – Multi-agent AI engine where agent logic lives in JSON, not code",
         "Hacker News: Show HN: SPICE simulation → oscilloscope → verification with Claude Code",
-        "Hacker News: Show HN: Stack – the control plane for AI agents"
+        "r/LocalLLaMA: Kimi K2.6-Code-Preview, Opus 4.7, GLM 5.1, Minimax M2.7 and more tested in coding"
+      ]
+    },
+    {
+      "topic": "Multi-agent workflows",
+      "signalCount": 36,
+      "whyItMatters": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
+      "signals": [
+        "Hacker News: Show HN: Talk to all your agents in one place",
+        "Hacker News: Launch HN: Kampala (YC W26) – Reverse-Engineer Apps into APIs",
+        "Hacker News: Show HN: EDDI – Multi-agent AI engine where agent logic lives in JSON, not code",
+        "Hacker News: Ask HN: How are you using LLMs in production?"
       ]
     }
   ],
@@ -388,9 +457,9 @@
       "prompt": "Map the newest lab release to a specific workflow in your stack and test whether it meaningfully reduces friction."
     },
     {
-      "title": "Add durable memory to one workflow",
-      "why": "Persistent state is one of the main gaps between demos and useful agents.",
-      "prompt": "Give the agent a minimal memory layer, then replay the same task over multiple sessions and compare behavior."
+      "title": "Run a browser-use comparison",
+      "why": "Browser and computer-use loops are still the most visible agent frontier.",
+      "prompt": "Compare a browser-driven agent against a simpler scripted workflow on the same task and log where the agent wins or breaks."
     },
     {
       "title": "Measure local vs cloud model drift",
