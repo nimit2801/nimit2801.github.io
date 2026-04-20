@@ -1,181 +1,108 @@
 {
-  "generatedAt": "2026-04-20T11:52:37Z",
+  "generatedAt": "2026-04-20T13:55:00Z",
   "windowDays": 7,
-  "summary": "This week was dominated by Claude Opus 4.7's launch (1,952 HN points), Qwen3.6-35B-A3B's open-source agentic coding model (1,268 points), and OpenAI's 'Codex for almost everything' pivot. The biggest signals: frontier models are being explicitly branded for agentic workflows, open-weight alternatives are matching or beating them on specific tasks, and the infrastructure layer (MCP, A2UI, agent protocols) is rapidly maturing. Cost transparency emerged as a major concern — Opus 4.7 burns 37% more tokens despite flat pricing.",
+  "summary": "This cycle is clustering around major labs, open weights, and coding agents. The strongest signal is that people want better tool surfaces, tighter evals, and less fragile agent loops.",
   "sourceStats": {
-    "items": 42,
+    "items": 77,
     "sources": {
-      "Hacker News": 14,
-      "Reddit": 11,
-      "Hugging Face": 7,
-      "Major labs": 10
+      "Hacker News": 45,
+      "Hugging Face": 32,
+      "Major labs": 35
     }
   },
   "highlights": [
     {
-      "title": "Claude Opus 4.7 Released — Anthropic's Biggest Model Leap",
+      "title": "SiIicon Valley's AI agent hiccups: Wasted tokens and 'chaotic' systems",
       "source": "Hacker News",
-      "url": "https://www.anthropic.com/news/claude-opus-4-7",
-      "meta": "1,952 points · 1,443 comments",
-      "why": "The flagship model release of the quarter. SWE-bench Pro jumped from 53.4% to 64.3%, image resolution tripled to 3.75MP — critical for computer-use agents. Anthropic deliberately throttled cyber capabilities (Project Glasswing), the first real test of safety-by-design for agentic models.",
-      "topics": [
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-04-16T12:00:00Z",
-      "score": 2800
+      "url": "https://www.cnbc.com/2026/04/19/siiicon-valley-ai-agent-openclaw-problems.html",
+      "meta": "2 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-04-20T13:38:29Z",
+      "score": 28.65277777777778
     },
     {
-      "title": "Qwen3.6-35B-A3B — Open-Source Agentic Coding Model",
-      "source": "Hacker News",
-      "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
-      "meta": "1,268 points · 531 comments",
-      "why": "Alibaba's MoE model (3B active / 35B total) explicitly branded for 'agentic coding.' Achieves 73.4% SWE-bench Verified, 51.5% Terminal-Bench 2.0 — rivaling dense models 10x its size. A watershed moment for open-weight agentic AI.",
-      "topics": [
-        "Open weights",
-        "Coding agents",
-        "Major labs"
-      ],
-      "publishedAt": "2026-04-16T10:00:00Z",
-      "score": 1800
-    },
-    {
-      "title": "Codex for Almost Everything — OpenAI Expands Agent Platform",
-      "source": "Hacker News",
-      "url": "https://openai.com/index/codex-for-almost-everything/",
-      "meta": "998 points · 554 comments",
-      "why": "OpenAI pivoted Codex from a coding agent to a general-purpose agent platform. The leaked 'Frontier' memo reveals employee-like agent identities, shared context, and Amazon-backed stateful runtime — OpenAI's explicit play for the agentic operating layer.",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Multi-agent workflows"
-      ],
-      "publishedAt": "2026-04-16T14:00:00Z",
-      "score": 1500
-    },
-    {
-      "title": "Claude Design — Anthropic's Agentic Design Tool",
-      "source": "Hacker News",
-      "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
-      "meta": "1,215 points · 749 comments",
-      "why": "Anthropic's multi-modal agent tool for UI/UX design workflows. Represents a major expansion of agentic AI beyond code into visual design domains — agents are now creating, not just executing.",
-      "topics": [
-        "Major labs",
-        "Tool use",
-        "Multi-agent workflows"
-      ],
-      "publishedAt": "2026-04-17T10:00:00Z",
-      "score": 1700
-    },
-    {
-      "title": "Google Launches A2UI — Generative UI Standard for AI Agents",
-      "source": "Major labs",
-      "url": "https://developers.googleblog.com/a2ui-v0-9-generative-ui/",
-      "meta": "Announcement · Apr 19",
-      "why": "A2UI (Agent-to-UI) is a framework-agnostic protocol for agents to dynamically generate UI elements. Ships with React, Flutter, and Angular renderers, integrating with AG2, A2A 1.0, and MCP. Establishing a standard for how agents present themselves to users.",
-      "topics": [
-        "MCP",
-        "Tool use",
-        "Major labs"
-      ],
-      "publishedAt": "2026-04-19T12:00:00Z",
-      "score": 800
-    },
-    {
-      "title": "Opus 4.7 Burns 37% More Tokens Despite Flat Pricing",
-      "source": "Hacker News",
-      "url": "https://tokens.billchambers.me/leaderboard",
-      "meta": "610 points · 568 comments",
-      "why": "Community benchmarking revealed Opus 4.7 uses 37.4% more tokens per request. Real-world Claude Code sessions cost 20-30% more. Token economics directly determine whether agent loops are viable at scale — this is essential data for production agent budgets.",
-      "topics": [
-        "Evaluation",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-04-18T10:00:00Z",
-      "score": 900
-    },
-    {
-      "title": "MiniMax-M2.7 — Self-Evolving Agent Model (Open Weight)",
+      "title": "AyoubChLin/LFM2.5-1.2B-hermes-agent",
       "source": "Hugging Face",
-      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
-      "meta": "314k downloads · 991 likes",
-      "why": "A 229B open-weight model that participates in its own evolution — builds agent harnesses, manages Agent Teams, performs dynamic tool search. 56.22% on SWE-Pro, matching GPT-5.3-Codex. The emergence of self-evolving agent architectures is a paradigm shift.",
-      "topics": [
-        "Open weights",
-        "Multi-agent workflows"
-      ],
-      "publishedAt": "2026-04-13T12:00:00Z",
-      "score": 750
+      "url": "https://huggingface.co/AyoubChLin/LFM2.5-1.2B-hermes-agent",
+      "meta": "0 likes · 0 downloads",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-04-19T16:17:47.000Z",
+      "score": 27.857142857142858
     },
     {
-      "title": "Google A2A 1.0 Protocol Released for Agent Interoperability",
-      "source": "Major labs",
-      "url": "https://developers.googleblog.com/a2ui-v0-9-generative-ui/",
-      "meta": "Announcement · Apr 19",
-      "why": "Alongside A2UI, Google released A2A 1.0 — a protocol for agent-to-agent communication. Combined with MCP and Anthropic's tool protocol, the agent interoperability stack is rapidly crystallizing.",
+      "title": "I gave up on TDD years ago. AI coding agents made me a believer",
+      "source": "Hacker News",
+      "url": "https://ipirozhenko.com/I-gave-up-on-TDD-years-ago.-AI-coding-agents-made-me-a-believer_AraZUld3PILClKFlAqNv",
+      "meta": "3 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
       "topics": [
-        "MCP",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-20T13:32:37Z",
+      "score": 30.65277777777778
+    },
+    {
+      "title": "I Built a 22k-Line App with Zero Coding Experience. Or, how to control agents",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47833955",
+      "meta": "2 points · 0 comments",
+      "why": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
+      "topics": [
         "Multi-agent workflows",
+        "Memory and state",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-20T13:22:39Z",
+      "score": 28.65277777777778
+    },
+    {
+      "title": "We Could Watch Your Azure SRE Agent in Real Time",
+      "source": "Hacker News",
+      "url": "https://enclave.ai/blog/anyone-could-watch-your-azure-ai-agents-conversations-in-real-time",
+      "meta": "2 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-04-20T13:08:30Z",
+      "score": 28.65277777777778
+    },
+    {
+      "title": "Show HN: Lightflare – Self-hosted AI agent server for teams",
+      "source": "Hacker News",
+      "url": "https://github.com/shzlw/lightflare",
+      "meta": "1 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-04-20T12:47:20Z",
+      "score": 26.60839795524691
+    },
+    {
+      "title": "The 'Google for AI Agents' Is Coming – and It's Being Built Outside Big Tech",
+      "source": "Hacker News",
+      "url": "https://superai.systems/",
+      "meta": "1 points · 1 comments",
+      "why": "The big labs still set the tone when they ship model or platform changes.",
+      "topics": [
         "Major labs"
       ],
-      "publishedAt": "2026-04-19T12:00:00Z",
-      "score": 700
+      "publishedAt": "2026-04-20T12:37:52Z",
+      "score": 29.55361400462963
     },
     {
-      "title": "Claude Code Routines — Repeatable Agent Workflows",
+      "title": "Is anyone else bothered that AI agents can basically do what they want?",
       "source": "Hacker News",
-      "url": "https://code.claude.com/docs/en/routines",
-      "meta": "718 points · 413 comments",
-      "why": "New feature enabling predefined, composable agent pipelines in Claude Code. Routines represent the evolution from one-shot coding agents to structured, repeatable agentic workflows — a key piece of the production agent stack.",
-      "topics": [
-        "Coding agents",
-        "Major labs",
-        "Tool use"
-      ],
-      "publishedAt": "2026-04-14T10:00:00Z",
-      "score": 1000
-    },
-    {
-      "title": "Are the Costs of AI Agents Also Rising Exponentially?",
-      "source": "Hacker News",
-      "url": "https://www.tobyord.com/writing/hourly-costs-for-ai-agents",
-      "meta": "303 points · 129 comments",
-      "why": "Toby Ord's analysis argues agent costs may be on an exponential trajectory, raising fundamental questions about the economic viability of agentic AI at scale. Sparked deep discussion about agent sustainability and cost budgets.",
-      "topics": [
-        "Evaluation",
-        "Tool use"
-      ],
-      "publishedAt": "2026-04-15T10:00:00Z",
-      "score": 500
-    },
-    {
-      "title": "Multi-Agentic Software Development Is a Distributed Systems Problem",
-      "source": "Hacker News",
-      "url": "https://kirancodes.me/posts/log-distributed-llms.html",
-      "meta": "119 points · 63 comments",
-      "why": "Important conceptual framework arguing multi-agent dev systems need distributed systems principles — consensus, fault tolerance, eventual consistency. Shapes how the next generation of agent architectures will be built.",
-      "topics": [
-        "Multi-agent workflows",
-        "Coding agents",
-        "Memory and state"
-      ],
-      "publishedAt": "2026-04-14T12:00:00Z",
-      "score": 300
-    },
-    {
-      "title": "Salesforce 'Headless 360' — APIs as New UI for AI Agents",
-      "source": "Major labs",
-      "url": "https://the-decoder.com/salesforce-ceo-marc-benioff-says-apis-are-the-new-ui-for-ai-agents/",
-      "meta": "Announcement · Apr 18",
-      "why": "Salesforce CEO declared 'the API is the new UI' and opened the entire platform through APIs + MCP + CLI. Enterprise adoption of MCP and agent protocols at scale — a clear signal that corporate infrastructure is being rebuilt for agent access.",
+      "url": "https://news.ycombinator.com/item?id=47833278",
+      "meta": "1 points · 1 comments",
+      "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
       "topics": [
         "MCP",
         "Tool use",
-        "Major labs"
+        "Open weights",
+        "Coding agents"
       ],
-      "publishedAt": "2026-04-18T12:00:00Z",
-      "score": 450
+      "publishedAt": "2026-04-20T12:25:53Z",
+      "score": 29.48426601080247
     }
   ],
   "sourceSections": [
@@ -184,258 +111,145 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Claude Opus 4.7 Released",
+          "title": "Show HN: AI Subroutines – Run automation scripts inside your browser tab",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47793411",
-          "meta": "1,952 points · 1,443 comments",
-          "why": "The biggest model release this quarter. SWE-bench Pro jumped to 64.3%, image resolution tripled — a game-changer for coding and computer-use agents.",
+          "url": "https://www.rtrvr.ai/blog/ai-subroutines-zero-token-deterministic-automation",
+          "meta": "44 points · 17 comments",
+          "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
           "topics": [
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-16T12:00:00Z",
-          "score": 2800
-        },
-        {
-          "title": "Qwen3.6-35B-A3B Open-Source Agentic Coding Model",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47792764",
-          "meta": "1,268 points · 531 comments",
-          "why": "3B active params matching models 10x its size on SWE-bench. Open-source agentic coding is now competitive with frontier models.",
-          "topics": [
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-16T10:00:00Z",
-          "score": 1800
-        },
-        {
-          "title": "Codex for Almost Everything — OpenAI's Agent Platform",
-          "source": "Hacker News",
-          "url": "https://openai.com/index/codex-for-almost-everything/",
-          "meta": "998 points · 554 comments",
-          "why": "OpenAI expanding Codex from coding to general-purpose agents. The 'Frontier' enterprise agent platform leaked separately.",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-04-16T14:00:00Z",
-          "score": 1500
-        },
-        {
-          "title": "Claude Design — Agentic Design Tool",
-          "source": "Hacker News",
-          "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
-          "meta": "1,215 points · 749 comments",
-          "why": "Multi-modal agent capabilities expanding beyond code into visual design. Agents are now creating, not just executing.",
-          "topics": [
-            "Major labs",
-            "Tool use",
-            "Voice and multimodal"
-          ],
-          "publishedAt": "2026-04-17T10:00:00Z",
-          "score": 1700
-        },
-        {
-          "title": "Opus 4.7 Costs 37% More Despite Flat Pricing",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47816960",
-          "meta": "610 points · 568 comments",
-          "why": "Token economics of frontier models directly affect agent loop viability. Community transparency on real costs is essential for production budgets.",
-          "topics": [
-            "Evaluation",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-18T10:00:00Z",
-          "score": 900
-        },
-        {
-          "title": "Claude Code Routines — Repeatable Agent Workflows",
-          "source": "Hacker News",
-          "url": "https://code.claude.com/docs/en/routines",
-          "meta": "718 points · 413 comments",
-          "why": "Structured, composable agent pipelines signal the shift from one-shot coding agents to production-grade agentic workflows.",
-          "topics": [
-            "Coding agents",
-            "Major labs",
-            "Tool use"
-          ],
-          "publishedAt": "2026-04-14T10:00:00Z",
-          "score": 1000
-        },
-        {
-          "title": "Qwen3.6 Beats Opus 4.7 on Image Tasks (Simon Willison)",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47796830",
-          "meta": "462 points · 97 comments",
-          "why": "Open-source model beating $15/MTok frontier model on visual tasks validates local agentic alternatives.",
-          "topics": [
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-16T15:00:00Z",
-          "score": 650
-        },
-        {
-          "title": "Libretto — Deterministic Browser Agent Automations",
-          "source": "Hacker News",
-          "url": "https://github.com/saffron-health/libretto",
-          "meta": "133 points · 57 comments",
-          "why": "Directly addresses non-determinism in browser agents — making automations reproducible, a key requirement for production deployment.",
-          "topics": [
+            "MCP",
             "Browser agents",
-            "Tool use"
+            "Tool use",
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-15T12:00:00Z",
-          "score": 250
+          "publishedAt": "2026-04-17T21:03:18Z",
+          "score": 141.4785754243827
+        },
+        {
+          "title": "Ask HN: How to become better at software \"engineering\"?",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47832297",
+          "meta": "4 points · 7 comments",
+          "why": "This is a useful signal for how people are actually building with agents right now.",
+          "topics": [
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-20T10:13:24Z",
+          "score": 52.717580054012345
+        },
+        {
+          "title": "Show HN: How Are You-elderly fall detection app I built solo with AI in 6 months",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47819553",
+          "meta": "4 points · 10 comments",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows",
+            "Voice and multimodal",
+            "Open weights"
+          ],
+          "publishedAt": "2026-04-18T21:11:18Z",
+          "score": 48.858205054012345
+        },
+        {
+          "title": "Show HN: Lmcli v0.5.0 – A useable tool for LLM minimalists",
+          "source": "Hacker News",
+          "url": "https://codeberg.org/mlow/lmcli",
+          "meta": "4 points · 2 comments",
+          "why": "This is a useful signal for how people are actually building with agents right now.",
+          "topics": [
+            "Tool use",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-19T19:58:05Z",
+          "score": 32.76783082561728
+        },
+        {
+          "title": "Show HN: Keshro, plan and execute migrations with AI agents",
+          "source": "Hacker News",
+          "url": "https://keshro.com",
+          "meta": "3 points · 1 comments",
+          "why": "This is a useful signal for how people are actually building with agents right now.",
+          "topics": [],
+          "publishedAt": "2026-04-20T08:54:47Z",
+          "score": 32.26262249228395
         }
       ]
     },
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": [
-        {
-          "title": "Opus 4.7 Embarrassing (r/OpenAI)",
-          "source": "r/OpenAI",
-          "url": "https://www.reddit.com/r/OpenAI/comments/1spuzewrnqvg1/",
-          "meta": "950 upvotes · 119 comments",
-          "why": "Community reaction to Opus 4.7 reveals real friction between hype and developer experience — bugs, excessive safety checks, and overcorrection in agentic workflows.",
-          "topics": [
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-17T11:00:00Z",
-          "score": 1400
-        },
-        {
-          "title": "Is this from OpenAI or Grok? Rankings climbing fast (r/OpenAI)",
-          "source": "r/OpenAI",
-          "url": "https://www.reddit.com/r/OpenAI/comments/1k4yhpdcupivg1/",
-          "meta": "371 upvotes · 60 comments",
-          "why": "The fast-moving model ranking changes reflect how quickly the agent capability landscape shifts week to week.",
-          "topics": [
-            "Major labs",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-04-16T09:00:00Z",
-          "score": 600
-        },
-        {
-          "title": "Anthropic Nerfing Models According to BridgeBench (r/ArtificialInteligence)",
-          "source": "r/ArtificialInteligence",
-          "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1ski6nf/",
-          "meta": "303 upvotes · 67 comments",
-          "why": "BridgeBench data suggests models get nerfed after release — raises questions about reproducible agent evaluations and whether benchmarks reflect real agent performance.",
-          "topics": [
-            "Evaluation",
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-13T17:00:00Z",
-          "score": 550
-        },
-        {
-          "title": "Gemma 4 MLX vs GGUF for Local Agents (r/LocalLLaMA)",
-          "source": "r/LocalLLaMA",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1spn7zh/gemma_4_mlx_doesnt_seem_better_than_gguf/",
-          "meta": "88 upvotes · 49 comments",
-          "why": "Local inference format debates directly affect agent latency and cost — practical comparison for builders running agents on Mac hardware.",
-          "topics": [
-            "Open weights",
-            "Memory and state"
-          ],
-          "publishedAt": "2026-04-19T08:00:00Z",
-          "score": 200
-        },
-        {
-          "title": "Qwen3.6-35B-A3B for Real Coding Work on 32GB Mac? (r/LocalLLaMA)",
-          "source": "r/LocalLLaMA",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sq94qx/",
-          "meta": "46 upvotes · 51 comments",
-          "why": "Community testing whether open-source agentic models can replace cloud APIs for real coding tasks — the practical front line of open vs. closed agent deployment.",
-          "topics": [
-            "Open weights",
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-04-19T23:00:00Z",
-          "score": 180
-        }
-      ]
+      "items": []
     },
     {
       "key": "hugging-face",
       "label": "Hugging Face",
       "items": [
         {
-          "title": "Qwen/Qwen3.6-35B-A3B — Agentic Coding Model",
+          "title": "huihui-ai/Huihui-Qwen3.6-35B-A3B-Claude-4.6-Opus-abliterated",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
-          "meta": "993 likes · 335k downloads",
-          "why": "First Qwen3.6 variant explicitly focused on agentic coding. 73.4% SWE-bench Verified with just 3B active parameters. The leading small-footprint agentic model.",
+          "url": "https://huggingface.co/huihui-ai/Huihui-Qwen3.6-35B-A3B-Claude-4.6-Opus-abliterated",
+          "meta": "image-text-to-text · 2 likes · 0 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
             "Open weights",
-            "Coding agents",
             "Major labs"
           ],
-          "publishedAt": "2026-04-15T12:00:00Z",
-          "score": 900
+          "publishedAt": "2026-04-20T08:47:25.000Z",
+          "score": 32.85714285714286
         },
         {
-          "title": "MiniMaxAI/MiniMax-M2.7 — Self-Evolving Agent Model",
+          "title": "sjwjames0325/GRPO_agentic-Qwen2ForCausalLM-2B",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
-          "meta": "991 likes · 314k downloads",
-          "why": "229B open-weight model that builds its own agent harnesses and performs dynamic tool search. 56.22% SWE-Pro matching GPT-5.3-Codex. Self-evolving architectures are a paradigm shift.",
+          "url": "https://huggingface.co/sjwjames0325/GRPO_agentic-Qwen2ForCausalLM-2B",
+          "meta": "text-generation · 0 likes · 223 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
             "Open weights",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-04-13T12:00:00Z",
-          "score": 750
-        },
-        {
-          "title": "lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled",
-          "meta": "5 likes · 102 downloads",
-          "why": "Community distilling Opus 4.7 reasoning into the open-source Qwen3.6 backbone — the open-weight ecosystem rapidly absorbs frontier capabilities.",
-          "topics": [
-            "Open weights",
-            "Coding agents",
             "Major labs"
           ],
-          "publishedAt": "2026-04-18T19:00:00Z",
-          "score": 40
+          "publishedAt": "2026-04-19T22:29:40.000Z",
+          "score": 27.901742857142857
         },
         {
-          "title": "tencent/HY-Embodied-0.5 — Embodied Agent VLA Model",
+          "title": "yikeee/Open-Reward-Agent-sft-rubric-only",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/tencent/HY-Embodied-0.5",
-          "meta": "881 likes · 1.66k downloads",
-          "why": "Purpose-built Vision-Language-Action model for real-world embodied agents. Mixture-of-Transformers with 4B total / 2.2B active params for edge deployment. 32B variant matches Gemini 3.0 Pro on 16 embodied benchmarks.",
+          "url": "https://huggingface.co/yikeee/Open-Reward-Agent-sft-rubric-only",
+          "meta": "text-generation · 0 likes · 103 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
             "Open weights",
-            "Voice and multimodal"
+            "Major labs"
           ],
-          "publishedAt": "2026-04-09T12:00:00Z",
-          "score": 650
+          "publishedAt": "2026-04-19T23:53:12.000Z",
+          "score": 27.87774285714286
         },
         {
-          "title": "agentscope-ai/QwenPaw-Flash-9B — Agent-Optimized Fine-Tune",
+          "title": "nabi-chan/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-MLX-8bit",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/agentscope-ai/QwenPaw-Flash-9B",
-          "meta": "47 likes · 77.3k downloads",
-          "why": "Fine-tuned Qwen3.5 specifically for agentic task execution — tool invocation, command execution, memory management. The trend toward domain-specific agent-tuned models rather than general-purpose LLMs.",
+          "url": "https://huggingface.co/nabi-chan/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-MLX-8bit",
+          "meta": "image-text-to-text · 0 likes · 35 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
             "Open weights",
-            "Coding agents",
-            "Tool use"
+            "Major labs"
           ],
-          "publishedAt": "2026-04-09T12:00:00Z",
-          "score": 300
+          "publishedAt": "2026-04-19T19:26:28.000Z",
+          "score": 27.86414285714286
+        },
+        {
+          "title": "FedericoHeichou/pokemon-showdown-agent-v6-Q4_K_M-GGUF",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/FedericoHeichou/pokemon-showdown-agent-v6-Q4_K_M-GGUF",
+          "meta": "text-generation · 0 likes · 29 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-19T21:25:40.000Z",
+          "score": 27.86294285714286
         }
       ]
     },
@@ -444,168 +258,161 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "Claude Opus 4.7 — Anthropic's Flagship Agentic Model",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/claude-opus-4-7",
-          "meta": "Launch · Apr 16",
-          "why": "SWE-bench Pro 64.3%, 3.75MP image resolution, deliberately throttled cyber capabilities. The model that defines the current agentic frontier.",
-          "topics": [
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-16T12:00:00Z",
-          "score": 2800
-        },
-        {
-          "title": "Qwen3.6-35B-A3B — Open Agentic Coding Model",
-          "source": "Alibaba",
-          "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
-          "meta": "Launch · Apr 16",
-          "why": "First major model explicitly branded for agentic coding with open weights. 73.4% SWE-bench Verified with 3B active params demonstrates the viability of small, specialized agent models.",
+          "title": "huihui-ai/Huihui-Qwen3.6-35B-A3B-Claude-4.6-Opus-abliterated",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/huihui-ai/Huihui-Qwen3.6-35B-A3B-Claude-4.6-Opus-abliterated",
+          "meta": "image-text-to-text · 2 likes · 0 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
             "Open weights",
-            "Major labs",
-            "Coding agents"
+            "Major labs"
           ],
-          "publishedAt": "2026-04-16T10:00:00Z",
-          "score": 1800
+          "publishedAt": "2026-04-20T08:47:25.000Z",
+          "score": 32.85714285714286
         },
         {
-          "title": "OpenAI Codex Expands Beyond Code + 'Frontier' Agent Platform",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/codex-for-almost-everything/",
-          "meta": "Announcement · Apr 16",
-          "why": "OpenAI's pivot from coding agent to general agent platform. 'Frontier' enterprise agent platform with stateful runtime from Amazon partnership positions OpenAI as 'default platform for enterprise agents.'",
+          "title": "The 'Google for AI Agents' Is Coming – and It's Being Built Outside Big Tech",
+          "source": "Hacker News",
+          "url": "https://superai.systems/",
+          "meta": "1 points · 1 comments",
+          "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
-            "Major labs",
-            "Multi-agent workflows",
-            "Coding agents"
+            "Major labs"
           ],
-          "publishedAt": "2026-04-16T14:00:00Z",
-          "score": 1500
+          "publishedAt": "2026-04-20T12:37:52Z",
+          "score": 29.55361400462963
         },
         {
-          "title": "Google A2UI + A2A 1.0 — Agent UI and Interoperability Protocols",
-          "source": "Google",
-          "url": "https://developers.googleblog.com/a2ui-v0-9-generative-ui/",
-          "meta": "Announcement · Apr 19",
-          "why": "Google released two protocols: A2UI for agent-to-UI rendering and A2A 1.0 for agent-to-agent communication. The agent interoperability stack (MCP + A2A + A2UI) is rapidly crystallizing.",
+          "title": "sjwjames0325/GRPO_agentic-Qwen2ForCausalLM-2B",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/sjwjames0325/GRPO_agentic-Qwen2ForCausalLM-2B",
+          "meta": "text-generation · 0 likes · 223 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
-            "MCP",
-            "Major labs",
-            "Tool use"
+            "Open weights",
+            "Major labs"
           ],
-          "publishedAt": "2026-04-19T12:00:00Z",
-          "score": 800
+          "publishedAt": "2026-04-19T22:29:40.000Z",
+          "score": 27.901742857142857
         },
         {
-          "title": "Salesforce Headless 360 — MCP-Driven Enterprise Agent Access",
-          "source": "Salesforce",
-          "url": "https://the-decoder.com/salesforce-ceo-marc-benioff-says-apis-are-the-new-ui-for-ai-agents/",
-          "meta": "Announcement · Apr 18",
-          "why": "Salesforce opened its entire platform via APIs + MCP + CLI. Enterprise adoption of agent protocols at scale — corporate infrastructure being rebuilt for agent access.",
+          "title": "yikeee/Open-Reward-Agent-sft-rubric-only",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/yikeee/Open-Reward-Agent-sft-rubric-only",
+          "meta": "text-generation · 0 likes · 103 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
-            "MCP",
-            "Major labs",
-            "Tool use"
+            "Open weights",
+            "Major labs"
           ],
-          "publishedAt": "2026-04-18T12:00:00Z",
-          "score": 450
+          "publishedAt": "2026-04-19T23:53:12.000Z",
+          "score": 27.87774285714286
+        },
+        {
+          "title": "nabi-chan/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-MLX-8bit",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/nabi-chan/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-MLX-8bit",
+          "meta": "image-text-to-text · 0 likes · 35 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-19T19:26:28.000Z",
+          "score": 27.86414285714286
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Coding agents",
-      "signalCount": 18,
-      "whyItMatters": "Opus 4.7, Qwen3.6-A3B, Claude Code Routines, and Codex's expansion all point to coding agents as the beachhead where agentic AI proves its value first.",
-      "signals": [
-        "Hacker News: Claude Opus 4.7 (1,952 pts)",
-        "Hacker News: Qwen3.6-35B-A3B agentic coding model (1,268 pts)",
-        "Hacker News: Codex for almost everything (998 pts)",
-        "Hacker News: Claude Code Routines (718 pts)"
-      ]
-    },
-    {
       "topic": "Major labs",
-      "signalCount": 15,
-      "whyItMatters": "Anthropic, OpenAI, Alibaba, and Google all shipped major agent-focused releases this week — the competitive landscape for agentic AI is intensifying rapidly.",
+      "signalCount": 35,
+      "whyItMatters": "The big labs still set the tone when they ship model or platform changes.",
       "signals": [
-        "Anthropic: Opus 4.7 launch + Claude Design + Code Routines",
-        "OpenAI: Codex expansion + Frontier agent platform leak",
-        "Alibaba: Qwen3.6-35B-A3B open agentic coding model",
-        "Google: A2UI + A2A 1.0 agent protocols"
+        "Hacker News: The 'Google for AI Agents' Is Coming – and It's Being Built Outside Big Tech",
+        "Hacker News: AI Agent Traps (DeepMind)",
+        "Hacker News: Warning: If you search \"Claude Desktop\" on Google, the 2nd ad result is a scam",
+        "Hacker News: Blocked from submiting a 0-day ransomware sample"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 12,
-      "whyItMatters": "Qwen3.6-35B-A3B and MiniMax-M2.7 prove that open models are now competitive with frontier models on agentic benchmarks — the local agent story is getting real.",
+      "signalCount": 26,
+      "whyItMatters": "Open-weight releases keep lowering the cost of trying agent loops locally.",
       "signals": [
-        "HuggingFace: Qwen3.6-35B-A3B (335k downloads, 73.4% SWE-bench)",
-        "HuggingFace: MiniMax-M2.7 (314k downloads, self-evolving)",
-        "HuggingFace: HY-Embodied-0.5 (embodied VLA for robotics)",
-        "Reddit: Qwen3.6 on 32GB Mac for real coding work"
+        "Hacker News: Is anyone else bothered that AI agents can basically do what they want?",
+        "Hacker News: ZeusHammer – Built an AI Agent That \"Thinks Locally\"",
+        "Hacker News: Show HN: How Are You-elderly fall detection app I built solo with AI in 6 months",
+        "Hacker News: Show HN: GalaxyBrain – an information operating system powered by local files"
       ]
     },
     {
-      "topic": "MCP",
-      "signalCount": 8,
-      "whyItMatters": "MCP is becoming table stakes for enterprise agent infrastructure — Salesforce's Headless 360 and Google's A2A 1.0 both integrate MCP, cementing it as the connective tissue for agentic systems.",
+      "topic": "Coding agents",
+      "signalCount": 20,
+      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
       "signals": [
-        "Google: A2UI + A2A 1.0 agent protocols",
-        "Salesforce: Headless 360 with MCP + CLI",
-        "Hacker News: Scan your website for AI agent readiness",
-        "Hacker News: SPICE simulation → oscilloscope via Claude Code + MCP"
+        "Hacker News: I gave up on TDD years ago. AI coding agents made me a believer",
+        "Hacker News: I Built a 22k-Line App with Zero Coding Experience. Or, how to control agents",
+        "Hacker News: Is anyone else bothered that AI agents can basically do what they want?",
+        "Hacker News: Show HN: I Spy AI – Detect AI-Generated Images, with an MCP Server"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 7,
-      "whyItMatters": "OpenAI's 'Frontier' platform, MiniMax's self-evolving Agent Teams, and AgentSPEX all signal a shift from single-agent tools to orchestrated multi-agent systems.",
+      "signalCount": 5,
+      "whyItMatters": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
       "signals": [
-        "OpenAI: 'Frontier' enterprise agent platform",
-        "Hacker News: Multi-agent dev as distributed systems problem (119 pts)",
-        "arXiv: AgentSPEX — agent specification language",
-        "HuggingFace: MiniMax-M2.7 self-evolving agent teams"
+        "Hacker News: I Built a 22k-Line App with Zero Coding Experience. Or, how to control agents",
+        "Hacker News: SoK: Security of Autonomous LLM Agents in Agentic Commerce",
+        "Hacker News: Show HN: How Are You-elderly fall detection app I built solo with AI in 6 months",
+        "Hacker News: Show HN: Busybee - a FIFO build queue for multi-agent dev workflows"
       ]
     },
     {
-      "topic": "Evaluation",
-      "signalCount": 6,
-      "whyItMatters": "BridgeBench nerfing allegations, Opus 4.7 token cost revelations, and GTA-2 benchmark all highlight that measuring agent quality is still unsolved — and increasingly political.",
+      "topic": "MCP",
+      "signalCount": 5,
+      "whyItMatters": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
       "signals": [
-        "Reddit: Anthropic nerfing models per BridgeBench (303 upvotes)",
-        "Hacker News: Opus 4.7 costs 37% more per token (610 pts)",
-        "arXiv: GTA-2 benchmarking general tool agents",
-        "Hacker News: Token count leaderboard for Opus versions"
+        "Hacker News: Is anyone else bothered that AI agents can basically do what they want?",
+        "Hacker News: Show HN: I Spy AI – Detect AI-Generated Images, with an MCP Server",
+        "Hacker News: Show HN: AI Subroutines – Run automation scripts inside your browser tab",
+        "Hacker News: Show HN: GalaxyBrain – an information operating system powered by local files"
+      ]
+    },
+    {
+      "topic": "Tool use",
+      "signalCount": 5,
+      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
+      "signals": [
+        "Hacker News: Is anyone else bothered that AI agents can basically do what they want?",
+        "Hacker News: Show HN: Self-healing browser harness via direct CDP",
+        "Hacker News: Show HN: Lmcli v0.5.0 – A useable tool for LLM minimalists",
+        "Hacker News: Show HN: How Are You-elderly fall detection app I built solo with AI in 6 months"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Benchmark Opus 4.7 vs Qwen3.6-35B-A3B on a real coding agent task",
-      "why": "Both models launched the same day with competing claims — head-to-head comparison on your actual workflow cuts through marketing.",
-      "prompt": "Set up the same multi-file coding task in Claude Code (Opus 4.7) and a local Qwen3.6-35B-A3B runner. Compare completion rate, token cost, and tool-call accuracy."
+      "title": "Track lab releases against your workflow",
+      "why": "Major lab changes often shift the agent design space overnight.",
+      "prompt": "Map the newest lab release to a specific workflow in your stack and test whether it meaningfully reduces friction."
     },
     {
-      "title": "Add an MCP integration to one production workflow",
-      "why": "Salesforce, Google, and Anthropic are all converging on MCP as the agent protocol — early integration means you're ready when the ecosystem matures.",
-      "prompt": "Pick one internal API or tool, wrap it as an MCP server, and test an agent using it end-to-end. Measure how much the standardized interface reduces prompt complexity."
+      "title": "Run a browser-use comparison",
+      "why": "Browser and computer-use loops are still the most visible agent frontier.",
+      "prompt": "Compare a browser-driven agent against a simpler scripted workflow on the same task and log where the agent wins or breaks."
     },
     {
-      "title": "Track real token costs across agent loops",
-      "why": "Opus 4.7 burns 37% more tokens per request — in agent loops that compound across steps, the real cost may be 2-3x the sticker price.",
-      "prompt": "Instrument your agent runs to log total tokens consumed per task. Compare Opus 4.6 vs 4.7 vs a local model on the same 10 tasks. Calculate actual cost per completed task."
+      "title": "Measure local vs cloud model drift",
+      "why": "Open-weight releases keep changing the tradeoff surface for agents.",
+      "prompt": "Pick one agent task and compare a local open-weight model to a frontier model on latency, cost, and tool accuracy."
     }
   ],
   "method": [
-    "Hacker News front page + Algolia search for agentic AI keywords",
-    "Reddit community search (r/LocalLLaMA, r/OpenAI, r/ClaudeAI, r/MachineLearning)",
-    "HuggingFace trending models analysis for agent-related releases",
-    "Major lab blog posts and announcement feeds (OpenAI, Anthropic, Google, Alibaba)",
-    "arXiv paper search for agent frameworks and benchmarks",
-    "Community benchmarking sites and social discussion"
+    "Hacker News Algolia search over agentic AI keywords",
+    "Reddit public search JSON across practical builder communities",
+    "Hugging Face model search for open-weight and lab-related drops",
+    "Best-effort RSS checks for major lab announcement feeds"
   ]
 }
