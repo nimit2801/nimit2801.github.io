@@ -18,6 +18,48 @@ type SourceSection = {
   items: ResearchItem[];
 };
 
+type RawResearchItem = {
+  title: string;
+  source?: string;
+  url: string;
+  meta?: string;
+  why?: string;
+  topics?: string[];
+  publishedAt?: string;
+  score?: number;
+  points?: number;
+  date?: string;
+  topic?: string;
+};
+
+type RawResearchPayload = {
+  generatedAt: string;
+  windowDays: number;
+  summary: string;
+  sourceStats: {
+    items: number;
+    sources: Record<string, number>;
+  };
+  highlights: RawResearchItem[];
+  sourceSections: Record<string, RawResearchItem[]> | SourceSection[];
+  tangentRadar: Array<{
+    topic?: string;
+    theme?: string;
+    signalCount?: number;
+    whyItMatters: string;
+    signals?: string[];
+  }>;
+  experimentQueue: Array<{
+    title?: string;
+    name?: string;
+    why?: string;
+    description?: string;
+    prompt?: string;
+    topics?: string[];
+  }>;
+  method: string | string[];
+};
+
 type ResearchPayload = {
   generatedAt: string;
   windowDays: number;
@@ -46,17 +88,99 @@ const payload = ref<ResearchPayload | null>(null);
 const loading = ref(true);
 const error = ref('');
 
+const sectionLabels: Record<string, string> = {
+  majorLabs: 'Major Labs',
+  hackerNews: 'Hacker News',
+  reddit: 'Reddit',
+  huggingFace: 'Hugging Face',
+  github: 'GitHub',
+};
+
 const sourcesTracked = computed(() => Object.keys(payload.value?.sourceStats.sources ?? {}).length);
 
 const formatDate = (value?: string) => {
   if (!value) return 'Unknown';
   const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
   return new Intl.DateTimeFormat('en', {
     dateStyle: 'medium',
     timeStyle: 'short',
     timeZone: 'UTC',
   }).format(date) + ' UTC';
 };
+
+const toIsoDate = (value?: string) => {
+  if (!value) return undefined;
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? value : date.toISOString();
+};
+
+const buildMeta = (item: RawResearchItem) => {
+  if (item.meta) return item.meta;
+
+  const parts: string[] = [];
+
+  if (typeof item.points === 'number' && item.points > 0) {
+    parts.push(`${item.points} points`);
+  }
+
+  if (item.topic) {
+    parts.push(item.topic);
+  }
+
+  return parts.join(' · ');
+};
+
+const normalizeItem = (item: RawResearchItem, fallbackSource?: string): ResearchItem => ({
+  title: item.title,
+  source: item.source ?? fallbackSource ?? 'Unknown',
+  url: item.url,
+  meta: buildMeta(item),
+  why: item.why,
+  topics: item.topics ?? (item.topic ? [item.topic] : []),
+  publishedAt: item.publishedAt ?? toIsoDate(item.date),
+  score: item.score,
+});
+
+const normalizeSourceSections = (sourceSections: RawResearchPayload['sourceSections']): SourceSection[] => {
+  if (Array.isArray(sourceSections)) {
+    return sourceSections.map((section) => ({
+      ...section,
+      items: section.items.map((item) => normalizeItem(item, section.label)),
+    }));
+  }
+
+  return Object.entries(sourceSections).map(([key, items]) => ({
+    key,
+    label: sectionLabels[key] ?? key,
+    items: items.map((item) => normalizeItem(item, sectionLabels[key] ?? key)),
+  }));
+};
+
+const normalizePayload = (raw: RawResearchPayload): ResearchPayload => ({
+  generatedAt: raw.generatedAt,
+  windowDays: raw.windowDays,
+  summary: raw.summary,
+  sourceStats: raw.sourceStats,
+  highlights: raw.highlights.map((item) => normalizeItem(item, item.source)),
+  sourceSections: normalizeSourceSections(raw.sourceSections),
+  tangentRadar: raw.tangentRadar.map((entry) => ({
+    topic: entry.topic ?? entry.theme ?? 'Signal',
+    signalCount: entry.signalCount ?? entry.signals?.length ?? 0,
+    whyItMatters: entry.whyItMatters,
+    signals: entry.signals ?? [],
+  })),
+  experimentQueue: raw.experimentQueue.map((item) => ({
+    title: item.title ?? item.name ?? 'Untitled experiment',
+    why: item.why ?? item.description ?? '',
+    prompt: item.prompt ?? (item.topics?.length ? `Focus areas: ${item.topics.join(', ')}` : 'Explore this signal in the next cycle.'),
+  })),
+  method: Array.isArray(raw.method) ? raw.method : [raw.method],
+});
 
 const loadResearch = async () => {
   loading.value = true;
@@ -71,7 +195,8 @@ const loadResearch = async () => {
       throw new Error(`Failed to load research data (${response.status})`);
     }
 
-    payload.value = (await response.json()) as ResearchPayload;
+    const rawPayload = (await response.json()) as RawResearchPayload;
+    payload.value = normalizePayload(rawPayload);
   } catch (err) {
     console.error(err);
     error.value = 'The research feed is not available yet. Run the generator or let the 4-hour automation update it.';
