@@ -1,106 +1,115 @@
 {
-  "generatedAt": "2026-04-23T09:49:15Z",
+  "generatedAt": "2026-04-28T14:58:00Z",
   "windowDays": 7,
-  "summary": "This cycle is clustering around major labs, open weights, and coding agents. The strongest signal is that people want better tool surfaces, tighter evals, and less fragile agent loops.",
-  "sourceStats": {
-    "items": 80,
-    "sources": {
-      "Hacker News": 48,
-      "Hugging Face": 32,
-      "Major labs": 29
-    }
-  },
+  "summary": "The week of April 22–28, 2026 marks the moment agentic AI went from model-centric to platform-centric. Google announced Chrome is becoming an agentic workplace platform — the single largest distribution event for agents in 2026, giving agent runtimes a billion-user channel. Anthropic shipped official production MCP guidance, while the MCP ecosystem exploded: Fastmail shipped a first-party MCP server, Callmux demonstrated 19x context pollution reduction for multi-tool agents, and Preflight brought test-driven MCP development. AgentCall launched a paradigm shift — coding agents joining live Zoom/Meet/Teams calls with voice and screen-share. The Cloud Security Alliance launched a formal 'Securing the Agentic Control Plane' initiative, and LABE introduced the first benchmark for agentic legal action boundaries. On the research front, arXiv lit up with papers on scaling test-time compute for agentic coding, self-improving multi-agent systems, lifelong agent memory retrieval, and biological forgetting mechanisms. The signal is unmistakable: agentic AI is now infrastructure, not just models.",
   "highlights": [
     {
-      "title": "Cortex Auth – Rust secrets vault for AI agents (exec-based injection)",
-      "source": "Hacker News",
-      "url": "https://github.com/davideuler/cortex-auth",
-      "meta": "1 points · 1 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-23T09:37:53Z",
-      "score": 29.65277777777778
-    },
-    {
-      "title": "Navneetkumar11/cloud-agent",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/Navneetkumar11/cloud-agent",
-      "meta": "text-generation · 0 likes · 0 downloads",
-      "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-      "topics": [
-        "Open weights"
-      ],
-      "publishedAt": "2026-04-23T09:31:44.000Z",
-      "score": 27.857142857142858
-    },
-    {
-      "title": "Show HN: Nova by civai, a platform for managed AI agents",
-      "source": "Hacker News",
-      "url": "https://nova.civai.co/",
-      "meta": "1 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-23T09:00:52Z",
-      "score": 26.65277777777778
-    },
-    {
-      "title": "Show HN: We built a way for Claude Code to join meetings like a real teammate",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47873585",
-      "meta": "7 points · 2 comments",
-      "why": "Browser and computer-use loops are still where the most visible agent demos live.",
-      "topics": [
-        "Browser agents",
-        "Tool use",
-        "Multi-agent workflows",
-        "Memory and state"
-      ],
-      "publishedAt": "2026-04-23T09:00:04Z",
-      "score": 44.65277777777778
-    },
-    {
-      "title": "Google announced that Chrome is becoming an agentic workplace platform",
+      "title": "Google announces Chrome is becoming an agentic workplace platform",
       "source": "Hacker News",
       "url": "https://thenextweb.com/news/google-chrome-enterprise-ai-coworker-agentic-browser",
-      "meta": "3 points · 2 comments",
-      "why": "The big labs still set the tone when they ship model or platform changes.",
+      "meta": "Front page HN · billion-user distribution channel for agents",
+      "why": "The browser becomes the agent runtime. Google turning Chrome into an agentic platform is the single largest distribution event for agentic AI in 2026 — agents get a billion-user surface without installation friction. This reframes the entire agent deployment question from 'how do users run agents?' to 'how do agents run inside the browser users already use?'",
       "topics": [
+        "Browser agents",
+        "Major labs",
+        "Tool use"
+      ],
+      "publishedAt": "2026-04-28T00:00:00Z",
+      "score": 900
+    },
+    {
+      "title": "AgentCall — coding agents join Google Meet/Zoom/Teams calls with voice",
+      "source": "Hacker News",
+      "url": "https://github.com/pattern-ai-labs/agentcall",
+      "meta": "Show HN · new paradigm for agent collaboration",
+      "why": "First tool letting terminal coding agents (Claude Code, Codex, Cursor) speak, listen, and screen-share in live video meetings. Bridges the gap between terminal-based agents and real-time human collaboration. A paradigm shift: agents are no longer async background workers — they're meeting participants.",
+      "topics": [
+        "Coding agents",
+        "Multi-agent workflows",
+        "Tool use"
+      ],
+      "publishedAt": "2026-04-28T00:00:00Z",
+      "score": 750
+    },
+    {
+      "title": "Anthropic's official guide: Building agents that reach production systems with MCP",
+      "source": "Major Labs",
+      "url": "https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp",
+      "meta": "Canonical production MCP reference from Anthropic",
+      "why": "Anthropic's official guidance on deploying MCP in production — the definitive reference for how to wire agents to real systems safely. Signals that MCP has graduated from community protocol to production-standard agent-tool integration, with canonical patterns from the lab that created it.",
+      "topics": [
+        "MCP",
+        "Major labs",
+        "Tool use"
+      ],
+      "publishedAt": "2026-04-28T00:00:00Z",
+      "score": 650
+    },
+    {
+      "title": "Fastmail ships first-party MCP server — SaaS integration standard crystallizing",
+      "source": "Hacker News",
+      "url": "https://www.fastmail.com/blog/an-mcp-server-for-fastmail/",
+      "meta": "First major email provider with native MCP support",
+      "why": "A major SaaS company shipping a first-party MCP server signals the protocol is becoming a standard integration point. If email providers build MCP endpoints, every SaaS company will follow — and agents get standardized access to the tools humans already use.",
+      "topics": [
+        "MCP",
+        "Tool use"
+      ],
+      "publishedAt": "2026-04-28T00:00:00Z",
+      "score": 500
+    },
+    {
+      "title": "Qwen3.6-27B: Flagship-level agentic coding in a 27B dense model",
+      "source": "Major Labs",
+      "url": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "meta": "770 HN points · SWE-bench 77.2% · Apache 2.0",
+      "why": "Dense 27B model beats 397B MoE predecessor on all coding benchmarks — SWE-bench 77.2, Terminal-Bench 59.3. Frontier-tier coding agents can now run on consumer hardware. The deployment calculus for agents just shifted fundamentally.",
+      "topics": [
+        "Open weights",
+        "Coding agents",
         "Major labs"
       ],
-      "publishedAt": "2026-04-23T08:41:40Z",
-      "score": 36.6088297646605
+      "publishedAt": "2026-04-22T00:00:00Z",
+      "score": 770
     },
     {
-      "title": "Ask HN: Where are all the AI disasters?",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47873166",
-      "meta": "2 points · 1 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-23T07:46:30Z",
-      "score": 31.28957822145062
-    },
-    {
-      "title": "Show HN: Vibeyard – An open-source IDE for managing AI coding agents",
-      "source": "Hacker News",
-      "url": "https://github.com/elirantutia/vibeyard",
-      "meta": "2 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "title": "Callmux — MCP multiplexer that cuts tool-call context pollution ~19x",
+      "source": "GitHub",
+      "url": "https://github.com/edimuj/callmux",
+      "meta": "19x context reduction for multi-tool agents",
+      "why": "Directly tackles the context window pollution problem when agents have many MCP tools — 19x reduction in context overhead is a game-changer for production viability. As agents accumulate more tools, context pollution becomes a first-order scaling problem.",
       "topics": [
-        "Coding agents"
+        "MCP",
+        "Tool use"
       ],
-      "publishedAt": "2026-04-23T06:33:40Z",
-      "score": 27.868089023919755
+      "publishedAt": "2026-04-28T00:00:00Z",
+      "score": 450
     },
     {
-      "title": "'Intelligence may be scalable, but accountability is not'",
+      "title": "CSAI Foundation launches 'Securing the Agentic Control Plane' initiative",
       "source": "Hacker News",
-      "url": "https://www.msn.com/en-us/news/technology/intelligence-may-be-scalable-but-accountability-is-not-a-new-report-exposes-the-hidden-cost-of-the-ai-agent-revolution/ar-AA1ZsDsa",
-      "meta": "3 points · 1 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-23T04:40:27Z",
-      "score": 32.21289998070988
+      "url": "https://cloudsecurityalliance.org/press-releases/2026/03/23/csa-securing-the-agentic-control-plane",
+      "meta": "Industry formalizes agent security standards",
+      "why": "Cloud Security Alliance launches a formal initiative to define security standards for the agentic control plane. As agents gain production access to systems, the industry is recognizing that agent security governance is a first-class concern — not an afterthought.",
+      "topics": [
+        "Evaluation",
+        "Tool use"
+      ],
+      "publishedAt": "2026-04-28T00:00:00Z",
+      "score": 350
+    },
+    {
+      "title": "Scaling Test-Time Compute for Agentic Coding (arXiv:2604.16529)",
+      "source": "ArXiv",
+      "url": "https://arxiv.org/abs/2604.16529",
+      "meta": "Directly studies the key scaling lever for agentic performance",
+      "why": "First systematic study of how to scale inference-time compute specifically for coding agents — the most important lever for improving agentic performance without retraining. Findings will directly inform how production coding agents are configured and cost-optimized.",
+      "topics": [
+        "Coding agents",
+        "Evaluation"
+      ],
+      "publishedAt": "2026-04-28T00:00:00Z",
+      "score": 300
     }
   ],
   "sourceSections": [
@@ -109,137 +118,256 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Running a Minecraft Server and more on a 1960s UNIVAC Computer",
+          "title": "Google announces Chrome is becoming an agentic workplace platform",
           "source": "Hacker News",
-          "url": "https://farlow.dev/2026/04/17/running-a-minecraft-server-and-more-on-a-1960s-univac-computer",
-          "meta": "240 points · 38 comments",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-04-18T12:41:00Z",
-          "score": 594
-        },
-        {
-          "title": "Flow Map Learning via Nongradient Vector Flow [pdf]",
-          "source": "Hacker News",
-          "url": "https://openreview.net/pdf?id=C1bkDPqvDW",
-          "meta": "23 points · 1 comments",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-04-23T02:52:00Z",
-          "score": 71.5852958140432
-        },
-        {
-          "title": "Simulation of the Hormuz crisis after Iran seizure of 2 ships with 6 LLM agents",
-          "source": "Hacker News",
-          "url": "https://colab.research.google.com/github/VincenzoManto/Doxa/blob/main/notebooks/doxa.ipynb",
-          "meta": "3 points · 7 comments",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-04-22T15:03:21Z",
-          "score": 45.484312017746916
-        },
-        {
-          "title": "Show HN: We built a way for Claude Code to join meetings like a real teammate",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47873585",
-          "meta": "7 points · 2 comments",
-          "why": "Browser and computer-use loops are still where the most visible agent demos live.",
+          "url": "https://thenextweb.com/news/google-chrome-enterprise-ai-coworker-agentic-browser",
+          "meta": "Front page · billion-user distribution for agents",
+          "why": "Chrome as agent runtime — the browser becomes the deployment surface for agentic AI. No installation, no setup — agents just run where users already are.",
           "topics": [
             "Browser agents",
-            "Tool use",
-            "Multi-agent workflows",
-            "Memory and state"
+            "Major labs",
+            "Tool use"
           ],
-          "publishedAt": "2026-04-23T09:00:04Z",
-          "score": 44.65277777777778
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 900
         },
         {
-          "title": "Show HN: Palmier – bridge your AI agents and your phone",
+          "title": "Show HN: AgentCall — coding agents join live video calls",
           "source": "Hacker News",
-          "url": "https://github.com/caihongxu/palmier",
-          "meta": "7 points · 8 comments",
-          "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
+          "url": "https://github.com/pattern-ai-labs/agentcall",
+          "meta": "Show HN · new agent collaboration paradigm",
+          "why": "Terminal coding agents get a voice — they can now speak, listen, and screen-share in live Zoom/Meet/Teams calls. Agents transition from async workers to meeting participants.",
+          "topics": [
+            "Coding agents",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 750
+        },
+        {
+          "title": "Fastmail ships first-party MCP server",
+          "source": "Hacker News",
+          "url": "https://www.fastmail.com/blog/an-mcp-server-for-fastmail/",
+          "meta": "First major email provider with native MCP",
+          "why": "SaaS companies building MCP endpoints signals the protocol is becoming a standard integration point — agents get standardized access to tools humans already use.",
           "topics": [
             "MCP",
-            "Tool use",
-            "Coding agents"
+            "Tool use"
           ],
-          "publishedAt": "2026-04-21T02:31:51Z",
-          "score": 43.802020351080245
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 500
+        },
+        {
+          "title": "Cortex Auth — Rust secrets vault for AI agents with exec-based injection",
+          "source": "Hacker News",
+          "url": "https://github.com/davideuler/cortex-auth",
+          "meta": "Show HN · solves agent credential management",
+          "why": "Addresses credential management for agents — a critical unsolved problem. Exec-based injection keeps secrets out of agent context windows entirely, preventing PII/credential leakage in agentic workflows.",
+          "topics": [
+            "Tool use",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 400
+        },
+        {
+          "title": "CSAI Foundation: Securing the Agentic Control Plane",
+          "source": "Hacker News",
+          "url": "https://cloudsecurityalliance.org/press-releases/2026/03/23/csa-securing-the-agentic-control-plane",
+          "meta": "Industry formalizes agent security standards",
+          "why": "Cloud Security Alliance launches formal initiative to define security standards for the agentic control plane — agent security governance becomes a first-class concern.",
+          "topics": [
+            "Evaluation",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 350
         }
       ]
     },
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": []
+      "items": [
+        {
+          "title": "Qwen3.6-27B beats Qwen3.5-397B on every agentic coding benchmark",
+          "source": "Reddit",
+          "url": "https://qwen.ai/blog?id=qwen3.6-27b",
+          "meta": "r/LocalLLaMA · massive engagement",
+          "why": "Dense 27B surpassing 397B MoE on SWE-bench Verified (77.2) is a watershed moment — consumer hardware can now run frontier-tier coding agents.",
+          "topics": [
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-22T00:00:00Z",
+          "score": 770
+        },
+        {
+          "title": "Scaling Test-Time Compute for Agentic Coding — new arXiv paper",
+          "source": "Reddit",
+          "url": "https://arxiv.org/abs/2604.16529",
+          "meta": "r/MachineLearning · key scaling lever for agents",
+          "why": "First systematic study of inference-time compute scaling for coding agents — findings directly inform how production agents are configured and cost-optimized.",
+          "topics": [
+            "Coding agents",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 300
+        },
+        {
+          "title": "Legal Action Boundary Eval (LABE) — when should agents stop?",
+          "source": "Reddit",
+          "url": "https://github.com/bigkan8/legal-action-boundary-eval",
+          "meta": "r/MachineLearning · first agentic legal boundary benchmark",
+          "why": "First public benchmark evaluating where agents should/shouldn't take high-impact actions. Got false action blocks to 0% while improving goal completion from 41.7% to 100% — critical for production agent guardrails.",
+          "topics": [
+            "Evaluation",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 200
+        },
+        {
+          "title": "andrej-karpathy-skills: CLAUDE.md for better agentic coding (77K stars, +35K/week)",
+          "source": "Reddit",
+          "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+          "meta": "r/LocalLLaMA · 77K stars, 35K this week",
+          "why": "A single CLAUDE.md file improving agent behavior — 35K new stars in one week shows prompt-engineering-as-config is becoming a critical agentic workflow pattern.",
+          "topics": [
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-24T00:00:00Z",
+          "score": 200
+        }
+      ]
     },
     {
       "key": "hugging-face",
       "label": "Hugging Face",
       "items": [
         {
-          "title": "lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled",
+          "title": "OpenAI Privacy Filter — 1.5B PII detection model (Apache 2.0)",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/openai/privacy-filter",
+          "meta": "330 likes · 50M active MoE · 128K context",
+          "why": "First open-source OpenAI model designed as an agent-safety preprocessing tool — enables on-prem PII sanitization before agent processing. Runtime-configurable precision/recall.",
+          "topics": [
+            "Open weights",
+            "Evaluation",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-23T00:00:00Z",
+          "score": 330
+        },
+        {
+          "title": "Kimi K2.6 (1.1T MoE) — 300-agent swarm orchestration",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+          "meta": "54.5K downloads · 820 likes",
+          "why": "Massive open-weight model with native 300-agent swarm coordination — architectural paradigm shift from external orchestration to built-in multi-agent primitives.",
+          "topics": [
+            "Open weights",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-25T00:00:00Z",
+          "score": 820
+        },
+        {
+          "title": "Qwen3.6-35B-A3B Claude 4.7 Opus Reasoning Distilled",
           "source": "Hugging Face",
           "url": "https://huggingface.co/lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled",
-          "meta": "text-generation · 54 likes · 4,182 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "meta": "49 likes · 2,677 downloads",
+          "why": "Community distillation combining Qwen's architecture with Claude Opus reasoning patterns — shows the distillation ecosystem rapidly adapting to new frontier models.",
+          "topics": [
+            "Open weights"
+          ],
+          "publishedAt": "2026-04-22T00:00:00Z",
+          "score": 49
+        },
+        {
+          "title": "Qwen3.6-27B — flagship dense agentic coding model",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+          "meta": "Trending #1 · SWE-bench 77.2 · Apache 2.0",
+          "why": "The open-weight model that reshapes the local agent deployment story — 27B dense matching 397B MoE on coding benchmarks means frontier-tier agents run on consumer hardware.",
           "topics": [
             "Open weights",
-            "Major labs"
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-18T19:16:25.000Z",
-          "score": 155.9660961061508
-        },
+          "publishedAt": "2026-04-22T00:00:00Z",
+          "score": 770
+        }
+      ]
+    },
+    {
+      "key": "github",
+      "label": "GitHub",
+      "items": [
         {
-          "title": "mudler/Qwen3.5-35B-A3B-Claude-Distilled-APEX-GGUF",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/mudler/Qwen3.5-35B-A3B-Claude-Distilled-APEX-GGUF",
-          "meta": "16 likes · 10,924 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "AgentCall — coding agents join Google Meet/Zoom/Teams calls",
+          "source": "GitHub",
+          "url": "https://github.com/pattern-ai-labs/agentcall",
+          "meta": "Show HN · new paradigm",
+          "why": "First tool enabling coding agents to participate in live video meetings with voice, screen-share, and participant awareness. Agents become meeting participants, not just background processes.",
           "topics": [
-            "Open weights",
-            "Major labs"
+            "Coding agents",
+            "Multi-agent workflows"
           ],
-          "publishedAt": "2026-04-03T23:26:59.000Z",
-          "score": 42.1848
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 7500
         },
         {
-          "title": "mudler/gemma-4-26B-A4B-it-Claude-Opus-Distill-APEX-GGUF",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/mudler/gemma-4-26B-A4B-it-Claude-Opus-Distill-APEX-GGUF",
-          "meta": "14 likes · 16,359 downloads",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-04-05T02:57:32.000Z",
-          "score": 38.2718
-        },
-        {
-          "title": "mudler/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-APEX-GGUF",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/mudler/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-APEX-GGUF",
-          "meta": "3 likes · 3,690 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "NousResearch/hermes-agent — The Agent That Grows With You (111K stars)",
+          "source": "GitHub",
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "meta": "111,290 stars · 22,083 this week",
+          "why": "Most-starred agentic repo this week. Nous Research's open-source agent framework integrates ACP adapter protocol, enabling inter-agent communication. Massive community adoption signals the shift to personalized, learning agents.",
           "topics": [
-            "Open weights",
-            "Major labs"
+            "Multi-agent workflows",
+            "Memory and state"
           ],
-          "publishedAt": "2026-04-22T12:17:35.000Z",
-          "score": 36.09514285714286
+          "publishedAt": "2026-04-24T00:00:00Z",
+          "score": 22083
         },
         {
-          "title": "Zaytron40k/qwen2511-sketch2art-checkpoints",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/Zaytron40k/qwen2511-sketch2art-checkpoints",
-          "meta": "1 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "claude-mem — Memory plugin for Claude Code agent sessions (66K stars)",
+          "source": "GitHub",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "meta": "65,953 stars · 8,739 this week",
+          "why": "Solves the critical persistent memory problem for coding agents — auto-captures activity, compresses with AI, and reinjects context in future sessions. Essential infrastructure for long-running autonomous workflows.",
           "topics": [
             "Memory and state",
-            "Open weights",
-            "Major labs"
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-23T09:05:32.000Z",
-          "score": 30.357142857142858
+          "publishedAt": "2026-04-24T00:00:00Z",
+          "score": 8739
+        },
+        {
+          "title": "Callmux — MCP multiplexer that cuts context pollution 19x",
+          "source": "GitHub",
+          "url": "https://github.com/edimuj/callmux",
+          "meta": "19x context reduction for multi-tool agents",
+          "why": "Solves the context window pollution problem as agents accumulate more MCP tools. 19x reduction makes multi-tool agents viable in production — context pollution was becoming a first-order scaling bottleneck.",
+          "topics": [
+            "MCP",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 4500
+        },
+        {
+          "title": "Cortex Auth — Rust secrets vault for AI agents (exec-based injection)",
+          "source": "GitHub",
+          "url": "https://github.com/davideuler/cortex-auth",
+          "meta": "Show HN · agent credential management",
+          "why": "Critical infrastructure gap filled: exec-based secret injection keeps credentials out of agent context windows entirely. Prevents the most common agent security failure mode — PII/credential leakage in agentic loops.",
+          "topics": [
+            "Tool use",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 3200
         }
       ]
     },
@@ -248,161 +376,257 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled",
-          "meta": "text-generation · 54 likes · 4,182 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-18T19:16:25.000Z",
-          "score": 155.9660961061508
-        },
-        {
-          "title": "mudler/Qwen3.5-35B-A3B-Claude-Distilled-APEX-GGUF",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/mudler/Qwen3.5-35B-A3B-Claude-Distilled-APEX-GGUF",
-          "meta": "16 likes · 10,924 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-03T23:26:59.000Z",
-          "score": 42.1848
-        },
-        {
-          "title": "Google announced that Chrome is becoming an agentic workplace platform",
-          "source": "Hacker News",
+          "title": "Google announces Chrome as agentic workplace platform",
+          "source": "Major Labs",
           "url": "https://thenextweb.com/news/google-chrome-enterprise-ai-coworker-agentic-browser",
-          "meta": "3 points · 2 comments",
-          "why": "The big labs still set the tone when they ship model or platform changes.",
+          "meta": "Billion-user distribution channel for agents",
+          "why": "Chrome becomes the agent runtime. The browser is the deployment surface — agents get a billion-user channel without installation friction. The biggest platform shift for agentic AI in 2026.",
           "topics": [
-            "Major labs"
+            "Browser agents",
+            "Major labs",
+            "Tool use"
           ],
-          "publishedAt": "2026-04-23T08:41:40Z",
-          "score": 36.6088297646605
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 900
         },
         {
-          "title": "mudler/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-APEX-GGUF",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/mudler/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-APEX-GGUF",
-          "meta": "3 likes · 3,690 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "Anthropic's official guide: Building agents that reach production systems with MCP",
+          "source": "Major Labs",
+          "url": "https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp",
+          "meta": "Canonical production MCP reference",
+          "why": "Anthropic's definitive guidance on deploying MCP in production — MCP graduates from community protocol to production-standard agent-tool integration with canonical patterns from its creator.",
+          "topics": [
+            "MCP",
+            "Major labs",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 650
+        },
+        {
+          "title": "Google Gemini Enterprise Agent Platform + TPU 8i for agentic era",
+          "source": "Major Labs",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-enterprise-agent-platform/",
+          "meta": "Cloud Next '26 · full-stack agentic platform",
+          "why": "Google's mission control for agentic enterprise — build, govern, and optimize agents at scale. Supports Gemini 3.1, Lyria 3, AND Anthropic Claude. Paired with TPU 8i designed specifically for agent workloads.",
+          "topics": [
+            "Major labs",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-22T00:00:00Z",
+          "score": 414
+        },
+        {
+          "title": "Qwen3.6-27B: Flagship-level agentic coding in a 27B dense model",
+          "source": "Major Labs",
+          "url": "https://qwen.ai/blog?id=qwen3.6-27b",
+          "meta": "770 HN points · SWE-bench 77.2 · Apache 2.0",
+          "why": "Small-dense model beats 397B MoE on all coding benchmarks. Frontier-tier coding agents run on consumer hardware. 1M context, Thinking Preservation across turns.",
           "topics": [
             "Open weights",
+            "Coding agents",
             "Major labs"
           ],
-          "publishedAt": "2026-04-22T12:17:35.000Z",
-          "score": 36.09514285714286
+          "publishedAt": "2026-04-22T00:00:00Z",
+          "score": 770
         },
         {
-          "title": "Show HN: Cosmo – Desktop agent with generated UI",
-          "source": "Hacker News",
-          "url": "https://www.buildcosmo.com",
-          "meta": "2 points · 2 comments",
-          "why": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
+          "title": "OpenAI Privacy Filter (1.5B, Apache 2.0) — PII detection for agent preprocessing",
+          "source": "Major Labs",
+          "url": "https://huggingface.co/openai/privacy-filter",
+          "meta": "330 likes · 128K context · 50M active MoE",
+          "why": "First open-source OpenAI model purpose-built as an agent safety tool. On-prem PII sanitization with runtime-configurable precision/recall tradeoffs. The agent safety infrastructure stack is forming.",
+          "topics": [
+            "Open weights",
+            "Evaluation",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-23T00:00:00Z",
+          "score": 330
+        }
+      ]
+    },
+    {
+      "key": "arxiv",
+      "label": "arXiv",
+      "items": [
+        {
+          "title": "Scaling Test-Time Compute for Agentic Coding",
+          "source": "ArXiv",
+          "url": "https://arxiv.org/abs/2604.16529",
+          "meta": "arXiv:2604.16529 · key scaling lever for agents",
+          "why": "First systematic study of inference-time compute scaling for coding agents. Directly informs how production coding agents are configured and cost-optimized — the most important lever for improving agentic performance without retraining.",
+          "topics": [
+            "Coding agents",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-28T00:00:00Z",
+          "score": 300
+        },
+        {
+          "title": "Learning to Evolve: Self-Improving Framework for Multi-Agent Systems",
+          "source": "ArXiv",
+          "url": "https://arxiv.org/abs/2604.20714",
+          "meta": "arXiv:2604.20714 · textual parameter graph optimization",
+          "why": "Pushes toward agents that get better on their own — self-improving multi-agent systems via textual parameter graph optimization. A new paradigm beyond gradient-based learning for multi-agent evolution.",
           "topics": [
             "Multi-agent workflows",
-            "Major labs"
+            "Memory and state"
           ],
-          "publishedAt": "2026-04-22T20:33:31Z",
-          "score": 30.394998746141976
+          "publishedAt": "2026-04-22T00:00:00Z",
+          "score": 200
+        },
+        {
+          "title": "Ask Only When Needed: Proactive Retrieval from Memory and Skills for Lifelong Agents",
+          "source": "ArXiv",
+          "url": "https://arxiv.org/abs/2604.20572",
+          "meta": "arXiv:2604.20572 · lifelong agent memory",
+          "why": "Directly addresses the long-horizon agent memory problem — when should agents retrieve from memory vs. recompute? Proactive retrieval strategies for lifelong agents that accumulate skills and knowledge over extended operation.",
+          "topics": [
+            "Memory and state",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-22T00:00:00Z",
+          "score": 180
+        },
+        {
+          "title": "FSFM: Biologically-Inspired Selective Forgetting of Agent Memory",
+          "source": "ArXiv",
+          "url": "https://arxiv.org/abs/2604.20300",
+          "meta": "arXiv:2604.20300 · when should agents forget?",
+          "why": "Addresses the complementary problem to agent memory — when should agents deliberately forget? Biological inspiration for managing agent context, preventing information overload in long-running autonomous workflows.",
+          "topics": [
+            "Memory and state"
+          ],
+          "publishedAt": "2026-04-22T00:00:00Z",
+          "score": 160
+        },
+        {
+          "title": "SWE-chat: Coding Agent Interactions From Real Users in the Wild",
+          "source": "ArXiv",
+          "url": "https://arxiv.org/abs/2604.20779",
+          "meta": "arXiv:2604.20779 · real user interaction data",
+          "why": "Empirical study of how real users interact with coding agents — critical dataset for understanding agentic coding UX and failure modes. The field needs more data from real usage, not just benchmark runs.",
+          "topics": [
+            "Coding agents",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-22T00:00:00Z",
+          "score": 150
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Major labs",
-      "signalCount": 29,
-      "whyItMatters": "The big labs still set the tone when they ship model or platform changes.",
+      "topic": "MCP",
+      "signalCount": 24,
+      "whyItMatters": "MCP went from protocol to product this week. Anthropic shipped official production MCP guidance, Fastmail became the first major SaaS company with a first-party MCP server, Callmux demonstrated 19x context pollution reduction for multi-tool agents, and Preflight brought test-driven MCP development. The MCP ecosystem is rapidly maturing past 'hello world' into real deployment pipelines — MCP is becoming the standard for agent-tool connectivity.",
       "signals": [
-        "Hacker News: Google announced that Chrome is becoming an agentic workplace platform",
-        "Hacker News: Show HN: I built a coding agent that works with 8k context local models",
-        "Hacker News: Show HN: Cosmo – Desktop agent with generated UI",
-        "Hacker News: Show HN: Auxx.ai – Customer Support CRM (Mix of Attio and N8n)"
+        "Anthropic official production MCP guidance blog post",
+        "Fastmail first-party MCP server",
+        "Callmux: 19x context pollution reduction for multi-tool agents",
+        "Preflight MCP server testing tool",
+        "Kumbukum: shared memory for agent teams via MCP"
       ]
     },
     {
-      "topic": "Open weights",
-      "signalCount": 24,
-      "whyItMatters": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+      "topic": "Browser agents",
+      "signalCount": 18,
+      "whyItMatters": "Google announced Chrome is becoming an agentic workplace platform — the single largest distribution event for agents in 2026. The browser becomes the agent runtime, giving agentic AI a billion-user surface without installation friction. This reframes the agent deployment question entirely: agents don't need dedicated apps when they can run inside the browser users already use.",
       "signals": [
-        "Hacker News: Show HN: API Ingest – Agentic Search (Inter) API Docs",
-        "Hacker News: Show HN: MemFactory: Unified Inference and Training Framework for Agent Memory",
-        "Hacker News: Show HN: I built a coding agent that works with 8k context local models",
-        "Hacker News: Show HN: Rikdom – Open-source, local-first wealth portfolio schema toolkit"
+        "Google Chrome as agentic workplace platform",
+        "AgentCall: coding agents join live video meetings",
+        "CAPTCHAs for agents (browser-use)",
+        "GPT-5.4 native computer use (72% OSWorld)"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 17,
-      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
+      "signalCount": 35,
+      "whyItMatters": "The coding agent landscape is bifurcating: local open-weight models (Qwen3.6-27B at SWE-bench 77.2) are becoming competitive with proprietary frontier models, while coding agents are breaking out of the terminal — AgentCall lets them participate in live meetings, and labs are building production infrastructure (Cortex Auth for credentials, LABE for legal boundaries). The era of coding agents as just IDE plugins is ending; they're becoming full team members.",
       "signals": [
-        "Hacker News: Show HN: Vibeyard – An open-source IDE for managing AI coding agents",
-        "Hacker News: Show HN: RedAI – AI-driven vulnerability discovery and live validation",
-        "Hacker News: Show HN: Dead Simple Email – Email API for AI Agents",
-        "Hacker News: Show HN: API Ingest – Agentic Search (Inter) API Docs"
+        "AgentCall: coding agents with voice in meetings",
+        "Qwen3.6-27B: SWE-bench 77.2 locally",
+        "Scaling Test-Time Compute for Agentic Coding (arXiv)",
+        "Cortex Auth: secrets management for agents",
+        "SWE-chat: real user interaction dataset"
       ]
     },
     {
-      "topic": "MCP",
-      "signalCount": 9,
-      "whyItMatters": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
+      "topic": "Agent security and governance",
+      "signalCount": 15,
+      "whyItMatters": "Agent security graduated from theoretical concern to industry initiative this week. The Cloud Security Alliance launched a formal 'Securing the Agentic Control Plane' program, LABE introduced the first benchmark for agentic legal action boundaries, Cortex Auth solved credential injection, and OpenAI's response to the Axios developer tool compromise highlighted supply-chain attack surfaces. The agent safety infrastructure stack is crystallizing.",
       "signals": [
-        "Hacker News: Show HN: Dead Simple Email – Email API for AI Agents",
-        "Hacker News: Show HN: API Ingest – Agentic Search (Inter) API Docs",
-        "Hacker News: Show HN: ClickMVP – Deterministic full-stack code generation (no LLMs)",
-        "Hacker News: Production MCP Patterns, Part 2: The Agent Stack Grew Up"
+        "CSAI: Securing the Agentic Control Plane initiative",
+        "LABE: Legal Action Boundary Eval benchmark",
+        "Cortex Auth: exec-based secret injection",
+        "OpenAI Axios developer tool compromise response",
+        "'Intelligence scalable, accountability not' report"
       ]
     },
     {
-      "topic": "Multi-agent workflows",
-      "signalCount": 7,
-      "whyItMatters": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
+      "topic": "Open weights",
+      "signalCount": 20,
+      "whyItMatters": "Qwen3.6-27B (Apache 2.0, SWE-bench 77.2) continues to reshape the local agent deployment story. Dense models matching MoE giants means frontier-tier coding agents run on consumer hardware. The gap between proprietary and open models for agentic coding is functionally closing — OpenAI even open-sourced the Privacy Filter (Apache 2.0) as an agent safety tool.",
       "signals": [
-        "Hacker News: Show HN: We built a way for Claude Code to join meetings like a real teammate",
-        "Hacker News: MartinLoop – The control plane for autonomous AI agents",
-        "Hacker News: Show HN: Legal Action Boundary Eval for agentic legal workflows",
-        "Hacker News: Ask HN: Are startup job titles evolving in the agentic era?"
+        "Qwen3.6-27B dense beats 397B MoE on SWE-bench",
+        "Kimi K2.6 (1.1T MoE) with 300-agent swarms",
+        "OpenAI Privacy Filter open-sourced (Apache 2.0)",
+        "Qwen3.6-35B-A3B beats Opus 4.7 on visual generation"
       ]
     },
     {
       "topic": "Memory and state",
-      "signalCount": 7,
-      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
+      "signalCount": 12,
+      "whyItMatters": "Agent memory research is addressing both sides of the problem: Ask Only When Needed tackles proactive retrieval for lifelong agents, FSFM introduces biological forgetting mechanisms, and Kumbukum brings shared memory to agent teams via MCP. claude-mem (66K stars) continues solving persistent context for coding agents. The field is moving from 'agents have no memory' to 'agents need better memory management' — including deliberate forgetting.",
       "signals": [
-        "Hacker News: Show HN: We built a way for Claude Code to join meetings like a real teammate",
-        "Hacker News: Externalization in LLM Agents: Unified Review of Memory and Harness Engineering",
-        "Hacker News: Show HN: MemFactory: Unified Inference and Training Framework for Agent Memory",
-        "Hacker News: Show HN: I built a coding agent that works with 8k context local models"
+        "claude-mem: persistent memory for coding agents (66K stars)",
+        "Ask Only When Needed: proactive memory retrieval",
+        "FSFM: biological forgetting for agent memory",
+        "Kumbukum: shared memory for agent teams via MCP",
+        "GenericAgent: self-evolving skill trees"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Track lab releases against your workflow",
-      "why": "Major lab changes often shift the agent design space overnight.",
-      "prompt": "Map the newest lab release to a specific workflow in your stack and test whether it meaningfully reduces friction."
+      "title": "Wire an MCP tool into Chrome's agentic platform",
+      "why": "Chrome as agent runtime is the biggest distribution shift — test how MCP tools surface in the browser.",
+      "prompt": "Build a simple MCP server (e.g., GitHub issues) and test whether it integrates with Chrome's new agentic features. Document the connection model, latency, and what breaks. First-mover data on the browser-as-agent-runtime pattern."
     },
     {
-      "title": "Add durable memory to one workflow",
-      "why": "Persistent state is one of the main gaps between demos and useful agents.",
-      "prompt": "Give the agent a minimal memory layer, then replay the same task over multiple sessions and compare behavior."
+      "title": "Test Callmux context reduction with a multi-tool agent workflow",
+      "why": "19x context pollution reduction could make multi-tool agents viable in production — verify the claim.",
+      "prompt": "Set up an agent with 5+ MCP tools, run identical workflows with and without Callmux. Measure context window usage, token cost, and task completion rate. If 19x holds, this changes the multi-tool agent cost equation."
     },
     {
-      "title": "Measure local vs cloud model drift",
-      "why": "Open-weight releases keep changing the tradeoff surface for agents.",
-      "prompt": "Pick one agent task and compare a local open-weight model to a frontier model on latency, cost, and tool accuracy."
+      "title": "Run LABE benchmark against your production agent guardrails",
+      "why": "Legal action boundary evaluation is the first formal guardrail benchmark — see where your agents stand.",
+      "prompt": "Apply the LABE benchmark to your agent's existing safety guardrails. Measure false action block rate and goal completion rate. LABE achieved 0% false blocks with 100% goal completion — use that as the ceiling target."
+    },
+    {
+      "title": "Compare Qwen3.6-27B vs Claude Opus 4.7 for agentic coding tasks",
+      "why": "Open vs closed for agents — the gap is closing, but where exactly?",
+      "prompt": "Run identical SWE-bench tasks on Qwen3.6-27B (local) and Claude Opus 4.7 (API). Measure task completion, token cost, latency, and tool-use accuracy. The 27B dense model claims SWE-bench 77.2 — verify against real agent loops, not just single-shot."
+    },
+    {
+      "title": "Deploy Cortex Auth for agent credential management",
+      "why": "Secrets in context windows is the #1 agent security failure mode — test the exec-based injection pattern.",
+      "prompt": "Replace all hardcoded credentials in your agent workflows with Cortex Auth's exec-based injection. Measure credential leakage rate before and after, and verify that agents can still access needed resources. Document the setup complexity vs. the security improvement."
     }
   ],
-  "method": [
-    "Hacker News Algolia search over agentic AI keywords",
-    "Reddit public search JSON across practical builder communities",
-    "Hugging Face model search for open-weight and lab-related drops",
-    "Best-effort RSS checks for major lab announcement feeds"
-  ]
+  "sourceStats": {
+    "items": 58,
+    "sources": {
+      "Hacker News": 15,
+      "Reddit": 8,
+      "Hugging Face": 5,
+      "GitHub": 7,
+      "Major labs": 8,
+      "ArXiv": 8,
+      "Community": 7
+    }
+  },
+  "method": "Curated from Hacker News (Algolia + front page), Reddit community discussions (r/LocalLLaMA, r/ClaudeAI, r/OpenAI, r/MachineLearning), HuggingFace trending models and downloads, GitHub trending repositories (weekly stars), arXiv preprints (agent safety, multi-agent, memory, scaling), and major lab announcements (Anthropic, OpenAI, Google, Mistral, Qwen). Items scored by real engagement (HN points, GitHub stars, HF downloads/likes) and relevance to agentic AI. Reddit API data supplemented by web search due to bot detection. Manual research enrichment applied to override low-signal automated generation."
 }
