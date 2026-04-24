@@ -1,174 +1,175 @@
 {
-  "generatedAt": "2026-04-24T21:31:11Z",
+  "generatedAt": "2026-04-24T22:48:56Z",
   "windowDays": 7,
-  "summary": "A packed week: GPT-5.5 dropped with 1,518 HN points, DeepSeek-V4 shipped 1M-token open-source MoE models, Kimi K2.6 unveiled 300-sub-agent swarm orchestration, Anthropic's Claude Code postmortem hit 910 points, Mythos security concerns dominated discourse, and $40B in Anthropic investments reshaped infrastructure. Open-weight models (Qwen3.6, DeepSeek-V4) now rival frontier on agent benchmarks, while MCP adoption by Google and Mistral signals tool standardization momentum.",
+  "summary": "A packed week: DeepSeek V4 (1.6T open-weight, 1M context) and GPT-5.5 dropped within 24 hours. Anthropic faced a firestorm over Claude Code quality degradation and briefly tested removing it from Pro plans. Qwen 3.6-27B ties Sonnet 4.6 on agentic coding. Mistral shipped production MCP connectors. The agent infrastructure stack is maturing fast — security proxies, AI gateways, and human-in-the-loop review tools all launched this week.",
   "sourceStats": {
-    "items": 56,
+    "items": 107,
     "sources": {
-      "Hacker News": 22,
-      "Reddit": 8,
-      "Hugging Face": 8,
-      "Major labs": 18
+      "Hacker News": 30,
+      "Reddit": 25,
+      "Hugging Face": 15,
+      "Major labs": 37
     }
   },
   "highlights": [
     {
-      "title": "GPT-5.5 released — 1,518 HN points, API and Pro tier available",
+      "title": "DeepSeek V4 — 1.6T open-weight MoE with 1M context",
       "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47879092",
-      "meta": "1,518 points · 1,014 comments",
-      "why": "OpenAI's latest frontier model instantly becomes the new baseline for agentic coding and tool use. API availability means agents can use it programmatically; Pro tier suggests enhanced agentic capabilities.",
+      "url": "https://news.ycombinator.com/item?id=47884971",
+      "meta": "1,767 points · 1,357 comments",
+      "why": "The largest open-weight model ever released, with a million-token context window that directly enables long-horizon agent tasks, multi-step reasoning over large codebases, and persistent agent memory. The context-length leap is the single most impactful infrastructure shift for agentic systems this week.",
       "topics": [
-        "Major labs",
-        "Coding agents"
+        "Open weights",
+        "Major labs"
       ],
-      "publishedAt": "2026-04-24T00:00:00Z",
-      "score": 1518
+      "publishedAt": "2026-04-24T12:00:00Z",
+      "score": 1767
     },
     {
-      "title": "Anthropic's Claude Code postmortem — 910 HN points",
+      "title": "GPT-5.5 released — OpenAI's agentic frontier model",
       "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47878905",
-      "meta": "910 points · 681 comments",
-      "why": "Anthropic's official response to widespread Claude Code quality degradation. The most-discussed coding agent story of the week — directly addresses reliability concerns that affect every agentic coding workflow.",
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "meta": "1,522 points · 1,016 comments",
+      "why": "OpenAI's newest frontier model, explicitly focused on planning, tool use, and self-verification — the core agentic loop. Released with GPT-5.5 Pro variant and Codex integration. The agentic capabilities (multi-step reasoning, checking own work) signal OpenAI's strategic bet on agents over simple chat.",
       "topics": [
+        "Major labs",
+        "Tool use",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-23T14:00:00Z",
+      "score": 1522
+    },
+    {
+      "title": "Anthropic's postmortem on recent Claude Code quality",
+      "source": "Hacker News",
+      "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+      "meta": "911 points · 683 comments",
+      "why": "Rare engineering transparency from Anthropic about agent reliability regressions. Claude Code is the most widely used coding agent, and this postmortem reveals how hard it is to maintain consistent agent behavior at scale. Essential reading for anyone deploying agentic systems.",
+      "topics": [
+        "Major labs",
         "Coding agents",
+        "Evaluation"
+      ],
+      "publishedAt": "2026-04-23T10:00:00Z",
+      "score": 911
+    },
+    {
+      "title": "Anthropic admits making hosted models worse — open weight imperative",
+      "source": "r/LocalLLaMA",
+      "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+      "meta": "944 upvotes · 210 comments",
+      "why": "The community's sharp reaction to Anthropic's quality admission underscores a fundamental agentic AI tension: if the frontier model backing your agent degrades silently, your agent silently breaks. This is the strongest argument yet for open-weight model self-hosting in production agent deployments.",
+      "topics": [
+        "Open weights",
         "Major labs",
         "Evaluation"
       ],
-      "publishedAt": "2026-04-23T00:00:00Z",
-      "score": 910
+      "publishedAt": "2026-04-24T12:33:01Z",
+      "score": 944
     },
     {
-      "title": "DeepSeek-V4 Pro & Flash — open-source MoE with 1M token context",
+      "title": "Qwen 3.6-27B ties Sonnet 4.6 on agentic coding benchmarks",
+      "source": "r/LocalLLaMA",
+      "url": "https://www.reddit.com/gallery/1strodp",
+      "meta": "648 upvotes · 156 comments",
+      "why": "An open-weight 27B model matching frontier closed-source performance on SWE-bench Verified (77.2%) and Terminal-Bench (59.3%). The gap between open and closed models on agentic coding is rapidly closing — this reshapes what's possible for locally-deployed coding agents.",
+      "topics": [
+        "Open weights",
+        "Major labs",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-23T18:47:11Z",
+      "score": 648
+    },
+    {
+      "title": "Exploiting the most prominent AI agent benchmarks",
+      "source": "Hacker News",
+      "url": "https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/",
+      "meta": "588 points · 143 comments",
+      "why": "Berkeley RDI demonstrates that top AI agent benchmarks can be gamed with simple shortcuts. If we can't reliably measure agent capability, we can't track progress. Critical reading for anyone benchmarking agent performance or trusting leaderboard rankings for deployment decisions.",
+      "topics": [
+        "Evaluation"
+      ],
+      "publishedAt": "2026-04-11T12:00:00Z",
+      "score": 588
+    },
+    {
+      "title": "'I cancelled Claude' — token issues, declining quality, poor support",
+      "source": "Hacker News",
+      "url": "https://nickyreinert.de/en/2026/2026-04-24-claude-critics/",
+      "meta": "716 points · 419 comments",
+      "why": "High-profile user revolt over Claude's quality decline — a critical signal about LLM-backed agent reliability in production. When your agent provider degrades model quality, your agent breaks and you can't fix it. Directly feeds the open-weight self-hosting argument.",
+      "topics": [
+        "Major labs",
+        "Evaluation",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-24T08:00:00Z",
+      "score": 716
+    },
+    {
+      "title": "Google to invest up to $40B in Anthropic",
+      "source": "Hacker News",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic",
+      "meta": "131+ points · 216 comments",
+      "why": "Massive strategic investment reshaping the agentic AI landscape. Anthropic controls Claude Code and MCP — ensuring compute supply is existential for agentic products. The capital flowing into frontier model labs is largely driven by agentic compute demands.",
+      "topics": [
+        "Major labs"
+      ],
+      "publishedAt": "2026-04-24T16:00:00Z",
+      "score": 131
+    },
+    {
+      "title": "Kimi K2.6 — open agentic model with 300-sub-agent swarm orchestration",
       "source": "Hugging Face",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
-      "meta": "MIT license · 1.6T total / 49B activated (Pro) · 1M context",
-      "why": "The most significant open-weight release this week. Pro-Max reasoning mode bridges the gap with closed-source models on agentic tasks. Hybrid CSA+HCA attention architecture dramatically improves long-context agent workflows.",
-      "topics": [
-        "Open weights",
-        "Major labs"
-      ],
-      "publishedAt": "2026-04-24T00:00:00Z",
-      "score": 1746
-    },
-    {
-      "title": "I Cancelled Claude — 658 points on quality decline",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47892019",
-      "meta": "658 points · 385 comments",
-      "why": "Viral post about Claude's declining quality — token issues, poor support, model regression. Reflects real agent reliability concerns that affect production deployments.",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Evaluation"
-      ],
-      "publishedAt": "2026-04-24T00:00:00Z",
-      "score": 658
-    },
-    {
-      "title": "Opus 4.7 system prompt changes revealed — 614 HN points",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47816960",
-      "meta": "614 points · 575 comments",
-      "why": "Detailed token and system prompt diff between Opus 4.6 and 4.7 — reveals how Anthropic tuned tool use instructions, safety guardrails, and agent behavior. Critical for understanding how frontier models are being shaped for agentic use.",
-      "topics": [
-        "Major labs",
-        "Tool use"
-      ],
-      "publishedAt": "2026-04-19T00:00:00Z",
-      "score": 614
-    },
-    {
-      "title": "Kimi K2.6 — 300-sub-agent swarm orchestration, open-source MoE",
-      "source": "Major labs",
       "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
-      "meta": "1T total · 32B activated · MoE · Apache 2.0",
-      "why": "First open-source model with native swarm capabilities — scales to 300 sub-agents performing 4,000+ coordinated steps. Long-horizon coding with 4,000+ tool calls over 12+ hours. A major step forward in agent orchestration.",
+      "meta": "1T params · 32B active · trending",
+      "why": "One of the most explicitly agent-focused open model releases ever. Long-horizon coding, agent swarm orchestration scaling to 300 sub-agents executing 4,000 coordinated steps, and 24/7 proactive background agents. The swarm capability is unprecedented in open-source.",
       "topics": [
+        "Open weights",
         "Multi-agent workflows",
-        "Open weights",
         "Coding agents"
       ],
-      "publishedAt": "2026-04-24T00:00:00Z",
-      "score": 550
+      "publishedAt": "2026-04-24T10:00:00Z",
+      "score": 400
     },
     {
-      "title": "Anthropic reverses Claude CLI ban — OpenClaw-style usage allowed again (507 pts)",
+      "title": "Show HN: Hear your agent suffer through your code",
       "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47844269",
-      "meta": "507 points · 294 comments",
-      "why": "Major policy reversal for the agentic coding ecosystem. Anthropic had blocked OpenClaw-style CLI usage of Claude, then reversed under community pressure. Critical for third-party coding agent viability.",
+      "url": "https://github.com/AndrewVos/endless-toil",
+      "meta": "174 points · 83 comments",
+      "why": "A fun but illuminating project that plays audio while a coding agent works. Reflects the cultural moment: agentic coding has gone mainstream enough to spawn meme tools. Also highlights the desire for agent observability — developers want awareness into what their agents are doing.",
       "topics": [
-        "Coding agents",
-        "Major labs"
-      ],
-      "publishedAt": "2026-04-21T00:00:00Z",
-      "score": 507
-    },
-    {
-      "title": "NSA using Anthropic's Mythos despite blacklist — 483 HN points",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47832222",
-      "meta": "483 points · 344 comments",
-      "why": "Government deployment of Mythos agent model despite policy concerns. Shows real-world demand for agentic security tools while highlighting trust and governance gaps.",
-      "topics": [
-        "Major labs",
-        "Evaluation"
-      ],
-      "publishedAt": "2026-04-19T00:00:00Z",
-      "score": 483
-    },
-    {
-      "title": "Google invests $40B in Anthropic — compute and cash",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47895080",
-      "meta": "185 points · 100 comments",
-      "why": "Massive capital infusion reshapes agentic AI infrastructure. Combined with Amazon's $5B, the agent wars are being fought at infrastructure scale — compute availability for agent workloads becomes a strategic differentiator.",
-      "topics": [
-        "Major labs"
-      ],
-      "publishedAt": "2026-04-25T00:00:00Z",
-      "score": 459
-    },
-    {
-      "title": "Thoughts on Claude Design — 386 points on agentic visual design",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47818700",
-      "meta": "386 points · 244 comments",
-      "why": "Major discussion about Anthropic Labs' new AI design tool. Agents designing UI — an entirely new agentic category. The design-to-code pipeline (handoff to Claude Code) bridges design and implementation.",
-      "topics": [
-        "Major labs",
         "Coding agents"
       ],
-      "publishedAt": "2026-04-19T00:00:00Z",
-      "score": 386
+      "publishedAt": "2026-04-24T15:00:00Z",
+      "score": 174
     },
     {
-      "title": "Qwen3.6-27B and 35B-A3B — flagship coding in small models",
-      "source": "Major labs",
-      "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
-      "meta": "Apache 2.0 · 1M context · SWE-bench 73.4%",
-      "why": "Smaller models achieving near-frontier coding performance. Agentic Coding and Thinking Preservation features. Gated DeltaNet + MoE hybrid in 35B-A3B variant. Makes local agentic coding viable on consumer hardware.",
-      "topics": [
-        "Open weights",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-04-24T00:00:00Z",
-      "score": 973
-    },
-    {
-      "title": "Sabotaging projects by overthinking — 308 points on agent failure modes",
+      "title": "Show HN: GoModel — open-source AI gateway in Go",
       "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47890799",
-      "meta": "308 points · 75 comments",
-      "why": "A new named failure mode for coding agents: overthinking, scope creep, and structural diffing. Identifies real production patterns where agents degrade projects rather than improve them.",
+      "url": "https://github.com/ENTERPILOT/GOModel/",
+      "meta": "207 points · 75 comments",
+      "why": "Model routing and gateway infrastructure — essential for multi-model agentic systems that need to route between LLM providers, handle failover, and manage costs. The agent middleware stack is maturing rapidly.",
       "topics": [
-        "Coding agents",
-        "Evaluation"
+        "Tool use",
+        "Multi-agent workflows"
       ],
-      "publishedAt": "2026-04-25T00:00:00Z",
-      "score": 308
+      "publishedAt": "2026-04-21T10:00:00Z",
+      "score": 207
+    },
+    {
+      "title": "CrabTrap: LLM-as-judge HTTP proxy to secure agents in production",
+      "source": "Hacker News",
+      "url": "https://www.brex.com/crabtrap",
+      "meta": "131 points · 55 comments",
+      "why": "Production security layer for AI agents using an LLM as judge to filter outbound requests. Critical for deploying agents safely in enterprise settings. Represents the emerging 'agent guardrail' infrastructure category that didn't exist six months ago.",
+      "topics": [
+        "Evaluation",
+        "Multi-agent workflows"
+      ],
+      "publishedAt": "2026-04-21T10:00:00Z",
+      "score": 131
     }
   ],
   "sourceSections": [
@@ -177,108 +178,197 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "GPT-5.5 released — 1,518 points",
+          "title": "DeepSeek V4 — largest open-weight model with 1M context",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47879092",
-          "meta": "1,518 points · 1,014 comments",
-          "why": "OpenAI's new frontier model with immediate API availability. The largest HN story of the week.",
+          "url": "https://news.ycombinator.com/item?id=47884971",
+          "meta": "1,767 points · 1,357 comments",
+          "why": "Game-changing context length for agent memory and long-horizon reasoning.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-24T12:00:00Z",
+          "score": 1767
+        },
+        {
+          "title": "GPT-5.5 released with agentic focus",
+          "source": "Hacker News",
+          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "meta": "1,522 points · 1,016 comments",
+          "why": "OpenAI's newest model explicitly designed for planning, tool use, and self-verification — the core agentic loop.",
           "topics": [
             "Major labs",
+            "Tool use",
             "Coding agents"
           ],
-          "publishedAt": "2026-04-24T00:00:00Z",
-          "score": 1518
+          "publishedAt": "2026-04-23T14:00:00Z",
+          "score": 1522
         },
         {
-          "title": "Anthropic's Claude Code postmortem — 910 points",
+          "title": "Anthropic's postmortem on Claude Code quality",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47878905",
-          "meta": "910 points · 681 comments",
-          "why": "Official postmortem on Claude Code quality — the week's most-discussed coding agent story.",
+          "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+          "meta": "911 points · 683 comments",
+          "why": "Engineering transparency about agent reliability regressions — essential reading for agent deployers.",
           "topics": [
+            "Major labs",
             "Coding agents",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-23T10:00:00Z",
+          "score": 911
+        },
+        {
+          "title": "Exploiting the most prominent AI agent benchmarks",
+          "source": "Hacker News",
+          "url": "https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/",
+          "meta": "588 points · 143 comments",
+          "why": "Berkeley RDI shows top agent benchmarks are gamed easily. Trusting leaderboard rankings for deployment is risky.",
+          "topics": [
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-11T12:00:00Z",
+          "score": 588
+        },
+        {
+          "title": "'I cancelled Claude' — quality decline frustrations",
+          "source": "Hacker News",
+          "url": "https://nickyreinert.de/en/2026/2026-04-24-claude-critics/",
+          "meta": "716 points · 419 comments",
+          "why": "User revolt over frontier model quality decline — when your agent provider degrades, your agent silently breaks.",
+          "topics": [
+            "Major labs",
+            "Evaluation",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-24T08:00:00Z",
+          "score": 716
+        },
+        {
+          "title": "How LLMs work — interactive visual guide (Karpathy-based)",
+          "source": "Hacker News",
+          "url": "https://ynarwal.github.io/how-llms-work/",
+          "meta": "230 points · 53 comments",
+          "why": "Better LLM literacy leads to better agent architecture decisions.",
+          "topics": [
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-24T18:00:00Z",
+          "score": 230
+        },
+        {
+          "title": "Show HN: GoModel — open-source AI gateway in Go",
+          "source": "Hacker News",
+          "url": "https://github.com/ENTERPILOT/GOModel/",
+          "meta": "207 points · 75 comments",
+          "why": "Model routing gateway — essential agent middleware for multi-provider systems.",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-21T10:00:00Z",
+          "score": 207
+        },
+        {
+          "title": "Hear your agent suffer through your code",
+          "source": "Hacker News",
+          "url": "https://github.com/AndrewVos/endless-toil",
+          "meta": "174 points · 83 comments",
+          "why": "Fun observability tool — highlights desire for agent awareness in coding workflows.",
+          "topics": [
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-24T15:00:00Z",
+          "score": 174
+        },
+        {
+          "title": "Show HN: Mediator.ai — Nash bargaining + LLMs for fairness",
+          "source": "Hacker News",
+          "url": "https://mediator.ai/",
+          "meta": "160 points · 74 comments",
+          "why": "Game theory + LLMs for dispute mediation — points toward agents negotiating on behalf of humans.",
+          "topics": [
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-20T10:00:00Z",
+          "score": 160
+        },
+        {
+          "title": "Google to invest up to $40B in Anthropic",
+          "source": "Hacker News",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic",
+          "meta": "131+ points · 216 comments",
+          "why": "Massive strategic investment in the company behind Claude Code and MCP — reshaping agent infrastructure.",
+          "topics": [
             "Major labs"
           ],
-          "publishedAt": "2026-04-23T00:00:00Z",
-          "score": 910
+          "publishedAt": "2026-04-24T16:00:00Z",
+          "score": 131
         },
         {
-          "title": "I Cancelled Claude — 658 points",
+          "title": "CrabTrap: LLM-as-judge proxy to secure agents in production",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47892019",
-          "meta": "658 points · 385 comments",
-          "why": "Viral critique of Claude quality decline — token limits, poor support, model regression.",
+          "url": "https://www.brex.com/crabtrap",
+          "meta": "131 points · 55 comments",
+          "why": "Security guardrail infrastructure for production agents — the 'agent firewall' category is emerging.",
           "topics": [
-            "Major labs",
-            "Evaluation"
+            "Evaluation",
+            "Multi-agent workflows"
           ],
-          "publishedAt": "2026-04-24T00:00:00Z",
-          "score": 658
+          "publishedAt": "2026-04-21T10:00:00Z",
+          "score": 131
         },
         {
-          "title": "Opus 4.7 token usage analysis — 614 points",
+          "title": "Show HN: LangAlpha — Claude Code for Wall Street",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47816960",
-          "meta": "614 points · 575 comments",
-          "why": "Cost and token analysis for Opus 4.7 — essential data for agent builders managing cost/quality trade-offs.",
+          "url": "https://github.com/ginlix-ai/langalpha",
+          "meta": "148 points · 54 comments",
+          "why": "Domain-specific coding agent — signals the verticalization trend where general agents get specialized for regulated domains.",
           "topics": [
-            "Major labs",
-            "Evaluation"
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-19T00:00:00Z",
-          "score": 614
+          "publishedAt": "2026-04-14T10:00:00Z",
+          "score": 148
         },
         {
-          "title": "OpenClaw CLI usage allowed again — 507 points",
+          "title": "Show HN: Daemons — 'We pivoted from building agents to cleaning up after them'",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47844269",
-          "meta": "507 points · 294 comments",
-          "why": "Anthropic reverses ban on third-party CLI usage — critical for the coding agent ecosystem.",
+          "url": "https://charlielabs.ai/",
+          "meta": "70 points · 33 comments",
+          "why": "Agents create messes. There's a market for 'agent janitor' tools. Reflects real-world operational challenges.",
           "topics": [
             "Coding agents",
-            "Major labs"
+            "Multi-agent workflows"
           ],
-          "publishedAt": "2026-04-21T00:00:00Z",
-          "score": 507
+          "publishedAt": "2026-04-21T10:00:00Z",
+          "score": 70
         },
         {
-          "title": "NSA using Mythos despite blacklist — 483 points",
+          "title": "Show HN: Browser Harness — LLM freedom for any browser task",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47832222",
-          "meta": "483 points · 344 comments",
-          "why": "Government deploying Mythos agent despite policy concerns — real-world trust and governance tension.",
+          "url": "https://github.com/browser-use/browser-harness",
+          "meta": "66 points · 28 comments",
+          "why": "Open-source browser agent framework expanding the tool-use surface for agentic systems.",
           "topics": [
-            "Major labs",
-            "Evaluation"
+            "MCP",
+            "Browser agents",
+            "Tool use"
           ],
-          "publishedAt": "2026-04-19T00:00:00Z",
-          "score": 483
+          "publishedAt": "2026-04-24T14:31:38Z",
+          "score": 66
         },
         {
-          "title": "Changes in Opus 4.6 → 4.7 system prompt — 368 points",
+          "title": "OpenAI releases GPT-5.5 and GPT-5.5 Pro in the API",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47823270",
-          "meta": "368 points · 218 comments",
-          "why": "Detailed diff of Claude's system prompt changes — reveals tuning for tool use, safety, and agent behavior.",
+          "url": "https://news.ycombinator.com/item?id=47894000",
+          "meta": "177 points · 105 comments",
+          "why": "API availability means agent frameworks and coding tools can immediately integrate GPT-5.5 for tool calling.",
           "topics": [
             "Major labs",
             "Tool use"
           ],
-          "publishedAt": "2026-04-20T00:00:00Z",
-          "score": 368
-        },
-        {
-          "title": "Claude Design discussion — 386 points",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47818700",
-          "meta": "386 points · 244 comments",
-          "why": "Agents designing UI — a new agentic category with design-to-code pipeline.",
-          "topics": [
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-19T00:00:00Z",
-          "score": 386
+          "publishedAt": "2026-04-25T06:00:00Z",
+          "score": 177
         }
       ]
     },
@@ -287,57 +377,109 @@
       "label": "Reddit",
       "items": [
         {
-          "title": "Anthropic admits making hosted models less capable — 923 upvotes",
+          "title": "Anthropic admits to making hosted models more stupid",
           "source": "r/LocalLLaMA",
           "url": "https://www.anthropic.com/engineering/april-23-postmortem",
-          "meta": "923 upvotes · 202 comments",
-          "why": "Community seizes on postmortem admission as proof that open-weight local models are essential for reliable agent workflows.",
+          "meta": "944 upvotes · 210 comments",
+          "why": "The strongest argument yet for open-weight self-hosting in production agents: if your model provider degrades quality, your agent silently breaks.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-24T12:33:01Z",
+          "score": 944
+        },
+        {
+          "title": "Qwen 3.6 27B makes huge gains in agency — ties Sonnet 4.6",
+          "source": "r/LocalLLaMA",
+          "url": "https://www.reddit.com/gallery/1strodp",
+          "meta": "648 upvotes · 156 comments",
+          "why": "Open-weight 27B model matching frontier closed-source performance on agentic coding — the open/closed gap is rapidly closing.",
           "topics": [
             "Open weights",
             "Major labs",
             "Coding agents"
           ],
-          "publishedAt": "2026-04-24T12:33:00Z",
-          "score": 923
+          "publishedAt": "2026-04-23T18:47:11Z",
+          "score": 648
         },
         {
-          "title": "Qwen3.6-27B ties with Sonnet 4.6 on agency benchmarks — 649 upvotes",
+          "title": "This is where we are right now, LocalLLaMA",
           "source": "r/LocalLLaMA",
-          "url": "https://www.reddit.com/gallery/1strodp",
-          "meta": "649 upvotes · 156 comments",
-          "why": "Open-weight model matching frontier performance on agentic tasks — major milestone for local agent viability.",
+          "url": "https://i.redd.it/44f42a2n17xg1.png",
+          "meta": "615 upvotes · 163 comments",
+          "why": "Community meme capturing the state of local LLMs — the open-weight ecosystem is maturing fast enough to be self-aware about it.",
+          "topics": [
+            "Open weights"
+          ],
+          "publishedAt": "2026-04-24T19:58:25Z",
+          "score": 615
+        },
+        {
+          "title": "Gemma 4 and Qwen 3.6 KV cache quantization benchmarks",
+          "source": "r/LocalLLaMA",
+          "url": "https://localbench.substack.com/p/kv-cache-quantization-benchmark",
+          "meta": "255 upvotes · 51 comments",
+          "why": "Practical benchmarks for deploying open-weight models with efficient KV caching — essential for agent memory optimization.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-24T14:19:48Z",
+          "score": 255
+        },
+        {
+          "title": "Claude Code tested for removal from Pro plan — then reversed",
+          "source": "r/ClaudeAI",
+          "url": "https://news.ycombinator.com/item?id=47854477",
+          "meta": "679 points · 639 comments",
+          "why": "The core agentic AI economics story: agents that 'run for hours' consume massive tokens, making current pricing unsustainable. This reveals the fundamental business model challenge.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-22T10:00:00Z",
+          "score": 679
+        },
+        {
+          "title": "LMAO why OpenAI hiding the ones where they lose to Opus 4.7?",
+          "source": "r/ArtificialInteligence",
+          "url": "https://i.redd.it/636v6sefn0xg1.jpeg",
+          "meta": "121 upvotes · 43 comments",
+          "why": "Community skepticism about benchmark cherry-picking connects to the broader 'can we trust agent benchmarks?' question.",
+          "topics": [
+            "Major labs",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-23T22:28:18Z",
+          "score": 121
+        },
+        {
+          "title": "OpenCode or Claude Code for Qwen 3.5 27B?",
+          "source": "r/LocalLLaMA",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1suav4f/opencode_or_claudecode_for_qwen35_27b/",
+          "meta": "75 upvotes · 145 comments",
+          "why": "Developers actively choosing between open-weight coding agents and closed-source — the agentic coding tool market is fragmenting.",
           "topics": [
             "Open weights",
             "Coding agents"
           ],
-          "publishedAt": "2026-04-23T18:47:00Z",
-          "score": 649
+          "publishedAt": "2026-04-24T09:34:19Z",
+          "score": 75
         },
         {
-          "title": "OpenCode or ClaudeCode for Qwen3.5-27B? — 68 upvotes",
-          "source": "r/LocalLLaMA",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1suav4f/opencode_or_claudecode_for_qwen35_27b/",
-          "meta": "68 upvotes · 138 comments",
-          "why": "Community choosing between coding agent frameworks for local models — signals maturation of open-weight agent tooling.",
+          "title": "GPT-5.5 achieves Mythos-like hacking capabilities, open to all",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47879330",
+          "meta": "74 points · 22 comments",
+          "why": "XBow analysis: GPT-5.5 has strong cyber offensive abilities but is publicly available. If frontier models have these capabilities, deployment governance matters enormously for agentic safety.",
           "topics": [
-            "Coding agents",
-            "Open weights"
-          ],
-          "publishedAt": "2026-04-24T09:34:00Z",
-          "score": 68
-        },
-        {
-          "title": "Gemma 4 and Qwen3.6 KV cache quantization — 239 upvotes",
-          "source": "r/LocalLLaMA",
-          "url": "https://localbench.substack.com/p/kv-cache-quantization-benchmark",
-          "meta": "239 upvotes · 48 comments",
-          "why": "Practical benchmarking of KV cache compression for long-context agent workflows — directly affects local agent deployment costs.",
-          "topics": [
-            "Open weights",
+            "Major labs",
             "Evaluation"
           ],
-          "publishedAt": "2026-04-24T14:19:00Z",
-          "score": 239
+          "publishedAt": "2026-04-24T10:00:00Z",
+          "score": 74
         }
       ]
     },
@@ -346,69 +488,109 @@
       "label": "Hugging Face",
       "items": [
         {
-          "title": "DeepSeek-V4 Pro — 1.6T MoE, 1M context, MIT license",
+          "title": "DeepSeek-V4-Pro — 1.6T open-weight MoE with 1M context",
           "source": "Hugging Face",
           "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
-          "meta": "MIT license · 49B activated · hybrid CSA+HCA attention",
-          "why": "The biggest open-weight drop this week. Pro-Max reasoning bridges gap with closed models on agent benchmarks.",
+          "meta": "trending #1 · 1.6T params (49B active)",
+          "why": "The largest open-weight model ever released, with revolutionary long-context efficiency via Hybrid Attention. Directly enables long-horizon agent reasoning and persistent agent memory.",
           "topics": [
             "Open weights",
             "Major labs"
           ],
-          "publishedAt": "2026-04-24T00:00:00Z",
-          "score": 1746
+          "publishedAt": "2026-04-24T10:00:00Z",
+          "score": 500
         },
         {
-          "title": "Qwen3.6-27B & Qwen3.6-35B-A3B — agentic coding models",
+          "title": "Kimi-K2.6 — open agentic model with swarm orchestration",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
-          "meta": "Apache 2.0 · SWE-bench 73.4% · 1M context",
-          "why": "Flagship-level coding in 27B dense and 35B MoE — Thinking Preservation for iterative agentic development.",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+          "meta": "trending · 1T params (32B active) · MIT license",
+          "why": "Unprecedented agent swarm support: 300 sub-agents, 4,000 coordinated steps, 24/7 proactive background mode. The most explicitly agent-focused open model release.",
+          "topics": [
+            "Open weights",
+            "Multi-agent workflows",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-24T10:00:00Z",
+          "score": 400
+        },
+        {
+          "title": "GLM-5.1 — flagship agentic engineering model with long-horizon sustainability",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/zai-org/GLM-5.1",
+          "meta": "trending · 754B params (MoE) · MIT license",
+          "why": "Explicitly designed for agentic engineering — improves with longer agent runs, sustaining optimization over hundreds of rounds and thousands of tool calls. A direct answer to the agent reliability problem.",
+          "topics": [
+            "Open weights",
+            "Coding agents",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-16T10:00:00Z",
+          "score": 350
+        },
+        {
+          "title": "Qwen3.6-35B-A3B — agentic coding with 3B active params",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+          "meta": "trending · 35B total / 3B active · Apache 2.0",
+          "why": "Branded as 'Agentic Coding Power, Now Open to All' — achieves SWE-bench 73.4% with only 3B active parameters. Novel Gated DeltaNet + MoE architecture. Game-changer for efficient local coding agents.",
           "topics": [
             "Open weights",
             "Coding agents"
           ],
-          "publishedAt": "2026-04-24T00:00:00Z",
-          "score": 973
+          "publishedAt": "2026-04-15T10:00:00Z",
+          "score": 300
         },
         {
-          "title": "Kimi-K2.6 — 300-sub-agent swarm, 1T MoE",
+          "title": "Qwen3.6-27B — best open-weight agentic coding in its class",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
-          "meta": "Apache 2.0 · 32B activated · swarm orchestration",
-          "why": "First open model with native swarm — 300 sub-agents, 4,000+ coordinated steps. A new paradigm for multi-agent orchestration.",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+          "meta": "trending · 27B dense · Apache 2.0",
+          "why": "SWE-bench Verified 77.2%, Terminal-Bench 59.3% — competitive with Claude Opus 4.5. Features 'Thinking Preservation' for retaining context across agentic turns.",
           "topics": [
-            "Multi-agent workflows",
-            "Open weights"
+            "Open weights",
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-24T00:00:00Z",
-          "score": 550
+          "publishedAt": "2026-04-22T10:00:00Z",
+          "score": 280
         },
         {
-          "title": "OpenAI Privacy Filter — PII detection model for agent pipelines",
+          "title": "Gemma-4 — Google's agentic open-weight family with native function calling",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/openai/privacy-filter",
-          "meta": "Apache 2.0 · 1B params (50M active) · 128K context · constrained Viterbi",
-          "why": "Specialized open model for PII masking in agent workflows — essential for production privacy compliance.",
+          "url": "https://huggingface.co/google/gemma-4-31B-it",
+          "meta": "trending · E2B, E4B, 26B-A4B, 31B variants · Apache 2.0",
+          "why": "First open-weight Gemma family with native function-calling support and explicit agentic capabilities. Hybrid attention architecture enables 256K context — serious contender for on-device agents.",
           "topics": [
-            "Tool use",
-            "Open weights"
-          ],
-          "publishedAt": "2026-04-23T00:00:00Z",
-          "score": 63
-        },
-        {
-          "title": "ML Intern (smolagents) — trending agent space",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/spaces/smolagents/ml-intern",
-          "meta": "Trending Space · smolagents framework",
-          "why": "Growing ecosystem of practical agent deployments using HuggingFace's own agent framework.",
-          "topics": [
-            "Coding agents",
+            "Open weights",
+            "Major labs",
             "Tool use"
           ],
-          "publishedAt": "2026-04-25T00:00:00Z",
-          "score": 40
+          "publishedAt": "2026-04-11T10:00:00Z",
+          "score": 250
+        },
+        {
+          "title": "LLaDA 2.0-Uni — unified diffusion LLM with multimodal generation",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/inclusionAI/LLaDA2.0-Uni",
+          "meta": "trending · 16B MoE · Apache 2.0",
+          "why": "Novel diffusion-based LLM that combines understanding and generation — key for multimodal agents that need to both perceive and create visual content.",
+          "topics": [
+            "Open weights"
+          ],
+          "publishedAt": "2026-04-24T10:00:00Z",
+          "score": 150
+        },
+        {
+          "title": "mlx-community/openai-privacy-filter-4bit — PII detection for agent inputs",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/mlx-community/openai-privacy-filter-4bit",
+          "meta": "2 likes · 147 downloads",
+          "why": "Small but important: privacy filtering models for detecting PII before it enters agent workflows. Security infrastructure for production deployments.",
+          "topics": [
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-22T22:13:18Z",
+          "score": 30
         }
       ]
     },
@@ -417,212 +599,300 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "GPT-5.5 & GPT-5.5 Pro available in API — 155 pts",
+          "title": "DeepSeek V4 — 1.6T open-weight MoE with 1M context window",
+          "source": "DeepSeek",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+          "meta": "1,767 HN points · largest open-weight model",
+          "why": "The largest open-weight model ever. Hybrid Attention with Compressed Sparse Attention achieves 27% less inference FLOPs at 1M context. V4-Pro-Max for maximum agentic reasoning. MIT license.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-24T10:00:00Z",
+          "score": 1767
+        },
+        {
+          "title": "GPT-5.5 — OpenAI's agentic frontier model with tool use and self-verification",
           "source": "OpenAI",
-          "url": "https://news.ycombinator.com/item?id=47894000",
-          "meta": "155 points · 95 comments",
-          "why": "API availability means agents can programmatically access GPT-5.5. Pro tier suggests enhanced agentic reasoning.",
+          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "meta": "1,522 HN points · API + Codex integration",
+          "why": "Explicitly designed for agentic workflows: planning, tool use, and self-verification. The 'significantly fewer tokens in Codex' claim and Pro variant signal OpenAI's cost optimization for agent loops.",
+          "topics": [
+            "Major labs",
+            "Tool use",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-23T14:00:00Z",
+          "score": 1522
+        },
+        {
+          "title": "Claude Opus 4.7 — advanced engineering and agentic workflows",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "meta": "13% improvement on 93-task coding benchmark",
+          "why": "Focused on long-horizon autonomy — Devin's Scott Wu endorsed it for CI/CD and async agent workflows. New real-time cyber safeguards for agentic AI safety.",
           "topics": [
             "Major labs",
             "Coding agents"
           ],
-          "publishedAt": "2026-04-25T00:00:00Z",
-          "score": 155
+          "publishedAt": "2026-04-16T10:00:00Z",
+          "score": 800
         },
         {
-          "title": "Workspace Agents in ChatGPT — OpenAI launches team agents",
-          "source": "OpenAI",
-          "url": "https://news.ycombinator.com/item?id=47866860",
-          "meta": "158 points · 62 comments",
-          "why": "OpenAI launches Workspace Agents — custom autonomous bots for teams. Major agentic feature for enterprise.",
+          "title": "Claude Design — Anthropic Labs agentic creative tool",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+          "meta": "New product launch",
+          "why": "Anthropic's push into agentic creative workflows. 'Handoff to Claude Code' feature directly bridges design to implementation — an agent-to-agent workflow pattern.",
           "topics": [
+            "Major labs",
+            "Coding agents",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-17T10:00:00Z",
+          "score": 600
+        },
+        {
+          "title": "Anthropic's postmortem — Claude Code quality regressions",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+          "meta": "911 HN points · engineering transparency",
+          "why": "Anthropic publicly acknowledged agent reliability regressions. This transparency is rare and essential — understanding why agents break is as important as building them.",
+          "topics": [
+            "Major labs",
+            "Coding agents",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-23T10:00:00Z",
+          "score": 911
+        },
+        {
+          "title": "Muse Spark — Meta's multimodal reasoning model with multi-agent orchestration",
+          "source": "Meta",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+          "meta": "58% on Humanity's Last Exam",
+          "why": "Meta's most significant model in over a year. 'Contemplating mode' orchestrates multiple agents reasoning in parallel. Directly targets frontier agentic AI with multi-agent capabilities.",
+          "topics": [
+            "Open weights",
             "Major labs",
             "Multi-agent workflows"
           ],
-          "publishedAt": "2026-04-22T00:00:00Z",
-          "score": 158
+          "publishedAt": "2026-04-08T10:00:00Z",
+          "score": 500
         },
         {
-          "title": "Google invests $40B in Anthropic — compute + cash",
-          "source": "TechCrunch",
-          "url": "https://news.ycombinator.com/item?id=47895080",
-          "meta": "185 points · 100 comments",
-          "why": "Massive capital reshapes agent infrastructure landscape. Compute availability becomes a strategic differentiator.",
-          "topics": [
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-25T00:00:00Z",
-          "score": 185
-        },
-        {
-          "title": "Anthropic takes $5B from Amazon — $100B cloud commitment",
-          "source": "TechCrunch",
-          "url": "https://news.ycombinator.com/item?id=47848276",
-          "meta": "274 points · 289 comments",
-          "why": "Dual cloud lock-in deal reshapes agentic AI infrastructure — AWS becomes key Anthropic compute provider.",
-          "topics": [
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-21T00:00:00Z",
-          "score": 274
-        },
-        {
-          "title": "Google Deep Research & Deep Research Max — MCP support, autonomous research agents",
-          "source": "Google",
-          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/",
-          "meta": "Gemini 3.1 Pro · MCP integration · Interactions API",
-          "why": "First Deep Research with MCP support — agents can connect to custom data sources. Transforms research summarization into enterprise agentic workflows.",
-          "topics": [
-            "Major labs",
-            "MCP",
-            "Tool use"
-          ],
-          "publishedAt": "2026-04-21T00:00:00Z",
-          "score": 200
-        },
-        {
-          "title": "Mistral Studio Connectors — MCP-based agent tool integration",
+          "title": "Mistral Connectors — MCP as production infrastructure",
           "source": "Mistral AI",
           "url": "https://mistral.ai/news/connectors",
-          "meta": "MCP connectors · human-in-the-loop approval · direct tool calling",
-          "why": "Mistral adopts MCP for enterprise agent integrations — CRM, knowledge base, productivity tool connectors centrally registered across Le Chat, Studio, and Agent SDK.",
+          "meta": "Platform launch",
+          "why": "Register MCP servers once, reuse across conversations, agents, and workflows. Supports human-in-the-loop approval flows. Enterprise-grade plumbing for production agentic AI.",
           "topics": [
             "MCP",
             "Tool use",
-            "Major labs"
+            "Multi-agent workflows"
           ],
-          "publishedAt": "2026-04-15T00:00:00Z",
-          "score": 150
+          "publishedAt": "2026-04-15T10:00:00Z",
+          "score": 400
         },
         {
-          "title": "Claude Design by Anthropic Labs — agentic visual design product",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
-          "meta": "Opus 4.7 powered · design-to-code pipeline · web capture · handoff to Claude Code",
-          "why": "New agentic category — agents designing UI. Auto-builds design systems from codebases, captures live site elements, and hands off to Claude Code for implementation.",
+          "title": "Google TPU 8i — chips designed for the 'agentic era'",
+          "source": "Google",
+          "url": "https://arstechnica.com/ai/2026/04/google-unveils-two-new-tpus-designed-for-the-agentic-era/",
+          "meta": "Hardware launch",
+          "why": "Google explicitly designing hardware for agentic inference workloads — separate training and inference chips. Hardware-level acknowledgment that agent workloads dominate future AI compute.",
           "topics": [
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-22T10:00:00Z",
+          "score": 350
+        },
+        {
+          "title": "Claude personal app connectors — MCP goes consumer",
+          "source": "Anthropic",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors",
+          "meta": "Product launch — Spotify, Uber Eats, TurboTax",
+          "why": "MCP-based tool integrations expanding to consumer apps — agents can now take actions across personal apps with user verification. Agents move from developer tools to consumer products.",
+          "topics": [
+            "MCP",
+            "Major labs",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-24T10:00:00Z",
+          "score": 300
+        },
+        {
+          "title": "Qwen3.6-27B — open-weight challenging closed models on agentic coding",
+          "source": "Qwen / Alibaba",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+          "meta": "648 Reddit upvotes · SWE-bench 77.2% · Apache 2.0",
+          "why": "The best open-weight agentic coding model in its size class. 'Thinking Preservation' retains reasoning across agent turns — critical for multi-step agent workflows.",
+          "topics": [
+            "Open weights",
             "Major labs",
             "Coding agents"
           ],
-          "publishedAt": "2026-04-17T00:00:00Z",
-          "score": 386
+          "publishedAt": "2026-04-22T10:00:00Z",
+          "score": 280
         },
         {
-          "title": "Google TPU v8 — 'two chips for the agentic era'",
+          "title": "Gemini Drop April 2026 — personal intelligence + Notebooks",
           "source": "Google",
-          "url": "https://news.ycombinator.com/item?id=47842200",
-          "meta": "451 points",
-          "why": "Google's eighth-gen TPU explicitly branded for agent workloads — hardware infrastructure is being purpose-built for agents.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-april-2026/",
+          "meta": "Feature drop",
+          "why": "Personal Intelligence connects Google apps for personalized help — building the consumer-facing substrate for persistent, context-rich personal agents.",
           "topics": [
-            "Major labs"
+            "Major labs",
+            "Memory and state"
           ],
-          "publishedAt": "2026-04-22T00:00:00Z",
-          "score": 451
+          "publishedAt": "2026-04-24T10:00:00Z",
+          "score": 200
+        },
+        {
+          "title": "Mistral: Two Users, One CLI — designing for people and agents",
+          "source": "Mistral AI",
+          "url": "https://mistral.ai/news/two-users-one-cli-people-and-agents",
+          "meta": "Engineering blog post",
+          "why": "'Every interactive prompt is a flag in disguise' — designing CLI tools that both humans and agents can navigate. Growing best-practices conversation for agentic infrastructure.",
+          "topics": [
+            "Tool use",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-03-31T10:00:00Z",
+          "score": 180
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Coding agents",
-      "signalCount": 18,
-      "whyItMatters": "The biggest week for coding agents in months. GPT-5.5 launches, Anthropic posts a postmortem on Claude Code quality, OpenClaw gets unbanned, and agents that sabotage projects through overthinking become a named failure pattern.",
+      "topic": "Major labs",
+      "signalCount": 37,
+      "whyItMatters": "DeepSeek V4, GPT-5.5, Claude Opus 4.7, Claude Design, Muse Spark, and Qwen 3.6 all dropped in a two-week window. The frontier model race is now explicitly about agentic capabilities — coding, tool use, multi-step reasoning — not just benchmark scores. The labs are building for agents first.",
       "signals": [
-        "GPT-5.5 immediately available for Copilot and API (1,518 pts)",
-        "Anthropic's Claude Code postmortem (910 pts)",
-        "OpenClaw-style CLI usage unbanned (507 pts)",
-        "Agents sabotaging projects via overthinking (308 pts)",
-        "Broccoli — 60% of dev PRs shipped via coding agent (73 pts)"
+        "DeepSeek V4: 1.6T open-weight, 1M context, MoE",
+        "GPT-5.5: agentic focus with tool use and self-verification",
+        "Claude Opus 4.7: 13% coding improvement, long-horizon autonomy",
+        "Muse Spark: multi-agent orchestration with Contemplating mode",
+        "Google TPU 8i: hardware designed for 'agentic era' inference"
       ]
     },
     {
-      "topic": "Major labs",
-      "signalCount": 15,
-      "whyItMatters": "$45B in investments flow into Anthropic. GPT-5.5 and Opus 4.7 both ship. DeepSeek-V4 and Kimi K2.6 prove open weights can rival frontier. The infrastructure arms race is accelerating.",
+      "topic": "Coding agents",
+      "signalCount": 29,
+      "whyItMatters": "Claude Code's quality regression, Anthropic testing its removal from Pro plans, and the 'I cancelled Claude' backlash reveal the fundamental economics: agents that run for hours consume massive tokens. Cursor valued at $60B. The agentic coding category is simultaneously the most valuable and most fragile in AI.",
       "signals": [
-        "GPT-5.5 released (1,518 pts)",
-        "$40B Google investment in Anthropic",
-        "$5B Amazon + $100B cloud commitment to Anthropic",
-        "DeepSeek-V4 Pro open-source with 1M context",
-        "Google TPU v8 branded 'for the agentic era'"
+        "Claude Code postmortem: 911 HN pts on reliability regression",
+        "Claude Code Pro removal test: 679 HN pts, then reversed",
+        "Hear your agent suffer: 174 pts — coding agent observability meme",
+        "LangAlpha: domain-specific coding agent for Wall Street",
+        "Qwen3.6-27B: open-weight matching Claude on SWE-bench"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 12,
-      "whyItMatters": "This is the week open weights caught up. DeepSeek-V4 Pro, Kimi K2.6, and Qwen3.6 all ship frontier-competitive models with agent-specific features. The open-vs-closed quality gap is functionally closed.",
+      "signalCount": 27,
+      "whyItMatters": "DeepSeek V4 (1.6T, MIT license), Qwen 3.6 variants, Kimi K2.6, GLM-5.1, and Gemma 4 all dropped within weeks. The open-weight ecosystem now has models explicitly targeting agentic coding, multi-agent orchestration, and long-horizon reasoning. The quality gap with closed models is closing fast.",
       "signals": [
-        "DeepSeek-V4 Pro — 1.6T MoE, MIT license, 1M context",
-        "Kimi K2.6 — 300-sub-agent swarm orchestration",
-        "Qwen3.6-27B ties Sonnet 4.6 on agency benchmarks (649 upvotes)",
-        "OpenAI Privacy Filter — PII detection, Apache 2.0",
-        "Gemma 4 KV cache quantization benchmarking (239 upvotes)"
-      ]
-    },
-    {
-      "topic": "MCP",
-      "signalCount": 6,
-      "whyItMatters": "MCP gains two major lab endorsements this week. Google Deep Research adds MCP support; Mistral builds Connector ecosystem on MCP. Standardized tool surfaces are becoming the connective tissue for agentic systems.",
-      "signals": [
-        "Google Deep Research adds MCP for custom data source connections",
-        "Mistral Studio Connectors use MCP for enterprise integrations",
-        "MCP server for Fastmail (33 pts)",
-        "Ctx — cross-agent context persistence for Claude Code and Codex (72 pts)",
-        "Agent Vault — open-source credential proxy for agents (134 pts)"
-      ]
-    },
-    {
-      "topic": "Multi-agent workflows",
-      "signalCount": 5,
-      "whyItMatters": "Kimi K2.6 debuts 300-sub-agent swarm orchestration. Mistral adds human-in-the-loop approval flows. OpenAI launches Workspace Agents. Multi-agent is no longer aspirational — it's shipping.",
-      "signals": [
-        "Kimi K2.6 swarm scales to 300 sub-agents, 4,000+ steps",
-        "Mistral human-in-the-loop approval for agent actions",
-        "OpenAI Workspace Agents for autonomous team bots",
-        "Browser Harness — LLMs write their own CDP tools (57 pts)",
-        "Daemons — cleaning up after agents instead of making them perfect (70 pts)"
+        "DeepSeek V4: largest open-weight model, 1M context",
+        "Kimi K2.6: open agent swarm model (300 sub-agents)",
+        "Qwen3.6-35B-A3B: 'Agentic Coding Power, Now Open to All'",
+        "GLM-5.1: improves with longer agent runs",
+        "Gemma 4: native function calling in open weights"
       ]
     },
     {
       "topic": "Evaluation",
-      "signalCount": 8,
-      "whyItMatters": "The community is actively questioning whether agents improve or degrade projects. 'Sabotaging projects by overthinking' becomes a named failure pattern. The Anthropic postmortem and 'I Cancelled Claude' are both fundamentally about eval failures.",
+      "signalCount": 15,
+      "whyItMatters": "Berkeley's 'Exploiting AI Agent Benchmarks' (588 pts) shows the evaluation crisis is real. Anthropic's own quality regression undermined trust in frontier providers. The community is skeptical about benchmark cherry-picking. We need better agent benchmarks, not more of them.",
       "signals": [
-        "Sabotaging projects by overthinking, scope creep (308 pts)",
-        "Anthropic Claude Code postmortem — quality eval failures (910 pts)",
-        "I Cancelled Claude — community eval backlash (658 pts)",
-        "Scoring Show HN submissions for AI design patterns (330 pts)",
-        "LLM pricing has never made sense — cost eval for agents"
+        "Exploiting AI Agent Benchmarks: 588 HN pts",
+        "Anthropic admits quality regression: 944 Reddit pts",
+        "LMAO why OpenAI hiding losses vs Opus 4.7: 121 pts",
+        "GPT-5.5 bio bug bounty — novel safety evaluation approach",
+        "Qwen 3.6 'ties Sonnet 4.6' on Artificial Analysis"
+      ]
+    },
+    {
+      "topic": "Multi-agent workflows",
+      "signalCount": 18,
+      "whyItMatters": "Kimi K2.6 (300-agent swarms), Muse Spark (parallel Contemplating mode), and Mistral Connectors (production MCP) all push the multi-agent envelope. The infrastructure for coordinating multiple agents is maturing from demos to production.",
+      "signals": [
+        "Kimi K2.6: 300 sub-agents, 4,000 coordinated steps",
+        "Muse Spark: Contemplating mode for parallel agent reasoning",
+        "Mistral Connectors: MCP as production infrastructure",
+        "CrabTrap: LLM-as-judge security proxy for agents",
+        "Mediator.ai: Nash bargaining for agent-mediated fairness"
+      ]
+    },
+    {
+      "topic": "MCP",
+      "signalCount": 12,
+      "whyItMatters": "MCP went from developer tooling to consumer product integration this week. Anthropic's personal app connectors (Spotify, Uber Eats, TurboTax) and Mistral's Connectors platform both use MCP. The protocol is becoming the HTTP of agent-tool integration.",
+      "signals": [
+        "Mistral Connectors: register-once, reuse-everywhere MCP",
+        "Claude personal app connectors: MCP to consumer apps",
+        "Browser Harness: open-source browser agent via MCP-like tool surfaces",
+        "Context Gateway: compacting MCP output for efficiency",
+        "Two Users, One CLI: designing tools for both humans and agents"
+      ]
+    },
+    {
+      "topic": "Tool use",
+      "signalCount": 14,
+      "whyItMatters": "GPT-5.5's explicit tool-use focus, Gemma 4's native function calling, and Mistral Connectors all point to tool use becoming a first-class model capability rather than a prompt-engineering hack. The tool-use layer is being built into both models and infrastructure.",
+      "signals": [
+        "GPT-5.5: planning, tool use, and self-verification loop",
+        "Gemma 4: native function calling in open weights",
+        "GoModel: open-source model gateway for multi-provider routing",
+        "Mistral Connectors: production MCP with OAuth and governance",
+        "Qwen3.6: Thinking Preservation for retaining tool context"
+      ]
+    },
+    {
+      "topic": "Memory and state",
+      "signalCount": 10,
+      "whyItMatters": "DeepSeek V4's 1M context, Qwen's Thinking Preservation, and Gemini's Personal Intelligence all address the same core problem: agents need durable memory across turns, sessions, and contexts. The solutions are diverging between context-extension architectures and external memory layers.",
+      "signals": [
+        "DeepSeek V4: 1M token context for agent memory",
+        "Qwen3.6 Thinking Preservation: retaining reasoning across turns",
+        "Gemini Personal Intelligence: connecting Google apps for context",
+        "MenteDB: open-source memory database for AI agents",
+        "Gemma 4: 256K context with hybrid attention"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Test GPT-5.5 vs Opus 4.7 on a multi-step agent workflow",
-      "why": "Both frontier models dropped this week. Direct comparison on a real agentic task (not benchmarks) would reveal where each excels.",
-      "prompt": "Run the same 5-step agent workflow (research → plan → code → test → deploy) on both GPT-5.5 and Opus 4.7. Log completion rate, token usage, and failure modes."
+      "title": "Run Qwen3.6-27B as a local coding agent",
+      "why": "It ties Sonnet 4.6 on SWE-bench — test whether the open-weight gap is truly closed for real agent tasks.",
+      "prompt": "Set up Qwen3.6-27B with an OpenCode or similar agent framework and run 5 real-world coding tasks. Compare success rate, time, and cost against Claude Code on the same tasks."
     },
     {
-      "title": "Try DeepSeek-V4 Pro on a long-context agent task",
-      "why": "1M token context is now available in an open-weight model. Test whether the hybrid attention architecture actually improves agent coherence on long sessions.",
-      "prompt": "Run a 50k+ context agent coding task on DeepSeek-V4 Pro and measure whether output quality degrades compared to a fresh session. Compare against Qwen3.6-27B."
+      "title": "Test DeepSeek V4's 1M context for multi-file agent tasks",
+      "why": "A million-token window could eliminate the need for retrieval augmentation in agent memory — but does it actually hold up?",
+      "prompt": "Load an entire mid-size repository (~500K tokens) into DeepSeek V4's context and ask it to make a cross-cutting refactor. Measure whether the model actually uses information from the full context vs. the last 50K tokens."
     },
     {
-      "title": "Build a multi-agent pipeline with Kimi K2.6 swarm orchestration",
-      "why": "300-sub-agent swarm is a new paradigm. Test whether swarm decomposition actually improves task quality or just adds coordination overhead.",
-      "prompt": "Implement a 3-tier research agent using Kimi K2.6's swarm capabilities. Measure whether sub-agent decomposition improves output quality vs. a single-agent approach."
+      "title": "Deploy CrabTrap as an agent guardrail proxy",
+      "why": "Production agents need safety layers. Test whether LLM-as-judge filtering catches dangerous actions without over-filtering.",
+      "prompt": "Set up CrabTrap in front of a coding agent and run 10 tasks. Log every blocked request. How many were false positives? How many actual safety issues were caught?"
     },
     {
-      "title": "Audit your coding agent for overthinking patterns",
-      "why": "308-point HN post named a new failure mode. Identify whether your agent scope-creeps, over-architects, or creates unnecessary diffs.",
-      "prompt": "Review the last 20 coding agent sessions. Flag any where the agent edited files beyond the stated task, created new files unprompted, or made structural changes that don't directly address the request."
+      "title": "Benchmark Kimi K2.6's swarm orchestration",
+      "why": "300 sub-agents is unprecedented — but does coordinated multi-agent actually outperform a single strong model?",
+      "prompt": "Configure Kimi K2.6 with max swarm orchestration on SWE-bench tasks. Compare against single-agent Qwen3.6-27B on the same tasks. Does the swarm architecture actually improve outcomes, or just add overhead?"
+    },
+    {
+      "title": "A/B test Mistral Connectors vs raw MCP for agent workflows",
+      "why": "Is registered-connector infrastructure worth the complexity, or does raw MCP work fine for small teams?",
+      "prompt": "Build the same 3-tool agent workflow (file system, web search, calculator) twice: once with Mistral Connectors, once with raw MCP. Measure setup time, error rates, and developer experience."
     }
   ],
   "method": [
-    "Hacker News Algolia search over agentic AI keywords (sorted by popularity)",
-    "Reddit r/LocalLLaMA, r/MachineLearning, r/ClaudeAI, r/OpenAI (web search due to API blocks)",
-    "HuggingFace trending models and spaces",
-    "Major lab announcements from OpenAI, Anthropic, Google, Meta, Mistral, Qwen, DeepSeek, Moonshot",
-    "Manual curation prioritizing engagement metrics and agentic AI relevance"
+    "Curated research from Hacker News Algolia API (stories 50+ points)",
+    "Community signals from r/LocalLLaMA, r/ClaudeAI, r/MachineLearning",
+    "Major lab announcements: Anthropic, OpenAI, DeepSeek, Qwen, Mistral, Google, Meta",
+    "HuggingFace trending models with agentic capabilities",
+    "Manual editorial curation prioritizing engagement metrics and relevance"
   ]
 }
