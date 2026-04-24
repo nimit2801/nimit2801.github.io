@@ -1,125 +1,105 @@
 {
-  "generatedAt": "2026-04-24T16:15:03Z",
+  "generatedAt": "2026-04-24T17:03:59Z",
   "windowDays": 7,
-  "summary": "Massive cycle: GPT-5.5 and DeepSeek V4 dropped within 24 hours of each other, Anthropic's Mythos cybersecurity model was leaked, and Anthropic admitted degrading hosted model capabilities \u2014 the strongest open-weights argument yet. Meanwhile, Google shipped an Agent Skills Repository, and TNL showed coding agents can hit 86-100% success with persistent plan contracts.",
+  "summary": "This cycle is clustering around major labs, open weights, and coding agents. The strongest signal is that people want better tool surfaces, tighter evals, and less fragile agent loops.",
   "sourceStats": {
-    "items": 203,
+    "items": 76,
     "sources": {
-      "Hacker News": 43,
-      "Reddit": 128,
+      "Hacker News": 44,
       "Hugging Face": 32,
-      "Major labs": 78
+      "Major labs": 29
     }
   },
   "highlights": [
     {
-      "title": "DeepSeek V4 Released \u2014 1.6T params, 1M context, open-weight, competitive with Opus 4.6 on coding",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47884971",
-      "meta": "1,510 points \u00b7 1,143 comments",
-      "why": "The biggest open-weight release this cycle. DeepSeek V4-Pro (49B active params) claims SOTA on agentic coding benchmarks among open models, with DSA for flat inference cost at 1M context. A direct challenge to frontier model pricing.",
-      "topics": [
-        "Open weights",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-04-24T08:00:00Z",
-      "score": 2000
-    },
-    {
-      "title": "GPT-5.5 Released \u2014 Codename 'Spud', 2x More Expensive Than GPT-5.4, No ARC-AGI-3 Scores",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47879092",
-      "meta": "1,476 points \u00b7 985 comments",
-      "why": "OpenAI's latest frontier model ships with GPT-5.4-Cyber alongside it, but the community debates whether it's an incremental upgrade. Missing ARC-AGI-3 and 2x pricing raise eyebrows.",
-      "topics": [
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-04-23T20:00:00Z",
-      "score": 1950
-    },
-    {
-      "title": "Anthropic Mythos Controversy \u2014 'Too Dangerous to Release' Cybersecurity Model Leaked via Discord Group",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47886000",
-      "meta": "90 points \u00b7 38 comments",
-      "why": "Anthropic's restricted cybersecurity model was accessed by an unauthorized Discord group. XBow showed GPT-5.5 can replicate Mythos-like capabilities without restrictions. 'Too dangerous to release' becomes the new normal for frontier capability withholding.",
-      "topics": [
-        "Major labs",
-        "Memory and state"
-      ],
-      "publishedAt": "2026-04-24T06:00:00Z",
-      "score": 800
-    },
-    {
-      "title": "Anthropic Postmortem: Admits Hosted Models Were Made 'More Stupid' \u2014 Proves Importance of Open Weights",
-      "source": "r/LocalLLaMA",
-      "url": "https://www.anthropic.com/engineering/april-23-postmortem",
-      "meta": "610 upvotes \u00b7 120 comments",
-      "why": "Anthropic's own engineering postmortem confirms they degraded hosted model capabilities \u2014 the strongest argument yet for open-weight and local-first agent deployments.",
-      "topics": [
-        "Open weights",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-04-24T12:33:01Z",
-      "score": 1173.97
-    },
-    {
-      "title": "Google Agent Skills Repository \u2014 Official Skills Repo for Smarter AI Agents",
-      "source": "Hacker News",
-      "url": "https://cloud.google.com/blog/topics/developers-practitioners/level-up-your-agents-announcing-googles-official-skills-repository",
-      "meta": "4 points \u00b7 1 comments",
-      "why": "Google's official skills repository for agents signals that standardized capability surfaces are becoming infrastructure, not just tooling.",
-      "topics": [
-        "Major labs",
-        "MCP",
-        "Tool use"
-      ],
-      "publishedAt": "2026-04-24T15:06:30Z",
-      "score": 35.6
-    },
-    {
-      "title": "PrivateClaw \u2014 AI Agents in Confidential VMs You Can Verify (TEE on AMD SEV-SNP)",
+      "title": "Show HN: PrivateClaw – AI agents running in confidential VMs you can verify",
       "source": "Hacker News",
       "url": "https://privateclaw.dev",
-      "meta": "5 points \u00b7 0 comments",
-      "why": "Trusted Execution Environments for agents are emerging as the trust layer for sensitive deployments \u2014 every user gets a dedicated CVM with 5-step verification.",
+      "meta": "5 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
       "topics": [
         "Memory and state",
         "Coding agents"
       ],
       "publishedAt": "2026-04-24T15:26:02Z",
-      "score": 34.65
+      "score": 34.43310252700618
     },
     {
-      "title": "Typed Natural Language (TNL) \u2014 Persistent Plan-Mode for Coding Agents, 86-100% Success Rate",
+      "title": "ramankrishna10/npc-agentic-7b",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/ramankrishna10/npc-agentic-7b",
+      "meta": "0 likes · 0 downloads",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-04-24T17:03:38.000Z",
+      "score": 27.857142857142858
+    },
+    {
+      "title": "Cloudflare Agents Week: Infrastructure for Running AI Agents at Scale",
       "source": "Hacker News",
-      "url": "https://github.com/janaraj/tnl",
-      "meta": "Show HN",
-      "why": "TNL uses MUST/SHOULD/MAY English contracts saved to disk that every future agent session reads. A/B tests show 71-83% baseline improving to 86-100%. A methodology for making coding agents actually reliable.",
-      "topics": [
-        "Coding agents",
-        "Memory and state",
-        "Multi-agent workflows"
-      ],
-      "publishedAt": "2026-04-23T18:00:00Z",
-      "score": 200
+      "url": "https://www.youtube.com/watch?v=GE5oiUQPl1Q",
+      "meta": "1 points · 1 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-04-24T15:21:50Z",
+      "score": 29.408796971450617
     },
     {
-      "title": "Open Source Browser Agent Records Navigation Once, Replays for Zero Tokens",
-      "source": "r/LocalLLaMA",
-      "url": "https://github.com/lightfeed/browser-agent",
-      "meta": "5 upvotes \u00b7 0 comments",
-      "why": "Record-and-replay for browser agents cuts token cost to zero on repeated flows \u2014 a practical pattern for making browser automation economically viable.",
+      "title": "Show HN: TurbineFi – Build, Backtest, Deploy Prediction Market Strategies",
+      "source": "Hacker News",
+      "url": "https://www.turbinefi.com",
+      "meta": "3 points · 0 comments",
+      "why": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
       "topics": [
-        "Browser agents",
-        "Open weights",
+        "Multi-agent workflows",
         "Coding agents"
       ],
-      "publishedAt": "2026-04-24T14:43:30Z",
-      "score": 27.08
+      "publishedAt": "2026-04-24T15:17:29Z",
+      "score": 30.383623360339506
+    },
+    {
+      "title": "Meta Partners with AWS on Graviton Chips to Power Agentic AI",
+      "source": "Hacker News",
+      "url": "https://about.fb.com/news/2026/04/meta-partners-with-aws-on-graviton-chips-to-power-agentic-ai/",
+      "meta": "3 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-04-24T15:13:31Z",
+      "score": 30.36066811342593
+    },
+    {
+      "title": "Google Unveils Agent Skills Repository for Smarter AI Agents",
+      "source": "Hacker News",
+      "url": "https://cloud.google.com/blog/topics/developers-practitioners/level-up-your-agents-announcing-googles-official-skills-repository",
+      "meta": "4 points · 1 comments",
+      "why": "The big labs still set the tone when they ship model or platform changes.",
+      "topics": [
+        "Major labs"
+      ],
+      "publishedAt": "2026-04-24T15:06:30Z",
+      "score": 35.32006240354938
+    },
+    {
+      "title": "The Tribe Has to Outlive the Model",
+      "source": "Hacker News",
+      "url": "https://christophermeiklejohn.com/ai/zabriskie/agents/reliability/2026/04/23/the-tribe-has-to-outlive-the-model.html",
+      "meta": "2 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-04-24T14:42:26Z",
+      "score": 28.180787712191357
+    },
+    {
+      "title": "Cloud Computers for Agents: Exe.dev vs. Sprites vs. Shellbox vs. E2B vs. Blaxel",
+      "source": "Hacker News",
+      "url": "https://techstackups.com/comparisons/cloud-computers-for-ai-agents/",
+      "meta": "1 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-24T14:05:44Z",
+      "score": 25.9684034529321
     }
   ],
   "sourceSections": [
@@ -128,246 +108,121 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "DeepSeek V4 is out \u2014 best open-source on coding, 1.6T/49B active, 1M context via DSA",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47884971",
-          "meta": "1,510 points \u00b7 1,143 comments",
-          "why": "The biggest open-weight release this cycle. V4-Pro claims SOTA on agentic coding benchmarks, directly challenging frontier model pricing with 1M context at flat inference cost.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-04-24T08:00:00Z",
-          "score": 2000
-        },
-        {
-          "title": "GPT-5.5 Released \u2014 incremental upgrade, 2x price, codename 'Spud', GPT-5.4-Cyber alongside",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47879092",
-          "meta": "1,476 points \u00b7 985 comments",
-          "why": "OpenAI's latest frontier model ships at 2x the cost with no ARC-AGI-3. Mixed reception suggests the market wants more than linear capability gains.",
-          "topics": [
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-23T20:00:00Z",
-          "score": 1950
-        },
-        {
-          "title": "'A Boy That Cried Mythos' \u2014 Anthropic's restricted cybersecurity model leaked, verification trust collapsing",
-          "source": "Hacker News",
-          "url": "https://www.flyingpenguin.com/the-boy-that-cried-mythos-verification-is-collapsing-trust-in-anthropic/",
-          "meta": "90 points \u00b7 38 comments",
-          "why": "Unauthorized Discord group accessed Anthropic's restricted 'Mythos' model. XBow showed GPT-5.5 can do 'Mythos-like hacking' without restrictions. 'Too dangerous' becomes the new normal.",
-          "topics": [
-            "Major labs",
-            "Memory and state"
-          ],
-          "publishedAt": "2026-04-24T06:00:00Z",
-          "score": 800
-        },
-        {
-          "title": "Show HN: Typed Natural Language \u2014 persistent plan-mode with MUST/SHOULD/MAY contracts for coding agents",
-          "source": "Hacker News",
-          "url": "https://github.com/janaraj/tnl",
-          "meta": "Show HN",
-          "why": "TNL saves English contracts to disk that every agent session reads. A/B: 71-83% \u2192 86-100% success. A methodology for making coding agents actually reliable.",
-          "topics": [
-            "Coding agents",
-            "Memory and state",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-04-23T18:00:00Z",
-          "score": 200
-        },
-        {
           "title": "Ask HN: Why are companies so distrustful of remote employees?",
           "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=47884294",
-          "meta": "10 points \u00b7 11 comments",
+          "meta": "10 points · 11 comments",
           "why": "This is a useful signal for how people are actually building with agents right now.",
           "topics": [],
           "publishedAt": "2026-04-24T01:05:09Z",
-          "score": 72.73435908564815
+          "score": 72.45113879243827
+        },
+        {
+          "title": "Show HN: Browser Harness – Gives LLM freedom to complete any browser task",
+          "source": "Hacker News",
+          "url": "https://github.com/browser-use/browser-harness",
+          "meta": "12 points · 2 comments",
+          "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
+          "topics": [
+            "MCP",
+            "Browser agents",
+            "Tool use",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-24T14:31:38Z",
+          "score": 54.11828771219136
         },
         {
           "title": "Show HN: I built a toy that plays grandma's stories when my daughter hugs it",
           "source": "Hacker News",
           "url": "https://www.storyfriend.co.uk/",
-          "meta": "9 points \u00b7 3 comments",
+          "meta": "9 points · 3 comments",
           "why": "This is a useful signal for how people are actually building with agents right now.",
           "topics": [
             "Voice and multimodal"
           ],
           "publishedAt": "2026-04-24T00:06:26Z",
-          "score": 46.39456356095679
+          "score": 46.11134326774692
+        },
+        {
+          "title": "Show HN: Turn speech into text anywhere via hotkey (runs on Intel NPU, no cloud)",
+          "source": "Hacker News",
+          "url": "https://github.com/anubhavgupta/whisper-npu",
+          "meta": "4 points · 4 comments",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights"
+          ],
+          "publishedAt": "2026-04-24T16:18:43Z",
+          "score": 44.65277777777778
+        },
+        {
+          "title": "Is possible a language easy as py, fast as C, more secure than Rust?",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47885142",
+          "meta": "5 points · 4 comments",
+          "why": "People are still searching for reliable ways to measure agent quality, not just vibes.",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-24T03:27:41Z",
+          "score": 42.27598447145061
         }
       ]
     },
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": [
-        {
-          "title": "Qwen 3.6 27B Makes Huge Gains in Agency on Artificial Analysis - Ties with Sonnet 4.6",
-          "source": "r/LocalLLaMA",
-          "url": "https://www.reddit.com/gallery/1strodp",
-          "meta": "633 upvotes \u00b7 150 comments",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-23T18:47:11Z",
-          "score": 1263.5376415895062
-        },
-        {
-          "title": "Anthropic admits to have made hosted models more stupid, proving the importance of open weight, local models",
-          "source": "r/LocalLLaMA",
-          "url": "https://www.anthropic.com/engineering/april-23-postmortem",
-          "meta": "610 upvotes \u00b7 120 comments",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-24T12:33:01Z",
-          "score": 1173.972055169753
-        },
-        {
-          "title": "DeepSeek V4 \u2014 open-weight model competitive with Opus 4.6 on coding, 5x cheaper",
-          "source": "r/LocalLLaMA",
-          "url": "https://www.reddit.com/r/LocalLLaMA/search.json?q=deepseek+v4",
-          "meta": "trending",
-          "why": "The most disruptive open-weight release this cycle. V4-Pro benchmarks suggest frontier-level agent capability at 5x lower cost.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-24T10:00:00Z",
-          "score": 900
-        },
-        {
-          "title": "Opus 4.7 is weird",
-          "source": "r/ClaudeAI",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1su5air/opus_47_is_weird/",
-          "meta": "102 upvotes \u00b7 65 comments",
-          "why": "The big labs still set the tone when they ship model or platform changes.",
-          "topics": [
-            "Memory and state",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-24T04:20:54Z",
-          "score": 299.69373726851853
-        },
-        {
-          "title": "OpenCode or ClaudeCode for Qwen3.5 27B",
-          "source": "r/LocalLLaMA",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1suav4f/opencode_or_claudecode_for_qwen35_27b/",
-          "meta": "56 upvotes \u00b7 97 comments",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-24T09:34:19Z",
-          "score": 296.1447403549383
-        },
-        {
-          "title": "LMAO why OpenAI is hiding the ones where they lose to Opus 4.7?",
-          "source": "r/ArtificialInteligence",
-          "url": "https://i.redd.it/636v6sefn0xg1.jpeg",
-          "meta": "117 upvotes \u00b7 43 comments",
-          "why": "The big labs still set the tone when they ship model or platform changes.",
-          "topics": [
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-23T22:28:18Z",
-          "score": 276.5613298611111
-        }
-      ]
+      "items": []
     },
     {
       "key": "hugging-face",
       "label": "Hugging Face",
       "items": [
         {
-          "title": "deepseek-ai/DeepSeek-V4-Pro",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
-          "meta": "text-generation \u00b7 trending \u00b7 open-weight",
-          "why": "1.6T total / 49B active params, 1M context via DSA. Claims SOTA on agentic coding benchmarks among open models.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-24T08:00:00.000Z",
-          "score": 500
-        },
-        {
-          "title": "deepseek-ai/DeepSeek-V4-Flash",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
-          "meta": "text-generation \u00b7 trending \u00b7 open-weight",
-          "why": "284T total / 13B active params, 1M context. The lightweight open-weight option for local agent loops.",
-          "topics": [
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-24T08:00:00.000Z",
-          "score": 400
-        },
-        {
           "title": "mlx-community/openai-privacy-filter-4bit",
           "source": "Hugging Face",
           "url": "https://huggingface.co/mlx-community/openai-privacy-filter-4bit",
-          "meta": "token-classification \u00b7 2 likes \u00b7 147 downloads",
+          "meta": "token-classification · 2 likes · 147 downloads",
           "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
             "Major labs"
           ],
           "publishedAt": "2026-04-22T22:13:18.000Z",
-          "score": 31.276791741071428
+          "score": 31.203963665674603
+        },
+        {
+          "title": "steampunque/Qwen3.6-35B-A3B-MP-GGUF",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/steampunque/Qwen3.6-35B-A3B-MP-GGUF",
+          "meta": "1 likes · 52 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-23T22:29:06.000Z",
+          "score": 30.36754285714286
         },
         {
           "title": "mlx-community/openai-privacy-filter-8bit",
           "source": "Hugging Face",
           "url": "https://huggingface.co/mlx-community/openai-privacy-filter-8bit",
-          "meta": "token-classification \u00b7 1 likes \u00b7 74 downloads",
+          "meta": "token-classification · 1 likes · 74 downloads",
           "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
             "Major labs"
           ],
           "publishedAt": "2026-04-22T22:22:56.000Z",
-          "score": 28.776527058531748
-        },
-        {
-          "title": "nightmedia/Qwen3.6-27B-Claude-4.6-OS-qx64-hi-mlx",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/nightmedia/Qwen3.6-27B-Claude-4.6-OS-qx64-hi-mlx",
-          "meta": "image-text-to-text \u00b7 0 likes \u00b7 422 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-23T15:24:02.000Z",
-          "score": 27.86562110615079
+          "score": 28.70369898313492
         },
         {
           "title": "nightmedia/Qwen3.6-27B-Claude-4.6-OS-mxfp8-mlx",
           "source": "Hugging Face",
           "url": "https://huggingface.co/nightmedia/Qwen3.6-27B-Claude-4.6-OS-mxfp8-mlx",
-          "meta": "image-text-to-text \u00b7 0 likes \u00b7 3 downloads",
+          "meta": "image-text-to-text · 0 likes · 3 downloads",
           "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
             "Open weights",
@@ -376,6 +231,16 @@
           ],
           "publishedAt": "2026-04-24T00:37:48.000Z",
           "score": 27.857742857142856
+        },
+        {
+          "title": "ramankrishna10/npc-agentic-7b",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/ramankrishna10/npc-agentic-7b",
+          "meta": "0 likes · 0 downloads",
+          "why": "This is a useful signal for how people are actually building with agents right now.",
+          "topics": [],
+          "publishedAt": "2026-04-24T17:03:38.000Z",
+          "score": 27.857142857142858
         }
       ]
     },
@@ -384,180 +249,153 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "DeepSeek V4-Pro \u2014 Open-Weight Frontier Model, Competitive with Opus 4.6 on Coding Benchmarks",
+          "title": "Google Unveils Agent Skills Repository for Smarter AI Agents",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47884971",
-          "meta": "1,510 points \u00b7 1,143 comments",
-          "why": "DeepSeek's most powerful open-weight model yet. V4-Pro (1.6T/49B active) claims SOTA on agentic coding. 1M context via DSA. 5x cheaper than Opus 4.6. V4-Flash (284T/13B active) for lighter workloads.",
+          "url": "https://cloud.google.com/blog/topics/developers-practitioners/level-up-your-agents-announcing-googles-official-skills-repository",
+          "meta": "4 points · 1 comments",
+          "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
+            "Major labs"
           ],
-          "publishedAt": "2026-04-24T08:00:00Z",
-          "score": 2000
+          "publishedAt": "2026-04-24T15:06:30Z",
+          "score": 35.32006240354938
         },
         {
-          "title": "GPT-5.5 Released \u2014 2x Price, Codename 'Spud', GPT-5.4-Cyber Announced Alongside",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/introducing-gpt-5-5/",
-          "meta": "1,476 HN points \u00b7 985 comments",
-          "why": "OpenAI's newest frontier model ships at double the cost. GPT-5.4-Cyber (cyber-permissive with Trusted Access) launched alongside. Missing ARC-AGI-3 scores and mixed reception.",
+          "title": "mlx-community/openai-privacy-filter-4bit",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/mlx-community/openai-privacy-filter-4bit",
+          "meta": "token-classification · 2 likes · 147 downloads",
+          "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
-            "Major labs",
-            "Coding agents"
+            "Major labs"
           ],
-          "publishedAt": "2026-04-23T20:00:00Z",
-          "score": 1950
+          "publishedAt": "2026-04-22T22:13:18.000Z",
+          "score": 31.203963665674603
         },
         {
-          "title": "Qwen 3.6 27B Makes Huge Gains in Agency on Artificial Analysis - Ties with Sonnet 4.6",
-          "source": "r/LocalLLaMA",
-          "url": "https://www.reddit.com/gallery/1strodp",
-          "meta": "633 upvotes \u00b7 150 comments",
+          "title": "steampunque/Qwen3.6-35B-A3B-MP-GGUF",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/steampunque/Qwen3.6-35B-A3B-MP-GGUF",
+          "meta": "1 likes · 52 downloads",
           "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
             "Open weights",
-            "Major labs",
-            "Coding agents"
+            "Major labs"
           ],
-          "publishedAt": "2026-04-23T18:47:11Z",
-          "score": 1263.5376415895062
+          "publishedAt": "2026-04-23T22:29:06.000Z",
+          "score": 30.36754285714286
         },
         {
-          "title": "Anthropic Postmortem: Hosted Models Were Degraded \u2014 Strongest Case for Open Weights",
-          "source": "r/LocalLLaMA",
-          "url": "https://www.anthropic.com/engineering/april-23-postmortem",
-          "meta": "610 upvotes \u00b7 120 comments",
-          "why": "Anthropic's own engineering postmortem confirms they degraded hosted model capabilities. The strongest argument yet for open-weight and local-first agent deployments.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-24T12:33:01Z",
-          "score": 1173.97
-        },
-        {
-          "title": "Anthropic Mythos \u2014 'Too Dangerous' Cybersecurity Model Leaked, Trust Collapsing",
-          "source": "Hacker News",
-          "url": "https://www.flyingpenguin.com/the-boy-that-cried-mythos-verification-is-collapsing-trust-in-anthropic/",
-          "meta": "90 points \u00b7 38 comments",
-          "why": "Anthropic's restricted Mythos cybersecurity model accessed by unauthorized Discord group. XBow demonstrated GPT-5.5 replicating Mythos-like capabilities. 'Too dangerous to release' becomes AI's new normal.",
-          "topics": [
-            "Major labs",
-            "Memory and state"
-          ],
-          "publishedAt": "2026-04-24T06:00:00Z",
-          "score": 800
-        },
-        {
-          "title": "Opus 4.7 is weird",
-          "source": "r/ClaudeAI",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1su5air/opus_47_is_weird/",
-          "meta": "102 upvotes \u00b7 65 comments",
+          "title": "mlx-community/openai-privacy-filter-8bit",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/mlx-community/openai-privacy-filter-8bit",
+          "meta": "token-classification · 1 likes · 74 downloads",
           "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
-            "Memory and state",
-            "Major labs",
-            "Coding agents"
+            "Major labs"
           ],
-          "publishedAt": "2026-04-24T04:20:54Z",
-          "score": 299.69373726851853
+          "publishedAt": "2026-04-22T22:22:56.000Z",
+          "score": 28.70369898313492
+        },
+        {
+          "title": "Show HN: Doxa – Open-source emergent simulator for geopolitical scenarios",
+          "source": "Hacker News",
+          "url": "https://github.com/VincenzoManto/Doxa/",
+          "meta": "2 points · 0 comments",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-24T13:52:52Z",
+          "score": 27.89394357638889
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Coding agents",
-      "signalCount": 79,
-      "whyItMatters": "DeepSeek V4 and GPT-5.5 dropped on the same day, reshaping the frontier for coding agents. TNL proves persistent plan contracts push success rates to 86-100%.",
-      "signals": [
-        "Hacker News: DeepSeek V4 is out \u2014 best open-source on coding, 1.6T/49B active, 1M context",
-        "Hacker News: GPT-5.5 Released \u2014 2x price, incremental, codename 'Spud'",
-        "Hacker News: Show HN: PrivateClaw \u2013 AI agents running in confidential VMs you can verify",
-        "Hacker News: Show HN: TurbineFi \u2013 Build, Backtest, Deploy Prediction Market Strategies",
-        "Hacker News: Show HN: Browser Harness \u2013 simplest way to give AI control of real browser",
-        "Hacker News: Cloud Computers for Agents: Exe.dev vs. Sprites vs. Shellbox vs. E2B vs. Blaxel"
-      ]
-    },
-    {
       "topic": "Major labs",
-      "signalCount": 78,
-      "whyItMatters": "GPT-5.5, DeepSeek V4, and the Mythos controversy all hit within 48 hours. The frontier is moving fast and the open/closed divide is sharpening.",
+      "signalCount": 29,
+      "whyItMatters": "The big labs still set the tone when they ship model or platform changes.",
       "signals": [
-        "Hacker News: GPT-5.5 Released \u2014 2x price, no ARC-AGI-3, codename 'Spud'",
-        "Hacker News: DeepSeek V4 \u2014 open-weight competitive with Opus 4.6",
-        "Hacker News: Anthropic Mythos leaked \u2014 'too dangerous to release' model controversy",
         "Hacker News: Google Unveils Agent Skills Repository for Smarter AI Agents",
-        "Hacker News: Show HN: Doxa \u2013 Open-source emergent simulator for geopolitical scenarios",
-        "Hacker News: Show HN: Cosmo \u2013 Desktop agent with generated UI",
-        "Hacker News: Show HN: Auxx.ai \u2013 Customer Support CRM (Mix of Attio and N8n)"
+        "Hacker News: Show HN: Doxa – Open-source emergent simulator for geopolitical scenarios",
+        "Hacker News: Show HN: Cosmo – Desktop agent with generated UI",
+        "Hacker News: Show HN: Auxx.ai – Customer Support CRM (Mix of Attio and N8n)"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 68,
-      "whyItMatters": "DeepSeek V4-Pro proves open weights can match frontier coding benchmarks. Anthropic's own postmortem makes the open-weights case.",
+      "signalCount": 23,
+      "whyItMatters": "Open-weight releases keep lowering the cost of trying agent loops locally.",
       "signals": [
-        "Hacker News: DeepSeek V4-Pro \u2014 1.6T/49B active, open-weight, competitive with Opus 4.6",
-        "Reddit: Anthropic admits degrading hosted models \u2014 open weights win",
-        "Hacker News: Show HN: Moltnet \u2013 open-source local chat for AI agents",
-        "Hacker News: Show HN: Doxa \u2013 Open-source emergent simulator for geopolitical scenarios",
-        "r/LocalLLaMA: Open source browser agent that records AI navigation once and replays for zero tokens",
-        "r/LocalLLaMA: Complete beginner to Agentic coding, is Qwen3.6-27B + pi.dev the right starting point or should I be looking elsewhere?"
+        "Hacker News: Show HN: Moltnet – open-source local chat for AI agents",
+        "Hacker News: MiniVecDb – A local vector DB that garbage-collects AI agent memory",
+        "Hacker News: Show HN: Doxa – Open-source emergent simulator for geopolitical scenarios",
+        "Hacker News: Show HN: Turn speech into text anywhere via hotkey (runs on Intel NPU, no cloud)"
       ]
     },
     {
-      "topic": "Multi-agent workflows",
-      "signalCount": 33,
-      "whyItMatters": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
+      "topic": "Coding agents",
+      "signalCount": 18,
+      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
       "signals": [
-        "Hacker News: Show HN: TurbineFi \u2013 Build, Backtest, Deploy Prediction Market Strategies",
-        "Hacker News: Show HN: Typed Natural Language \u2013 A better plan mode with workflow for coding",
-        "Hacker News: DeepSeek V4 is out. the best open-source on coding. here's the breakdown",
-        "Hacker News: Show HN: Cosmo \u2013 Desktop agent with generated UI"
-      ]
-    },
-    {
-      "topic": "MCP",
-      "signalCount": 33,
-      "whyItMatters": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
-      "signals": [
-        "Hacker News: Show HN: Browser Harness \u2013 simplest way to give AI control of real browser",
-        "Hacker News: Show HN: Typed Natural Language \u2013 A better plan mode with workflow for coding",
-        "Hacker News: Show HN: Lilith-zero update: fast Rust security for agents",
-        "Hacker News: Show HN: Dead Simple Email \u2013 Email API for AI Agents"
+        "Hacker News: Show HN: PrivateClaw – AI agents running in confidential VMs you can verify",
+        "Hacker News: Show HN: TurbineFi – Build, Backtest, Deploy Prediction Market Strategies",
+        "Hacker News: Cloud Computers for Agents: Exe.dev vs. Sprites vs. Shellbox vs. E2B vs. Blaxel",
+        "Hacker News: Show HN: The why and how of TurboPentest for the Agentic Era"
       ]
     },
     {
       "topic": "Memory and state",
-      "signalCount": 29,
+      "signalCount": 5,
       "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
       "signals": [
-        "Hacker News: Show HN: PrivateClaw \u2013 AI agents running in confidential VMs you can verify",
-        "Hacker News: Structured planning, execution, and memory for LLM agents (ragbits 1.6)",
-        "Hacker News: Externalization in LLM Agents: Unified Review of Memory and Harness Engineering",
-        "r/LocalLLaMA: asmi \u2014 open source nvidia-smi for Apple Silicon. Single Rust binary, 50+ HTTP endpoints, RDMA topology, MLX server lifecycle, MCP integration. Built for clusters, works on one Mac."
+        "Hacker News: Show HN: PrivateClaw – AI agents running in confidential VMs you can verify",
+        "Hacker News: MiniVecDb – A local vector DB that garbage-collects AI agent memory",
+        "Hacker News: Designing a Memory System for LLM-Based Agents",
+        "Hacker News: Structured planning, execution, and memory for LLM agents (ragbits 1.6)"
+      ]
+    },
+    {
+      "topic": "Multi-agent workflows",
+      "signalCount": 5,
+      "whyItMatters": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
+      "signals": [
+        "Hacker News: Show HN: TurbineFi – Build, Backtest, Deploy Prediction Market Strategies",
+        "Hacker News: Show HN: Typed Natural Language – A better plan mode with workflow for coding",
+        "Hacker News: DeepSeek V4 is out. the best open-source on coding. here's the breakdown",
+        "Hacker News: Show HN: Cosmo – Desktop agent with generated UI"
+      ]
+    },
+    {
+      "topic": "MCP",
+      "signalCount": 5,
+      "whyItMatters": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
+      "signals": [
+        "Hacker News: Show HN: Browser Harness – Gives LLM freedom to complete any browser task",
+        "Hacker News: Show HN: Typed Natural Language – A better plan mode with workflow for coding",
+        "Hacker News: Show HN: Lilith-zero update: fast Rust security for agents",
+        "Hacker News: Show HN: Claude proxy to record interactions-browse, search sessions, usage, MCP"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Bench DeepSeek V4-Pro vs your coding agent",
-      "why": "DeepSeek V4-Pro claims SOTA on agentic coding among open models \u2014 verify against your real workflows.",
-      "prompt": "Run your standard coding agent benchmark (or 3-5 real tasks) on DeepSeek V4-Pro, Opus 4.6, and GPT-5.5. Log completion rate, tool accuracy, and cost per task."
+      "title": "Track lab releases against your workflow",
+      "why": "Major lab changes often shift the agent design space overnight.",
+      "prompt": "Map the newest lab release to a specific workflow in your stack and test whether it meaningfully reduces friction."
     },
     {
-      "title": "Test TNL-style plan contracts on a coding agent",
-      "why": "Typed Natural Language pushed agent success from 71-83% to 86-100% with persistent MUST/SHOULD/MAY contracts.",
-      "prompt": "Write a TNL-style plan file for one coding agent workflow, then run the agent with and without the contract across 5 tasks. Compare success and retry rates."
+      "title": "Add durable memory to one workflow",
+      "why": "Persistent state is one of the main gaps between demos and useful agents.",
+      "prompt": "Give the agent a minimal memory layer, then replay the same task over multiple sessions and compare behavior."
     },
     {
-      "title": "Audit your agent's trust surface for Mythos-class capabilities",
-      "why": "Mythos showed that 'too dangerous to release' doesn't mean 'too dangerous to leak'. Your agent's tool access matters more than ever.",
-      "prompt": "Map every tool and API your agent can reach. Classify which could be misused for chained exploit paths. Add a kill-switch or approval gate for the top 3 riskiest."
+      "title": "Measure local vs cloud model drift",
+      "why": "Open-weight releases keep changing the tradeoff surface for agents.",
+      "prompt": "Pick one agent task and compare a local open-weight model to a frontier model on latency, cost, and tool accuracy."
     }
   ],
   "method": [
