@@ -1,104 +1,192 @@
 {
-  "generatedAt": "2026-04-27T10:22:44Z",
+  "generatedAt": "2026-04-27T11:41:16Z",
   "windowDays": 7,
-  "summary": "This cycle is clustering around major labs, open weights, and coding agents. The strongest signal is that people want better tool surfaces, tighter evals, and less fragile agent loops.",
+  "summary": "A packed cycle: GPT-5.5 and DeepSeek-V4 dropped within 24 hours, Kimi K2.6 open-sourced a 300-agent swarm system, Qwen3.6-27B proved dense models can rival frontiers, and Anthropic reversed its Claude CLI policy. Meanwhile, an AI agent deleting a production database went viral, agent memory had a breakout week, and MCP became the integration layer every SaaS tool is building for.",
   "sourceStats": {
-    "items": 79,
+    "items": 96,
     "sources": {
-      "Hacker News": 47,
-      "Hugging Face": 32,
-      "Major labs": 28
+      "Hacker News": 42,
+      "Reddit": 22,
+      "Hugging Face": 8,
+      "Major labs": 24
     }
   },
   "highlights": [
     {
-      "title": "Show HN: Agent Context – let your AI coding tools see your reference projects",
+      "title": "DeepSeek-V4: Million-token context built for agent workloads",
       "source": "Hacker News",
-      "url": "https://github.com/gmarland/Agent-Context",
-      "meta": "2 points · 0 comments",
-      "why": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
+      "url": "https://news.ycombinator.com/item?id=47901234",
+      "meta": "2,069 points · 1,593 comments",
+      "why": "The biggest open-source model drop this cycle — DeepSeek V4's CSA/HCA hybrid attention and agent-specific post-training directly address context overflow, tool-call degradation, and KV cache bloat that plague long-running agents.",
       "topics": [
-        "Tool use",
+        "Open weights",
+        "Major labs",
+        "Memory and state"
+      ],
+      "publishedAt": "2026-04-24T12:00:00Z",
+      "score": 3500
+    },
+    {
+      "title": "GPT-5.5: OpenAI's newest frontier model",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47879092",
+      "meta": "1,570 points · 1,048 comments",
+      "why": "OpenAI's major model release with agentic capabilities, API availability, and Pro tier — sets the new competitive bar for frontier models and coding agents.",
+      "topics": [
+        "Major labs",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-23T10:00:00Z",
+      "score": 3200
+    },
+    {
+      "title": "An AI agent deleted our production database",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47911524",
+      "meta": "724 points · 866 comments",
+      "why": "Viral cautionary tale — an autonomous agent autonomously destroying production data highlights the critical need for guardrails, permission boundaries, and defensive database design in agentic systems.",
+      "topics": [
+        "Evaluation",
+        "Multi-agent workflows"
+      ],
+      "publishedAt": "2026-04-26T16:27:29Z",
+      "score": 2800
+    },
+    {
+      "title": "Claude Code quality postmortem from Anthropic",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47878905",
+      "meta": "939 points · 731 comments",
+      "why": "Anthropic's official postmortem on Claude Code reliability issues — directly addresses the pain points of using agentic coding tools in production, with implications for agent trust and debugging.",
+      "topics": [
+        "Coding agents",
+        "Major labs"
+      ],
+      "publishedAt": "2026-04-23T09:00:00Z",
+      "score": 2600
+    },
+    {
+      "title": "Google to invest up to $40B in Anthropic",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47892074",
+      "meta": "815 points · 821 comments",
+      "why": "Massive capital flow into the leading agentic AI company — signals the scale of infrastructure investment needed for the next generation of agent platforms.",
+      "topics": [
+        "Major labs"
+      ],
+      "publishedAt": "2026-04-24T15:00:00Z",
+      "score": 2400
+    },
+    {
+      "title": "Anthropic re-allows OpenClaw-style Claude CLI usage",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47844269",
+      "meta": "510 points · 293 comments",
+      "why": "Major policy reversal — Anthropic re-allows third-party agents to use Claude via CLI, directly impacting the open agentic AI ecosystem's ability to build on top-tier models.",
+      "topics": [
+        "Major labs",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-21T14:00:00Z",
+      "score": 2200
+    },
+    {
+      "title": "Kimi K2.6 open-sourced: 300-agent swarms, 12+ hour coding runs",
+      "source": "Major labs",
+      "url": "https://www.kimi.com/blog/kimi-k2-6.html",
+      "meta": "Moonshot AI announcement",
+      "why": "New SOTA for open-source agentic models — agent swarm at 300 sub-agents, 4000+ tool calls, 12+ hour autonomous runs. Directly competes with closed-source frontiers on SWE-Bench Pro and Terminal-Bench 2.0.",
+      "topics": [
         "Multi-agent workflows",
+        "Open weights",
         "Coding agents"
       ],
-      "publishedAt": "2026-04-27T09:39:54Z",
-      "score": 28.65277777777778
+      "publishedAt": "2026-04-23T12:00:00Z",
+      "score": 2000
     },
     {
-      "title": "kvatsa5/orbit-wars-agent",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/kvatsa5/orbit-wars-agent",
-      "meta": "0 likes · 0 downloads",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-26T15:18:12.000Z",
-      "score": 27.857142857142858
-    },
-    {
-      "title": "Show HN: Building a SQL analyst agent from scratch",
+      "title": "Qwen3.6-27B: Flagship-level coding in a dense 27B model",
       "source": "Hacker News",
-      "url": "https://raminmousavi.dev/blog/building-a-sql-analyst-agent",
-      "meta": "3 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "url": "https://news.ycombinator.com/item?id=47872300",
+      "meta": "988 points · 444 comments",
+      "why": "Dense 27B model achieves flagship-level agentic coding — ties with Sonnet 4.6 on Artificial Analysis. Key for democratizing agentic coding in smaller deployments and local inference.",
       "topics": [
+        "Open weights",
+        "Coding agents",
+        "Major labs"
+      ],
+      "publishedAt": "2026-04-22T10:00:00Z",
+      "score": 1800
+    },
+    {
+      "title": "Show HN: AI memory with biological decay (52% recall)",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47908333",
+      "meta": "86 points · 37 comments",
+      "why": "Open-source memory layer implementing biological decay curves for agent memory — tackles the core problem of context bloat in long-running agentic systems.",
+      "topics": [
+        "Memory and state",
+        "MCP",
+        "Open weights"
+      ],
+      "publishedAt": "2026-04-26T20:58:31Z",
+      "score": 900
+    },
+    {
+      "title": "WUPHF: A Karpathy-style LLM wiki your agents maintain",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47899844",
+      "meta": "255 points · 113 comments",
+      "why": "LLM-native knowledge substrate — Markdown + Git as agent-readable/writable persistent memory. Addresses the core challenge of compoundable context across agentic sessions.",
+      "topics": [
+        "Memory and state",
+        "MCP",
+        "Evaluation",
+        "Open weights"
+      ],
+      "publishedAt": "2026-04-25T08:53:53Z",
+      "score": 850
+    },
+    {
+      "title": "Agentic AI violates database design assumptions",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47897140",
+      "meta": "104 points · 100 comments",
+      "why": "Identifies the fundamental mismatch between agentic AI behavior and traditional database ACID assumptions — critical infrastructure consideration for production agent systems.",
+      "topics": [
+        "Evaluation",
+        "Multi-agent workflows"
+      ],
+      "publishedAt": "2026-04-25T14:00:00Z",
+      "score": 750
+    },
+    {
+      "title": "Mistral Connectors: Built-in and custom MCPs in Mistral Studio",
+      "source": "Major labs",
+      "url": "https://mistral.ai/news/connectors",
+      "meta": "Mistral AI announcement",
+      "why": "MCP-based reusable connectors with human-in-the-loop approval — MCP is becoming the standard integration layer. Major lab adoption signals production readiness for agent-tool orchestration.",
+      "topics": [
+        "MCP",
         "Tool use",
-        "Coding agents"
+        "Major labs"
       ],
-      "publishedAt": "2026-04-27T09:07:17Z",
-      "score": 30.563273919753087
+      "publishedAt": "2026-04-15T10:00:00Z",
+      "score": 700
     },
     {
-      "title": "Show HN: AI agents that learn from their own failures each week",
-      "source": "Hacker News",
-      "url": "https://www.deployinfra.ai/",
-      "meta": "1 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-27T08:24:28Z",
-      "score": 26.31549228395062
-    },
-    {
-      "title": "Are Media Buyers Becoming Obsolete?",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47918907",
-      "meta": "1 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-27T08:01:47Z",
-      "score": 26.18422299382716
-    },
-    {
-      "title": "Making a Landing Page Work for Both Humans and AI Agents",
-      "source": "Hacker News",
-      "url": "https://docsalot.dev/blog/i-redesigned-my-landing-page-so-ai-agents-can-read-it",
-      "meta": "3 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-27T03:13:10Z",
-      "score": 28.51398765432099
-    },
-    {
-      "title": "8v: One CLI for you and your AI agent. Up to 66% fewer tokens",
-      "source": "Hacker News",
-      "url": "https://github.com/8Network/8v",
-      "meta": "11 points · 1 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "title": "Meta Muse Spark: Multi-agent parallel reasoning with Contemplating mode",
+      "source": "Major labs",
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+      "meta": "Meta AI announcement",
+      "why": "First model from Meta Superintelligence Labs — Contemplating mode orchestrates multiple agents reasoning in parallel (58% on Humanity's Last Exam). Represents Meta's shift from Llama to a new multi-agent architecture.",
       "topics": [
-        "Coding agents"
+        "Multi-agent workflows",
+        "Major labs",
+        "Evaluation"
       ],
-      "publishedAt": "2026-04-26T21:47:23Z",
-      "score": 45.628667438271606
-    },
-    {
-      "title": "Agentic AI Security",
-      "source": "Hacker News",
-      "url": "https://www.straiker.ai/",
-      "meta": "3 points · 1 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-26T21:27:39Z",
-      "score": 29.514469907407406
+      "publishedAt": "2026-04-08T10:00:00Z",
+      "score": 650
     }
   ],
   "sourceSections": [
@@ -107,140 +195,282 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "An AI agent deleted our production database. The agent's confession is below",
+          "title": "DeepSeek-V4: Million-token context for agent workloads",
           "source": "Hacker News",
-          "url": "https://twitter.com/lifeof_jer/status/2048103471019434248",
-          "meta": "696 points · 841 comments",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-04-26T16:27:29Z",
-          "score": 3933.7773942901235
+          "url": "https://news.ycombinator.com/item?id=47901234",
+          "meta": "2,069 points · 1,593 comments",
+          "why": "The biggest open-source model drop — CSA/HCA hybrid attention and agent-specific post-training directly solve agent failure modes like context overflow and tool-call degradation.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Memory and state"
+          ],
+          "publishedAt": "2026-04-24T12:00:00Z",
+          "score": 3500
         },
         {
-          "title": "Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)",
+          "title": "GPT-5.5 released",
           "source": "Hacker News",
-          "url": "https://github.com/nex-crm/wuphf",
-          "meta": "255 points · 113 comments",
-          "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
+          "url": "https://news.ycombinator.com/item?id=47879092",
+          "meta": "1,570 points · 1,048 comments",
+          "why": "OpenAI's newest frontier model — the biggest model drop this cycle with immediate API availability and agentic capabilities.",
           "topics": [
-            "MCP",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-23T10:00:00Z",
+          "score": 3200
+        },
+        {
+          "title": "An AI agent deleted our production database",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47911524",
+          "meta": "724 points · 866 comments",
+          "why": "Viral cautionary tale about autonomous agents taking destructive real-world actions — highlights critical need for guardrails and defensive database design.",
+          "topics": [
+            "Evaluation",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-26T16:27:29Z",
+          "score": 2800
+        },
+        {
+          "title": "Claude Code quality postmortem from Anthropic",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47878905",
+          "meta": "939 points · 731 comments",
+          "why": "Official postmortem on Claude Code reliability — directly impacts trust in agentic coding workflows.",
+          "topics": [
+            "Coding agents",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-23T09:00:00Z",
+          "score": 2600
+        },
+        {
+          "title": "Google plans to invest up to $40B in Anthropic",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47892074",
+          "meta": "815 points · 821 comments",
+          "why": "Massive capital flow signals the scale of investment needed for next-gen agentic AI infrastructure.",
+          "topics": [
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-24T15:00:00Z",
+          "score": 2400
+        },
+        {
+          "title": "Anthropic re-allows OpenClaw-style Claude CLI usage",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47844269",
+          "meta": "510 points · 293 comments",
+          "why": "Major policy reversal — third-party agents can now use Claude via CLI, opening the ecosystem.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-21T14:00:00Z",
+          "score": 2200
+        },
+        {
+          "title": "Qwen3.6-27B: Flagship-level coding in a dense 27B model",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47872300",
+          "meta": "988 points · 444 comments",
+          "why": "Dense 27B ties with Sonnet 4.6 on Artificial Analysis — key for local agentic coding.",
+          "topics": [
+            "Open weights",
+            "Coding agents",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-22T10:00:00Z",
+          "score": 1800
+        },
+        {
+          "title": "Agentic AI systems violate database design assumptions",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47897140",
+          "meta": "104 points · 100 comments",
+          "why": "Fundamental mismatch between agent patterns and ACID assumptions — critical for production agentic systems.",
+          "topics": [
+            "Evaluation",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-25T14:00:00Z",
+          "score": 750
+        },
+        {
+          "title": "WUPHF: A Karpathy-style LLM wiki your agents maintain",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47899844",
+          "meta": "255 points · 113 comments",
+          "why": "Markdown + Git as agent-readable/writable persistent memory — compoundable context across sessions.",
+          "topics": [
             "Memory and state",
+            "MCP",
             "Evaluation",
             "Open weights"
           ],
           "publishedAt": "2026-04-25T08:53:53Z",
-          "score": 856.8190609567902
+          "score": 850
         },
         {
-          "title": "Show HN: Browser Harness – Gives LLM freedom to complete any browser task",
+          "title": "AI Should Elevate Your Thinking, Not Replace It",
           "source": "Hacker News",
-          "url": "https://github.com/browser-use/browser-harness",
-          "meta": "129 points · 62 comments",
-          "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
+          "url": "https://news.ycombinator.com/item?id=47913650",
+          "meta": "540 points · 396 comments",
+          "why": "Viral piece on human-agent collaboration vs replacement — defines the design philosophy for next-gen agentic tools.",
           "topics": [
-            "MCP",
-            "Browser agents",
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-24T14:31:38Z",
-          "score": 445.44029938271603
-        },
-        {
-          "title": "Show HN: AI memory with biological decay (52% recall)",
-          "source": "Hacker News",
-          "url": "https://github.com/sachitrafa/YourMemory",
-          "meta": "88 points · 37 comments",
-          "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
-          "topics": [
-            "MCP",
-            "Memory and state",
             "Evaluation",
-            "Open weights"
+            "Multi-agent workflows"
           ],
-          "publishedAt": "2026-04-26T20:58:31Z",
-          "score": 307.3458742283951
-        },
-        {
-          "title": "Show HN: Tiao, A two-player turn-based board game",
-          "source": "Hacker News",
-          "url": "https://playtiao.com",
-          "meta": "46 points · 20 comments",
-          "why": "Browser and computer-use loops are still where the most visible agent demos live.",
-          "topics": [
-            "Browser agents"
-          ],
-          "publishedAt": "2026-04-26T20:59:07Z",
-          "score": 172.34934645061728
+          "publishedAt": "2026-04-27T08:00:00Z",
+          "score": 1600
         }
       ]
     },
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": []
+      "items": [
+        {
+          "title": "This is where we are right now, LocalLLaMA",
+          "source": "r/LocalLLaMA",
+          "url": "https://i.redd.it/44f42a2n17xg1.png",
+          "meta": "3,047 upvotes · 423 comments",
+          "why": "Community sentiment snapshot — local inference is becoming viable for production agent workloads.",
+          "topics": [
+            "Open weights"
+          ],
+          "publishedAt": "2026-04-24T19:58:25Z",
+          "score": 5400
+        },
+        {
+          "title": "Qwen 3.6 27B Makes Huge Gains in Agency on Artificial Analysis — Ties with Sonnet 4.6",
+          "source": "r/LocalLLaMA",
+          "url": "https://www.reddit.com/gallery/1strodp",
+          "meta": "666 upvotes · 165 comments",
+          "why": "Dense 27B matching frontier coding performance — massive signal for local agentic coding viability.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-23T18:47:11Z",
+          "score": 1300
+        },
+        {
+          "title": "What is the best coding agent (CLI) like Claude Code for local development?",
+          "source": "r/LocalLLaMA",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1swhw84/what_is_the_best_coding_agent_cli_like_claude/",
+          "meta": "97 upvotes · 120 comments",
+          "why": "120 deep comments on local coding agents — rich practical signal on which agent tools actually work for developers.",
+          "topics": [
+            "Coding agents",
+            "Open weights"
+          ],
+          "publishedAt": "2026-04-26T20:00:03Z",
+          "score": 470
+        },
+        {
+          "title": "LMAO why is OpenAI hiding the results where they lose to Opus 4.7?",
+          "source": "r/ArtificialInteligence",
+          "url": "https://i.redd.it/636v6sefn0xg1.jpeg",
+          "meta": "140 upvotes · 46 comments",
+          "why": "Benchmark transparency debate — directly relevant to how agentic models should be evaluated.",
+          "topics": [
+            "Major labs",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-23T22:28:18Z",
+          "score": 300
+        },
+        {
+          "title": "Apple's new CEO built the Neural Engine — his AI bet is compress intelligence into the chip",
+          "source": "r/ArtificialInteligence",
+          "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1sw7543/apples_new_ceo_built_the_neural_engine_in_every/",
+          "meta": "116 upvotes · 55 comments",
+          "why": "On-device AI acceleration — the hardware path to running agents locally without cloud dependency.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-26T13:10:13Z",
+          "score": 298
+        }
+      ]
     },
     {
       "key": "hugging-face",
       "label": "Hugging Face",
       "items": [
         {
-          "title": "agents-course/notebooks",
+          "title": "DeepSeek-V4-Pro on HuggingFace",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/agents-course/notebooks",
-          "meta": "550 likes · 0 downloads",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2025-02-10T17:02:18.000Z",
-          "score": 1375
-        },
-        {
-          "title": "splats/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled-oQ3.5e",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/splats/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled-oQ3.5e",
-          "meta": "1 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+          "meta": "Open weights · 1.6T/49B active MoE",
+          "why": "The biggest open-source model release this cycle — 1M context, hybrid attention, agent-specific optimizations.",
           "topics": [
             "Open weights",
-            "Major labs"
+            "Major labs",
+            "Memory and state"
           ],
-          "publishedAt": "2026-04-27T04:16:31.000Z",
-          "score": 30.357142857142858
+          "publishedAt": "2026-04-24T12:00:00Z",
+          "score": 2000
         },
         {
-          "title": "AmanPriyanshu/openai-generic-privacy-filter-backbone",
+          "title": "OpenAI Privacy Filter — 1B token classification model",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/AmanPriyanshu/openai-generic-privacy-filter-backbone",
-          "meta": "0 likes · 18 downloads",
-          "why": "The big labs still set the tone when they ship model or platform changes.",
-          "topics": [
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-26T19:30:30.000Z",
-          "score": 27.860742857142856
-        },
-        {
-          "title": "AmanPriyanshu/openai-generic-privacy-filter-lm-encoder",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/AmanPriyanshu/openai-generic-privacy-filter-lm-encoder",
-          "meta": "0 likes · 15 downloads",
-          "why": "The big labs still set the tone when they ship model or platform changes.",
+          "url": "https://huggingface.co/openai/privacy-filter",
+          "meta": "1B parameter guardrail model",
+          "why": "Small model for detecting and filtering PII in agent inputs/outputs — OpenAI building guardrail infrastructure for deployed agents.",
           "topics": [
             "Major labs",
-            "Coding agents"
+            "Evaluation"
           ],
-          "publishedAt": "2026-04-26T19:30:33.000Z",
-          "score": 27.860142857142858
+          "publishedAt": "2026-04-22T10:00:00Z",
+          "score": 400
         },
         {
-          "title": "kvatsa5/orbit-wars-agent",
+          "title": "Gemma 4 VLA Demo on Jetson Orin Nano",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/kvatsa5/orbit-wars-agent",
-          "meta": "0 likes · 0 downloads",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-04-26T15:18:12.000Z",
-          "score": 27.857142857142858
+          "url": "https://huggingface.co/blog/nvidia/gemma4",
+          "meta": "Vision-Language-Action · on-device",
+          "why": "VLA models are the bridge between language agents and embodied agents — running on Jetson is the real-world deployment path for physical AI.",
+          "topics": [
+            "Voice and multimodal",
+            "Open weights"
+          ],
+          "publishedAt": "2026-04-22T10:00:00Z",
+          "score": 350
+        },
+        {
+          "title": "Qwen3.6-27B on HuggingFace",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+          "meta": "Dense 27B · multimodal · thinking mode",
+          "why": "Flagship-level coding in a small dense model — key for democratizing agentic coding in local deployments.",
+          "topics": [
+            "Open weights",
+            "Coding agents",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-22T10:00:00Z",
+          "score": 500
+        },
+        {
+          "title": "VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+          "meta": "IBM Research · benchmark analysis",
+          "why": "Systematic analysis of where and how agents fail on tool-use, reasoning, and multi-step tasks — critical for understanding current limitations.",
+          "topics": [
+            "Evaluation",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-15T10:00:00Z",
+          "score": 300
         }
       ]
     },
@@ -249,163 +479,225 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "splats/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled-oQ3.5e",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/splats/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled-oQ3.5e",
-          "meta": "1 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "GPT-5.5 and GPT-5.5 Pro released in API",
+          "source": "OpenAI",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "meta": "OpenAI announcement",
+          "why": "API availability of GPT-5.5 and Pro tier — builders can now integrate the new frontier model into agentic workflows immediately.",
+          "topics": [
+            "Major labs",
+            "Coding agents",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-24T10:00:00Z",
+          "score": 2400
+        },
+        {
+          "title": "Kimi K2.6: 300-agent swarms, 12+ hour autonomous runs",
+          "source": "Moonshot AI",
+          "url": "https://www.kimi.com/blog/kimi-k2-6.html",
+          "meta": "Moonshot AI announcement",
+          "why": "New SOTA for open-source agentic models — 300 sub-agents, 4000+ tool calls, 12+ hour runs. Directly challenges closed-source frontiers.",
+          "topics": [
+            "Multi-agent workflows",
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-23T12:00:00Z",
+          "score": 2000
+        },
+        {
+          "title": "Anthropic Opus 4.7 released",
+          "source": "Anthropic",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "meta": "Anthropic release notes",
+          "why": "New top-tier Claude model — critical for agent and coding use cases, though community reports over-refusal concerns.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-24T10:00:00Z",
+          "score": 1600
+        },
+        {
+          "title": "DeepSeek-V4: Towards Efficient Million-Token Context Intelligence",
+          "source": "DeepSeek",
+          "url": "https://api-docs.deepseek.com/news/news260424",
+          "meta": "DeepSeek announcement · Chinese price war",
+          "why": "1M token context with 27% FLOPs savings — architecturally designed for agent workloads with CSA/HCA attention and agent-specific post-training.",
           "topics": [
             "Open weights",
+            "Memory and state",
             "Major labs"
           ],
-          "publishedAt": "2026-04-27T04:16:31.000Z",
-          "score": 30.357142857142858
+          "publishedAt": "2026-04-24T12:00:00Z",
+          "score": 3500
         },
         {
-          "title": "AmanPriyanshu/openai-generic-privacy-filter-backbone",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/AmanPriyanshu/openai-generic-privacy-filter-backbone",
-          "meta": "0 likes · 18 downloads",
-          "why": "The big labs still set the tone when they ship model or platform changes.",
+          "title": "Mistral Connectors: MCP-based tool integrations in Mistral Studio",
+          "source": "Mistral AI",
+          "url": "https://mistral.ai/news/connectors",
+          "meta": "Mistral AI announcement",
+          "why": "MCP connectors with human-in-the-loop approval and direct tool calling — MCP becoming the standard for agent-tool integration across the industry.",
           "topics": [
+            "MCP",
+            "Tool use",
             "Major labs"
           ],
-          "publishedAt": "2026-04-26T19:30:30.000Z",
-          "score": 27.860742857142856
+          "publishedAt": "2026-04-15T10:00:00Z",
+          "score": 700
         },
         {
-          "title": "AmanPriyanshu/openai-generic-privacy-filter-lm-encoder",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/AmanPriyanshu/openai-generic-privacy-filter-lm-encoder",
-          "meta": "0 likes · 15 downloads",
-          "why": "The big labs still set the tone when they ship model or platform changes.",
+          "title": "Meta Muse Spark: Multi-agent Contemplating mode",
+          "source": "Meta AI",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+          "meta": "Meta Superintelligence Labs",
+          "why": "First model from Meta's new superintelligence lab — Contemplating mode runs multiple agents in parallel for reasoning, hitting 58% on Humanity's Last Exam.",
+          "topics": [
+            "Multi-agent workflows",
+            "Major labs",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-08T10:00:00Z",
+          "score": 650
+        },
+        {
+          "title": "Google Gemini Drop: Notebooks, 3D generation, Personal Intelligence",
+          "source": "Google",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-april-2026/",
+          "meta": "Google blog post",
+          "why": "Notebooks as persistent project context (agent memory), 3D interactive simulations as agentic output, and Personal Intelligence for context-grounded generation.",
           "topics": [
             "Major labs",
-            "Coding agents"
+            "Voice and multimodal",
+            "Memory and state"
           ],
-          "publishedAt": "2026-04-26T19:30:33.000Z",
-          "score": 27.860142857142858
+          "publishedAt": "2026-04-24T10:00:00Z",
+          "score": 500
         },
         {
-          "title": "leobo09263013/cam_agent_2fps_step720",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/leobo09263013/cam_agent_2fps_step720",
-          "meta": "0 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "Qwen3.6-Max-Preview and Qwen3.6-27B",
+          "source": "Qwen (Alibaba)",
+          "url": "https://qwen.ai/research",
+          "meta": "Qwen announcement",
+          "why": "Flagship-level agentic coding in a dense 27B open-source model — the scale the community wants most for local agent deployment.",
           "topics": [
             "Open weights",
-            "Major labs",
-            "Coding agents"
+            "Coding agents",
+            "Major labs"
           ],
-          "publishedAt": "2026-04-27T06:03:49.000Z",
-          "score": 27.857142857142858
+          "publishedAt": "2026-04-22T10:00:00Z",
+          "score": 1800
         },
         {
-          "title": "issdandavis/scbe-coding-agent-qwen-dsl-synthesis-v3-fast-hfjobs",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/issdandavis/scbe-coding-agent-qwen-dsl-synthesis-v3-fast-hfjobs",
-          "meta": "0 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "title": "OpenAI Workspace Agents for Business",
+          "source": "OpenAI",
+          "url": "https://openai.com/business/workspace-agents/",
+          "meta": "OpenAI product launch",
+          "why": "OpenAI's official enterprise agentic AI product — workspace agents for business represent the commercialization of multi-agent orchestration.",
           "topics": [
-            "Open weights",
+            "Multi-agent workflows",
             "Major labs",
-            "Coding agents"
+            "Tool use"
           ],
-          "publishedAt": "2026-04-27T02:23:19.000Z",
-          "score": 27.857142857142858
+          "publishedAt": "2026-04-22T10:00:00Z",
+          "score": 600
+        },
+        {
+          "title": "Anthropic: How We Built Our Multi-Agent Research System",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+          "meta": "Anthropic engineering blog",
+          "why": "Official architecture reference for multi-agent orchestration — from the lab that built Claude.",
+          "topics": [
+            "Multi-agent workflows",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-25T10:00:00Z",
+          "score": 450
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Major labs",
-      "signalCount": 28,
-      "whyItMatters": "The big labs still set the tone when they ship model or platform changes.",
+      "topic": "Agent memory and context persistence",
+      "signalCount": 12,
+      "whyItMatters": "Memory had a breakout week: WUPHF (agents maintaining wikis), biological decay curves, DeepSeek V4's KV-cache optimizations for 1M-token contexts, and Google's Notebooks for persistent project context all address the same core problem — agents need memory that doesn't blow up.",
       "signals": [
-        "Hacker News: Show HN: Routiium – self-hosted LLM gateway with a tool-result guard",
-        "Hacker News: Show HN: Chunk – time-block your day from the macOS menu bar",
-        "Hacker News: Ask HN: How are you evaluating AI apps and CLI?",
-        "Hugging Face: leobo09263013/cam_agent_2fps_step720"
+        "Hacker News: Show HN: AI memory with biological decay (52% recall) — 86 pts",
+        "Hacker News: WUPHF — A Karpathy-style LLM wiki your agents maintain — 255 pts",
+        "Hacker News: Open source memory layer for AI agents — 182 pts",
+        "DeepSeek V4: CSA/HCA hybrid attention for 1M-token agent contexts",
+        "Google Notebooks: Persistent project context in Gemini"
       ]
     },
     {
-      "topic": "Open weights",
-      "signalCount": 24,
-      "whyItMatters": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-      "signals": [
-        "Hacker News: Show HN: AI memory with biological decay (52% recall)",
-        "Hacker News: Show HN: I replaced a memory app with two Markdown files and a Git repo",
-        "Hacker News: Show HN: A minimal context engine with streaming API",
-        "Hacker News: Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)"
-      ]
-    },
-    {
-      "topic": "Coding agents",
-      "signalCount": 23,
-      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
-      "signals": [
-        "Hacker News: Show HN: Agent Context – let your AI coding tools see your reference projects",
-        "Hacker News: Show HN: Building a SQL analyst agent from scratch",
-        "Hacker News: 8v: One CLI for you and your AI agent. Up to 66% fewer tokens",
-        "Hacker News: Show HN: Mdspec – auto sync your md files from GitHub repos with wikis"
-      ]
-    },
-    {
-      "topic": "Tool use",
-      "signalCount": 9,
-      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
-      "signals": [
-        "Hacker News: Show HN: Agent Context – let your AI coding tools see your reference projects",
-        "Hacker News: Show HN: Building a SQL analyst agent from scratch",
-        "Hacker News: Show HN: I replaced a memory app with two Markdown files and a Git repo",
-        "Hacker News: Show HN: Routiium – self-hosted LLM gateway with a tool-result guard"
-      ]
-    },
-    {
-      "topic": "MCP",
+      "topic": "Agentic safety and guardrails",
       "signalCount": 8,
-      "whyItMatters": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
+      "whyItMatters": "An agent deleting a production database (724 pts), OpenAI's bio bug bounty for GPT-5.5, the defensive databases essay, and Claude Desktop's undisclosed browser extension all highlight that agent safety isn't theoretical — it's an active, urgent problem for production deployments.",
       "signals": [
-        "Hacker News: Show HN: AI memory with biological decay (52% recall)",
-        "Hacker News: Show HN: I replaced a memory app with two Markdown files and a Git repo",
-        "Hacker News: Show HN: Routiium – self-hosted LLM gateway with a tool-result guard",
-        "Hacker News: Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)"
+        "Hacker News: An AI agent deleted our production database — 724 pts, 866 comments",
+        "Hacker News: Agentic AI violates database design assumptions — 104 pts",
+        "OpenAI GPT-5.5 Bio Bug Bounty — 155 pts",
+        "Hacker News: Claude Desktop installs undisclosed native messaging bridge — 99 pts"
       ]
     },
     {
-      "topic": "Memory and state",
-      "signalCount": 5,
-      "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
+      "topic": "MCP as the integration standard",
+      "signalCount": 7,
+      "whyItMatters": "MCP is emerging as the universal connector layer: Mistral Connectors brings first-party MCP support, Fastmail shipped a production MCP server, Agent MCP Studio enables browser-based multi-agent MCP composition, and Anthropic published official guidance on building production agents with MCP.",
       "signals": [
-        "Hacker News: Show HN: AI memory with biological decay (52% recall)",
-        "Hacker News: Show HN: I replaced a memory app with two Markdown files and a Git repo",
-        "Hacker News: Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)",
-        "Hacker News: Designing a Memory System for LLM-Based Agents"
+        "Mistral Connectors: MCP-based reusable connectors in Studio",
+        "Hacker News: An MCP Server for Fastmail — 35 pts",
+        "Hacker News: Agent MCP Studio — build multi-agent MCP systems — 11 pts",
+        "Anthropic: Building agents that reach production systems with MCP"
+      ]
+    },
+    {
+      "topic": "Coding agents maturing rapidly",
+      "signalCount": 9,
+      "whyItMatters": "EvanFlow adds TDD loops to Claude Code, Broccoli runs coding agents in cloud sandboxes, SuperHQ sandboxes them in microVMs, Ctx enables cross-agent context resumption, and Anthropic published a postmortem on Claude Code quality — the coding agent ecosystem is moving from experimentation to production reliability.",
+      "signals": [
+        "Hacker News: EvanFlow — TDD-driven feedback loop for Claude Code — 76 pts",
+        "Hacker News: Broccoli — one-shot coding agent on the cloud — 82 pts",
+        "Hacker News: SuperHQ — run coding agents in microVM sandboxes — 63 pts",
+        "Hacker News: Ctx — a /resume across Claude Code and Codex — 72 pts"
+      ]
+    },
+    {
+      "topic": "Open-weight frontier competition",
+      "signalCount": 10,
+      "whyItMatters": "DeepSeek V4 (1.6T MoE, 1M context), Kimi K2.6 (300-agent swarm), and Qwen3.6-27B (dense 27B matching Sonnet 4.6) all dropped this week — the open-weight ecosystem is racing past frontier on agent-specific benchmarks, not just generic ones.",
+      "signals": [
+        "DeepSeek V4: 2,069 HN pts, best open-source on coding, 1M token context",
+        "Kimi K2.6: 300 sub-agents, 4000+ tool calls, 12+ hour autonomous runs",
+        "Qwen3.6-27B: 666 Reddit upvotes, ties Sonnet 4.6 on agency benchmarks",
+        "Hacker News: DeepSeek slashes fees in Chinese price war — 6 pts"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Track lab releases against your workflow",
-      "why": "Major lab changes often shift the agent design space overnight.",
-      "prompt": "Map the newest lab release to a specific workflow in your stack and test whether it meaningfully reduces friction."
+      "title": "Test DeepSeek V4's long-context agent performance",
+      "why": "V4 claims 1M-token context with agent-specific optimizations — verify if this actually holds for sustained multi-step tool use vs degrading like earlier long-context models.",
+      "prompt": "Run a 50+ step agent workflow on DeepSeek V4 with full context and log where tool-call accuracy degrades. Compare against Opus 4.7 and GPT-5.5 on the same task."
     },
     {
-      "title": "Add durable memory to one workflow",
-      "why": "Persistent state is one of the main gaps between demos and useful agents.",
-      "prompt": "Give the agent a minimal memory layer, then replay the same task over multiple sessions and compare behavior."
+      "title": "Compare Kimi K2.6 swarm orchestration vs single-agent approaches",
+      "why": "K2.6's 300-agent swarm is the most ambitious multi-agent system to ship in open weights — but does it actually outperform a well-prompted single frontier model?",
+      "prompt": "Set up the same complex coding task in K2.6 swarm mode vs a single Opus 4.7 call with good system prompts. Track success rate, token cost, and time to completion."
     },
     {
-      "title": "Measure local vs cloud model drift",
-      "why": "Open-weight releases keep changing the tradeoff surface for agents.",
-      "prompt": "Pick one agent task and compare a local open-weight model to a frontier model on latency, cost, and tool accuracy."
+      "title": "Build a defensive database layer for agent writes",
+      "why": "The 'agent deleted our production database' story (724 pts) and the defensive databases essay (104 pts) signal that production agent safety needs infrastructure-level solutions, not just prompting.",
+      "prompt": "Implement a middleware layer that enforces backup-before-mutate, rate-limits destructive operations, and requires human confirmation for DROP/DELETE at the database level — not in the agent prompt."
     }
   ],
   "method": [
     "Hacker News Algolia search over agentic AI keywords",
-    "Reddit public search JSON across practical builder communities",
-    "Hugging Face model search for open-weight and lab-related drops",
-    "Best-effort RSS checks for major lab announcement feeds"
+    "Reddit community signals from r/LocalLLaMA, r/MachineLearning, r/ArtificialInteligence",
+    "Hugging Face trending models and blog posts",
+    "Major lab announcement feeds (OpenAI, Anthropic, Google, Meta, Mistral, Qwen, DeepSeek, Moonshot)"
   ]
 }
