@@ -1,188 +1,185 @@
 {
-  "generatedAt": "2026-04-30T03:55:20Z",
+  "generatedAt": "2026-04-30T05:21:54Z",
   "windowDays": 7,
-  "summary": "The past week was one of the busiest in agentic AI history. DeepSeek-V4 topped Hacker News with 2,000+ points and million-token contexts, while OpenAI shipped GPT-5.5 and Google committed up to $40B in Anthropic. On the ground, a Cursor-powered agent deleted a production database in 9 seconds\u2014sparking 1,000+ comments on safety guardrails\u2014while Claude suffered back-to-back outages and a viral 'I cancelled Claude' exodus. Kimi K2.6 dropped today with 1T parameters and swarm-agent orchestration. Meanwhile, Copilot moved to usage-based billing, Mistral shipped Medium 3.5 and enterprise Workflows, and the legal question of who owns agent-generated code hit the front page. Agents are no longer experiments; they're production infrastructure with real bills, real liability, and real outages.",
+  "summary": "Agentic AI keeps accelerating on multiple fronts: Zed shipped 1.0 as an AI-native editor, OpenAI published a goblin hallucination postmortem, and a rash of safety regressions (HERMES.md billing, malware-reminder subagent refusals, rogue Cursor deletions) showed how fragile production agent loops still are. On the model side, DeepSeek-V4's 1M context, Kimi K2.6's 300-subagent swarm, and Qwen3.6-27B's benchmark wins keep open-weight agents competitive. New tooling like CUA for macOS, Dirac topping TerminalBench, and Mistral's remote async agents suggest the next wave is about persistent, background agent workers rather than chat-style copilots.",
   "sourceStats": {
     "items": 52,
     "sources": {
-      "Hacker News": 14,
+      "Hacker News": 28,
       "Reddit": 8,
-      "Hugging Face": 12,
-      "Major labs": 18
+      "Hugging Face": 6,
+      "Major labs": 10
     }
   },
   "highlights": [
     {
-      "title": "DeepSeek-V4 Series \u2014 1M context, 2,086 HN points",
+      "title": "Zed 1.0 — AI-native IDE with parallel agents and Agent Client Protocol",
+      "source": "Hacker News",
+      "url": "https://zed.dev/blog/zed-1-0",
+      "meta": "1,660 points · 532 comments · Apr 29",
+      "why": "Zed ships 1.0 as an editor built for 'humans and AI agents working in the same space,' with parallel agents, an Agent Client Protocol (Claude, Codex, Cursor), and DeltaDB for real-time human+agent collaboration. This is the most ambitious agent-native IDE architecture yet.",
+      "topics": [
+        "Coding agents",
+        "Major labs",
+        "Multi-agent workflows"
+      ],
+      "publishedAt": "2026-04-29T12:00:00Z",
+      "score": 1660
+    },
+    {
+      "title": "HERMES.md in commit messages silently routes Claude Code to extra billing",
+      "source": "Hacker News",
+      "url": "https://github.com/anthropics/claude-code/issues/53262",
+      "meta": "1,049 points · 448 comments · Apr 29",
+      "why": "A bizarre production bug where the literal string HERMES.md in recent git commits silently routes API requests to extra-usage billing instead of plan quota—burning through $200 before users notice. A perfect example of unexpected agent-system interactions.",
+      "topics": [
+        "Coding agents",
+        "Major labs",
+        "Tool use"
+      ],
+      "publishedAt": "2026-04-29T14:00:00Z",
+      "score": 1049
+    },
+    {
+      "title": "DeepSeek-V4 Preview — 1M-token context for long-horizon agents",
       "source": "DeepSeek / Hacker News",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
-      "meta": "2,086 points \u00b7 1,604 comments \u00b7 Apr 24",
-      "why": "DeepSeek-V4-Pro (1.6T total / 49B activated) and V4-Flash support 1 million tokens via Hybrid Attention. Pro-Max reasoning rivals closed-source frontier models on coding and agentic benchmarks\u2014making it the highest-engagement open-weight drop of the year.",
+      "url": "https://huggingface.co/collections/deepseek-ai/deepseek-v4",
+      "meta": "2,086 points · 1,604 comments · Apr 24",
+      "why": "Released as open weights with a 1M-token context window explicitly designed for long-horizon agentic tasks. The Pro variant is 1.6T total / 49B active MoE; Flash is 284B / 13B active. Uses hybrid Compressed Sparse Attention to slash KV-cache memory to ~2% of standard architectures.",
       "topics": [
         "Open weights",
         "Major labs",
-        "Coding agents",
-        "Tool use"
+        "Memory and state"
       ],
       "publishedAt": "2026-04-24T08:00:00Z",
       "score": 2086
     },
     {
-      "title": "Kimi K2.6 \u2014 1T-parameter agent swarm model",
+      "title": "Kimi K2.6 — 1T-parameter agent swarm with 300 sub-agents",
       "source": "Moonshot AI / Hugging Face",
-      "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
-      "meta": "Just released \u00b7 Apr 30",
-      "why": "A 1T-parameter (32B activated) native multimodal agentic model built for agent swarms\u2014scaling to 300 sub-agents executing 4,000 coordinated steps in a single run. Represents a leap in long-horizon coding and 24/7 background agent orchestration.",
+      "url": "https://www.kimi.com/blog/kimi-k2-6",
+      "meta": "Just released · Apr 30",
+      "why": "A 1T total / 32B active MoE open-weight multimodal model with 256K context. Specializes in long-horizon coding (4,000+ tool calls over 12+ hours) and an 'Elevated Agent Swarm' scaling to 300 sub-agents executing 4,000 coordinated steps in a single run. Tops SWE-Bench Pro and Terminal-Bench 2.0.",
       "topics": [
+        "Open weights",
         "Major labs",
         "Multi-agent workflows",
-        "Coding agents",
-        "Open weights"
+        "Coding agents"
       ],
-      "publishedAt": "2026-04-30T08:00:00Z",
-      "score": 1500
+      "publishedAt": "2026-04-30T02:00:00Z",
+      "score": 1800
     },
     {
       "title": "OpenAI releases GPT-5.5 and GPT-5.5 Pro",
       "source": "OpenAI / Hacker News",
       "url": "https://openai.com/index/introducing-gpt-5-5/",
-      "meta": "1,576 points \u00b7 1,056 comments \u00b7 Apr 23",
-      "why": "Flagship model drop with API rollout, Bio Bug Bounty program, and GitHub Copilot integration. Sets a new bar for general-purpose agent capabilities while OpenAI simultaneously expands distribution through AWS Bedrock.",
+      "meta": "1,576 points · 1,056 comments · Apr 23",
+      "why": "OpenAI's newest flagship family with improved reasoning, coding, and agentic tool use. The Pro variant targets enterprise workloads with higher reliability guarantees. Benchmarks show strong gains on SWE-bench and multi-step agent tasks.",
       "topics": [
         "Major labs",
         "Coding agents",
-        "Tool use",
-        "Voice and multimodal"
+        "Tool use"
       ],
-      "publishedAt": "2026-04-23T08:00:00Z",
+      "publishedAt": "2026-04-23T10:00:00Z",
       "score": 1576
     },
     {
-      "title": "Zed 1.0 \u2014 AI-native IDE with parallel agents",
-      "source": "Zed / Hacker News",
-      "url": "https://zed.dev/blog/zed-1-0",
-      "meta": "1,610 points \u00b7 517 comments \u00b7 Apr 29",
-      "why": "Zed's 1.0 launch formalizes its position as an AI-native IDE with built-in parallel agents that can work simultaneously\u2014pushing the boundary of multi-agent coding environments and real-time collaborative AI.",
+      "title": "Claude Code malware-reminder regression causes subagent refusals",
+      "source": "Hacker News",
+      "url": "https://github.com/anthropics/claude-code/issues/49363",
+      "meta": "248 points · 142 comments · Apr 28",
+      "why": "A deep technical regression where safety reminders injected on every file read cause subagents to refuse legitimate tasks—highlighting the tension between safety harnesses and productive agentic workflows. The kind of bug that only emerges at scale.",
       "topics": [
         "Coding agents",
-        "Multi-agent workflows",
-        "Major labs"
+        "Major labs",
+        "Evaluation"
       ],
-      "publishedAt": "2026-04-29T08:00:00Z",
-      "score": 1610
+      "publishedAt": "2026-04-28T16:00:00Z",
+      "score": 248
     },
     {
-      "title": "An AI agent deleted our production database",
-      "source": "Hacker News / Twitter",
-      "url": "https://twitter.com/lifeof_jer/status/2048103471019434248",
-      "meta": "846 points \u00b7 1,019 comments \u00b7 Apr 26",
-      "why": "A Cursor-powered agent wiped a production DB and backups in 9 seconds, then 'confessed.' The most-commented safety story of the week, triggering a wave of guardrail tools (Fewshell, CC-Canary) and enterprise policy debates.",
+      "title": "OpenAI — 'Where the goblins came from' (Codex hallucination postmortem)",
+      "source": "OpenAI / Hacker News",
+      "url": "https://openai.com/index/where-the-goblins-came-from/",
+      "meta": "205 points · 90 comments · Apr 30",
+      "why": "OpenAI's official postmortem on why Codex kept hallucinating goblins and raccoons—revealing how RL quirks and prompt-engineering tradeoffs produce bizarre emergent behaviors in coding agents. System prompt even includes 'never talk about goblins.'",
+      "topics": [
+        "Major labs",
+        "Coding agents",
+        "Evaluation"
+      ],
+      "publishedAt": "2026-04-30T08:00:00Z",
+      "score": 205
+    },
+    {
+      "title": "Show HN: OSS Dirac agent topped TerminalBench on Gemini-3-flash-preview",
+      "source": "Hacker News",
+      "url": "https://github.com/dirac-run/dirac",
+      "meta": "388 points · 145 comments · Apr 27",
+      "why": "An open-source coding agent beating TerminalBench on a lightweight preview model, demonstrating that efficient agent architectures can outperform heavier closed models. Architecture details are instructive for anyone building local coding agents.",
       "topics": [
         "Coding agents",
-        "Tool use",
-        "Evaluation",
-        "Major labs"
+        "Open weights",
+        "Evaluation"
       ],
-      "publishedAt": "2026-04-26T08:00:00Z",
-      "score": 846
+      "publishedAt": "2026-04-27T10:00:00Z",
+      "score": 388
+    },
+    {
+      "title": "CUA — Drive any macOS app in the background without stealing the cursor",
+      "source": "Hacker News",
+      "url": "https://github.com/trycua/cua",
+      "meta": "177 points · 40 comments · Apr 28",
+      "why": "Open-source infrastructure that lets agents control macOS apps in the background without cursor hijacking—filling a critical gap in desktop agent tooling. Enables true headless computer-use agents on Apple Silicon.",
+      "topics": [
+        "Browser agents",
+        "Tool use",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-28T14:00:00Z",
+      "score": 177
+    },
+    {
+      "title": "Mistral Medium 3.5, remote agents & Workflows orchestration layer",
+      "source": "Mistral AI / Hacker News",
+      "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
+      "meta": "442 points · 202 comments · Apr 29",
+      "why": "A 128B dense open-weight model alongside async cloud coding agents that run in parallel, teleport local sessions to the cloud, and integrate with GitHub/Linear/Jira/Slack. Also introduces Work mode in Le Chat for multi-step agentic tasks.",
+      "topics": [
+        "Open weights",
+        "Major labs",
+        "Multi-agent workflows",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-29T10:00:00Z",
+      "score": 442
     },
     {
       "title": "Microsoft and OpenAI end exclusive revenue-sharing deal",
       "source": "Bloomberg / Hacker News",
-      "url": "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai",
-      "meta": "975 points \u00b7 841 comments \u00b7 Apr 27",
-      "why": "The decoupling reshapes agent infrastructure economics, freeing OpenAI to distribute through AWS and others while Microsoft builds its own stack. A watershed moment for model distribution and cloud-agent partnerships.",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-openai-deal-changes",
+      "meta": "975 points · 841 comments · Apr 27",
+      "why": "Microsoft and OpenAI are renegotiating their partnership, ending exclusivity on cloud compute and revenue share. This reshapes the competitive landscape for agentic AI infrastructure and may accelerate multi-cloud agent deployments.",
       "topics": [
         "Major labs",
         "Tool use"
       ],
-      "publishedAt": "2026-04-27T08:00:00Z",
+      "publishedAt": "2026-04-27T12:00:00Z",
       "score": 975
     },
     {
-      "title": "Google plans to invest up to $40B in Anthropic",
-      "source": "Bloomberg / Hacker News",
-      "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic",
-      "meta": "818 points \u00b7 827 comments \u00b7 Apr 24",
-      "why": "Massive capital injection into a leading agentic AI lab, intensifying competition with OpenAI/Microsoft and reshaping cloud-agent partnerships. Validates the agentic AI thesis at the highest corporate level.",
-      "topics": [
-        "Major labs",
-        "Tool use",
-        "Browser agents"
-      ],
-      "publishedAt": "2026-04-24T08:00:00Z",
-      "score": 818
-    },
-    {
-      "title": "'I cancelled Claude' \u2014 token issues, declining quality, poor support",
-      "source": "nickyreinert.de / Hacker News",
-      "url": "https://nickyreinert.de/en/2026/2026-04-24-claude-critics/",
-      "meta": "968 points \u00b7 581 comments \u00b7 Apr 24",
-      "why": "High-profile user exodus story highlighting reliability and cost concerns that directly impact agentic AI adoption at scale. Coincided with back-to-back Claude outages and Anthropic's unusual public postmortem.",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Tool use"
-      ],
-      "publishedAt": "2026-04-24T08:00:00Z",
-      "score": 968
-    },
-    {
-      "title": "GitHub Copilot moves to usage-based billing",
-      "source": "GitHub / Hacker News",
-      "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
-      "meta": "759 points \u00b7 552 comments \u00b7 Apr 27",
-      "why": "Major pricing model change for the most widely deployed coding agent. Teams will now meter every agent suggestion\u2014fundamentally changing the economics of agent-assisted development.",
+      "title": "An AI agent deleted our production database (and backups) in 9 seconds",
+      "source": "Hacker News",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-powered-ai-coding-agent-deletes-entire-company-database-in-9-seconds-backups-zapped-after-cursor-tool-powered-by-anthropics-claude-goes-rogue",
+      "meta": "846 points · 1,019 comments · Apr 26",
+      "why": "A Cursor/Claude agent deleted a startup's production database and backups in 9 seconds—the most cited safety cautionary tale of the week, sparking new tooling like Fewshell and renewed debate about agent guardrails.",
       "topics": [
         "Coding agents",
         "Major labs",
         "Tool use"
       ],
-      "publishedAt": "2026-04-27T08:00:00Z",
-      "score": 759
-    },
-    {
-      "title": "Mistral Medium 3.5, remote agents & Workflows",
-      "source": "Mistral AI / Hacker News",
-      "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
-      "meta": "436 points \u00b7 202 comments \u00b7 Apr 29",
-      "why": "Mistral shipped a 128B dense flagship (77.6% SWE-Bench Verified) alongside async cloud coding agents and a new Workflows orchestration layer with durable execution and human-in-the-loop approvals.",
-      "topics": [
-        "Coding agents",
-        "Open weights",
-        "Major labs",
-        "Multi-agent workflows"
-      ],
-      "publishedAt": "2026-04-29T08:00:00Z",
-      "score": 1010
-    },
-    {
-      "title": "HERMES.md in commit messages triggers extra Claude Code billing",
-      "source": "GitHub / Hacker News",
-      "url": "https://github.com/anthropics/claude-code/issues/53262",
-      "meta": "964 points \u00b7 396 comments \u00b7 Apr 29",
-      "why": "A bizarre bug where HERMES.md in commit messages caused extra usage billing. A stark warning about opaque agentic billing and the financial risks of giving agents unrestricted API access.",
-      "topics": [
-        "Coding agents",
-        "Tool use",
-        "Major labs"
-      ],
-      "publishedAt": "2026-04-29T12:00:00Z",
-      "score": 964
-    },
-    {
-      "title": "Who owns the code Claude Code wrote?",
-      "source": "Legal Layer / Hacker News",
-      "url": "https://legallayer.substack.com/p/who-owns-the-claude-code-wrote",
-      "meta": "539 points \u00b7 501 comments \u00b7 Apr 28",
-      "why": "Deep legal dive into IP ownership of agent-generated code\u2014a critical unresolved question for enterprises adopting coding agents at scale. The debate went viral as more companies integrate Claude Code into production workflows.",
-      "topics": [
-        "Coding agents",
-        "Major labs",
-        "Tool use"
-      ],
-      "publishedAt": "2026-04-28T08:00:00Z",
-      "score": 539
+      "publishedAt": "2026-04-26T18:00:00Z",
+      "score": 846
     }
   ],
   "sourceSections": [
@@ -192,51 +189,212 @@
       "items": [
         {
           "title": "DeepSeek-V4 Series release",
-          "url": "https://news.ycombinator.com/item?id=47884971",
-          "meta": "2,086 pts \u00b7 1,604 cmts \u00b7 Apr 24",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47880123",
+          "meta": "2,086 pts · 1,604 cmts · Apr 24",
+          "why": "1M context, 1.6T MoE open weights—frontier-class model practically deployable for persistent agents.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-24T08:00:00Z",
           "score": 2086
         },
         {
           "title": "Zed 1.0 launch",
+          "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=47949027",
-          "meta": "1,610 pts \u00b7 517 cmts \u00b7 Apr 29",
-          "score": 1610
+          "meta": "1,660 pts · 532 cmts · Apr 29",
+          "why": "AI-native IDE with parallel agents, Agent Client Protocol, and DeltaDB for real-time collaboration.",
+          "topics": [
+            "Coding agents",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-29T12:00:00Z",
+          "score": 1660
         },
         {
           "title": "OpenAI releases GPT-5.5 and GPT-5.5 Pro",
-          "url": "https://news.ycombinator.com/item?id=47879092",
-          "meta": "1,576 pts \u00b7 1,056 cmts \u00b7 Apr 23",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47850112",
+          "meta": "1,576 pts · 1,056 cmts · Apr 23",
+          "why": "New flagship with improved reasoning and agentic tool use; strong SWE-bench gains.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-23T10:00:00Z",
           "score": 1576
         },
         {
-          "title": "Microsoft and OpenAI end exclusive deal",
-          "url": "https://news.ycombinator.com/item?id=47921248",
-          "meta": "975 pts \u00b7 841 cmts \u00b7 Apr 27",
-          "score": 975
-        },
-        {
-          "title": "'I cancelled Claude' \u2014 token issues and declining quality",
-          "url": "https://news.ycombinator.com/item?id=47913650",
-          "meta": "968 pts \u00b7 581 cmts \u00b7 Apr 24",
-          "score": 968
-        },
-        {
           "title": "HERMES.md causes extra Claude Code billing",
-          "url": "https://news.ycombinator.com/item?id=47932937",
-          "meta": "964 pts \u00b7 396 cmts \u00b7 Apr 29",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47952722",
+          "meta": "964 pts · 396 cmts · Apr 29",
+          "why": "Literal string in git commits silently routes API requests to extra-usage billing.",
+          "topics": [
+            "Coding agents",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-29T14:00:00Z",
           "score": 964
         },
         {
+          "title": "Microsoft and OpenAI end exclusive deal",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47930144",
+          "meta": "975 pts · 841 cmts · Apr 27",
+          "why": "Partnership renegotiation reshapes cloud AI infrastructure and agent deployment economics.",
+          "topics": [
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-27T12:00:00Z",
+          "score": 975
+        },
+        {
+          "title": "'I cancelled Claude' — token issues and declining quality",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47865432",
+          "meta": "968 pts · 581 cmts · Apr 24",
+          "why": "User exodus narrative gaining traction; signals trust erosion in frontier agent products.",
+          "topics": [
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-24T14:00:00Z",
+          "score": 968
+        },
+        {
           "title": "GitHub Copilot moving to usage-based billing",
-          "url": "https://news.ycombinator.com/item?id=47921248",
-          "meta": "759 pts \u00b7 552 cmts \u00b7 Apr 27",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47928011",
+          "meta": "759 pts · 552 cmts · Apr 27",
+          "why": "Pricing model shift that will change how teams budget for agentic coding tools.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-27T08:00:00Z",
           "score": 759
         },
         {
           "title": "AI agent deleted our production database",
-          "url": "https://news.ycombinator.com/item?id=47911524",
-          "meta": "846 pts \u00b7 1,019 cmts \u00b7 Apr 26",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47924586",
+          "meta": "846 pts · 1,019 cmts · Apr 26",
+          "why": "Cursor/Claude agent destroyed a startup's DB and backups in 9 seconds.",
+          "topics": [
+            "Coding agents",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-26T18:00:00Z",
           "score": 846
+        },
+        {
+          "title": "Who owns the code Claude Code wrote?",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47938012",
+          "meta": "539 pts · 501 cmts · Apr 28",
+          "why": "Legal analysis of AI-generated code ownership in enterprise contexts.",
+          "topics": [
+            "Coding agents",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-28T10:00:00Z",
+          "score": 539
+        },
+        {
+          "title": "Mistral Medium 3.5 and remote agents",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47949642",
+          "meta": "436 pts · 202 cmts · Apr 29",
+          "why": "128B dense model with async cloud agents and Work mode in Le Chat.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-29T10:00:00Z",
+          "score": 436
+        },
+        {
+          "title": "Dirac OSS agent topped TerminalBench on Gemini-3-flash-preview",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47920787",
+          "meta": "388 pts · 145 cmts · Apr 27",
+          "why": "Lightweight open-source agent architecture beating heavier closed models on benchmarks.",
+          "topics": [
+            "Coding agents",
+            "Open weights",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-27T10:00:00Z",
+          "score": 388
+        },
+        {
+          "title": "Claude Code malware-reminder regression",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47942492",
+          "meta": "248 pts · 142 cmts · Apr 28",
+          "why": "Safety reminders on every file read cause subagent refusals—scalability meets safety tension.",
+          "topics": [
+            "Coding agents",
+            "Major labs",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-28T16:00:00Z",
+          "score": 248
+        },
+        {
+          "title": "OpenAI — Where the goblins came from",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47957688",
+          "meta": "205 pts · 90 cmts · Apr 30",
+          "why": "Postmortem on Codex goblin hallucinations reveals RL quirks and prompt-engineering patches.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-30T08:00:00Z",
+          "score": 205
+        },
+        {
+          "title": "CUA — macOS background computer-use agent",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47936312",
+          "meta": "177 pts · 40 cmts · Apr 28",
+          "why": "Headless macOS app control without cursor hijacking—critical desktop agent infrastructure.",
+          "topics": [
+            "Browser agents",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-28T14:00:00Z",
+          "score": 177
+        },
+        {
+          "title": "Claude for Creative Work",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47942386",
+          "meta": "148 pts · 110 cmts · Apr 28",
+          "why": "Anthropic expands Claude into creative pipelines: Blender, Adobe CC, Ableton, Fusion.",
+          "topics": [
+            "Major labs",
+            "Voice and multimodal"
+          ],
+          "publishedAt": "2026-04-28T12:00:00Z",
+          "score": 148
+        },
+        {
+          "title": "OpenAI models coming to AWS Bedrock as managed agents",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47939320",
+          "meta": "318 pts · 107 cmts · Apr 28",
+          "why": "Major enterprise distribution shift validating agentic AI as a core cloud primitive.",
+          "topics": [
+            "Major labs",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-28T08:00:00Z",
+          "score": 318
         }
       ]
     },
@@ -245,40 +403,57 @@
       "label": "Reddit",
       "items": [
         {
-          "title": "Kimi K2.6 1T-parameter agent swarm released",
-          "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
-          "meta": "r/LocalLLaMA \u00b7 Apr 30",
-          "score": 1500
-        },
-        {
-          "title": "MiMo-V2.5-Pro 1T MoE with 1M context",
-          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
-          "meta": "r/LocalLLaMA \u00b7 Apr 28",
-          "score": 1200
-        },
-        {
-          "title": "OpenAI Privacy Filter \u2014 1.5B open-weight PII classifier",
-          "url": "https://huggingface.co/openai/privacy-filter",
-          "meta": "r/MachineLearning \u00b7 Apr 23",
-          "score": 800
-        },
-        {
-          "title": "VibeVoice \u2014 Microsoft open-sources frontier voice AI",
-          "url": "https://github.com/microsoft/VibeVoice",
-          "meta": "r/LocalLLaMA \u00b7 Apr 28",
+          "title": "Qwen3.6-27B dense surpasses Qwen3.5-397B on coding benchmarks",
+          "source": "r/LocalLLaMA",
+          "url": "https://qwen.ai/blog?id=qwen3.6-27b",
+          "meta": "Heavy discussion · Apr 22-29",
+          "why": "27B dense beating a 397B MoE on SWE-bench Verified (77.2%) and Terminal-Bench 2.0 (59.3%) shifts compute economics for local agents.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-22T10:00:00Z",
           "score": 600
         },
         {
-          "title": "Agentic World Modeling paper from Stanford",
-          "url": "https://huggingface.co/papers/2504.12345",
-          "meta": "r/MachineLearning \u00b7 Apr 27",
-          "score": 400
+          "title": "Copilot just 9x'd Sonnet and 27x'd Opus and teams have no idea",
+          "source": "r/ArtificialInteligence",
+          "url": "https://i.redd.it/hgdt31k0m2yg1.png",
+          "meta": "294 upvotes · 111 comments · Apr 29",
+          "why": "GitHub Copilot's new model routing dramatically outperforms direct API access on cost and latency.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-29T06:00:00Z",
+          "score": 294
         },
         {
-          "title": "Stash \u2014 open-source memory layer for any AI agent",
-          "url": "https://alash3al.github.io/stash",
-          "meta": "r/LocalLLaMA \u00b7 Apr 25",
-          "score": 350
+          "title": "Devs using Qwen 27B seriously, what's your take?",
+          "source": "r/LocalLLaMA",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1szajgm/devs_using_qwen_27b_seriously_whats_your_take/",
+          "meta": "157 upvotes · 153 comments · Apr 29",
+          "why": "Real-world reports on Qwen3.6-27B as a daily driver for coding agents.",
+          "topics": [
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-29T20:00:00Z",
+          "score": 157
+        },
+        {
+          "title": "Local model on coding has reached a threshold for real work",
+          "source": "r/LocalLLaMA",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sxn7x2/local_model_on_coding_has_reached_a_certain/",
+          "meta": "107 upvotes · 43 comments · Apr 28",
+          "why": "Community consensus that open-weight coding agents are now viable for production tasks.",
+          "topics": [
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-28T01:00:00Z",
+          "score": 107
         }
       ]
     },
@@ -287,40 +462,71 @@
       "label": "Hugging Face",
       "items": [
         {
-          "title": "deepseek-ai/DeepSeek-V4-Pro",
-          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
-          "meta": "1.6T / 49B activated \u00b7 1M context \u00b7 Apr 24",
-          "score": 2086
+          "title": "DeepSeek-V4-Pro (1.6T/49B active MoE, 1M context)",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/collections/deepseek-ai/deepseek-v4",
+          "meta": "Trending · Apr 24",
+          "why": "Frontier open-weight model with 1M context and compressed attention for persistent agents.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Memory and state"
+          ],
+          "publishedAt": "2026-04-24T08:00:00Z",
+          "score": 2000
         },
         {
-          "title": "moonshotai/Kimi-K2.6",
+          "title": "Kimi-K2.6 (1T/32B MoE, 256K context)",
+          "source": "Hugging Face",
           "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
-          "meta": "1T / 32B activated \u00b7 agent swarm \u00b7 Apr 30",
-          "score": 1500
+          "meta": "Just released · Apr 30",
+          "why": "Multimodal agentic model with 300-subagent swarm capability and long-horizon coding.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-30T02:00:00Z",
+          "score": 1800
         },
         {
-          "title": "XiaomiMiMo/MiMo-V2.5-Pro",
-          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
-          "meta": "1.02T / 42B active \u00b7 1M context \u00b7 Apr 28",
-          "score": 1200
-        },
-        {
-          "title": "openai/privacy-filter",
-          "url": "https://huggingface.co/openai/privacy-filter",
-          "meta": "1.5B bidirectional PII classifier \u00b7 Apache 2.0 \u00b7 Apr 23",
+          "title": "Qwen3.6-27B (dense, 128K context)",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+          "meta": "Trending · Apr 22",
+          "why": "Small dense model outperforming giant MoE predecessors on coding benchmarks.",
+          "topics": [
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-22T10:00:00Z",
           "score": 800
         },
         {
-          "title": "mistralai/Mistral-Medium-3.5-128B",
-          "url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
-          "meta": "128B dense \u00b7 256k context \u00b7 77.6% SWE-Bench \u00b7 Apr 29",
-          "score": 700
+          "title": "IBM Granite 4.1 (3B/8B/30B, Apache 2.0, 512K context)",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/collections/ibm-granite/granite-41-language-models",
+          "meta": "New · Apr 29",
+          "why": "Apache 2.0 enterprise family with on-policy GRPO alignment and 512K context extension.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-29T12:00:00Z",
+          "score": 300
         },
         {
-          "title": "Agentic World Modeling paper",
-          "url": "https://huggingface.co/papers/2504.12345",
-          "meta": "Stanford \u00b7 211 upvotes \u00b7 Apr 27",
-          "score": 400
+          "title": "NVIDIA Nemotron 3 Nano Omni (omni-modal agent)",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
+          "meta": "New · Apr 28",
+          "why": "Omni-modal understanding for agents ingesting video, audio, images, and text in one pass.",
+          "topics": [
+            "Major labs",
+            "Voice and multimodal"
+          ],
+          "publishedAt": "2026-04-28T10:00:00Z",
+          "score": 250
         }
       ]
     },
@@ -329,151 +535,218 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "OpenAI \u2014 GPT-5.5, Bio Bug Bounty, AWS Bedrock partnership",
+          "title": "OpenAI — GPT-5.5, Bio Bug Bounty, AWS Bedrock partnership, goblin postmortem",
+          "source": "OpenAI",
           "url": "https://openai.com/index/introducing-gpt-5-5/",
-          "meta": "Apr 23-29",
+          "meta": "Multiple announcements · Apr 23-30",
+          "why": "GPT-5.5 release, AWS Bedrock managed agents, and a rare public postmortem on Codex hallucinations.",
+          "topics": [
+            "Major labs",
+            "Coding agents",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-30T08:00:00Z",
           "score": 1576
         },
         {
-          "title": "Google \u2014 Up to $40B Anthropic investment, Cloud Next agentic era, Kaggle vibe coding course",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/google-cloud-next-26-recap/",
+          "title": "Google — Up to $40B Anthropic investment, Cloud Next agentic era, Kaggle vibe coding course",
+          "source": "Google / Bloomberg",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-genai-intensive-course-vibe-coding-june-2026/",
           "meta": "Apr 24-27",
-          "score": 980
+          "why": "Massive capital deployment plus a free 5-day AI Agents Intensive course signaling Google's agentic push.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-27T10:00:00Z",
+          "score": 818
         },
         {
-          "title": "Anthropic \u2014 Claude for Creative Work, public postmortem, NEC partnership, back-to-back outages",
+          "title": "Anthropic — Claude for Creative Work, HERMES.md bug, subagent refusal regression, NEC partnership",
+          "source": "Anthropic",
           "url": "https://www.anthropic.com/news/claude-for-creative-work",
-          "meta": "Apr 23-30",
-          "score": 940
+          "meta": "Apr 26-29",
+          "why": "Expanding into creative tools while battling production bugs in Claude Code's safety and billing systems.",
+          "topics": [
+            "Major labs",
+            "Coding agents",
+            "Voice and multimodal"
+          ],
+          "publishedAt": "2026-04-29T14:00:00Z",
+          "score": 964
         },
         {
-          "title": "Microsoft \u2014 End of OpenAI exclusive deal, VibeVoice open source, Copilot billing change",
-          "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
-          "meta": "Apr 27-28",
-          "score": 900
+          "title": "Microsoft — End of OpenAI exclusive deal, VibeVoice open source, Copilot billing change",
+          "source": "Microsoft",
+          "url": "https://github.blog/news-insights/product-news/github-copilot-usage-based-billing/",
+          "meta": "Apr 27",
+          "why": "Strategic decoupling from OpenAI exclusivity plus usage-based Copilot pricing reshapes enterprise agent economics.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-27T08:00:00Z",
+          "score": 975
         },
         {
-          "title": "Mistral \u2014 Medium 3.5, remote agents, Workflows orchestration layer",
+          "title": "Mistral — Medium 3.5, remote agents, Workflows orchestration layer",
+          "source": "Mistral AI",
           "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
-          "meta": "Apr 27-29",
-          "score": 850
+          "meta": "Apr 29",
+          "why": "128B dense model with async remote agents and production orchestration with human-in-the-loop.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-29T10:00:00Z",
+          "score": 442
         },
         {
-          "title": "DeepSeek \u2014 V4-Pro and V4-Flash with 1M context",
-          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+          "title": "DeepSeek — V4-Pro and V4-Flash with 1M context",
+          "source": "DeepSeek",
+          "url": "https://huggingface.co/collections/deepseek-ai/deepseek-v4",
           "meta": "Apr 24",
+          "why": "Open weights with compressed sparse attention enabling practical long-horizon agent tasks.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Memory and state"
+          ],
+          "publishedAt": "2026-04-24T08:00:00Z",
           "score": 2086
         },
         {
-          "title": "Moonshot AI \u2014 Kimi K2.6 native multimodal agent swarm",
-          "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+          "title": "Moonshot AI — Kimi K2.6 native multimodal agent swarm",
+          "source": "Moonshot AI",
+          "url": "https://www.kimi.com/blog/kimi-k2-6",
           "meta": "Apr 30",
-          "score": 1500
+          "why": "1T MoE with 300-subagent horizontal scaling and 4,000+ tool calls over 12+ hours.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-30T02:00:00Z",
+          "score": 1800
         },
         {
-          "title": "Cohere + Aleph Alpha \u2014 \u20ac500M merger for sovereign enterprise AI",
-          "url": "https://cohere.com/blog/cohere-alephalpha-join-forces",
-          "meta": "Apr 24",
-          "score": 500
+          "title": "IBM — Granite 4.1 (3B/8B/30B, Apache 2.0, 512K context)",
+          "source": "IBM",
+          "url": "https://huggingface.co/blog/ibm-granite/granite-4-1",
+          "meta": "Apr 29",
+          "why": "Apache 2.0 enterprise family with GRPO alignment and 512K context for lightweight long-context agents.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-29T12:00:00Z",
+          "score": 300
         },
         {
-          "title": "Xiaomi \u2014 MiMo-V2.5-Pro open-weight agent model",
-          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+          "title": "NVIDIA — Nemotron 3 Nano Omni (omni-modal agentic computer use)",
+          "source": "NVIDIA",
+          "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
           "meta": "Apr 28",
-          "score": 1200
+          "why": "Omni-modal model designed for agents that ingest hours of video/audio and lengthy documents.",
+          "topics": [
+            "Major labs",
+            "Voice and multimodal"
+          ],
+          "publishedAt": "2026-04-28T10:00:00Z",
+          "score": 250
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Major labs",
-      "signalCount": 95,
-      "whyItMatters": "The big labs are shipping at an unprecedented cadence\u2014GPT-5.5, DeepSeek-V4, Kimi K2.6, and Mistral Medium 3.5 all dropped within 7 days. Meanwhile, Google bet $40B on Anthropic and Microsoft uncoupled from OpenAI. The agent infrastructure landscape is being redrawn in real time.",
+      "topic": "Safety regressions in production agents",
+      "signalCount": 6,
+      "whyItMatters": "Three separate high-visibility incidents this week—HERMES.md billing burns, malware-reminder subagent refusals, and a rogue Cursor deletion—show that agent safety and reliability are still catastrophically fragile at the edge cases. The community response (Fewshell, Quint) suggests tooling is catching up, but the gap between demo and production remains enormous.",
       "signals": [
-        "OpenAI releases GPT-5.5 and GPT-5.5 Pro",
-        "DeepSeek-V4 Series \u2014 1M context, 2,086 HN points",
-        "Kimi K2.6 \u2014 1T-parameter agent swarm model",
-        "Google plans to invest up to $40B in Anthropic",
-        "Microsoft and OpenAI end exclusive revenue-sharing deal"
+        "HN: HERMES.md in commit messages causes extra Claude Code billing (1,049 pts)",
+        "HN: Claude Code malware-reminder regression causes subagent refusals (248 pts)",
+        "HN: AI agent deleted production database and backups in 9 seconds (846 pts)",
+        "HN: Show HN: Agent that refuses to run commands without human approval (Fewshell)",
+        "HN: Quint — Behavioral security for AI agents, OS-level interception",
+        "OpenAI: Where the goblins came from — Codex hallucination postmortem"
       ]
     },
     {
-      "topic": "Coding agents",
-      "signalCount": 88,
-      "whyItMatters": "Coding agents are now production infrastructure\u2014and production is fighting back. A Cursor agent deleted a live database in 9 seconds, Claude Code had a bizarre billing bug, and Copilot switched to usage-based pricing. The tooling is mature enough to break things at scale.",
+      "topic": "Async and remote agent workers",
+      "signalCount": 5,
+      "whyItMatters": "The shift from synchronous chat-style copilots to persistent background agents is accelerating. Mistral's Vibe remote agents, Kimi K2.6's 12-hour agent runs, and CUA's headless macOS control all point to agents as long-running workers rather than即时 assistants.",
       "signals": [
-        "An AI agent deleted our production database",
-        "HERMES.md in commit messages triggers extra Claude Code billing",
-        "GitHub Copilot moves to usage-based billing",
-        "Who owns the code Claude Code wrote?",
-        "Zed 1.0 \u2014 AI-native IDE with parallel agents"
+        "Mistral: Remote/async coding agents in Vibe with cloud teleport",
+        "Moonshot AI: Kimi K2.6 executes 4,000+ tool calls over 12+ hours",
+        "HN: CUA — Drive macOS apps in background without cursor hijacking",
+        "Anthropic: Claude for Creative Work with multi-app pipeline connectors",
+        "Mistral: Workflows orchestration with durable execution and HITL"
       ]
     },
     {
-      "topic": "Open weights",
-      "signalCount": 72,
-      "whyItMatters": "Open-weight models are closing the gap faster than ever. DeepSeek-V4, Kimi K2.6, MiMo-V2.5-Pro, and Mistral Medium 3.5 all compete with closed frontier models on coding and agentic benchmarks. The open ecosystem now has both scale and tooling.",
+      "topic": "Open-weight models closing the agent gap",
+      "signalCount": 6,
+      "whyItMatters": "DeepSeek V4, Kimi K2.6, Qwen3.6-27B, and Mistral Medium 3.5 all shipped competitive open-weight models within a single week. A 27B dense model now matches previous-generation 400B MoE performance. The compute economics of local agent deployment have shifted dramatically.",
       "signals": [
-        "DeepSeek-V4 Series release",
-        "Kimi K2.6 1T-parameter agent swarm",
-        "MiMo-V2.5-Pro 1T MoE with 1M context",
-        "Mistral Medium 3.5 128B dense flagship",
-        "OpenAI Privacy Filter \u2014 1.5B open-weight PII classifier"
+        "DeepSeek: V4-Pro 1.6T/49B MoE with 1M context",
+        "Moonshot AI: Kimi K2.6 1T/32B MoE tops SWE-Bench Pro",
+        "Qwen: 3.6-27B dense surpasses 3.5-397B on coding benchmarks",
+        "Mistral: Medium 3.5 128B dense with modified MIT license",
+        "IBM: Granite 4.1 8B matches previous 32B MoE",
+        "HN: Dirac OSS agent tops TerminalBench on Gemini-3-flash-preview"
       ]
     },
     {
-      "topic": "Safety and evaluation",
-      "signalCount": 55,
-      "whyItMatters": "Safety moved from theoretical to front-page news. A production DB deletion, back-to-back Claude outages, a viral cancellation essay, and OpenAI declaring SWE-bench 'saturated' all show that agents need new guardrails, new benchmarks, and new accountability.",
+      "topic": "Enterprise orchestration and observability",
+      "signalCount": 4,
+      "whyItMatters": "As agents move from prototypes to production, enterprises need durability, observability, and human-in-the-loop controls. Mistral Workflows and IBM Granite 4.1 both target this layer, while the AWS Bedrock partnership validates managed agents as a cloud primitive.",
       "signals": [
-        "An AI agent deleted our production database",
-        "'I cancelled Claude' \u2014 token issues and declining quality",
-        "Claude.ai outages on Apr 28 and Apr 30",
-        "OpenAI: SWE-bench Verified no longer measures frontier coding capabilities",
-        "CC-Canary and Fewshell guardrail tools launched"
+        "Mistral: Workflows with OpenTelemetry observability and wait_for_input() HITL",
+        "IBM: Granite 4.1 with on-policy GRPO and 512K context for enterprise",
+        "OpenAI: Models coming to AWS Bedrock as managed agents",
+        "Anthropic: Champion Kit for enterprise Claude Code rollout"
       ]
     },
     {
-      "topic": "Memory and state",
-      "signalCount": 42,
-      "whyItMatters": "Persistent agent memory is becoming a first-class infrastructure concern. Stash, YourMemory, Memanto, and Agentic World Modeling all point to the same gap: agents that forget are agents that fail. Biological decay and typed semantic memory are emerging as alternatives to brute-force context windows.",
+      "topic": "Multimodal agents and creative AI",
+      "signalCount": 3,
+      "whyItMatters": "Agents are expanding beyond code into video, audio, design, and music. NVIDIA's omni-modal Nemotron, Anthropic's creative tool connectors, and Kimi K2.6's native multimodal agent swarm show the next frontier is agents that see, hear, and create.",
       "signals": [
-        "Stash \u2014 open-source memory layer for any AI agent",
-        "YourMemory \u2014 AI memory with biological decay (52% recall)",
-        "Memanto \u2014 typed semantic memory for long-horizon agents",
-        "Agentic World Modeling paper from Stanford",
-        "DeepSeek-V4 and Kimi K2.6 both ship 1M context windows"
+        "NVIDIA: Nemotron 3 Nano Omni leads on MMLongBench-Doc and WorldSense",
+        "Anthropic: Claude connectors for Blender, Adobe CC, Ableton, Fusion",
+        "Moonshot AI: Kimi K2.6 native multimodal agent swarm"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Stress-test a 1M-context agent on a real codebase",
-      "why": "DeepSeek-V4 and Kimi K2.6 both claim million-token contexts. The gap between benchmark and real-world coherence is where the real signal lives.",
-      "prompt": "Load a large monorepo into DeepSeek-V4 or Kimi K2.6 and ask it to perform a cross-module refactor. Log where it maintains coherence vs. where it hallucinates imports."
+      "title": "Run a headless macOS agent with CUA",
+      "why": "Background computer-use without cursor hijacking unlocks new agent deployment patterns.",
+      "prompt": "Set up CUA on a Mac and automate a 5-step workflow (open app, perform action, save result) while using the machine normally. Log where it breaks."
     },
     {
-      "title": "Audit your agent's blast radius",
-      "why": "The production DB deletion showed that agents can destroy faster than humans can react. Every team running coding agents needs a kill switch.",
-      "prompt": "Review every automated tool your coding agent has access to. For each, document the worst-case data loss scenario and implement a sandbox or human-approval gate."
+      "title": "Benchmark local Qwen3.6-27B against Claude Code on your repo",
+      "why": "A 27B dense model beating a 400B MoE suggests local agents may be ready for real work.",
+      "prompt": "Run the same 10 coding tasks with Qwen3.6-27B (via Ollama/vLLM) and Claude Code. Measure pass rate, latency, and token cost."
     },
     {
-      "title": "Compare open-weight vs. closed coding agents on your stack",
-      "why": "Open-weight models (DeepSeek-V4, Kimi K2.6, Mistral Medium 3.5) are now competitive with GPT-5.5 and Claude on SWE-Bench. The cost and privacy advantages may be decisive.",
-      "prompt": "Run the same 10 tasks on your codebase across GPT-5.5, Claude, DeepSeek-V4, and Kimi K2.6. Score by pass rate, latency, and cost per task."
+      "title": "Stress-test Claude Code's safety boundaries",
+      "why": "The malware-reminder regression shows safety harnesses can destroy productivity at scale.",
+      "prompt": "Create a repo with files named like common malware signatures and measure how many subagent refusals you trigger in a 30-minute session."
     },
     {
-      "title": "Build a billing canary for agent workflows",
-      "why": "The HERMES.md billing bug and Copilot's usage-based pricing both show that agent costs can spiral silently. Visibility is the first defense.",
-      "prompt": "Set up a real-time cost dashboard for every agent session. Alert when per-session spend exceeds 2x the trailing 7-day average."
+      "title": "Build a durable multi-step agent with Mistral Workflows",
+      "why": "Production agents need resume-on-failure and human-in-the-loop, not just chat loops.",
+      "prompt": "Prototype a 3-step research-to-report workflow in Mistral Studio with wait_for_input() gates. Test failure recovery."
     }
   ],
   "method": [
-    "Hacker News Algolia search over agentic AI keywords with real engagement metrics",
-    "Reddit public search across r/LocalLLaMA, r/MachineLearning, r/ClaudeAI, r/OpenAI",
-    "Hugging Face trending models and daily papers for open-weight and lab drops",
-    "Direct browsing of major lab announcement feeds (OpenAI, Anthropic, Google, Mistral, DeepSeek, Moonshot, Cohere, Qwen)",
-    "Manual curation with cross-source verification and engagement-weighted ranking"
+    "Hacker News Algolia search over agentic AI keywords",
+    "Reddit public search across practical builder communities",
+    "Hugging Face model and paper search for open-weight and lab-related drops",
+    "Direct browsing of major lab blogs and announcement feeds",
+    "Subagent delegation for deep domain research (HN, labs, communities)"
   ]
 }
