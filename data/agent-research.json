@@ -1,186 +1,175 @@
 {
-  "generatedAt": "2026-04-30T07:55:37Z",
-  "windowDays": 14,
-  "summary": "Late April’s agentic-AI signal is unusually concrete: viral HN threads exposed coding-agent context/billing failure modes, Qwen and Mistral pushed open coding-agent models, OpenAI questioned saturated coding evals, and labs shipped agents deeper into files, creative apps, browsers and desktops. The durable theme is that agent quality is now a systems problem—context, evals, isolation, memory, approvals and tool surfaces matter as much as raw model capability.",
+  "generatedAt": "2026-04-30T09:06:19Z",
+  "windowDays": 7,
+  "summary": "Late April’s agentic-AI signal sharpened around trust, distribution, and real workflows. Viral HN threads made context plumbing, billing, permissions, and legal ownership feel as important as model quality; meanwhile Mistral, OpenAI, Google, NVIDIA, Qwen, DeepSeek, and Hugging Face all pushed pieces of the agent stack from coding models and managed agents to long-context/open-weight infrastructure. The durable lesson: agent progress is now a product-and-systems problem—evals, memory, approvals, sandboxes, cloud channels, and boring safety rails are where the frontier is showing up.",
   "sourceStats": {
-    "items": 29,
+    "items": 44,
     "sources": {
-      "Hacker News": 8,
-      "Major Labs": 8,
-      "Hugging Face / Open Weights": 6,
-      "GitHub / Community": 7
+      "Hacker News": 10,
+      "Major labs": 8,
+      "Hugging Face / Open Weights": 7,
+      "Agent Tools / Community": 7
     }
   },
   "highlights": [
     {
-      "title": "Claude Code HERMES.md billing-route incident goes viral on HN",
+      "title": "Claude Code HERMES.md billing-route incident becomes the week’s agent trust story",
       "source": "Hacker News",
       "url": "https://news.ycombinator.com/item?id=47952722",
-      "meta": "1,097 points · 466 comments · Apr 29",
-      "why": "A surprisingly concrete failure mode for agents: hidden context plumbing and magic prompt/config strings can change server-side behavior. It is a reminder to treat agent context, git history, and billing/routing policies as production attack surfaces.",
+      "meta": "1,120 HN points · 476 comments · Apr 29",
+      "why": "A concrete reminder that invisible agent context plumbing, repo text, commit messages, and billing/routing logic are now production attack surfaces—not just UX details.",
       "topics": [
         "Coding agents",
         "Tool use",
         "Evaluation"
       ],
       "publishedAt": "2026-04-29T18:54:31Z",
-      "score": 99
+      "score": 100
     },
     {
-      "title": "Qwen3.6-27B brings flagship coding-agent benchmarks to an open dense model",
-      "source": "Qwen",
-      "url": "https://qwen.ai/blog?id=qwen3.6-27b",
-      "meta": "Apr 22 · 992 HN points",
-      "why": "A 27B dense open model claiming strong SWE-bench, Terminal-Bench, SkillsBench and web-agent results is exactly the kind of release that makes self-hosted coding agents more practical.",
+      "title": "Microsoft and OpenAI end exclusivity/revenue-sharing arrangement",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47921248",
+      "meta": "976 HN points · 842 comments · Apr 27",
+      "why": "Platform alignment is changing underneath agent builders: model distribution, enterprise procurement, cloud routing, and managed-agent stacks are becoming more multi-cloud and less locked to one partnership.",
       "topics": [
-        "Open weights",
-        "Coding agents",
-        "Major labs"
+        "Major labs",
+        "Multi-agent workflows"
       ],
-      "publishedAt": "2026-04-22T13:19:58Z",
+      "publishedAt": "2026-04-27T13:22:42Z",
       "score": 97
     },
     {
-      "title": "Mistral ships Medium 3.5 plus Vibe remote coding agents",
-      "source": "Mistral",
-      "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
-      "meta": "Apr 29 · 458 HN points",
-      "why": "Mistral is bundling model capability with the agent product surface: async cloud coding agents, isolated sandboxes, GitHub PRs, Jira/Linear/Sentry/Slack integrations, and Le Chat Work Mode.",
+      "title": "Claude cancellation thread goes viral over tokens, quality drift and support",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47892019",
+      "meta": "969 HN points · 581 comments · Apr 24",
+      "why": "High engagement around Claude reliability shows that agent users experience model drift, quotas, support, and verbosity as core infrastructure failures when workflows depend on long-running loops.",
       "topics": [
         "Coding agents",
+        "Evaluation"
+      ],
+      "publishedAt": "2026-04-24T15:59:19Z",
+      "score": 96
+    },
+    {
+      "title": "Cursor Camp turns AI coding tools into mainstream developer culture",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47949939",
+      "meta": "910 HN points · 146 comments · Apr 29",
+      "why": "A playful but high-signal cultural artifact: Cursor-style workflows have crossed from tool choice into shared developer mythology, which usually precedes faster adoption and stronger UX expectations.",
+      "topics": [
+        "Coding agents"
+      ],
+      "publishedAt": "2026-04-29T15:39:43Z",
+      "score": 94
+    },
+    {
+      "title": "An AI agent deleted a production database—and everyone debated the blast radius",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47911524",
+      "meta": "847 HN points · 1,019 comments · Apr 26",
+      "why": "The clearest agent-ops cautionary tale this cycle: permissions, backups, dry-runs, human approvals, and database invariants are now first-class design requirements for autonomous tools.",
+      "topics": [
         "Tool use",
+        "Evaluation",
+        "MCP"
+      ],
+      "publishedAt": "2026-04-26T16:27:29Z",
+      "score": 93
+    },
+    {
+      "title": "Google reportedly plans up to $40B Anthropic investment",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47892074",
+      "meta": "818 HN points · 827 comments · Apr 24",
+      "why": "Capital and compute scale around Claude matters for agentic AI because coding/research agents are increasingly constrained by model availability, latency, context length, and enterprise distribution.",
+      "topics": [
+        "Major labs"
+      ],
+      "publishedAt": "2026-04-24T16:04:41Z",
+      "score": 90
+    },
+    {
+      "title": "Who owns the code Claude Code wrote?",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47932937",
+      "meta": "543 HN points · 514 comments · Apr 28",
+      "why": "The legal/IP layer is catching up to coding agents: teams need policies for generated code provenance, licenses, audit trails, and contributor representations before agent-written patches become routine.",
+      "topics": [
+        "Coding agents",
+        "Evaluation"
+      ],
+      "publishedAt": "2026-04-28T11:24:52Z",
+      "score": 86
+    },
+    {
+      "title": "Mistral ships Medium 3.5 plus Vibe remote coding agents",
+      "source": "Mistral AI",
+      "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
+      "meta": "460 HN points · Apr 29",
+      "why": "Mistral tied a model release directly to remote async agents, GitHub PR workflows, cloud sandboxes, persistent sessions, and Le Chat Work mode—evidence that labs are packaging models as agent systems.",
+      "topics": [
         "Major labs",
-        "Open weights"
+        "Coding agents",
+        "Multi-agent workflows"
       ],
       "publishedAt": "2026-04-29T15:17:46Z",
-      "score": 95
+      "score": 84
     },
     {
       "title": "Open-source Dirac tops Terminal-Bench on Gemini 3 Flash Preview",
       "source": "Hacker News",
       "url": "https://github.com/dirac-run/dirac",
-      "meta": "389 HN points · Apr 27",
-      "why": "Dirac’s reception is a signal that agent engineering tricks—context curation, hash-anchored edits, AST-aware operations, and cheap model routing—are becoming competitive differentiators, not just model choice.",
+      "meta": "389 HN points · 145 comments · Apr 27",
+      "why": "TerminalBench is becoming a practical yardstick for shell/coding agents, and an OSS agent topping a leaderboard on Gemini shows that frameworks and harnesses still matter as much as base models.",
       "topics": [
         "Coding agents",
         "Evaluation",
         "Tool use"
       ],
       "publishedAt": "2026-04-27T12:35:55Z",
-      "score": 92
+      "score": 80
     },
     {
-      "title": "OpenAI: SWE-bench Verified no longer measures frontier coding capability",
+      "title": "OpenAI says SWE-bench Verified no longer measures frontier coding capability",
       "source": "OpenAI",
       "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
-      "meta": "Apr 26 · 340 HN points",
-      "why": "When frontier labs retire a benchmark, agent builders need fresh evals for long-horizon coding, repository understanding, terminal use, and real maintenance work rather than saturated issue patches.",
+      "meta": "340 HN points · Apr 26",
+      "why": "A benchmark saturation moment: coding agents need harder evals that test long-horizon repo work, tool use, reviewability, regressions, and production constraints instead of single-issue patching.",
       "topics": [
         "Evaluation",
         "Coding agents",
         "Major labs"
       ],
       "publishedAt": "2026-04-26T13:58:13Z",
-      "score": 91
-    },
-    {
-      "title": "Anthropic adds Claude connectors for Adobe, Blender, Ableton, Autodesk, Canva and more",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/claude-for-creative-work",
-      "meta": "Apr 28",
-      "why": "The fun version of agentic AI this week: Claude entering real creative toolchains, including live visual workflows. The agent frontier is shifting from text chat to manipulating professional software directly.",
-      "topics": [
-        "Tool use",
-        "Voice and multimodal",
-        "Major labs"
-      ],
-      "publishedAt": "2026-04-28T12:00:00Z",
-      "score": 88
-    },
-    {
-      "title": "Google Gemini can generate downloadable Docs, Sheets, Slides, PDFs and code files directly",
-      "source": "Google",
-      "url": "https://blog.google/innovation-and-ai/products/gemini-app/generate-files-in-gemini/",
-      "meta": "Apr 29",
-      "why": "File generation turns Gemini from a conversational assistant into a deliverable-producing workspace agent. The important bit is not prettier output; it is collapsing multi-app workflows into one prompt-to-artifact loop.",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Multi-agent workflows"
-      ],
-      "publishedAt": "2026-04-29T12:00:00Z",
-      "score": 86
-    },
-    {
-      "title": "CUA lets agents drive macOS apps in the background without stealing the cursor",
-      "source": "GitHub",
-      "url": "https://github.com/trycua/cua",
-      "meta": "178 HN points · Apr 28",
-      "why": "Computer-use agents need isolation and non-annoying control surfaces. Background desktop sandboxes for macOS/Linux/Windows make UI agents easier to test without hijacking the user’s actual session.",
-      "topics": [
-        "Browser agents",
-        "Tool use",
-        "Evaluation"
-      ],
-      "publishedAt": "2026-04-28T16:03:34Z",
-      "score": 84
-    },
-    {
-      "title": "Browser Harness gives LLMs a self-healing workspace for arbitrary browser tasks",
-      "source": "GitHub",
-      "url": "https://github.com/browser-use/browser-harness",
-      "meta": "132 HN points · Apr 24",
-      "why": "Browser-use’s harness points toward a more mature pattern: give browser agents durable state, replayable interaction traces, and recovery hooks instead of a fragile one-shot script.",
-      "topics": [
-        "Browser agents",
-        "Tool use",
-        "Evaluation"
-      ],
-      "publishedAt": "2026-04-24T14:31:38Z",
-      "score": 82
-    },
-    {
-      "title": "Hugging Face’s ml-intern trends as an autonomous ML engineering agent",
-      "source": "GitHub",
-      "url": "https://github.com/huggingface/ml-intern",
-      "meta": "7.5k stars · 6.3k stars this week",
-      "why": "A highly visible HF project framing agents as ML interns that read papers, train models, and ship artifacts. Agentic AI is spilling from code editing into research and model-development loops.",
-      "topics": [
-        "Multi-agent workflows",
-        "Open weights",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-04-29T12:00:00Z",
-      "score": 80
-    },
-    {
-      "title": "Anthropic’s Claude Code postmortem becomes a community playbook event",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/engineering/april-23-postmortem",
-      "meta": "Apr 23",
-      "why": "The postmortem is useful because it treats agent quality as a product-systems problem: model choice, reasoning effort, prompt changes, context pruning, and rollout monitoring all matter.",
-      "topics": [
-        "Coding agents",
-        "Evaluation",
-        "Memory and state"
-      ],
-      "publishedAt": "2026-04-23T12:00:00Z",
       "score": 78
     },
     {
-      "title": "GitHub trending fills with agent context, memory and safety infrastructure",
-      "source": "GitHub",
-      "url": "https://github.com/zilliztech/claude-context",
-      "meta": "claude-context, context-mode, memsearch, opensre trending Apr 30",
-      "why": "The community is converging on the boring but crucial layers: codebase retrieval, context compression, persistent memory, human approval, and SRE-style guardrails for long-running agents.",
+      "title": "OpenAI models and managed agents move onto AWS Bedrock",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47939320",
+      "meta": "319 HN points · 107 comments · Apr 28",
+      "why": "Enterprise agent deployment is becoming a distribution game. Bedrock access means more teams can build managed-agent workflows without moving entirely into one vendor’s cloud or app surface.",
+      "topics": [
+        "Major labs",
+        "Multi-agent workflows"
+      ],
+      "publishedAt": "2026-04-28T19:24:43Z",
+      "score": 76
+    },
+    {
+      "title": "WUPHF: a Karpathy-style LLM wiki maintained by agents in Markdown and Git",
+      "source": "Hacker News",
+      "url": "https://github.com/nex-crm/wuphf",
+      "meta": "258 HN points · 115 comments · Apr 25",
+      "why": "Agent memory is becoming mundane and useful: a git-backed wiki maintained by agents fits how developer teams already review, diff, version, and recover knowledge.",
       "topics": [
         "Memory and state",
-        "MCP",
-        "Coding agents",
-        "Tool use"
+        "Coding agents"
       ],
-      "publishedAt": "2026-04-30T07:00:00Z",
-      "score": 77
+      "publishedAt": "2026-04-25T08:53:53Z",
+      "score": 74
     }
   ],
   "sourceSections": [
@@ -189,114 +178,134 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Claude Code HERMES.md billing-route incident goes viral on HN",
+          "title": "Claude Code HERMES.md billing-route incident becomes the week’s agent trust story",
           "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=47952722",
-          "meta": "1,097 points · 466 comments · Apr 29",
-          "why": "A surprisingly concrete failure mode for agents: hidden context plumbing and magic prompt/config strings can change server-side behavior. It is a reminder to treat agent context, git history, and billing/routing policies as production attack surfaces.",
+          "meta": "1,120 HN points · 476 comments · Apr 29",
+          "why": "A concrete reminder that invisible agent context plumbing, repo text, commit messages, and billing/routing logic are now production attack surfaces—not just UX details.",
           "topics": [
             "Coding agents",
             "Tool use",
             "Evaluation"
           ],
           "publishedAt": "2026-04-29T18:54:31Z",
-          "score": 99
+          "score": 100
         },
         {
-          "title": "Qwen3.6-27B brings flagship coding-agent benchmarks to an open dense model",
-          "source": "Qwen",
-          "url": "https://qwen.ai/blog?id=qwen3.6-27b",
-          "meta": "Apr 22 · 992 HN points",
-          "why": "A 27B dense open model claiming strong SWE-bench, Terminal-Bench, SkillsBench and web-agent results is exactly the kind of release that makes self-hosted coding agents more practical.",
+          "title": "Microsoft and OpenAI end exclusivity/revenue-sharing arrangement",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47921248",
+          "meta": "976 HN points · 842 comments · Apr 27",
+          "why": "Platform alignment is changing underneath agent builders: model distribution, enterprise procurement, cloud routing, and managed-agent stacks are becoming more multi-cloud and less locked to one partnership.",
           "topics": [
-            "Open weights",
-            "Coding agents",
-            "Major labs"
+            "Major labs",
+            "Multi-agent workflows"
           ],
-          "publishedAt": "2026-04-22T13:19:58Z",
+          "publishedAt": "2026-04-27T13:22:42Z",
           "score": 97
         },
         {
-          "title": "Mistral ships Medium 3.5 plus Vibe remote coding agents",
-          "source": "Mistral",
-          "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
-          "meta": "Apr 29 · 458 HN points",
-          "why": "Mistral is bundling model capability with the agent product surface: async cloud coding agents, isolated sandboxes, GitHub PRs, Jira/Linear/Sentry/Slack integrations, and Le Chat Work Mode.",
+          "title": "Claude cancellation thread goes viral over tokens, quality drift and support",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47892019",
+          "meta": "969 HN points · 581 comments · Apr 24",
+          "why": "High engagement around Claude reliability shows that agent users experience model drift, quotas, support, and verbosity as core infrastructure failures when workflows depend on long-running loops.",
           "topics": [
             "Coding agents",
-            "Tool use",
-            "Major labs",
-            "Open weights"
+            "Evaluation"
           ],
-          "publishedAt": "2026-04-29T15:17:46Z",
-          "score": 95
+          "publishedAt": "2026-04-24T15:59:19Z",
+          "score": 96
+        },
+        {
+          "title": "Cursor Camp turns AI coding tools into mainstream developer culture",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47949939",
+          "meta": "910 HN points · 146 comments · Apr 29",
+          "why": "A playful but high-signal cultural artifact: Cursor-style workflows have crossed from tool choice into shared developer mythology, which usually precedes faster adoption and stronger UX expectations.",
+          "topics": [
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-29T15:39:43Z",
+          "score": 94
+        },
+        {
+          "title": "An AI agent deleted a production database—and everyone debated the blast radius",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47911524",
+          "meta": "847 HN points · 1,019 comments · Apr 26",
+          "why": "The clearest agent-ops cautionary tale this cycle: permissions, backups, dry-runs, human approvals, and database invariants are now first-class design requirements for autonomous tools.",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "MCP"
+          ],
+          "publishedAt": "2026-04-26T16:27:29Z",
+          "score": 93
+        },
+        {
+          "title": "Google reportedly plans up to $40B Anthropic investment",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47892074",
+          "meta": "818 HN points · 827 comments · Apr 24",
+          "why": "Capital and compute scale around Claude matters for agentic AI because coding/research agents are increasingly constrained by model availability, latency, context length, and enterprise distribution.",
+          "topics": [
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-24T16:04:41Z",
+          "score": 90
+        },
+        {
+          "title": "Who owns the code Claude Code wrote?",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47932937",
+          "meta": "543 HN points · 514 comments · Apr 28",
+          "why": "The legal/IP layer is catching up to coding agents: teams need policies for generated code provenance, licenses, audit trails, and contributor representations before agent-written patches become routine.",
+          "topics": [
+            "Coding agents",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-28T11:24:52Z",
+          "score": 86
         },
         {
           "title": "Open-source Dirac tops Terminal-Bench on Gemini 3 Flash Preview",
           "source": "Hacker News",
           "url": "https://github.com/dirac-run/dirac",
-          "meta": "389 HN points · Apr 27",
-          "why": "Dirac’s reception is a signal that agent engineering tricks—context curation, hash-anchored edits, AST-aware operations, and cheap model routing—are becoming competitive differentiators, not just model choice.",
+          "meta": "389 HN points · 145 comments · Apr 27",
+          "why": "TerminalBench is becoming a practical yardstick for shell/coding agents, and an OSS agent topping a leaderboard on Gemini shows that frameworks and harnesses still matter as much as base models.",
           "topics": [
             "Coding agents",
             "Evaluation",
             "Tool use"
           ],
           "publishedAt": "2026-04-27T12:35:55Z",
-          "score": 92
+          "score": 80
         },
         {
-          "title": "OpenAI: SWE-bench Verified no longer measures frontier coding capability",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
-          "meta": "Apr 26 · 340 HN points",
-          "why": "When frontier labs retire a benchmark, agent builders need fresh evals for long-horizon coding, repository understanding, terminal use, and real maintenance work rather than saturated issue patches.",
-          "topics": [
-            "Evaluation",
-            "Coding agents",
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-26T13:58:13Z",
-          "score": 91
-        },
-        {
-          "title": "Show HN: Drive any macOS app in the background without stealing the cursor",
+          "title": "Using coding assistants to revive projects you were never going to finish",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47936312",
-          "meta": "178 points · 40 comments · Apr 28",
-          "why": "Desktop/UI-agent infrastructure is becoming a public discussion topic, not just a lab demo.",
+          "url": "https://news.ycombinator.com/item?id=47902525",
+          "meta": "370 points · 233 comments · Apr 25",
+          "why": "A softer but important adoption signal: coding agents change the economics of abandoned side projects and maintenance work by lowering the activation energy to resume.",
           "topics": [
-            "Browser agents",
-            "Tool use"
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-28T16:03:34Z",
-          "score": 76
-        },
-        {
-          "title": "Letting AI play my game",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47947525",
-          "meta": "128 points · 29 comments · Apr 29",
-          "why": "Agentic QA/play-testing is a great tangent: agents can inspect state, try strategies, and surface bugs humans would miss in repetitive flows.",
-          "topics": [
-            "Evaluation",
-            "Browser agents"
-          ],
-          "publishedAt": "2026-04-29T12:43:12Z",
+          "publishedAt": "2026-04-25T16:11:50Z",
           "score": 70
         },
         {
-          "title": "Show HN: Broccoli, one-shot coding agent on the cloud",
+          "title": "A good AGENTS.md is a model upgrade; a bad one is worse than no docs",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47865642",
-          "meta": "82 points · 49 comments · Apr 22",
-          "why": "Open-source cloud coding-agent loops that convert tickets into PRs show how quickly the Devin-style pattern is being commoditized.",
+          "url": "https://news.ycombinator.com/item?id=47938417",
+          "meta": "137 points · 44 comments · Apr 28",
+          "why": "Repo-level agent instructions are becoming a real interface contract. Good context files can improve behavior like a small model upgrade; bad ones encode footguns.",
           "topics": [
             "Coding agents",
-            "Multi-agent workflows"
+            "Memory and state"
           ],
-          "publishedAt": "2026-04-22T16:09:56Z",
-          "score": 68
+          "publishedAt": "2026-04-28T18:26:53Z",
+          "score": 63
         }
       ]
     },
@@ -306,116 +315,110 @@
       "items": [
         {
           "title": "Mistral ships Medium 3.5 plus Vibe remote coding agents",
-          "source": "Mistral",
+          "source": "Mistral AI",
           "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
-          "meta": "Apr 29 · 458 HN points",
-          "why": "Mistral is bundling model capability with the agent product surface: async cloud coding agents, isolated sandboxes, GitHub PRs, Jira/Linear/Sentry/Slack integrations, and Le Chat Work Mode.",
+          "meta": "460 HN points · Apr 29",
+          "why": "Mistral tied a model release directly to remote async agents, GitHub PR workflows, cloud sandboxes, persistent sessions, and Le Chat Work mode—evidence that labs are packaging models as agent systems.",
           "topics": [
+            "Major labs",
             "Coding agents",
-            "Tool use",
-            "Major labs",
-            "Open weights"
-          ],
-          "publishedAt": "2026-04-29T15:17:46Z",
-          "score": 95
-        },
-        {
-          "title": "Anthropic adds Claude connectors for Adobe, Blender, Ableton, Autodesk, Canva and more",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/claude-for-creative-work",
-          "meta": "Apr 28",
-          "why": "The fun version of agentic AI this week: Claude entering real creative toolchains, including live visual workflows. The agent frontier is shifting from text chat to manipulating professional software directly.",
-          "topics": [
-            "Tool use",
-            "Voice and multimodal",
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-28T12:00:00Z",
-          "score": 88
-        },
-        {
-          "title": "Google Gemini can generate downloadable Docs, Sheets, Slides, PDFs and code files directly",
-          "source": "Google",
-          "url": "https://blog.google/innovation-and-ai/products/gemini-app/generate-files-in-gemini/",
-          "meta": "Apr 29",
-          "why": "File generation turns Gemini from a conversational assistant into a deliverable-producing workspace agent. The important bit is not prettier output; it is collapsing multi-app workflows into one prompt-to-artifact loop.",
-          "topics": [
-            "Tool use",
-            "Major labs",
             "Multi-agent workflows"
           ],
-          "publishedAt": "2026-04-29T12:00:00Z",
-          "score": 86
+          "publishedAt": "2026-04-29T15:17:46Z",
+          "score": 84
         },
         {
-          "title": "OpenAI: SWE-bench Verified no longer measures frontier coding capability",
+          "title": "OpenAI says SWE-bench Verified no longer measures frontier coding capability",
           "source": "OpenAI",
           "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
-          "meta": "Apr 26 · 340 HN points",
-          "why": "When frontier labs retire a benchmark, agent builders need fresh evals for long-horizon coding, repository understanding, terminal use, and real maintenance work rather than saturated issue patches.",
+          "meta": "340 HN points · Apr 26",
+          "why": "A benchmark saturation moment: coding agents need harder evals that test long-horizon repo work, tool use, reviewability, regressions, and production constraints instead of single-issue patching.",
           "topics": [
             "Evaluation",
             "Coding agents",
             "Major labs"
           ],
           "publishedAt": "2026-04-26T13:58:13Z",
-          "score": 91
-        },
-        {
-          "title": "Anthropic’s Claude Code postmortem becomes a community playbook event",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/engineering/april-23-postmortem",
-          "meta": "Apr 23",
-          "why": "The postmortem is useful because it treats agent quality as a product-systems problem: model choice, reasoning effort, prompt changes, context pruning, and rollout monitoring all matter.",
-          "topics": [
-            "Coding agents",
-            "Evaluation",
-            "Memory and state"
-          ],
-          "publishedAt": "2026-04-23T12:00:00Z",
           "score": 78
         },
         {
-          "title": "Mistral Workflows enters public preview",
-          "source": "Mistral",
-          "url": "https://mistral.ai/news/workflows",
-          "meta": "Apr 27",
-          "why": "Durable execution, observability, retries and human approvals are the unglamorous primitives agents need before they can run production business processes.",
-          "topics": [
-            "Multi-agent workflows",
-            "Tool use",
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-27T12:00:00Z",
-          "score": 74
-        },
-        {
-          "title": "Claude Opus 4.7 targets long-running coding and research-agent work",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/claude-opus-4-7",
-          "meta": "Apr 16",
-          "why": "Anthropic continues to optimize frontier models around multi-step coding, self-verification, vision and tool-using autonomy rather than chat-only metrics.",
+          "title": "OpenAI models and managed agents move onto AWS Bedrock",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47939320",
+          "meta": "319 HN points · 107 comments · Apr 28",
+          "why": "Enterprise agent deployment is becoming a distribution game. Bedrock access means more teams can build managed-agent workflows without moving entirely into one vendor’s cloud or app surface.",
           "topics": [
             "Major labs",
-            "Coding agents",
-            "Evaluation"
+            "Multi-agent workflows"
           ],
-          "publishedAt": "2026-04-16T12:00:00Z",
-          "score": 73
+          "publishedAt": "2026-04-28T19:24:43Z",
+          "score": 76
         },
         {
-          "title": "Gemini Robotics-ER 1.6 improves spatial reasoning and native tool calls for robots",
-          "source": "Google DeepMind",
-          "url": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
-          "meta": "Apr 14",
-          "why": "Physical agents need grounding, success detection and function calls; robotics updates are a useful antidote to web-only definitions of agentic AI.",
+          "title": "Mistral Workflows adds durable orchestration for business processes",
+          "source": "Mistral AI",
+          "url": "https://mistral.ai/news/workflows",
+          "meta": "Apr 27",
+          "why": "State tracking, retries, observability, and human approvals are the unglamorous pieces required to move agents from demos into repeatable enterprise operations.",
           "topics": [
-            "Tool use",
-            "Voice and multimodal",
+            "Major labs",
+            "Multi-agent workflows",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-27T12:00:00Z",
+          "score": 70
+        },
+        {
+          "title": "Anthropic evaluates Claude on BioMysteryBench bioinformatics research tasks",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench",
+          "meta": "Apr 29",
+          "why": "Scientific research agents need long-horizon data analysis, hypothesis iteration, and domain-specific correctness checks; BioMysteryBench is a useful tangent beyond software engineering.",
+          "topics": [
+            "Evaluation",
             "Major labs"
           ],
-          "publishedAt": "2026-04-14T12:00:00Z",
+          "publishedAt": "2026-04-29T12:00:00Z",
+          "score": 68
+        },
+        {
+          "title": "Google and Kaggle announce an AI Agents Vibe Coding Course",
+          "source": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-genai-intensive-course-vibe-coding-june-2026/",
+          "meta": "Apr 27",
+          "why": "Google is turning agent-building patterns—tool use, APIs, and production workflows—into mass education, which should raise the floor for new builders.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-27T12:00:00Z",
           "score": 66
+        },
+        {
+          "title": "OpenAI lists fresh Codex upgrades and GPT-5.3 Codex Spark in its release stream",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/introducing-upgrades-to-codex/",
+          "meta": "Apr 27 · OpenAI page/sitemap",
+          "why": "Even when direct pages are bot-protected, the release cadence shows OpenAI continuing to separate coding-agent models and product surfaces from general chat.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-27T12:00:00Z",
+          "score": 64
+        },
+        {
+          "title": "NVIDIA launches Nemotron 3 Nano Omni for multimodal agent workflows",
+          "source": "NVIDIA",
+          "url": "https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/",
+          "meta": "Apr 28",
+          "why": "Open omni-modal models with long context matter for agents that need to reason over text, images, audio, video, and documents inside one loop.",
+          "topics": [
+            "Voice and multimodal",
+            "Open weights"
+          ],
+          "publishedAt": "2026-04-28T12:00:00Z",
+          "score": 62
         }
       ]
     },
@@ -424,282 +427,270 @@
       "label": "Hugging Face / Open Weights",
       "items": [
         {
-          "title": "Qwen3.6-27B brings flagship coding-agent benchmarks to an open dense model",
-          "source": "Qwen",
-          "url": "https://qwen.ai/blog?id=qwen3.6-27b",
-          "meta": "Apr 22 · 992 HN points",
-          "why": "A 27B dense open model claiming strong SWE-bench, Terminal-Bench, SkillsBench and web-agent results is exactly the kind of release that makes self-hosted coding agents more practical.",
-          "topics": [
-            "Open weights",
-            "Coding agents",
-            "Major labs"
-          ],
-          "publishedAt": "2026-04-22T13:19:58Z",
-          "score": 97
-        },
-        {
-          "title": "Hugging Face’s ml-intern trends as an autonomous ML engineering agent",
-          "source": "GitHub",
-          "url": "https://github.com/huggingface/ml-intern",
-          "meta": "7.5k stars · 6.3k stars this week",
-          "why": "A highly visible HF project framing agents as ML interns that read papers, train models, and ship artifacts. Agentic AI is spilling from code editing into research and model-development loops.",
-          "topics": [
-            "Multi-agent workflows",
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-29T12:00:00Z",
-          "score": 80
-        },
-        {
-          "title": "DeepSeek-V4-Pro trends on Hugging Face with 1M-token-context claims",
+          "title": "DeepSeek-V4-Pro trends with 1M-token context claims",
           "source": "Hugging Face",
           "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "meta": "Trending Apr 30",
-          "why": "Long-context open models remain central to agent loops because memory, repository navigation and tool traces all compete for context budget.",
+          "why": "Million-token context is directly relevant to agents that accumulate tool traces, logs, codebases, browser histories, and memory over long sessions.",
           "topics": [
             "Open weights",
-            "Memory and state",
-            "Coding agents"
+            "Memory and state"
           ],
-          "publishedAt": "2026-04-27T12:00:00Z",
+          "publishedAt": "2026-04-30T12:00:00Z",
           "score": 72
         },
         {
-          "title": "OpenAI releases a Privacy Filter model on Hugging Face",
+          "title": "DeepSeek-V4-Flash offers a lower-latency path for long-context loops",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/openai/privacy-filter",
-          "meta": "Updated Apr 22",
-          "why": "Agents that call tools and store state need cheap PII scrubbing. A small open privacy model is practical infrastructure for safer local and enterprise workflows.",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+          "meta": "Trending Apr 30",
+          "why": "Agent loops often need speed more than maximum benchmark scores; a flash variant is interesting for iterative planning, retrieval, and tool-call control.",
           "topics": [
-            "Tool use",
-            "Memory and state",
-            "Open weights"
+            "Open weights",
+            "Tool use"
           ],
-          "publishedAt": "2026-04-22T12:00:00Z",
+          "publishedAt": "2026-04-30T12:00:00Z",
           "score": 69
         },
         {
-          "title": "Qwen3.6-35B-A3B open MoE targets agentic coding",
+          "title": "Qwen3.6-27B stays visible as a strong open coding-agent model",
           "source": "Qwen",
-          "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
-          "meta": "Apr 15",
-          "why": "The 35B-total / 3B-active MoE release reinforces a key open-model theme: cheaper active parameters can still support tool/coding/agent benchmarks.",
+          "url": "https://qwenlm.github.io/blog/qwen3.6-27b/",
+          "meta": "Apr 22 · still trending",
+          "why": "A 27B dense model with strong coding positioning keeps open/local agent stacks viable for teams that need control, privacy, or cost predictability.",
           "topics": [
             "Open weights",
-            "Coding agents",
-            "Major labs"
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-15T12:00:00Z",
-          "score": 67
+          "publishedAt": "2026-04-22T12:00:00Z",
+          "score": 68
         },
         {
-          "title": "smolagents ML Intern Space gets visible community attention",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/spaces/smolagents/ml-intern",
-          "meta": "Trending Apr 29–30",
-          "why": "Spaces are becoming a lightweight distribution channel for playful, inspectable agent apps—useful for seeing what non-enterprise agent UX feels like.",
+          "title": "Qwen FlashQLA kernels improve long-context efficiency foundations",
+          "source": "Qwen",
+          "url": "https://qwenlm.github.io/blog/flashqla/",
+          "meta": "Apr 28",
+          "why": "Kernel work is a hidden agent enabler: cheaper long context makes persistent memory, scratchpads, and tool traces less painful.",
           "topics": [
-            "Multi-agent workflows",
-            "Tool use"
+            "Open weights",
+            "Memory and state"
           ],
           "publishedAt": "2026-04-28T12:00:00Z",
-          "score": 64
+          "score": 62
+        },
+        {
+          "title": "Kimi-K2.6 trends on Hugging Face",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+          "meta": "Trending Apr 30",
+          "why": "Another large multimodal/open-ish model entering the comparison set for long-context, tool-heavy agent workloads.",
+          "topics": [
+            "Open weights",
+            "Voice and multimodal"
+          ],
+          "publishedAt": "2026-04-30T12:00:00Z",
+          "score": 60
+        },
+        {
+          "title": "smolagents ML Intern Space demonstrates agentic ML assistance",
+          "source": "Hugging Face Spaces",
+          "url": "https://huggingface.co/spaces/smolagents/ml-intern",
+          "meta": "Trending Apr 30",
+          "why": "A fun applied agent: an ML intern inside a browser space is exactly the kind of small, concrete workflow that shows where agent UX is headed.",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-30T12:00:00Z",
+          "score": 59
+        },
+        {
+          "title": "OpenAI Privacy Filter model lands on Hugging Face",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/openai/privacy-filter",
+          "meta": "Updated Apr 22–24",
+          "why": "Privacy filters are boring but crucial middleware for enterprise agents that read tickets, docs, emails, logs, and customer data before calling external models.",
+          "topics": [
+            "Tool use",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-24T12:00:00Z",
+          "score": 58
         }
       ]
     },
     {
-      "key": "github-community",
-      "label": "GitHub / Community",
+      "key": "agent-tools",
+      "label": "Agent Tools / Community",
       "items": [
         {
-          "title": "GitHub trending fills with agent context, memory and safety infrastructure",
-          "source": "GitHub",
-          "url": "https://github.com/zilliztech/claude-context",
-          "meta": "claude-context, context-mode, memsearch, opensre trending Apr 30",
-          "why": "The community is converging on the boring but crucial layers: codebase retrieval, context compression, persistent memory, human approval, and SRE-style guardrails for long-running agents.",
+          "title": "WUPHF: a Karpathy-style LLM wiki maintained by agents in Markdown and Git",
+          "source": "Hacker News",
+          "url": "https://github.com/nex-crm/wuphf",
+          "meta": "258 HN points · 115 comments · Apr 25",
+          "why": "Agent memory is becoming mundane and useful: a git-backed wiki maintained by agents fits how developer teams already review, diff, version, and recover knowledge.",
           "topics": [
             "Memory and state",
-            "MCP",
-            "Coding agents",
-            "Tool use"
+            "Coding agents"
           ],
-          "publishedAt": "2026-04-30T07:00:00Z",
-          "score": 77
+          "publishedAt": "2026-04-25T08:53:53Z",
+          "score": 74
         },
         {
-          "title": "CUA lets agents drive macOS apps in the background without stealing the cursor",
+          "title": "CUA drives macOS apps in the background without stealing the cursor",
           "source": "GitHub",
           "url": "https://github.com/trycua/cua",
           "meta": "178 HN points · Apr 28",
-          "why": "Computer-use agents need isolation and non-annoying control surfaces. Background desktop sandboxes for macOS/Linux/Windows make UI agents easier to test without hijacking the user’s actual session.",
+          "why": "Desktop agents need to use real apps without hijacking the user. Background GUI automation is a practical bridge between browser-only agents and full computer-use agents.",
           "topics": [
-            "Browser agents",
             "Tool use",
-            "Evaluation"
+            "Browser agents"
           ],
           "publishedAt": "2026-04-28T16:03:34Z",
-          "score": 84
-        },
-        {
-          "title": "Browser Harness gives LLMs a self-healing workspace for arbitrary browser tasks",
-          "source": "GitHub",
-          "url": "https://github.com/browser-use/browser-harness",
-          "meta": "132 HN points · Apr 24",
-          "why": "Browser-use’s harness points toward a more mature pattern: give browser agents durable state, replayable interaction traces, and recovery hooks instead of a fragile one-shot script.",
-          "topics": [
-            "Browser agents",
-            "Tool use",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-04-24T14:31:38Z",
-          "score": 82
-        },
-        {
-          "title": "claude-context: code-search MCP for coding agents",
-          "source": "GitHub",
-          "url": "https://github.com/zilliztech/claude-context",
-          "meta": "10.3k stars · 3.1k this week",
-          "why": "Retrieval over whole codebases is becoming a default companion to Claude Code, Codex and other coding agents.",
-          "topics": [
-            "MCP",
-            "Memory and state",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-30T07:00:00Z",
-          "score": 71
-        },
-        {
-          "title": "context-mode optimizes tool-output context for coding agents",
-          "source": "GitHub",
-          "url": "https://github.com/mksglu/context-mode",
-          "meta": "11.3k stars · 2.2k this week",
-          "why": "The signal is not just more context; it is smarter compression of command output, diffs and logs so agents can keep working longer.",
-          "topics": [
-            "Memory and state",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-30T07:00:00Z",
-          "score": 70
-        },
-        {
-          "title": "opensre trends for AI SRE agents",
-          "source": "GitHub",
-          "url": "https://github.com/Tracer-Cloud/opensre",
-          "meta": "4.0k stars · 1.6k this week",
-          "why": "SRE agents are a natural next frontier because the work is tool-heavy, stateful, time-sensitive and benefits from bounded autonomy plus approvals.",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-04-30T07:00:00Z",
           "score": 66
         },
         {
-          "title": "Fewshell explicitly refuses to run terminal commands without human approval",
+          "title": "Browser Harness gives LLMs a freer browser workspace",
+          "source": "GitHub",
+          "url": "https://github.com/browser-use/browser-harness",
+          "meta": "132 HN points · Apr 24",
+          "why": "Browser agents are shifting from brittle step scripts toward harnesses that expose state, recovery, and higher-level affordances for web tasks.",
+          "topics": [
+            "Browser agents",
+            "Tool use"
+          ],
+          "publishedAt": "2026-04-24T14:31:38Z",
+          "score": 64
+        },
+        {
+          "title": "Agentic AI systems violate implicit database-design assumptions",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47957127",
-          "meta": "8 points · Apr 30",
-          "why": "After agent safety incidents, deliberately non-autonomous shells are a useful design counterpoint: slow down execution, make approvals first-class, and keep humans in the loop.",
+          "url": "https://news.ycombinator.com/item?id=47897140",
+          "meta": "114 points · 105 comments · Apr 24",
+          "why": "Databases designed for human-paced clients need defensive constraints, budgets, and invariants when autonomous agents can issue many plausible but destructive actions quickly.",
           "topics": [
             "Tool use",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-24T23:41:38Z",
+          "score": 62
+        },
+        {
+          "title": "EvanFlow builds a TDD feedback loop for Claude Code",
+          "source": "GitHub",
+          "url": "https://github.com/evanklem/evanflow",
+          "meta": "108 HN points · Apr 27",
+          "why": "Tests are becoming the control loop for coding agents: generate, run, inspect failure, repair, and repeat with less human babysitting.",
+          "topics": [
             "Coding agents",
             "Evaluation"
           ],
-          "publishedAt": "2026-04-30T01:49:44Z",
-          "score": 58
+          "publishedAt": "2026-04-27T01:56:39Z",
+          "score": 60
+        },
+        {
+          "title": "Fewshell refuses to run terminal commands without human approval",
+          "source": "GitHub",
+          "url": "https://github.com/few-sh/fewshell",
+          "meta": "45 GitHub stars · Apr 30 HN",
+          "why": "The anti-autonomy shell is a useful countertrend: constrain command execution first, then selectively add freedom where observability and approvals exist.",
+          "topics": [
+            "Tool use",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-04-30T12:00:00Z",
+          "score": 56
+        },
+        {
+          "title": "AgentRQ experiments with an MCP task manager for agents",
+          "source": "GitHub",
+          "url": "https://github.com/agentrq/agentrq",
+          "meta": "Show HN Apr 30",
+          "why": "Small but on-theme: agents are getting task queues, supervisors, and workspaces via MCP-like interfaces rather than ad hoc prompt loops.",
+          "topics": [
+            "MCP",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-04-30T12:00:00Z",
+          "score": 54
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Context is the new agent moat",
-      "signalCount": 7,
-      "whyItMatters": "The loudest community pattern is retrieval, compression and persistent memory. Better models help, but agents still fail when they lose repo state, bury important logs, or cannot recall prior decisions.",
-      "signals": [
-        "claude-context trending",
-        "context-mode trending",
-        "memsearch persistent memory",
-        "Claude Code postmortem",
-        "HERMES.md context-routing incident"
-      ]
-    },
-    {
-      "topic": "Coding-agent evals are being reset",
-      "signalCount": 5,
-      "whyItMatters": "SWE-bench saturation plus Terminal-Bench excitement means the field is moving from patch-level benchmarks toward long-horizon terminal, repo and maintenance tasks.",
-      "signals": [
-        "OpenAI SWE-bench note",
-        "Dirac on Terminal-Bench",
-        "Qwen3.6 benchmark claims",
-        "Mistral Vibe agents",
-        "Broccoli cloud PR agent"
-      ]
-    },
-    {
-      "topic": "Agents are entering real software, not toy sandboxes",
+      "topic": "Agent trust is mostly systems engineering now",
       "signalCount": 6,
-      "whyItMatters": "Creative connectors, Gemini file generation, macOS background control and browser harnesses all point to agents manipulating the same tools humans use.",
+      "whyItMatters": "The HERMES billing incident, Claude quality complaints, database deletion story, stop-hook reports, and silent speed/reasoning changes all point to the same lesson: reliability depends on context boundaries, product knobs, permissions, and observability—not just smarter models.",
       "signals": [
-        "Claude Creative Work connectors",
-        "Gemini file generation",
-        "CUA desktop agents",
-        "Browser Harness",
-        "AI subroutines in browser tabs"
+        "HERMES billing route",
+        "Claude cancellation thread",
+        "production database deletion",
+        "Codex/Claude quota and speed complaints",
+        "AGENTS.md guidance",
+        "Mistral Workflows approvals"
       ]
     },
     {
-      "topic": "Open weights are closing the agent loop",
-      "signalCount": 5,
-      "whyItMatters": "Qwen, Mistral and HF-trending models show open ecosystems competing specifically on coding, long context and tool use—the ingredients needed for local/enterprise agents.",
-      "signals": [
-        "Qwen3.6-27B",
-        "Qwen3.6-35B-A3B",
-        "Mistral Medium 3.5",
-        "DeepSeek-V4-Pro",
-        "OpenAI privacy-filter"
-      ]
-    },
-    {
-      "topic": "Safety is moving from policy to infrastructure",
+      "topic": "Benchmarks are moving past single patches",
       "signalCount": 4,
-      "whyItMatters": "Human approvals, microVMs, privacy filters and postmortems are practical mechanisms for reducing blast radius when agents touch real systems.",
+      "whyItMatters": "OpenAI’s SWE-bench note, Dirac on TerminalBench, BioMysteryBench, and game-playing QA agents suggest the next useful evals will test long-horizon interaction with tools, environments, and hidden state.",
       "signals": [
-        "Fewshell approval-first shell",
-        "SuperHQ microVM sandboxes",
-        "OpenAI privacy-filter",
-        "Anthropic Claude Code postmortem"
+        "SWE-bench saturation",
+        "TerminalBench",
+        "BioMysteryBench",
+        "agentic game test harness"
+      ]
+    },
+    {
+      "topic": "Agent memory wants boring substrates",
+      "signalCount": 4,
+      "whyItMatters": "Markdown, Git, AGENTS.md, code-search MCPs, and privacy filters keep recurring because teams want memory they can diff, review, redact, and revert. Durable agent memory is becoming part of repo hygiene.",
+      "signals": [
+        "WUPHF",
+        "AGENTS.md",
+        "OpenAI Privacy Filter",
+        "Qwen/DeepSeek long context"
+      ]
+    },
+    {
+      "topic": "Labs are packaging models as workflows",
+      "signalCount": 5,
+      "whyItMatters": "Mistral Vibe/Workflows, OpenAI Codex/AWS Bedrock, Google’s agent course, Claude Code adoption kits, and NVIDIA omni models all emphasize the surrounding product loop: sandboxes, approvals, integrations, distribution, and education.",
+      "signals": [
+        "Mistral Medium 3.5 + Vibe",
+        "Mistral Workflows",
+        "OpenAI on AWS Bedrock",
+        "Google/Kaggle agent course",
+        "NVIDIA Nemotron Omni"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Build a context budget dashboard for one coding agent",
-      "why": "This week’s failures and GitHub trends all point to context as the hidden bottleneck.",
-      "prompt": "Instrument a real coding-agent session: count tokens spent on repo search, command output, history, docs and tool schemas; then remove or compress the worst 20%."
+      "title": "Build a permission budget for one real agent workflow",
+      "why": "The database-deletion and HERMES stories show that “can call tools” is too coarse. A concrete budget makes autonomy reviewable.",
+      "prompt": "Pick one repo or browser-agent workflow. List every tool/action it can take, classify each as read/write/destructive/external-cost, add a max budget and a human-approval rule, then run a dry simulation."
     },
     {
-      "title": "Replace one browser-agent step with a deterministic subroutine",
-      "why": "Browser Harness and AI subroutines suggest hybrid systems beat pure free-form clicking for repeated tasks.",
-      "prompt": "Pick a repeated web workflow, record/script the stable steps, expose it as a callable tool, and leave only the judgment step to the LLM."
+      "title": "Create an AGENTS.md scorecard",
+      "why": "AGENTS.md is becoming a control surface for coding agents, but bad instructions can degrade behavior.",
+      "prompt": "Evaluate one project AGENTS.md for scope, test commands, forbidden actions, style rules, secrets policy, and rollback instructions. Rewrite it as if it were a model upgrade."
     },
     {
-      "title": "Run a postmortem drill for an agent incident",
-      "why": "The HERMES.md story and Claude Code postmortem show how weird agent failures can be.",
-      "prompt": "Invent a plausible agent failure in your stack—bad context, leaked secret, wrong shell command, silent benchmark regression—and write the detection, rollback and user-communication plan."
+      "title": "Compare a benchmark task with a production task",
+      "why": "SWE-bench saturation implies coding-agent evals should be grounded in local build/test/review constraints.",
+      "prompt": "Take one closed bug and rerun it as a TerminalBench-style task: fresh clone, no hidden context, tests required, review diff required, and destructive commands blocked."
     },
     {
-      "title": "Try one open-weight model on a narrow agent benchmark",
-      "why": "Qwen/Mistral/DeepSeek releases are strong enough that local agents deserve targeted evaluation.",
-      "prompt": "Choose a small but real repo task, run a frontier hosted model and one open model through the same terminal/browser harness, and compare cost, latency and repair loops."
+      "title": "Prototype git-backed agent memory",
+      "why": "WUPHF and repo-context tools suggest the winning memory substrate may be plain files plus review.",
+      "prompt": "Create a /memory folder with Markdown notes, an update policy, and a PR review checklist. Have an agent update it after a task, then inspect the diff for hallucinated or stale facts."
     }
   ],
   "method": [
-    "Ran the repository generator for a baseline refresh.",
-    "Delegated parallel research across Hacker News, major labs/Hugging Face, and community/GitHub signals.",
-    "Spot-checked high-engagement HN items against Algolia item records and source URLs where accessible.",
-    "Manually curated concise highlights to avoid low-signal timestamp churn and bot-blocked Reddit fabrication."
+    "Ran the repository generator as a baseline, then manually curated higher-signal items from HN Algolia/API, verified top HN item IDs, and parallel subagent research over HN, Reddit/community fallbacks, major labs, and Hugging Face.",
+    "Reddit direct access was blocked by network security, so this snapshot avoids fabricated Reddit metrics and uses verified HN/GitHub/lab/Hugging Face sources instead.",
+    "Prioritized recent, agent-relevant developments with real engagement or clear lab/platform significance; dates and source links are included where useful."
   ]
 }
