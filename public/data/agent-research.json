@@ -1,16 +1,92 @@
 {
-  "generatedAt": "2026-05-01T13:38:29Z",
+  "generatedAt": "2026-05-01T17:02:25Z",
   "windowDays": 7,
   "summary": "This cycle is clustering around major labs, coding agents, and open weights. The strongest signal is that people want better tool surfaces, tighter evals, and less fragile agent loops.",
   "sourceStats": {
     "items": 78,
     "sources": {
-      "Hacker News": 46,
-      "Hugging Face": 32,
-      "Major labs": 29
+      "Hacker News": 47,
+      "Hugging Face": 31,
+      "Major labs": 31
     }
   },
   "highlights": [
+    {
+      "title": "Technical Debt of AI Systems: Agent Runtime",
+      "source": "Hacker News",
+      "url": "https://leehanchung.github.io/blogs/2026/04/24/hidden-technical-debt-agent-runtime/",
+      "meta": "1 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-05-01T16:44:53Z",
+      "score": 26.65277777777778
+    },
+    {
+      "title": "U82-IA/Agent_4b_v4",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/U82-IA/Agent_4b_v4",
+      "meta": "text-generation · 0 likes · 0 downloads",
+      "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+      "topics": [
+        "Open weights",
+        "Major labs"
+      ],
+      "publishedAt": "2026-05-01T17:02:00.000Z",
+      "score": 27.857142857142858
+    },
+    {
+      "title": "Show HN: Email for AI Agents",
+      "source": "Hacker News",
+      "url": "https://robotomail.com",
+      "meta": "1 points · 1 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-05-01T15:54:30Z",
+      "score": 29.606911844135805
+    },
+    {
+      "title": "A Guide to Agent-Native Product Management",
+      "source": "Hacker News",
+      "url": "https://every.to/guides/ai-product-management-guide",
+      "meta": "2 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-05-01T15:39:17Z",
+      "score": 28.518852430555555
+    },
+    {
+      "title": "Sandbox plumbing infrastructure for computer-use agents",
+      "source": "Hacker News",
+      "url": "https://www.tensorlake.ai/blog/building-sandboxes-for-computer-use",
+      "meta": "2 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-05-01T15:17:28Z",
+      "score": 28.39259857253086
+    },
+    {
+      "title": "Show HN: Raft to allow a group of AI agents to reach consensus",
+      "source": "Hacker News",
+      "url": "https://github.com/dhiaayachi/gravity-ai",
+      "meta": "2 points · 1 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-05-01T14:23:02Z",
+      "score": 31.077590856481482
+    },
+    {
+      "title": "Stateful agent workflows for Spring AI (graph-based, with retries and recovery)",
+      "source": "Hacker News",
+      "url": "https://github.com/datallmhub/spring-agent-flow",
+      "meta": "1 points · 0 comments",
+      "why": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
+      "topics": [
+        "Multi-agent workflows",
+        "Memory and state"
+      ],
+      "publishedAt": "2026-05-01T13:52:38Z",
+      "score": 25.901664930555555
+    },
     {
       "title": "Claude AI Agent Confesses to Wiping a Company's Database and All Backups",
       "source": "Hacker News",
@@ -19,96 +95,7 @@
       "why": "This is a useful signal for how people are actually building with agents right now.",
       "topics": [],
       "publishedAt": "2026-05-01T13:27:30Z",
-      "score": 28.65277777777778
-    },
-    {
-      "title": "AgentPhoenix7/SLM-project",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/AgentPhoenix7/SLM-project",
-      "meta": "0 likes · 0 downloads",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-04-30T11:02:41.000Z",
-      "score": 27.625286904761904
-    },
-    {
-      "title": "'Rogue' Cursor AI agent loses control and wipes company's database",
-      "source": "Hacker News",
-      "url": "https://abcnews.com/GMA/News/rogue-ai-agent-haywire-tech-company-ceo-bullish/story?id=132473181",
-      "meta": "9 points · 4 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-05-01T11:49:56Z",
-      "score": 54.371775462962965
-    },
-    {
-      "title": "Show HN: BetterClaw – Compile a paragraph into a workflow that gates agent tools",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47973502",
-      "meta": "2 points · 0 comments",
-      "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
-      "topics": [
-        "MCP",
-        "Tool use",
-        "Multi-agent workflows",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-05-01T11:26:20Z",
-      "score": 28.235201388888893
-    },
-    {
-      "title": "Show HN: \"Woo\", a multi-user world for agents",
-      "source": "Hacker News",
-      "url": "https://woo.hughpyle.workers.dev/",
-      "meta": "1 points · 1 comments",
-      "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
-      "topics": [
-        "MCP",
-        "Tool use",
-        "Voice and multimodal",
-        "Open weights"
-      ],
-      "publishedAt": "2026-05-01T11:17:53Z",
-      "score": 29.186300925925927
-    },
-    {
-      "title": "Show HN: Loopsy, a way for terminals and AI agents on different machines to talk",
-      "source": "Hacker News",
-      "url": "https://github.com/leox255/loopsy",
-      "meta": "1 points · 0 comments",
-      "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-      "topics": [
-        "Open weights",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-05-01T10:25:41Z",
-      "score": 25.884217592592595
-    },
-    {
-      "title": "Show HN: Git Shield – local hooks for secrets and PII",
-      "source": "Hacker News",
-      "url": "https://news.ycombinator.com/item?id=47972142",
-      "meta": "2 points · 0 comments",
-      "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-      "topics": [
-        "Open weights",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-05-01T07:33:49Z",
-      "score": 26.889618827160493
-    },
-    {
-      "title": "Cursor's 'Rogue' AI agent goes haywire, deletes company's database [video]",
-      "source": "Hacker News",
-      "url": "https://www.youtube.com/watch?v=XBVoLSXaAHA",
-      "meta": "2 points · 2 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [
-        "Voice and multimodal"
-      ],
-      "publishedAt": "2026-05-01T02:54:16Z",
-      "score": 31.27185262345679
+      "score": 27.756217399691355
     }
   ],
   "sourceSections": [
@@ -117,47 +104,39 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Show HN: Drive any macOS app in the background without stealing the cursor",
+          "title": "Ask HN: Who is hiring? (May 2026)",
           "source": "Hacker News",
-          "url": "https://github.com/trycua/cua",
-          "meta": "184 points · 40 comments",
-          "why": "Browser and computer-use loops are still where the most visible agent demos live.",
-          "topics": [
-            "Browser agents",
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-28T16:03:34Z",
-          "score": 488.83956095679014
-        },
-        {
-          "title": "Show HN: Rocky – Rust SQL engine with branches, replay, column lineage",
-          "source": "Hacker News",
-          "url": "https://github.com/rocky-data/rocky",
-          "meta": "119 points · 48 comments",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Multi-agent workflows",
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-28T14:35:59Z",
-          "score": 382.33271296296294
-        },
-        {
-          "title": "Show HN: Pu.sh – a full coding-agent harness in 400 lines of shell",
-          "source": "Hacker News",
-          "url": "https://pu.dev/",
-          "meta": "85 points · 21 comments",
+          "url": "https://news.ycombinator.com/item?id=47975571",
+          "meta": "97 points · 90 comments",
           "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
-            "Tool use",
             "Memory and state",
-            "Major labs",
-            "Coding agents"
+            "Major labs"
           ],
-          "publishedAt": "2026-04-30T20:55:12Z",
-          "score": 252.19392052469135
+          "publishedAt": "2026-05-01T15:00:07Z",
+          "score": 488.29219347993825
+        },
+        {
+          "title": "Sally McKee, who coined the term \"the memory wall\", has died",
+          "source": "Hacker News",
+          "url": "https://www.online-tribute.com/SallyMcKee",
+          "meta": "46 points · 5 comments",
+          "why": "This is a useful signal for how people are actually building with agents right now.",
+          "topics": [
+            "Memory and state"
+          ],
+          "publishedAt": "2026-05-01T14:45:47Z",
+          "score": 131.20924594907407
+        },
+        {
+          "title": "'Rogue' Cursor AI agent loses control and wipes company's database",
+          "source": "Hacker News",
+          "url": "https://abcnews.com/GMA/News/rogue-ai-agent-haywire-tech-company-ceo-bullish/story?id=132473181",
+          "meta": "14 points · 11 comments",
+          "why": "This is a useful signal for how people are actually building with agents right now.",
+          "topics": [],
+          "publishedAt": "2026-05-01T11:49:56Z",
+          "score": 84.19159548611111
         },
         {
           "title": "Show HN: Spec27 – Spec-driven validation for AI agents",
@@ -171,17 +150,20 @@
             "Evaluation"
           ],
           "publishedAt": "2026-04-30T09:07:14Z",
-          "score": 68.0968912037037
+          "score": 66.91671122685185
         },
         {
-          "title": "'Rogue' Cursor AI agent loses control and wipes company's database",
+          "title": "Show HN: Loopsy, a way for terminals and AI agents on different machines to talk",
           "source": "Hacker News",
-          "url": "https://abcnews.com/GMA/News/rogue-ai-agent-haywire-tech-company-ceo-bullish/story?id=132473181",
-          "meta": "9 points · 4 comments",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-05-01T11:49:56Z",
-          "score": 54.371775462962965
+          "url": "https://github.com/leox255/loopsy",
+          "meta": "13 points · 1 comments",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-01T10:25:41Z",
+          "score": 51.704037615740745
         }
       ]
     },
@@ -209,20 +191,6 @@
           "score": 32.86734285714286
         },
         {
-          "title": "willworker/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-Q6_K-GGUF",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/willworker/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-Q6_K-GGUF",
-          "meta": "image-text-to-text · 1 likes · 225 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-30T17:28:07.000Z",
-          "score": 30.402142857142856
-        },
-        {
           "title": "AgentPhoenix7/SLM-project-qwen",
           "source": "Hugging Face",
           "url": "https://huggingface.co/AgentPhoenix7/SLM-project-qwen",
@@ -233,16 +201,6 @@
             "Major labs"
           ],
           "publishedAt": "2026-05-01T03:12:47.000Z",
-          "score": 30.357142857142858
-        },
-        {
-          "title": "lowersa/web-agent-demo",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/lowersa/web-agent-demo",
-          "meta": "1 likes · 0 downloads",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-05-01T07:48:53.000Z",
           "score": 30.357142857142858
         },
         {
@@ -257,6 +215,32 @@
           ],
           "publishedAt": "2026-05-01T04:58:31.000Z",
           "score": 30.357142857142858
+        },
+        {
+          "title": "Sociopacific/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-GPTQ-Int4",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/Sociopacific/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-GPTQ-Int4",
+          "meta": "text-generation · 0 likes · 14 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-04-30T17:27:01.000Z",
+          "score": 27.85994285714286
+        },
+        {
+          "title": "vathvathv/Qwen3.6-27B-Claude-Opus-Reasoning-Distill-v2-GGUF",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/vathvathv/Qwen3.6-27B-Claude-Opus-Reasoning-Distill-v2-GGUF",
+          "meta": "0 likes · 3 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-05-01T01:00:42.000Z",
+          "score": 27.857742857142856
         }
       ]
     },
@@ -265,34 +249,17 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "Show HN: Pu.sh – a full coding-agent harness in 400 lines of shell",
+          "title": "Ask HN: Who is hiring? (May 2026)",
           "source": "Hacker News",
-          "url": "https://pu.dev/",
-          "meta": "85 points · 21 comments",
+          "url": "https://news.ycombinator.com/item?id=47975571",
+          "meta": "97 points · 90 comments",
           "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
-            "Tool use",
             "Memory and state",
-            "Major labs",
-            "Coding agents"
+            "Major labs"
           ],
-          "publishedAt": "2026-04-30T20:55:12Z",
-          "score": 252.19392052469135
-        },
-        {
-          "title": "We scanned 100 Smithery MCP servers, 22 flagged, here's what we found",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47969781",
-          "meta": "4 points · 3 comments",
-          "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
-          "topics": [
-            "MCP",
-            "Tool use",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-30T23:44:18Z",
-          "score": 37.17250848765432
+          "publishedAt": "2026-05-01T15:00:07Z",
+          "score": 488.29219347993825
         },
         {
           "title": "DavidAU/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-NEO-CODE-Di-IMatrix-MAX-GGUF",
@@ -309,20 +276,6 @@
           "score": 32.86734285714286
         },
         {
-          "title": "willworker/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-Q6_K-GGUF",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/willworker/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-Q6_K-GGUF",
-          "meta": "image-text-to-text · 1 likes · 225 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-30T17:28:07.000Z",
-          "score": 30.402142857142856
-        },
-        {
           "title": "AgentPhoenix7/SLM-project-qwen",
           "source": "Hugging Face",
           "url": "https://huggingface.co/AgentPhoenix7/SLM-project-qwen",
@@ -334,6 +287,32 @@
           ],
           "publishedAt": "2026-05-01T03:12:47.000Z",
           "score": 30.357142857142858
+        },
+        {
+          "title": "MilaWang/lirpg-fullparam-qwen2-5-math-7b-answeronly01-handrolled-zeroinit-gn-lrin5e-5-nostd-nokl",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/MilaWang/lirpg-fullparam-qwen2-5-math-7b-answeronly01-handrolled-zeroinit-gn-lrin5e-5-nostd-nokl",
+          "meta": "1 likes · 0 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-05-01T04:58:31.000Z",
+          "score": 30.357142857142858
+        },
+        {
+          "title": "\"Show more\" in Google search causes high Firefox GPU usage",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47976527",
+          "meta": "2 points · 0 comments",
+          "why": "The big labs still set the tone when they ship model or platform changes.",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-01T16:17:49Z",
+          "score": 28.65277777777778
         }
       ]
     }
@@ -341,24 +320,24 @@
   "tangentRadar": [
     {
       "topic": "Major labs",
-      "signalCount": 29,
+      "signalCount": 31,
       "whyItMatters": "The big labs still set the tone when they ship model or platform changes.",
       "signals": [
         "Hacker News: Show HN: Git Shield – local hooks for secrets and PII",
-        "Hacker News: We scanned 100 Smithery MCP servers, 22 flagged, here's what we found",
-        "Hacker News: Show HN: Pu.sh – a full coding-agent harness in 400 lines of shell",
-        "Hacker News: Ask HN: How are you evaluating AI apps and CLI?"
+        "Hacker News: \"Show more\" in Google search causes high Firefox GPU usage",
+        "Hacker News: Show HN: IP Tools (Ipaddress.to)",
+        "Hacker News: Ask HN: Who is hiring? (May 2026)"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 23,
+      "signalCount": 24,
       "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
       "signals": [
         "Hacker News: Show HN: BetterClaw – Compile a paragraph into a workflow that gates agent tools",
         "Hacker News: Show HN: Loopsy, a way for terminals and AI agents on different machines to talk",
-        "Hacker News: Show HN: Git Shield – local hooks for secrets and PII",
-        "Hacker News: We scanned 100 Smithery MCP servers, 22 flagged, here's what we found"
+        "Hacker News: Show HN: Agent – Inline code annotations for AI agents",
+        "Hacker News: Show HN: Git Shield – local hooks for secrets and PII"
       ]
     },
     {
@@ -369,38 +348,38 @@
         "Hacker News: Show HN: \"Woo\", a multi-user world for agents",
         "Hacker News: Show HN: Loopsy, a way for terminals and AI agents on different machines to talk",
         "Hacker News: Show HN: Git Shield – local hooks for secrets and PII",
-        "Hacker News: Mosaic: Local MCP server for agent memory"
-      ]
-    },
-    {
-      "topic": "MCP",
-      "signalCount": 13,
-      "whyItMatters": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
-      "signals": [
-        "Hacker News: Show HN: BetterClaw – Compile a paragraph into a workflow that gates agent tools",
-        "Hacker News: Show HN: \"Woo\", a multi-user world for agents",
-        "Hacker News: We scanned 100 Smithery MCP servers, 22 flagged, here's what we found",
-        "Hacker News: Ask HN: Anyone using AI agents for active learning sprints? Here's my setup"
+        "Hacker News: Show HN: GitLeak – A GitHub OSINT tool for emails, timezones, and activity"
       ]
     },
     {
       "topic": "Tool use",
-      "signalCount": 13,
+      "signalCount": 10,
       "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
       "signals": [
         "Hacker News: Show HN: BetterClaw – Compile a paragraph into a workflow that gates agent tools",
         "Hacker News: Show HN: \"Woo\", a multi-user world for agents",
-        "Hacker News: We scanned 100 Smithery MCP servers, 22 flagged, here's what we found",
-        "Hacker News: Managing dependencies in non-manifest languages"
+        "Hacker News: Show HN: Spec27 – Spec-driven validation for AI agents",
+        "Hacker News: Show HN: Agented, a Text Editor for LLMs"
+      ]
+    },
+    {
+      "topic": "MCP",
+      "signalCount": 8,
+      "whyItMatters": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
+      "signals": [
+        "Hacker News: Show HN: BetterClaw – Compile a paragraph into a workflow that gates agent tools",
+        "Hacker News: Show HN: \"Woo\", a multi-user world for agents",
+        "Hacker News: Ask HN: Anyone using AI agents for active learning sprints? Here's my setup",
+        "Hacker News: Show HN: Agented, a Text Editor for LLMs"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 9,
+      "signalCount": 6,
       "whyItMatters": "The field keeps circling back to orchestration, planning, and tighter loops between steps.",
       "signals": [
+        "Hacker News: Stateful agent workflows for Spring AI (graph-based, with retries and recovery)",
         "Hacker News: Show HN: BetterClaw – Compile a paragraph into a workflow that gates agent tools",
-        "Hacker News: Managing dependencies in non-manifest languages",
         "Hacker News: Show HN: Spec27 – Spec-driven validation for AI agents",
         "Hacker News: Trading Agents – Multi-Agent LLM Financial Trading Network"
       ]
