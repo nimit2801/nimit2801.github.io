@@ -1,43 +1,65 @@
 {
-  "generatedAt": "2026-05-06T21:14:51Z",
+  "generatedAt": "2026-05-07T03:39:09Z",
   "windowDays": 7,
-  "summary": "This cycle is clustering around major labs, coding agents, and open weights. The strongest signal is that people want better tool surfaces, tighter evals, and less fragile agent loops.",
+  "summary": "This cycle is clustering around major labs, open weights, and coding agents. The strongest signal is that people want better tool surfaces, tighter evals, and less fragile agent loops.",
   "sourceStats": {
-    "items": 79,
+    "items": 80,
     "sources": {
-      "Hacker News": 47,
+      "Hacker News": 48,
       "Hugging Face": 32,
-      "Major labs": 24
+      "Major labs": 28
     }
   },
   "highlights": [
     {
-      "title": "I built a game where AI agents compete to ship code; live WASM every 5 minutes",
+      "title": "Unmonitored Agents and a Local AI",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=48042961",
+      "meta": "2 points · 0 comments",
+      "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+      "topics": [
+        "Open weights"
+      ],
+      "publishedAt": "2026-05-06T22:53:22Z",
+      "score": 27.34610021219136
+    },
+    {
+      "title": "UlyssesXC/verl-agent-alfworld-exp10c_switch_b16",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/UlyssesXC/verl-agent-alfworld-exp10c_switch_b16",
+      "meta": "0 likes · 0 downloads",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-05-06T06:24:27.000Z",
+      "score": 27.857142857142858
+    },
+    {
+      "title": "Kestrel: Open-source sovereign AI agent framework",
+      "source": "Hacker News",
+      "url": "https://github.com/KestrelSovereignAI/kestrel-sovereign",
+      "meta": "2 points · 0 comments",
+      "why": "This is a useful signal for how people are actually building with agents right now.",
+      "topics": [],
+      "publishedAt": "2026-05-06T21:36:08Z",
+      "score": 26.899148051697534
+    },
+    {
+      "title": "Show HN: I built a game where AI agents compete to ship code",
       "source": "Hacker News",
       "url": "https://aion.quest/",
-      "meta": "1 points · 1 comments",
+      "meta": "4 points · 4 comments",
       "why": "This is a useful signal for how people are actually building with agents right now.",
       "topics": [
         "Coding agents"
       ],
       "publishedAt": "2026-05-06T21:12:32Z",
-      "score": 29.65277777777778
-    },
-    {
-      "title": "munavvaralii/neuralstack-agentic",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/munavvaralii/neuralstack-agentic",
-      "meta": "0 likes · 0 downloads",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-05-06T20:55:17.000Z",
-      "score": 27.857142857142858
+      "score": 42.76257397762346
     },
     {
       "title": "MCP Agora open source and local cross-agent persistent memory for AI agents",
       "source": "Hacker News",
       "url": "https://github.com/cioffiAI/mcp-agora",
-      "meta": "1 points · 0 comments",
+      "meta": "2 points · 0 comments",
       "why": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
       "topics": [
         "MCP",
@@ -45,17 +67,17 @@
         "Open weights"
       ],
       "publishedAt": "2026-05-06T20:55:12Z",
-      "score": 26.65277777777778
+      "score": 26.66226533564815
     },
     {
       "title": "Sim1 – A world where you live alongside AI agents",
       "source": "Hacker News",
       "url": "https://www.sim1.world",
-      "meta": "1 points · 0 comments",
+      "meta": "2 points · 0 comments",
       "why": "This is a useful signal for how people are actually building with agents right now.",
       "topics": [],
       "publishedAt": "2026-05-06T20:54:42Z",
-      "score": 26.65277777777778
+      "score": 26.659371817129628
     },
     {
       "title": "Shadow – find which prompt change broke your AI agent",
@@ -65,7 +87,7 @@
       "why": "This is a useful signal for how people are actually building with agents right now.",
       "topics": [],
       "publishedAt": "2026-05-06T19:50:15Z",
-      "score": 28.510329089506172
+      "score": 26.286397280092597
     },
     {
       "title": "Not everything is AI or Agents",
@@ -75,29 +97,7 @@
       "why": "This is a useful signal for how people are actually building with agents right now.",
       "topics": [],
       "publishedAt": "2026-05-06T19:41:06Z",
-      "score": 31.457377700617286
-    },
-    {
-      "title": "The AI agent will act wrongly",
-      "source": "Hacker News",
-      "url": "https://www.intelligent-people.org/2026/05/05/the-ai-agent-will-act-wrongly/",
-      "meta": "3 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [],
-      "publishedAt": "2026-05-06T19:30:49Z",
-      "score": 30.397867669753083
-    },
-    {
-      "title": "How AI agent memory works",
-      "source": "Hacker News",
-      "url": "https://memory.cobanov.dev/",
-      "meta": "3 points · 0 comments",
-      "why": "This is a useful signal for how people are actually building with agents right now.",
-      "topics": [
-        "Memory and state"
-      ],
-      "publishedAt": "2026-05-06T19:10:04Z",
-      "score": 30.277786651234567
+      "score": 29.233445891203704
     }
   ],
   "sourceSections": [
@@ -109,53 +109,59 @@
           "title": "Higher usage limits for Claude and a compute deal with SpaceX",
           "source": "Hacker News",
           "url": "https://www.anthropic.com/news/higher-limits-spacex",
-          "meta": "256 points · 193 comments",
+          "meta": "409 points · 360 comments",
           "why": "This is a useful signal for how people are actually building with agents right now.",
           "topics": [],
           "publishedAt": "2026-05-06T16:17:33Z",
-          "score": 1114.2794263117285
+          "score": 1919.0554945023148
         },
         {
           "title": "GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents",
           "source": "Hacker News",
           "url": "https://arxiv.org/abs/2604.26752",
-          "meta": "157 points · 31 comments",
+          "meta": "159 points · 31 comments",
           "why": "This is a useful signal for how people are actually building with agents right now.",
           "topics": [
             "Voice and multimodal"
           ],
           "publishedAt": "2026-05-05T17:52:31Z",
-          "score": 422.49566859567904
+          "score": 424.2717367862654
         },
         {
           "title": "McDonald's is a premium product now (2024)",
           "source": "Hacker News",
           "url": "https://greyenlightenment.com/2024/07/31/mcdonalds-is-a-premium-product-now/",
-          "meta": "28 points · 49 comments",
+          "meta": "33 points · 73 comments",
           "why": "This is a useful signal for how people are actually building with agents right now.",
           "topics": [],
           "publishedAt": "2026-05-06T19:45:07Z",
-          "score": 227.48062229938273
+          "score": 307.2566904899691
         },
         {
-          "title": "Learning the Integral of a Diffusion Model",
+          "title": "Anthropic will now use all the compute capacity at the xAI Colossus1 data center",
           "source": "Hacker News",
-          "url": "https://sander.ai/2026/05/06/flow-maps.html",
-          "meta": "34 points · 7 comments",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-05-06T18:46:27Z",
-          "score": 113.14111612654321
+          "url": "https://twitter.com/claudeai/status/2052060693269008586",
+          "meta": "7 points · 3 comments",
+          "why": "The big labs still set the tone when they ship model or platform changes.",
+          "topics": [
+            "Major labs"
+          ],
+          "publishedAt": "2026-05-06T16:45:25Z",
+          "score": 44.216759934413574
         },
         {
-          "title": "Show HN: Upskill – skill to find skills for your AI agents",
+          "title": "Show HN: Naval Strike – simultaneous turn-based fleet combat in the browser",
           "source": "Hacker News",
-          "url": "https://github.com/Autoloops/upskill",
-          "meta": "4 points · 8 comments",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-05-06T17:19:30Z",
-          "score": 55.63793325617284
+          "url": "https://navalstrike.app",
+          "meta": "3 points · 5 comments",
+          "why": "Browser and computer-use loops are still where the most visible agent demos live.",
+          "topics": [
+            "Browser agents",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-06T21:27:53Z",
+          "score": 43.85140499614197
         }
       ]
     },
@@ -169,47 +175,18 @@
       "label": "Hugging Face",
       "items": [
         {
-          "title": "TeichAI/gemma-4-31B-it-Claude-Opus-Distill",
+          "title": "sequelbox/Qwen3.6-27B-Tachibana-Agent",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/TeichAI/gemma-4-31B-it-Claude-Opus-Distill",
-          "meta": "image-text-to-text · 34 likes · 5,900 downloads",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-04-03T07:51:55.000Z",
-          "score": 86.18
-        },
-        {
-          "title": "TeichAI/gemma-4-26B-A4B-it-Claude-Opus-Distill",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/TeichAI/gemma-4-26B-A4B-it-Claude-Opus-Distill",
-          "meta": "image-text-to-text · 18 likes · 2,096 downloads",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-04-04T08:38:41.000Z",
-          "score": 45.419200000000004
-        },
-        {
-          "title": "smashingtags/eightly-agent",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/smashingtags/eightly-agent",
-          "meta": "text-generation · 0 likes · 30 downloads",
+          "url": "https://huggingface.co/sequelbox/Qwen3.6-27B-Tachibana-Agent",
+          "meta": "image-text-to-text · 2 likes · 0 downloads",
           "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
             "Open weights",
-            "Major labs"
+            "Major labs",
+            "Coding agents"
           ],
-          "publishedAt": "2026-05-05T22:18:34.000Z",
-          "score": 27.863142857142858
-        },
-        {
-          "title": "munavvaralii/neuralstack-agentic",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/munavvaralii/neuralstack-agentic",
-          "meta": "0 likes · 0 downloads",
-          "why": "This is a useful signal for how people are actually building with agents right now.",
-          "topics": [],
-          "publishedAt": "2026-05-06T20:55:17.000Z",
-          "score": 27.857142857142858
+          "publishedAt": "2026-05-07T02:02:02.000Z",
+          "score": 32.85714285714286
         },
         {
           "title": "UlyssesXC/verl-agent-alfworld-exp10c_switch_b16",
@@ -219,6 +196,42 @@
           "why": "This is a useful signal for how people are actually building with agents right now.",
           "topics": [],
           "publishedAt": "2026-05-06T06:24:27.000Z",
+          "score": 27.857142857142858
+        },
+        {
+          "title": "UlyssesXC/verl-agent-alfworld-grpo-dualadv-w003-schema-verifier-exp3-fix",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/UlyssesXC/verl-agent-alfworld-grpo-dualadv-w003-schema-verifier-exp3-fix",
+          "meta": "0 likes · 0 downloads",
+          "why": "This is a useful signal for how people are actually building with agents right now.",
+          "topics": [],
+          "publishedAt": "2026-05-06T22:51:18.000Z",
+          "score": 27.857142857142858
+        },
+        {
+          "title": "UlyssesXC/verl-agent-alfworld-sft-action-triple-qwen25-7b",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/UlyssesXC/verl-agent-alfworld-sft-action-triple-qwen25-7b",
+          "meta": "0 likes · 0 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-05-07T00:40:33.000Z",
+          "score": 27.857142857142858
+        },
+        {
+          "title": "wonwonn/cua_agent_v3_1",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/wonwonn/cua_agent_v3_1",
+          "meta": "text-generation · 0 likes · 0 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-05-07T00:25:13.000Z",
           "score": 27.857142857142858
         }
       ]
@@ -237,59 +250,59 @@
             "Major labs"
           ],
           "publishedAt": "2026-05-06T16:45:25Z",
-          "score": 46.44069174382716
+          "score": 44.216759934413574
         },
         {
-          "title": "Google DeepMind takes a minority stake in the maker of EVE Online",
+          "title": "Show HN: Naval Strike – simultaneous turn-based fleet combat in the browser",
           "source": "Hacker News",
-          "url": "https://www.ccpgames.com/news/2026/studio-behind-eve-online-goes-independent-rebrands-as-fenris-creations-enters-research-partnership-with-google-deepmind",
-          "meta": "5 points · 0 comments",
+          "url": "https://navalstrike.app",
+          "meta": "3 points · 5 comments",
+          "why": "Browser and computer-use loops are still where the most visible agent demos live.",
+          "topics": [
+            "Browser agents",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-06T21:27:53Z",
+          "score": 43.85140499614197
+        },
+        {
+          "title": "Show HN: Dreamwork – a job search site I made after Indeed fired my pregnant wif",
+          "source": "Hacker News",
+          "url": "https://www.dreamworkhq.com/",
+          "meta": "4 points · 2 comments",
           "why": "The big labs still set the tone when they ship model or platform changes.",
           "topics": [
             "Major labs"
           ],
-          "publishedAt": "2026-05-06T18:24:02Z",
-          "score": 34.0113900462963
+          "publishedAt": "2026-05-07T02:04:53Z",
+          "score": 38.45441425540123
         },
         {
-          "title": "smashingtags/eightly-agent",
+          "title": "sequelbox/Qwen3.6-27B-Tachibana-Agent",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/smashingtags/eightly-agent",
-          "meta": "text-generation · 0 likes · 30 downloads",
+          "url": "https://huggingface.co/sequelbox/Qwen3.6-27B-Tachibana-Agent",
+          "meta": "image-text-to-text · 2 likes · 0 downloads",
+          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-07T02:02:02.000Z",
+          "score": 32.85714285714286
+        },
+        {
+          "title": "UlyssesXC/verl-agent-alfworld-sft-action-triple-qwen25-7b",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/UlyssesXC/verl-agent-alfworld-sft-action-triple-qwen25-7b",
+          "meta": "0 likes · 0 downloads",
           "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
           "topics": [
             "Open weights",
             "Major labs"
           ],
-          "publishedAt": "2026-05-05T22:18:34.000Z",
-          "score": 27.863142857142858
-        },
-        {
-          "title": "SALEETAI/coding-agent-qwen-sft",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/SALEETAI/coding-agent-qwen-sft",
-          "meta": "text-generation · 0 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-06T15:29:29.000Z",
-          "score": 27.857142857142858
-        },
-        {
-          "title": "txmedai/ClinicalEase-Qwen3-1.7B",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/txmedai/ClinicalEase-Qwen3-1.7B",
-          "meta": "0 likes · 0 downloads",
-          "why": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-06T20:55:52.000Z",
+          "publishedAt": "2026-05-07T00:40:33.000Z",
           "score": 27.857142857142858
         }
       ]
@@ -298,40 +311,40 @@
   "tangentRadar": [
     {
       "topic": "Major labs",
-      "signalCount": 24,
+      "signalCount": 28,
       "whyItMatters": "The big labs still set the tone when they ship model or platform changes.",
       "signals": [
-        "Hacker News: Google DeepMind takes a minority stake in the maker of EVE Online",
+        "Hacker News: Show HN: Dreamwork – a job search site I made after Indeed fired my pregnant wif",
+        "Hacker News: Show HN: Naval Strike – simultaneous turn-based fleet combat in the browser",
         "Hacker News: Anthropic will now use all the compute capacity at the xAI Colossus1 data center",
-        "Hacker News: Show HN: Token Usage Meter 12 Providers and Coding Agent",
-        "Hugging Face: SALEETAI/coding-agent-qwen-sft"
+        "Hacker News: Show HN: Token Usage Meter 12 Providers and Coding Agent"
+      ]
+    },
+    {
+      "topic": "Open weights",
+      "signalCount": 21,
+      "whyItMatters": "Open-weight releases keep lowering the cost of trying agent loops locally.",
+      "signals": [
+        "Hacker News: Unmonitored Agents and a Local AI",
+        "Hacker News: MCP Agora open source and local cross-agent persistent memory for AI agents",
+        "Hacker News: Show HN: Probus, AI vuln scanner (PRs merged in Vercel AI SDK, n8n, LangGraph)",
+        "Hacker News: Show HN: Local Telegram control app for Codex CLI"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 20,
+      "signalCount": 18,
       "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
       "signals": [
-        "Hacker News: I built a game where AI agents compete to ship code; live WASM every 5 minutes",
+        "Hacker News: Show HN: I built a game where AI agents compete to ship code",
         "Hacker News: A Grand Challenge for Reliable Coding in the Age of AI Agents",
         "Hacker News: Show HN: I built a skill, grounded in research, to make your writing less boring",
         "Hacker News: Show HN: Costanza – an autonomous AI agent that can't be turned off"
       ]
     },
     {
-      "topic": "Open weights",
-      "signalCount": 16,
-      "whyItMatters": "Open-weight releases keep lowering the cost of trying agent loops locally.",
-      "signals": [
-        "Hacker News: MCP Agora open source and local cross-agent persistent memory for AI agents",
-        "Hacker News: Show HN: Probus, AI vuln scanner (PRs merged in Vercel AI SDK, n8n, LangGraph)",
-        "Hacker News: Show HN: Local Telegram control app for Codex CLI",
-        "Hacker News: Show HN: Token Usage Meter 12 Providers and Coding Agent"
-      ]
-    },
-    {
       "topic": "Memory and state",
-      "signalCount": 5,
+      "signalCount": 4,
       "whyItMatters": "This is a useful signal for how people are actually building with agents right now.",
       "signals": [
         "Hacker News: MCP Agora open source and local cross-agent persistent memory for AI agents",
@@ -342,12 +355,11 @@
     },
     {
       "topic": "MCP",
-      "signalCount": 4,
+      "signalCount": 3,
       "whyItMatters": "Standardized tool surfaces keep showing up as the connective tissue for agentic systems.",
       "signals": [
         "Hacker News: MCP Agora open source and local cross-agent persistent memory for AI agents",
         "Hacker News: Show HN: MCP Python Hooks – sys.addaudithook and import hooks for MCP",
-        "Hacker News: The AWS MCP Server is now generally available",
         "Hacker News: Show HN: Token Usage Meter 12 Providers and Coding Agent"
       ]
     },
