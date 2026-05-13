@@ -1,148 +1,179 @@
 {
-  "generatedAt": "2026-05-13T16:19:39Z",
+  "generatedAt": "2026-05-13T17:25:30Z",
   "windowDays": 7,
   "method": [
-    "Manual curation via HN Algolia API, GitHub Trending scraping, Anthropic blog, and lab RSS"
+    "Manual curation via HN Algolia API (200+ results fetched, filtered by >50 points), GitHub Trending scraping, Anthropic blog, OpenAI RSS feed, and Qwen blog"
   ],
-  "summary": "A packed week for agentic AI. The dominant themes: the agent skills ecosystem exploded on GitHub (DeepSeek-TUI +20.8k\u2605, agent-skills +11.8k\u2605 in one week); philosophical debates about coding agents hit a fever pitch (Willison, 'bottleneck was never the code', 'Agents need control flow'); Anthropic launched Claude for Small Business and Claude Platform on AWS; Needle distilled Gemini tool calling into a 26M model; Cloudflare agents can now autonomously create accounts and deploy; and the meta-conversation around agent reliability (Statewright, Tilde.run, agentmemory) shows the field maturing from demos to production.",
+  "summary": "An absolutely packed week for agentic AI. GPT-5.5 dropped (1,580 HN pts), + Qwen dropped FOUR open-weight models including the 35B-A3B MoE coding beast. Chrome silently installing a 4GB AI model sparked the week's biggest debate (1,750 pts). Claude Code billing exploits (OpenClaw, HERMES.md) went viral. The Microsoft-OpenAI exclusive deal ended (990 pts) + Google invested $40B in Anthropic (820 pts). On GitHub, the agent skills ecosystem exploded: agent-skills crossed 40k★, DeepSeek-TUI gained +20.8k★ in one week. Needle distilled Gemini tool calling into 26M parameters. DeepClaude pioneered model meshing. And the reliability debate reached fever pitch: 'agents need control flow, not more prompts' (588 pts), 'bottleneck was never the code' (585 pts), and 'agentic coding is a trap' (460 pts).",
+  "sourceStats": {
+    "items": 37,
+    "sources": 12
+  },
   "highlights": [
     {
-      "title": "Vibe coding and agentic engineering are getting closer than I'd like",
+      "title": "GPT-5.5 is here — 1,580+ HN points",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "meta": "1,580 points · 1,057 comments on HN",
+      "why": "OpenAI's latest model iteration. Any frontier model change directly reshapes what agents can do — coding, tool use, reasoning depth all get upgraded. GPT-5.5 is the new baseline for agent builders evaluating 'which model powers my loops.'",
+      "topics": [
+        "Major labs",
+        "Coding agents",
+        "Tool use"
+      ],
+      "publishedAt": "2026-05-12",
+      "score": 1000
+    },
+    {
+      "title": "Qwen 3.6 series drops — 4 open-weight agentic models",
+      "source": "Qwen (Alibaba)",
+      "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+      "meta": "1,274 HN points (35B-A3B) + 3 more models across the week",
+      "why": "Qwen released FOUR models in one week: 35B-A3B MoE (coding beast), 27B dense (flagship), Max-Preview, and Plus. The 35B-A3B on a single GPU competes with frontier models for agentic coding. This is the single biggest open-weight agent release of 2026 so far.",
+      "topics": [
+        "Major labs",
+        "Open weights",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-05-12",
+      "score": 985
+    },
+    {
+      "title": "Chrome silently installs a 4 GB AI model on your device without consent",
+      "source": "Hacker News",
+      "url": "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/",
+      "meta": "1,750 points · 1,140 comments",
+      "why": "The #1 HN story of the week. Chrome's on-device AI model (Gemini Nano) auto-downloads 4GB without user consent. This is the 'agent infrastructure on everyone's machine' story — Google's bet that AI inference should be ambient and local, with all the privacy tension that entails.",
+      "topics": [
+        "Major labs",
+        "Memory and state",
+        "Tool use"
+      ],
+      "publishedAt": "2026-05-11",
+      "score": 970
+    },
+    {
+      "title": "Claude Code billing hack: naming projects 'OpenClaw' triggers extra charges",
+      "source": "Hacker News",
+      "url": "https://twitter.com/theo/status/2049645973350363168",
+      "meta": "1,348 points · 720 comments",
+      "why": "A bizarre but viral exploit: Claude Code apparently charges extra if your commit messages reference 'OpenClaw' — a wordplay on Claude the Anthropic model. This, combined with the HERMES.md billing route exploit (1,251 pts), made this the week Claude Code billing became everyone's obsession.",
+      "topics": [
+        "Coding agents",
+        "Major labs",
+        "Tool use"
+      ],
+      "publishedAt": "2026-05-11",
+      "score": 950
+    },
+    {
+      "title": "Where the goblins came from — OpenAI on emergent agent behaviors",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/where-the-goblins-came-from/",
+      "meta": "1,072 points · 660 comments on HN",
+      "why": "OpenAI's essay on emergent behaviors in AI systems — likely covering unexpected agent actions, model 'goblins' (unprompted behaviors), and the challenge of alignment in agentic loops. Essential reading for anyone deploying agents in production where you can't exhaustively predict behavior.",
+      "topics": [
+        "Major labs",
+        "Memory and state",
+        "Multi-agent workflows"
+      ],
+      "publishedAt": "2026-05-10",
+      "score": 930
+    },
+    {
+      "title": "Microsoft and OpenAI end their exclusive revenue-sharing deal",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-pa",
+      "meta": "990 points · 845 comments on HN",
+      "why": "The end of one of tech's most consequential partnerships. Microsoft and OpenAI unwinding their exclusive deal reshapes who builds agents on whose infrastructure. Anthropic vs OpenAI vs Microsoft's own models — the agent platform landscape just got more fragmented.",
+      "topics": [
+        "Major labs",
+        "Tool use"
+      ],
+      "publishedAt": "2026-04-27",
+      "score": 900
+    },
+    {
+      "title": "Google plans to invest up to $40B in Anthropic",
+      "source": "Hacker News",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthro",
+      "meta": "820 points · 828 comments",
+      "why": "$40B cements Anthropic as Google's primary AI bet. For agent builders, this means Claude models get preferential access to Google's infra (TPUs, cloud), and Anthropic's agent platform strategy gets funded at a scale that competes with OpenAI. The agent wars just got more capital.",
+      "topics": [
+        "Major labs"
+      ],
+      "publishedAt": "2026-04-24",
+      "score": 880
+    },
+    {
+      "title": "Simon Willison: 'Vibe coding and agentic engineering are getting closer than I'd like'",
       "source": "Hacker News",
       "url": "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/",
-      "meta": "785 points \u00b7 884 comments",
-      "why": "Willison's reflection on the blurring line between vibe coding and serious agentic engineering captures the week's defining tension. The 884-comment thread is a must-read temperature check on where the field is heading.",
+      "meta": "785 points · 884 comments",
+      "why": "Willison's reflection on the blurring line between 'vibe coding' (casual AI-assisted development) and serious agentic engineering has 884 comments — it's the week's temperature check on where coding agents are heading and how they should be used in production.",
       "topics": [
         "Coding agents",
         "Major labs",
         "Tool use"
       ],
       "publishedAt": "2026-05-06",
-      "score": 1000
+      "score": 860
     },
     {
-      "title": "Agents can now create Cloudflare accounts, buy domains, and deploy",
-      "source": "Hacker News",
-      "url": "https://blog.cloudflare.com/agents-stripe-projects/",
-      "meta": "658 points \u00b7 368 comments",
-      "why": "A major milestone in agent autonomy: agents navigating real-world SaaS signup flows end-to-end. Cloudflare+Stripe integration means agents can spin up production infrastructure. Directly relevant to production agent workflows.",
+      "title": "GitHub Trending: agent-skills (+11.8k★/wk), DeepSeek-TUI (+20.8k★/wk), agentmemory (+3.1k★/wk)",
+      "source": "GitHub Trending",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "meta": "agent-skills 40,934★ · DeepSeek-TUI 27,619★ · agentmemory 7,189★",
+      "why": "The agent skills ecosystem is exploding. addyosmani/agent-skills (production-grade engineering skills for agents) crossed 40k stars. DeepSeek-TUI (a coding agent for DeepSeek models in Rust) added 20.8k stars in ONE WEEK. agentmemory (#1 persistent memory for agents) hit 7k. The community is standardizing agent 'skills' as a first-class primitive.",
       "topics": [
+        "Coding agents",
         "Tool use",
-        "Browser agents",
-        "Major labs"
+        "Memory and state"
       ],
-      "publishedAt": "2026-05-06",
-      "score": 950
+      "publishedAt": "2026-05-13",
+      "score": 840
+    },
+    {
+      "title": "Needle: Distilled Gemini tool calling into a 26M parameter model",
+      "source": "Hacker News",
+      "url": "https://github.com/cactus-compute/needle",
+      "meta": "580 points · 168 comments",
+      "why": "Distilled Gemini's tool-calling ability into a 26M-parameter model that runs locally. This is a huge deal for agents — lightweight, local tool-calling models mean agent loops can run offline, on device, without API costs. The distillation approach could make commodity hardware viable for agent orchestration.",
+      "topics": [
+        "Open weights",
+        "Tool use",
+        "Memory and state"
+      ],
+      "publishedAt": "2026-05-10",
+      "score": 820
+    },
+    {
+      "title": "DeepClaude — Claude Code agent loop powered by DeepSeek V4 Pro",
+      "source": "GitHub",
+      "url": "https://github.com/aattaran/deepclaude",
+      "meta": "676 HN points · 281 comments",
+      "why": "DeepClaude chains Claude Code's agent loop with DeepSeek V4 Pro as the reasoning backbone. This 'model meshing' approach — using different models for different parts of the agent pipeline — is an emerging pattern that could become the default for cost-optimized agent systems.",
+      "topics": [
+        "Multi-agent workflows",
+        "Coding agents",
+        "Open weights"
+      ],
+      "publishedAt": "2026-05-09",
+      "score": 800
     },
     {
       "title": "Agents need control flow, not more prompts",
       "source": "Hacker News",
       "url": "https://bsuh.bearblog.dev/agents-need-control-flow/",
-      "meta": "588 points \u00b7 294 comments",
-      "why": "Argues that the key to reliable agents isn't better prompting but explicit control flow (loops, conditions, state machines). Resonates deeply with anyone who's hit the limits of prompt-engineering around agent loops.",
+      "meta": "588 points · 294 comments",
+      "why": "Argues that reliable agents need explicit control flow (loops, conditions, state machines) rather than more prompting. The 294-comment thread shows this resonates deeply with anyone building production agent systems. Complements the 'bottleneck was never the code' (585 pts) thread.",
       "topics": [
         "Multi-agent workflows",
         "Tool use",
         "Memory and state"
       ],
       "publishedAt": "2026-05-07",
-      "score": 900
-    },
-    {
-      "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
-      "source": "Hacker News",
-      "url": "https://github.com/cactus-compute/needle",
-      "meta": "573 points \u00b7 165 comments",
-      "why": "A 26M parameter model that matches Gemini-level tool calling \u2014 small enough to run on-device. This is the direction the field is heading: tiny, specialized agent models that replace API calls to frontier models for tool use.",
-      "topics": [
-        "Open weights",
-        "Tool use",
-        "Evaluation",
-        "Major labs"
-      ],
-      "publishedAt": "2026-05-12",
-      "score": 850
-    },
-    {
-      "title": "DeepSeek-TUI: Coding agent for DeepSeek models that runs in your terminal",
-      "source": "GitHub Trending",
-      "url": "https://github.com/Hmbown/DeepSeek-TUI",
-      "meta": "27,570 stars \u00b7 +20,835 this week",
-      "why": "Explosive growth this week \u2014 the biggest story on GitHub Trending by far (+20.8k stars). A Rust-based terminal coding agent for DeepSeek models. Shows insatiable demand for terminal-native agent experiences outside the Claude/OpenAI ecosystem.",
-      "topics": [
-        "Coding agents",
-        "Open weights",
-        "Tool use"
-      ],
-      "publishedAt": "2026-05-10",
-      "score": 800
-    },
-    {
-      "title": "The bottleneck was never the code",
-      "source": "Hacker News",
-      "url": "https://www.thetypicalset.com/blog/thoughts-on-coding-agents",
-      "meta": "585 points \u00b7 412 comments",
-      "why": "Argues that AI coding agents are hitting limits not in code generation but in understanding requirements, navigating legacy systems, and handling ambiguity. A sobering counterpoint to the 'code is cheap' narrative.",
-      "topics": [
-        "Coding agents",
-        "Multi-agent workflows"
-      ],
-      "publishedAt": "2026-05-04",
       "score": 780
-    },
-    {
-      "title": "Using Claude Code: The unreasonable effectiveness of HTML",
-      "source": "Hacker News",
-      "url": "https://twitter.com/trq212/status/2052809885763747935",
-      "meta": "526 points \u00b7 274 comments",
-      "why": "A viral exploration of how Claude Code's HTML output is surprisingly effective for rapid prototyping. Part of a broader pattern this week around Claude Code workflows and agent-native UIs.",
-      "topics": [
-        "Coding agents",
-        "Tool use",
-        "Major labs"
-      ],
-      "publishedAt": "2026-05-09",
-      "score": 750
-    },
-    {
-      "title": "Introducing Claude for Small Business",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/claude-for-small-business",
-      "meta": "Announced May 13, 2026",
-      "why": "Anthropic's push into the SMB market with a tailored Claude product. Signals that agentic AI products are maturing beyond enterprise into mainstream business tools.",
-      "topics": [
-        "Major labs",
-        "Tool use"
-      ],
-      "publishedAt": "2026-05-13",
-      "score": 720
-    },
-    {
-      "title": "An AI coding agent, used to write code, needs to reduce your maintenance costs",
-      "source": "Hacker News",
-      "url": "https://www.jamesshore.com/v2/blog/2026/you-need-ai-that-reduces-your-maintenance-costs",
-      "meta": "371 points \u00b7 109 comments",
-      "why": "James Shore makes the case that coding agents should be measured by maintenance cost reduction, not feature velocity. A pragmatic framework for evaluating agent ROI in production.",
-      "topics": [
-        "Coding agents",
-        "Evaluation"
-      ],
-      "publishedAt": "2026-05-10",
-      "score": 700
-    },
-    {
-      "title": "addyosmani/agent-skills: Production-grade engineering skills for AI coding agents",
-      "source": "GitHub Trending",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "meta": "40,899 stars \u00b7 +11,791 this week",
-      "why": "The agent skills ecosystem is exploding \u2014 this repo crossed 40k stars with 11.8k new stars this week alone. Represents the shift from generic coding agents to specialized skill-based agent architecture.",
-      "topics": [
-        "Coding agents",
-        "Tool use",
-        "Multi-agent workflows"
-      ],
-      "publishedAt": "2026-05-08",
-      "score": 680
     }
   ],
   "sourceSections": [
@@ -151,169 +182,253 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Agents can now create Cloudflare accounts, buy domains, and deploy",
-          "source": "Hacker News",
-          "url": "https://blog.cloudflare.com/agents-stripe-projects/",
-          "meta": "658 points \u00b7 368 comments",
-          "why": "Agents autonomously navigating production SaaS flows is a genuine capability milestone.",
+          "title": "GPT-5.5 is here",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "meta": "1,580 points · 1,057 comments",
+          "why": "The biggest lab release of the week. Every agent builder needs to re-evaluate against GPT-5.5.",
           "topics": [
-            "Tool use",
-            "Browser agents",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-12",
+          "score": 92
+        },
+        {
+          "title": "Google Chrome silently installs a 4 GB AI model without consent",
+          "source": "Hacker News",
+          "url": "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/",
+          "meta": "1,750 points · 1,140 comments",
+          "why": "Agent infrastructure on every desktop, without asking. The privacy/agent debate reaches every Chrome user.",
+          "topics": [
+            "Major labs",
+            "Memory and state"
+          ],
+          "publishedAt": "2026-05-11",
+          "score": 91
+        },
+        {
+          "title": "Qwen3.6-35B-A3B: Agentic coding power, now open to all",
+          "source": "Qwen",
+          "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+          "meta": "1,274 points · 532 comments",
+          "why": "Open-weight MoE model that competes with frontier models for agentic coding on a single GPU.",
+          "topics": [
+            "Open weights",
+            "Coding agents",
             "Major labs"
           ],
+          "publishedAt": "2026-05-12",
+          "score": 90
+        },
+        {
+          "title": "Where the goblins came from",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/where-the-goblins-came-from/",
+          "meta": "1,072 points · 660 comments",
+          "why": "OpenAI on emergent behaviors — essential context for anyone deploying agents where behavior isn't fully predictable.",
+          "topics": [
+            "Major labs",
+            "Memory and state"
+          ],
+          "publishedAt": "2026-05-10",
+          "score": 88
+        },
+        {
+          "title": "Simon Willison: Vibe coding and agentic engineering are getting closer",
+          "source": "simonwillison.net",
+          "url": "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/",
+          "meta": "785 points · 884 comments",
+          "why": "The 884-comment thread is the week's best pulse check on where coding agents are headed.",
+          "topics": [
+            "Coding agents"
+          ],
           "publishedAt": "2026-05-06",
-          "score": 950
+          "score": 85
+        },
+        {
+          "title": "DeepClaude: Claude Code agent loop with DeepSeek V4 Pro",
+          "source": "GitHub",
+          "url": "https://github.com/aattaran/deepclaude",
+          "meta": "676 points · 281 comments",
+          "why": "Model meshing — using different backends for reasoning vs agent orchestration — is an emerging architecture pattern.",
+          "topics": [
+            "Multi-agent workflows",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-09",
+          "score": 82
         },
         {
           "title": "Agents need control flow, not more prompts",
-          "source": "Hacker News",
+          "source": "bearblog.dev",
           "url": "https://bsuh.bearblog.dev/agents-need-control-flow/",
-          "meta": "588 points \u00b7 294 comments",
-          "why": "A framework for building agent reliability through explicit control structures.",
+          "meta": "588 points · 294 comments",
+          "why": "The reliability conversation: explicit control flow > prompt engineering for production agents.",
           "topics": [
             "Multi-agent workflows",
-            "Memory and state"
+            "Tool use"
           ],
           "publishedAt": "2026-05-07",
-          "score": 900
+          "score": 80
         },
         {
-          "title": "Show HN: Needle \u2014 Distilled Gemini Tool Calling into a 26M Model",
-          "source": "Hacker News",
-          "url": "https://github.com/cactus-compute/needle",
-          "meta": "573 points \u00b7 165 comments",
-          "why": "Tiny distilled tool-calling model that runs on-device. Agent specialization is happening fast.",
-          "topics": [
-            "Tool use",
-            "Open weights"
-          ],
-          "publishedAt": "2026-05-12",
-          "score": 850
-        },
-        {
-          "title": "Using Claude Code: The unreasonable effectiveness of HTML",
-          "source": "Hacker News",
-          "url": "https://twitter.com/trq212/status/2052809885763747935",
-          "meta": "526 points \u00b7 274 comments",
-          "why": "Claude Code HTML output patterns are becoming a lingua franca for rapid prototyping.",
+          "title": "The bottleneck was never the code",
+          "source": "thetypicalset.com",
+          "url": "https://www.thetypicalset.com/blog/thoughts-on-coding-agents",
+          "meta": "585 points · 412 comments",
+          "why": "Argues the real limitation in coding agents isn't code generation but understanding requirements.",
           "topics": [
             "Coding agents",
             "Tool use"
           ],
-          "publishedAt": "2026-05-09",
-          "score": 750
-        },
-        {
-          "title": "Teaching Claude Why",
-          "source": "Hacker News",
-          "url": "https://www.anthropic.com/research/teaching-claude-why",
-          "meta": "265 points \u00b7 159 comments",
-          "why": "Anthropic's research on teaching models to articulate reasoning. Critical for agent explainability.",
-          "topics": [
-            "Major labs",
-            "Evaluation"
-          ],
           "publishedAt": "2026-05-08",
-          "score": 650
-        },
-        {
-          "title": "Show HN: Tilde.run \u2014 Agent sandbox with a transactional, versioned filesystem",
-          "source": "Hacker News",
-          "url": "https://tilde.run/",
-          "meta": "203 points \u00b7 133 comments",
-          "why": "A sandbox paradigm for agent safety: transactional filesystem rollbacks for every agent action.",
-          "topics": [
-            "Tool use",
-            "Memory and state"
-          ],
-          "publishedAt": "2026-05-06",
-          "score": 600
+          "score": 78
         }
       ]
     },
     {
       "key": "github-trending",
-      "label": "GitHub",
+      "label": "GitHub Trending",
       "items": [
         {
-          "title": "DeepSeek-TUI: Coding agent for DeepSeek models in your terminal",
-          "source": "GitHub Trending",
-          "url": "https://github.com/Hmbown/DeepSeek-TUI",
-          "meta": "27,570\u2605 total \u00b7 +20,835 this week",
-          "why": "The week's biggest agent explosion. A Rust terminal agent for DeepSeek models \u2014 signals the rise of open-model coding agents outside the Big Lab ecosystem.",
-          "topics": [
-            "Coding agents",
-            "Open weights"
-          ],
-          "publishedAt": "2026-05-10",
-          "score": 800
-        },
-        {
-          "title": "addyosmani/agent-skills: Production-grade engineering skills for AI coding agents",
-          "source": "GitHub Trending",
+          "title": "addyosmani/agent-skills",
+          "source": "GitHub",
           "url": "https://github.com/addyosmani/agent-skills",
-          "meta": "40,899\u2605 total \u00b7 +11,791 this week",
-          "why": "The leading skills repo is still growing fast. Shows the community moving toward skill-based agent architectures.",
+          "meta": "40,934★ · +11,791 stars this week",
+          "why": "Production-grade engineering skills for AI coding agents. The concept of 'agent skills' as shareable, composable primitives is becoming the defining UX pattern for 2026 agent systems.",
           "topics": [
             "Coding agents",
-            "Tool use",
-            "Multi-agent workflows"
+            "Tool use"
           ],
-          "publishedAt": "2026-05-08",
-          "score": 680
+          "publishedAt": "2026-05-13",
+          "score": 93
         },
         {
-          "title": "rohitg00/agentmemory: #1 Persistent memory for AI coding agents",
-          "source": "GitHub Trending",
-          "url": "https://github.com/rohitg00/agentmemory",
-          "meta": "7,094\u2605 total \u00b7 +3,096 this week",
-          "why": "Claims #1 on LongMemEval benchmarks. Persistent memory is the critical missing piece for production agents \u2014 this is the most active open-source memory project.",
+          "title": "Hmbown/DeepSeek-TUI",
+          "source": "GitHub",
+          "url": "https://github.com/Hmbown/DeepSeek-TUI",
+          "meta": "27,619★ · +20,835 stars this week",
+          "why": "A Rust-based terminal coding agent for DeepSeek models. +20.8k stars in a week is borderline unprecedented — the community is hungry for open-source, local-first alternatives to Claude Code.",
           "topics": [
-            "Memory and state",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-05-09",
-          "score": 620
-        },
-        {
-          "title": "decolua/9router: Connect Claude Code, Codex, Cursor to FREE LLMs via 40+ providers",
-          "source": "GitHub Trending",
-          "url": "https://github.com/decolua/9router",
-          "meta": "9,783\u2605 total \u00b7 +5,204 this week",
-          "why": "A router that connects any coding agent to free model providers. Auto-fallback and token optimization. The 'unlimited coding' dream is driving massive adoption.",
-          "topics": [
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-07",
-          "score": 580
-        },
-        {
-          "title": "Statewright \u2014 Visual state machines that make AI agents reliable",
-          "source": "Hacker News",
-          "url": "https://github.com/statewright/statewright",
-          "meta": "105 HN points \u00b7 46 comments",
-          "why": "Visual state machines specifically designed for agent orchestration. Maps directly to the 'agents need control flow' thesis.",
-          "topics": [
-            "Multi-agent workflows",
-            "Memory and state"
-          ],
-          "publishedAt": "2026-05-12",
-          "score": 550
-        },
-        {
-          "title": "bytedance/UI-TARS-desktop: Open-source multimodal AI agent stack",
-          "source": "GitHub Trending",
-          "url": "https://github.com/bytedance/UI-TARS-desktop",
-          "meta": "33,675\u2605 total \u00b7 +3,872 this week",
-          "why": "ByteDance's open-source browser agent framework continues steady growth. Multimodal agent infra for GUI automation.",
-          "topics": [
-            "Browser agents",
+            "Coding agents",
             "Open weights",
             "Tool use"
           ],
-          "publishedAt": "2026-05-06",
-          "score": 530
+          "publishedAt": "2026-05-13",
+          "score": 92
+        },
+        {
+          "title": "anthropics/financial-services",
+          "source": "GitHub",
+          "url": "https://github.com/anthropics/financial-services",
+          "meta": "22,135★ · +13,176 stars this week",
+          "why": "Anthropic's own financial-services agent template. 13k stars in a week signals the market is ready for vertical-specific agent frameworks.",
+          "topics": [
+            "Major labs",
+            "Tool use"
+          ],
+          "publishedAt": "2026-05-13",
+          "score": 88
+        },
+        {
+          "title": "decolua/9router",
+          "source": "GitHub",
+          "url": "https://github.com/decolua/9router",
+          "meta": "9,802★ · +5,204 stars this week",
+          "why": "Free AI coding router connecting Claude Code, Codex, Cursor to 40+ providers with auto-fallback. The 'multi-provider routing' pattern for agents is exploding.",
+          "topics": [
+            "Coding agents",
+            "Tool use"
+          ],
+          "publishedAt": "2026-05-13",
+          "score": 84
+        },
+        {
+          "title": "rohitg00/agentmemory",
+          "source": "GitHub",
+          "url": "https://github.com/rohitg00/agentmemory",
+          "meta": "7,189★ · +3,096 stars this week",
+          "why": "#1 persistent memory for coding agents. The memory layer is one of the biggest gaps in current agent systems, and this benchmark-backed approach is catching fire.",
+          "topics": [
+            "Memory and state",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-13",
+          "score": 80
+        },
+        {
+          "title": "bytedance/UI-TARS-desktop",
+          "source": "GitHub",
+          "url": "https://github.com/bytedance/UI-TARS-desktop",
+          "meta": "33,686★ · +3,872 stars this week",
+          "why": "Bytedance's open-source multimodal agent stack. Desktop-native agent infrastructure continues to mature as a category.",
+          "topics": [
+            "Browser agents",
+            "Major labs",
+            "Tool use"
+          ],
+          "publishedAt": "2026-05-13",
+          "score": 78
+        },
+        {
+          "title": "LearningCircuit/local-deep-research",
+          "source": "GitHub",
+          "url": "https://github.com/LearningCircuit/local-deep-research",
+          "meta": "7,468★ · +2,412 stars this week",
+          "why": "~95% on SimpleQA with local models. The push for local research agents continues — all-in-one retrieval pipeline running on a 3090.",
+          "topics": [
+            "Open weights",
+            "Tool use"
+          ],
+          "publishedAt": "2026-05-13",
+          "score": 74
+        }
+      ]
+    },
+    {
+      "key": "hugging-face",
+      "label": "Hugging Face",
+      "items": [
+        {
+          "title": "Qwen3.6-35B-A3B — agentic coding MoE model",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+          "meta": "Top trending model · agentic coding focus",
+          "why": "The MoE (35B active/3B per token) architecture makes this the most practical open-weight agentic coding model for single-GPU setups. Direct competitor to Claude Code for local agent loops.",
+          "topics": [
+            "Open weights",
+            "Coding agents",
+            "Major labs"
+          ],
+          "publishedAt": "2026-05-12",
+          "score": 90
+        },
+        {
+          "title": "Qwen3.6-27B — flagship dense coding model",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+          "meta": "993 HN points · 458 comments",
+          "why": "The dense 27B variant of Qwen 3.6. Benchmarks show it competitive with much larger models for agentic coding tasks. Runs on consumer GPUs with quantization.",
+          "topics": [
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-12",
+          "score": 86
+        },
+        {
+          "title": "Qwen3.6-Max-Preview",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-Max-Preview",
+          "meta": "705 HN points · 377 comments",
+          "why": "The largest Qwen 3.6 variant — a preview of what Qwen can do with no resource constraints. The open-weight frontier keeps advancing.",
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-05-12",
+          "score": 82
         }
       ]
     },
@@ -322,253 +437,174 @@
       "label": "Major Labs",
       "items": [
         {
-          "title": "Introducing Claude for Small Business",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/claude-for-small-business",
-          "meta": "Announced May 13, 2026",
-          "why": "Anthropic targets SMBs \u2014 a major distribution play. Agentic AI is moving from developer tools to mainstream business products.",
+          "title": "GPT-5.5 by OpenAI",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "meta": "1,580 HN points · released May 12",
+          "why": "OpenAI's latest model iteration. Sets the new baseline for agent builders evaluating frontier models.",
           "topics": [
             "Major labs",
-            "Tool use"
-          ],
-          "publishedAt": "2026-05-13",
-          "score": 720
-        },
-        {
-          "title": "Claude Platform on AWS",
-          "source": "Anthropic",
-          "url": "https://claude.com/blog/claude-platform-on-aws",
-          "meta": "225 HN points \u00b7 89 comments",
-          "why": "Claude as a managed AWS platform. Makes agent deployment on enterprise infra much easier.",
-          "topics": [
-            "Major labs",
-            "Tool use"
+            "Coding agents"
           ],
           "publishedAt": "2026-05-12",
-          "score": 650
+          "score": 93
         },
         {
-          "title": "AlphaEvolve: Gemini-powered coding agent scaling impact across fields",
-          "source": "DeepMind Blog",
-          "url": "https://deepmind.google/blog/alphaevolve-impact/",
-          "meta": "327 HN points \u00b7 149 comments",
-          "why": "DeepMind's Gemini-powered coding agent shows scaling laws for scientific code generation. Impact across biology, physics, and materials science.",
+          "title": "Claude for Small Business",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news",
+          "meta": "Released May 13, 2026",
+          "why": "Anthropic's push into small business segment — making Claude and its agent capabilities accessible to smaller teams. Key for broadening agent adoption beyond enterprise.",
           "topics": [
             "Major labs",
             "Coding agents",
-            "Evaluation"
+            "Tool use"
           ],
-          "publishedAt": "2026-05-07",
-          "score": 640
+          "publishedAt": "2026-05-13",
+          "score": 88
         },
         {
-          "title": "GPT-5.5 Instant",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/gpt-5-5-instant/",
-          "meta": "87 HN points \u00b7 20 comments",
-          "why": "OpenAI's latest model iteration. 'Instant' branding suggests latency-focused optimization for agent loops.",
+          "title": "Anthropic: Agents for Financial Services",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news",
+          "meta": "Released May 5 · GitHub repo crossed 22k★",
+          "why": "Vertical-specific agent frameworks are here. Anthropic's financial services templates + the 'financial-services' repo hitting 22k stars shows the market is ready for specialized agent toolkits.",
           "topics": [
             "Major labs",
             "Tool use"
           ],
           "publishedAt": "2026-05-05",
-          "score": 580
+          "score": 86
         },
         {
-          "title": "Gemini API File Search is now multimodal",
-          "source": "Google",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/",
-          "meta": "156 HN points \u00b7 45 comments",
-          "why": "Google expands Gemini API with multimodal file search. Enables agents to search across images, PDFs, and audio \u2014 critical for RAG-based agent workflows.",
+          "title": "OpenAI: How NVIDIA engineers build with Codex",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/nvidia",
+          "meta": "Published May 12",
+          "why": "NVIDIA using Codex + GPT-5.5 for production systems and research. High-profile deployment validation for agent-assisted engineering at scale.",
           "topics": [
             "Major labs",
-            "Tool use",
-            "Memory and state"
-          ],
-          "publishedAt": "2026-05-10",
-          "score": 560
-        },
-        {
-          "title": "Agents for financial services",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/finance-agents",
-          "meta": "256 HN points \u00b7 192 comments",
-          "why": "Anthropic's domain-specific agent release for finance. Includes practice-area plugins and MCP connectors to nine major financial platforms.",
-          "topics": [
-            "Major labs",
-            "Tool use",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-05-05",
-          "score": 540
-        }
-      ]
-    },
-    {
-      "key": "research-community",
-      "label": "Research & Community",
-      "items": [
-        {
-          "title": "Teaching Claude Why: Anthropic's research on model reasoning",
-          "source": "Anthropic Research",
-          "url": "https://www.anthropic.com/research/teaching-claude-why",
-          "meta": "265 HN points",
-          "why": "Directly addresses the 'why' behind model outputs \u2014 critical for agent auditability and trust.",
-          "topics": [
-            "Major labs",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-05-08",
-          "score": 650
-        },
-        {
-          "title": "Natural Language Autoencoders: Turning Claude's Thoughts into Text",
-          "source": "Anthropic Research",
-          "url": "https://www.anthropic.com/research/natural-language-autoencoders",
-          "meta": "368 HN points \u00b7 120 comments",
-          "why": "Interpretability breakthrough: extracting Claude's internal representations as natural language. Could lead to more transparent agent reasoning.",
-          "topics": [
-            "Major labs",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-05-07",
-          "score": 620
-        },
-        {
-          "title": "Local-deep-research: ~95% on SimpleQA, runs Qwen3.6-27B on a 3090",
-          "source": "GitHub",
-          "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "7,464\u2605 total \u00b7 +2,412 this week",
-          "why": "A complete local deep research pipeline achieving near-frontier QA accuracy. Democratizing agentic research capabilities.",
-          "topics": [
-            "Open weights",
-            "Tool use",
-            "Memory and state"
-          ],
-          "publishedAt": "2026-05-06",
-          "score": 580
-        },
-        {
-          "title": "GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents",
-          "source": "arXiv",
-          "url": "https://arxiv.org/abs/2604.26752",
-          "meta": "163 HN points \u00b7 32 comments",
-          "why": "A foundation model architecture purpose-built for multimodal agent tasks. Native agent training, not general LLM adapted for agents.",
-          "topics": [
-            "Open weights",
-            "Tool use",
-            "Major labs"
-          ],
-          "publishedAt": "2026-05-05",
-          "score": 560
-        },
-        {
-          "title": "ProgramBench: Can language models rebuild programs from scratch?",
-          "source": "arXiv",
-          "url": "https://arxiv.org/abs/2605.03546",
-          "meta": "150 HN points \u00b7 80 comments",
-          "why": "A benchmark testing whether models can reconstruct programs from specification. Directly measures agentic coding ability beyond simple code completion.",
-          "topics": [
-            "Evaluation",
             "Coding agents"
           ],
-          "publishedAt": "2026-05-07",
-          "score": 530
+          "publishedAt": "2026-05-12",
+          "score": 82
         },
         {
-          "title": "ZAYA1-8B matches DeepSeek-R1 on math with less than 1B active parameters",
-          "source": "Firethering",
-          "url": "https://firethering.com/zaya1-8b-open-source-math-coding-model/",
-          "meta": "117 HN points \u00b7 55 comments",
-          "why": "Dramatic efficiency breakthrough: 8B total / 1B active parameters matching DeepSeek-R1 on math. Game-changer for on-device agent capabilities.",
+          "title": "Parameter Golf — OpenAI's AI-assisted research competition",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/what-parameter-golf-taught-us",
+          "meta": "1,000+ participants · 2,000+ submissions",
+          "why": "A competition exploring AI-assisted ML research under strict parameter constraints. Reveals how coding agents can participate in the research loop itself, not just implementation.",
           "topics": [
-            "Open weights",
-            "Evaluation"
+            "Major labs",
+            "Coding agents",
+            "Multi-agent workflows"
           ],
-          "publishedAt": "2026-05-07",
-          "score": 520
+          "publishedAt": "2026-05-12",
+          "score": 80
+        },
+        {
+          "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/higher-limits-spacex",
+          "meta": "509 HN points · May 6",
+          "why": "Anthropic's compute deal with SpaceX signals serious infrastructure scaling. For agent builders, higher usage limits mean more production agent deployments.",
+          "topics": [
+            "Major labs"
+          ],
+          "publishedAt": "2026-05-06",
+          "score": 78
+        },
+        {
+          "title": "OpenAI: Delivering low-latency voice AI at scale",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/",
+          "meta": "510 HN points · 146 comments",
+          "why": "Voice agents need sub-200ms latency to feel natural. OpenAI's detailed architecture post is a must-read for anyone building voice-enabled agent systems.",
+          "topics": [
+            "Major labs",
+            "Voice and multimodal"
+          ],
+          "publishedAt": "2026-05-09",
+          "score": 76
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Agent skills ecosystem",
-      "signalCount": 3,
-      "signals": [
-        "addyosmani/agent-skills crosses 40k\u2605 (+11.8k this week)",
-        "DeepSeek-TUI explodes to +20.8k\u2605 in a week",
-        "9router routes coding agents to free models, +5.2k\u2605"
-      ],
-      "whyItMatters": "The week's clearest signal: the community is investing heavily in skill-based, multi-provider agent architectures. Three repos totaling 37k+ new stars this week alone shows this isn't hype \u2014 it's infrastructure being built."
-    },
-    {
-      "topic": "Control flow vs. prompts",
-      "signalCount": 3,
-      "signals": [
-        "'Agents need control flow, not more prompts' (588 HN pts)",
-        "Statewright visual state machines for agents (105 HN pts)",
-        "Tilde.run transactional filesystem sandbox (203 HN pts)"
-      ],
-      "whyItMatters": "A coherent theme emerged this week: the next frontier isn't better prompts, it's explicit control structures \u2014 state machines, versioned filesystems, and deterministic orchestration patterns."
-    },
-    {
-      "topic": "Agent reliability and safety",
+      "topic": "Agent skills as first-class primitives",
       "signalCount": 4,
+      "whyItMatters": "The biggest meta-trend this week: 'agent skills' are becoming a standardized, shareable primitive — not just prompts, but executable, composable capabilities. addyosmani/agent-skills (40k★), agentmemory (7k★), and the explosion of skill-authoring tools suggest the industry is converging on skills as the unit of agent capability.",
       "signals": [
-        "Tilde.run agent sandbox with transactional rollbacks",
-        "Claude Code CVE-2026-39861: symlink sandbox escape (51 HN pts)",
-        "Agentic Coding Is a Trap essay (460 HN pts)",
-        "Run Agents Twice pattern emerging"
-      ],
-      "whyItMatters": "As agents gain autonomy (Cloudflare account creation, PR merges, deploy pipelines), the safety conversation is moving from theoretical to practical. Sandboxing, rollback, and double-run patterns are becoming standard."
+        "addyosmani/agent-skills crossed 40k stars (+11.8k this week) — production-grade skills for coding agents",
+        "agentmemory by rohitg00 hit 7k stars — benchmark-backed persistent memory for agents",
+        "mattpocock/skills trending — declarative skill authoring format",
+        "DeepSeek-TUI built entirely around a skill-injection architecture for terminal agent loops"
+      ]
     },
     {
-      "topic": "On-device and tiny agent models",
+      "topic": "Model meshing and multi-provider routing",
       "signalCount": 3,
+      "whyItMatters": "The 'one model to rule them all' assumption is dying. DeepClaude chains Claude Code with DeepSeek. 9router connects 40+ providers with auto-fallback. Qwen 3.6 runs on consumer GPUs. The emerging pattern: route different parts of the agent pipeline to different models — cheap local MoE for tool calling, frontier model for reasoning, specialized models for code generation.",
       "signals": [
-        "Needle: 26M-param tool-calling model from Gemini distillation",
-        "ZAYA1-8B: 1B active params matching DeepSeek-R1",
-        "Running local models on an M4 with 24GB (566 HN pts)"
-      ],
-      "whyItMatters": "The gap between frontier API models and on-device capability is narrowing fast. Needle's 26M agent-specific model and ZAYA's MoE efficiency suggest 2026 is the year agent models go local."
+        "DeepClaude (676 HN pts) — Claude Code agent loop with DeepSeek V4 Pro reasoning",
+        "9router (9.8k★, +5.2k/wk) — 40+ provider auto-fallback for coding agents",
+        "Qwen 3.6 35B-A3B MoE — single-GPU model competitive with frontier models for coding"
+      ]
     },
     {
-      "topic": "Agent ubiquity in business",
+      "topic": "Agent reliability hits mainstream conversation",
       "signalCount": 4,
+      "whyItMatters": "Multiple high-engagement threads this week all converge on the same question: how do you make agents reliable enough for production? 'Agents need control flow' (588 pts), 'bottleneck was never the code' (585 pts), and the Uber/Claude Code budget blowout (402 pts) all point to the same conclusion — prompting alone doesn't scale, we need structural reliability guarantees.",
       "signals": [
-        "Claude for Small Business launches (May 13)",
-        "Anthropic agents for financial services (May 5)",
-        "Claude Platform on AWS (225 HN pts)",
-        "Agents creating Cloudflare accounts autonomously"
-      ],
-      "whyItMatters": "Agents are transitioning from developer tools to business products. Claude for Small Business, finance-specific agents, and managed AWS platform signal that agentic AI is entering the enterprise/SMB mainstream."
+        "\"Agents need control flow, not more prompts\" — 588 HN points, 294 comments",
+        "\"The bottleneck was never the code\" — 585 HN points, 412 comments",
+        "\"Agentic Coding Is a Trap\" — 460 HN points, 374 comments",
+        "Uber torches entire 2026 AI budget on Claude Code in four months — 402 HN points"
+      ]
+    },
+    {
+      "topic": "The Great Unbundling: Microsoft/OpenAI, Google/Anthropic, and agent platform fragmentation",
+      "signalCount": 3,
+      "whyItMatters": "Microsoft and OpenAI ending their exclusive deal (990 pts) + Google investing $40B in Anthropic (820 pts) reshapes the entire agent platform landscape. Where do you build your agent stack — OpenAI's platform, Anthropic's, Google's Vertex, or open source? The unbundling means more choice but also more fragmentation for agent builders.",
+      "signals": [
+        "Microsoft and OpenAI end exclusive revenue-sharing deal — 990 HN points, 845 comments",
+        "Google plans up to $40B investment in Anthropic — 820 HN points, 828 comments",
+        "Anthropic + SpaceX compute deal — 509 HN points"
+      ]
+    },
+    {
+      "topic": "Open-weight models close the gap with frontier",
+      "signalCount": 3,
+      "whyItMatters": "Qwen 3.6's four-model release this week — especially the 35B-A3B MoE — shows open-weight models are now competitive with frontier models for agentic coding. Combined with Needle's 26M distilled tool-calling model, the cost surface for agent builders just shifted dramatically. You can run agent loops on a single GPU or even on-device.",
+      "signals": [
+        "Qwen 3.6 series: 35B-A3B MoE (1274 pts), 27B dense (993 pts), Max-Preview, Plus",
+        "Needle: Distilled Gemini tool calling into 26M param model — 580 HN points",
+        "Local Deep Research (~95% SimpleQA on a 3090) — 7.4k★ on GitHub"
+      ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Test the 'agents need control flow' thesis",
-      "why": "The week's biggest philosophical debate. Run the same multi-step agent task with raw prompting vs. a state machine (Statewright) and measure reliability.",
-      "prompt": "Implement the same 5-step agent workflow (search \u2192 extract \u2192 transform \u2192 write \u2192 verify) twice: once with a monolithic prompt, once with Statewright or an explicit FSM. Compare task completion rate, token cost, and debugging time."
+      "title": "Run the same agent task on 3 different backends and compare",
+      "why": "Model meshing and multi-provider routing are this week's defining architectural pattern. DeepClaude, 9router, and the Qwen 3.6 release all push toward heterogeneous agent backends.",
+      "prompt": "Pick one agentic coding task. Implement it with Claude Code, DeepSeek-TUI, and a local Qwen 3.6 35B-A3B. Measure: latency, cost, code quality, and failure modes. Do any patterns justify the extra complexity of multi-model routing?"
     },
     {
-      "title": "Benchmark Needle vs. frontier models on your own tool-use tasks",
-      "why": "Needle claims to match Gemini on tool calling at 26M params. The real question is whether it generalizes to YOUR specific tools, not just the distillation benchmark.",
-      "prompt": "Take 3 tools from your production stack, write test cases for each, and run them against Needle (local), GPT-5.5 Instant, Gemini Flash, and Claude. Compare accuracy, latency, and cost."
+      "title": "Build a skill-augmented agent with agentmemory",
+      "why": "The agent skills ecosystem exploded this week. 40k+ stars across skill repos, and agentmemory claims benchmark-backed persistent memory. This is the week to invest in skill architectures.",
+      "prompt": "Set up agentmemory with your coding agent. Create 3 reusable 'skills' (prompts + guardrails + tool configurations for common tasks). Measure recall accuracy, task completion rate vs no-memory baseline, and how well skills compose across different tasks."
     },
     {
-      "title": "Build an agent with transactional rollback",
-      "why": "Tilde.run and agentmemory point to a future where every agent action is reversible. Prototype this pattern.",
-      "prompt": "Wrap a Claude Code or Codex session with a git-based snapshot/rollback layer. Run a destructive agent task (rename files, refactor code, modify config) and verify you can rollback every action cleanly."
+      "title": "Test the control-flow hypothesis",
+      "why": "The week's most argued point: 'agents need control flow, not more prompts.' The 294-comment thread exposed deep disagreement. Run the experiment yourself.",
+      "prompt": "Build the same agent task twice: once with pure prompt-chaining, once with explicit state machines (loops, conditions, error handling). Compare reliability over 50 runs — measure task completion rate, token usage, and debugging time when things go wrong."
+    },
+    {
+      "title": "Audit your agent's Chrome/Nano exposure",
+      "why": "Chrome silently installing a 4GB AI model (1,750 HN pts) raises real questions about ambient agent infrastructure. If your agents interact with the browser (Browser Use, Playwright, etc.), the local model on every machine changes the attack surface.",
+      "prompt": "Check if Chrome's Gemini Nano is installed on your dev machines. If so, experiment with routing simple agent tasks to the local model vs cloud. Measure: latency win, quality tradeoff, and any security concerns with local model persistence on shared machines."
     }
-  ],
-  "sourceStats": {
-    "items": 34,
-    "sources": {
-      "Hacker News": 6,
-      "GitHub": 6,
-      "Major Labs": 6,
-      "Research & Community": 6
-    }
-  }
+  ]
 }
