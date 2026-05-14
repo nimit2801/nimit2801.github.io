@@ -16,9 +16,13 @@ const HN_QUERY_SPECS = [
   { query: 'needle', boost: 120 },
   { query: 'statewright', boost: 100 },
   { query: 'claude for small business', boost: 100 },
+  { query: 'agent view in claude code', boost: 95 },
+  { query: 'openai codex sandbox', boost: 90 },
+  { query: 'claude for the legal industry', boost: 85 },
   { query: 'teaching claude why', boost: 90 },
   { query: 'interaction models', boost: 85 },
   { query: 'reimagining the mouse pointer for the ai era', boost: 85 },
+  { query: 'gemini api webhooks', boost: 80 },
   { query: 'alphaevolve', boost: 80 },
   { query: 'codex', boost: 70 },
   { query: 'qwen 3.6', boost: 70 },
@@ -28,11 +32,15 @@ const HN_QUERY_SPECS = [
 const REDDIT_SPECS = [
   {
     subreddit: 'LocalLLaMA',
-    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents'],
+    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents', 'web-search', 'game boy transformer'],
   },
   {
     subreddit: 'ClaudeAI',
-    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code'],
+    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code', 'agent view', 'usage limits'],
+  },
+  {
+    subreddit: 'OpenAI',
+    queries: ['codex', 'openai codex sandbox', 'coding agent safety'],
   },
 ];
 
@@ -45,8 +53,10 @@ const LAB_FEEDS = [
 const OFFICIAL_SOURCES = [
   ['openai.com', 'OpenAI'],
   ['anthropic.com', 'Anthropic'],
+  ['claude.com', 'Anthropic'],
   ['deepmind.google', 'Google DeepMind'],
   ['blog.google', 'Google AI'],
+  ['qwen.ai', 'Qwen'],
   ['qwenlm.github.io', 'Qwen'],
   ['mistral.ai', 'Mistral'],
   ['ai.meta.com', 'Meta AI'],
@@ -62,7 +72,8 @@ const TOPIC_RULES = [
   ['Open weights', ['qwen', 'gguf', 'local', 'open-source', 'open source', 'open weight', 'deepresearch']],
   ['Major labs', ['openai', 'anthropic', 'google', 'deepmind', 'meta', 'mistral', 'qwen']],
   ['Coding agents', ['coding', 'code', 'codex', 'claude code', 'developer', 'terminal']],
-  ['Interfaces', ['pointer', 'interaction', 'desktop', 'ui', 'browser']],
+  ['Interfaces', ['pointer', 'interaction', 'desktop', 'ui', 'browser', 'agent view']],
+  ['Infra and retrieval', ['webhook', 'webhooks', 'long-running', 'web-search', 'search index', 'cloudflare', 'verification']],
 ];
 
 const DROP_TITLE_PATTERNS = [
@@ -134,6 +145,26 @@ const HAND_CURATED_WHY = [
     why: 'Persistent memory remains one of the clearest upgrade paths from flashy one-shot demos to genuinely useful repeat-use agents.',
   },
   {
+    match: /agent view/i,
+    why: 'This is a small but important supervision signal: as agents get longer-running, people want inspectable timelines and branch-level visibility, not just a terminal blur.',
+  },
+  {
+    match: /webhooks in gemini api|gemini api.*webhooks/i,
+    why: 'This is quietly foundational. Long-running agents need event-driven plumbing more than prettier demos, and webhooks are part of that maturity curve.',
+  },
+  {
+    match: /windows sandbox|codex.*sandbox/i,
+    why: 'A lot of the real progress in coding agents is shifting into containment and permissioning: safe execution environments are becoming product features, not side notes.',
+  },
+  {
+    match: /usage limits/i,
+    why: 'This is a practical frontier: useful agents increasingly need self-awareness about budgets, rate limits, and when to stop before they burn user trust.',
+  },
+  {
+    match: /web-search is coming to a screeching performance halt/i,
+    why: 'Agent builders are running into infrastructure reality: the public web is getting harder to crawl cheaply, which makes search and retrieval strategy part of the product design.',
+  },
+  {
     match: /mcp/i,
     why: 'MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack.',
   },
@@ -190,6 +221,7 @@ function defaultWhy(topics, source) {
   if (topicSet.has('Open weights')) return 'The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.';
   if (topicSet.has('Memory and state')) return 'A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow.';
   if (topicSet.has('Interfaces')) return 'Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.';
+  if (topicSet.has('Infra and retrieval')) return 'A lot of real-world agent performance now depends on infrastructure details like eventing, search access, and reliability under external constraints.';
   if (topicSet.has('Tool use')) return 'The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.';
   if (topicSet.has('Major labs')) return 'Major lab launches still reshape the practical design space for agent builders almost overnight.';
   if (source === 'Reddit') return 'This is useful because it reflects what builders are actually trying in the wild, not just what the labs are announcing.';
@@ -233,6 +265,7 @@ function isAgenticTitle(title, summary = '') {
   const haystack = `${title} ${summary}`.toLowerCase();
   return [
     'agent',
+    'agent view',
     'codex',
     'claude',
     'qwen',
@@ -246,6 +279,9 @@ function isAgenticTitle(title, summary = '') {
     'interaction',
     'sandbox',
     'desktop',
+    'webhook',
+    'web-search',
+    'long-running',
   ].some((needle) => haystack.includes(needle));
 }
 
@@ -288,6 +324,11 @@ function highlightScore(item) {
   if (haystack.includes('interaction models')) bonus += 210;
   if (haystack.includes('teaching claude why')) bonus += 190;
   if (haystack.includes('alphaevolve')) bonus += 150;
+  if (haystack.includes('agent view')) bonus += 170;
+  if (haystack.includes('webhooks')) bonus += 130;
+  if (haystack.includes('windows sandbox')) bonus += 150;
+  if (haystack.includes('usage limits')) bonus += 120;
+  if (haystack.includes('web-search is coming to a screeching performance halt')) bonus += 140;
   if (haystack.includes('textgen is now a native desktop app')) bonus += 420;
   if (haystack.includes('persistent memory')) bonus += 340;
   if (haystack.includes('claude code mcp') || haystack.includes('5 mcp')) bonus += 320;
@@ -319,6 +360,7 @@ async function fetchHnSignals() {
     const payload = await fetchJson(`https://hn.algolia.com/api/v1/search?${params}`);
     return (payload.hits ?? [])
       .filter((hit) => isRecent((hit.created_at_i ?? 0) * 1000))
+      .filter((hit) => officialSourceForUrl(cleanText(hit.url)) || Number(hit.points ?? 0) >= 12 || Number(hit.num_comments ?? 0) >= 8)
       .map((hit) => {
         const title = cleanText(hit.title);
         const url = cleanText(hit.url) || `https://news.ycombinator.com/item?id=${hit.objectID}`;
@@ -481,6 +523,8 @@ function buildSummary(highlights) {
   const hasLocal = titles.some((title) => title.includes('qwen') || title.includes('textgen') || title.includes('deepresearch'));
   const hasInterface = titles.some((title) => title.includes('pointer') || title.includes('interaction models'));
   const hasPackaging = titles.some((title) => title.includes('small business') || title.includes('codex'));
+  const hasInfra = titles.some((title) => title.includes('webhooks') || title.includes('web-search'));
+  const hasSupervision = titles.some((title) => title.includes('agent view') || title.includes('usage limits'));
 
   const bits = [];
   if (hasTinyTools) bits.push('tiny tool-calling models are becoming real');
@@ -488,6 +532,8 @@ function buildSummary(highlights) {
   if (hasPackaging) bits.push('major labs are packaging agent workflows for broader adoption');
   if (hasLocal) bits.push('the local/open-weight stack keeps getting stronger around Qwen-style setups');
   if (hasInterface) bits.push('the interface layer is starting to shift beyond plain chat');
+  if (hasInfra) bits.push('event-driven and retrieval plumbing is becoming part of the agent conversation');
+  if (hasSupervision) bits.push('people are asking for better visibility into long-running agent runs');
 
   if (!bits.length) {
     return 'The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.';
@@ -526,6 +572,7 @@ function buildExperimentQueue(highlights) {
   const localTilt = titles.some((title) => title.includes('qwen') || title.includes('textgen') || title.includes('deepresearch'));
   const stateTilt = titles.some((title) => title.includes('statewright') || title.includes('memory'));
   const packagingTilt = titles.some((title) => title.includes('small business') || title.includes('codex'));
+  const infraTilt = titles.some((title) => title.includes('webhooks') || title.includes('web-search'));
 
   const experiments = [
     {
@@ -569,6 +616,14 @@ function buildExperimentQueue(highlights) {
     };
   }
 
+  if (infraTilt) {
+    experiments[2] = {
+      title: 'Replace one polling loop with an event-driven agent step',
+      why: 'The infrastructure side of agents is getting more visible — long-running workflows increasingly need webhooks, retries, and explicit external-state handling.',
+      prompt: 'Take one agent workflow that polls or blocks awkwardly, swap in an event-driven handoff, and note what changes in latency, cost, and failure recovery.',
+    };
+  }
+
   return experiments;
 }
 
@@ -597,7 +652,7 @@ async function main() {
 
   const highlights = buildHighlights({ hn, reddit, hf, labs: majorLabs });
   const sourceSections = [
-    { key: 'major-labs', label: 'Major labs', items: sectionItems(majorLabs, 5) },
+    { key: 'major-labs', label: 'Major labs', items: sectionItems(majorLabs, 6) },
     { key: 'hacker-news', label: 'Hacker News', items: sectionItems(hn.filter((item) => !officialSourceForUrl(item.url)), 5) },
     { key: 'reddit', label: 'Reddit', items: sectionItems(reddit, 4) },
     { key: 'hugging-face', label: 'Hugging Face', items: sectionItems(hf, 4) },
