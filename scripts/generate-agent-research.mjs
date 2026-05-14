@@ -6,38 +6,150 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..');
 const outputPath = path.join(repoRoot, 'public', 'data', 'agent-research.json');
 
+const WINDOW_DAYS = 7;
 const NOW = new Date();
-const SINCE = new Date(NOW.getTime() - 7 * 24 * 60 * 60 * 1000);
-const HN_QUERIES = ['agentic ai', 'llm agents', 'mcp', 'computer use', 'openai anthropic qwen'];
-const REDDIT_SUBREDDITS = ['LocalLLaMA', 'MachineLearning', 'ArtificialInteligence', 'OpenAI', 'ClaudeAI'];
-const REDDIT_QUERIES = ['agentic ai', 'mcp', 'qwen', 'claude', 'openai', 'computer use'];
-const HF_QUERIES = ['agent', 'qwen', 'claude', 'openai'];
+const SINCE = new Date(NOW.getTime() - WINDOW_DAYS * 24 * 60 * 60 * 1000);
+const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0 Safari/537.36';
+const REDDIT_AGENT = 'NimitAgentResearch/2.0 (by nimit2801)';
+
+const HN_QUERY_SPECS = [
+  { query: 'needle', boost: 120 },
+  { query: 'statewright', boost: 100 },
+  { query: 'claude for small business', boost: 100 },
+  { query: 'teaching claude why', boost: 90 },
+  { query: 'interaction models', boost: 85 },
+  { query: 'reimagining the mouse pointer for the ai era', boost: 85 },
+  { query: 'alphaevolve', boost: 80 },
+  { query: 'codex', boost: 70 },
+  { query: 'qwen 3.6', boost: 70 },
+  { query: 'deep research', boost: 60 },
+];
+
+const REDDIT_SPECS = [
+  {
+    subreddit: 'LocalLLaMA',
+    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents'],
+  },
+  {
+    subreddit: 'ClaudeAI',
+    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code'],
+  },
+];
+
+const HF_QUERIES = ['qwen3.6', 'deepresearch', 'browser-use', 'agent'];
 const LAB_FEEDS = [
   ['OpenAI', 'https://openai.com/news/rss.xml'],
-  ['Anthropic', 'https://www.anthropic.com/news/rss.xml'],
   ['Google AI', 'https://blog.google/technology/ai/rss/'],
 ];
-const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0 Safari/537.36';
-const REDDIT_AGENT = 'NimitAgentResearch/1.0 (by nimit2801)';
 
-const TOPIC_RULES = [
-  ['MCP', ['mcp', 'model context protocol']],
-  ['Browser agents', ['browser', 'web automation', 'computer use']],
-  ['Tool use', ['tool use', 'function calling', 'tool calling', 'tools']],
-  ['Multi-agent workflows', ['multi-agent', 'orchestr', 'planner', 'workflow', 'autonom']],
-  ['Memory and state', ['memory', 'checkpoint', 'scratchpad', 'state']],
-  ['Evaluation', ['eval', 'benchmark', 'leaderboard', 'arena']],
-  ['Voice and multimodal', ['voice', 'audio', 'video', 'multimodal']],
-  ['Open weights', ['qwen', 'llama', 'mistral', 'open weight', 'local']],
-  ['Major labs', ['openai', 'anthropic', 'qwen', 'deepmind', 'google']],
-  ['Coding agents', ['coding', 'code', 'terminal', 'cli', 'dev']],
+const OFFICIAL_SOURCES = [
+  ['openai.com', 'OpenAI'],
+  ['anthropic.com', 'Anthropic'],
+  ['deepmind.google', 'Google DeepMind'],
+  ['blog.google', 'Google AI'],
+  ['qwenlm.github.io', 'Qwen'],
+  ['mistral.ai', 'Mistral'],
+  ['ai.meta.com', 'Meta AI'],
+  ['meta.com/ai', 'Meta AI'],
 ];
 
-const displaySource = (source) => {
-  if (source.startsWith('r/')) return 'Reddit';
-  if (['OpenAI', 'Anthropic', 'Google AI'].includes(source)) return 'Major labs';
-  return source;
-};
+const TOPIC_RULES = [
+  ['Tool use', ['tool', 'tool calling', 'function call', 'function calling', 'codex', 'workflow', 'connector', 'mcp']],
+  ['Multi-agent workflows', ['multi-agent', 'orchestr', 'workflow', 'agent team', 'deep research']],
+  ['Memory and state', ['memory', 'state', 'state machine', 'checkpoint', 'trace']],
+  ['Evaluation', ['eval', 'benchmark', 'judge', 'leaderboard', 'misalignment', 'reliability']],
+  ['Voice and multimodal', ['audio', 'voice', 'video', 'multimodal', 'pointer']],
+  ['Open weights', ['qwen', 'gguf', 'local', 'open-source', 'open source', 'open weight', 'deepresearch']],
+  ['Major labs', ['openai', 'anthropic', 'google', 'deepmind', 'meta', 'mistral', 'qwen']],
+  ['Coding agents', ['coding', 'code', 'codex', 'claude code', 'developer', 'terminal']],
+  ['Interfaces', ['pointer', 'interaction', 'desktop', 'ui', 'browser']],
+];
+
+const DROP_TITLE_PATTERNS = [
+  /warning:/i,
+  /trending down/i,
+  /stock/i,
+  /layoff/i,
+  /valuation/i,
+  /campus network/i,
+  /interest form/i,
+  /this can only end badly/i,
+  /cooked/i,
+  /self-replication/i,
+  /malware/i,
+  /if the eu had built claude/i,
+];
+
+const HAND_CURATED_WHY = [
+  {
+    match: /needle/i,
+    why: 'A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs.',
+  },
+  {
+    match: /statewright/i,
+    why: 'The state-machine framing is notable because it tackles one of the biggest agent pain points directly: keeping long workflows legible and less fragile.',
+  },
+  {
+    match: /claude for small business/i,
+    why: 'This is one of the clearest signs that agentic workflows are being packaged for normal businesses, not just developers — connectors and ready-to-run automations are becoming the product.',
+  },
+  {
+    match: /codex.*sandbox|sandbox.*codex/i,
+    why: 'OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone.',
+  },
+  {
+    match: /nvidia.*codex|codex.*nvidia/i,
+    why: 'The interesting part here is not just enterprise adoption, but the normalization of Codex-style agent workflows inside demanding engineering teams.',
+  },
+  {
+    match: /teaching claude why/i,
+    why: 'Interpretability work is inching closer to agent reliability. If a model can explain why it chose an action, auditing and debugging agent runs gets much easier.',
+  },
+  {
+    match: /interaction models/i,
+    why: 'This is a strong tangent for agent builders: the interface layer is shifting from turn-by-turn chat toward continuous, multimodal collaboration loops.',
+  },
+  {
+    match: /mouse pointer/i,
+    why: 'A surprisingly important UI signal: once systems can anticipate intent, even primitive interface elements like the cursor become redesign territory.',
+  },
+  {
+    match: /alphaevolve/i,
+    why: 'The bigger idea is that coding agents are escaping demo-land and starting to compound across real scientific and engineering workflows.',
+  },
+  {
+    match: /textgen is now a native desktop app/i,
+    why: 'Local AI tooling is consolidating into more usable products. That matters because many agent workflows only become trustworthy when people can run and inspect them on their own machines.',
+  },
+  {
+    match: /qwen 3\.6/i,
+    why: 'Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family.',
+  },
+  {
+    match: /marco-deepresearch/i,
+    why: 'Compact “deep research” style models are getting easier to run and remix, which widens the range of people who can experiment with retrieval-heavy agent workflows.',
+  },
+  {
+    match: /persistent memory/i,
+    why: 'Persistent memory remains one of the clearest upgrade paths from flashy one-shot demos to genuinely useful repeat-use agents.',
+  },
+  {
+    match: /mcp/i,
+    why: 'MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack.',
+  },
+];
+
+async function fetchJson(url, headers = {}) {
+  const response = await fetch(url, { headers: { 'User-Agent': USER_AGENT, ...headers } });
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  return response.json();
+}
+
+async function fetchText(url, headers = {}) {
+  const response = await fetch(url, { headers: { 'User-Agent': USER_AGENT, ...headers } });
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  return response.text();
+}
 
 const cleanText = (value) => String(value ?? '')
   .replace(/<[^>]+>/g, ' ')
@@ -54,349 +166,474 @@ const clamp = (text, limit = 180) => {
   return value.length <= limit ? value : `${value.slice(0, limit - 1).trimEnd()}…`;
 };
 
-const utcIso = (date) => new Date(date).toISOString().replace(/\.\d{3}Z$/, 'Z');
+const utcIso = (value) => new Date(value).toISOString().replace(/\.\d{3}Z$/, 'Z');
 
-const topicsFor = (...parts) => {
+function officialSourceForUrl(url) {
+  const value = cleanText(url).toLowerCase();
+  for (const [needle, label] of OFFICIAL_SOURCES) {
+    if (value.includes(needle)) return label;
+  }
+  return null;
+}
+
+function topicsFor(...parts) {
   const haystack = parts.map((part) => cleanText(part).toLowerCase()).join(' ');
   const topics = [];
   for (const [label, needles] of TOPIC_RULES) {
     if (needles.some((needle) => haystack.includes(needle))) topics.push(label);
   }
   return [...new Set(topics)].slice(0, 4);
-};
+}
 
-const insightForTopics = (topics, source) => {
+function defaultWhy(topics, source) {
   const topicSet = new Set(topics);
-  if (topicSet.has('MCP')) return 'Standardized tool surfaces keep showing up as the connective tissue for agentic systems.';
-  if (topicSet.has('Browser agents')) return 'Browser and computer-use loops are still where the most visible agent demos live.';
-  if (topicSet.has('Open weights')) return 'Open-weight releases keep lowering the cost of trying agent loops locally.';
-  if (topicSet.has('Evaluation')) return 'People are still searching for reliable ways to measure agent quality, not just vibes.';
-  if (topicSet.has('Multi-agent workflows')) return 'The field keeps circling back to orchestration, planning, and tighter loops between steps.';
-  if (topicSet.has('Major labs')) return 'The big labs still set the tone when they ship model or platform changes.';
-  if (source === 'Reddit') return 'Builders are trading practical tips, bugs, and small wins in public.';
-  return 'This is a useful signal for how people are actually building with agents right now.';
-};
+  if (topicSet.has('Open weights')) return 'The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.';
+  if (topicSet.has('Memory and state')) return 'A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow.';
+  if (topicSet.has('Interfaces')) return 'Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.';
+  if (topicSet.has('Tool use')) return 'The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.';
+  if (topicSet.has('Major labs')) return 'Major lab launches still reshape the practical design space for agent builders almost overnight.';
+  if (source === 'Reddit') return 'This is useful because it reflects what builders are actually trying in the wild, not just what the labs are announcing.';
+  if (source === 'Hacker News') return 'The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.';
+  return 'This is a live signal for where agent building is getting more real, usable, or weirdly interesting.';
+}
 
-const scoreHn = (item) => {
-  const points = Number(item.points ?? 0);
-  const comments = Number(item.num_comments ?? 0);
-  const created = new Date((item.created_at_i ?? 0) * 1000);
-  const ageHours = Math.max((NOW.getTime() - created.getTime()) / 36e5, 1);
-  const recency = Math.max(0, 72 - ageHours) / 72;
-  return points * 2 + comments * 3 + recency * 25;
-};
+function whyFor(item) {
+  const haystack = `${item.title} ${item.url} ${item.summary ?? ''}`;
+  for (const rule of HAND_CURATED_WHY) {
+    if (rule.match.test(haystack)) return rule.why;
+  }
+  return defaultWhy(item.topics ?? [], item.source);
+}
 
-const scoreReddit = (item) => {
+function isRecent(dateLike) {
+  const date = new Date(dateLike);
+  return !Number.isNaN(date.getTime()) && date >= SINCE;
+}
+
+function shouldDrop(title) {
+  return DROP_TITLE_PATTERNS.some((pattern) => pattern.test(title));
+}
+
+function matchesQuery(query, ...parts) {
+  const haystack = parts.map((part) => cleanText(part).toLowerCase()).join(' ');
+  const normalizedQuery = cleanText(query).toLowerCase();
+  if (!normalizedQuery) return true;
+  if (haystack.includes(normalizedQuery)) return true;
+
+  const stopwords = new Set(['the', 'and', 'for', 'with', 'into', 'from', 'this', 'that', 'your', 'you', 'are']);
+  const tokens = normalizedQuery.split(/[^a-z0-9.#+-]+/).filter((token) => token.length >= 3 && !stopwords.has(token));
+  if (!tokens.length) return true;
+
+  const matches = tokens.filter((token) => haystack.includes(token)).length;
+  const required = tokens.length <= 2 ? tokens.length : Math.min(tokens.length, 3);
+  return matches >= required;
+}
+
+function isAgenticTitle(title, summary = '') {
+  const haystack = `${title} ${summary}`.toLowerCase();
+  return [
+    'agent',
+    'codex',
+    'claude',
+    'qwen',
+    'tool',
+    'workflow',
+    'state',
+    'memory',
+    'mcp',
+    'deep research',
+    'pointer',
+    'interaction',
+    'sandbox',
+    'desktop',
+  ].some((needle) => haystack.includes(needle));
+}
+
+function normalizeSource(source, url = '') {
+  if (source.startsWith('r/')) return 'Reddit';
+  return officialSourceForUrl(url) ?? source;
+}
+
+function scoreHn(hit, boost = 0) {
+  const points = Number(hit.points ?? 0);
+  const comments = Number(hit.num_comments ?? 0);
+  return points * 2 + comments * 3 + boost;
+}
+
+function scoreReddit(item) {
   const score = Number(item.score ?? 0);
   const comments = Number(item.num_comments ?? 0);
-  const created = new Date((item.created_utc ?? 0) * 1000);
-  const ageHours = Math.max((NOW.getTime() - created.getTime()) / 36e5, 1);
-  const recency = Math.max(0, 72 - ageHours) / 72;
-  return score * 1.5 + comments * 2 + recency * 20;
-};
+  const selfBonus = item.is_self ? 60 : 0;
+  return score * 1.6 + comments * 2 + selfBonus;
+}
 
-const scoreHf = (item) => {
+function scoreHf(item) {
   const likes = Number(item.likes ?? 0);
   const downloads = Number(item.downloads ?? 0);
-  const created = item.createdAt ? new Date(item.createdAt) : NOW;
-  const ageDays = Math.max((NOW.getTime() - created.getTime()) / 86400000, 1);
-  const recency = Math.max(0, 14 - ageDays) / 14;
-  return likes * 2.5 + downloads / 5000 + recency * 30;
-};
-
-async function fetchJson(url, headers = {}) {
-  const response = await fetch(url, { headers: { 'User-Agent': USER_AGENT, ...headers } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-  return response.json();
+  return likes * 4 + downloads / 1000;
 }
 
-async function fetchText(url, headers = {}) {
-  const response = await fetch(url, { headers: { 'User-Agent': USER_AGENT, ...headers } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-  return response.text();
+function sectionItems(items, limit = 5) {
+  return [...items].sort((a, b) => b.score - a.score).slice(0, limit);
 }
 
-async function fetchHnQuery(query) {
-  const params = new URLSearchParams({ query, tags: 'story', hitsPerPage: '12' });
-  const payload = await fetchJson(`https://hn.algolia.com/api/v1/search_by_date?${params}`);
-  return (payload.hits ?? [])
-    .filter((hit) => (hit.created_at_i ?? 0) >= Math.floor(SINCE.getTime() / 1000))
-    .map((hit) => ({
-      title: cleanText(hit.title),
-      source: 'Hacker News',
-      url: cleanText(hit.url) || `https://news.ycombinator.com/item?id=${hit.objectID}`,
-      meta: `${Number(hit.points ?? 0)} points · ${Number(hit.num_comments ?? 0)} comments`,
-      why: insightForTopics(topicsFor(hit.title, hit.story_text ?? ''), 'Hacker News'),
-      topics: topicsFor(hit.title, hit.story_text ?? ''),
-      publishedAt: hit.created_at,
-      score: scoreHn(hit),
-    }))
-    .filter((item) => item.title);
-}
-
-async function fetchRedditQuery(subreddit, query) {
-  const params = new URLSearchParams({
-    q: query,
-    restrict_sr: 'on',
-    sort: 'new',
-    t: 'month',
-    limit: '10',
-    raw_json: '1',
-  });
-  const payload = await fetchJson(`https://www.reddit.com/r/${subreddit}/search.json?${params}`, {
-    'User-Agent': REDDIT_AGENT,
-  });
-  const children = payload?.data?.children ?? [];
-  return children
-    .map((child) => child.data)
-    .filter((item) => (item.created_utc ?? 0) >= Math.floor(SINCE.getTime() / 1000))
-    .map((item) => ({
-      title: cleanText(item.title),
-      source: `r/${subreddit}`,
-      url: cleanText(item.url) || `https://www.reddit.com${item.permalink ?? ''}`,
-      meta: `${Number(item.score ?? 0)} upvotes · ${Number(item.num_comments ?? 0)} comments`,
-      why: insightForTopics(topicsFor(item.title, item.selftext ?? ''), 'Reddit'),
-      topics: topicsFor(item.title, item.selftext ?? ''),
-      publishedAt: utcIso(new Date((item.created_utc ?? 0) * 1000)),
-      score: scoreReddit(item),
-    }))
-    .filter((item) => item.title);
-}
-
-async function fetchHfQuery(query) {
-  const params = new URLSearchParams({ search: query, sort: 'lastModified', limit: '8' });
-  const payload = await fetchJson(`https://huggingface.co/api/models?${params}`);
-  return payload
-    .filter((item) => !item.private)
-    .map((item) => {
-      const title = cleanText(item.modelId || item.id);
-      const topics = topicsFor(title, (item.tags ?? []).join(' '), item.pipeline_tag ?? '');
-      const metaBits = [];
-      if (item.pipeline_tag) metaBits.push(item.pipeline_tag);
-      if (item.likes !== undefined) metaBits.push(`${Number(item.likes ?? 0)} likes`);
-      if (item.downloads !== undefined) metaBits.push(`${Number(item.downloads ?? 0).toLocaleString()} downloads`);
-      return {
-        title,
-        source: 'Hugging Face',
-        url: `https://huggingface.co/${title}`,
-        meta: metaBits.length ? metaBits.join(' · ') : 'Model listing',
-        why: insightForTopics(topics, 'Hugging Face'),
-        topics,
-        publishedAt: item.createdAt ?? utcIso(NOW),
-        score: scoreHf(item),
-      };
-    })
-    .filter((item) => item.title);
-}
-
-function extractTag(block, tag) {
-  const match = block.match(new RegExp(`<${tag}>([\s\S]*?)<\/${tag}>`, 'i'));
-  return match ? cleanText(match[1]) : '';
-}
-
-async function fetchFeed(feedName, url) {
-  try {
-    const text = await fetchText(url);
-    const items = [];
-    const blocks = text.match(/<item>[\s\S]*?<\/item>/gi) ?? [];
-    for (const block of blocks.slice(0, 8)) {
-      const title = extractTag(block, 'title');
-      const link = extractTag(block, 'link');
-      if (!title || !link) continue;
-      const topics = topicsFor(title);
-      items.push({
-        title,
-        source: feedName,
-        url: link,
-        meta: extractTag(block, 'pubDate') || 'Announcement feed',
-        why: insightForTopics(topics, feedName),
-        topics,
-        publishedAt: utcIso(NOW),
-        score: 10,
-      });
-    }
-    return items;
-  } catch {
-    return [];
-  }
+function highlightScore(item) {
+  const haystack = `${item.title} ${item.url} ${item.summary ?? ''}`.toLowerCase();
+  let bonus = 0;
+  if (haystack.includes('needle')) bonus += 500;
+  if (haystack.includes('statewright')) bonus += 320;
+  if (haystack.includes('claude for small business')) bonus += 450;
+  if (haystack.includes('codex')) bonus += 280;
+  if (haystack.includes('mouse pointer')) bonus += 220;
+  if (haystack.includes('interaction models')) bonus += 210;
+  if (haystack.includes('teaching claude why')) bonus += 190;
+  if (haystack.includes('alphaevolve')) bonus += 150;
+  if (haystack.includes('textgen is now a native desktop app')) bonus += 420;
+  if (haystack.includes('persistent memory')) bonus += 340;
+  if (haystack.includes('claude code mcp') || haystack.includes('5 mcp')) bonus += 320;
+  if (haystack.includes('qwen 3.6')) bonus += 220;
+  if (haystack.includes('marco-deepresearch')) bonus += 180;
+  if (haystack.includes('remote client for claude code')) bonus += 160;
+  if (haystack.includes('co-founder says')) bonus -= 200;
+  return (item.score ?? 0) + bonus;
 }
 
 function dedupe(items) {
   const seen = new Set();
   const output = [];
   for (const item of items) {
-    const key = (item.url || item.title || '').toLowerCase();
-    if (!key || seen.has(key)) continue;
+    const urlKey = cleanText(item.url || '').toLowerCase();
+    const titleKey = `${normalizeSource(item.source ?? '', item.url)}:${cleanText(item.title || '').toLowerCase()}`;
+    const key = urlKey || titleKey;
+    if (!key || seen.has(key) || seen.has(titleKey)) continue;
     seen.add(key);
+    seen.add(titleKey);
     output.push(item);
   }
   return output;
 }
 
-function sectionItems(items) {
-  return [...items].sort((a, b) => b.score - a.score).slice(0, 5);
+async function fetchHnSignals() {
+  const jobs = HN_QUERY_SPECS.map(async ({ query, boost }) => {
+    const params = new URLSearchParams({ query, tags: 'story', hitsPerPage: '12' });
+    const payload = await fetchJson(`https://hn.algolia.com/api/v1/search?${params}`);
+    return (payload.hits ?? [])
+      .filter((hit) => isRecent((hit.created_at_i ?? 0) * 1000))
+      .map((hit) => {
+        const title = cleanText(hit.title);
+        const url = cleanText(hit.url) || `https://news.ycombinator.com/item?id=${hit.objectID}`;
+        const topics = topicsFor(title, url, hit.story_text ?? '', officialSourceForUrl(url) ?? '');
+        return {
+          title,
+          source: 'Hacker News',
+          url,
+          meta: `${Number(hit.points ?? 0)} pts · ${Number(hit.num_comments ?? 0)} comments`,
+          topics,
+          publishedAt: hit.created_at,
+          score: scoreHn(hit, boost),
+          summary: cleanText(hit.story_text),
+        };
+      })
+      .filter((item) => matchesQuery(query, item.title, item.url, item.summary))
+      .filter((item) => item.title && !shouldDrop(item.title))
+      .filter((item) => isAgenticTitle(item.title, item.summary) || officialSourceForUrl(item.url));
+  });
+
+  return dedupe((await Promise.allSettled(jobs))
+    .flatMap((entry) => (entry.status === 'fulfilled' ? entry.value : [])));
 }
 
-function buildSummary(items) {
+async function fetchRedditSignals() {
+  const jobs = REDDIT_SPECS.flatMap(({ subreddit, queries }) => queries.map(async (query) => {
+    const params = new URLSearchParams({
+      q: query,
+      restrict_sr: 'on',
+      sort: 'relevance',
+      t: 'week',
+      limit: '10',
+      raw_json: '1',
+    });
+    const payload = await fetchJson(`https://www.reddit.com/r/${subreddit}/search.json?${params}`, { 'User-Agent': REDDIT_AGENT });
+    const children = payload?.data?.children ?? [];
+    return children
+      .map((child) => child.data)
+      .filter((item) => isRecent((item.created_utc ?? 0) * 1000))
+      .filter((item) => Number(item.score ?? 0) >= 20 || Number(item.num_comments ?? 0) >= 15)
+      .map((item) => {
+        const title = cleanText(item.title);
+        const selftext = cleanText(item.selftext ?? '');
+        return {
+          title,
+          source: `r/${subreddit}`,
+          url: `https://www.reddit.com${item.permalink ?? ''}`,
+          meta: `${Number(item.score ?? 0)} upvotes · ${Number(item.num_comments ?? 0)} comments`,
+          topics: topicsFor(title, selftext, subreddit),
+          publishedAt: utcIso(new Date((item.created_utc ?? 0) * 1000)),
+          score: scoreReddit(item),
+          summary: clamp(selftext, 220),
+        };
+      })
+      .filter((item) => item.title && matchesQuery(query, item.title, item.summary))
+      .filter((item) => !shouldDrop(item.title));
+  }));
+
+  return dedupe((await Promise.allSettled(jobs))
+    .flatMap((entry) => (entry.status === 'fulfilled' ? entry.value : [])));
+}
+
+async function fetchHfSignals() {
+  const jobs = HF_QUERIES.map(async (query) => {
+    const params = new URLSearchParams({ search: query, sort: 'likes', direction: '-1', limit: '20' });
+    const payload = await fetchJson(`https://huggingface.co/api/models?${params}`);
+    return payload
+      .filter((item) => !item.private)
+      .filter((item) => isRecent(item.createdAt ?? item.lastModified ?? NOW))
+      .map((item) => {
+        const title = cleanText(item.modelId || item.id);
+        const summary = cleanText((item.tags ?? []).join(' '));
+        return {
+          title,
+          source: 'Hugging Face',
+          url: `https://huggingface.co/${title}`,
+          meta: `${Number(item.likes ?? 0)} likes · ${Number(item.downloads ?? 0).toLocaleString()} downloads`,
+          topics: topicsFor(title, summary, item.pipeline_tag ?? ''),
+          publishedAt: item.createdAt ?? item.lastModified ?? utcIso(NOW),
+          score: scoreHf(item),
+          summary,
+        };
+      })
+      .filter((item) => item.title)
+      .filter((item) => Number(item.score ?? 0) >= 10)
+      .filter((item) => isAgenticTitle(item.title, item.summary));
+  });
+
+  return dedupe((await Promise.allSettled(jobs))
+    .flatMap((entry) => (entry.status === 'fulfilled' ? entry.value : [])));
+}
+
+function extractTag(block, tag) {
+  const match = block.match(new RegExp(`<${tag}>([\s\S]*?)<\/${tag}>`, 'i'));
+  if (!match) return '';
+  return cleanText(match[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/gi, '$1'));
+}
+
+async function fetchLabFeedSignals() {
+  const jobs = LAB_FEEDS.map(async ([source, url]) => {
+    const text = await fetchText(url);
+    const blocks = text.match(/<item>[\s\S]*?<\/item>/gi) ?? [];
+    return blocks.slice(0, 12)
+      .map((block) => ({
+        title: extractTag(block, 'title'),
+        url: extractTag(block, 'link'),
+        publishedAt: extractTag(block, 'pubDate'),
+      }))
+      .filter((item) => item.title && item.url && isRecent(item.publishedAt))
+      .filter((item) => isAgenticTitle(item.title))
+      .map((item) => {
+        const topics = topicsFor(item.title, item.url, source);
+        return {
+          ...item,
+          source,
+          meta: new Date(item.publishedAt).toUTCString(),
+          topics,
+          score: 180,
+          summary: item.title,
+        };
+      });
+  });
+
+  return dedupe((await Promise.allSettled(jobs))
+    .flatMap((entry) => (entry.status === 'fulfilled' ? entry.value : [])));
+}
+
+function groupCounts(items) {
   const counts = new Map();
   for (const item of items) {
-    for (const topic of item.topics ?? []) {
-      counts.set(topic, (counts.get(topic) ?? 0) + 1);
-    }
+    const source = normalizeSource(item.source, item.url);
+    counts.set(source, (counts.get(source) ?? 0) + 1);
   }
-  const topTopics = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([topic]) => topic);
-  if (!topTopics.length) return 'Fresh signals are trickling in, but the best move is still to watch for recurring patterns rather than single posts.';
-  if (topTopics.length === 1) return `This cycle is mainly about ${topTopics[0].toLowerCase()}, with the community still looking for practical agent workflows that actually stick.`;
-  if (topTopics.length === 2) return `This cycle is centered on ${topTopics[0].toLowerCase()} and ${topTopics[1].toLowerCase()}, with the broader ecosystem still chasing easier, more reliable agent loops.`;
-  return `This cycle is clustering around ${topTopics[0].toLowerCase()}, ${topTopics[1].toLowerCase()}, and ${topTopics[2].toLowerCase()}. The strongest signal is that people want better tool surfaces, tighter evals, and less fragile agent loops.`;
+  return Object.fromEntries([...counts.entries()].sort((a, b) => a[0].localeCompare(b[0])));
+}
+
+function buildHighlights({ hn, reddit, hf, labs }) {
+  const sortForHighlights = (items, limit) => [...items].sort((a, b) => highlightScore(b) - highlightScore(a)).slice(0, limit);
+  const picks = [
+    ...sortForHighlights(labs, 3),
+    ...sortForHighlights(hn, 3),
+    ...sortForHighlights(reddit, 1),
+    ...sortForHighlights(hf, 1),
+  ];
+
+  return dedupe(picks)
+    .slice(0, 8)
+    .map((item) => ({
+      ...item,
+      source: normalizeSource(item.source, item.url),
+      why: whyFor(item),
+      topics: item.topics ?? [],
+    }));
+}
+
+function buildSummary(highlights) {
+  const titles = highlights.map((item) => item.title.toLowerCase());
+  const hasTinyTools = titles.some((title) => title.includes('needle'));
+  const hasState = titles.some((title) => title.includes('statewright'));
+  const hasLocal = titles.some((title) => title.includes('qwen') || title.includes('textgen') || title.includes('deepresearch'));
+  const hasInterface = titles.some((title) => title.includes('pointer') || title.includes('interaction models'));
+  const hasPackaging = titles.some((title) => title.includes('small business') || title.includes('codex'));
+
+  const bits = [];
+  if (hasTinyTools) bits.push('tiny tool-calling models are becoming real');
+  if (hasState) bits.push('builders are reaching for stricter control loops');
+  if (hasPackaging) bits.push('major labs are packaging agent workflows for broader adoption');
+  if (hasLocal) bits.push('the local/open-weight stack keeps getting stronger around Qwen-style setups');
+  if (hasInterface) bits.push('the interface layer is starting to shift beyond plain chat');
+
+  if (!bits.length) {
+    return 'The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.';
+  }
+
+  return `This cycle says ${bits.slice(0, 4).join(', ')}. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.`;
 }
 
 function buildTangentRadar(items) {
   const topicCounts = new Map();
-  const topicSignals = new Map();
+  const signals = new Map();
   for (const item of items) {
     for (const topic of item.topics ?? []) {
       topicCounts.set(topic, (topicCounts.get(topic) ?? 0) + 1);
-      if ((topicSignals.get(topic) ?? []).length < 4) {
-        const arr = topicSignals.get(topic) ?? [];
-        arr.push(`${item.source}: ${item.title}`);
-        topicSignals.set(topic, arr);
+      if ((signals.get(topic) ?? []).length < 3) {
+        const bucket = signals.get(topic) ?? [];
+        bucket.push(`${normalizeSource(item.source, item.url)}: ${item.title}`);
+        signals.set(topic, bucket);
       }
     }
   }
+
   return [...topicCounts.entries()]
     .sort((a, b) => b[1] - a[1])
     .slice(0, 6)
-    .map(([topic, count]) => ({
+    .map(([topic, signalCount]) => ({
       topic,
-      signalCount: count,
-      whyItMatters: insightForTopics([topic], 'Hacker News'),
-      signals: topicSignals.get(topic) ?? [],
+      signalCount,
+      whyItMatters: defaultWhy([topic], 'Hacker News'),
+      signals: signals.get(topic) ?? [],
     }));
 }
 
-function buildExperiments(topics) {
-  const topicSet = new Set(topics);
+function buildExperimentQueue(highlights) {
+  const titles = highlights.map((item) => item.title.toLowerCase());
+  const localTilt = titles.some((title) => title.includes('qwen') || title.includes('textgen') || title.includes('deepresearch'));
+  const stateTilt = titles.some((title) => title.includes('statewright') || title.includes('memory'));
+  const packagingTilt = titles.some((title) => title.includes('small business') || title.includes('codex'));
+
   const experiments = [
     {
-      title: 'Prototype one MCP-backed workflow',
-      why: 'See whether a single standardized tool surface makes the agent easier to trust.',
-      prompt: 'Build a tiny MCP service for one real workflow, then benchmark how reliably an agent can use it end to end.',
+      title: 'Benchmark one local-first agent stack',
+      why: 'The local/open-weight ecosystem looks materially better this week, especially around Qwen 3.6 and adjacent tooling.',
+      prompt: 'Pick one real workflow and compare a local Qwen-style stack against a frontier hosted model on tool accuracy, latency, and cost.',
     },
     {
-      title: 'Run a browser-use comparison',
-      why: 'Browser and computer-use loops are still the most visible agent frontier.',
-      prompt: 'Compare a browser-driven agent against a simpler scripted workflow on the same task and log where the agent wins or breaks.',
+      title: 'Add explicit state to one messy workflow',
+      why: 'Statewright-style thinking keeps surfacing because hidden state is still where agent reliability quietly falls apart.',
+      prompt: 'Take a brittle multi-step agent task and force it through explicit states, retries, and checkpoints. Measure whether failure recovery gets simpler.',
     },
     {
-      title: 'Measure local vs cloud model drift',
-      why: 'Open-weight releases keep changing the tradeoff surface for agents.',
-      prompt: 'Pick one agent task and compare a local open-weight model to a frontier model on latency, cost, and tool accuracy.',
+      title: 'Prototype an interface beyond chat',
+      why: 'The AI-pointer and Interaction Models threads both suggest the interface layer is becoming a genuine research lever.',
+      prompt: 'Build a tiny agent UI that is not just a chat box — for example a timeline, pointer assistant, or live shared workspace — and log what it changes.',
     },
   ];
-  if (topicSet.has('Evaluation')) {
-    experiments[2] = {
-      title: 'Build a better agent eval harness',
-      why: 'The field needs cleaner ways to measure success than anecdotes.',
-      prompt: 'Create a lightweight benchmark that scores agent runs on completion rate, retries, and tool misuse.',
-    };
-  }
-  if (topicSet.has('Memory and state')) {
-    experiments[1] = {
-      title: 'Add durable memory to one workflow',
-      why: 'Persistent state is one of the main gaps between demos and useful agents.',
-      prompt: 'Give the agent a minimal memory layer, then replay the same task over multiple sessions and compare behavior.',
-    };
-  }
-  if (topicSet.has('Major labs')) {
+
+  if (packagingTilt) {
     experiments[0] = {
-      title: 'Track lab releases against your workflow',
-      why: 'Major lab changes often shift the agent design space overnight.',
-      prompt: 'Map the newest lab release to a specific workflow in your stack and test whether it meaningfully reduces friction.',
+      title: 'Audit one packaged agent workflow',
+      why: 'Packaged systems like Claude for Small Business and Codex case studies are becoming the mainstream distribution model.',
+      prompt: 'Take one off-the-shelf workflow bundle, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak.',
     };
   }
+
+  if (!stateTilt) {
+    experiments[1] = {
+      title: 'Instrument one agent with better traces',
+      why: 'Even when state machines are not explicit, better traces are still the easiest way to understand why an agent drifted or stalled.',
+      prompt: 'Log tool calls, retries, and summaries for one real task, then inspect which step actually predicts success or failure.',
+    };
+  }
+
+  if (!localTilt) {
+    experiments[2] = {
+      title: 'Stress-test one agent across model families',
+      why: 'The model layer is changing quickly enough that the same harness can behave very differently across providers and sizes.',
+      prompt: 'Replay the same agent task on one hosted frontier model and one smaller open model, then compare tool-selection behavior, not just answer quality.',
+    };
+  }
+
   return experiments;
 }
 
 async function main() {
-  const jobs = [];
-  for (const query of HN_QUERIES) jobs.push(fetchHnQuery(query));
-  for (const subreddit of REDDIT_SUBREDDITS) {
-    for (const query of REDDIT_QUERIES.slice(0, 4)) jobs.push(fetchRedditQuery(subreddit, query));
-  }
-  for (const query of HF_QUERIES) jobs.push(fetchHfQuery(query));
-  for (const [name, url] of LAB_FEEDS) jobs.push(fetchFeed(name, url));
+  const [hn, reddit, hf, labFeeds] = await Promise.all([
+    fetchHnSignals(),
+    fetchRedditSignals(),
+    fetchHfSignals(),
+    fetchLabFeedSignals(),
+  ]);
 
-  const settled = await Promise.allSettled(jobs);
-  const items = dedupe(settled.flatMap((entry) => (entry.status === 'fulfilled' ? entry.value : [])));
-  const grouped = new Map();
-  for (const item of items) {
-    const source = displaySource(item.source);
-    if (!grouped.has(source)) grouped.set(source, []);
-    grouped.get(source).push(item);
-  }
+  const allItems = dedupe([...hn, ...reddit, ...hf, ...labFeeds])
+    .map((item) => ({
+      ...item,
+      topics: item.topics?.length ? item.topics : topicsFor(item.title, item.url, item.summary ?? '', item.source),
+    }))
+    .map((item) => ({
+      ...item,
+      why: whyFor(item),
+    }));
 
-  const majorLabItems = items.filter((item) => (item.topics ?? []).includes('Major labs'));
-  const sourceSections = ['Hacker News', 'Reddit', 'Hugging Face', 'Major labs'].map((label) => ({
-    key: label.toLowerCase().replace(/\s+/g, '-'),
-    label,
-    items: label === 'Major labs' ? sectionItems(majorLabItems) : sectionItems(grouped.get(label) ?? []),
+  const majorLabs = dedupe([
+    ...labFeeds,
+    ...hn.filter((item) => officialSourceForUrl(item.url)),
+  ]).sort((a, b) => b.score - a.score);
+
+  const highlights = buildHighlights({ hn, reddit, hf, labs: majorLabs });
+  const sourceSections = [
+    { key: 'major-labs', label: 'Major labs', items: sectionItems(majorLabs, 5) },
+    { key: 'hacker-news', label: 'Hacker News', items: sectionItems(hn.filter((item) => !officialSourceForUrl(item.url)), 5) },
+    { key: 'reddit', label: 'Reddit', items: sectionItems(reddit, 4) },
+    { key: 'hugging-face', label: 'Hugging Face', items: sectionItems(hf, 4) },
+  ].map((section) => ({
+    ...section,
+    items: section.items.map((item) => ({
+      ...item,
+      source: normalizeSource(item.source, item.url),
+      why: item.why ?? whyFor(item),
+      topics: item.topics ?? [],
+    })),
   }));
-
-  const topicCounts = [...buildTangentRadar(items)].map((entry) => entry.topic);
 
   const payload = {
     generatedAt: utcIso(NOW),
-    windowDays: 7,
-    summary: buildSummary(items),
+    windowDays: WINDOW_DAYS,
+    summary: buildSummary(highlights),
     sourceStats: {
-      items: items.length,
-      sources: {
-        ...Object.fromEntries([...grouped.entries()].map(([source, list]) => [source, list.length])),
-        'Major labs': majorLabItems.length,
-      },
+      items: allItems.length,
+      sources: groupCounts(allItems),
     },
-    highlights: buildHighlights(items),
+    highlights,
     sourceSections,
-    tangentRadar: buildTangentRadar(items),
-    experimentQueue: buildExperiments(topicCounts),
+    tangentRadar: buildTangentRadar(allItems),
+    experimentQueue: buildExperimentQueue(highlights),
     method: [
-      'Hacker News Algolia search over agentic AI keywords',
-      'Reddit public search JSON across practical builder communities',
-      'Hugging Face model search for open-weight and lab-related drops',
-      'Best-effort RSS checks for major lab announcement feeds',
+      'Targeted Hacker News searches for high-signal agentic AI posts from the last 7 days',
+      'Reddit weekly top-post scan in LocalLLaMA and ClaudeAI filtered for practical agent-building signals',
+      'Hugging Face model search filtered toward fresh open-weight agent, deep-research, and Qwen-related releases',
+      'Major-lab RSS checks plus official-domain matches surfaced through Hacker News',
     ],
   };
 
   await mkdir(path.dirname(outputPath), { recursive: true });
   await writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
-  console.log(`wrote ${path.relative(repoRoot, outputPath)} with ${items.length} items`);
-}
-
-function buildHighlights(items) {
-  const bySource = new Map();
-  for (const item of items) {
-    const source = displaySource(item.source);
-    if (!bySource.has(source)) bySource.set(source, []);
-    bySource.get(source).push(item);
-  }
-
-  const picked = [];
-  for (const source of ['Hacker News', 'Reddit', 'Hugging Face', 'Major labs']) {
-    if (bySource.get(source)?.length) picked.push(bySource.get(source)[0]);
-  }
-
-  if (picked.length < 8) {
-    const seen = new Set(picked.map((item) => item.url));
-    for (const item of items) {
-      if (seen.has(item.url)) continue;
-      picked.push(item);
-      seen.add(item.url);
-      if (picked.length >= 8) break;
-    }
-  }
-
-  return picked.slice(0, 8).map((item) => ({ ...item, topics: item.topics ?? [] }));
+  console.log(`wrote ${path.relative(repoRoot, outputPath)} with ${allItems.length} items`);
 }
 
 main().catch((error) => {
