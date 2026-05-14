@@ -1,4 +1,5 @@
 import { mkdir, writeFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -9,8 +10,10 @@ const outputPath = path.join(repoRoot, 'public', 'data', 'agent-research.json');
 const WINDOW_DAYS = 7;
 const NOW = new Date();
 const SINCE = new Date(NOW.getTime() - WINDOW_DAYS * 24 * 60 * 60 * 1000);
+const SINCE_DATE = SINCE.toISOString().slice(0, 10);
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0 Safari/537.36';
 const REDDIT_AGENT = 'NimitAgentResearch/2.0 (by nimit2801)';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || githubTokenFromCli();
 
 const HN_QUERY_SPECS = [
   { query: 'needle', boost: 120 },
@@ -45,6 +48,20 @@ const REDDIT_SPECS = [
 ];
 
 const HF_QUERIES = ['qwen3.6', 'deepresearch', 'browser-use', 'agent'];
+const GITHUB_REPO_WATCH = [
+  { repo: 'HermannBjorgvin/Clawdmeter', boost: 180 },
+  { repo: 'chrisrobison/textweb', boost: 170 },
+  { repo: 'Unagi-cq/cdp-bridge-mcp', boost: 160 },
+  { repo: 'rahilp/second-brain-cloudflare', boost: 160 },
+  { repo: 'ab-613/OpenGravity', boost: 150 },
+  { repo: 'CohleM/nanoclaude', boost: 145 },
+  { repo: 'smithersai/claude-p', boost: 140 },
+  { repo: 'tRidha/pokegents', boost: 135 },
+  { repo: 'stormzhang/token-tracker', boost: 130 },
+];
+const GITHUB_RELEASE_WATCH = [
+  { repo: 'QwenLM/qwen-code', label: 'Qwen', boost: 140 },
+];
 const LAB_FEEDS = [
   ['OpenAI', 'https://openai.com/news/rss.xml'],
   ['Google AI', 'https://blog.google/technology/ai/rss/'],
@@ -66,13 +83,13 @@ const OFFICIAL_SOURCES = [
 const TOPIC_RULES = [
   ['Tool use', ['tool', 'tool calling', 'function call', 'function calling', 'codex', 'workflow', 'connector', 'mcp']],
   ['Multi-agent workflows', ['multi-agent', 'orchestr', 'workflow', 'agent team', 'deep research']],
-  ['Memory and state', ['memory', 'state', 'state machine', 'checkpoint', 'trace']],
+  ['Memory and state', ['memory', 'state', 'state machine', 'checkpoint', 'trace', 'second brain']],
   ['Evaluation', ['eval', 'benchmark', 'judge', 'leaderboard', 'misalignment', 'reliability']],
   ['Voice and multimodal', ['audio', 'voice', 'video', 'multimodal', 'pointer']],
   ['Open weights', ['qwen', 'gguf', 'local', 'open-source', 'open source', 'open weight', 'deepresearch']],
   ['Major labs', ['openai', 'anthropic', 'google', 'deepmind', 'meta', 'mistral', 'qwen']],
   ['Coding agents', ['coding', 'code', 'codex', 'claude code', 'developer', 'terminal']],
-  ['Interfaces', ['pointer', 'interaction', 'desktop', 'ui', 'browser', 'agent view']],
+  ['Interfaces', ['pointer', 'interaction', 'desktop', 'ui', 'browser', 'agent view', 'dashboard', 'workspace']],
   ['Infra and retrieval', ['webhook', 'webhooks', 'long-running', 'web-search', 'search index', 'cloudflare', 'verification']],
 ];
 
@@ -168,7 +185,42 @@ const HAND_CURATED_WHY = [
     match: /mcp/i,
     why: 'MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack.',
   },
+  {
+    match: /qwenlm\/qwen-code|qwen code/i,
+    why: 'Qwen’s coding stack is turning into a more automation-friendly surface, which matters because structured outputs and review-oriented workflows are what make coding agents easier to trust.',
+  },
+  {
+    match: /clawdmeter/i,
+    why: 'This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo.',
+  },
+  {
+    match: /textweb/i,
+    why: 'Text-first browsing is a strong agent tangent because it can make web automation cheaper, faster, and more inspectable than screenshot-heavy loops.',
+  },
+  {
+    match: /second-brain/i,
+    why: 'Portable memory layers are one of the clearest ways to make agents feel cumulative instead of stateless and disposable.',
+  },
+  {
+    match: /token-tracker/i,
+    why: 'The practical frontier for coding agents is not just capability but meterability: people want live visibility into cost, rate limits, and whether an agent is quietly burning budget.',
+  },
+  {
+    match: /opengravity/i,
+    why: 'This points toward a more inspectable, BYOK-style agent workspace model where people can try serious tooling without fully handing control to a hosted black box.',
+  },
 ];
+
+function githubTokenFromCli() {
+  try {
+    return execFileSync('gh', ['auth', 'token'], {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+  } catch {
+    return '';
+  }
+}
 
 async function fetchJson(url, headers = {}) {
   const response = await fetch(url, { headers: { 'User-Agent': USER_AGENT, ...headers } });
@@ -246,6 +298,15 @@ function shouldDrop(title) {
   return DROP_TITLE_PATTERNS.some((pattern) => pattern.test(title));
 }
 
+function shouldDropGithubItem(title, summary = '') {
+  const haystack = `${title} ${summary}`.toLowerCase();
+  return [
+    /huashu/i,
+    /hermes-desktop/i,
+    /\bskills\b/i,
+  ].some((pattern) => pattern.test(haystack));
+}
+
 function matchesQuery(query, ...parts) {
   const haystack = parts.map((part) => cleanText(part).toLowerCase()).join(' ');
   const normalizedQuery = cleanText(query).toLowerCase();
@@ -309,6 +370,19 @@ function scoreHf(item) {
   return likes * 4 + downloads / 1000;
 }
 
+function scoreGithubRepo(item, boost = 0) {
+  const stars = Number(item.stargazers_count ?? 0);
+  const forks = Number(item.forks_count ?? 0);
+  const watchers = Number(item.watchers_count ?? 0);
+  const createdBonus = isRecent(item.created_at) ? 40 : 0;
+  return stars * 5 + forks * 2 + watchers + createdBonus + boost;
+}
+
+function scoreGithubRelease(item, boost = 0) {
+  const reactions = Number(item.reactions?.total_count ?? 0);
+  return reactions * 6 + 1800 + boost;
+}
+
 function sectionItems(items, limit = 5) {
   return [...items].sort((a, b) => b.score - a.score).slice(0, limit);
 }
@@ -335,6 +409,11 @@ function highlightScore(item) {
   if (haystack.includes('qwen 3.6')) bonus += 220;
   if (haystack.includes('marco-deepresearch')) bonus += 180;
   if (haystack.includes('remote client for claude code')) bonus += 160;
+  if (haystack.includes('qwenlm/qwen-code') || haystack.includes('qwen code')) bonus += 260;
+  if (haystack.includes('clawdmeter')) bonus += 240;
+  if (haystack.includes('textweb')) bonus += 210;
+  if (haystack.includes('second-brain')) bonus += 200;
+  if (haystack.includes('workspace')) bonus += 140;
   if (haystack.includes('co-founder says')) bonus -= 200;
   return (item.score ?? 0) + bonus;
 }
@@ -488,6 +567,70 @@ async function fetchLabFeedSignals() {
     .flatMap((entry) => (entry.status === 'fulfilled' ? entry.value : [])));
 }
 
+async function fetchGithubSignals() {
+  const headers = GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {};
+
+  const repoJobs = GITHUB_REPO_WATCH.map(async ({ repo, boost }) => {
+    const item = await fetchJson(`https://api.github.com/repos/${repo}`, headers);
+    if (!isRecent(item.created_at) && !isRecent(item.pushed_at) && !isRecent(item.updated_at)) {
+      return [];
+    }
+
+    const title = cleanText(item.full_name || item.name);
+    const summary = cleanText(item.description ?? '');
+    const tags = cleanText((item.topics ?? []).join(' '));
+    const repoItem = {
+      title,
+      source: 'GitHub',
+      url: cleanText(item.html_url),
+      meta: `${Number(item.stargazers_count ?? 0)} stars · updated ${new Date(item.pushed_at ?? item.updated_at ?? NOW).toUTCString().replace(' GMT', ' UTC')}`,
+      topics: topicsFor(title, summary, tags),
+      publishedAt: item.created_at ?? item.updated_at ?? utcIso(NOW),
+      score: scoreGithubRepo(item, boost),
+      summary,
+    };
+    return [{
+      ...repoItem,
+      why: whyFor(repoItem),
+    }]
+      .filter((entry) => entry.title && entry.url)
+      .filter((entry) => !shouldDrop(entry.title) && !shouldDropGithubItem(entry.title, entry.summary))
+      .filter((entry) => isAgenticTitle(entry.title, entry.summary));
+  });
+
+  const releaseJobs = GITHUB_RELEASE_WATCH.map(async ({ repo, label, boost }) => {
+    const payload = await fetchJson(`https://api.github.com/repos/${repo}/releases?per_page=5`, headers);
+    return (payload ?? [])
+      .filter((item) => !item.draft && !item.prerelease)
+      .filter((item) => isRecent(item.published_at ?? item.created_at))
+      .slice(0, 1)
+      .map((item) => {
+        const repoName = cleanText(repo.split('/')[1] || repo);
+        const title = cleanText(`${repoName} ${item.name || item.tag_name}`);
+        const summary = clamp(item.body ?? '', 220);
+        const releaseItem = {
+          title,
+          source: 'GitHub',
+          url: cleanText(item.html_url),
+          meta: `${label} release · ${cleanText(item.tag_name)}`,
+          topics: topicsFor(title, repo, summary, label, 'github release'),
+          publishedAt: item.published_at ?? item.created_at ?? utcIso(NOW),
+          score: scoreGithubRelease(item, boost),
+          summary,
+        };
+        return {
+          ...releaseItem,
+          why: whyFor(releaseItem),
+        };
+      })
+      .filter((item) => item.title && item.url)
+      .filter((item) => isAgenticTitle(item.title, item.summary));
+  });
+
+  return dedupe((await Promise.allSettled([...repoJobs, ...releaseJobs]))
+    .flatMap((entry) => (entry.status === 'fulfilled' ? entry.value : [])));
+}
+
 function groupCounts(items) {
   const counts = new Map();
   for (const item of items) {
@@ -497,13 +640,14 @@ function groupCounts(items) {
   return Object.fromEntries([...counts.entries()].sort((a, b) => a[0].localeCompare(b[0])));
 }
 
-function buildHighlights({ hn, reddit, hf, labs }) {
+function buildHighlights({ hn, reddit, hf, labs, github }) {
   const sortForHighlights = (items, limit) => [...items].sort((a, b) => highlightScore(b) - highlightScore(a)).slice(0, limit);
   const picks = [
     ...sortForHighlights(labs, 3),
-    ...sortForHighlights(hn, 3),
+    ...sortForHighlights(hn, 2),
     ...sortForHighlights(reddit, 1),
     ...sortForHighlights(hf, 1),
+    ...sortForHighlights(github, 2),
   ];
 
   return dedupe(picks)
@@ -523,8 +667,9 @@ function buildSummary(highlights) {
   const hasLocal = titles.some((title) => title.includes('qwen') || title.includes('textgen') || title.includes('deepresearch'));
   const hasInterface = titles.some((title) => title.includes('pointer') || title.includes('interaction models'));
   const hasPackaging = titles.some((title) => title.includes('small business') || title.includes('codex'));
-  const hasInfra = titles.some((title) => title.includes('webhooks') || title.includes('web-search'));
-  const hasSupervision = titles.some((title) => title.includes('agent view') || title.includes('usage limits'));
+  const hasInfra = titles.some((title) => title.includes('webhooks') || title.includes('web-search') || title.includes('mcp') || title.includes('browser'));
+  const hasSupervision = titles.some((title) => title.includes('agent view') || title.includes('usage limits') || title.includes('dashboard'));
+  const hasOpenTooling = titles.some((title) => title.includes('workspace') || title.includes('textweb') || title.includes('clawdmeter') || title.includes('second-brain'));
 
   const bits = [];
   if (hasTinyTools) bits.push('tiny tool-calling models are becoming real');
@@ -532,8 +677,9 @@ function buildSummary(highlights) {
   if (hasPackaging) bits.push('major labs are packaging agent workflows for broader adoption');
   if (hasLocal) bits.push('the local/open-weight stack keeps getting stronger around Qwen-style setups');
   if (hasInterface) bits.push('the interface layer is starting to shift beyond plain chat');
-  if (hasInfra) bits.push('event-driven and retrieval plumbing is becoming part of the agent conversation');
+  if (hasInfra) bits.push('event-driven and browser/MCP plumbing is becoming part of the agent conversation');
   if (hasSupervision) bits.push('people are asking for better visibility into long-running agent runs');
+  if (hasOpenTooling) bits.push('open-source builders are turning agent helpers into real products and dashboards');
 
   if (!bits.length) {
     return 'The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.';
@@ -628,14 +774,15 @@ function buildExperimentQueue(highlights) {
 }
 
 async function main() {
-  const [hn, reddit, hf, labFeeds] = await Promise.all([
+  const [hn, reddit, hf, labFeeds, github] = await Promise.all([
     fetchHnSignals(),
     fetchRedditSignals(),
     fetchHfSignals(),
     fetchLabFeedSignals(),
+    fetchGithubSignals(),
   ]);
 
-  const allItems = dedupe([...hn, ...reddit, ...hf, ...labFeeds])
+  const allItems = dedupe([...hn, ...reddit, ...hf, ...labFeeds, ...github])
     .map((item) => ({
       ...item,
       topics: item.topics?.length ? item.topics : topicsFor(item.title, item.url, item.summary ?? '', item.source),
@@ -650,12 +797,13 @@ async function main() {
     ...hn.filter((item) => officialSourceForUrl(item.url)),
   ]).sort((a, b) => b.score - a.score);
 
-  const highlights = buildHighlights({ hn, reddit, hf, labs: majorLabs });
+  const highlights = buildHighlights({ hn, reddit, hf, labs: majorLabs, github });
   const sourceSections = [
     { key: 'major-labs', label: 'Major labs', items: sectionItems(majorLabs, 6) },
     { key: 'hacker-news', label: 'Hacker News', items: sectionItems(hn.filter((item) => !officialSourceForUrl(item.url)), 5) },
     { key: 'reddit', label: 'Reddit', items: sectionItems(reddit, 4) },
     { key: 'hugging-face', label: 'Hugging Face', items: sectionItems(hf, 4) },
+    { key: 'github', label: 'GitHub', items: sectionItems(github, 4) },
   ].map((section) => ({
     ...section,
     items: section.items.map((item) => ({
@@ -683,6 +831,7 @@ async function main() {
       'Reddit weekly top-post scan in LocalLLaMA and ClaudeAI filtered for practical agent-building signals',
       'Hugging Face model search filtered toward fresh open-weight agent, deep-research, and Qwen-related releases',
       'Major-lab RSS checks plus official-domain matches surfaced through Hacker News',
+      'GitHub repo and release scans for fresh agent tooling, dashboards, browsers, workspaces, and coding-agent updates',
     ],
   };
 
