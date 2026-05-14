@@ -48,6 +48,13 @@ const REDDIT_SPECS = [
 ];
 
 const HF_QUERIES = ['qwen3.6', 'deepresearch', 'browser-use', 'agent'];
+const GITHUB_QUERY_SPECS = [
+  { query: '"claude code" in:name,description,readme created:>=' + SINCE_DATE, boost: 140 },
+  { query: '"deep research" in:name,description,readme created:>=' + SINCE_DATE, boost: 135 },
+  { query: 'mcp browser agent in:name,description,readme created:>=' + SINCE_DATE, boost: 130 },
+  { query: 'agent dashboard workspace in:name,description,readme created:>=' + SINCE_DATE, boost: 125 },
+  { query: 'qwen agent in:name,description,readme created:>=' + SINCE_DATE, boost: 120 },
+];
 const GITHUB_REPO_WATCH = [
   { repo: 'HermannBjorgvin/Clawdmeter', boost: 180 },
   { repo: 'chrisrobison/textweb', boost: 170 },
@@ -570,6 +577,40 @@ async function fetchLabFeedSignals() {
 async function fetchGithubSignals() {
   const headers = GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {};
 
+  const searchJobs = GITHUB_QUERY_SPECS.map(async ({ query, boost }) => {
+    const params = new URLSearchParams({
+      q: query,
+      sort: 'stars',
+      order: 'desc',
+      per_page: '10',
+    });
+    const payload = await fetchJson(`https://api.github.com/search/repositories?${params}`, headers);
+    return (payload.items ?? [])
+      .filter((item) => isRecent(item.created_at))
+      .map((item) => {
+        const title = cleanText(item.full_name || item.name);
+        const summary = cleanText(item.description ?? '');
+        const tags = cleanText((item.topics ?? []).join(' '));
+        const repoItem = {
+          title,
+          source: 'GitHub',
+          url: cleanText(item.html_url),
+          meta: `${Number(item.stargazers_count ?? 0)} stars · updated ${new Date(item.pushed_at ?? item.updated_at ?? NOW).toUTCString().replace(' GMT', ' UTC')}`,
+          topics: topicsFor(title, summary, tags, query),
+          publishedAt: item.created_at ?? item.updated_at ?? utcIso(NOW),
+          score: scoreGithubRepo(item, boost),
+          summary,
+        };
+        return {
+          ...repoItem,
+          why: whyFor(repoItem),
+        };
+      })
+      .filter((entry) => entry.title && entry.url)
+      .filter((entry) => !shouldDrop(entry.title) && !shouldDropGithubItem(entry.title, entry.summary))
+      .filter((entry) => isAgenticTitle(entry.title, entry.summary));
+  });
+
   const repoJobs = GITHUB_REPO_WATCH.map(async ({ repo, boost }) => {
     const item = await fetchJson(`https://api.github.com/repos/${repo}`, headers);
     if (!isRecent(item.created_at) && !isRecent(item.pushed_at) && !isRecent(item.updated_at)) {
@@ -627,7 +668,7 @@ async function fetchGithubSignals() {
       .filter((item) => isAgenticTitle(item.title, item.summary));
   });
 
-  return dedupe((await Promise.allSettled([...repoJobs, ...releaseJobs]))
+  return dedupe((await Promise.allSettled([...searchJobs, ...repoJobs, ...releaseJobs]))
     .flatMap((entry) => (entry.status === 'fulfilled' ? entry.value : [])));
 }
 
