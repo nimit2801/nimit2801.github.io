@@ -540,7 +540,7 @@ async function fetchHfSignals() {
 }
 
 function extractTag(block, tag) {
-  const match = block.match(new RegExp(`<${tag}>([\s\S]*?)<\/${tag}>`, 'i'));
+  const match = block.match(new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`, 'i'));
   if (!match) return '';
   return cleanText(match[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/gi, '$1'));
 }
