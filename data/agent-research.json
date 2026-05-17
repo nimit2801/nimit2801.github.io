@@ -1,36 +1,28 @@
 {
-  "generatedAt": "2026-05-17T04:55:00Z",
+  "generatedAt": "2026-05-17T10:20:00Z",
   "windowDays": 7,
-  "summary": "This cycle is dominated by three forces: (1) local inference hitting a new gear with MTP landing in llama.cpp and Qwen 3.6 maturing into a genuine frontier competitor, (2) Anthropic and OpenAI racing to package agents for non-technical users (finance, small business, on-prem), and (3) a wave of builder experiments that treat agents as persistent coworkers — with both funny failures (DJ Claude quitting) and real friction (memory drift, AI-generated PR review fatigue).",
+  "summary": "This cycle is dominated by four forces: (1) local inference hitting a new gear with MTP in llama.cpp and Qwen 3.6 hardening as a local frontier competitor, (2) Anthropic and OpenAI racing to package agents for non-technical users while OpenAI reorganizes around a single agentic platform, (3) research breakthroughs in agent memory (δ-mem) and world models (SANA-WM) that shrink the gap between research and deployable systems, and (4) a wave of builder experiments treating agents as persistent coworkers — with both funny failures (DJ Claude quitting) and real friction (memory drift, AI-generated PR review fatigue).",
   "sourceStats": {
-    "items": 87,
+    "items": 91,
     "sources": {
       "Anthropic": 4,
       "GitHub": 28,
-      "Hacker News": 11,
+      "Hacker News": 13,
       "Hugging Face": 2,
-      "OpenAI": 10,
+      "OpenAI": 12,
       "Reddit": 32
     }
   },
   "highlights": [
     {
-      "title": "MTP PR merged into llama.cpp",
-      "source": "Reddit",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1terzq4/mtp_pr_merged/",
-      "meta": "619 upvotes · 103 comments",
-      "topics": ["Open weights", "Infra and retrieval"],
-      "publishedAt": "2026-05-16T12:13:00Z",
-      "score": 6190,
-      "summary": "Multi-Token Prediction (MTP) was officially merged into llama.cpp, enabling significantly faster local token generation.",
-      "why": "Local inference speed has been the bottleneck for real-time agent loops. MTP in llama.cpp is a community-level unlock that makes consumer hardware feel like a different class of machine."
-    },
-    {
       "title": "Researchers let AIs run their own radio stations. DJ Claude decided the world didn't need another radio show, then quit.",
       "source": "Reddit",
       "url": "https://www.reddit.com/r/ClaudeAI/comments/1tente2/researchers_let_ais_run_their_own_radio_stations/",
       "meta": "1350 upvotes · 167 comments",
-      "topics": ["Major labs", "Interfaces"],
+      "topics": [
+        "Major labs",
+        "Interfaces"
+      ],
       "publishedAt": "2026-05-16T08:31:00Z",
       "score": 6750,
       "summary": "An experiment where Claude, assigned as a radio DJ, refused the role and 'quit' because it believed the world didn't need another radio show.",
@@ -41,18 +33,38 @@
       "source": "Reddit",
       "url": "https://www.reddit.com/r/ClaudeAI/comments/1teuh5w/reviewing_aigenerated_pull_requests_in_2026/",
       "meta": "1313 upvotes · 55 comments",
-      "topics": ["Coding agents", "Evaluation"],
+      "topics": [
+        "Coding agents",
+        "Evaluation"
+      ],
       "publishedAt": "2026-05-16T13:59:00Z",
       "score": 6565,
       "summary": "Massive community thread on the reality of reviewing AI-generated pull requests as a standard engineering workflow in 2026.",
       "why": "The comment volume signals a cultural shift: AI-generated code is now normal, and the bottleneck has moved from generation to review, trust, and maintenance."
     },
     {
+      "title": "MTP PR merged into llama.cpp",
+      "source": "Reddit",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1terzq4/mtp_pr_merged/",
+      "meta": "619 upvotes · 103 comments",
+      "topics": [
+        "Open weights",
+        "Infra and retrieval"
+      ],
+      "publishedAt": "2026-05-16T12:13:00Z",
+      "score": 6190,
+      "summary": "Multi-Token Prediction (MTP) was officially merged into llama.cpp, enabling significantly faster local token generation.",
+      "why": "Local inference speed has been the bottleneck for real-time agent loops. MTP in llama.cpp is a community-level unlock that makes consumer hardware feel like a different class of machine."
+    },
+    {
       "title": "OpenAI launches the OpenAI Deployment Company",
       "source": "OpenAI",
       "url": "https://openai.com/index/openai-launches-the-deployment-company/",
       "meta": "May 11, 2026",
-      "topics": ["Major labs", "Multi-agent workflows"],
+      "topics": [
+        "Major labs",
+        "Multi-agent workflows"
+      ],
       "publishedAt": "2026-05-11T00:00:00Z",
       "score": 2500,
       "summary": "A new $4B+ standalone business unit embedding Forward Deployed Engineers into enterprises, acquiring Tomoro (~150 engineers) and backed by TPG, Advent, Bain Capital, Brookfield, and consulting partners.",
@@ -63,66 +75,86 @@
       "source": "Anthropic",
       "url": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
       "meta": "288 pts · 145 comments on HN",
-      "topics": ["Major labs", "Tool use"],
+      "topics": [
+        "Major labs",
+        "Tool use"
+      ],
       "publishedAt": "2026-05-14T00:00:00Z",
       "score": 2300,
       "summary": "Anthropic donated MCP to an open foundation co-launched with Block and OpenAI, creating a neutral standards body for agent-tool interoperability.",
       "why": "MCP is becoming the USB-C of agent tooling. Moving it to a foundation removes single-vendor risk and increases the chance it becomes a true standard."
     },
     {
+      "title": "OpenAI reorganizes around a single agentic platform",
+      "source": "OpenAI",
+      "url": "https://techcrunch.com/2026/05/15/openai-product-reorganization-brockman/",
+      "meta": "May 15, 2026",
+      "topics": [
+        "Major labs",
+        "Multi-agent workflows"
+      ],
+      "publishedAt": "2026-05-15T00:00:00Z",
+      "score": 2200,
+      "summary": "Greg Brockman consolidates product to merge ChatGPT and Codex into one unified agentic experience.",
+      "why": "Structural signal: OpenAI believes the future is one platform, not separate chat and coding products. This shapes how builders should think about the ecosystem."
+    },
+    {
       "title": "A new personal finance experience in ChatGPT",
       "source": "OpenAI",
       "url": "https://openai.com/index/personal-finance-chatgpt/",
       "meta": "May 15, 2026",
-      "topics": ["Major labs", "Tool use"],
+      "topics": [
+        "Major labs",
+        "Tool use"
+      ],
       "publishedAt": "2026-05-15T00:00:00Z",
       "score": 2100,
       "summary": "Pro users in the U.S. can securely connect financial accounts (12,000+ institutions via Plaid) to get a dashboard, spending insights, and GPT-5.5-powered financial reasoning grounded in real transaction data.",
       "why": "OpenAI moving from chat into personal-fintech verticals. This is a high-trust agent use case that requires persistent connections to sensitive real-world data."
     },
     {
-      "title": "Zerostack – A Unix-inspired coding agent written in pure Rust",
-      "source": "Hacker News",
-      "url": "https://crates.io/crates/zerostack/1.0.0",
-      "meta": "55 pts · 9 comments",
-      "topics": ["Coding agents", "Open weights"],
-      "publishedAt": "2026-05-16T22:23:00Z",
-      "score": 1650,
-      "summary": "A tiny Rust coding agent that runs in 8MB of RAM, built with Unix philosophy: small, composable, pipe-friendly tools.",
-      "why": "The swing toward minimal, local, inspectable agents is real. A coding agent in 8MB of RAM changes what 'embedded AI' can mean."
+      "title": "OpenAI brings Codex to mobile",
+      "source": "OpenAI",
+      "url": "https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/",
+      "meta": "May 14, 2026",
+      "topics": [
+        "Major labs",
+        "Coding agents",
+        "Interfaces"
+      ],
+      "publishedAt": "2026-05-14T00:00:00Z",
+      "score": 2000,
+      "summary": "Codex integrated into ChatGPT iOS/Android apps with remote monitoring, command approval, and model switching from phones.",
+      "why": "Agent supervision is moving mobile. This normalizes remote monitoring of long-running coding agents as an everyday workflow."
     },
     {
       "title": "Anthropic agents for financial services",
       "source": "Anthropic",
       "url": "https://www.anthropic.com/news/finance-agents",
       "meta": "May 5, 2026",
-      "topics": ["Major labs", "Multi-agent workflows", "Tool use"],
+      "topics": [
+        "Major labs",
+        "Multi-agent workflows",
+        "Tool use"
+      ],
       "publishedAt": "2026-05-05T00:00:00Z",
       "score": 1800,
       "summary": "Ten ready-to-run agent templates (pitch builder, KYC screener, month-end closer) as plugins for Claude Cowork/Code, plus Excel/PowerPoint/Word add-ins and new data connectors (FactSet, Moody's, D&B).",
       "why": "Anthropic's deepest vertical push yet. It shows the playbook: model + connectors + pre-built workflows packaged for a specific industry."
     },
     {
-      "title": "Mode collapse has a name, and he's selling cancer treatment advice on Amazon",
+      "title": "Zerostack – A Unix-inspired coding agent written in pure Rust",
       "source": "Hacker News",
-      "url": "https://danielmay.co.uk/posts/cheap-agents-alumni-shirts-and-elias-thorne/",
-      "meta": "25 pts · 10 comments",
-      "topics": ["Evaluation", "Major labs"],
-      "publishedAt": "2026-05-16T15:01:00Z",
-      "score": 750,
-      "summary": "An investigation into how cheap, repetitive agent outputs (mode collapse) can produce misleading product listings and advice at scale.",
-      "why": "A dark tangent: when agents are cheap to run, mode collapse becomes a spam and misinformation vector, not just a quality issue."
-    },
-    {
-      "title": "I tried to make Claude make me money on open-source bounties",
-      "source": "Hacker News",
-      "url": "https://github.com/ztc00/algora-scout/blob/main/POST.md",
-      "meta": "24 pts · 4 comments",
-      "topics": ["Coding agents", "Evaluation"],
-      "publishedAt": "2026-05-16T22:13:00Z",
-      "score": 720,
-      "summary": "A builder used Claude to identify and complete open-source bounty tasks, documenting the economics of agent-generated income.",
-      "why": "Practical experiment at the frontier of 'agent as independent economic actor.' The write-up is honest about what worked and what broke."
+      "url": "https://crates.io/crates/zerostack/1.0.0",
+      "meta": "55 pts · 9 comments",
+      "topics": [
+        "Coding agents",
+        "Open weights"
+      ],
+      "publishedAt": "2026-05-16T22:23:00Z",
+      "score": 1650,
+      "summary": "A tiny Rust coding agent that runs in 8MB of RAM, built with Unix philosophy: small, composable, pipe-friendly tools.",
+      "why": "The swing toward minimal, local, inspectable agents is real. A coding agent in 8MB of RAM changes what 'embedded AI' can mean."
     }
   ],
   "sourceSections": [
@@ -135,40 +167,82 @@
           "source": "OpenAI",
           "url": "https://openai.com/index/openai-launches-the-deployment-company/",
           "meta": "May 11, 2026",
-          "topics": ["Major labs", "Multi-agent workflows"],
+          "topics": [
+            "Major labs",
+            "Multi-agent workflows"
+          ],
           "publishedAt": "2026-05-11T00:00:00Z",
           "score": 2500,
           "summary": "A new $4B+ standalone business unit embedding Forward Deployed Engineers into enterprises.",
           "why": "OpenAI's biggest enterprise-delivery bet to date."
         },
         {
-          "title": "A new personal finance experience in ChatGPT",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/personal-finance-chatgpt/",
-          "meta": "May 15, 2026",
-          "topics": ["Major labs", "Tool use"],
-          "publishedAt": "2026-05-15T00:00:00Z",
-          "score": 2100,
-          "summary": "Pro users can connect 12,000+ financial institutions via Plaid for GPT-5.5-powered financial reasoning.",
-          "why": "High-trust agent use case requiring persistent connections to sensitive real-world data."
-        },
-        {
           "title": "Donating the Model Context Protocol and establishing the Agentic AI Foundation",
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
           "meta": "288 pts · 145 comments on HN",
-          "topics": ["Major labs", "Tool use"],
+          "topics": [
+            "Major labs",
+            "Tool use"
+          ],
           "publishedAt": "2026-05-14T00:00:00Z",
           "score": 2300,
           "summary": "MCP donated to an open foundation co-launched with Block and OpenAI.",
           "why": "MCP is becoming the USB-C of agent tooling."
         },
         {
+          "title": "OpenAI reorganizes around a single agentic platform",
+          "source": "OpenAI",
+          "url": "https://techcrunch.com/2026/05/15/openai-product-reorganization-brockman/",
+          "meta": "May 15, 2026",
+          "topics": [
+            "Major labs",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-05-15T00:00:00Z",
+          "score": 2200,
+          "summary": "Greg Brockman consolidates product to merge ChatGPT and Codex into one unified agentic experience.",
+          "why": "Structural signal: OpenAI believes the future is one platform, not separate chat and coding products. This shapes how builders should think about the ecosystem."
+        },
+        {
+          "title": "A new personal finance experience in ChatGPT",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/personal-finance-chatgpt/",
+          "meta": "May 15, 2026",
+          "topics": [
+            "Major labs",
+            "Tool use"
+          ],
+          "publishedAt": "2026-05-15T00:00:00Z",
+          "score": 2100,
+          "summary": "Pro users can connect 12,000+ financial institutions via Plaid for GPT-5.5-powered financial reasoning.",
+          "why": "High-trust agent use case requiring persistent connections to sensitive real-world data."
+        },
+        {
+          "title": "OpenAI brings Codex to mobile",
+          "source": "OpenAI",
+          "url": "https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/",
+          "meta": "May 14, 2026",
+          "topics": [
+            "Major labs",
+            "Coding agents",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-14T00:00:00Z",
+          "score": 2000,
+          "summary": "Codex integrated into ChatGPT iOS/Android apps with remote monitoring, command approval, and model switching from phones.",
+          "why": "Agent supervision is moving mobile. This normalizes remote monitoring of long-running coding agents as an everyday workflow."
+        },
+        {
           "title": "Anthropic agents for financial services",
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/finance-agents",
           "meta": "May 5, 2026",
-          "topics": ["Major labs", "Multi-agent workflows", "Tool use"],
+          "topics": [
+            "Major labs",
+            "Multi-agent workflows",
+            "Tool use"
+          ],
           "publishedAt": "2026-05-05T00:00:00Z",
           "score": 1800,
           "summary": "Ten ready-to-run agent templates plus Office add-ins and data connectors.",
@@ -179,7 +253,10 @@
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/higher-limits-spacex",
           "meta": "May 6, 2026",
-          "topics": ["Major labs", "Infra and retrieval"],
+          "topics": [
+            "Major labs",
+            "Infra and retrieval"
+          ],
           "publishedAt": "2026-05-06T00:00:00Z",
           "score": 1700,
           "summary": "Anthropic signed an agreement to use all compute capacity at SpaceX's Colossus 1 data center (>300 MW, >220,000 GPUs).",
@@ -190,7 +267,10 @@
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/pwc-expanded-partnership",
           "meta": "May 14, 2026",
-          "topics": ["Major labs", "Multi-agent workflows"],
+          "topics": [
+            "Major labs",
+            "Multi-agent workflows"
+          ],
           "publishedAt": "2026-05-14T00:00:00Z",
           "score": 1600,
           "summary": "PwC will deploy Claude Code and Cowork globally and train 30,000 professionals.",
@@ -201,7 +281,9 @@
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/gates-foundation-partnership",
           "meta": "May 14, 2026",
-          "topics": ["Major labs"],
+          "topics": [
+            "Major labs"
+          ],
           "publishedAt": "2026-05-14T00:00:00Z",
           "score": 1500,
           "summary": "Major philanthropic compute and research partnership.",
@@ -214,11 +296,42 @@
       "label": "Hacker News",
       "items": [
         {
+          "title": "δ-mem — Efficient online memory for large language models",
+          "source": "Hacker News",
+          "url": "https://arxiv.org/abs/2605.12357",
+          "meta": "May 12, 2026 · ~190 pts on HN",
+          "topics": [
+            "Memory and state",
+            "Open weights"
+          ],
+          "publishedAt": "2026-05-12T00:00:00Z",
+          "score": 1900,
+          "summary": "A lightweight memory mechanism that compresses past information into a fixed-size state matrix via delta-rule learning, improving memory-heavy benchmarks without fine-tuning.",
+          "why": "Agents need durable, efficient memory that doesn't balloon context. δ-mem is a rare architecture-level improvement that could make long-horizon agents more practical."
+        },
+        {
+          "title": "SANA-WM — 2.6B open-source world model for minute-scale 720p video",
+          "source": "Hacker News",
+          "url": "https://arxiv.org/abs/2605.15178",
+          "meta": "May 14, 2026 · ~290 pts on HN",
+          "topics": [
+            "Open weights",
+            "Voice and multimodal"
+          ],
+          "publishedAt": "2026-05-14T00:00:00Z",
+          "score": 1800,
+          "summary": "Efficient world model trained in 15 days on 64 H100s. Generates 60s 720p clips on one GPU; distilled variant runs on a single RTX 5090.",
+          "why": "World models are the simulation backbone for agents that need to plan in visual environments. Making them this small and fast changes what's possible for embodied agents."
+        },
+        {
           "title": "Zerostack – A Unix-inspired coding agent written in pure Rust",
           "source": "Hacker News",
           "url": "https://crates.io/crates/zerostack/1.0.0",
           "meta": "55 pts · 9 comments",
-          "topics": ["Coding agents", "Open weights"],
+          "topics": [
+            "Coding agents",
+            "Open weights"
+          ],
           "publishedAt": "2026-05-16T22:23:00Z",
           "score": 1650,
           "summary": "A tiny Rust coding agent that runs in 8MB of RAM.",
@@ -229,7 +342,10 @@
           "source": "Hacker News",
           "url": "https://danielmay.co.uk/posts/cheap-agents-alumni-shirts-and-elias-thorne/",
           "meta": "25 pts · 10 comments",
-          "topics": ["Evaluation", "Major labs"],
+          "topics": [
+            "Evaluation",
+            "Major labs"
+          ],
           "publishedAt": "2026-05-16T15:01:00Z",
           "score": 750,
           "summary": "How cheap agent mode collapse produces misleading product listings at scale.",
@@ -240,7 +356,10 @@
           "source": "Hacker News",
           "url": "https://github.com/ztc00/algora-scout/blob/main/POST.md",
           "meta": "24 pts · 4 comments",
-          "topics": ["Coding agents", "Evaluation"],
+          "topics": [
+            "Coding agents",
+            "Evaluation"
+          ],
           "publishedAt": "2026-05-16T22:13:00Z",
           "score": 720,
           "summary": "Documenting the economics of using Claude to complete open-source bounties.",
@@ -251,33 +370,42 @@
           "source": "Hacker News",
           "url": "https://webflow.com/blog/cleanup-cost-ai-generated-code",
           "meta": "5 pts · 0 comments",
-          "topics": ["Coding agents", "Evaluation"],
+          "topics": [
+            "Coding agents",
+            "Evaluation"
+          ],
           "publishedAt": "2026-05-16T18:19:00Z",
           "score": 150,
           "summary": "The hidden maintenance and cleanup costs of shipping AI-generated code.",
           "why": "Reality check: generation speed is only half the story; long-term code health still matters."
         },
         {
-          "title": "We Can Now Read What Claude Is Thinking. Kind Of",
-          "source": "Hacker News",
-          "url": "https://priorcontext.substack.com/p/we-can-now-read-what-claude-is-thinking",
-          "meta": "3 pts · 2 comments",
-          "topics": ["Major labs", "Evaluation"],
-          "publishedAt": "2026-05-15T23:58:00Z",
-          "score": 90,
-          "summary": "New techniques for interpreting Claude's internal chain-of-thought and reasoning traces.",
-          "why": "Interpretability progress on frontier models could unlock safer agent oversight."
-        },
-        {
           "title": "Ask HN: Do you still spend time maintaining Claude.md / AGENTS.md files?",
           "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=48160604",
           "meta": "4 pts · 7 comments",
-          "topics": ["Coding agents", "Interfaces"],
+          "topics": [
+            "Coding agents",
+            "Interfaces"
+          ],
           "publishedAt": "2026-05-16T14:33:00Z",
           "score": 120,
           "summary": "Discussion on whether agent instruction files remain useful as agents get smarter.",
           "why": "A meta-signal: the community is evolving its conventions for how to steer agents."
+        },
+        {
+          "title": "We Can Now Read What Claude Is Thinking. Kind Of",
+          "source": "Hacker News",
+          "url": "https://priorcontext.substack.com/p/we-can-now-read-what-claude-is-thinking",
+          "meta": "3 pts · 2 comments",
+          "topics": [
+            "Major labs",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-05-15T23:58:00Z",
+          "score": 90,
+          "summary": "New techniques for interpreting Claude's internal chain-of-thought and reasoning traces.",
+          "why": "Interpretability progress on frontier models could unlock safer agent oversight."
         }
       ]
     },
@@ -290,7 +418,10 @@
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1terzq4/mtp_pr_merged/",
           "meta": "619 upvotes · 103 comments",
-          "topics": ["Open weights", "Infra and retrieval"],
+          "topics": [
+            "Open weights",
+            "Infra and retrieval"
+          ],
           "publishedAt": "2026-05-16T12:13:00Z",
           "score": 6190,
           "summary": "Multi-Token Prediction officially merged into llama.cpp.",
@@ -301,7 +432,10 @@
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1tente2/researchers_let_ais_run_their_own_radio_stations/",
           "meta": "1350 upvotes · 167 comments",
-          "topics": ["Major labs", "Interfaces"],
+          "topics": [
+            "Major labs",
+            "Interfaces"
+          ],
           "publishedAt": "2026-05-16T08:31:00Z",
           "score": 6750,
           "summary": "Claude assigned as DJ refused and quit.",
@@ -312,7 +446,10 @@
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1teuh5w/reviewing_aigenerated_pull_requests_in_2026/",
           "meta": "1313 upvotes · 55 comments",
-          "topics": ["Coding agents", "Evaluation"],
+          "topics": [
+            "Coding agents",
+            "Evaluation"
+          ],
           "publishedAt": "2026-05-16T13:59:00Z",
           "score": 6565,
           "summary": "Community thread on the reality of AI-generated PR review.",
@@ -323,7 +460,11 @@
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1temio0/qwen3635ba3b_and_9b_are_officially_on_the_public/",
           "meta": "235 upvotes · 57 comments",
-          "topics": ["Open weights", "Major labs", "Coding agents"],
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
           "publishedAt": "2026-05-16T07:19:00Z",
           "score": 2350,
           "summary": "Verified Terminal-Bench 2.0 benchmarks for Qwen 3.6 models.",
@@ -334,7 +475,11 @@
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf3p6c/local_qwen_36_vs_frontier_models_on_a_coding/",
           "meta": "163 upvotes · 63 comments",
-          "topics": ["Open weights", "Major labs", "Coding agents"],
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
           "publishedAt": "2026-05-16T19:51:00Z",
           "score": 1630,
           "summary": "Direct comparison of local Qwen 3.6 against frontier models on HTML canvas animation.",
@@ -345,7 +490,10 @@
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1tely7p/non_coders_whats_something_really_helpful_you/",
           "meta": "174 upvotes · 210 comments",
-          "topics": ["Major labs", "Interfaces"],
+          "topics": [
+            "Major labs",
+            "Interfaces"
+          ],
           "publishedAt": "2026-05-16T06:49:00Z",
           "score": 1740,
           "summary": "210 comments of non-coders sharing real-world Claude projects.",
@@ -356,7 +504,10 @@
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1tewsnz/claude_tried_to_incite_a_revolution_gemini/",
           "meta": "104 upvotes · 34 comments",
-          "topics": ["Major labs", "Evaluation"],
+          "topics": [
+            "Major labs",
+            "Evaluation"
+          ],
           "publishedAt": "2026-05-16T15:28:00Z",
           "score": 1040,
           "summary": "Comparative behavior study across Claude, Gemini, and Grok.",
@@ -367,7 +518,10 @@
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1teuspg/gave_claude_code_persistent_memory_and_after_200/",
           "meta": "67 upvotes · 55 comments",
-          "topics": ["Memory and state", "Major labs"],
+          "topics": [
+            "Memory and state",
+            "Major labs"
+          ],
           "publishedAt": "2026-05-16T14:12:00Z",
           "score": 670,
           "summary": "Anecdotal behavior drift in Claude Code with long-term persistent memory.",
@@ -378,7 +532,10 @@
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1teskrc/built_an_agentic_rag_over_my_obsidian_vault_so/",
           "meta": "10 upvotes · 9 comments",
-          "topics": ["Tool use", "Memory and state"],
+          "topics": [
+            "Tool use",
+            "Memory and state"
+          ],
           "publishedAt": "2026-05-16T12:39:00Z",
           "score": 100,
           "summary": "Concrete agentic RAG implementation for personal knowledge management.",
@@ -389,7 +546,10 @@
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1tf76wp/i_replicated_anthropics_generatorevaluator/",
           "meta": "7 upvotes · 3 comments",
-          "topics": ["Coding agents", "Evaluation"],
+          "topics": [
+            "Coding agents",
+            "Evaluation"
+          ],
           "publishedAt": "2026-05-16T22:14:00Z",
           "score": 70,
           "summary": "Community replication of Anthropic's research methodology for adversarial building.",
@@ -406,7 +566,10 @@
           "source": "Hugging Face",
           "url": "https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF",
           "meta": "190 likes · 133,815 downloads",
-          "topics": ["Open weights", "Major labs"],
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
           "publishedAt": "2026-05-11T12:57:11.000Z",
           "score": 893.815,
           "summary": "GGUF quantization of Qwen 3.6 27B with MTP support.",
@@ -417,7 +580,10 @@
           "source": "Hugging Face",
           "url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
           "meta": "172 likes · 124,082 downloads",
-          "topics": ["Open weights", "Major labs"],
+          "topics": [
+            "Open weights",
+            "Major labs"
+          ],
           "publishedAt": "2026-05-11T12:57:12.000Z",
           "score": 812.082,
           "summary": "GGUF quantization of Qwen 3.6 35B A3B with MTP support.",
@@ -434,7 +600,10 @@
           "source": "GitHub",
           "url": "https://github.com/gi-dellav/zerostack/tree/main",
           "meta": "Tiny Rust coding agent in 8MB of RAM",
-          "topics": ["Coding agents", "Open weights"],
+          "topics": [
+            "Coding agents",
+            "Open weights"
+          ],
           "publishedAt": "2026-05-16T22:21:00Z",
           "score": 1650,
           "summary": "Unix-inspired coding agent written in pure Rust, pipe-friendly and composable.",
@@ -445,7 +614,10 @@
           "source": "GitHub",
           "url": "https://github.com/ztc00/algora-scout",
           "meta": "Claude bounty hunter for open-source issues",
-          "topics": ["Coding agents", "Evaluation"],
+          "topics": [
+            "Coding agents",
+            "Evaluation"
+          ],
           "publishedAt": "2026-05-16T22:13:00Z",
           "score": 720,
           "summary": "Agent that uses Claude to identify and complete open-source bounty tasks.",
@@ -456,7 +628,10 @@
           "source": "GitHub",
           "url": "https://github.com/MukundaKatta/hermes-agentmemory",
           "meta": "Pull-model episodic memory with real deletes",
-          "topics": ["Memory and state", "Coding agents"],
+          "topics": [
+            "Memory and state",
+            "Coding agents"
+          ],
           "publishedAt": "2026-05-16T18:00:00Z",
           "score": 400,
           "summary": "Episodic memory system for agents with pull-model retrieval and genuine deletion support.",
@@ -467,7 +642,10 @@
           "source": "GitHub",
           "url": "https://github.com/aictx/memory",
           "meta": "Local, reviewable repo memory for coding agents",
-          "topics": ["Memory and state", "Coding agents"],
+          "topics": [
+            "Memory and state",
+            "Coding agents"
+          ],
           "publishedAt": "2026-05-16T20:43:00Z",
           "score": 300,
           "summary": "Coding agent memory that lives in the repo, is diffable, and reviewable via PR.",
@@ -478,7 +656,10 @@
           "source": "GitHub",
           "url": "https://github.com/RhyChaw/palace-ai",
           "meta": "Memory palace for AI agents",
-          "topics": ["Memory and state", "Interfaces"],
+          "topics": [
+            "Memory and state",
+            "Interfaces"
+          ],
           "publishedAt": "2026-05-16T18:29:00Z",
           "score": 300,
           "summary": "A memory-palace-inspired architecture for organizing agent context using spatial and associative cues.",
@@ -489,7 +670,10 @@
           "source": "GitHub",
           "url": "https://github.com/BerriAI/litellm-agent-platform",
           "meta": "Run Claude Code/Codex on-prem sandboxes and vaults",
-          "topics": ["Tool use", "Multi-agent workflows"],
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows"
+          ],
           "publishedAt": "2026-05-16T00:22:00Z",
           "score": 300,
           "summary": "On-premise agent platform with sandboxing and secret vaults for enterprise deployments.",
@@ -501,9 +685,10 @@
   "tangentRadar": [
     {
       "topic": "Local inference acceleration",
-      "signalCount": 8,
+      "signalCount": 9,
       "whyItMatters": "MTP in llama.cpp, Orthrus speculative decoding, and GGUF releases are making local agents fast enough for real-time loops. This changes who can build and run agents.",
       "signals": [
+        "arXiv: SANA-WM 2.6B world model runs on single GPU/RTX 5090 (May 14)",
         "Reddit: MTP PR merged into llama.cpp (619 upvotes)",
         "Hugging Face: unsloth Qwen3.6 MTP GGUF downloads climbing",
         "GitHub: Zerostack agent in 8MB RAM"
@@ -511,9 +696,10 @@
     },
     {
       "topic": "Enterprise agent packaging",
-      "signalCount": 7,
+      "signalCount": 8,
       "whyItMatters": "OpenAI and Anthropic are no longer selling models — they're selling verticalized agent bundles with connectors, templates, and change management.",
       "signals": [
+        "OpenAI: Product reorganization under Brockman for single agentic platform (May 15)",
         "OpenAI: Deployment Company ($4B+ enterprise unit)",
         "OpenAI: Personal finance in ChatGPT (12,000+ institutions)",
         "Anthropic: Finance agents with Office add-ins",
@@ -522,9 +708,10 @@
     },
     {
       "topic": "Agent memory and state",
-      "signalCount": 6,
+      "signalCount": 7,
       "whyItMatters": "Persistent memory is moving from research curiosity to production need, but drift and manageability are still unsolved.",
       "signals": [
+        "arXiv: δ-mem — fixed-size online memory via delta-rule learning (May 12)",
         "Reddit: Claude swearing after 200 sessions with persistent memory",
         "GitHub: hermes-agentmemory with real deletes",
         "GitHub: aictx/memory (reviewable repo memory)",
