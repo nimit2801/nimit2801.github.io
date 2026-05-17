@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-17T03:56:06Z",
+  "generatedAt": "2026-05-17T06:49:19Z",
   "windowDays": 7,
   "summary": "This cycle says tiny tool-calling models are becoming real, major labs are packaging agent workflows for broader adoption, the local/open-weight stack keeps getting stronger around Qwen-style setups, the interface layer is starting to shift beyond plain chat. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 58,
+    "items": 57,
     "sources": {
       "Anthropic": 3,
-      "GitHub": 39,
+      "GitHub": 38,
       "Google DeepMind": 1,
       "Hacker News": 3,
       "Hugging Face": 2,
@@ -61,7 +61,7 @@
       "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
       "source": "Hacker News",
       "url": "https://github.com/cactus-compute/needle",
-      "meta": "759 pts · 210 comments",
+      "meta": "760 pts · 210 comments",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -69,7 +69,7 @@
         "Major labs"
       ],
       "publishedAt": "2026-05-12T18:03:11Z",
-      "score": 2268,
+      "score": 2270,
       "summary": "Hey HN, Henry here from Cactus. We open-sourced Needle, a 26M parameter function-calling (tool use) model. It runs at 6000 tok&#x2F;s prefill and 1200 tok&#x2F;s decode on consumer devices. We were always frustrated by the little effort made towards building agentic models that run on budget phones, so we conducted investigations that led to an observation: agentic experiences are built upon tool calling, and massive models are overkill for it. Tool calling is fundamentally retrieval-and-assembly (match query to tool name, extract argument values, emit JSON), not reasoning. Cross-attention is the right primitive for this, and FFN parameters are wasted at this scale. Simple Attention Networks: the entire model is just attention and gating, no MLPs anywhere. Needle is an experimental run for single-shot function calling for consumer devices (phones, watches, glasses...). Training: - Pretrained on 200B tokens across 16 TPU v6e (27 hours) - Post-trained on 2B tokens of synthesized function-calling data (45 minutes) - Dataset synthesized via Gemini with 15 tool categories (timers, messaging, navigation, smart home, etc.) You can test it right now and finetune on your Mac&#x2F;PC: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle The full writeup on the architecture is here: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle&#x2F;blob&#x2F;main&#x2F;docs&#x2F;simp... We found that the \"no FFN\" finding generalizes beyond function calling to any task where the model has access to external structured knowledge (RAG, tool use, retrieval-augmented generation). The model doesn&#x27;t need to memorize facts in FFN weights if the facts are provided in the input. Experimental results to published. While it beats FunctionGemma-270M, Qwen-0.6B, Granite-350M, LFM2.5-350M on single-shot function calling, those models have more scope&#x2F;capacity and excel in conversational settings. We encourage you to test on your own tools via the playground and finetune accordingly. This is part of our broader work on Cactus ( https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;cactus ), an inference engine built from scratch for mobile, wearables and custom hardware. We wrote about Cactus here previously: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44524544 Everything is MIT licensed. Weights: https:&#x2F;&#x2F;huggingface.co&#x2F;Cactus-Compute&#x2F;needle GitHub: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle",
       "why": "A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs."
     },
@@ -77,13 +77,13 @@
       "title": "unsloth/Qwen3.6-27B-MTP-GGUF",
       "source": "Hugging Face",
       "url": "https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF",
-      "meta": "204 likes · 133,815 downloads",
+      "meta": "207 likes · 133,815 downloads",
       "topics": [
         "Open weights",
         "Major labs"
       ],
       "publishedAt": "2026-05-11T12:57:11.000Z",
-      "score": 949.815,
+      "score": 961.815,
       "summary": "transformers gguf unsloth qwen qwen3_5 image-text-to-text base_model:Qwen/Qwen3.6-27B base_model:quantized:Qwen/Qwen3.6-27B license:apache-2.0 endpoints_compatible region:us imatrix conversational",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -91,13 +91,13 @@
       "title": "yetone/native-feel-skill",
       "source": "GitHub",
       "url": "https://github.com/yetone/native-feel-skill",
-      "meta": "1237 stars · updated Fri, 15 May 2026 04:37:05 UTC",
+      "meta": "1245 stars · updated Fri, 15 May 2026 04:37:05 UTC",
       "topics": [
         "Coding agents",
         "Interfaces"
       ],
       "publishedAt": "2026-05-14T19:28:43Z",
-      "score": 7718,
+      "score": 7766,
       "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
       "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
     },
@@ -105,13 +105,13 @@
       "title": "HermannBjorgvin/Clawdmeter",
       "source": "GitHub",
       "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-      "meta": "1087 stars · updated Thu, 14 May 2026 19:01:57 UTC",
+      "meta": "1097 stars · updated Thu, 14 May 2026 19:01:57 UTC",
       "topics": [
         "Coding agents",
         "Interfaces"
       ],
       "publishedAt": "2026-05-11T03:07:49Z",
-      "score": 6898,
+      "score": 6958,
       "summary": "ESP32 desk dashboard that shows Claude Code usage",
       "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
     }
@@ -219,7 +219,7 @@
           "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
           "source": "Hacker News",
           "url": "https://github.com/cactus-compute/needle",
-          "meta": "759 pts · 210 comments",
+          "meta": "760 pts · 210 comments",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -227,7 +227,7 @@
             "Major labs"
           ],
           "publishedAt": "2026-05-12T18:03:11Z",
-          "score": 2268,
+          "score": 2270,
           "summary": "Hey HN, Henry here from Cactus. We open-sourced Needle, a 26M parameter function-calling (tool use) model. It runs at 6000 tok&#x2F;s prefill and 1200 tok&#x2F;s decode on consumer devices. We were always frustrated by the little effort made towards building agentic models that run on budget phones, so we conducted investigations that led to an observation: agentic experiences are built upon tool calling, and massive models are overkill for it. Tool calling is fundamentally retrieval-and-assembly (match query to tool name, extract argument values, emit JSON), not reasoning. Cross-attention is the right primitive for this, and FFN parameters are wasted at this scale. Simple Attention Networks: the entire model is just attention and gating, no MLPs anywhere. Needle is an experimental run for single-shot function calling for consumer devices (phones, watches, glasses...). Training: - Pretrained on 200B tokens across 16 TPU v6e (27 hours) - Post-trained on 2B tokens of synthesized function-calling data (45 minutes) - Dataset synthesized via Gemini with 15 tool categories (timers, messaging, navigation, smart home, etc.) You can test it right now and finetune on your Mac&#x2F;PC: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle The full writeup on the architecture is here: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle&#x2F;blob&#x2F;main&#x2F;docs&#x2F;simp... We found that the \"no FFN\" finding generalizes beyond function calling to any task where the model has access to external structured knowledge (RAG, tool use, retrieval-augmented generation). The model doesn&#x27;t need to memorize facts in FFN weights if the facts are provided in the input. Experimental results to published. While it beats FunctionGemma-270M, Qwen-0.6B, Granite-350M, LFM2.5-350M on single-shot function calling, those models have more scope&#x2F;capacity and excel in conversational settings. We encourage you to test on your own tools via the playground and finetune accordingly. This is part of our broader work on Cactus ( https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;cactus ), an inference engine built from scratch for mobile, wearables and custom hardware. We wrote about Cactus here previously: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44524544 Everything is MIT licensed. Weights: https:&#x2F;&#x2F;huggingface.co&#x2F;Cactus-Compute&#x2F;needle GitHub: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle",
           "why": "A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs."
         },
@@ -275,13 +275,13 @@
           "title": "unsloth/Qwen3.6-27B-MTP-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF",
-          "meta": "204 likes · 133,815 downloads",
+          "meta": "207 likes · 133,815 downloads",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-05-11T12:57:11.000Z",
-          "score": 949.815,
+          "score": 961.815,
           "summary": "transformers gguf unsloth qwen qwen3_5 image-text-to-text base_model:Qwen/Qwen3.6-27B base_model:quantized:Qwen/Qwen3.6-27B license:apache-2.0 endpoints_compatible region:us imatrix conversational",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -289,13 +289,13 @@
           "title": "unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
-          "meta": "187 likes · 124,082 downloads",
+          "meta": "188 likes · 124,082 downloads",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-05-11T12:57:12.000Z",
-          "score": 872.082,
+          "score": 876.082,
           "summary": "transformers gguf unsloth qwen qwen3_5_moe image-text-to-text base_model:Qwen/Qwen3.6-35B-A3B base_model:quantized:Qwen/Qwen3.6-35B-A3B license:apache-2.0 endpoints_compatible region:us imatrix conversational",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -309,13 +309,13 @@
           "title": "yetone/native-feel-skill",
           "source": "GitHub",
           "url": "https://github.com/yetone/native-feel-skill",
-          "meta": "1237 stars · updated Fri, 15 May 2026 04:37:05 UTC",
+          "meta": "1245 stars · updated Fri, 15 May 2026 04:37:05 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-14T19:28:43Z",
-          "score": 7718,
+          "score": 7766,
           "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         },
@@ -323,13 +323,13 @@
           "title": "HermannBjorgvin/Clawdmeter",
           "source": "GitHub",
           "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "1087 stars · updated Thu, 14 May 2026 19:01:57 UTC",
+          "meta": "1097 stars · updated Thu, 14 May 2026 19:01:57 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-11T03:07:49Z",
-          "score": 6898,
+          "score": 6958,
           "summary": "ESP32 desk dashboard that shows Claude Code usage",
           "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
         },
@@ -337,7 +337,7 @@
           "title": "DenisSergeevitch/agents-best-practices",
           "source": "GitHub",
           "url": "https://github.com/DenisSergeevitch/agents-best-practices",
-          "meta": "586 stars · updated Fri, 15 May 2026 23:01:42 UTC",
+          "meta": "603 stars · updated Fri, 15 May 2026 23:01:42 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -345,7 +345,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-05-15T21:32:21Z",
-          "score": 3794,
+          "score": 3896,
           "summary": "Provider-neutral Agent Skill for Codex, Claude Code, and agentic harness design.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
@@ -370,22 +370,12 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 33,
+      "signalCount": 34,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
         "Hacker News: Show HN: Statewright – Visual state machines that make AI agents reliable",
         "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox"
-      ]
-    },
-    {
-      "topic": "Major labs",
-      "signalCount": 30,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
-      "signals": [
-        "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
-        "Anthropic: Claude for Small Business",
-        "Anthropic: Agent View in Claude Code"
       ]
     },
     {
@@ -396,6 +386,16 @@
         "Anthropic: Agent View in Claude Code",
         "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox",
         "OpenAI: Codex is now in the ChatGPT mobile app"
+      ]
+    },
+    {
+      "topic": "Major labs",
+      "signalCount": 29,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
+        "Anthropic: Claude for Small Business",
+        "Anthropic: Agent View in Claude Code"
       ]
     },
     {
@@ -410,7 +410,7 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 17,
+      "signalCount": 16,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
