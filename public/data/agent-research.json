@@ -1,38 +1,68 @@
 {
-  "generatedAt": "2026-05-18T07:30:28Z",
+  "generatedAt": "2026-05-18T08:42:51Z",
   "windowDays": 7,
-  "summary": "This cycle says major labs are pushing coding agents into science and enterprise (AlphaEvolve, PwC Claude), consumer agentic finance is arriving, tiny tool-calling models keep getting smaller, and the interface layer is fragmenting into notch agents, memory browsers, and terminal-native coding tools. The deeper pattern: agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says tiny tool-calling models are becoming real, major labs are packaging agent workflows for broader adoption, and the local/open-weight stack keeps getting stronger around Qwen-style setups. Fresh signals from May 18 include a 4B-parameter coding agent hitting 87% on benchmarks, P2P mesh networking for agent fleets, dedicated agent browsers, and growing tooling around session memory and usage management. The deeper pattern: agentic AI is being compressed, networked, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 94,
+    "items": 40,
     "sources": {
       "Anthropic": 2,
-      "GitHub": 7,
-      "Google DeepMind": 2,
-      "Hacker News": 6,
-      "Hugging Face": 2,
       "OpenAI": 5,
-      "Reddit": 5
+      "Google DeepMind": 2,
+      "Hacker News": 10,
+      "Reddit": 9,
+      "Hugging Face": 2,
+      "GitHub": 10
     }
   },
   "highlights": [
     {
+      "title": "yetone/native-feel-skill",
+      "source": "GitHub",
+      "url": "https://github.com/yetone/native-feel-skill",
+      "meta": "1290 stars · updated Fri, 15 May 2026 04:37:05 UTC",
+      "topics": [
+        "Coding agents",
+        "Interfaces"
+      ],
+      "publishedAt": "2026-05-14T19:28:43Z",
+      "score": 8042,
+      "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
+      "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+    },
+    {
       "title": "Claude for Small Business",
       "source": "Anthropic",
       "url": "https://www.anthropic.com/news/claude-for-small-business",
-      "meta": "539 pts \u00b7 472 comments",
+      "meta": "539 pts · 472 comments",
       "topics": [
         "Major labs"
       ],
       "publishedAt": "2026-05-14T03:59:35Z",
       "score": 2594,
       "summary": "",
-      "why": "This is one of the clearest signs that agentic workflows are being packaged for normal businesses, not just developers \u2014 connectors and ready-to-run automations are becoming the product."
+      "why": "This is one of the clearest signs that agentic workflows are being packaged for normal businesses, not just developers — connectors and ready-to-run automations are becoming the product."
+    },
+    {
+      "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
+      "source": "Hacker News",
+      "url": "https://github.com/cactus-compute/needle",
+      "meta": "768 pts · 210 comments",
+      "topics": [
+        "Tool use",
+        "Evaluation",
+        "Open weights",
+        "Major labs"
+      ],
+      "publishedAt": "2026-05-12T18:03:11Z",
+      "score": 2286,
+      "summary": "Hey HN, Henry here from Cactus. We open-sourced Needle, a 26M parameter function-calling (tool use) model. It runs at 6000 tok&#x2F;s prefill and 1200 tok&#x2F;s decode on consumer devices. We were always frustrated by the little effort made towards building agentic models that run on budget phones, so we conducted investigations that led to an observation: agentic experiences are built upon tool calling, and massive models are overkill for it. Tool calling is fundamentally retrieval-and-assembly (match query to tool name, extract argument values, emit JSON), not reasoning. Cross-attention is the right primitive for this, and FFN parameters are wasted at this scale. Simple Attention Networks: the entire model is just attention and gating, no MLPs anywhere. Needle is an experimental run for single-shot function calling for consumer devices (phones, watches, glasses...). Training: - Pretrained on 200B tokens across 16 TPU v6e (27 hours) - Post-trained on 2B tokens of synthesized function-calling data (45 minutes) - Dataset synthesized via Gemini with 15 tool categories (timers, messaging, navigation, smart home, etc.) You can test it right now and finetune on your Mac&#x2F;PC: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle The full writeup on the architecture is here: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle&#x2F;blob&#x2F;main&#x2F;docs&#x2F;simp... We found that the \"no FFN\" finding generalizes beyond function calling to any task where the model has access to external structured knowledge (RAG, tool use, retrieval-augmented generation). The model doesn&#x27;t need to memorize facts in FFN weights if the facts are provided in the input. Experimental results to published. While it beats FunctionGemma-270M, Qwen-0.6B, Granite-350M, LFM2.5-350M on single-shot function calling, those models have more scope&#x2F;capacity and excel in conversational settings. We encourage you to test on your own tools via the playground and finetune accordingly. This is part of our broader work on Cactus ( https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;cactus ), an inference engine built from scratch for mobile, wearables and custom hardware. We wrote about Cactus here previously: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44524544 Everything is MIT licensed. Weights: https:&#x2F;&#x2F;huggingface.co&#x2F;Cactus-Compute&#x2F;needle GitHub: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle",
+      "why": "A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs."
     },
     {
       "title": "Codex is now in the ChatGPT mobile app",
       "source": "OpenAI",
       "url": "https://openai.com/index/work-with-codex-from-anywhere/",
-      "meta": "485 pts \u00b7 247 comments",
+      "meta": "485 pts · 247 comments",
       "topics": [
         "Tool use",
         "Major labs",
@@ -58,39 +88,10 @@
       "why": "A Gemini-powered coding agent scaling across scientific and engineering fields shows how major labs are pushing autonomous coding beyond software engineering into math and science discovery."
     },
     {
-      "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
-      "source": "Hacker News",
-      "url": "https://github.com/cactus-compute/needle",
-      "meta": "768 pts \u00b7 210 comments",
-      "topics": [
-        "Tool use",
-        "Evaluation",
-        "Open weights",
-        "Major labs"
-      ],
-      "publishedAt": "2026-05-12T18:03:11Z",
-      "score": 2286,
-      "summary": "Hey HN, Henry here from Cactus. We open-sourced Needle, a 26M parameter function-calling (tool use) model. It runs at 6000 tok&#x2F;s prefill and 1200 tok&#x2F;s decode on consumer devices. We were always frustrated by the little effort made towards building agentic models that run on budget phones, so we conducted investigations that led to an observation: agentic experiences are built upon tool calling, and massive models are overkill for it. Tool calling is fundamentally retrieval-and-assembly (match query to tool name, extract argument values, emit JSON), not reasoning. Cross-attention is the right primitive for this, and FFN parameters are wasted at this scale. Simple Attention Networks: the entire model is just attention and gating, no MLPs anywhere. Needle is an experimental run for single-shot function calling for consumer devices (phones, watches, glasses...). Training: - Pretrained on 200B tokens across 16 TPU v6e (27 hours) - Post-trained on 2B tokens of synthesized function-calling data (45 minutes) - Dataset synthesized via Gemini with 15 tool categories (timers, messaging, navigation, smart home, etc.) You can test it right now and finetune on your Mac&#x2F;PC: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle The full writeup on the architecture is here: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle&#x2F;blob&#x2F;main&#x2F;docs&#x2F;simp... We found that the \"no FFN\" finding generalizes beyond function calling to any task where the model has access to external structured knowledge (RAG, tool use, retrieval-augmented generation). The model doesn&#x27;t need to memorize facts in FFN weights if the facts are provided in the input. Experimental results to published. While it beats FunctionGemma-270M, Qwen-0.6B, Granite-350M, LFM2.5-350M on single-shot function calling, those models have more scope&#x2F;capacity and excel in conversational settings. We encourage you to test on your own tools via the playground and finetune accordingly. This is part of our broader work on Cactus ( https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;cactus ), an inference engine built from scratch for mobile, wearables and custom hardware. We wrote about Cactus here previously: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44524544 Everything is MIT licensed. Weights: https:&#x2F;&#x2F;huggingface.co&#x2F;Cactus-Compute&#x2F;needle GitHub: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle",
-      "why": "A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs."
-    },
-    {
-      "title": "Interaction Models",
-      "source": "Hacker News",
-      "url": "https://thinkingmachines.ai/blog/interaction-models/",
-      "meta": "331 pts \u00b7 53 comments",
-      "topics": [
-        "Interfaces"
-      ],
-      "publishedAt": "2026-05-11T20:53:37Z",
-      "score": 906,
-      "summary": "",
-      "why": "This is a strong tangent for agent builders: the interface layer is shifting from turn-by-turn chat toward continuous, multimodal collaboration loops."
-    },
-    {
       "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
       "source": "Reddit",
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
-      "meta": "673 upvotes \u00b7 228 comments",
+      "meta": "673 upvotes · 228 comments",
       "topics": [
         "Tool use",
         "Open weights",
@@ -99,14 +100,27 @@
       ],
       "publishedAt": "2026-05-13T13:00:32Z",
       "score": 1592.8,
-      "summary": "Hi all, I have been making a lot of updates to my project, and I wanted to share them here. TextGen (previously text-generation-webui, also known as my username oobabooga or ooba) has been in development since December\u2026",
+      "summary": "Hi all, I have been making a lot of updates to my project, and I wanted to share them here. TextGen (previously text-generation-webui, also known as my username oobabooga or ooba) has been in development since December…",
       "why": "Local AI tooling is consolidating into more usable products. That matters because many agent workflows only become trustworthy when people can run and inspect them on their own machines."
+    },
+    {
+      "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model, here's how",
+      "source": "Reddit",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/",
+      "meta": "97 upvotes · 52 comments",
+      "topics": [
+        "Coding agents",
+        "Open weights"
+      ],
+      "publishedAt": "2026-05-18T06:38:11Z",
+      "score": 1198,
+      "why": "Small-parameter coding agents are reaching surprisingly high benchmark scores — a sign that efficient agent architectures matter as much as model size."
     },
     {
       "title": "unsloth/Qwen3.6-27B-MTP-GGUF",
       "source": "Hugging Face",
       "url": "https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF",
-      "meta": "241 likes \u00b7 185,303 downloads",
+      "meta": "241 likes · 185,303 downloads",
       "topics": [
         "Open weights",
         "Major labs"
@@ -115,20 +129,6 @@
       "score": 1149.3029999999999,
       "summary": "transformers gguf unsloth qwen qwen3_5 image-text-to-text base_model:Qwen/Qwen3.6-27B base_model:quantized:Qwen/Qwen3.6-27B license:apache-2.0 endpoints_compatible region:us imatrix conversational",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-    },
-    {
-      "title": "yetone/native-feel-skill",
-      "source": "GitHub",
-      "url": "https://github.com/yetone/native-feel-skill",
-      "meta": "1290 stars \u00b7 updated Fri, 15 May 2026 04:37:05 UTC",
-      "topics": [
-        "Coding agents",
-        "Interfaces"
-      ],
-      "publishedAt": "2026-05-14T19:28:43Z",
-      "score": 8042,
-      "summary": "An Agent Skill for designing cross-platform desktop apps that feel native \u2014 distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
-      "why": "Agent UX is moving beyond chat boxes \u2014 interface design is becoming part of the research frontier."
     }
   ],
   "sourceSections": [
@@ -140,20 +140,20 @@
           "title": "Claude for Small Business",
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/claude-for-small-business",
-          "meta": "539 pts \u00b7 472 comments",
+          "meta": "539 pts · 472 comments",
           "topics": [
             "Major labs"
           ],
           "publishedAt": "2026-05-14T03:59:35Z",
           "score": 2594,
           "summary": "",
-          "why": "This is one of the clearest signs that agentic workflows are being packaged for normal businesses, not just developers \u2014 connectors and ready-to-run automations are becoming the product."
+          "why": "This is one of the clearest signs that agentic workflows are being packaged for normal businesses, not just developers — connectors and ready-to-run automations are becoming the product."
         },
         {
           "title": "Codex is now in the ChatGPT mobile app",
           "source": "OpenAI",
           "url": "https://openai.com/index/work-with-codex-from-anywhere/",
-          "meta": "485 pts \u00b7 247 comments",
+          "meta": "485 pts · 247 comments",
           "topics": [
             "Tool use",
             "Major labs",
@@ -190,7 +190,7 @@
           ],
           "score": 1400,
           "summary": "",
-          "why": "ChatGPT expanding into personal finance shows how agentic workflows are being packaged for everyday consumer tasks \u2014 not just coding or business ops."
+          "why": "ChatGPT expanding into personal finance shows how agentic workflows are being packaged for everyday consumer tasks — not just coding or business ops."
         },
         {
           "title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions",
@@ -203,13 +203,13 @@
           ],
           "score": 1300,
           "summary": "",
-          "why": "One of the largest enterprise agent deployments yet \u2014 PwC using Claude across technology building, deal execution, and enterprise reinvention."
+          "why": "One of the largest enterprise agent deployments yet — PwC using Claude across technology building, deal execution, and enterprise reinvention."
         },
         {
           "title": "Reimagining the mouse pointer for the AI era",
           "source": "Google DeepMind",
           "url": "https://deepmind.google/blog/ai-pointer/",
-          "meta": "251 pts \u00b7 213 comments",
+          "meta": "251 pts · 213 comments",
           "topics": [
             "Voice and multimodal",
             "Major labs",
@@ -275,7 +275,7 @@
           "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
           "source": "Hacker News",
           "url": "https://github.com/cactus-compute/needle",
-          "meta": "768 pts \u00b7 210 comments",
+          "meta": "768 pts · 210 comments",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -291,7 +291,7 @@
           "title": "Interaction Models",
           "source": "Hacker News",
           "url": "https://thinkingmachines.ai/blog/interaction-models/",
-          "meta": "331 pts \u00b7 53 comments",
+          "meta": "331 pts · 53 comments",
           "topics": [
             "Interfaces"
           ],
@@ -301,10 +301,10 @@
           "why": "This is a strong tangent for agent builders: the interface layer is shifting from turn-by-turn chat toward continuous, multimodal collaboration loops."
         },
         {
-          "title": "Show HN: Statewright \u2013 Visual state machines that make AI agents reliable",
+          "title": "Show HN: Statewright – Visual state machines that make AI agents reliable",
           "source": "Hacker News",
           "url": "https://github.com/statewright/statewright",
-          "meta": "126 pts \u00b7 56 comments",
+          "meta": "126 pts · 56 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -320,7 +320,7 @@
           "title": "I tried to make Claude make me money on open-source bounties",
           "source": "Hacker News",
           "url": "https://github.com/ztc00/algora-scout/blob/main/POST.md",
-          "meta": "37 pts \u00b7 24 comments",
+          "meta": "37 pts · 24 comments",
           "publishedAt": "2026-05-17T00:00:00Z",
           "topics": [
             "Coding agents",
@@ -328,13 +328,13 @@
           ],
           "score": 450,
           "summary": "",
-          "why": "A real-world experiment deploying Claude as an autonomous bounty hunter \u2014 measuring whether agentic coding can actually generate income on open-source platforms."
+          "why": "A real-world experiment deploying Claude as an autonomous bounty hunter — measuring whether agentic coding can actually generate income on open-source platforms."
         },
         {
-          "title": "AnyFrame \u2013 Sandboxes for Your AI Agents",
+          "title": "AnyFrame – Sandboxes for Your AI Agents",
           "source": "Hacker News",
           "url": "https://github.com/tinyhq/anyframe-python",
-          "meta": "3 pts \u00b7 3 comments",
+          "meta": "3 pts · 3 comments",
           "publishedAt": "2026-05-17T00:00:00Z",
           "topics": [
             "Tool use",
@@ -342,13 +342,13 @@
           ],
           "score": 350,
           "summary": "",
-          "why": "Sandboxing is becoming a critical primitive for safe agent execution \u2014 lightweight isolation for AI agents that need to run untrusted code."
+          "why": "Sandboxing is becoming a critical primitive for safe agent execution — lightweight isolation for AI agents that need to run untrusted code."
         },
         {
           "title": "660 AI agents ran 27,000 experiments. Their biggest discovery was a 2015 textbook result",
           "source": "Hacker News",
           "url": "https://medium.com/@vektormemory/660-ai-agents-ran-27-000-experiments-their-biggest-discovery-was-a-2015-textbook-result-f0a152799e87",
-          "meta": "1 pt \u00b7 2 comments",
+          "meta": "1 pt · 2 comments",
           "publishedAt": "2026-05-17T00:00:00Z",
           "topics": [
             "Evaluation",
@@ -356,7 +356,59 @@
           ],
           "score": 200,
           "summary": "",
-          "why": "A humbling result: massive-scale agent experimentation mostly rediscovered known results \u2014 suggesting we need better hypothesis generation, not just brute-force search."
+          "why": "A humbling result: massive-scale agent experimentation mostly rediscovered known results — suggesting we need better hypothesis generation, not just brute-force search."
+        },
+        {
+          "title": "Show HN: Rotunda - A browser built for agents with simulated typing",
+          "source": "Hacker News",
+          "url": "https://github.com/monkeysee-ai/rotunda",
+          "meta": "13 pts · 3 comments",
+          "topics": [
+            "Tool use",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-13T13:44:01Z",
+          "score": 520,
+          "why": "Browsers purpose-built for agents (with simulated typing and agent-native affordances) suggest the web automation stack is getting its own dedicated tooling layer."
+        },
+        {
+          "title": "Show HN: Agentic interface for mainframes and COBOL",
+          "source": "Hacker News",
+          "url": "https://www.hypercubic.ai/hopper",
+          "meta": "97 pts · 12 comments",
+          "topics": [
+            "Tool use",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-12T17:10:22Z",
+          "score": 970,
+          "why": "Agentic interfaces for legacy systems (mainframes, COBOL) represent a massive real-world deployment surface that most AI research ignores."
+        },
+        {
+          "title": "Launch HN: Voker (YC S24) – Analytics for AI Agents",
+          "source": "Hacker News",
+          "url": "https://voker.ai",
+          "meta": "59 pts · 18 comments",
+          "topics": [
+            "Tool use",
+            "Evaluation"
+          ],
+          "publishedAt": "2026-05-12T15:45:20Z",
+          "score": 590,
+          "why": "Agent analytics is becoming its own product category: measuring what agents actually do, where they fail, and how much they cost is critical for production adoption."
+        },
+        {
+          "title": "Show HN: adamsreview – better multi-agent PR reviews for Claude Code",
+          "source": "Hacker News",
+          "url": "https://github.com/adamjgmiller/adamsreview",
+          "meta": "85 pts · 14 comments",
+          "topics": [
+            "Coding agents",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-05-11T02:06:29Z",
+          "score": 850,
+          "why": "Multi-agent review workflows (where separate agents check style, logic, and tests) are a practical pattern for making coding agents more reliable before merge."
         }
       ]
     },
@@ -368,7 +420,7 @@
           "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
-          "meta": "673 upvotes \u00b7 228 comments",
+          "meta": "673 upvotes · 228 comments",
           "topics": [
             "Tool use",
             "Open weights",
@@ -377,14 +429,14 @@
           ],
           "publishedAt": "2026-05-13T13:00:32Z",
           "score": 1592.8,
-          "summary": "Hi all, I have been making a lot of updates to my project, and I wanted to share them here. TextGen (previously text-generation-webui, also known as my username oobabooga or ooba) has been in development since December\u2026",
+          "summary": "Hi all, I have been making a lot of updates to my project, and I wanted to share them here. TextGen (previously text-generation-webui, also known as my username oobabooga or ooba) has been in development since December…",
           "why": "Local AI tooling is consolidating into more usable products. That matters because many agent workflows only become trustworthy when people can run and inspect them on their own machines."
         },
         {
           "title": "Local Qwen 3.6 vs frontier models on a coding primitive: single-file HTML canvas driving animation - results and GIFs",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf3p6c/local_qwen_36_vs_frontier_models_on_a_coding/",
-          "meta": "694 upvotes \u00b7 195 comments",
+          "meta": "694 upvotes · 195 comments",
           "topics": [
             "Evaluation",
             "Open weights",
@@ -393,28 +445,28 @@
           ],
           "publishedAt": "2026-05-16T19:51:05Z",
           "score": 1500.4,
-          "summary": "Saw [this post](https://www.reddit.com/r/LocalLLaMA/comments/1styxdy/compared_qwen_36_35b_with_qwen_36_27b_for_coding/) comparing Qwen 3.6 variants on coding primitives, so I wanted to see how local quants stack up agai\u2026",
+          "summary": "Saw [this post](https://www.reddit.com/r/LocalLLaMA/comments/1styxdy/compared_qwen_36_35b_with_qwen_36_27b_for_coding/) comparing Qwen 3.6 variants on coding primitives, so I wanted to see how local quants stack up agai…",
           "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
         },
         {
           "title": "New in Claude Code: agent view.",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1tag1i9/new_in_claude_code_agent_view/",
-          "meta": "700 upvotes \u00b7 115 comments",
+          "meta": "700 upvotes · 115 comments",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-11T20:49:33Z",
           "score": 1350,
-          "summary": "One list of all your sessions, available today as a Research Preview. Run `claude agents` to start dispatching multiple sessions at once. Each one keeps running without taking up a terminal tab. See what's running, what\u2026",
+          "summary": "One list of all your sessions, available today as a Research Preview. Run `claude agents` to start dispatching multiple sessions at once. Each one keeps running without taking up a terminal tab. See what's running, what…",
           "why": "This is a small but important supervision signal: as agents get longer-running, people want inspectable timelines and branch-level visibility, not just a terminal blur."
         },
         {
           "title": "You're abusing your subscription with agentic 24/7 workflows and that's why we all get restrictions and limits",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1tcpxi2/youre_abusing_your_subscription_with_agentic_247/",
-          "meta": "444 upvotes \u00b7 214 comments",
+          "meta": "444 upvotes · 214 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -423,14 +475,14 @@
           ],
           "publishedAt": "2026-05-14T06:38:26Z",
           "score": 1198.4,
-          "summary": "Subscription tiers were designed around interactive human use, but autonomous loops changed the usage. It makes sense that companies separate autonomous work from subscriptions. You and I know that when these tiers with\u2026",
-          "why": "Agent UX is moving beyond chat boxes \u2014 interface design is becoming part of the research frontier."
+          "summary": "Subscription tiers were designed around interactive human use, but autonomous loops changed the usage. It makes sense that companies separate autonomous work from subscriptions. You and I know that when these tiers with…",
+          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         },
         {
           "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/",
-          "meta": "19 upvotes \u00b7 16 comments",
+          "meta": "19 upvotes · 16 comments",
           "publishedAt": "2026-05-17T00:00:00Z",
           "topics": [
             "Coding agents",
@@ -438,7 +490,59 @@
           ],
           "score": 400,
           "summary": "",
-          "why": "Small-parameter coding agents are reaching surprisingly high benchmark scores \u2014 a sign that efficient agent architectures matter as much as model size."
+          "why": "Small-parameter coding agents are reaching surprisingly high benchmark scores — a sign that efficient agent architectures matter as much as model size."
+        },
+        {
+          "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model, here's how",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/",
+          "meta": "97 upvotes · 52 comments",
+          "topics": [
+            "Coding agents",
+            "Open weights"
+          ],
+          "publishedAt": "2026-05-18T06:38:11Z",
+          "score": 1198.4,
+          "why": "Small-parameter coding agents are reaching surprisingly high benchmark scores — a sign that efficient agent architectures matter as much as model size."
+        },
+        {
+          "title": "Context loss between sessions, still the biggest unsolved problem in AI coding agents?",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1th1x2z/context_loss_between_sessions_still_the_biggest/",
+          "meta": "1 upvote · 41 comments",
+          "topics": [
+            "Memory and state",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-18T02:27:58Z",
+          "score": 830,
+          "why": "High comment engagement on a persistent pain point: agents that forget context between sessions remain one of the biggest UX gaps in production coding workflows."
+        },
+        {
+          "title": "I built a Claude Code plugin so Claude remembers what I shipped",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1th0z3m/i_built_a_claude_code_plugin_so_claude_remembers/",
+          "meta": "2 upvotes · 2 comments",
+          "topics": [
+            "Memory and state",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-18T02:11:18Z",
+          "score": 350,
+          "why": "As agents accumulate memory, plugins that persist shipping history and context become essential infrastructure for cumulative rather than stateless workflows."
+        },
+        {
+          "title": "Built an agent that builds agents — pure Python, Qwen3.6 35b a3b Q8_0 MTP",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgv1y8/built_an_agent_that_builds_agents_pure_python/",
+          "meta": "0 upvotes · 2 comments",
+          "topics": [
+            "Coding agents",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-05-18T04:46:02Z",
+          "score": 300,
+          "why": "Meta-agent construction — agents that scaffold other agents — is an emerging pattern that could collapse the barrier to building custom agent workflows."
         }
       ]
     },
@@ -450,7 +554,7 @@
           "title": "unsloth/Qwen3.6-27B-MTP-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF",
-          "meta": "241 likes \u00b7 185,303 downloads",
+          "meta": "241 likes · 185,303 downloads",
           "topics": [
             "Open weights",
             "Major labs"
@@ -464,7 +568,7 @@
           "title": "unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
-          "meta": "223 likes \u00b7 181,425 downloads",
+          "meta": "223 likes · 181,425 downloads",
           "topics": [
             "Open weights",
             "Major labs"
@@ -484,21 +588,21 @@
           "title": "yetone/native-feel-skill",
           "source": "GitHub",
           "url": "https://github.com/yetone/native-feel-skill",
-          "meta": "1290 stars \u00b7 updated Fri, 15 May 2026 04:37:05 UTC",
+          "meta": "1290 stars · updated Fri, 15 May 2026 04:37:05 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-14T19:28:43Z",
           "score": 8042,
-          "summary": "An Agent Skill for designing cross-platform desktop apps that feel native \u2014 distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
-          "why": "Agent UX is moving beyond chat boxes \u2014 interface design is becoming part of the research frontier."
+          "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
+          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         },
         {
           "title": "HermannBjorgvin/Clawdmeter",
           "source": "GitHub",
           "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "1154 stars \u00b7 updated Mon, 18 May 2026 00:46:19 UTC",
+          "meta": "1154 stars · updated Mon, 18 May 2026 00:46:19 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
@@ -512,7 +616,7 @@
           "title": "DenisSergeevitch/agents-best-practices",
           "source": "GitHub",
           "url": "https://github.com/DenisSergeevitch/agents-best-practices",
-          "meta": "746 stars \u00b7 updated Fri, 15 May 2026 23:01:42 UTC",
+          "meta": "746 stars · updated Fri, 15 May 2026 23:01:42 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -528,7 +632,7 @@
           "title": "gi-dellav/zerostack",
           "source": "GitHub",
           "url": "https://github.com/gi-dellav/zerostack",
-          "meta": "590 stars \u00b7 updated Sun, 17 May 2026 19:32:26 UTC",
+          "meta": "590 stars · updated Sun, 17 May 2026 19:32:26 UTC",
           "topics": [
             "Tool use",
             "Memory and state",
@@ -541,23 +645,23 @@
           "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
         },
         {
-          "title": "peezy-cli \u2014 A terminal coding agent for real project work",
+          "title": "peezy-cli — A terminal coding agent for real project work",
           "source": "GitHub",
           "url": "https://github.com/p0systems/peezy-cli",
-          "meta": "60 stars \u00b7 created May 17, 2026",
+          "meta": "60 stars · created May 17, 2026",
           "publishedAt": "2026-05-17T00:00:00Z",
           "topics": [
             "Coding agents"
           ],
           "score": 340,
           "summary": "",
-          "why": "New terminal-native coding agents keep appearing \u2014 the space is fragmenting into specialized tools for different project scales and workflows."
+          "why": "New terminal-native coding agents keep appearing — the space is fragmenting into specialized tools for different project scales and workflows."
         },
         {
-          "title": "Agent Notch \u2014 macOS computer-use agent that lives in the notch",
+          "title": "Agent Notch — macOS computer-use agent that lives in the notch",
           "source": "GitHub",
           "url": "https://github.com/sam-siavoshian/agent-notch",
-          "meta": "18 stars \u00b7 created May 16, 2026",
+          "meta": "18 stars · created May 16, 2026",
           "publishedAt": "2026-05-16T00:00:00Z",
           "topics": [
             "Coding agents",
@@ -568,10 +672,10 @@
           "why": "Physical interface integration (notch, menu bar, dashboard) is where agentic AI starts feeling like an operating system feature rather than an app."
         },
         {
-          "title": "AI Memory Reader \u2014 Native macOS app for browsing agent memory files",
+          "title": "AI Memory Reader — Native macOS app for browsing agent memory files",
           "source": "GitHub",
           "url": "https://github.com/nvwalj/ai-memory-reader",
-          "meta": "17 stars \u00b7 created May 16, 2026",
+          "meta": "17 stars · created May 16, 2026",
           "publishedAt": "2026-05-16T00:00:00Z",
           "topics": [
             "Interfaces",
@@ -580,6 +684,45 @@
           "score": 210,
           "summary": "",
           "why": "As agents accumulate memory, tools to inspect, browse, and manage that state become essential infrastructure."
+        },
+        {
+          "title": "hyperspaceai/agi",
+          "source": "GitHub",
+          "url": "https://github.com/hyperspaceai/agi",
+          "meta": "1809 stars · updated Mon, 18 May 2026",
+          "topics": [
+            "Multi-agent workflows",
+            "Open weights"
+          ],
+          "publishedAt": "2026-05-18T08:35:21Z",
+          "score": 9045,
+          "why": "A distributed AGI system where thousands of autonomous agents collaboratively train models and share experiments via P2P gossip — pushing agent swarms toward decentralized coordination."
+        },
+        {
+          "title": "repowire",
+          "source": "GitHub",
+          "url": "https://github.com/prassanna-ravishankar/repowire",
+          "meta": "87 stars · updated Mon, 18 May 2026",
+          "topics": [
+            "Coding agents",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-05-18T08:33:22Z",
+          "score": 435,
+          "why": "Peer-to-peer mesh networking for AI coding agents suggests the next frontier is not just single agents, but federated agent fleets across projects and machines."
+        },
+        {
+          "title": "wechat-acp",
+          "source": "GitHub",
+          "url": "https://github.com/formulahendry/wechat-acp",
+          "meta": "548 stars · updated Mon, 18 May 2026",
+          "topics": [
+            "Tool use",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-18T08:33:12Z",
+          "score": 2740,
+          "why": "Bridging mainstream messaging platforms (WeChat) to ACP-compatible agents shows how agentic workflows are leaking into everyday communication infrastructure."
         }
       ]
     }
@@ -591,7 +734,7 @@
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
-        "Hacker News: Show HN: Statewright \u2013 Visual state machines that make AI agents reliable",
+        "Hacker News: Show HN: Statewright – Visual state machines that make AI agents reliable",
         "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox"
       ]
     },
@@ -618,7 +761,7 @@
     {
       "topic": "Interfaces",
       "signalCount": 36,
-      "whyItMatters": "Agent UX is moving beyond chat boxes \u2014 interface design is becoming part of the research frontier.",
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Anthropic: Agent View in Claude Code",
         "Hacker News: Interaction Models",
@@ -640,8 +783,8 @@
       "signalCount": 16,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "Hacker News: Show HN: Statewright \u2013 Visual state machines that make AI agents reliable",
-        "Reddit: MiroThinker-1.7, an open-weight deep research agent (Qwen3 MoE base) \u2014 mini is 30B/3B active, curious what tok/s people get on consumer hardware",
+        "Hacker News: Show HN: Statewright – Visual state machines that make AI agents reliable",
+        "Reddit: MiroThinker-1.7, an open-weight deep research agent (Qwen3 MoE base) — mini is 30B/3B active, curious what tok/s people get on consumer hardware",
         "Reddit: gave Claude Code persistent memory and after 200 sessions it started swearing at me"
       ]
     }
@@ -660,7 +803,7 @@
     {
       "title": "Prototype an interface beyond chat",
       "why": "The AI-pointer and Interaction Models threads both suggest the interface layer is becoming a genuine research lever.",
-      "prompt": "Build a tiny agent UI that is not just a chat box \u2014 for example a timeline, pointer assistant, or live shared workspace \u2014 and log what it changes."
+      "prompt": "Build a tiny agent UI that is not just a chat box — for example a timeline, pointer assistant, or live shared workspace — and log what it changes."
     }
   ],
   "method": [
