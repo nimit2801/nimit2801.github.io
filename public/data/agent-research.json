@@ -1,17 +1,16 @@
 {
-  "generatedAt": "2026-05-18T02:36:20Z",
+  "generatedAt": "2026-05-18T04:08:42Z",
   "windowDays": 7,
   "summary": "This cycle says tiny tool-calling models are becoming real, major labs are packaging agent workflows for broader adoption, the local/open-weight stack keeps getting stronger around Qwen-style setups, the interface layer is starting to shift beyond plain chat. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 86,
+    "items": 52,
     "sources": {
       "Anthropic": 3,
-      "GitHub": 34,
+      "GitHub": 33,
       "Google DeepMind": 1,
       "Hacker News": 3,
       "Hugging Face": 2,
-      "OpenAI": 10,
-      "Reddit": 33
+      "OpenAI": 10
     }
   },
   "highlights": [
@@ -75,32 +74,16 @@
       "why": "A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs."
     },
     {
-      "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
-      "source": "Reddit",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
-      "meta": "675 upvotes · 227 comments",
-      "topics": [
-        "Tool use",
-        "Open weights",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-05-13T13:00:32Z",
-      "score": 1594,
-      "summary": "Hi all, I have been making a lot of updates to my project, and I wanted to share them here. TextGen (previously text-generation-webui, also known as my username oobabooga or ooba) has been in development since December…",
-      "why": "Local AI tooling is consolidating into more usable products. That matters because many agent workflows only become trustworthy when people can run and inspect them on their own machines."
-    },
-    {
       "title": "unsloth/Qwen3.6-27B-MTP-GGUF",
       "source": "Hugging Face",
       "url": "https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF",
-      "meta": "235 likes · 185,303 downloads",
+      "meta": "237 likes · 185,303 downloads",
       "topics": [
         "Open weights",
         "Major labs"
       ],
       "publishedAt": "2026-05-11T12:57:11.000Z",
-      "score": 1125.3029999999999,
+      "score": 1133.3029999999999,
       "summary": "transformers gguf unsloth qwen qwen3_5 image-text-to-text base_model:Qwen/Qwen3.6-27B base_model:quantized:Qwen/Qwen3.6-27B license:apache-2.0 endpoints_compatible region:us imatrix conversational",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -108,13 +91,13 @@
       "title": "yetone/native-feel-skill",
       "source": "GitHub",
       "url": "https://github.com/yetone/native-feel-skill",
-      "meta": "1280 stars · updated Fri, 15 May 2026 04:37:05 UTC",
+      "meta": "1284 stars · updated Fri, 15 May 2026 04:37:05 UTC",
       "topics": [
         "Coding agents",
         "Interfaces"
       ],
       "publishedAt": "2026-05-14T19:28:43Z",
-      "score": 7982,
+      "score": 8006,
       "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
       "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
     },
@@ -122,13 +105,13 @@
       "title": "HermannBjorgvin/Clawdmeter",
       "source": "GitHub",
       "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-      "meta": "1140 stars · updated Mon, 18 May 2026 00:46:19 UTC",
+      "meta": "1142 stars · updated Mon, 18 May 2026 00:46:19 UTC",
       "topics": [
         "Coding agents",
         "Interfaces"
       ],
       "publishedAt": "2026-05-11T03:07:49Z",
-      "score": 7222,
+      "score": 7236,
       "summary": "ESP32 desk dashboard that shows Claude Code usage",
       "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
     }
@@ -282,69 +265,7 @@
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": [
-        {
-          "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
-          "meta": "675 upvotes · 227 comments",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-13T13:00:32Z",
-          "score": 1594,
-          "summary": "Hi all, I have been making a lot of updates to my project, and I wanted to share them here. TextGen (previously text-generation-webui, also known as my username oobabooga or ooba) has been in development since December…",
-          "why": "Local AI tooling is consolidating into more usable products. That matters because many agent workflows only become trustworthy when people can run and inspect them on their own machines."
-        },
-        {
-          "title": "Local Qwen 3.6 vs frontier models on a coding primitive: single-file HTML canvas driving animation - results and GIFs",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf3p6c/local_qwen_36_vs_frontier_models_on_a_coding/",
-          "meta": "667 upvotes · 188 comments",
-          "topics": [
-            "Evaluation",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-16T19:51:05Z",
-          "score": 1443.2,
-          "summary": "Saw [this post](https://www.reddit.com/r/LocalLLaMA/comments/1styxdy/compared_qwen_36_35b_with_qwen_36_27b_for_coding/) comparing Qwen 3.6 variants on coding primitives, so I wanted to see how local quants stack up agai…",
-          "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
-        },
-        {
-          "title": "New in Claude Code: agent view.",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1tag1i9/new_in_claude_code_agent_view/",
-          "meta": "701 upvotes · 115 comments",
-          "topics": [
-            "Coding agents",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-05-11T20:49:33Z",
-          "score": 1351.6000000000001,
-          "summary": "One list of all your sessions, available today as a Research Preview. Run `claude agents` to start dispatching multiple sessions at once. Each one keeps running without taking up a terminal tab. See what's running, what…",
-          "why": "This is a small but important supervision signal: as agents get longer-running, people want inspectable timelines and branch-level visibility, not just a terminal blur."
-        },
-        {
-          "title": "Web-Search is coming to a screeching performance halt as Google shuts down their free search index, and traffic defenders like Cloudflare challenge AI at every gateway. What are our options?",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tcaboi/websearch_is_coming_to_a_screeching_performance/",
-          "meta": "397 upvotes · 250 comments",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-05-13T19:35:29Z",
-          "score": 1195.2,
-          "summary": "Google is closing its free tier to just 50 domains for site-specific search, and an inheritance date of January 1st, 2027, with no public pricing being listed for advanced searches. Cloudflare's new site-default is to c…",
-          "why": "Agent builders are running into infrastructure reality: the public web is getting harder to crawl cheaply, which makes search and retrieval strategy part of the product design."
-        }
-      ]
+      "items": []
     },
     {
       "key": "hugging-face",
@@ -354,13 +275,13 @@
           "title": "unsloth/Qwen3.6-27B-MTP-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF",
-          "meta": "235 likes · 185,303 downloads",
+          "meta": "237 likes · 185,303 downloads",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-05-11T12:57:11.000Z",
-          "score": 1125.3029999999999,
+          "score": 1133.3029999999999,
           "summary": "transformers gguf unsloth qwen qwen3_5 image-text-to-text base_model:Qwen/Qwen3.6-27B base_model:quantized:Qwen/Qwen3.6-27B license:apache-2.0 endpoints_compatible region:us imatrix conversational",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -368,13 +289,13 @@
           "title": "unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
-          "meta": "217 likes · 181,425 downloads",
+          "meta": "218 likes · 181,425 downloads",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-05-11T12:57:12.000Z",
-          "score": 1049.425,
+          "score": 1053.425,
           "summary": "transformers gguf unsloth qwen qwen3_5_moe image-text-to-text base_model:Qwen/Qwen3.6-35B-A3B base_model:quantized:Qwen/Qwen3.6-35B-A3B license:apache-2.0 endpoints_compatible region:us imatrix conversational",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -388,13 +309,13 @@
           "title": "yetone/native-feel-skill",
           "source": "GitHub",
           "url": "https://github.com/yetone/native-feel-skill",
-          "meta": "1280 stars · updated Fri, 15 May 2026 04:37:05 UTC",
+          "meta": "1284 stars · updated Fri, 15 May 2026 04:37:05 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-14T19:28:43Z",
-          "score": 7982,
+          "score": 8006,
           "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         },
@@ -402,13 +323,13 @@
           "title": "HermannBjorgvin/Clawdmeter",
           "source": "GitHub",
           "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "1140 stars · updated Mon, 18 May 2026 00:46:19 UTC",
+          "meta": "1142 stars · updated Mon, 18 May 2026 00:46:19 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-11T03:07:49Z",
-          "score": 7222,
+          "score": 7236,
           "summary": "ESP32 desk dashboard that shows Claude Code usage",
           "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
         },
@@ -416,7 +337,7 @@
           "title": "DenisSergeevitch/agents-best-practices",
           "source": "GitHub",
           "url": "https://github.com/DenisSergeevitch/agents-best-practices",
-          "meta": "723 stars · updated Fri, 15 May 2026 23:01:42 UTC",
+          "meta": "727 stars · updated Fri, 15 May 2026 23:01:42 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -424,7 +345,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-05-15T21:32:21Z",
-          "score": 4638,
+          "score": 4664,
           "summary": "Provider-neutral Agent Skill for Codex, Claude Code, and agentic harness design.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
@@ -432,7 +353,7 @@
           "title": "gi-dellav/zerostack",
           "source": "GitHub",
           "url": "https://github.com/gi-dellav/zerostack",
-          "meta": "550 stars · updated Sun, 17 May 2026 19:32:26 UTC",
+          "meta": "566 stars · updated Sun, 17 May 2026 19:32:26 UTC",
           "topics": [
             "Tool use",
             "Memory and state",
@@ -440,7 +361,7 @@
             "Interfaces"
           ],
           "publishedAt": "2026-05-12T19:31:49Z",
-          "score": 3546,
+          "score": 3644,
           "summary": "Minimalistic coding agent written in Rust, optimized for memory footprint and performance",
           "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
         }
@@ -450,7 +371,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 54,
+      "signalCount": 34,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
@@ -460,7 +381,7 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 48,
+      "signalCount": 29,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Anthropic: Agent View in Claude Code",
@@ -469,18 +390,8 @@
       ]
     },
     {
-      "topic": "Major labs",
-      "signalCount": 47,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
-      "signals": [
-        "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
-        "Anthropic: Claude for Small Business",
-        "Anthropic: Agent View in Claude Code"
-      ]
-    },
-    {
       "topic": "Interfaces",
-      "signalCount": 38,
+      "signalCount": 28,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Anthropic: Agent View in Claude Code",
@@ -489,23 +400,33 @@
       ]
     },
     {
+      "topic": "Major labs",
+      "signalCount": 23,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
+        "Anthropic: Claude for Small Business",
+        "Anthropic: Agent View in Claude Code"
+      ]
+    },
+    {
       "topic": "Open weights",
-      "signalCount": 32,
+      "signalCount": 12,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
         "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox",
-        "Reddit: TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui)."
+        "Hugging Face: unsloth/Qwen3.6-27B-MTP-GGUF"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 16,
+      "signalCount": 10,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: Statewright – Visual state machines that make AI agents reliable",
-        "Reddit: MiroThinker-1.7, an open-weight deep research agent (Qwen3 MoE base) — mini is 30B/3B active, curious what tok/s people get on consumer hardware",
-        "Reddit: gave Claude Code persistent memory and after 200 sessions it started swearing at me"
+        "OpenAI: Databricks brings GPT-5.5 to enterprise agent workflows",
+        "GitHub: DenisSergeevitch/agents-best-practices"
       ]
     }
   ],
