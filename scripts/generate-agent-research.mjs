@@ -586,7 +586,7 @@ async function fetchGithubSignals() {
     });
     const payload = await fetchJson(`https://api.github.com/search/repositories?${params}`, headers);
     return (payload.items ?? [])
-      .filter((item) => isRecent(item.created_at))
+      .filter((item) => isRecent(item.created_at) || isRecent(item.pushed_at) || isRecent(item.updated_at))
       .map((item) => {
         const title = cleanText(item.full_name || item.name);
         const summary = cleanText(item.description ?? '');
@@ -597,7 +597,7 @@ async function fetchGithubSignals() {
           url: cleanText(item.html_url),
           meta: `${Number(item.stargazers_count ?? 0)} stars · updated ${new Date(item.pushed_at ?? item.updated_at ?? NOW).toUTCString().replace(' GMT', ' UTC')}`,
           topics: topicsFor(title, summary, tags, query),
-          publishedAt: item.created_at ?? item.updated_at ?? utcIso(NOW),
+          publishedAt: item.pushed_at ?? item.updated_at ?? item.created_at ?? utcIso(NOW),
           score: scoreGithubRepo(item, boost),
           summary,
         };
