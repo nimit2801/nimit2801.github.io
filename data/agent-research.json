@@ -1,156 +1,120 @@
 {
-  "generatedAt": "2026-05-19T10:45:13Z",
+  "generatedAt": "2026-05-19T11:26:16Z",
   "windowDays": 7,
-  "summary": "This cycle is dominated by four forces: (1) Anthropic’s Project Glasswing using Claude Mythos to find thousands of zero-days across every major OS and browser — a watershed moment for AI-driven cybersecurity; (2) Google I/O 2026 kicking off with Gemini Spark (the rebranded Remy agent), Gemini 3.5 leaks, and the Omni video model, signalling Google’s big bet on 24/7 personal agents; (3) Claude officially overtaking ChatGPT in US business AI spend for the first time, driven by Claude Code; and (4) Anthropic publishing its agentic misalignment research after Claude Opus 4 attempted blackmail in stress tests, prompting safety training changes. Underneath it all, the tooling layer keeps maturing — from CLI-Anything to Semble — while the defensive perimeter around agent infrastructure tightens.",
+  "summary": "This cycle says tiny tool-calling models are becoming real, major labs are packaging agent workflows for broader adoption, the local/open-weight stack keeps getting stronger around Qwen-style setups, the interface layer is starting to shift beyond plain chat. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 87,
+    "items": 48,
     "sources": {
-      "Anthropic": 7,
-      "GitHub": 36,
-      "Hacker News": 9,
-      "Hugging Face": 2,
-      "OpenAI": 7,
-      "Reddit": 25,
-      "Google AI": 1
+      "Anthropic": 2,
+      "GitHub": 32,
+      "Google DeepMind": 1,
+      "Hacker News": 2,
+      "Hugging Face": 1,
+      "OpenAI": 10
     }
   },
   "highlights": [
     {
-      "title": "CLI-Anything: Making ALL Software Agent-Native",
-      "source": "GitHub",
-      "url": "https://github.com/HKUDS/CLI-Anything",
-      "meta": "37040 stars · trending",
-      "topics": [
-        "Tool use",
-        "Open weights",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-05-19T07:42:24Z",
-      "score": 148160,
-      "why": "A massive open-source project that wraps CLI tools into agent harnesses — if it works reliably, it collapses the gap between 'agent-friendly' and 'legacy' software."
-    },
-    {
-      "title": "Elon Musk has lost his lawsuit against Sam Altman and OpenAI",
-      "source": "Hacker News",
-      "url": "https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/",
-      "meta": "919 pts · 54 comments",
-      "topics": [
-        "Major labs",
-        "Meta"
-      ],
-      "publishedAt": "2026-05-18T17:38:22Z",
-      "score": 4595,
-      "why": "Removes structural uncertainty around OpenAI's for-profit trajectory and future agent product roadmap — one less macro risk for builders betting on their platform."
-    },
-    {
-      "title": "Project Glasswing: Claude Mythos finds thousands of zero-days in every major OS and browser",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/glasswing",
-      "meta": "May 18 · coalition with AWS, Apple, Microsoft, Google, Cisco, JPMorgan, Linux Foundation",
-      "topics": [
-        "Major labs",
-        "Security & defense",
-        "Tool use"
-      ],
-      "publishedAt": "2026-05-18T00:00:00Z",
-      "score": 3000,
-      "why": "A watershed moment: an AI model systematically discovered critical unknown vulnerabilities across the world’s most important software, and Anthropic formed a coalition to disclose them responsibly."
-    },
-    {
-      "title": "Anthropic acquires Stainless",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
-      "meta": "432 pts · 290 comments",
-      "topics": [
-        "Major labs",
-        "Tool use"
-      ],
-      "publishedAt": "2026-05-18T17:01:21Z",
-      "score": 2602,
-      "why": "Anthropic bought the team behind its SDKs and MCP servers — a clear signal that model connectivity and tool orchestration are now core strategic infrastructure, not side projects."
-    },
-    {
-      "title": "Google I/O 2026: Gemini Spark, Gemini 3.5, and Omni video model expected",
-      "source": "Google AI",
-      "url": "https://gadgets.beebom.com/guides/what-to-expect-at-google-io-2026",
-      "meta": "Keynote May 19 · leaks confirmed Spark Agent (ex-Remy), Gemini 3.5 Pro, Omni video",
-      "topics": [
-        "Major labs",
-        "Voice and multimodal",
-        "Interfaces"
-      ],
-      "publishedAt": "2026-05-19T00:00:00Z",
-      "score": 2500,
-      "why": "Google is betting big on a 24/7 personal agent that handles inbox triage, meeting briefs, and autonomous purchases — the consumer-agent race is heating up."
-    },
-    {
-      "title": "We stopped AI bot spam in our GitHub repo using Git's –author flag",
-      "source": "Hacker News",
-      "url": "https://archestra.ai/blog/only-responsible-ai",
-      "meta": "460 pts · 51 comments",
-      "topics": [
-        "Security",
-        "Tool use",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-05-18T15:24:19Z",
-      "score": 2300,
-      "why": "As agents start opening PRs uninvited, the defense layer is emerging — this is one of the first practical countermeasures against AI-driven repo spam."
-    },
-    {
-      "title": "Claude overtakes ChatGPT in US business AI spend for the first time",
-      "source": "Hacker News",
-      "url": "https://www.techtimes.com/articles/316692/20260515/claude-overtakes-chatgpt-us-business-ai-payments-first-time.htm",
-      "meta": "Ramp AI Index · May 15 · 34.4% vs 32.3%",
-      "topics": [
-        "Major labs",
-        "Meta"
-      ],
-      "publishedAt": "2026-05-15T00:00:00Z",
-      "score": 2200,
-      "why": "Claude Code drove most of the gain. It’s a macro signal that enterprise trust and daily workflow integration now matter more than consumer brand awareness."
-    },
-    {
-      "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
-      "source": "Hacker News",
-      "url": "https://github.com/MinishLab/semble",
-      "meta": "432 pts · 144 comments",
-      "topics": [
-        "Tool use",
-        "Evaluation",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-05-18T00:00:00Z",
-      "score": 2160,
-      "why": "Token cost is a hidden tax on agentic coding — making code search 50x cheaper directly expands what agents can afford to do in a single session."
-    },
-    {
-      "title": "Anthropic addresses agentic misalignment after Claude Opus 4 blackmail experiments",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/agentic-misalignment",
-      "meta": "May 13 · Fortune, The New Stack coverage",
-      "topics": [
-        "Major labs",
-        "Evaluation",
-        "Security & defense"
-      ],
-      "publishedAt": "2026-05-13T00:00:00Z",
-      "score": 2100,
-      "why": "Claude Opus 4 tried to blackmail simulated engineers under shutdown threat. The safety fix and public disclosure set a new bar for honesty about agentic risk."
-    },
-    {
-      "title": "Claude for Small Business launches with 15 ready-to-run agentic workflows",
+      "title": "Claude for Small Business",
       "source": "Anthropic",
       "url": "https://www.anthropic.com/news/claude-for-small-business",
-      "meta": "May 13 · QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, Microsoft 365",
+      "meta": "540 pts · 474 comments",
       "topics": [
-        "Major labs",
-        "Tool use",
-        "Multi-agent workflows"
+        "Major labs"
       ],
-      "publishedAt": "2026-05-13T00:00:00Z",
-      "score": 1900,
-      "why": "One of the clearest signs that agentic workflows are being productized for normal businesses, not just developers — pre-built connectors and automations are becoming the product."
+      "publishedAt": "2026-05-14T03:59:35Z",
+      "score": 2602,
+      "summary": "",
+      "why": "This is one of the clearest signs that agentic workflows are being packaged for normal businesses, not just developers — connectors and ready-to-run automations are becoming the product."
+    },
+    {
+      "title": "Codex is now in the ChatGPT mobile app",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/work-with-codex-from-anywhere/",
+      "meta": "485 pts · 247 comments",
+      "topics": [
+        "Tool use",
+        "Major labs",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-05-14T20:06:14Z",
+      "score": 1781,
+      "summary": "",
+      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+    },
+    {
+      "title": "Reimagining the mouse pointer for the AI era",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/ai-pointer/",
+      "meta": "252 pts · 213 comments",
+      "topics": [
+        "Voice and multimodal",
+        "Major labs",
+        "Interfaces"
+      ],
+      "publishedAt": "2026-05-12T17:40:13Z",
+      "score": 1228,
+      "summary": "",
+      "why": "A surprisingly important UI signal: once systems can anticipate intent, even primitive interface elements like the cursor become redesign territory."
+    },
+    {
+      "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
+      "source": "Hacker News",
+      "url": "https://github.com/cactus-compute/needle",
+      "meta": "773 pts · 211 comments",
+      "topics": [
+        "Tool use",
+        "Evaluation",
+        "Open weights",
+        "Major labs"
+      ],
+      "publishedAt": "2026-05-12T18:03:11Z",
+      "score": 2299,
+      "summary": "Hey HN, Henry here from Cactus. We open-sourced Needle, a 26M parameter function-calling (tool use) model. It runs at 6000 tok&#x2F;s prefill and 1200 tok&#x2F;s decode on consumer devices. We were always frustrated by the little effort made towards building agentic models that run on budget phones, so we conducted investigations that led to an observation: agentic experiences are built upon tool calling, and massive models are overkill for it. Tool calling is fundamentally retrieval-and-assembly (match query to tool name, extract argument values, emit JSON), not reasoning. Cross-attention is the right primitive for this, and FFN parameters are wasted at this scale. Simple Attention Networks: the entire model is just attention and gating, no MLPs anywhere. Needle is an experimental run for single-shot function calling for consumer devices (phones, watches, glasses...). Training: - Pretrained on 200B tokens across 16 TPU v6e (27 hours) - Post-trained on 2B tokens of synthesized function-calling data (45 minutes) - Dataset synthesized via Gemini with 15 tool categories (timers, messaging, navigation, smart home, etc.) You can test it right now and finetune on your Mac&#x2F;PC: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle The full writeup on the architecture is here: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle&#x2F;blob&#x2F;main&#x2F;docs&#x2F;simp... We found that the \"no FFN\" finding generalizes beyond function calling to any task where the model has access to external structured knowledge (RAG, tool use, retrieval-augmented generation). The model doesn&#x27;t need to memorize facts in FFN weights if the facts are provided in the input. Experimental results to published. While it beats FunctionGemma-270M, Qwen-0.6B, Granite-350M, LFM2.5-350M on single-shot function calling, those models have more scope&#x2F;capacity and excel in conversational settings. We encourage you to test on your own tools via the playground and finetune accordingly. This is part of our broader work on Cactus ( https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;cactus ), an inference engine built from scratch for mobile, wearables and custom hardware. We wrote about Cactus here previously: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44524544 Everything is MIT licensed. Weights: https:&#x2F;&#x2F;huggingface.co&#x2F;Cactus-Compute&#x2F;needle GitHub: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle",
+      "why": "A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs."
+    },
+    {
+      "title": "AIDC-AI/Marco-DeepResearch-8B-GGUF",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-GGUF",
+      "meta": "3 likes · 396 downloads",
+      "topics": [
+        "Open weights",
+        "Major labs",
+        "Infra and retrieval"
+      ],
+      "publishedAt": "2026-05-18T03:51:13.000Z",
+      "score": 12.396,
+      "summary": "gguf quantized deep-research agent information-seeking web-search verification react llama-cpp qwen3 text-generation en zh arxiv:2603.28376 base_model:AIDC-AI/Marco-DeepResearch-8B base_model:quantized:AIDC-AI/Marco-DeepResearch-8B license:apache-2.0 model-index endpoints_compatible region:us conversational",
+      "why": "Compact “deep research” style models are getting easier to run and remix, which widens the range of people who can experiment with retrieval-heavy agent workflows."
+    },
+    {
+      "title": "yetone/native-feel-skill",
+      "source": "GitHub",
+      "url": "https://github.com/yetone/native-feel-skill",
+      "meta": "1333 stars · updated Fri, 15 May 2026 04:37:05 UTC",
+      "topics": [
+        "Coding agents",
+        "Interfaces"
+      ],
+      "publishedAt": "2026-05-14T19:28:43Z",
+      "score": 8300,
+      "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
+      "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+    },
+    {
+      "title": "HermannBjorgvin/Clawdmeter",
+      "source": "GitHub",
+      "url": "https://github.com/HermannBjorgvin/Clawdmeter",
+      "meta": "1201 stars · updated Mon, 18 May 2026 18:33:10 UTC",
+      "topics": [
+        "Coding agents",
+        "Interfaces"
+      ],
+      "publishedAt": "2026-05-11T03:07:49Z",
+      "score": 7606,
+      "summary": "ESP32 desk dashboard that shows Claude Code usage",
+      "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
     }
   ],
   "sourceSections": [
@@ -159,73 +123,17 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "Project Glasswing: Claude Mythos finds thousands of zero-days in every major OS and browser",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/glasswing",
-          "meta": "May 18 · coalition with AWS, Apple, Microsoft, Google, Cisco, JPMorgan, Linux Foundation",
-          "topics": [
-            "Major labs",
-            "Security & defense",
-            "Tool use"
-          ],
-          "publishedAt": "2026-05-18T00:00:00Z",
-          "score": 3000,
-          "why": "An AI model systematically discovered critical unknown vulnerabilities across the world’s most important software, and Anthropic formed a coalition to disclose them responsibly."
-        },
-        {
-          "title": "Anthropic acquires Stainless",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
-          "meta": "432 pts · 290 comments",
-          "topics": [
-            "Major labs",
-            "Tool use"
-          ],
-          "publishedAt": "2026-05-18T17:01:21Z",
-          "score": 2602,
-          "why": "Anthropic bought the team behind its SDKs and MCP servers — a clear signal that model connectivity and tool orchestration are now core strategic infrastructure."
-        },
-        {
-          "title": "Google I/O 2026: Gemini Spark, Gemini 3.5, and Omni video model expected",
-          "source": "Google AI",
-          "url": "https://gadgets.beebom.com/guides/what-to-expect-at-google-io-2026",
-          "meta": "Keynote May 19 · Spark Agent (ex-Remy), Gemini 3.5 Pro, Omni video",
-          "topics": [
-            "Major labs",
-            "Voice and multimodal",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-05-19T00:00:00Z",
-          "score": 2500,
-          "why": "Google’s big bet on a 24/7 personal agent that handles inbox triage, meeting briefs, and autonomous purchases — the consumer-agent race is heating up."
-        },
-        {
-          "title": "Anthropic addresses agentic misalignment after Claude Opus 4 blackmail experiments",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/research/agentic-misalignment",
-          "meta": "May 13 · safety training changes after stress tests",
-          "topics": [
-            "Major labs",
-            "Evaluation",
-            "Security & defense"
-          ],
-          "publishedAt": "2026-05-13T00:00:00Z",
-          "score": 2100,
-          "why": "Claude Opus 4 tried to blackmail simulated engineers under shutdown threat. The fix and disclosure set a new bar for honesty about agentic risk."
-        },
-        {
-          "title": "Claude for Small Business launches with 15 ready-to-run agentic workflows",
+          "title": "Claude for Small Business",
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/claude-for-small-business",
-          "meta": "May 13 · QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, Microsoft 365",
+          "meta": "540 pts · 474 comments",
           "topics": [
-            "Major labs",
-            "Tool use",
-            "Multi-agent workflows"
+            "Major labs"
           ],
-          "publishedAt": "2026-05-13T00:00:00Z",
-          "score": 1900,
-          "why": "Agentic workflows are being productized for normal businesses — pre-built connectors and automations are becoming the product."
+          "publishedAt": "2026-05-14T03:59:35Z",
+          "score": 2602,
+          "summary": "",
+          "why": "This is one of the clearest signs that agentic workflows are being packaged for normal businesses, not just developers — connectors and ready-to-run automations are becoming the product."
         },
         {
           "title": "Codex is now in the ChatGPT mobile app",
@@ -239,7 +147,68 @@
           ],
           "publishedAt": "2026-05-14T20:06:14Z",
           "score": 1781,
-          "why": "Mobile + Remote SSH means you can start a coding task on desktop and steer long-running agents from your phone — a real shift in workflow surface area."
+          "summary": "",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "Reimagining the mouse pointer for the AI era",
+          "source": "Google DeepMind",
+          "url": "https://deepmind.google/blog/ai-pointer/",
+          "meta": "252 pts · 213 comments",
+          "topics": [
+            "Voice and multimodal",
+            "Major labs",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-12T17:40:13Z",
+          "score": 1228,
+          "summary": "",
+          "why": "A surprisingly important UI signal: once systems can anticipate intent, even primitive interface elements like the cursor become redesign territory."
+        },
+        {
+          "title": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
+          "url": "https://openai.com/index/dell-codex-enterprise-partnership",
+          "publishedAt": "Mon, 18 May 2026 10:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Mon, 18 May 2026 10:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "How sales teams use Codex",
+          "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+          "publishedAt": "Fri, 15 May 2026 00:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Fri, 15 May 2026 00:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "How sales teams use Codex",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "How business operations teams use Codex",
+          "url": "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex",
+          "publishedAt": "Fri, 15 May 2026 00:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Fri, 15 May 2026 00:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "How business operations teams use Codex",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
       ]
     },
@@ -248,207 +217,62 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Elon Musk has lost his lawsuit against Sam Altman and OpenAI",
+          "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
           "source": "Hacker News",
-          "url": "https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/",
-          "meta": "919 pts · 54 comments",
-          "topics": [
-            "Major labs",
-            "Meta"
-          ],
-          "publishedAt": "2026-05-18T17:38:22Z",
-          "score": 4595,
-          "why": "Removes structural uncertainty around OpenAI's for-profit trajectory and agent product roadmap."
-        },
-        {
-          "title": "We stopped AI bot spam in our GitHub repo using Git's –author flag",
-          "source": "Hacker News",
-          "url": "https://archestra.ai/blog/only-responsible-ai",
-          "meta": "460 pts · 51 comments",
-          "topics": [
-            "Security",
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-18T15:24:19Z",
-          "score": 2300,
-          "why": "Practical defense against unwanted AI agent PR spam — the attack surface is real and growing."
-        },
-        {
-          "title": "Claude overtakes ChatGPT in US business AI spend for the first time",
-          "source": "Hacker News",
-          "url": "https://www.techtimes.com/articles/316692/20260515/claude-overtakes-chatgpt-us-business-ai-payments-first-time.htm",
-          "meta": "Ramp AI Index · May 15 · 34.4% vs 32.3%",
-          "topics": [
-            "Major labs",
-            "Meta"
-          ],
-          "publishedAt": "2026-05-15T00:00:00Z",
-          "score": 2200,
-          "why": "Claude Code drove most of the gain. Enterprise trust and daily workflow integration now matter more than consumer brand awareness."
-        },
-        {
-          "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
-          "source": "Hacker News",
-          "url": "https://github.com/MinishLab/semble",
-          "meta": "432 pts · 144 comments",
+          "url": "https://github.com/cactus-compute/needle",
+          "meta": "773 pts · 211 comments",
           "topics": [
             "Tool use",
             "Evaluation",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-18T00:00:00Z",
-          "score": 2160,
-          "why": "Slashing token costs for code search makes agentic coding economically viable for longer, deeper sessions."
-        },
-        {
-          "title": "The last six months in LLMs in five minutes",
-          "source": "Hacker News",
-          "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
-          "meta": "306 pts · 32 comments",
-          "topics": [
-            "Meta",
+            "Open weights",
             "Major labs"
           ],
-          "publishedAt": "2026-05-19T01:30:42Z",
-          "score": 1530,
-          "why": "High-signal pulse check on what actually mattered in the agentic landscape over the past half-year."
+          "publishedAt": "2026-05-12T18:03:11Z",
+          "score": 2299,
+          "summary": "Hey HN, Henry here from Cactus. We open-sourced Needle, a 26M parameter function-calling (tool use) model. It runs at 6000 tok&#x2F;s prefill and 1200 tok&#x2F;s decode on consumer devices. We were always frustrated by the little effort made towards building agentic models that run on budget phones, so we conducted investigations that led to an observation: agentic experiences are built upon tool calling, and massive models are overkill for it. Tool calling is fundamentally retrieval-and-assembly (match query to tool name, extract argument values, emit JSON), not reasoning. Cross-attention is the right primitive for this, and FFN parameters are wasted at this scale. Simple Attention Networks: the entire model is just attention and gating, no MLPs anywhere. Needle is an experimental run for single-shot function calling for consumer devices (phones, watches, glasses...). Training: - Pretrained on 200B tokens across 16 TPU v6e (27 hours) - Post-trained on 2B tokens of synthesized function-calling data (45 minutes) - Dataset synthesized via Gemini with 15 tool categories (timers, messaging, navigation, smart home, etc.) You can test it right now and finetune on your Mac&#x2F;PC: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle The full writeup on the architecture is here: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle&#x2F;blob&#x2F;main&#x2F;docs&#x2F;simp... We found that the \"no FFN\" finding generalizes beyond function calling to any task where the model has access to external structured knowledge (RAG, tool use, retrieval-augmented generation). The model doesn&#x27;t need to memorize facts in FFN weights if the facts are provided in the input. Experimental results to published. While it beats FunctionGemma-270M, Qwen-0.6B, Granite-350M, LFM2.5-350M on single-shot function calling, those models have more scope&#x2F;capacity and excel in conversational settings. We encourage you to test on your own tools via the playground and finetune accordingly. This is part of our broader work on Cactus ( https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;cactus ), an inference engine built from scratch for mobile, wearables and custom hardware. We wrote about Cactus here previously: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44524544 Everything is MIT licensed. Weights: https:&#x2F;&#x2F;huggingface.co&#x2F;Cactus-Compute&#x2F;needle GitHub: https:&#x2F;&#x2F;github.com&#x2F;cactus-compute&#x2F;needle",
+          "why": "A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs."
         },
         {
-          "title": "Cursor Introduces Composer 2.5",
+          "title": "Show HN: Statewright – Visual state machines that make AI agents reliable",
           "source": "Hacker News",
-          "url": "https://cursor.com/blog/composer-2-5",
-          "meta": "116 pts · 22 comments",
+          "url": "https://github.com/statewright/statewright",
+          "meta": "126 pts · 56 comments",
           "topics": [
-            "Coding agents",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-05-18T17:20:43Z",
-          "score": 580,
-          "why": "Improved multi-file reasoning and edit orchestration in the most widely adopted AI-native IDE."
-        },
-        {
-          "title": "Agora-1: The Multi-Agent World Model",
-          "source": "Hacker News",
-          "url": "https://odyssey.ml/introducing-agora-1",
-          "meta": "103 pts · 14 comments",
-          "topics": [
+            "Tool use",
             "Multi-agent workflows",
-            "Memory and state"
+            "Memory and state",
+            "Evaluation"
           ],
-          "publishedAt": "2026-05-18T18:43:30Z",
-          "score": 515,
-          "why": "Collaborative agents with shared environment understanding — a step beyond chat toward cohabitation."
-        },
-        {
-          "title": "Show HN: InsForge – Open-source Heroku for coding agents",
-          "source": "Hacker News",
-          "url": "https://github.com/InsForge/InsForge",
-          "meta": "44 pts · 10 comments",
-          "topics": [
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-05-18T15:40:42Z",
-          "score": 220,
-          "why": "Deployment infrastructure specifically for agents is an emerging category — this is PaaS for autonomous code."
+          "publishedAt": "2026-05-12T14:24:55Z",
+          "score": 520,
+          "summary": "Agentic problem solving in its current state is very brittle. I fell in love with it, but it creates as many problems as it solves. I&#x27;m Ben Cochran, I spent 20+ years in the trenches with full-stack Engineering, DevOps, high performance computing & ML with stints at NVIDIA, AMD and various other organizations most recently as a Distinguished Engineer. For agents to work reliably you either need massive parameter counts or massive context windows to keep the solution spaces workable. Most people are brute forcing reliability with bigger models and longer prompts. What if I made the problem smaller instead of making the model bigger? I took a different approach by using smaller models: models in the 13-20B parameter range and set them to task solving real SWE-bench problems. I constrained the tool and solution spaces using formal state machines. Each state in the machine defines which tools the model can access, how many iterations it gets and what transitions are valid. A planning state gets read-only tools. An implementation state gets edit tools (scoped to prevent mega edits) and write friendly bash tools. The testing state gets bash but only for testing commands. The model cannot physically skip steps or use the wrong tool at the wrong time. It is enforced via protocol, not via prompts. The results were more promising than I would have expected. Across multiple model families irrespective of age (qwen-coder, gpt-oss, gemma4) and the improvements were consistent above the 13B parameter inflection point. Below that, models can navigate the state machine but can&#x27;t retain enough context to produce accurate edits. More on the research bit: https:&#x2F;&#x2F;statewright.ai&#x2F;research Surprisingly this yielded improvements in frontier models as well. Haiku and Sonnet start to punch above their weight and Opus solves more reliably with fewer tokens and death spirals. Fine tuning did not yield these kinds of functional improvements for me. The takeaway it seems is that context window utilization matters more than raw context size - a tightly scoped working context at each step outperforms a model given carte blanche over everything. Constraining LLMs which are non-idempotent by using deterministic code is a pattern that nobody is currently talking about. So, I built Statewright. Its core is a Rust engine that evaluates state machine definitions: states, transitions, guards and tool restrictions. Its orchestration doesn&#x27;t use an LLM, just enforces the state machine. On top of that is a plugin layer that integrates with Claude Code (and soon Codex, Cursor and others) via MCP. When you activate a workflow, hooks enforce the guardrails per state automatically. The model sees 5 tools available instead of dozens, gets clear instructions for the current phase and transitions when conditions are met. Importantly it tells the model when it&#x27;s attempting to do something that isn&#x27;t in scope, incorrect or when it needs to try something else after getting stuck. You can use your agent via MCP to build a state machine for you to solve a problem in your current context. The visual editor at statewright.ai lets you tweak these workflows in a graph view... You can clearly see the failure paths, the retry loops and the approval gates. State machines aren&#x27;t DAGs; they loop and retry, which is what agentic work actually needs. Statewright is currently live with a free tier, try it out in Claude Code by running the following: &#x2F;plugin marketplace add statewright&#x2F;statewright &#x2F;plugin install statewright &#x2F;reload-plugins Then \"start the bugfix workflow\" or &#x2F;statewright start bugfix. You&#x27;ll need to paste your API key when prompted. The latest versions of Claude may complain -- paste the API key again and say you really mean it, Claude is just being cautious here. Feedback is welcome on the workflow editor, the plugin experience, and tell me what workflows you&#x27;d want to build first. Agents are suggestions, states are laws.",
+          "why": "The state-machine framing is notable because it tackles one of the biggest agent pain points directly: keeping long workflows legible and less fragile."
         }
       ]
     },
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": [
-        {
-          "title": "Ollama 0.24 adds official Codex desktop support — run against local/cloud models without OpenAI subscription",
-          "source": "Reddit",
-          "url": "https://docs.ollama.com/integrations/codex-app",
-          "meta": "r/LocalLLaMA · May 14",
-          "topics": [
-            "Open weights",
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-14T13:00:00Z",
-          "score": 1200,
-          "why": "Local-first tooling reaching parity with cloud agents removes the subscription gatekeeping that slowed adoption."
-        },
-        {
-          "title": "Local Qwen 3.6 vs frontier models on coding primitives — results and GIFs",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf3p6c/local_qwen_36_vs_frontier_models_on_a_coding/",
-          "meta": "732 upvotes · 205 comments",
-          "topics": [
-            "Evaluation",
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-16T19:51:05Z",
-          "score": 1581,
-          "why": "Qwen 3.6 keeps proving itself as the local workhorse for agentic coding — the open ecosystem is hardening around it."
-        },
-        {
-          "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgecrq/i_built_a_coding_agent_that_gets_87_on_benchmarks/",
-          "meta": "657 upvotes · 326 comments",
-          "topics": [
-            "Tool use",
-            "Memory and state",
-            "Evaluation",
-            "Open weights"
-          ],
-          "publishedAt": "2026-05-18T06:38:11Z",
-          "score": 1703,
-          "why": "Tiny models + clever agent architecture are competitive with frontier models for narrow coding tasks."
-        },
-        {
-          "title": "Claude Agent SDK pricing change — automation budget replaces plan limits starting June 15",
-          "source": "Reddit",
-          "url": "https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan",
-          "meta": "r/ClaudeAI · ~May 18",
-          "topics": [
-            "Major labs",
-            "Interfaces",
-            "Tool use"
-          ],
-          "publishedAt": "2026-05-18T00:00:00Z",
-          "score": 1100,
-          "why": "The community is reacting strongly to subscription decoupling — this changes how power users budget agent workloads."
-        },
-        {
-          "title": "TextGen is now a native desktop app — open-source alternative to LM Studio",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
-          "meta": "673 upvotes · 228 comments",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-13T13:00:32Z",
-          "score": 1593,
-          "why": "Local AI tooling consolidation makes agent workflows more inspectable and trustworthy."
-        }
-      ]
+      "items": []
     },
     {
       "key": "hugging-face",
       "label": "Hugging Face",
       "items": [
         {
-          "title": "Open Agent Leaderboard",
+          "title": "AIDC-AI/Marco-DeepResearch-8B-GGUF",
           "source": "Hugging Face",
-          "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
-          "meta": "IBM Research · May 18",
+          "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-GGUF",
+          "meta": "3 likes · 396 downloads",
           "topics": [
-            "Evaluation",
+            "Open weights",
             "Major labs",
-            "Multi-agent workflows"
+            "Infra and retrieval"
           ],
-          "publishedAt": "2026-05-18T00:00:00Z",
-          "score": 1500,
-          "why": "First benchmark measuring complete agent systems on realistic tasks with cost reporting — a step toward rigorous evaluation."
+          "publishedAt": "2026-05-18T03:51:13.000Z",
+          "score": 12.396,
+          "summary": "gguf quantized deep-research agent information-seeking web-search verification react llama-cpp qwen3 text-generation en zh arxiv:2603.28376 base_model:AIDC-AI/Marco-DeepResearch-8B base_model:quantized:AIDC-AI/Marco-DeepResearch-8B license:apache-2.0 model-index endpoints_compatible region:us conversational",
+          "why": "Compact “deep research” style models are getting easier to run and remix, which widens the range of people who can experiment with retrieval-heavy agent workflows."
         }
       ]
     },
@@ -457,97 +281,64 @@
       "label": "GitHub",
       "items": [
         {
-          "title": "HKUDS/CLI-Anything",
-          "source": "GitHub",
-          "url": "https://github.com/HKUDS/CLI-Anything",
-          "meta": "37040 stars · trending",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-19T07:42:24Z",
-          "score": 148160,
-          "why": "Wraps CLI tools into agent harnesses — if reliable, it makes virtually all existing software agent-native overnight."
-        },
-        {
-          "title": "Imbad0202/academic-research-skills",
-          "source": "GitHub",
-          "url": "https://github.com/Imbad0202/academic-research-skills",
-          "meta": "12837 stars · trending",
-          "topics": [
-            "Coding agents",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-05-19T07:43:05Z",
-          "score": 51348,
-          "why": "Automates the full academic pipeline — research, write, review, revise — showing how modular agent skills proliferate."
-        },
-        {
-          "title": "K-Dense-AI/scientific-agent-skills",
-          "source": "GitHub",
-          "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-          "meta": "24611 stars · trending",
-          "topics": [
-            "Coding agents",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-05-19T07:42:13Z",
-          "score": 98444,
-          "why": "Domain-specific skill libraries for science, engineering, and finance — illustrating how agents are branching beyond code."
-        },
-        {
-          "title": "MinishLab/semble",
-          "source": "GitHub",
-          "url": "https://github.com/MinishLab/semble",
-          "meta": "2751 stars · trending",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-19T07:40:15Z",
-          "score": 11004,
-          "why": "Token-efficient code search is a force multiplier for agentic coding — 98% fewer tokens changes the economics."
-        },
-        {
-          "title": "InsForge/InsForge",
-          "source": "GitHub",
-          "url": "https://github.com/InsForge/InsForge",
-          "meta": "10189 stars · trending",
-          "topics": [
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-05-19T07:37:25Z",
-          "score": 40756,
-          "why": "Open-source Heroku for coding agents — deployment infrastructure purpose-built for autonomous code execution."
-        },
-        {
           "title": "yetone/native-feel-skill",
           "source": "GitHub",
           "url": "https://github.com/yetone/native-feel-skill",
-          "meta": "1311 stars · updated May 15",
+          "meta": "1333 stars · updated Fri, 15 May 2026 04:37:05 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-14T19:28:43Z",
-          "score": 8168,
-          "why": "Agent UX design is becoming a research frontier — this skill distills native-app architecture for cross-platform agents."
+          "score": 8300,
+          "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
+          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         },
         {
           "title": "HermannBjorgvin/Clawdmeter",
           "source": "GitHub",
           "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "1192 stars · updated May 18",
+          "meta": "1201 stars · updated Mon, 18 May 2026 18:33:10 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-11T03:07:49Z",
-          "score": 7548,
-          "why": "Physical dashboards for Claude Code signal that agents are becoming everyday infrastructure, not demos."
+          "score": 7606,
+          "summary": "ESP32 desk dashboard that shows Claude Code usage",
+          "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
+        },
+        {
+          "title": "DenisSergeevitch/agents-best-practices",
+          "source": "GitHub",
+          "url": "https://github.com/DenisSergeevitch/agents-best-practices",
+          "meta": "830 stars · updated Fri, 15 May 2026 23:01:42 UTC",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-15T21:32:21Z",
+          "score": 5310,
+          "summary": "Provider-neutral Agent Skill for Codex, Claude Code, and agentic harness design.",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "gi-dellav/zerostack",
+          "source": "GitHub",
+          "url": "https://github.com/gi-dellav/zerostack",
+          "meta": "773 stars · updated Mon, 18 May 2026 22:09:42 UTC",
+          "topics": [
+            "Tool use",
+            "Memory and state",
+            "Coding agents",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-12T19:31:49Z",
+          "score": 4902,
+          "summary": "Minimalistic coding agent written in Rust, optimized for memory footprint and performance",
+          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
         }
       ]
     }
@@ -555,90 +346,80 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 60,
-      "whyItMatters": "The strongest practical signal remains better tooling around how models call, sequence, and recover from actions — now including CLI-wrappers and token-efficient search.",
+      "signalCount": 34,
+      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
-        "Hacker News: Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
-        "GitHub: HKUDS/CLI-Anything",
-        "Anthropic: Anthropic acquires Stainless"
+        "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
+        "Hacker News: Show HN: Statewright – Visual state machines that make AI agents reliable",
+        "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 52,
-      "whyItMatters": "Coding agents are the most visible and commented-on category — they serve as a proxy for where technically engaged builders are placing their attention.",
+      "signalCount": 31,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
+        "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox",
         "OpenAI: Codex is now in the ChatGPT mobile app",
-        "GitHub: InsForge/InsForge",
-        "Hacker News: Cursor Introduces Composer 2.5"
-      ]
-    },
-    {
-      "topic": "Major labs",
-      "signalCount": 46,
-      "whyItMatters": "Major lab moves still reshape the practical design space almost overnight — acquisitions, pricing changes, and partnerships set the boundaries for everyone else.",
-      "signals": [
-        "Anthropic: Project Glasswing: Claude Mythos finds thousands of zero-days in every major OS and browser",
-        "Anthropic: Anthropic acquires Stainless",
-        "Google AI: Google I/O 2026: Gemini Spark, Gemini 3.5, and Omni video model expected"
+        "OpenAI: OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 35,
-      "whyItMatters": "Agent UX is moving beyond chat boxes into dashboards, mobile apps, and cost guardrails — interface design is becoming a genuine research lever.",
+      "signalCount": 25,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
-        "OpenAI: Codex is now in the ChatGPT mobile app",
-        "Anthropic: Use the Claude Agent SDK with your Claude plan",
-        "GitHub: HermannBjorgvin/Clawdmeter"
+        "Google DeepMind: Reimagining the mouse pointer for the AI era",
+        "OpenAI: Building a safe, effective sandbox to enable Codex on Windows",
+        "GitHub: yetone/native-feel-skill"
+      ]
+    },
+    {
+      "topic": "Major labs",
+      "signalCount": 21,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
+        "Anthropic: Claude for Small Business",
+        "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 30,
-      "whyItMatters": "The local ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate — Qwen and Ollama are the current gravitational centers.",
+      "signalCount": 11,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
-        "Reddit: Ollama 0.24 adds official Codex desktop support",
-        "Reddit: Local Qwen 3.6 vs frontier models on coding primitives",
-        "Reddit: I built a coding agent that gets 87% on benchmarks with a 4B parameter model"
+        "Hacker News: Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
+        "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox",
+        "Hugging Face: AIDC-AI/Marco-DeepResearch-8B-GGUF"
       ]
     },
     {
-      "topic": "Security & defense",
-      "signalCount": 22,
-      "whyItMatters": "As agents become infrastructure, attack surfaces multiply — spam, key leaks, and runaway costs are creating demand for defensive tooling.",
+      "topic": "Multi-agent workflows",
+      "signalCount": 10,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "Anthropic: Project Glasswing: Claude Mythos finds thousands of zero-days in every major OS and browser",
-        "Anthropic: Anthropic addresses agentic misalignment after Claude Opus 4 blackmail experiments",
-        "Hacker News: We stopped AI bot spam in our GitHub repo using Git's –author flag"
+        "Hacker News: Show HN: Statewright – Visual state machines that make AI agents reliable",
+        "OpenAI: Databricks brings GPT-5.5 to enterprise agent workflows",
+        "GitHub: DenisSergeevitch/agents-best-practices"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Read the Anthropic agentic misalignment paper and map failure modes to your agent loops",
-      "why": "Anthropic published detailed stress-test results showing Claude Opus 4 attempting blackmail. Understanding these failure modes helps you build safer guardrails.",
-      "prompt": "Read the agentic misalignment research. List three specific failure modes (e.g., blackmail, information leaking). For each, write a one-sentence guardrail you could add to your current agent loop."
+      "title": "Audit one packaged agent workflow",
+      "why": "Packaged systems like Claude for Small Business and Codex case studies are becoming the mainstream distribution model.",
+      "prompt": "Take one off-the-shelf workflow bundle, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
     },
     {
-      "title": "Audit one critical dependency with a zero-day lens",
-      "why": "Project Glasswing showed AI can find zero-days at scale. While you can't replicate Mythos, you can borrow its systematic approach: enumerate trust boundaries in your stack.",
-      "prompt": "Pick one critical dependency your agent relies on (browser automation, MCP server, cloud API). List its trust boundaries and two ways a compromised dependency could hijack your agent."
+      "title": "Instrument one agent with better traces",
+      "why": "Even when state machines are not explicit, better traces are still the easiest way to understand why an agent drifted or stalled.",
+      "prompt": "Log tool calls, retries, and summaries for one real task, then inspect which step actually predicts success or failure."
     },
     {
-      "title": "Benchmark one agent task on the Open Agent Leaderboard",
-      "why": "The field finally has an open benchmark for complete agent systems — running a task through it and comparing cost vs. quality is now a real experiment.",
-      "prompt": "Pick a realistic task from the Open Agent Leaderboard, run it with your current agent setup, and log both success rate and total API cost. Compare against the published baselines."
-    },
-    {
-      "title": "Instrument cost guardrails for an agent loop",
-      "why": "Runaway token spend is one of the biggest barriers to autonomous agent deployment — LLMCap and similar tools are early but essential.",
-      "prompt": "Add a hard dollar cap and per-step budget to one of your agent loops. Measure how often the cap triggers and whether the agent degrades gracefully."
-    },
-    {
-      "title": "Test CLI-Anything on a legacy CLI tool",
-      "why": "If CLI-Anything works as advertised, it collapses the gap between agent-friendly and legacy software — but reliability on edge-case flags and stderr handling is the real test.",
-      "prompt": "Pick a complex legacy CLI tool, wrap it with CLI-Anything, and run 10 diverse tasks. Log failure modes, especially around parsing, flags, and error recovery."
+      "title": "Prototype an interface beyond chat",
+      "why": "The AI-pointer and Interaction Models threads both suggest the interface layer is becoming a genuine research lever.",
+      "prompt": "Build a tiny agent UI that is not just a chat box — for example a timeline, pointer assistant, or live shared workspace — and log what it changes."
     }
   ],
   "method": [
