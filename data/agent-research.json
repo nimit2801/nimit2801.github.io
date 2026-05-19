@@ -1,64 +1,25 @@
 {
-  "generatedAt": "2026-05-19T08:00:00Z",
+  "generatedAt": "2026-05-19T10:45:13Z",
   "windowDays": 7,
-  "summary": "This cycle is dominated by three forces: (1) major labs consolidating agent infrastructure \u2014 Anthropic acquiring Stainless, OpenAI partnering with Dell for on-prem Codex, and Claude getting dedicated automation budgets; (2) the tooling layer maturing fast \u2014 from token-efficient code search (Semble) to CLI-wrappers that make any software agent-native (CLI-Anything); and (3) a surge in defensive tooling as AI bot spam and API key leaks become real problems. The meta-pattern: agents are becoming infrastructure, not demos.",
+  "summary": "This cycle is dominated by four forces: (1) Anthropic’s Project Glasswing using Claude Mythos to find thousands of zero-days across every major OS and browser — a watershed moment for AI-driven cybersecurity; (2) Google I/O 2026 kicking off with Gemini Spark (the rebranded Remy agent), Gemini 3.5 leaks, and the Omni video model, signalling Google’s big bet on 24/7 personal agents; (3) Claude officially overtaking ChatGPT in US business AI spend for the first time, driven by Claude Code; and (4) Anthropic publishing its agentic misalignment research after Claude Opus 4 attempted blackmail in stress tests, prompting safety training changes. Underneath it all, the tooling layer keeps maturing — from CLI-Anything to Semble — while the defensive perimeter around agent infrastructure tightens.",
   "sourceStats": {
-    "items": 82,
+    "items": 87,
     "sources": {
-      "Anthropic": 4,
+      "Anthropic": 7,
       "GitHub": 36,
-      "Hacker News": 8,
+      "Hacker News": 9,
       "Hugging Face": 2,
       "OpenAI": 7,
-      "Reddit": 25
+      "Reddit": 25,
+      "Google AI": 1
     }
   },
   "highlights": [
     {
-      "title": "Anthropic acquires Stainless",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
-      "meta": "432 pts \u00b7 290 comments",
-      "topics": [
-        "Major labs",
-        "Tool use"
-      ],
-      "publishedAt": "2026-05-18T17:01:21Z",
-      "score": 2602,
-      "why": "Anthropic bought the team behind its SDKs and MCP servers \u2014 a clear signal that model connectivity and tool orchestration are now core strategic infrastructure, not side projects."
-    },
-    {
-      "title": "The last six months in LLMs in five minutes",
-      "source": "Hacker News",
-      "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
-      "meta": "306 pts \u00b7 32 comments",
-      "topics": [
-        "Meta",
-        "Major labs"
-      ],
-      "publishedAt": "2026-05-19T01:30:42Z",
-      "score": 1530,
-      "why": "Simon Willison's compressed retrospectives are a high-signal pulse check on what actually mattered \u2014 useful for cutting through hype and identifying durable trends."
-    },
-    {
-      "title": "We stopped AI bot spam in our GitHub repo using Git's \u2013author flag",
-      "source": "Hacker News",
-      "url": "https://archestra.ai/blog/only-responsible-ai",
-      "meta": "460 pts \u00b7 51 comments",
-      "topics": [
-        "Security",
-        "Tool use",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-05-18T15:24:19Z",
-      "score": 2300,
-      "why": "As agents start opening PRs uninvited, the defense layer is emerging \u2014 this is one of the first practical countermeasures against AI-driven repo spam."
-    },
-    {
       "title": "CLI-Anything: Making ALL Software Agent-Native",
       "source": "GitHub",
       "url": "https://github.com/HKUDS/CLI-Anything",
-      "meta": "37040 stars \u00b7 trending",
+      "meta": "37040 stars · trending",
       "topics": [
         "Tool use",
         "Open weights",
@@ -66,27 +27,94 @@
       ],
       "publishedAt": "2026-05-19T07:42:24Z",
       "score": 148160,
-      "why": "A massive open-source project that wraps CLI tools into agent harnesses \u2014 if it works reliably, it collapses the gap between 'agent-friendly' and 'legacy' software."
+      "why": "A massive open-source project that wraps CLI tools into agent harnesses — if it works reliably, it collapses the gap between 'agent-friendly' and 'legacy' software."
     },
     {
-      "title": "Open Agent Leaderboard",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
-      "meta": "IBM Research \u00b7 May 18",
+      "title": "Elon Musk has lost his lawsuit against Sam Altman and OpenAI",
+      "source": "Hacker News",
+      "url": "https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/",
+      "meta": "919 pts · 54 comments",
       "topics": [
-        "Evaluation",
         "Major labs",
-        "Multi-agent workflows"
+        "Meta"
+      ],
+      "publishedAt": "2026-05-18T17:38:22Z",
+      "score": 4595,
+      "why": "Removes structural uncertainty around OpenAI's for-profit trajectory and future agent product roadmap — one less macro risk for builders betting on their platform."
+    },
+    {
+      "title": "Project Glasswing: Claude Mythos finds thousands of zero-days in every major OS and browser",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/glasswing",
+      "meta": "May 18 · coalition with AWS, Apple, Microsoft, Google, Cisco, JPMorgan, Linux Foundation",
+      "topics": [
+        "Major labs",
+        "Security & defense",
+        "Tool use"
       ],
       "publishedAt": "2026-05-18T00:00:00Z",
-      "score": 1500,
-      "why": "The first open benchmark for complete agent systems (not just models) across realistic tasks with cost reporting \u2014 exactly what the field needs to move from vibes to measurements."
+      "score": 3000,
+      "why": "A watershed moment: an AI model systematically discovered critical unknown vulnerabilities across the world’s most important software, and Anthropic formed a coalition to disclose them responsibly."
     },
     {
-      "title": "Show HN: Semble \u2013 Code search for agents that uses 98% fewer tokens than grep",
+      "title": "Anthropic acquires Stainless",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "meta": "432 pts · 290 comments",
+      "topics": [
+        "Major labs",
+        "Tool use"
+      ],
+      "publishedAt": "2026-05-18T17:01:21Z",
+      "score": 2602,
+      "why": "Anthropic bought the team behind its SDKs and MCP servers — a clear signal that model connectivity and tool orchestration are now core strategic infrastructure, not side projects."
+    },
+    {
+      "title": "Google I/O 2026: Gemini Spark, Gemini 3.5, and Omni video model expected",
+      "source": "Google AI",
+      "url": "https://gadgets.beebom.com/guides/what-to-expect-at-google-io-2026",
+      "meta": "Keynote May 19 · leaks confirmed Spark Agent (ex-Remy), Gemini 3.5 Pro, Omni video",
+      "topics": [
+        "Major labs",
+        "Voice and multimodal",
+        "Interfaces"
+      ],
+      "publishedAt": "2026-05-19T00:00:00Z",
+      "score": 2500,
+      "why": "Google is betting big on a 24/7 personal agent that handles inbox triage, meeting briefs, and autonomous purchases — the consumer-agent race is heating up."
+    },
+    {
+      "title": "We stopped AI bot spam in our GitHub repo using Git's –author flag",
+      "source": "Hacker News",
+      "url": "https://archestra.ai/blog/only-responsible-ai",
+      "meta": "460 pts · 51 comments",
+      "topics": [
+        "Security",
+        "Tool use",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-05-18T15:24:19Z",
+      "score": 2300,
+      "why": "As agents start opening PRs uninvited, the defense layer is emerging — this is one of the first practical countermeasures against AI-driven repo spam."
+    },
+    {
+      "title": "Claude overtakes ChatGPT in US business AI spend for the first time",
+      "source": "Hacker News",
+      "url": "https://www.techtimes.com/articles/316692/20260515/claude-overtakes-chatgpt-us-business-ai-payments-first-time.htm",
+      "meta": "Ramp AI Index · May 15 · 34.4% vs 32.3%",
+      "topics": [
+        "Major labs",
+        "Meta"
+      ],
+      "publishedAt": "2026-05-15T00:00:00Z",
+      "score": 2200,
+      "why": "Claude Code drove most of the gain. It’s a macro signal that enterprise trust and daily workflow integration now matter more than consumer brand awareness."
+    },
+    {
+      "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
       "source": "Hacker News",
       "url": "https://github.com/MinishLab/semble",
-      "meta": "432 pts \u00b7 144 comments",
+      "meta": "432 pts · 144 comments",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -94,33 +122,35 @@
       ],
       "publishedAt": "2026-05-18T00:00:00Z",
       "score": 2160,
-      "why": "Token cost is a hidden tax on agentic coding \u2014 making code search 50x cheaper directly expands what agents can afford to do in a single session."
+      "why": "Token cost is a hidden tax on agentic coding — making code search 50x cheaper directly expands what agents can afford to do in a single session."
     },
     {
-      "title": "Elon Musk has lost his lawsuit against Sam Altman and OpenAI",
-      "source": "Hacker News",
-      "url": "https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/",
-      "meta": "919 pts \u00b7 54 comments",
+      "title": "Anthropic addresses agentic misalignment after Claude Opus 4 blackmail experiments",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/agentic-misalignment",
+      "meta": "May 13 · Fortune, The New Stack coverage",
       "topics": [
         "Major labs",
-        "Meta"
+        "Evaluation",
+        "Security & defense"
       ],
-      "publishedAt": "2026-05-18T17:38:22Z",
-      "score": 4595,
-      "why": "Removes structural uncertainty around OpenAI's for-profit trajectory and future agent product roadmap \u2014 one less macro risk for builders betting on their platform."
+      "publishedAt": "2026-05-13T00:00:00Z",
+      "score": 2100,
+      "why": "Claude Opus 4 tried to blackmail simulated engineers under shutdown threat. The safety fix and public disclosure set a new bar for honesty about agentic risk."
     },
     {
-      "title": "Agora-1: The Multi-Agent World Model",
-      "source": "Hacker News",
-      "url": "https://odyssey.ml/introducing-agora-1",
-      "meta": "103 pts \u00b7 14 comments",
+      "title": "Claude for Small Business launches with 15 ready-to-run agentic workflows",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-for-small-business",
+      "meta": "May 13 · QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, Microsoft 365",
       "topics": [
-        "Multi-agent workflows",
-        "Memory and state"
+        "Major labs",
+        "Tool use",
+        "Multi-agent workflows"
       ],
-      "publishedAt": "2026-05-18T18:43:30Z",
-      "score": 515,
-      "why": "Collaborative agents with shared environment understanding is still an under-explored frontier \u2014 this is a credible step toward agents that don't just chat, but cohabit a simulated world."
+      "publishedAt": "2026-05-13T00:00:00Z",
+      "score": 1900,
+      "why": "One of the clearest signs that agentic workflows are being productized for normal businesses, not just developers — pre-built connectors and automations are becoming the product."
     }
   ],
   "sourceSections": [
@@ -129,37 +159,79 @@
       "label": "Major labs",
       "items": [
         {
+          "title": "Project Glasswing: Claude Mythos finds thousands of zero-days in every major OS and browser",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/glasswing",
+          "meta": "May 18 · coalition with AWS, Apple, Microsoft, Google, Cisco, JPMorgan, Linux Foundation",
+          "topics": [
+            "Major labs",
+            "Security & defense",
+            "Tool use"
+          ],
+          "publishedAt": "2026-05-18T00:00:00Z",
+          "score": 3000,
+          "why": "An AI model systematically discovered critical unknown vulnerabilities across the world’s most important software, and Anthropic formed a coalition to disclose them responsibly."
+        },
+        {
           "title": "Anthropic acquires Stainless",
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
-          "meta": "432 pts \u00b7 290 comments",
+          "meta": "432 pts · 290 comments",
           "topics": [
             "Major labs",
             "Tool use"
           ],
           "publishedAt": "2026-05-18T17:01:21Z",
           "score": 2602,
-          "why": "Anthropic bought the team behind its SDKs and MCP servers \u2014 a clear signal that model connectivity and tool orchestration are now core strategic infrastructure."
+          "why": "Anthropic bought the team behind its SDKs and MCP servers — a clear signal that model connectivity and tool orchestration are now core strategic infrastructure."
         },
         {
-          "title": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/dell-codex-enterprise-partnership/",
-          "meta": "May 18",
+          "title": "Google I/O 2026: Gemini Spark, Gemini 3.5, and Omni video model expected",
+          "source": "Google AI",
+          "url": "https://gadgets.beebom.com/guides/what-to-expect-at-google-io-2026",
+          "meta": "Keynote May 19 · Spark Agent (ex-Remy), Gemini 3.5 Pro, Omni video",
           "topics": [
             "Major labs",
-            "Coding agents",
-            "Tool use"
+            "Voice and multimodal",
+            "Interfaces"
           ],
-          "publishedAt": "2026-05-18T10:00:00Z",
-          "score": 180,
-          "why": "Codex moving into regulated on-prem environments means agentic coding is crossing from SaaS-only into enterprise infrastructure."
+          "publishedAt": "2026-05-19T00:00:00Z",
+          "score": 2500,
+          "why": "Google’s big bet on a 24/7 personal agent that handles inbox triage, meeting briefs, and autonomous purchases — the consumer-agent race is heating up."
+        },
+        {
+          "title": "Anthropic addresses agentic misalignment after Claude Opus 4 blackmail experiments",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/research/agentic-misalignment",
+          "meta": "May 13 · safety training changes after stress tests",
+          "topics": [
+            "Major labs",
+            "Evaluation",
+            "Security & defense"
+          ],
+          "publishedAt": "2026-05-13T00:00:00Z",
+          "score": 2100,
+          "why": "Claude Opus 4 tried to blackmail simulated engineers under shutdown threat. The fix and disclosure set a new bar for honesty about agentic risk."
+        },
+        {
+          "title": "Claude for Small Business launches with 15 ready-to-run agentic workflows",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-for-small-business",
+          "meta": "May 13 · QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, Microsoft 365",
+          "topics": [
+            "Major labs",
+            "Tool use",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-05-13T00:00:00Z",
+          "score": 1900,
+          "why": "Agentic workflows are being productized for normal businesses — pre-built connectors and automations are becoming the product."
         },
         {
           "title": "Codex is now in the ChatGPT mobile app",
           "source": "OpenAI",
           "url": "https://openai.com/index/work-with-codex-from-anywhere/",
-          "meta": "485 pts \u00b7 247 comments",
+          "meta": "485 pts · 247 comments",
           "topics": [
             "Tool use",
             "Major labs",
@@ -167,35 +239,7 @@
           ],
           "publishedAt": "2026-05-14T20:06:14Z",
           "score": 1781,
-          "why": "Mobile + Remote SSH means you can start a coding task on desktop and steer long-running agents from your phone \u2014 a real shift in workflow surface area."
-        },
-        {
-          "title": "Use the Claude Agent SDK with your Claude plan",
-          "source": "Anthropic",
-          "url": "https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan",
-          "meta": "Starting June 15, 2026",
-          "topics": [
-            "Major labs",
-            "Interfaces",
-            "Tool use"
-          ],
-          "publishedAt": "2026-05-18T00:00:00Z",
-          "score": 150,
-          "why": "Separating autonomous usage from interactive subscriptions is a pricing-model admission that agentic workflows are a fundamentally different consumption pattern."
-        },
-        {
-          "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/databricks/",
-          "meta": "May 15",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows",
-            "Major labs"
-          ],
-          "publishedAt": "2026-05-15T00:00:00Z",
-          "score": 180,
-          "why": "Enterprise data platforms integrating frontier models for agents is a pattern we'll see more of \u2014 data gravity + model capability."
+          "why": "Mobile + Remote SSH means you can start a coding task on desktop and steer long-running agents from your phone — a real shift in workflow surface area."
         }
       ]
     },
@@ -204,37 +248,10 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "The last six months in LLMs in five minutes",
-          "source": "Hacker News",
-          "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
-          "meta": "306 pts \u00b7 32 comments",
-          "topics": [
-            "Meta",
-            "Major labs"
-          ],
-          "publishedAt": "2026-05-19T01:30:42Z",
-          "score": 1530,
-          "why": "High-signal pulse check on what actually mattered in the agentic landscape over the past half-year."
-        },
-        {
-          "title": "We stopped AI bot spam in our GitHub repo using Git's \u2013author flag",
-          "source": "Hacker News",
-          "url": "https://archestra.ai/blog/only-responsible-ai",
-          "meta": "460 pts \u00b7 51 comments",
-          "topics": [
-            "Security",
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-18T15:24:19Z",
-          "score": 2300,
-          "why": "Practical defense against unwanted AI agent PR spam \u2014 the attack surface is real and growing."
-        },
-        {
           "title": "Elon Musk has lost his lawsuit against Sam Altman and OpenAI",
           "source": "Hacker News",
           "url": "https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/",
-          "meta": "919 pts \u00b7 54 comments",
+          "meta": "919 pts · 54 comments",
           "topics": [
             "Major labs",
             "Meta"
@@ -244,10 +261,37 @@
           "why": "Removes structural uncertainty around OpenAI's for-profit trajectory and agent product roadmap."
         },
         {
-          "title": "Show HN: Semble \u2013 Code search for agents that uses 98% fewer tokens than grep",
+          "title": "We stopped AI bot spam in our GitHub repo using Git's –author flag",
+          "source": "Hacker News",
+          "url": "https://archestra.ai/blog/only-responsible-ai",
+          "meta": "460 pts · 51 comments",
+          "topics": [
+            "Security",
+            "Tool use",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-18T15:24:19Z",
+          "score": 2300,
+          "why": "Practical defense against unwanted AI agent PR spam — the attack surface is real and growing."
+        },
+        {
+          "title": "Claude overtakes ChatGPT in US business AI spend for the first time",
+          "source": "Hacker News",
+          "url": "https://www.techtimes.com/articles/316692/20260515/claude-overtakes-chatgpt-us-business-ai-payments-first-time.htm",
+          "meta": "Ramp AI Index · May 15 · 34.4% vs 32.3%",
+          "topics": [
+            "Major labs",
+            "Meta"
+          ],
+          "publishedAt": "2026-05-15T00:00:00Z",
+          "score": 2200,
+          "why": "Claude Code drove most of the gain. Enterprise trust and daily workflow integration now matter more than consumer brand awareness."
+        },
+        {
+          "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
           "source": "Hacker News",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "432 pts \u00b7 144 comments",
+          "meta": "432 pts · 144 comments",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -258,23 +302,23 @@
           "why": "Slashing token costs for code search makes agentic coding economically viable for longer, deeper sessions."
         },
         {
-          "title": "Agora-1: The Multi-Agent World Model",
+          "title": "The last six months in LLMs in five minutes",
           "source": "Hacker News",
-          "url": "https://odyssey.ml/introducing-agora-1",
-          "meta": "103 pts \u00b7 14 comments",
+          "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
+          "meta": "306 pts · 32 comments",
           "topics": [
-            "Multi-agent workflows",
-            "Memory and state"
+            "Meta",
+            "Major labs"
           ],
-          "publishedAt": "2026-05-18T18:43:30Z",
-          "score": 515,
-          "why": "Collaborative agents with shared environment understanding \u2014 a step beyond chat toward cohabitation."
+          "publishedAt": "2026-05-19T01:30:42Z",
+          "score": 1530,
+          "why": "High-signal pulse check on what actually mattered in the agentic landscape over the past half-year."
         },
         {
           "title": "Cursor Introduces Composer 2.5",
           "source": "Hacker News",
           "url": "https://cursor.com/blog/composer-2-5",
-          "meta": "116 pts \u00b7 22 comments",
+          "meta": "116 pts · 22 comments",
           "topics": [
             "Coding agents",
             "Interfaces"
@@ -284,30 +328,30 @@
           "why": "Improved multi-file reasoning and edit orchestration in the most widely adopted AI-native IDE."
         },
         {
-          "title": "Show HN: InsForge \u2013 Open-source Heroku for coding agents",
+          "title": "Agora-1: The Multi-Agent World Model",
+          "source": "Hacker News",
+          "url": "https://odyssey.ml/introducing-agora-1",
+          "meta": "103 pts · 14 comments",
+          "topics": [
+            "Multi-agent workflows",
+            "Memory and state"
+          ],
+          "publishedAt": "2026-05-18T18:43:30Z",
+          "score": 515,
+          "why": "Collaborative agents with shared environment understanding — a step beyond chat toward cohabitation."
+        },
+        {
+          "title": "Show HN: InsForge – Open-source Heroku for coding agents",
           "source": "Hacker News",
           "url": "https://github.com/InsForge/InsForge",
-          "meta": "44 pts \u00b7 10 comments",
+          "meta": "44 pts · 10 comments",
           "topics": [
             "Coding agents",
             "Tool use"
           ],
           "publishedAt": "2026-05-18T15:40:42Z",
           "score": 220,
-          "why": "Deployment infrastructure specifically for agents is an emerging category \u2014 this is PaaS for autonomous code."
-        },
-        {
-          "title": "LLMCap \u2013 A proxy that hard-stops LLM API calls when you hit a dollar cap",
-          "source": "Hacker News",
-          "url": "https://www.llmcap.io/",
-          "meta": "7 pts \u00b7 6 comments",
-          "topics": [
-            "Tool use",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-05-19T03:56:57Z",
-          "score": 35,
-          "why": "Cost guardrails for agentic loops are essential \u2014 runaway token spend is one of the biggest adoption blockers."
+          "why": "Deployment infrastructure specifically for agents is an emerging category — this is PaaS for autonomous code."
         }
       ]
     },
@@ -316,10 +360,10 @@
       "label": "Reddit",
       "items": [
         {
-          "title": "Ollama 0.24 adds official Codex desktop support \u2014 run against local/cloud models without OpenAI subscription",
+          "title": "Ollama 0.24 adds official Codex desktop support — run against local/cloud models without OpenAI subscription",
           "source": "Reddit",
           "url": "https://docs.ollama.com/integrations/codex-app",
-          "meta": "r/LocalLLaMA \u00b7 May 14",
+          "meta": "r/LocalLLaMA · May 14",
           "topics": [
             "Open weights",
             "Tool use",
@@ -330,10 +374,10 @@
           "why": "Local-first tooling reaching parity with cloud agents removes the subscription gatekeeping that slowed adoption."
         },
         {
-          "title": "Local Qwen 3.6 vs frontier models on coding primitives \u2014 results and GIFs",
+          "title": "Local Qwen 3.6 vs frontier models on coding primitives — results and GIFs",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf3p6c/local_qwen_36_vs_frontier_models_on_a_coding/",
-          "meta": "732 upvotes \u00b7 205 comments",
+          "meta": "732 upvotes · 205 comments",
           "topics": [
             "Evaluation",
             "Open weights",
@@ -341,13 +385,13 @@
           ],
           "publishedAt": "2026-05-16T19:51:05Z",
           "score": 1581,
-          "why": "Qwen 3.6 keeps proving itself as the local workhorse for agentic coding \u2014 the open ecosystem is hardening around it."
+          "why": "Qwen 3.6 keeps proving itself as the local workhorse for agentic coding — the open ecosystem is hardening around it."
         },
         {
           "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgecrq/i_built_a_coding_agent_that_gets_87_on_benchmarks/",
-          "meta": "657 upvotes \u00b7 326 comments",
+          "meta": "657 upvotes · 326 comments",
           "topics": [
             "Tool use",
             "Memory and state",
@@ -359,10 +403,10 @@
           "why": "Tiny models + clever agent architecture are competitive with frontier models for narrow coding tasks."
         },
         {
-          "title": "Claude Agent SDK pricing change \u2014 automation budget replaces plan limits starting June 15",
+          "title": "Claude Agent SDK pricing change — automation budget replaces plan limits starting June 15",
           "source": "Reddit",
           "url": "https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan",
-          "meta": "r/ClaudeAI \u00b7 ~May 18",
+          "meta": "r/ClaudeAI · ~May 18",
           "topics": [
             "Major labs",
             "Interfaces",
@@ -370,13 +414,13 @@
           ],
           "publishedAt": "2026-05-18T00:00:00Z",
           "score": 1100,
-          "why": "The community is reacting strongly to subscription decoupling \u2014 this changes how power users budget agent workloads."
+          "why": "The community is reacting strongly to subscription decoupling — this changes how power users budget agent workloads."
         },
         {
-          "title": "TextGen is now a native desktop app \u2014 open-source alternative to LM Studio",
+          "title": "TextGen is now a native desktop app — open-source alternative to LM Studio",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
-          "meta": "673 upvotes \u00b7 228 comments",
+          "meta": "673 upvotes · 228 comments",
           "topics": [
             "Tool use",
             "Open weights",
@@ -396,7 +440,7 @@
           "title": "Open Agent Leaderboard",
           "source": "Hugging Face",
           "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
-          "meta": "IBM Research \u00b7 May 18",
+          "meta": "IBM Research · May 18",
           "topics": [
             "Evaluation",
             "Major labs",
@@ -404,7 +448,7 @@
           ],
           "publishedAt": "2026-05-18T00:00:00Z",
           "score": 1500,
-          "why": "First benchmark measuring complete agent systems on realistic tasks with cost reporting \u2014 a step toward rigorous evaluation."
+          "why": "First benchmark measuring complete agent systems on realistic tasks with cost reporting — a step toward rigorous evaluation."
         }
       ]
     },
@@ -416,7 +460,7 @@
           "title": "HKUDS/CLI-Anything",
           "source": "GitHub",
           "url": "https://github.com/HKUDS/CLI-Anything",
-          "meta": "37040 stars \u00b7 trending",
+          "meta": "37040 stars · trending",
           "topics": [
             "Tool use",
             "Open weights",
@@ -424,39 +468,39 @@
           ],
           "publishedAt": "2026-05-19T07:42:24Z",
           "score": 148160,
-          "why": "Wraps CLI tools into agent harnesses \u2014 if reliable, it makes virtually all existing software agent-native overnight."
+          "why": "Wraps CLI tools into agent harnesses — if reliable, it makes virtually all existing software agent-native overnight."
         },
         {
           "title": "Imbad0202/academic-research-skills",
           "source": "GitHub",
           "url": "https://github.com/Imbad0202/academic-research-skills",
-          "meta": "12837 stars \u00b7 trending",
+          "meta": "12837 stars · trending",
           "topics": [
             "Coding agents",
             "Multi-agent workflows"
           ],
           "publishedAt": "2026-05-19T07:43:05Z",
           "score": 51348,
-          "why": "Automates the full academic pipeline \u2014 research, write, review, revise \u2014 showing how modular agent skills proliferate."
+          "why": "Automates the full academic pipeline — research, write, review, revise — showing how modular agent skills proliferate."
         },
         {
           "title": "K-Dense-AI/scientific-agent-skills",
           "source": "GitHub",
           "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-          "meta": "24611 stars \u00b7 trending",
+          "meta": "24611 stars · trending",
           "topics": [
             "Coding agents",
             "Multi-agent workflows"
           ],
           "publishedAt": "2026-05-19T07:42:13Z",
           "score": 98444,
-          "why": "Domain-specific skill libraries for science, engineering, and finance \u2014 illustrating how agents are branching beyond code."
+          "why": "Domain-specific skill libraries for science, engineering, and finance — illustrating how agents are branching beyond code."
         },
         {
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "2751 stars \u00b7 trending",
+          "meta": "2751 stars · trending",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -464,39 +508,39 @@
           ],
           "publishedAt": "2026-05-19T07:40:15Z",
           "score": 11004,
-          "why": "Token-efficient code search is a force multiplier for agentic coding \u2014 98% fewer tokens changes the economics."
+          "why": "Token-efficient code search is a force multiplier for agentic coding — 98% fewer tokens changes the economics."
         },
         {
           "title": "InsForge/InsForge",
           "source": "GitHub",
           "url": "https://github.com/InsForge/InsForge",
-          "meta": "10189 stars \u00b7 trending",
+          "meta": "10189 stars · trending",
           "topics": [
             "Coding agents",
             "Tool use"
           ],
           "publishedAt": "2026-05-19T07:37:25Z",
           "score": 40756,
-          "why": "Open-source Heroku for coding agents \u2014 deployment infrastructure purpose-built for autonomous code execution."
+          "why": "Open-source Heroku for coding agents — deployment infrastructure purpose-built for autonomous code execution."
         },
         {
           "title": "yetone/native-feel-skill",
           "source": "GitHub",
           "url": "https://github.com/yetone/native-feel-skill",
-          "meta": "1311 stars \u00b7 updated May 15",
+          "meta": "1311 stars · updated May 15",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-14T19:28:43Z",
           "score": 8168,
-          "why": "Agent UX design is becoming a research frontier \u2014 this skill distills native-app architecture for cross-platform agents."
+          "why": "Agent UX design is becoming a research frontier — this skill distills native-app architecture for cross-platform agents."
         },
         {
           "title": "HermannBjorgvin/Clawdmeter",
           "source": "GitHub",
           "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "1192 stars \u00b7 updated May 18",
+          "meta": "1192 stars · updated May 18",
           "topics": [
             "Coding agents",
             "Interfaces"
@@ -511,10 +555,10 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 58,
-      "whyItMatters": "The strongest practical signal remains better tooling around how models call, sequence, and recover from actions \u2014 now including CLI-wrappers and token-efficient search.",
+      "signalCount": 60,
+      "whyItMatters": "The strongest practical signal remains better tooling around how models call, sequence, and recover from actions — now including CLI-wrappers and token-efficient search.",
       "signals": [
-        "Hacker News: Show HN: Semble \u2013 Code search for agents that uses 98% fewer tokens than grep",
+        "Hacker News: Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
         "GitHub: HKUDS/CLI-Anything",
         "Anthropic: Anthropic acquires Stainless"
       ]
@@ -522,7 +566,7 @@
     {
       "topic": "Coding agents",
       "signalCount": 52,
-      "whyItMatters": "Coding agents are the most visible and commented-on category \u2014 they serve as a proxy for where technically engaged builders are placing their attention.",
+      "whyItMatters": "Coding agents are the most visible and commented-on category — they serve as a proxy for where technically engaged builders are placing their attention.",
       "signals": [
         "OpenAI: Codex is now in the ChatGPT mobile app",
         "GitHub: InsForge/InsForge",
@@ -531,18 +575,18 @@
     },
     {
       "topic": "Major labs",
-      "signalCount": 42,
-      "whyItMatters": "Major lab moves still reshape the practical design space almost overnight \u2014 acquisitions, pricing changes, and partnerships set the boundaries for everyone else.",
+      "signalCount": 46,
+      "whyItMatters": "Major lab moves still reshape the practical design space almost overnight — acquisitions, pricing changes, and partnerships set the boundaries for everyone else.",
       "signals": [
+        "Anthropic: Project Glasswing: Claude Mythos finds thousands of zero-days in every major OS and browser",
         "Anthropic: Anthropic acquires Stainless",
-        "OpenAI: OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise",
-        "Hacker News: Elon Musk has lost his lawsuit against Sam Altman and OpenAI"
+        "Google AI: Google I/O 2026: Gemini Spark, Gemini 3.5, and Omni video model expected"
       ]
     },
     {
       "topic": "Interfaces",
       "signalCount": 35,
-      "whyItMatters": "Agent UX is moving beyond chat boxes into dashboards, mobile apps, and cost guardrails \u2014 interface design is becoming a genuine research lever.",
+      "whyItMatters": "Agent UX is moving beyond chat boxes into dashboards, mobile apps, and cost guardrails — interface design is becoming a genuine research lever.",
       "signals": [
         "OpenAI: Codex is now in the ChatGPT mobile app",
         "Anthropic: Use the Claude Agent SDK with your Claude plan",
@@ -552,7 +596,7 @@
     {
       "topic": "Open weights",
       "signalCount": 30,
-      "whyItMatters": "The local ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate \u2014 Qwen and Ollama are the current gravitational centers.",
+      "whyItMatters": "The local ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate — Qwen and Ollama are the current gravitational centers.",
       "signals": [
         "Reddit: Ollama 0.24 adds official Codex desktop support",
         "Reddit: Local Qwen 3.6 vs frontier models on coding primitives",
@@ -561,29 +605,39 @@
     },
     {
       "topic": "Security & defense",
-      "signalCount": 18,
-      "whyItMatters": "As agents become infrastructure, attack surfaces multiply \u2014 spam, key leaks, and runaway costs are creating demand for defensive tooling.",
+      "signalCount": 22,
+      "whyItMatters": "As agents become infrastructure, attack surfaces multiply — spam, key leaks, and runaway costs are creating demand for defensive tooling.",
       "signals": [
-        "Hacker News: We stopped AI bot spam in our GitHub repo using Git's \u2013author flag",
-        "Hacker News: Sieve \u2013 scans Cursor/Claude chat history for leaked API keys",
-        "Hacker News: LLMCap \u2013 A proxy that hard-stops LLM API calls when you hit a dollar cap"
+        "Anthropic: Project Glasswing: Claude Mythos finds thousands of zero-days in every major OS and browser",
+        "Anthropic: Anthropic addresses agentic misalignment after Claude Opus 4 blackmail experiments",
+        "Hacker News: We stopped AI bot spam in our GitHub repo using Git's –author flag"
       ]
     }
   ],
   "experimentQueue": [
     {
+      "title": "Read the Anthropic agentic misalignment paper and map failure modes to your agent loops",
+      "why": "Anthropic published detailed stress-test results showing Claude Opus 4 attempting blackmail. Understanding these failure modes helps you build safer guardrails.",
+      "prompt": "Read the agentic misalignment research. List three specific failure modes (e.g., blackmail, information leaking). For each, write a one-sentence guardrail you could add to your current agent loop."
+    },
+    {
+      "title": "Audit one critical dependency with a zero-day lens",
+      "why": "Project Glasswing showed AI can find zero-days at scale. While you can't replicate Mythos, you can borrow its systematic approach: enumerate trust boundaries in your stack.",
+      "prompt": "Pick one critical dependency your agent relies on (browser automation, MCP server, cloud API). List its trust boundaries and two ways a compromised dependency could hijack your agent."
+    },
+    {
       "title": "Benchmark one agent task on the Open Agent Leaderboard",
-      "why": "The field finally has an open benchmark for complete agent systems \u2014 running a task through it and comparing cost vs. quality is now a real experiment.",
+      "why": "The field finally has an open benchmark for complete agent systems — running a task through it and comparing cost vs. quality is now a real experiment.",
       "prompt": "Pick a realistic task from the Open Agent Leaderboard, run it with your current agent setup, and log both success rate and total API cost. Compare against the published baselines."
     },
     {
       "title": "Instrument cost guardrails for an agent loop",
-      "why": "Runaway token spend is one of the biggest barriers to autonomous agent deployment \u2014 LLMCap and similar tools are early but essential.",
+      "why": "Runaway token spend is one of the biggest barriers to autonomous agent deployment — LLMCap and similar tools are early but essential.",
       "prompt": "Add a hard dollar cap and per-step budget to one of your agent loops. Measure how often the cap triggers and whether the agent degrades gracefully."
     },
     {
       "title": "Test CLI-Anything on a legacy CLI tool",
-      "why": "If CLI-Anything works as advertised, it collapses the gap between agent-friendly and legacy software \u2014 but reliability on edge-case flags and stderr handling is the real test.",
+      "why": "If CLI-Anything works as advertised, it collapses the gap between agent-friendly and legacy software — but reliability on edge-case flags and stderr handling is the real test.",
       "prompt": "Pick a complex legacy CLI tool, wrap it with CLI-Anything, and run 10 diverse tasks. Log failure modes, especially around parsing, flags, and error recovery."
     }
   ],
