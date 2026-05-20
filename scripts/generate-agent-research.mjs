@@ -17,6 +17,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || githubT
 
 const HN_QUERY_SPECS = [
   { query: 'gemini 3.5 flash', boost: 150 },
+  { query: 'qwen 3.7', boost: 150 },
   { query: 'forge guardrails', boost: 140 },
   { query: 'gemini spark', boost: 130 },
   { query: 'antigravity', boost: 120 },
@@ -31,9 +32,12 @@ const HN_QUERY_SPECS = [
   { query: 'reimagining the mouse pointer for the ai era', boost: 85 },
   { query: 'gemini api webhooks', boost: 80 },
   { query: 'alphaevolve', boost: 80 },
+  { query: 'formal verification ai coding', boost: 75 },
   { query: 'codex', boost: 70 },
   { query: 'qwen 3.6', boost: 70 },
   { query: 'deep research', boost: 60 },
+  { query: 'testing distributed systems with ai agents', boost: 55 },
+  { query: 'agent harness', boost: 55 },
 ];
 
 const REDDIT_SPECS = [
@@ -178,7 +182,11 @@ const HAND_CURATED_WHY = [
     why: 'Local AI tooling is consolidating into more usable products. That matters because many agent workflows only become trustworthy when people can run and inspect them on their own machines.',
   },
   {
-    match: /qwen 3\.6/i,
+    match: /qwen[\s.-]*3\.7/i,
+    why: 'Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the "AI factory" positioning shows they\'re building a vertically integrated agent platform, not just a model.',
+  },
+  {
+    match: /qwen 3\\.6/i,
     why: 'Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family.',
   },
   {
@@ -228,6 +236,14 @@ const HAND_CURATED_WHY = [
   {
     match: /second-brain/i,
     why: 'Portable memory layers are one of the clearest ways to make agents feel cumulative instead of stateless and disposable.',
+  },
+  {
+    match: /formal verification.*ai coding|formal verification.*agent/i,
+    why: 'Applying formal verification to AI coding loops signals a maturing view of agent reliability — moving beyond empirical testing toward provable correctness guarantees.',
+  },
+  {
+    match: /testing distributed systems with ai agents/i,
+    why: 'Using agents to test distributed systems is a productive tangent: the same failure modes that plague agent workflows (state drift, async races, resource leaks) are well-studied in distributed systems.',
   },
   {
     match: /token-tracker/i,
@@ -439,6 +455,7 @@ function highlightScore(item) {
   if (haystack.includes('persistent memory')) bonus += 340;
   if (haystack.includes('claude code mcp') || haystack.includes('5 mcp')) bonus += 320;
   if (haystack.includes('qwen 3.6')) bonus += 220;
+  if (haystack.includes('qwen 3.7') || haystack.includes('qwen3.7')) bonus += 900;
   if (haystack.includes('marco-deepresearch')) bonus += 180;
   if (haystack.includes('remote client for claude code')) bonus += 160;
   if (haystack.includes('qwenlm/qwen-code') || haystack.includes('qwen code')) bonus += 260;
