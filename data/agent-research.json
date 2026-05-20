@@ -1,19 +1,64 @@
 {
-  "generatedAt": "2026-05-19T22:20:36Z",
+  "generatedAt": "2026-05-20T11:15:18Z",
   "windowDays": 7,
-  "summary": "This cycle says major labs are packaging agent workflows for broader adoption, the local/open-weight stack keeps getting stronger around Qwen-style setups, open-source builders are turning agent helpers into real products and dashboards. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "Google I/O 2026 reshaped the week: Gemini 3.5 Flash (4x faster, frontier-level, $1.50/M tokens) is the new agent-engine benchmark, Gemini Spark brings 24/7 personal agents with Gmail integration, and Antigravity 2.0 opens full agentic development suites to everyone. Meanwhile, Forge shows that guardrail engineering can lift an 8B local model from 53% to 99% on agentic tasks — a massive signal for reliability-first agent design. Open-source builders keep shipping: TextGen desktop app, native-feel-skill for Raycast-style agent UIs, Clawdmeter hardware dashboards. The deeper pattern is that agentic AI is being simultaneously compressed (smaller models + guardrails), industrialized (event-driven infra, webhooks, sandboxing), and democratized (open weights, mobile codex, business automation).",
   "sourceStats": {
-    "items": 73,
-    "sources": {
-      "Anthropic": 1,
-      "GitHub": 32,
-      "Google AI": 1,
-      "Hugging Face": 2,
-      "OpenAI": 10,
-      "Reddit": 27
-    }
+    "OpenAI": 5,
+    "GitHub": 5,
+    "Reddit": 4,
+    "Google AI": 3,
+    "Hugging Face": 2,
+    "Anthropic": 1,
+    "Hacker News": 1,
+    "items": 21
   },
   "highlights": [
+    {
+      "title": "Gemini Spark — 24/7 personal AI agent + Antigravity 2.0 dev suite",
+      "source": "Google AI",
+      "url": "https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/",
+      "meta": "Google I/O 2026",
+      "topics": [
+        "Major labs",
+        "Interfaces",
+        "Memory and state"
+      ],
+      "publishedAt": "2026-05-19T00:00:00Z",
+      "score": 4800,
+      "summary": "",
+      "why": "Always-on personal agents that integrate with your actual data (Gmail, calendar) are a fundamentally different product from chat interfaces — this is Google's bet on persistent, delegated AI."
+    },
+    {
+      "title": "Gemini 3.5 Flash — 4x faster, frontier-level, $1.50/M tokens",
+      "source": "Google AI",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/",
+      "meta": "812 pts · 566 comments on HN",
+      "topics": [
+        "Major labs",
+        "Tool use",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-05-19T00:00:00Z",
+      "score": 5100,
+      "summary": "",
+      "why": "This is the most significant model release of the week — a frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight."
+    },
+    {
+      "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=48192383",
+      "meta": "510 pts · 177 comments",
+      "topics": [
+        "Tool use",
+        "Evaluation",
+        "Open weights",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-05-19T00:00:00Z",
+      "score": 5200,
+      "summary": "",
+      "why": "This is arguably the most important agent-engineering signal this cycle: reliability engineering via guardrails can close the gap between small local models and frontier APIs on structured agentic tasks."
+    },
     {
       "title": "Claude for Small Business",
       "source": "Anthropic",
@@ -31,14 +76,14 @@
       "title": "Codex is now in the ChatGPT mobile app",
       "source": "OpenAI",
       "url": "https://openai.com/index/work-with-codex-from-anywhere/",
-      "meta": "485 pts · 247 comments",
+      "meta": "486 pts · 247 comments",
       "topics": [
         "Tool use",
         "Major labs",
         "Coding agents"
       ],
       "publishedAt": "2026-05-14T20:06:14Z",
-      "score": 1781,
+      "score": 1783,
       "summary": "",
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
@@ -62,7 +107,7 @@
       "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
       "source": "Reddit",
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
-      "meta": "683 upvotes · 228 comments",
+      "meta": "677 upvotes · 230 comments",
       "topics": [
         "Tool use",
         "Open weights",
@@ -70,7 +115,7 @@
         "Coding agents"
       ],
       "publishedAt": "2026-05-13T13:00:32Z",
-      "score": 1608.8,
+      "score": 1603.2,
       "summary": "Hi all, I have been making a lot of updates to my project, and I wanted to share them here. TextGen (previously text-generation-webui, also known as my username oobabooga or ooba) has been in development since December…",
       "why": "Local AI tooling is consolidating into more usable products. That matters because many agent workflows only become trustworthy when people can run and inspect them on their own machines."
     },
@@ -78,14 +123,14 @@
       "title": "AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
       "source": "Hugging Face",
       "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
-      "meta": "3 likes · 2,358 downloads",
+      "meta": "3 likes · 3,277 downloads",
       "topics": [
         "Open weights",
         "Major labs",
         "Infra and retrieval"
       ],
       "publishedAt": "2026-05-18T03:51:57.000Z",
-      "score": 14.358,
+      "score": 15.277000000000001,
       "summary": "gguf quantized imatrix importance-matrix deep-research agent information-seeking web-search verification react llama-cpp qwen3 text-generation en zh arxiv:2603.28376 base_model:AIDC-AI/Marco-DeepResearch-8B base_model:quantized:AIDC-AI/Marco-DeepResearch-8B license:apache-2.0 model-index endpoints_compatible region:us conversational",
       "why": "Compact “deep research” style models are getting easier to run and remix, which widens the range of people who can experiment with retrieval-heavy agent workflows."
     },
@@ -93,13 +138,13 @@
       "title": "yetone/native-feel-skill",
       "source": "GitHub",
       "url": "https://github.com/yetone/native-feel-skill",
-      "meta": "1335 stars · updated Fri, 15 May 2026 04:37:05 UTC",
+      "meta": "1342 stars · updated Fri, 15 May 2026 04:37:05 UTC",
       "topics": [
         "Coding agents",
         "Interfaces"
       ],
       "publishedAt": "2026-05-15T04:37:05Z",
-      "score": 8310,
+      "score": 8354,
       "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
       "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
     },
@@ -107,13 +152,13 @@
       "title": "HermannBjorgvin/Clawdmeter",
       "source": "GitHub",
       "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-      "meta": "1219 stars · updated Mon, 18 May 2026 18:33:10 UTC",
+      "meta": "1239 stars · updated Mon, 18 May 2026 18:33:10 UTC",
       "topics": [
         "Coding agents",
         "Interfaces"
       ],
       "publishedAt": "2026-05-11T03:07:49Z",
-      "score": 7722,
+      "score": 7854,
       "summary": "ESP32 desk dashboard that shows Claude Code usage",
       "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
     }
@@ -123,6 +168,53 @@
       "key": "major-labs",
       "label": "Major labs",
       "items": [
+        {
+          "title": "Antigravity 2.0 — Google's full agentic development suite + AI Studio Android app",
+          "url": "https://9to5google.com/2026/05/19/google-antigravity-agentic-developer-suite/",
+          "publishedAt": "Tue, 19 May 2026 00:00:00 GMT",
+          "source": "Google AI",
+          "meta": "Google I/O 2026 announcement",
+          "topics": [
+            "Major labs",
+            "Tool use",
+            "Interfaces",
+            "Coding agents"
+          ],
+          "score": 2800,
+          "summary": "Google's Antigravity 2.0 evolves into a full agentic development suite with an AI Studio Android app. Lets developers build, deploy, and monitor autonomous agents from mobile devices.",
+          "why": "A full agentic IDE-on-the-go is a strong signal that agent development is being treated as a first-class workflow, not just a side feature of chat UIs."
+        },
+        {
+          "title": "Gemini Spark — 24/7 personal AI agent with Gmail integration",
+          "url": "https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/",
+          "publishedAt": "Tue, 19 May 2026 00:00:00 GMT",
+          "source": "Google AI",
+          "meta": "Google I/O 2026 announcement",
+          "topics": [
+            "Major labs",
+            "Interfaces",
+            "Infra and retrieval",
+            "Memory and state"
+          ],
+          "score": 3000,
+          "summary": "Google announced Gemini Spark, a 24/7 agentic personal assistant built from Gemini's base models and an agentic harness from Google Antigravity. Integrates with Gmail and other Google services for continuous autonomous task execution.",
+          "why": "Always-on personal agents that integrate with your actual data (Gmail, calendar) are a fundamentally different product from chat interfaces — this is Google's bet on persistent, delegated AI."
+        },
+        {
+          "title": "Gemini 3.5 Flash — Google I/O 2026",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/",
+          "publishedAt": "Wed, 20 May 2026 11:10:21 GMT",
+          "source": "Google AI",
+          "meta": "812 pts · 566 comments on HN",
+          "topics": [
+            "Major labs",
+            "Tool use",
+            "Coding agents"
+          ],
+          "score": 4800,
+          "summary": "Google I/O 2026: Gemini 3.5 Flash outperforms Gemini 3.1 Pro across almost all benchmarks while running 4x faster than other frontier models. Priced at $1.50/M tokens. Positioned as the common engine behind Search, Gemini app, Antigravity, enterprise agents, and Gemini Spark.",
+          "why": "This is the most significant model release of the week — a frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight."
+        },
         {
           "title": "Claude for Small Business",
           "source": "Anthropic",
@@ -140,14 +232,14 @@
           "title": "Codex is now in the ChatGPT mobile app",
           "source": "OpenAI",
           "url": "https://openai.com/index/work-with-codex-from-anywhere/",
-          "meta": "485 pts · 247 comments",
+          "meta": "486 pts · 247 comments",
           "topics": [
             "Tool use",
             "Major labs",
             "Coding agents"
           ],
           "publishedAt": "2026-05-14T20:06:14Z",
-          "score": 1781,
+          "score": 1783,
           "summary": "",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
@@ -164,21 +256,6 @@
           ],
           "score": 180,
           "summary": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
-        {
-          "title": "How sales teams use Codex",
-          "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-          "publishedAt": "Fri, 15 May 2026 00:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Fri, 15 May 2026 00:00:00 GMT",
-          "topics": [
-            "Tool use",
-            "Major labs",
-            "Coding agents"
-          ],
-          "score": 180,
-          "summary": "How sales teams use Codex",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
         {
@@ -210,13 +287,45 @@
           "score": 180,
           "summary": "How business operations teams use Codex",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "How sales teams use Codex",
+          "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+          "publishedAt": "Fri, 15 May 2026 00:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Fri, 15 May 2026 00:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "How sales teams use Codex",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
       ]
     },
     {
       "key": "hacker-news",
       "label": "Hacker News",
-      "items": []
+      "items": [
+        {
+          "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48192383",
+          "meta": "510 pts · 177 comments",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "Tue, 19 May 2026 00:00:00 GMT",
+          "score": 2800,
+          "summary": "Forge is a Python framework for self-hosted LLM tool-calling with guardrails: rescue parsing, retry nudges, step enforcement, VRAM-aware context budgets, and tiered compaction. Demo shows an 8B local model going from 53% to 99% accuracy on multi-step agentic workflows.",
+          "why": "This is arguably the most important agent-engineering signal this cycle: reliability engineering via guardrails can close the gap between small local models and frontier APIs on structured agentic tasks."
+        }
+      ]
     },
     {
       "key": "reddit",
@@ -226,7 +335,7 @@
           "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model, here's how",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgecrq/i_built_a_coding_agent_that_gets_87_on_benchmarks/",
-          "meta": "761 upvotes · 345 comments",
+          "meta": "792 upvotes · 350 comments",
           "topics": [
             "Tool use",
             "Memory and state",
@@ -234,31 +343,15 @@
             "Open weights"
           ],
           "publishedAt": "2026-05-18T06:38:11Z",
-          "score": 1907.6000000000001,
+          "score": 1967.2,
           "summary": "I was frustrated that every coding agent (OpenCode, Cursor, Claude Code) assumes you're running GPT-5.4 or Claude Opus. If you try them with a local model like Gemma or Qwen they fall apart. I find that often tool calls…",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
-          "meta": "683 upvotes · 228 comments",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-13T13:00:32Z",
-          "score": 1608.8,
-          "summary": "Hi all, I have been making a lot of updates to my project, and I wanted to share them here. TextGen (previously text-generation-webui, also known as my username oobabooga or ooba) has been in development since December…",
-          "why": "Local AI tooling is consolidating into more usable products. That matters because many agent workflows only become trustworthy when people can run and inspect them on their own machines."
         },
         {
           "title": "Local Qwen 3.6 vs frontier models on a coding primitive: single-file HTML canvas driving animation - results and GIFs",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf3p6c/local_qwen_36_vs_frontier_models_on_a_coding/",
-          "meta": "742 upvotes · 206 comments",
+          "meta": "751 upvotes · 207 comments",
           "topics": [
             "Evaluation",
             "Open weights",
@@ -266,15 +359,31 @@
             "Coding agents"
           ],
           "publishedAt": "2026-05-16T19:51:05Z",
-          "score": 1599.2,
+          "score": 1615.6000000000001,
           "summary": "Saw [this post](https://www.reddit.com/r/LocalLLaMA/comments/1styxdy/compared_qwen_36_35b_with_qwen_36_27b_for_coding/) comparing Qwen 3.6 variants on coding primitives, so I wanted to see how local quants stack up agai…",
           "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
+        },
+        {
+          "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
+          "meta": "677 upvotes · 230 comments",
+          "topics": [
+            "Tool use",
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-13T13:00:32Z",
+          "score": 1603.2,
+          "summary": "Hi all, I have been making a lot of updates to my project, and I wanted to share them here. TextGen (previously text-generation-webui, also known as my username oobabooga or ooba) has been in development since December…",
+          "why": "Local AI tooling is consolidating into more usable products. That matters because many agent workflows only become trustworthy when people can run and inspect them on their own machines."
         },
         {
           "title": "You're abusing your subscription with agentic 24/7 workflows and that's why we all get restrictions and limits",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1tcpxi2/youre_abusing_your_subscription_with_agentic_247/",
-          "meta": "448 upvotes · 216 comments",
+          "meta": "449 upvotes · 217 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -282,7 +391,7 @@
             "Interfaces"
           ],
           "publishedAt": "2026-05-14T06:38:26Z",
-          "score": 1208.8000000000002,
+          "score": 1212.4,
           "summary": "Subscription tiers were designed around interactive human use, but autonomous loops changed the usage. It makes sense that companies separate autonomous work from subscriptions. You and I know that when these tiers with…",
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         }
@@ -296,14 +405,14 @@
           "title": "AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
-          "meta": "3 likes · 2,358 downloads",
+          "meta": "3 likes · 3,277 downloads",
           "topics": [
             "Open weights",
             "Major labs",
             "Infra and retrieval"
           ],
           "publishedAt": "2026-05-18T03:51:57.000Z",
-          "score": 14.358,
+          "score": 15.277000000000001,
           "summary": "gguf quantized imatrix importance-matrix deep-research agent information-seeking web-search verification react llama-cpp qwen3 text-generation en zh arxiv:2603.28376 base_model:AIDC-AI/Marco-DeepResearch-8B base_model:quantized:AIDC-AI/Marco-DeepResearch-8B license:apache-2.0 model-index endpoints_compatible region:us conversational",
           "why": "Compact “deep research” style models are getting easier to run and remix, which widens the range of people who can experiment with retrieval-heavy agent workflows."
         },
@@ -311,14 +420,14 @@
           "title": "AIDC-AI/Marco-DeepResearch-8B-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-GGUF",
-          "meta": "3 likes · 396 downloads",
+          "meta": "3 likes · 917 downloads",
           "topics": [
             "Open weights",
             "Major labs",
             "Infra and retrieval"
           ],
           "publishedAt": "2026-05-18T03:51:13.000Z",
-          "score": 12.396,
+          "score": 12.917,
           "summary": "gguf quantized deep-research agent information-seeking web-search verification react llama-cpp qwen3 text-generation en zh arxiv:2603.28376 base_model:AIDC-AI/Marco-DeepResearch-8B base_model:quantized:AIDC-AI/Marco-DeepResearch-8B license:apache-2.0 model-index endpoints_compatible region:us conversational",
           "why": "Compact “deep research” style models are getting easier to run and remix, which widens the range of people who can experiment with retrieval-heavy agent workflows."
         }
@@ -332,27 +441,43 @@
           "title": "yetone/native-feel-skill",
           "source": "GitHub",
           "url": "https://github.com/yetone/native-feel-skill",
-          "meta": "1335 stars · updated Fri, 15 May 2026 04:37:05 UTC",
+          "meta": "1342 stars · updated Fri, 15 May 2026 04:37:05 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-15T04:37:05Z",
-          "score": 8310,
+          "score": 8354,
           "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+        },
+        {
+          "title": "antoinezambelli/forge",
+          "source": "GitHub",
+          "url": "https://github.com/antoinezambelli/forge",
+          "meta": "A reliability layer for self-hosted LLM tool-calling",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "Tue, 19 May 2026 00:00:00 GMT",
+          "score": 6500,
+          "summary": "A Python framework that lifts an 8B local model to the top of its class on multi-step agentic workflows through guardrails (rescue parsing, retry nudges, step enforcement) and context management (VRAM-aware budgets, tiered compaction). 53% → 99% on agentic task benchmark.",
+          "why": "This is arguably the most important agent-engineering signal this cycle: reliability engineering via guardrails can close the gap between small local models and frontier APIs on structured agentic tasks."
         },
         {
           "title": "HermannBjorgvin/Clawdmeter",
           "source": "GitHub",
           "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "1219 stars · updated Mon, 18 May 2026 18:33:10 UTC",
+          "meta": "1239 stars · updated Mon, 18 May 2026 18:33:10 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-11T03:07:49Z",
-          "score": 7722,
+          "score": 7854,
           "summary": "ESP32 desk dashboard that shows Claude Code usage",
           "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
         },
@@ -360,7 +485,7 @@
           "title": "DenisSergeevitch/agents-best-practices",
           "source": "GitHub",
           "url": "https://github.com/DenisSergeevitch/agents-best-practices",
-          "meta": "852 stars · updated Fri, 15 May 2026 23:01:42 UTC",
+          "meta": "879 stars · updated Fri, 15 May 2026 23:01:42 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -368,25 +493,25 @@
             "Coding agents"
           ],
           "publishedAt": "2026-05-15T23:01:42Z",
-          "score": 5444,
+          "score": 5612,
           "summary": "Provider-neutral Agent Skill for Codex, Claude Code, and agentic harness design.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
         {
-          "title": "gi-dellav/zerostack",
+          "title": "Doorman11991/smallcode",
           "source": "GitHub",
-          "url": "https://github.com/gi-dellav/zerostack",
-          "meta": "803 stars · updated Tue, 19 May 2026 20:34:09 UTC",
+          "url": "https://github.com/Doorman11991/smallcode",
+          "meta": "761 stars · updated Tue, 19 May 2026 21:38:44 UTC",
           "topics": [
             "Tool use",
-            "Memory and state",
+            "Evaluation",
             "Coding agents",
             "Interfaces"
           ],
-          "publishedAt": "2026-05-19T20:34:09Z",
-          "score": 5044,
-          "summary": "Minimalistic coding agent written in Rust, optimized for memory footprint and performance",
-          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
+          "publishedAt": "2026-05-19T21:38:44Z",
+          "score": 4832,
+          "summary": "AI coding agent optimized for small LLMs. 87% benchmark with 4B-active model.",
+          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         }
       ]
     }
@@ -394,7 +519,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 51,
+      "signalCount": 52,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox",
@@ -404,7 +529,7 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 46,
+      "signalCount": 45,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox",
@@ -414,7 +539,7 @@
     },
     {
       "topic": "Major labs",
-      "signalCount": 36,
+      "signalCount": 34,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Anthropic: Claude for Small Business",
@@ -424,7 +549,7 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 29,
+      "signalCount": 30,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "OpenAI: Behind the scenes of OpenAI's open-source Windows sandbox",
@@ -434,17 +559,17 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 27,
+      "signalCount": 29,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Reddit: Used over a million tokens in three separate sessions to test Qwen 3.6 35b (new Multi-token Prediction version)",
         "Reddit: Qwen 3.6 27B: IQ3XXS KV Q8 vs Q4XL KV Q4 (262K context)",
-        "Reddit: Tired of keeping your laptop half-open to keep Claude Code running? Built a fix."
+        "Reddit: Qwen 3.6 27B Q8 on four Nvidia RTX A4000 (16GB each) with Llama.cpp and MTP enabled"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 16,
+      "signalCount": 17,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Reddit: The pacman benchmark: finally a viable local agentic coding agent with Qwen 3.6 27b",
