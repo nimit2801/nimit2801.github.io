@@ -38,6 +38,14 @@ const HN_QUERY_SPECS = [
   { query: 'deep research', boost: 60 },
   { query: 'testing distributed systems with ai agents', boost: 55 },
   { query: 'agent harness', boost: 55 },
+  { query: 'semble', boost: 120 },
+  { query: 'gemini omni', boost: 100 },
+  { query: 'managed agents', boost: 90 },
+  { query: 'sap claude', boost: 80 },
+  { query: 'agentic desktop', boost: 70 },
+  { query: 'codex enterprise', boost: 90 },
+  { query: 'codex dell', boost: 85 },
+  { query: 'harness engineering', boost: 75 },
 ];
 
 const REDDIT_SPECS = [
@@ -74,6 +82,7 @@ const GITHUB_REPO_WATCH = [
   { repo: 'smithersai/claude-p', boost: 140 },
   { repo: 'tRidha/pokegents', boost: 135 },
   { repo: 'stormzhang/token-tracker', boost: 130 },
+  { repo: 'MinishLab/semble', boost: 120 },
 ];
 const GITHUB_RELEASE_WATCH = [
   { repo: 'QwenLM/qwen-code', label: 'Qwen', boost: 140 },
@@ -81,6 +90,8 @@ const GITHUB_RELEASE_WATCH = [
 const LAB_FEEDS = [
   ['OpenAI', 'https://openai.com/news/rss.xml'],
   ['Google AI', 'https://blog.google/technology/ai/rss/'],
+  ['Google AI', 'https://developers.googleblog.com/feeds/posts/default'],
+  ['Anthropic', 'https://www.anthropic.com/feed.xml'],
 ];
 
 const OFFICIAL_SOURCES = [
@@ -186,12 +197,12 @@ const HAND_CURATED_WHY = [
     why: 'Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the "AI factory" positioning shows they\'re building a vertically integrated agent platform, not just a model.',
   },
   {
-    match: /qwen 3\\.6/i,
+    match: /qwen 3\.6/i,
     why: 'Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family.',
   },
   {
     match: /marco-deepresearch/i,
-    why: 'Compact “deep research” style models are getting easier to run and remix, which widens the range of people who can experiment with retrieval-heavy agent workflows.',
+    why: 'Compact "deep research" style models are getting easier to run and remix, which widens the range of people who can experiment with retrieval-heavy agent workflows.',
   },
   {
     match: /persistent memory/i,
@@ -223,7 +234,7 @@ const HAND_CURATED_WHY = [
   },
   {
     match: /qwenlm\/qwen-code|qwen code/i,
-    why: 'Qwen’s coding stack is turning into a more automation-friendly surface, which matters because structured outputs and review-oriented workflows are what make coding agents easier to trust.',
+    why: 'Qwen\'s coding stack is turning into a more automation-friendly surface, which matters because structured outputs and review-oriented workflows are what make coding agents easier to trust.',
   },
   {
     match: /clawdmeter/i,
@@ -252,6 +263,38 @@ const HAND_CURATED_WHY = [
   {
     match: /opengravity/i,
     why: 'This points toward a more inspectable, BYOK-style agent workspace model where people can try serious tooling without fully handing control to a hosted black box.',
+  },
+  {
+    match: /semble/i,
+    why: 'This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop.',
+  },
+  {
+    match: /gemini spark|spark.*agent/i,
+    why: 'Always-on personal agents that integrate with your actual data (Gmail, calendar) are a fundamentally different product from chat interfaces — this is Google\'s bet on persistent, delegated AI.',
+  },
+  {
+    match: /antigravity 2\.0|standalone desktop.*agent|agent orchestration/i,
+    why: 'A full agentic IDE-on-the-go is a strong signal that agent development is being treated as a first-class workflow, not just a side feature of chat UIs.',
+  },
+  {
+    match: /managed agent.*gemini/i,
+    why: 'A managed agent that spins up from one API call is the clearest sign yet that agent infrastructure is being productized as a deployable platform, not a DIY framework.',
+  },
+  {
+    match: /sap.*claude|claude.*sap/i,
+    why: 'One of the largest enterprise agent deployments yet — SAP embedding Claude as a primary reasoning engine across S/4HANA, SuccessFactors, and Ariba via MCP signals that enterprise agent workflows are moving into production at scale.',
+  },
+  {
+    match: /codex.*dell|dell.*codex|coding agents.*enterprise|enterprise.*coding agents/i,
+    why: 'Codex entering on-prem enterprise through Dell\'s channel is a strong signal that coding agents are graduating from dev-tool novelty to governed enterprise infrastructure.',
+  },
+  {
+    match: /harness engineering|unrolling the codex agent/i,
+    why: 'Deep engineering posts about how agent loops actually work internally — tool sequencing, context windows, error recovery — are more valuable than most product announcements.',
+  },
+  {
+    match: /ramp.*codex|code review.*codex/i,
+    why: 'Real enterprise case studies showing Codex-in-production are more actionable than benchmark scores — they reveal the practical friction points in agent adoption.',
   },
 ];
 
@@ -456,6 +499,9 @@ function highlightScore(item) {
   if (haystack.includes('claude code mcp') || haystack.includes('5 mcp')) bonus += 320;
   if (haystack.includes('qwen 3.6')) bonus += 220;
   if (haystack.includes('qwen 3.7') || haystack.includes('qwen3.7')) bonus += 900;
+  if (haystack.includes('semble') && haystack.includes('code search')) bonus += 800;
+  if (haystack.includes('gemini spark')) bonus += 700;
+  if (haystack.includes('antigravity 2.0') || (haystack.includes('antigravity') && haystack.includes('desktop'))) bonus += 650;
   if (haystack.includes('marco-deepresearch')) bonus += 180;
   if (haystack.includes('remote client for claude code')) bonus += 160;
   if (haystack.includes('qwenlm/qwen-code') || haystack.includes('qwen code')) bonus += 260;
@@ -464,6 +510,12 @@ function highlightScore(item) {
   if (haystack.includes('second-brain')) bonus += 200;
   if (haystack.includes('workspace')) bonus += 140;
   if (haystack.includes('co-founder says')) bonus -= 200;
+  if (haystack.includes('managed agent') && haystack.includes('gemini')) bonus += 350;
+  if (haystack.includes('gemini omni')) bonus += 300;
+  if (haystack.includes('sap') && haystack.includes('claude')) bonus += 250;
+  if (haystack.includes('dell') && haystack.includes('codex')) bonus += 300;
+  if (haystack.includes('harness engineering') || haystack.includes('unrolling the codex')) bonus += 200;
+  if (haystack.includes('ramp') && haystack.includes('codex')) bonus += 150;
   return (item.score ?? 0) + bonus;
 }
 
@@ -746,29 +798,33 @@ function buildHighlights({ hn, reddit, hf, labs, github }) {
 function buildSummary(highlights) {
   const titles = highlights.map((item) => item.title.toLowerCase());
   const hasTinyTools = titles.some((title) => title.includes('needle'));
-  const hasState = titles.some((title) => title.includes('statewright'));
+  const hasForge = titles.some((title) => title.includes('forge'));
+  const hasCodex = titles.some((title) => title.includes('codex'));
   const hasLocal = titles.some((title) => title.includes('qwen') || title.includes('textgen') || title.includes('deepresearch'));
   const hasInterface = titles.some((title) => title.includes('pointer') || title.includes('interaction models'));
-  const hasPackaging = titles.some((title) => title.includes('small business') || title.includes('codex'));
+  const hasPackaging = titles.some((title) => title.includes('small business') || title.includes('gemini spark') || title.includes('codex'));
   const hasInfra = titles.some((title) => title.includes('webhooks') || title.includes('web-search') || title.includes('mcp') || title.includes('browser'));
   const hasSupervision = titles.some((title) => title.includes('agent view') || title.includes('usage limits') || title.includes('dashboard'));
-  const hasOpenTooling = titles.some((title) => title.includes('workspace') || title.includes('textweb') || title.includes('clawdmeter') || title.includes('second-brain'));
+  const hasEnterprise = titles.some((title) => title.includes('dell') || title.includes('sap') || title.includes('enterprise'));
+  const hasSemble = titles.some((title) => title.includes('semble') && title.includes('code search'));
 
   const bits = [];
-  if (hasTinyTools) bits.push('tiny tool-calling models are becoming real');
-  if (hasState) bits.push('builders are reaching for stricter control loops');
-  if (hasPackaging) bits.push('major labs are packaging agent workflows for broader adoption');
+  if (hasForge) bits.push('guardrails on local models close the reliability gap with frontier APIs (Forge: 53%→99%)');
+  if (hasSemble) bits.push('semantic code search for agents cuts token use by 98% — a massive efficiency unlock');
+  if (hasEnterprise) bits.push('enterprise agents are going production-scale (SAP/Claude, Dell/Codex)');
+  if (hasPackaging) bits.push('major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile)');
+  if (hasCodex) bits.push('Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering');
   if (hasLocal) bits.push('the local/open-weight stack keeps getting stronger around Qwen-style setups');
   if (hasInterface) bits.push('the interface layer is starting to shift beyond plain chat');
   if (hasInfra) bits.push('event-driven and browser/MCP plumbing is becoming part of the agent conversation');
   if (hasSupervision) bits.push('people are asking for better visibility into long-running agent runs');
-  if (hasOpenTooling) bits.push('open-source builders are turning agent helpers into real products and dashboards');
+  if (hasTinyTools) bits.push('tiny tool-calling models are becoming real');
 
   if (!bits.length) {
     return 'The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.';
   }
 
-  return `This cycle says ${bits.slice(0, 4).join(', ')}. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.`;
+  return `This cycle says ${bits.slice(0, 5).join(', ')}. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.`;
 }
 
 function buildTangentRadar(items) {
@@ -802,12 +858,13 @@ function buildExperimentQueue(highlights) {
   const stateTilt = titles.some((title) => title.includes('statewright') || title.includes('memory'));
   const packagingTilt = titles.some((title) => title.includes('small business') || title.includes('codex'));
   const infraTilt = titles.some((title) => title.includes('webhooks') || title.includes('web-search'));
+  const enterpriseTilt = titles.some((title) => title.includes('dell') || title.includes('sap') || title.includes('enterprise'));
 
   const experiments = [
     {
       title: 'Benchmark one local-first agent stack',
-      why: 'The local/open-weight ecosystem looks materially better this week, especially around Qwen 3.6 and adjacent tooling.',
-      prompt: 'Pick one real workflow and compare a local Qwen-style stack against a frontier hosted model on tool accuracy, latency, and cost.',
+      why: 'The local/open-weight ecosystem looks materially better this week, especially around Qwen and Forge guardrails.',
+      prompt: 'Pick one real workflow and compare a local Qwen+Forge stack against a frontier hosted model on tool accuracy, latency, and cost.',
     },
     {
       title: 'Add explicit state to one messy workflow',
@@ -821,11 +878,11 @@ function buildExperimentQueue(highlights) {
     },
   ];
 
-  if (packagingTilt) {
+  if (enterpriseTilt || packagingTilt) {
     experiments[0] = {
-      title: 'Audit one packaged agent workflow',
-      why: 'Packaged systems like Claude for Small Business and Codex case studies are becoming the mainstream distribution model.',
-      prompt: 'Take one off-the-shelf workflow bundle, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak.',
+      title: 'Audit one deployed enterprise agent workflow',
+      why: 'Codex-on-Dell and SAP-with-Claude are production-scale agent deployments — worth understanding the real friction points.',
+      prompt: 'Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak.',
     };
   }
 
