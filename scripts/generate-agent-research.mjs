@@ -16,6 +16,10 @@ const REDDIT_AGENT = 'NimitAgentResearch/2.0 (by nimit2801)';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || githubTokenFromCli();
 
 const HN_QUERY_SPECS = [
+  { query: 'gemini 3.5 flash', boost: 150 },
+  { query: 'forge guardrails', boost: 140 },
+  { query: 'gemini spark', boost: 130 },
+  { query: 'antigravity', boost: 120 },
   { query: 'needle', boost: 120 },
   { query: 'statewright', boost: 100 },
   { query: 'claude for small business', boost: 100 },
@@ -56,6 +60,7 @@ const GITHUB_QUERY_SPECS = [
   { query: 'qwen agent in:name,description,readme created:>=' + SINCE_DATE, boost: 120 },
 ];
 const GITHUB_REPO_WATCH = [
+  { repo: 'antoinezambelli/forge', boost: 250 },
   { repo: 'HermannBjorgvin/Clawdmeter', boost: 180 },
   { repo: 'chrisrobison/textweb', boost: 170 },
   { repo: 'Unagi-cq/cdp-bridge-mcp', boost: 160 },
@@ -116,6 +121,22 @@ const DROP_TITLE_PATTERNS = [
 ];
 
 const HAND_CURATED_WHY = [
+  {
+    match: /forge.*guardrail|guardrail.*forge/i,
+    why: 'This is arguably the most important agent-engineering signal this cycle: reliability engineering via guardrails can close the gap between small local models and frontier APIs on structured agentic tasks.',
+  },
+  {
+    match: /gemini 3\.5 flash/i,
+    why: 'A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight — faster inference directly enables more complex, multi-step agent loops.',
+  },
+  {
+    match: /gemini spark/i,
+    why: 'Always-on personal agents that integrate with your actual data (Gmail, calendar) are a fundamentally different product from chat interfaces — this is Google\'s bet on persistent, delegated AI.',
+  },
+  {
+    match: /antigravity 2\.0|antigravity agentic/i,
+    why: 'A full agentic IDE-on-the-go is a strong signal that agent development is being treated as a first-class workflow, not just a side feature of chat UIs.',
+  },
   {
     match: /needle/i,
     why: 'A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs.',
@@ -397,6 +418,10 @@ function sectionItems(items, limit = 5) {
 function highlightScore(item) {
   const haystack = `${item.title} ${item.url} ${item.summary ?? ''}`.toLowerCase();
   let bonus = 0;
+  if (haystack.includes('forge')) bonus += 600;
+  if (haystack.includes('gemini 3.5') || haystack.includes('gemini 3.5 flash')) bonus += 550;
+  if (haystack.includes('gemini spark')) bonus += 500;
+  if (haystack.includes('antigravity 2.0') || haystack.includes('antigravity agentic')) bonus += 450;
   if (haystack.includes('needle')) bonus += 500;
   if (haystack.includes('statewright')) bonus += 320;
   if (haystack.includes('claude for small business')) bonus += 450;
