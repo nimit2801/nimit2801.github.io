@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-05-21T14:18:55Z",
+  "generatedAt": "2026-05-21T18:13:53Z",
   "windowDays": 7,
-  "summary": "This cycle says OpenAI model disproves 80-year-old discrete geometry conjecture, the local/open-weight stack keeps getting stronger around Qwen-style setups, Karpathy joins Anthropic — talent signal for the agentic AI research race, Cohere releases Command A+ — a 25B/218B open-weight MoE agentic model under Apache 2.0. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "GitHub's agent-tooling ecosystem explodes this cycle: codegraph (pre-indexed code knowledge graph for Claude Code/Codex, 12.8K\u2605, 6.7K/week) and agentmemory (benchmark-backed persistent memory, 15.7K\u2605, 8K/week) address two of the hardest practical problems in production agent systems \u2014 code retrieval and cross-session memory. OpenHuman (24.7K\u2605, 19K/week) signals massive appetite for local-first private agentic assistants built in Rust. Anthropic expands to Colossus2 with 220K GB200 GPUs via SpaceX (270 HN pts, 312 comments), reshaping the compute landscape for agent training. Sandboxed agent deployment becomes a YC-scale category as Runtime (YC P26) launches on HN, joining Freestyle and Twill in the race to make coding agents safe for everyone on a team. CloakBrowser (18.1K\u2605, 8.3K/week) addresses the growing bot-detection arms race that every web agent builder faces. The deeper pattern: the agent ecosystem is hardening its infrastructure layer \u2014 memory, code retrieval, sandboxing, and browser automation are all seeing breakout open-source projects that solve real production bottlenecks rather than just adding model capabilities.",
   "sourceStats": {
-    "items": 97,
+    "items": 104,
     "sources": {
-      "Anthropic": 2,
-      "GitHub": 40,
+      "Anthropic": 3,
+      "GitHub": 44,
       "Google AI": 3,
       "Google DeepMind": 1,
-      "Hacker News": 4,
+      "Hacker News": 6,
       "Hugging Face": 4,
       "OpenAI": 9,
       "Qwen": 2,
@@ -18,10 +18,38 @@
   },
   "highlights": [
     {
+      "title": "colbymchenry/codegraph",
+      "source": "GitHub",
+      "url": "https://github.com/colbymchenry/codegraph",
+      "meta": "12804 stars \u00b7 6731 stars this week",
+      "topics": [
+        "Tool use",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-05-20T00:00:00Z",
+      "score": 78640,
+      "summary": "Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode \u2014 fewer tokens, fewer tool calls, 100% local",
+      "why": "Codegraph addresses the most concrete pain point in agentic coding: finding relevant code without burning tokens on grep+read. 6.7K stars in a week confirms this is a widespread unsolved need."
+    },
+    {
+      "title": "rohitg00/agentmemory",
+      "source": "GitHub",
+      "url": "https://github.com/rohitg00/agentmemory",
+      "meta": "15691 stars \u00b7 7976 stars this week",
+      "topics": [
+        "Memory and state",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-05-19T00:00:00Z",
+      "score": 47073,
+      "summary": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+      "why": "Agent memory is one of the hardest unsolved problems in production agent systems \u2014 agentmemory's 8K stars/week shows the community is hungry for benchmark-backed, practical solutions."
+    },
+    {
       "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
       "source": "OpenAI",
       "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "meta": "1284 pts · 933 comments",
+      "meta": "1284 pts \u00b7 933 comments",
       "topics": [
         "Major labs"
       ],
@@ -34,20 +62,20 @@
       "title": "Gemini 3.5 Flash",
       "source": "Google AI",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-      "meta": "943 pts · 649 comments",
+      "meta": "943 pts \u00b7 649 comments",
       "topics": [
         "Major labs"
       ],
       "publishedAt": "2026-05-19T17:43:45Z",
       "score": 3983,
       "summary": "https:&#x2F;&#x2F;ai.google.dev&#x2F;gemini-api&#x2F;docs&#x2F;models&#x2F;gemini-3.5-flas...",
-      "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight — faster inference directly enables more complex, multi-step agent loops."
+      "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight \u2014 faster inference directly enables more complex, multi-step agent loops."
     },
     {
       "title": "Qwen3.7-Max: The Agent Frontier",
       "source": "Qwen",
       "url": "https://qwen.ai/blog?id=qwen3.7",
-      "meta": "676 pts · 276 comments",
+      "meta": "676 pts \u00b7 276 comments",
       "topics": [
         "Open weights",
         "Major labs"
@@ -61,31 +89,31 @@
       "title": "Karpathy joins Anthropic",
       "source": "Reddit",
       "url": "https://www.reddit.com/r/ClaudeAI/comments/1thpuf1/karpathy_joins_anthropic/",
-      "meta": "6109 upvotes · 255 comments",
+      "meta": "6109 upvotes \u00b7 255 comments",
       "topics": [
         "Major labs"
       ],
       "publishedAt": "2026-05-19T15:10:01Z",
       "score": 10284.4,
       "summary": "",
-      "why": "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year — his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box."
+      "why": "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year \u2014 his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box."
     },
     {
       "title": "CohereLabs/command-a-plus-05-2026-w4a4",
       "source": "Hugging Face",
       "url": "https://huggingface.co/CohereLabs/command-a-plus-05-2026-w4a4",
-      "meta": "124 likes · 575 downloads",
+      "meta": "124 likes \u00b7 575 downloads",
       "topics": [],
       "publishedAt": "2026-05-18T04:51:16.000Z",
       "score": 496.575,
       "summary": "transformers safetensors cohere2_vision image-text-to-text conversational chat en ar bg bn ca cs da de el es et fa fi fil fr ga he hi hr hu id is it ja ko lt lv ms mt nl no pa pl pt ro ru sk sl sr sv ta te th tr uk ur vi zh base_model:CohereLabs/command-a-plus-05-2026-bf16 base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16 license:apache-2.0 8-bit compressed-tensors region:us",
-      "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
+      "why": "Cohere's Command A+ is a major open-weight release \u2014 a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
     },
     {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "104430 stars · updated Thu, 21 May 2026 00:42:04 UTC",
+      "meta": "104430 stars \u00b7 updated Thu, 21 May 2026 00:42:04 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -95,22 +123,6 @@
       "publishedAt": "2025-04-17T17:04:31Z",
       "score": 654258,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-    },
-    {
-      "title": "LearningCircuit/local-deep-research",
-      "source": "GitHub",
-      "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "7879 stars · updated Thu, 21 May 2026 00:07:03 UTC",
-      "topics": [
-        "Tool use",
-        "Evaluation",
-        "Open weights",
-        "Major labs"
-      ],
-      "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 48746,
-      "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
   ],
@@ -123,7 +135,7 @@
           "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
           "source": "OpenAI",
           "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-          "meta": "1284 pts · 933 comments",
+          "meta": "1284 pts \u00b7 933 comments",
           "topics": [
             "Major labs"
           ],
@@ -136,20 +148,20 @@
           "title": "Gemini 3.5 Flash",
           "source": "Google AI",
           "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-          "meta": "943 pts · 649 comments",
+          "meta": "943 pts \u00b7 649 comments",
           "topics": [
             "Major labs"
           ],
           "publishedAt": "2026-05-19T17:43:45Z",
           "score": 3983,
           "summary": "https:&#x2F;&#x2F;ai.google.dev&#x2F;gemini-api&#x2F;docs&#x2F;models&#x2F;gemini-3.5-flas...",
-          "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight — faster inference directly enables more complex, multi-step agent loops."
+          "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight \u2014 faster inference directly enables more complex, multi-step agent loops."
         },
         {
           "title": "Anthropic acquires Stainless",
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
-          "meta": "528 pts · 379 comments",
+          "meta": "528 pts \u00b7 379 comments",
           "topics": [
             "Major labs",
             "Interfaces"
@@ -157,13 +169,13 @@
           "publishedAt": "2026-05-18T17:01:21Z",
           "score": 2333,
           "summary": "",
-          "why": "This is one of the most consequential agent-infrastructure moves this year: Anthropic didn't just buy a tooling company — it bought the connectivity layer that all agent frameworks depend on, and then walled it off from competitors."
+          "why": "This is one of the most consequential agent-infrastructure moves this year: Anthropic didn't just buy a tooling company \u2014 it bought the connectivity layer that all agent frameworks depend on, and then walled it off from competitors."
         },
         {
           "title": "Qwen3.7-Max: The Agent Frontier",
           "source": "Qwen",
           "url": "https://qwen.ai/blog?id=qwen3.7",
-          "meta": "676 pts · 276 comments",
+          "meta": "676 pts \u00b7 276 comments",
           "topics": [
             "Open weights",
             "Major labs"
@@ -177,7 +189,7 @@
           "title": "Codex is now in the ChatGPT mobile app",
           "source": "OpenAI",
           "url": "https://openai.com/index/work-with-codex-from-anywhere/",
-          "meta": "486 pts · 247 comments",
+          "meta": "486 pts \u00b7 247 comments",
           "topics": [
             "Tool use",
             "Major labs",
@@ -192,7 +204,7 @@
           "title": "Gemini Omni",
           "source": "Google DeepMind",
           "url": "https://deepmind.google/models/gemini-omni/",
-          "meta": "320 pts · 144 comments",
+          "meta": "320 pts \u00b7 144 comments",
           "topics": [
             "Major labs"
           ],
@@ -200,6 +212,20 @@
           "score": 1172,
           "summary": "",
           "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
+        },
+        {
+          "title": "Anthropic expands to Colossus2, will use GB200",
+          "source": "Anthropic",
+          "url": "https://xcancel.com/nottombrown/status/2057194829986300375",
+          "meta": "270 pts \u00b7 312 comments",
+          "topics": [
+            "Major labs",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-05-21T05:00:00Z",
+          "score": 1192,
+          "summary": "",
+          "why": "Anthropic's Colossus2 expansion with 220K GPUs via SpaceX reshapes the compute landscape for agentic AI \u2014 the infrastructure arms race directly determines what scale of agent training and deployment is possible."
         }
       ]
     },
@@ -208,10 +234,39 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+          "title": "Launch HN: Runtime (YC P26) \u2013 Sandboxed coding agents for everyone on a team",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48225040",
+          "meta": "24 pts \u00b7 6 comments",
+          "topics": [
+            "Tool use",
+            "Coding agents",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-21T21:30:00Z",
+          "score": 72,
+          "summary": "Runtime gives engineering teams control and visibility to enable anyone in their org to use coding agents securely. Sandboxed coding agents with your company's context, integrations, and guardrails.",
+          "why": "Agent sandboxing is becoming a YC-scale category \u2014 Runtime joins Freestyle, Twill, and E2B in the race to make coding agents safe for non-engineers. The 'sandboxed agent for everyone' pattern signals the biggest unlock for enterprise agent deployment isn't model capability but safety infrastructure."
+        },
+        {
+          "title": "Indexing a year of video locally on a 2021 MacBook with Gemma4-31B (50GB swap)",
+          "source": "Hacker News",
+          "url": "https://simbastack.com/",
+          "meta": "139 pts \u00b7 52 comments",
+          "topics": [
+            "Tool use",
+            "Open weights"
+          ],
+          "publishedAt": "2026-05-21T19:30:00Z",
+          "score": 417,
+          "summary": "",
+          "why": "Local video indexing with Gemma4 on consumer hardware is a practical demonstration that open-weight multimodal models are crossing the threshold from 'toy' to 'useful' for real personal-data workflows \u2014 directly relevant to agents that need to process local media."
+        },
+        {
+          "title": "Show HN: Forge \u2013 Guardrails take an 8B model from 53% to 99% on agentic tasks",
           "source": "Hacker News",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "660 pts · 240 comments",
+          "meta": "660 pts \u00b7 240 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -224,10 +279,10 @@
           "why": "This is arguably the most important agent-engineering signal this cycle: reliability engineering via guardrails can close the gap between small local models and frontier APIs on structured agentic tasks."
         },
         {
-          "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+          "title": "Show HN: Semble \u2013 Code search for agents that uses 98% fewer tokens than grep",
           "source": "Hacker News",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "442 pts · 150 comments",
+          "meta": "442 pts \u00b7 150 comments",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -237,13 +292,13 @@
           "publishedAt": "2026-05-17T15:37:07Z",
           "score": 1454,
           "summary": "Hey HN! We (Stephan and Thomas) recently open-sourced Semble. We kept running into the same problem while using Claude Code on large codebases: when the agent can&#x27;t find something directly, it falls back to grep, reading full files or launching subagents. This uses a lot of tokens, and often still misses the relevant code. There are existing tools for this, but they were either too slow to index on demand, needed API keys, or had poor retrieval quality. Semble is our solution for this. It combines static Model2Vec embeddings (using our latest static model: potion-code-16M) with BM25, fused via RRF and reranked with code-aware signals. Everything runs on CPU since there&#x27;s no transformers involved. On our benchmark of ~1250 query&#x2F;document pairs across 63 repos and 19 languages, it uses 98% fewer tokens than grep+read and reaches 99% of the retrieval quality of a 137M-parameter code-trained transformer, while being ~200x faster. Main features: - Token-efficient: 98% fewer tokens than grep+read - Fast: ~250ms to index a typical repo on our benchmark, ~1.5ms per query on CPU (very large repos may take longer) - Accurate: 0.854 NDCG@10, 99% of the best transformer setup we tested - MCP server: drop-in for Claude Code, Cursor, Codex, OpenCode - Zero config: no API keys, no GPU, no external services Install in Claude Code with: claude mcp add semble -s user -- uvx --from \"semble[mcp]\" semble Or check our README for other installation instructions, benchmarks, and methodology: Semble: https:&#x2F;&#x2F;github.com&#x2F;MinishLab&#x2F;semble Benchmarks: https:&#x2F;&#x2F;github.com&#x2F;MinishLab&#x2F;semble&#x2F;tree&#x2F;main&#x2F;benchmarks Model: https:&#x2F;&#x2F;huggingface.co&#x2F;minishlab&#x2F;potion-code-16M Let us know if you have any feedback or questions!",
-          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
+          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows \u2014 standard tool surfaces are still one of the cleanest leverage points in the stack."
         },
         {
           "title": "Qwen 3.7 Preview",
           "source": "Hacker News",
           "url": "https://twitter.com/Alibaba_Qwen/status/2056403591464984753",
-          "meta": "252 pts · 97 comments",
+          "meta": "252 pts \u00b7 97 comments",
           "topics": [
             "Open weights",
             "Major labs"
@@ -257,7 +312,7 @@
           "title": "Testing distributed systems with AI agents",
           "source": "Hacker News",
           "url": "https://github.com/shenli/distributed-system-testing",
-          "meta": "91 pts · 17 comments",
+          "meta": "91 pts \u00b7 17 comments",
           "topics": [],
           "publishedAt": "2026-05-20T14:40:42Z",
           "score": 288,
@@ -274,20 +329,20 @@
           "title": "Karpathy joins Anthropic",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1thpuf1/karpathy_joins_anthropic/",
-          "meta": "6109 upvotes · 255 comments",
+          "meta": "6109 upvotes \u00b7 255 comments",
           "topics": [
             "Major labs"
           ],
           "publishedAt": "2026-05-19T15:10:01Z",
           "score": 10284.4,
           "summary": "",
-          "why": "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year — his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box."
+          "why": "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year \u2014 his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box."
         },
         {
           "title": "OpenAI cofounder Andrej karpathy just joined anthropic and the talent war is officially over",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1thw3bu/openai_cofounder_andrej_karpathy_just_joined/",
-          "meta": "1515 upvotes · 89 comments",
+          "meta": "1515 upvotes \u00b7 89 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -296,14 +351,14 @@
           ],
           "publishedAt": "2026-05-19T18:40:02Z",
           "score": 2662,
-          "summary": "this happened literally today ,andrej karpathy one of the most respected ai researchers alive nd the guy whose youtube lectures taught half the developers in this sub how neural networks work, just announced he is joini…",
-          "why": "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year — his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box."
+          "summary": "this happened literally today ,andrej karpathy one of the most respected ai researchers alive nd the guy whose youtube lectures taught half the developers in this sub how neural networks work, just announced he is joini\u2026",
+          "why": "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year \u2014 his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box."
         },
         {
           "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model, here's how",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgecrq/i_built_a_coding_agent_that_gets_87_on_benchmarks/",
-          "meta": "822 upvotes · 357 comments",
+          "meta": "822 upvotes \u00b7 357 comments",
           "topics": [
             "Tool use",
             "Memory and state",
@@ -312,14 +367,14 @@
           ],
           "publishedAt": "2026-05-18T06:38:11Z",
           "score": 2029.2,
-          "summary": "I was frustrated that every coding agent (OpenCode, Cursor, Claude Code) assumes you're running GPT-5.4 or Claude Opus. If you try them with a local model like Gemma or Qwen they fall apart. I find that often tool calls…",
+          "summary": "I was frustrated that every coding agent (OpenCode, Cursor, Claude Code) assumes you're running GPT-5.4 or Claude Opus. If you try them with a local model like Gemma or Qwen they fall apart. I find that often tool calls\u2026",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
         {
           "title": "Local Qwen 3.6 vs frontier models on a coding primitive: single-file HTML canvas driving animation - results and GIFs",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf3p6c/local_qwen_36_vs_frontier_models_on_a_coding/",
-          "meta": "760 upvotes · 219 comments",
+          "meta": "760 upvotes \u00b7 219 comments",
           "topics": [
             "Evaluation",
             "Open weights",
@@ -328,7 +383,7 @@
           ],
           "publishedAt": "2026-05-16T19:51:05Z",
           "score": 1654,
-          "summary": "Saw [this post](https://www.reddit.com/r/LocalLLaMA/comments/1styxdy/compared_qwen_36_35b_with_qwen_36_27b_for_coding/) comparing Qwen 3.6 variants on coding primitives, so I wanted to see how local quants stack up agai…",
+          "summary": "Saw [this post](https://www.reddit.com/r/LocalLLaMA/comments/1styxdy/compared_qwen_36_35b_with_qwen_36_27b_for_coding/) comparing Qwen 3.6 variants on coding primitives, so I wanted to see how local quants stack up agai\u2026",
           "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
         }
       ]
@@ -341,29 +396,29 @@
           "title": "CohereLabs/command-a-plus-05-2026-w4a4",
           "source": "Hugging Face",
           "url": "https://huggingface.co/CohereLabs/command-a-plus-05-2026-w4a4",
-          "meta": "124 likes · 575 downloads",
+          "meta": "124 likes \u00b7 575 downloads",
           "topics": [],
           "publishedAt": "2026-05-18T04:51:16.000Z",
           "score": 496.575,
           "summary": "transformers safetensors cohere2_vision image-text-to-text conversational chat en ar bg bn ca cs da de el es et fa fi fil fr ga he hi hr hu id is it ja ko lt lv ms mt nl no pa pl pt ro ru sk sl sr sv ta te th tr uk ur vi zh base_model:CohereLabs/command-a-plus-05-2026-bf16 base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16 license:apache-2.0 8-bit compressed-tensors region:us",
-          "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
+          "why": "Cohere's Command A+ is a major open-weight release \u2014 a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
         },
         {
           "title": "CohereLabs/command-a-plus-05-2026-fp8",
           "source": "Hugging Face",
           "url": "https://huggingface.co/CohereLabs/command-a-plus-05-2026-fp8",
-          "meta": "26 likes · 42 downloads",
+          "meta": "26 likes \u00b7 42 downloads",
           "topics": [],
           "publishedAt": "2026-05-18T04:50:57.000Z",
           "score": 104.042,
           "summary": "transformers safetensors cohere2_vision image-text-to-text conversational chat en ar bg bn ca cs da de el es et fa fi fil fr ga he hi hr hu id is it ja ko lt lv ms mt nl no pa pl pt ro ru sk sl sr sv ta te th tr uk ur vi zh base_model:CohereLabs/command-a-plus-05-2026-bf16 base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16 license:apache-2.0 compressed-tensors region:us",
-          "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
+          "why": "Cohere's Command A+ is a major open-weight release \u2014 a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
         },
         {
           "title": "AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
-          "meta": "3 likes · 3,325 downloads",
+          "meta": "3 likes \u00b7 3,325 downloads",
           "topics": [
             "Open weights",
             "Major labs",
@@ -378,7 +433,7 @@
           "title": "AIDC-AI/Marco-DeepResearch-8B-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-GGUF",
-          "meta": "3 likes · 964 downloads",
+          "meta": "3 likes \u00b7 964 downloads",
           "topics": [
             "Open weights",
             "Major labs",
@@ -399,7 +454,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "104430 stars · updated Thu, 21 May 2026 00:42:04 UTC",
+          "meta": "104430 stars \u00b7 updated Thu, 21 May 2026 00:42:04 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -415,7 +470,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "7879 stars · updated Thu, 21 May 2026 00:07:03 UTC",
+          "meta": "7879 stars \u00b7 updated Thu, 21 May 2026 00:07:03 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -431,7 +486,7 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "3497 stars · updated Thu, 21 May 2026 13:56:08 UTC",
+          "meta": "3497 stars \u00b7 updated Thu, 21 May 2026 13:56:08 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -446,7 +501,7 @@
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "1364 stars · updated Thu, 21 May 2026 04:07:32 UTC",
+          "meta": "1364 stars \u00b7 updated Thu, 21 May 2026 04:07:32 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows"
@@ -455,6 +510,64 @@
           "score": 8570,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "colbymchenry/codegraph",
+          "source": "GitHub",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "meta": "12804 stars \u00b7 updated 3 hours ago",
+          "topics": [
+            "Tool use",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-05-20T00:00:00Z",
+          "score": 78640,
+          "summary": "Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode \u2014 fewer tokens, fewer tool calls, 100% local",
+          "why": "Codegraph addresses one of the most concrete pain points for agentic coding: finding relevant code without burning tokens on grep+read. 6.7K stars in a week confirms this is a widespread, unsolved need in the agent-engineering community."
+        },
+        {
+          "title": "rohitg00/agentmemory",
+          "source": "GitHub",
+          "url": "https://github.com/rohitg00/agentmemory",
+          "meta": "15691 stars \u00b7 updated 2 days ago",
+          "topics": [
+            "Memory and state",
+            "Coding agents",
+            "Tool use"
+          ],
+          "publishedAt": "2026-05-19T00:00:00Z",
+          "score": 47073,
+          "summary": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+          "why": "Agent memory is one of the hardest unsolved problems in production agent systems, and agentmemory's explosion (8K stars/week) signals that the community is hungry for practical, benchmark-backed solutions \u2014 not just academic architectures."
+        },
+        {
+          "title": "tinyhumansai/openhuman",
+          "source": "GitHub",
+          "url": "https://github.com/tinyhumansai/openhuman",
+          "meta": "24682 stars \u00b7 updated this week",
+          "topics": [
+            "Memory and state",
+            "Interfaces",
+            "Open weights"
+          ],
+          "publishedAt": "2026-05-18T00:00:00Z",
+          "score": 98728,
+          "summary": "Your Personal AI super intelligence. Private, Simple and extremely powerful. An open-source agentic assistant designed to integrate with you in your daily life.",
+          "why": "OpenHuman's meteoric rise (19K stars this week!) shows massive appetite for local-first, private personal AI agents that go beyond chat. The Rust-based architecture and 'agentic assistant' positioning make it a potential inflection point for on-device agent deployment."
+        },
+        {
+          "title": "CloakHQ/CloakBrowser",
+          "source": "GitHub",
+          "url": "https://github.com/CloakHQ/CloakBrowser",
+          "meta": "18117 stars \u00b7 updated this week",
+          "topics": [
+            "Tool use",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-17T00:00:00Z",
+          "score": 54351,
+          "summary": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.",
+          "why": "As web agents proliferate, bot detection is becoming the #1 operational headache \u2014 CloakBrowser directly addresses the arms race between agents and bot protection. Its 8.3K stars/week reflects a growing infrastructure need for undetectable browser automation."
         }
       ]
     }
@@ -462,19 +575,21 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 55,
+      "signalCount": 60,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
-        "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+        "GitHub: CloakHQ/CloakBrowser \u2014 stealth Chromium for bot-undetectable agents",
+        "Hacker News: Show HN: Forge \u2013 Guardrails take an 8B model from 53% to 99% on agentic tasks",
         "OpenAI: Sandboxing Codex on Windows",
         "OpenAI: Codex is now in the ChatGPT mobile app"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 50,
+      "signalCount": 53,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
+        "Anthropic: expands to Colossus2 with 220K GB200 GPUs via SpaceX",
         "Google AI: Gemini 3.5 Flash",
         "Qwen: Qwen3.7-Max: The Agent Frontier",
         "Hacker News: Qwen 3.7 Preview"
@@ -482,12 +597,14 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 49,
+      "signalCount": 55,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
+        "GitHub: colbymchenry/codegraph \u2014 pre-indexed code knowledge graph",
+        "GitHub: rohitg00/agentmemory \u2014 persistent agent memory",
         "OpenAI: Sandboxing Codex on Windows",
         "OpenAI: Codex is now in the ChatGPT mobile app",
-        "Hacker News: Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep"
+        "Hacker News: Show HN: Semble \u2013 Code search for agents that uses 98% fewer tokens than grep"
       ]
     },
     {
@@ -502,9 +619,10 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 33,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signalCount": 37,
+      "whyItMatters": "Agent UX is moving beyond chat boxes \u2014 interface design is becoming part of the research frontier.",
       "signals": [
+        "GitHub: tinyhumansai/openhuman \u2014 private local-first agentic assistant",
         "OpenAI: Sandboxing Codex on Windows",
         "Anthropic: Anthropic acquires Stainless",
         "Reddit: Used over a million tokens in three separate sessions to test Qwen 3.6 35b (new Multi-token Prediction version)"
@@ -515,13 +633,27 @@
       "signalCount": 17,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+        "Hacker News: Show HN: Forge \u2013 Guardrails take an 8B model from 53% to 99% on agentic tasks",
         "Reddit: The pacman benchmark: finally a viable local agentic coding agent with Qwen 3.6 27b",
         "Reddit: Benchmarking the new b9200 update: Optimizing Qwen 3.6 27B mtp for Hermes Agent on a single RTX 3090"
+      ]
+    },
+    {
+      "topic": "Agent memory",
+      "signalCount": 8,
+      "whyItMatters": "Cross-session memory remains the single most cited bottleneck in production agent systems \u2014 agentmemory's breakout suggests the community is ready for practical, benchmark-backed solutions.",
+      "signals": [
+        "GitHub: rohitg00/agentmemory \u2014 persistent memory for Claude Code, Codex, Cursor, Hermes",
+        "Hacker News: Launch HN: codegraph \u2014 pre-indexed knowledge graph for agents"
       ]
     }
   ],
   "experimentQueue": [
+    {
+      "title": "Test persistent agent memory in a real workflow",
+      "why": "agentmemory and codegraph are both hitting explosive growth; the bottleneck for production agents has shifted from 'can the model do it' to 'can the agent remember and retrieve.'",
+      "prompt": "Set up agentmemory in a coding agent session. Run a multi-day workflow (or simulate it with saved context) and measure: (a) how much context is preserved, (b) whether retrieval quality degrades over time, and (c) how token usage compares to a stateless baseline."
+    },
     {
       "title": "Benchmark one local-first agent stack",
       "why": "The local/open-weight ecosystem looks materially better this week, especially around Qwen and Forge guardrails.",
@@ -535,7 +667,7 @@
     {
       "title": "Prototype an interface beyond chat",
       "why": "The AI-pointer and Interaction Models threads both suggest the interface layer is becoming a genuine research lever.",
-      "prompt": "Build a tiny agent UI that is not just a chat box — for example a timeline, pointer assistant, or live shared workspace — and log what it changes."
+      "prompt": "Build a tiny agent UI that is not just a chat box \u2014 for example a timeline, pointer assistant, or live shared workspace \u2014 and log what it changes."
     }
   ],
   "method": [
