@@ -57,16 +57,19 @@ const HN_QUERY_SPECS = [
   { query: 'mcp tunnels', boost: 100 },
   { query: 'self-hosted sandboxes', boost: 95 },
   { query: 'local deep research', boost: 90 },
+  { query: 'command a+ cohere', boost: 130 },
+  { query: 'gemini system prompt', boost: 100 },
+  { query: 'anthropic consulting', boost: 100 },
 ];
 
 const REDDIT_SPECS = [
   {
     subreddit: 'LocalLLaMA',
-    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents', 'web-search', 'game boy transformer', 'local deep research', 'karpathy anthropic'],
+    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents', 'web-search', 'game boy transformer', 'local deep research', 'karpathy anthropic', 'command a+', 'cohere'],
   },
   {
     subreddit: 'ClaudeAI',
-    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code', 'agent view', 'usage limits', 'karpathy', 'self-hosted sandbox', 'mcp tunnel'],
+    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code', 'agent view', 'usage limits', 'karpathy', 'self-hosted sandbox', 'mcp tunnel', 'command a+', 'cohere', 'anthropic consulting'],
   },
   {
     subreddit: 'OpenAI',
@@ -74,7 +77,7 @@ const REDDIT_SPECS = [
   },
 ];
 
-const HF_QUERIES = ['qwen3.6', 'deepresearch', 'browser-use', 'agent'];
+const HF_QUERIES = ['qwen3.6', 'deepresearch', 'browser-use', 'agent', 'command-a-plus', 'cohere'];
 const GITHUB_QUERY_SPECS = [
   { query: '"claude code" in:name,description,readme created:>=' + SINCE_DATE, boost: 140 },
   { query: '"deep research" in:name,description,readme created:>=' + SINCE_DATE, boost: 135 },
@@ -97,6 +100,7 @@ const GITHUB_REPO_WATCH = [
   { repo: 'TencentARC/Marvis', boost: 180 },
   { repo: 'google-gemini/gemini-cli', boost: 140 },
   { repo: 'LearningCircuit/local-deep-research', boost: 110 },
+  { repo: 'CohereLabs/command-a-plus-05-2026', boost: 180 },
 ];
 const GITHUB_RELEASE_WATCH = [
   { repo: 'QwenLM/qwen-code', label: 'Qwen', boost: 140 },
@@ -347,6 +351,10 @@ const HAND_CURATED_WHY = [
     match: /local deep research/i,
     why: 'A fully local deep research agent that runs on consumer hardware and scores ~95% on SimpleQA is a strong signal that autonomous research workflows are becoming deployable outside the cloud.',
   },
+  {
+    match: /command a\+|command a-plus|cohere.*command/i,
+    why: 'Cohere\'s Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem.',
+  },
 ];
 
 function githubTokenFromCli() {
@@ -481,6 +489,7 @@ function isAgenticTitle(title, summary = '') {
     'webhook',
     'web-search',
     'long-running',
+    'command',
   ].some((needle) => haystack.includes(needle));
 }
 
@@ -577,6 +586,8 @@ function highlightScore(item) {
   if (haystack.includes('karpathy') && haystack.includes('anthropic')) bonus += 250;
   if (haystack.includes('mcp tunnel') || haystack.includes('self-hosted sandbox')) bonus += 200;
   if (haystack.includes('local deep research')) bonus += 180;
+  if (haystack.includes('gemini system prompt') || haystack.includes('gemini dumped')) bonus += 180;
+  if (haystack.includes('command a+') || haystack.includes('command a-plus') || (haystack.includes('cohere') && haystack.includes('command'))) bonus += 350;
   return (item.score ?? 0) + bonus;
 }
 
@@ -876,6 +887,7 @@ function buildSummary(highlights) {
   const hasKarpathy = titles.some((title) => title.includes('karpathy') && title.includes('anthropic'));
   const hasMcpTunnels = titles.some((title) => title.includes('mcp tunnel') || title.includes('self-hosted sandbox'));
   const hasLocalDeepResearch = titles.some((title) => title.includes('local deep research'));
+  const hasCommandAPlus = titles.some((title) => title.includes('command a+') || title.includes('command a-plus') || (title.includes('cohere') && title.includes('command')));
 
   const bits = [];
   if (hasForge) bits.push('guardrails on local models close the reliability gap with frontier APIs (Forge: 53%→99%)');
@@ -896,6 +908,7 @@ function buildSummary(highlights) {
   if (hasKarpathy) bits.push('Karpathy joins Anthropic — talent signal for the agentic AI research race');
   if (hasMcpTunnels) bits.push('MCP tunnels and self-hosted sandboxes unlock enterprise agent deployments');
   if (hasLocalDeepResearch) bits.push('local deep research agents hit production quality on consumer hardware');
+  if (hasCommandAPlus) bits.push('Cohere releases Command A+ — a 25B/218B open-weight MoE agentic model under Apache 2.0');
 
   if (!bits.length) {
     return 'The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.';
