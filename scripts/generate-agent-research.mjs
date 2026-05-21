@@ -53,16 +53,20 @@ const HN_QUERY_SPECS = [
   { query: 'cursor windsurf', boost: 100 },
   { query: 'openai geometry conjecture', boost: 90 },
   { query: 'mistral emmi', boost: 80 },
+  { query: 'karpathy anthropic', boost: 130 },
+  { query: 'mcp tunnels', boost: 100 },
+  { query: 'self-hosted sandboxes', boost: 95 },
+  { query: 'local deep research', boost: 90 },
 ];
 
 const REDDIT_SPECS = [
   {
     subreddit: 'LocalLLaMA',
-    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents', 'web-search', 'game boy transformer'],
+    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents', 'web-search', 'game boy transformer', 'local deep research', 'karpathy anthropic'],
   },
   {
     subreddit: 'ClaudeAI',
-    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code', 'agent view', 'usage limits'],
+    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code', 'agent view', 'usage limits', 'karpathy', 'self-hosted sandbox', 'mcp tunnel'],
   },
   {
     subreddit: 'OpenAI',
@@ -92,6 +96,7 @@ const GITHUB_REPO_WATCH = [
   { repo: 'MinishLab/semble', boost: 120 },
   { repo: 'TencentARC/Marvis', boost: 180 },
   { repo: 'google-gemini/gemini-cli', boost: 140 },
+  { repo: 'LearningCircuit/local-deep-research', boost: 110 },
 ];
 const GITHUB_RELEASE_WATCH = [
   { repo: 'QwenLM/qwen-code', label: 'Qwen', boost: 140 },
@@ -330,6 +335,18 @@ const HAND_CURATED_WHY = [
     match: /gemini spark|spark.*agent/i,
     why: "Always-on personal agents that integrate with your actual data (Gmail, calendar) are a fundamentally different product from chat interfaces — this is Google's bet on persistent, delegated AI.",
   },
+  {
+    match: /karpathy.*anthropic|anthropic.*karpathy/i,
+    why: "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year — his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box.",
+  },
+  {
+    match: /mcp tunnel|self-hosted sandbox/i,
+    why: "Self-hosted sandboxes and MCP tunnels solve the enterprise 'my data in your sandbox' blocker that has been the single biggest friction point for production agent deployments.",
+  },
+  {
+    match: /local deep research/i,
+    why: 'A fully local deep research agent that runs on consumer hardware and scores ~95% on SimpleQA is a strong signal that autonomous research workflows are becoming deployable outside the cloud.',
+  },
 ];
 
 function githubTokenFromCli() {
@@ -557,6 +574,9 @@ function highlightScore(item) {
   if (haystack.includes('cursor') && (haystack.includes('windsurf') || haystack.includes('3.1'))) bonus += 280;
   if (haystack.includes('geometry') && haystack.includes('conjecture')) bonus += 200;
   if (haystack.includes('mistral') && haystack.includes('emmi')) bonus += 180;
+  if (haystack.includes('karpathy') && haystack.includes('anthropic')) bonus += 250;
+  if (haystack.includes('mcp tunnel') || haystack.includes('self-hosted sandbox')) bonus += 200;
+  if (haystack.includes('local deep research')) bonus += 180;
   return (item.score ?? 0) + bonus;
 }
 
@@ -853,6 +873,9 @@ function buildSummary(highlights) {
   const hasStainless = titles.some((title) => title.includes('stainless'));
   const hasAntigravityCli = titles.some((title) => title.includes('antigravity cli'));
   const hasMathBreakthrough = titles.some((title) => title.includes('geometry') || (title.includes('conjecture')));
+  const hasKarpathy = titles.some((title) => title.includes('karpathy') && title.includes('anthropic'));
+  const hasMcpTunnels = titles.some((title) => title.includes('mcp tunnel') || title.includes('self-hosted sandbox'));
+  const hasLocalDeepResearch = titles.some((title) => title.includes('local deep research'));
 
   const bits = [];
   if (hasForge) bits.push('guardrails on local models close the reliability gap with frontier APIs (Forge: 53%→99%)');
@@ -870,6 +893,9 @@ function buildSummary(highlights) {
   if (hasInfra) bits.push('event-driven and browser/MCP plumbing is becoming part of the agent conversation');
   if (hasSupervision) bits.push('people are asking for better visibility into long-running agent runs');
   if (hasTinyTools) bits.push('tiny tool-calling models are becoming real');
+  if (hasKarpathy) bits.push('Karpathy joins Anthropic — talent signal for the agentic AI research race');
+  if (hasMcpTunnels) bits.push('MCP tunnels and self-hosted sandboxes unlock enterprise agent deployments');
+  if (hasLocalDeepResearch) bits.push('local deep research agents hit production quality on consumer hardware');
 
   if (!bits.length) {
     return 'The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.';
