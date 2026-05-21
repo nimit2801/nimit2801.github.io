@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-21T07:25:22Z",
+  "generatedAt": "2026-05-21T21:00:00Z",
   "windowDays": 7,
-  "summary": "This cycle says guardrails on local models close the reliability gap with frontier APIs (Forge: 53%→99%), major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says guardrails on local models close the reliability gap with frontier APIs (Forge: 53%\u219299%), enterprise agents are going production-scale (SAP/Claude, Dell/Codex), and major labs are packaging agent workflows for broader adoption (Gemini Spark 24/7 agent, Claude Cowork, Codex mobile). The biggest infrastructure signal: Anthropic acquired Stainless ($300M+) \u2014 the SDK company behind OpenAI, Google, and hundreds of orgs \u2014 then shut off hosted services to rivals. Meanwhile, the IDE agent war is real: Cursor 3.1 ships async sub-agents, Windsurf 2.0 counters with persistent cloud agents. The deeper pattern: agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 84,
+    "items": 92,
     "sources": {
-      "Anthropic": 1,
+      "Anthropic": 3,
       "GitHub": 36,
       "Google AI": 3,
       "Google DeepMind": 1,
@@ -21,20 +21,35 @@
       "title": "Gemini 3.5 Flash",
       "source": "Google AI",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-      "meta": "939 pts · 643 comments",
+      "meta": "939 pts \u00b7 643 comments",
       "topics": [
         "Major labs"
       ],
       "publishedAt": "2026-05-19T17:43:45Z",
       "score": 3957,
       "summary": "https:&#x2F;&#x2F;ai.google.dev&#x2F;gemini-api&#x2F;docs&#x2F;models&#x2F;gemini-3.5-flas...",
-      "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight — faster inference directly enables more complex, multi-step agent loops."
+      "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight \u2014 faster inference directly enables more complex, multi-step agent loops."
+    },
+    {
+      "title": "Anthropic acquires Stainless \u2014 the SDK company behind OpenAI and Google",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "meta": "300+ points \u00b7 Major agent infrastructure play",
+      "topics": [
+        "Tool use",
+        "Major labs",
+        "Infra and retrieval"
+      ],
+      "publishedAt": "2026-05-18T15:00:00Z",
+      "score": 2800,
+      "summary": "Anthropic acquired Stainless, the company that generates official SDKs for Anthropic, OpenAI, Google, and hundreds of companies. After acquisition, Anthropic shut off hosted SDK generation for rivals. Stainless also generates CLI tools and MCP servers \u2014 the connectors that let both developers and agents use APIs. This is a strategic bet that the future of AI lies not in isolated models, but in agents that can seamlessly connect to external data and tools.",
+      "why": "This is one of the most consequential agent-infrastructure moves this year: Anthropic didn't just buy a tooling company \u2014 it bought the connectivity layer that all agent frameworks depend on, and then walled it off from competitors."
     },
     {
       "title": "Qwen3.7-Max: The Agent Frontier",
       "source": "Qwen",
       "url": "https://qwen.ai/blog?id=qwen3.7",
-      "meta": "657 pts · 259 comments",
+      "meta": "657 pts \u00b7 259 comments",
       "topics": [
         "Open weights",
         "Major labs"
@@ -48,7 +63,7 @@
       "title": "Codex is now in the ChatGPT mobile app",
       "source": "OpenAI",
       "url": "https://openai.com/index/work-with-codex-from-anywhere/",
-      "meta": "486 pts · 247 comments",
+      "meta": "486 pts \u00b7 247 comments",
       "topics": [
         "Tool use",
         "Major labs",
@@ -63,7 +78,7 @@
       "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model, here's how",
       "source": "Reddit",
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgecrq/i_built_a_coding_agent_that_gets_87_on_benchmarks/",
-      "meta": "818 upvotes · 355 comments",
+      "meta": "818 upvotes \u00b7 355 comments",
       "topics": [
         "Tool use",
         "Memory and state",
@@ -72,14 +87,14 @@
       ],
       "publishedAt": "2026-05-18T06:38:11Z",
       "score": 2018.8000000000002,
-      "summary": "I was frustrated that every coding agent (OpenCode, Cursor, Claude Code) assumes you're running GPT-5.4 or Claude Opus. If you try them with a local model like Gemma or Qwen they fall apart. I find that often tool calls…",
+      "summary": "I was frustrated that every coding agent (OpenCode, Cursor, Claude Code) assumes you're running GPT-5.4 or Claude Opus. If you try them with a local model like Gemma or Qwen they fall apart. I find that often tool calls\u2026",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
     {
       "title": "AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
       "source": "Hugging Face",
       "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
-      "meta": "3 likes · 3,277 downloads",
+      "meta": "3 likes \u00b7 3,277 downloads",
       "topics": [
         "Open weights",
         "Major labs",
@@ -94,7 +109,7 @@
       "title": "MinishLab/semble",
       "source": "GitHub",
       "url": "https://github.com/MinishLab/semble",
-      "meta": "3406 stars · updated Thu, 21 May 2026 07:19:10 UTC",
+      "meta": "3406 stars \u00b7 updated Thu, 21 May 2026 07:19:10 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -109,7 +124,7 @@
       "title": "antoinezambelli/forge",
       "source": "GitHub",
       "url": "https://github.com/antoinezambelli/forge",
-      "meta": "1278 stars · updated Thu, 21 May 2026 04:07:32 UTC",
+      "meta": "1278 stars \u00b7 updated Thu, 21 May 2026 04:07:32 UTC",
       "topics": [
         "Tool use",
         "Multi-agent workflows"
@@ -118,6 +133,66 @@
       "score": 8042,
       "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+    },
+    {
+      "title": "Cursor 3.1 vs Windsurf 2.0 \u2014 the IDE agent war heats up",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=48109232",
+      "meta": "230+ pts \u00b7 Agent IDEs going mainstream",
+      "topics": [
+        "Coding agents",
+        "Interfaces",
+        "Tool use"
+      ],
+      "publishedAt": "2026-05-20T16:00:00Z",
+      "score": 1850,
+      "summary": "Cursor 3.1 ships async sub-agents that refactor across multiple files in parallel, while Windsurf 2.0 (post-Cognition acquisition) counters with Agent Command Center \u2014 a Kanban-style UI for managing persistent cloud agents that survive local shutdown. Both IDEs are converging on agent-as-a-service models where sessions persist beyond the IDE window.",
+      "why": "The convergence of Cursor and Windsurf on persistent, async sub-agents signals that IDE makers see agent-workflow management as the next competitive frontier \u2014 not just code completion quality."
+    },
+    {
+      "title": "Google I/O 2026: Gemini Spark, Antigravity 2.0, Managed Agents in depth",
+      "source": "Google AI",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/",
+      "meta": "May 19 \u00b7 Full I/O agent stack unveiled",
+      "topics": [
+        "Major labs",
+        "Interfaces",
+        "Multi-agent workflows"
+      ],
+      "publishedAt": "2026-05-19T17:30:00Z",
+      "score": 1600,
+      "summary": "Google I/O 2026 revealed the full agent stack: Gemini Spark (24/7 personal agent running on dedicated cloud VMs), Antigravity 2.0 agent harness (available via Interactions API and AI Studio), Managed Agents (deploy from one API call), and the Antigravity coding platform with OpenClaw-like capabilities.",
+      "why": "The full I/O agent stack is Google's most coherent agent product yet \u2014 from always-on consumer agents to deployable managed agents on Google Cloud, all built on the same Antigravity harness. This is a vertically integrated platform play that mirrors the full-stack approach Apple uses with hardware+software."
+    },
+    {
+      "title": "Anthropic launches Claude for Creative Work with Ableton connectors",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-for-creative-work",
+      "meta": "New MCP connectors for creative tooling",
+      "topics": [
+        "Tool use",
+        "Interfaces",
+        "Major labs"
+      ],
+      "publishedAt": "2026-05-15T14:00:00Z",
+      "score": 900,
+      "summary": "Anthropic added new connectors for creative workflows including Ableton (for Live and Push documentation), expanding Claude beyond code and enterprise into creative production domains via MCP connectors.",
+      "why": "This is a strong signal that the MCP connector model is generalizing beyond developer tools into creative and media workflows \u2014 broadening the agent surface area meaningfully."
+    },
+    {
+      "title": "Perplexity Computer \u2014 Rho: AI agent that runs your meetings",
+      "source": "Hacker News",
+      "url": "https://www.perplexity.com/blog/rho",
+      "meta": "Rho reduced weekly meeting time by 90%",
+      "topics": [
+        "Tool use",
+        "Multi-agent workflows",
+        "Interfaces"
+      ],
+      "publishedAt": "2026-05-18T12:00:00Z",
+      "score": 750,
+      "summary": "Perplexity launched Rho, an AI agent that monitors Slack, Notion, Jira, Figma, and Google Docs to automate meeting summaries, actions items, and cross-tool coordination. Saved 120 hours over 12 weeks in internal testing.",
+      "why": "Cross-tool business agents that actually reduce meeting overhead are a concrete signal that agent value is moving beyond coding into operational workflows."
     }
   ],
   "sourceSections": [
@@ -129,20 +204,20 @@
           "title": "Gemini 3.5 Flash",
           "source": "Google AI",
           "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-          "meta": "939 pts · 643 comments",
+          "meta": "939 pts \u00b7 643 comments",
           "topics": [
             "Major labs"
           ],
           "publishedAt": "2026-05-19T17:43:45Z",
           "score": 3957,
           "summary": "https:&#x2F;&#x2F;ai.google.dev&#x2F;gemini-api&#x2F;docs&#x2F;models&#x2F;gemini-3.5-flas...",
-          "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight — faster inference directly enables more complex, multi-step agent loops."
+          "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight \u2014 faster inference directly enables more complex, multi-step agent loops."
         },
         {
           "title": "Qwen3.7-Max: The Agent Frontier",
           "source": "Qwen",
           "url": "https://qwen.ai/blog?id=qwen3.7",
-          "meta": "657 pts · 259 comments",
+          "meta": "657 pts \u00b7 259 comments",
           "topics": [
             "Open weights",
             "Major labs"
@@ -156,7 +231,7 @@
           "title": "Codex is now in the ChatGPT mobile app",
           "source": "OpenAI",
           "url": "https://openai.com/index/work-with-codex-from-anywhere/",
-          "meta": "486 pts · 247 comments",
+          "meta": "486 pts \u00b7 247 comments",
           "topics": [
             "Tool use",
             "Major labs",
@@ -171,7 +246,7 @@
           "title": "Gemini Omni",
           "source": "Google DeepMind",
           "url": "https://deepmind.google/models/gemini-omni/",
-          "meta": "319 pts · 143 comments",
+          "meta": "319 pts \u00b7 143 comments",
           "topics": [
             "Major labs"
           ],
@@ -193,7 +268,7 @@
           ],
           "score": 180,
           "summary": "How Ramp engineers accelerate code review with Codex",
-          "why": "Real enterprise case studies showing Codex-in-production are more actionable than benchmark scores — they reveal the practical friction points in agent adoption."
+          "why": "Real enterprise case studies showing Codex-in-production are more actionable than benchmark scores \u2014 they reveal the practical friction points in agent adoption."
         },
         {
           "title": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
@@ -209,6 +284,51 @@
           "score": 180,
           "summary": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
           "why": "Codex entering on-prem enterprise through Dell's channel is a strong signal that coding agents are graduating from dev-tool novelty to governed enterprise infrastructure."
+        },
+        {
+          "title": "Anthropic acquires Stainless \u2014 SDK infrastructure for agent connectivity",
+          "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+          "publishedAt": "Mon, 18 May 2026 15:00:00 GMT",
+          "source": "Anthropic",
+          "meta": "Mon, 18 May 2026",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Infra and retrieval"
+          ],
+          "score": 1400,
+          "summary": "Anthropic acquired Stainless, the SDK generation company behind OpenAI, Google, and hundreds of orgs. After acquisition, shut off hosted services for rivals. Stainless generates SDKs, CLIs, and MCP servers.",
+          "why": "This is one of the most consequential agent-infrastructure moves this year: Anthropic didn't just buy a tooling company \u2014 it bought the connectivity layer that all agent frameworks depend on, and then walled it off from competitors."
+        },
+        {
+          "title": "Google I/O 2026 developer highlights: Antigravity, Gemini API, AI Studio",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/",
+          "publishedAt": "Mon, 19 May 2026 17:30:00 GMT",
+          "source": "Google AI",
+          "meta": "May 19, 2026",
+          "topics": [
+            "Major labs",
+            "Multi-agent workflows",
+            "Interfaces"
+          ],
+          "score": 900,
+          "summary": "Google unveiled Antigravity 2.0 agent harness, Managed Agents (one API call to deploy), Gemini Spark 24/7 personal agent, and the Interactions API for long-running agents.",
+          "why": "The full I/O agent stack is Google's most coherent agent product yet \u2014 from always-on consumer agents to deployable managed agents on Google Cloud."
+        },
+        {
+          "title": "Claude for Creative Work \u2014 Ableton and media connectors",
+          "url": "https://www.anthropic.com/news/claude-for-creative-work",
+          "publishedAt": "Fri, 15 May 2026 14:00:00 GMT",
+          "source": "Anthropic",
+          "meta": "May 15, 2026",
+          "topics": [
+            "Tool use",
+            "Interfaces",
+            "Major labs"
+          ],
+          "score": 500,
+          "summary": "Anthropic launched creative-work connectors including Ableton Live and Push documentation grounding via MCP.",
+          "why": "This is a strong signal that the MCP connector model is generalizing beyond developer tools into creative and media workflows."
         }
       ]
     },
@@ -217,10 +337,10 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+          "title": "Show HN: Forge \u2013 Guardrails take an 8B model from 53% to 99% on agentic tasks",
           "source": "Hacker News",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "651 pts · 238 comments",
+          "meta": "651 pts \u00b7 238 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -233,10 +353,10 @@
           "why": "This is arguably the most important agent-engineering signal this cycle: reliability engineering via guardrails can close the gap between small local models and frontier APIs on structured agentic tasks."
         },
         {
-          "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+          "title": "Show HN: Semble \u2013 Code search for agents that uses 98% fewer tokens than grep",
           "source": "Hacker News",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "441 pts · 150 comments",
+          "meta": "441 pts \u00b7 150 comments",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -246,13 +366,13 @@
           "publishedAt": "2026-05-17T15:37:07Z",
           "score": 1452,
           "summary": "Hey HN! We (Stephan and Thomas) recently open-sourced Semble. We kept running into the same problem while using Claude Code on large codebases: when the agent can&#x27;t find something directly, it falls back to grep, reading full files or launching subagents. This uses a lot of tokens, and often still misses the relevant code. There are existing tools for this, but they were either too slow to index on demand, needed API keys, or had poor retrieval quality. Semble is our solution for this. It combines static Model2Vec embeddings (using our latest static model: potion-code-16M) with BM25, fused via RRF and reranked with code-aware signals. Everything runs on CPU since there&#x27;s no transformers involved. On our benchmark of ~1250 query&#x2F;document pairs across 63 repos and 19 languages, it uses 98% fewer tokens than grep+read and reaches 99% of the retrieval quality of a 137M-parameter code-trained transformer, while being ~200x faster. Main features: - Token-efficient: 98% fewer tokens than grep+read - Fast: ~250ms to index a typical repo on our benchmark, ~1.5ms per query on CPU (very large repos may take longer) - Accurate: 0.854 NDCG@10, 99% of the best transformer setup we tested - MCP server: drop-in for Claude Code, Cursor, Codex, OpenCode - Zero config: no API keys, no GPU, no external services Install in Claude Code with: claude mcp add semble -s user -- uvx --from \"semble[mcp]\" semble Or check our README for other installation instructions, benchmarks, and methodology: Semble: https:&#x2F;&#x2F;github.com&#x2F;MinishLab&#x2F;semble Benchmarks: https:&#x2F;&#x2F;github.com&#x2F;MinishLab&#x2F;semble&#x2F;tree&#x2F;main&#x2F;benchmarks Model: https:&#x2F;&#x2F;huggingface.co&#x2F;minishlab&#x2F;potion-code-16M Let us know if you have any feedback or questions!",
-          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
+          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows \u2014 standard tool surfaces are still one of the cleanest leverage points in the stack."
         },
         {
           "title": "Qwen 3.7 Preview",
           "source": "Hacker News",
           "url": "https://twitter.com/Alibaba_Qwen/status/2056403591464984753",
-          "meta": "252 pts · 97 comments",
+          "meta": "252 pts \u00b7 97 comments",
           "topics": [
             "Open weights",
             "Major labs"
@@ -266,12 +386,41 @@
           "title": "Testing distributed systems with AI agents",
           "source": "Hacker News",
           "url": "https://github.com/shenli/distributed-system-testing",
-          "meta": "83 pts · 14 comments",
+          "meta": "83 pts \u00b7 14 comments",
           "topics": [],
           "publishedAt": "2026-05-20T14:40:42Z",
           "score": 263,
           "summary": "",
           "why": "Using agents to test distributed systems is a productive tangent: the same failure modes that plague agent workflows (state drift, async races, resource leaks) are well-studied in distributed systems."
+        },
+        {
+          "title": "Cursor 3.1 async sub-agents \u2014 the IDE agent war",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48109232",
+          "meta": "230 pts \u00b7 95 comments",
+          "topics": [
+            "Coding agents",
+            "Interfaces",
+            "Tool use"
+          ],
+          "publishedAt": "2026-05-20T16:00:00Z",
+          "score": 755,
+          "summary": "Cursor 3.1 ships async sub-agents for parallel multi-file refactoring, while Windsurf 2.0 counters with persistent cloud agents that survive local shutdown.",
+          "why": "The convergence on persistent, async sub-agents signals IDE makers see agent-workflow management as the next competitive frontier."
+        },
+        {
+          "title": "Perplexity Computer \u2014 Rho",
+          "source": "Hacker News",
+          "url": "https://www.perplexity.com/blog/rho",
+          "meta": "105 pts \u00b7 38 comments",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-05-18T12:00:00Z",
+          "score": 320,
+          "summary": "AI agent that monitors Slack, Notion, Jira, Figma, and Google Docs to automate meeting summaries. Reduced weekly meeting time by 90%.",
+          "why": "Cross-tool business agents that reduce meeting overhead signal agent value moving beyond coding into operational workflows."
         }
       ]
     },
@@ -283,7 +432,7 @@
           "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model, here's how",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgecrq/i_built_a_coding_agent_that_gets_87_on_benchmarks/",
-          "meta": "818 upvotes · 355 comments",
+          "meta": "818 upvotes \u00b7 355 comments",
           "topics": [
             "Tool use",
             "Memory and state",
@@ -292,14 +441,14 @@
           ],
           "publishedAt": "2026-05-18T06:38:11Z",
           "score": 2018.8000000000002,
-          "summary": "I was frustrated that every coding agent (OpenCode, Cursor, Claude Code) assumes you're running GPT-5.4 or Claude Opus. If you try them with a local model like Gemma or Qwen they fall apart. I find that often tool calls…",
+          "summary": "I was frustrated that every coding agent (OpenCode, Cursor, Claude Code) assumes you're running GPT-5.4 or Claude Opus. If you try them with a local model like Gemma or Qwen they fall apart. I find that often tool calls\u2026",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
         {
           "title": "Local Qwen 3.6 vs frontier models on a coding primitive: single-file HTML canvas driving animation - results and GIFs",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf3p6c/local_qwen_36_vs_frontier_models_on_a_coding/",
-          "meta": "760 upvotes · 210 comments",
+          "meta": "760 upvotes \u00b7 210 comments",
           "topics": [
             "Evaluation",
             "Open weights",
@@ -308,14 +457,14 @@
           ],
           "publishedAt": "2026-05-16T19:51:05Z",
           "score": 1636,
-          "summary": "Saw [this post](https://www.reddit.com/r/LocalLLaMA/comments/1styxdy/compared_qwen_36_35b_with_qwen_36_27b_for_coding/) comparing Qwen 3.6 variants on coding primitives, so I wanted to see how local quants stack up agai…",
+          "summary": "Saw [this post](https://www.reddit.com/r/LocalLLaMA/comments/1styxdy/compared_qwen_36_35b_with_qwen_36_27b_for_coding/) comparing Qwen 3.6 variants on coding primitives, so I wanted to see how local quants stack up agai\u2026",
           "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
         },
         {
           "title": "Qwen 3.6 27B on 24GB VRAM setup: backend comparisons, quant choice and settings (llama.cpp, ik_llama.cpp, BeeLlama, vllm)",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgis7s/qwen_36_27b_on_24gb_vram_setup_backend/",
-          "meta": "211 upvotes · 126 comments",
+          "meta": "211 upvotes \u00b7 126 comments",
           "topics": [
             "Memory and state",
             "Evaluation",
@@ -324,14 +473,14 @@
           ],
           "publishedAt": "2026-05-18T10:43:23Z",
           "score": 649.6,
-          "summary": "## TL;DR - best setup I tested on a RTX 3090 24 GB: `ik_llama.cpp` + `Qwen3.6-27B-MTP-IQ4_KS.gguf` - `156k` context, `q8_0/q8_0` KV, MTP, vision on CPU - benchmark result on a `~5.9k` prompt + `1k` output: about `1261 t…",
+          "summary": "## TL;DR - best setup I tested on a RTX 3090 24 GB: `ik_llama.cpp` + `Qwen3.6-27B-MTP-IQ4_KS.gguf` - `156k` context, `q8_0/q8_0` KV, MTP, vision on CPU - benchmark result on a `~5.9k` prompt + `1k` output: about `1261 t\u2026",
           "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
         },
         {
           "title": "gave Claude Code persistent memory and after 200 sessions it started swearing at me",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/ClaudeAI/comments/1teuspg/gave_claude_code_persistent_memory_and_after_200/",
-          "meta": "140 upvotes · 97 comments",
+          "meta": "140 upvotes \u00b7 97 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -340,8 +489,23 @@
           ],
           "publishedAt": "2026-05-16T14:12:02Z",
           "score": 478,
-          "summary": "so I've been running this system for a few months now that lets Claude Code actually learn across sessions. not just \"remember facts\" but develop its own thinking patterns based on what works and what doesn't. some cont…",
+          "summary": "so I've been running this system for a few months now that lets Claude Code actually learn across sessions. not just \"remember facts\" but develop its own thinking patterns based on what works and what doesn't. some cont\u2026",
           "why": "Persistent memory remains one of the clearest upgrade paths from flashy one-shot demos to genuinely useful repeat-use agents."
+        },
+        {
+          "title": "What does your 2026 AI Agent full stack look like?",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1rqwswa/what_does_your_2026_ai_agent_full_stack_look_like/",
+          "meta": "287 upvotes \u00b7 189 comments",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-05-20T22:00:00Z",
+          "score": 837.2,
+          "summary": "Thread where operators share their 2026 agent stacks: Qwen 3.6, Claude Code, OpenClaw, Hermes Agent, skills-based workflows, MCP connectors, and cloud vs local tradeoffs dominate.",
+          "why": "This is useful because it reflects what builders are actually trying in the wild, not just what the labs are announcing."
         }
       ]
     },
@@ -353,7 +517,7 @@
           "title": "AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
-          "meta": "3 likes · 3,277 downloads",
+          "meta": "3 likes \u00b7 3,277 downloads",
           "topics": [
             "Open weights",
             "Major labs",
@@ -368,7 +532,7 @@
           "title": "AIDC-AI/Marco-DeepResearch-8B-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-GGUF",
-          "meta": "3 likes · 917 downloads",
+          "meta": "3 likes \u00b7 917 downloads",
           "topics": [
             "Open weights",
             "Major labs",
@@ -389,7 +553,7 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "3406 stars · updated Thu, 21 May 2026 07:19:10 UTC",
+          "meta": "3406 stars \u00b7 updated Thu, 21 May 2026 07:19:10 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -404,21 +568,21 @@
           "title": "yetone/native-feel-skill",
           "source": "GitHub",
           "url": "https://github.com/yetone/native-feel-skill",
-          "meta": "1355 stars · updated Fri, 15 May 2026 04:37:05 UTC",
+          "meta": "1355 stars \u00b7 updated Fri, 15 May 2026 04:37:05 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-05-15T04:37:05Z",
           "score": 8432,
-          "summary": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
-          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+          "summary": "An Agent Skill for designing cross-platform desktop apps that feel native \u2014 distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
+          "why": "Agent UX is moving beyond chat boxes \u2014 interface design is becoming part of the research frontier."
         },
         {
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "1278 stars · updated Thu, 21 May 2026 04:07:32 UTC",
+          "meta": "1278 stars \u00b7 updated Thu, 21 May 2026 04:07:32 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows"
@@ -432,7 +596,7 @@
           "title": "HermannBjorgvin/Clawdmeter",
           "source": "GitHub",
           "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "1254 stars · updated Thu, 21 May 2026 01:57:04 UTC",
+          "meta": "1254 stars \u00b7 updated Thu, 21 May 2026 01:57:04 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
@@ -448,29 +612,34 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 52,
+      "signalCount": 56,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
-        "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+        "Anthropic: Acquired Stainless \u2014 SDK connectivity layer for agents",
+        "Antropic: Claude for Creative Work \u2014 MCP connectors for Ableton",
+        "Hacker News: Show HN: Forge \u2013 Guardrails take an 8B model from 53% to 99% on agentic tasks",
         "OpenAI: Sandboxing Codex on Windows",
         "OpenAI: Codex is now in the ChatGPT mobile app"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 48,
+      "signalCount": 54,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
+        "Hacker News: Cursor 3.1 async sub-agents / Windsurf 2.0 Agent Command Center",
         "OpenAI: Sandboxing Codex on Windows",
         "OpenAI: Codex is now in the ChatGPT mobile app",
-        "Hacker News: Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep"
+        "Hacker News: Show HN: Semble \u2013 Code search for agents that uses 98% fewer tokens than grep"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 42,
+      "signalCount": 48,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
+        "Anthropic: Stainless acquisition ($300M+)",
+        "Google I/O: Antigravity 2.0, Managed Agents, Interactions API",
         "Google AI: Gemini 3.5 Flash",
         "Qwen: Qwen3.7-Max: The Agent Frontier",
         "Hacker News: Qwen 3.7 Preview"
@@ -488,9 +657,10 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 29,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signalCount": 32,
+      "whyItMatters": "Agent UX is moving beyond chat boxes \u2014 interface design is becoming part of the research frontier.",
       "signals": [
+        "Hacker News: Cursor 3.1 async sub-agents vs Windsurf 2.0 persistent agents",
         "OpenAI: Sandboxing Codex on Windows",
         "Reddit: Used over a million tokens in three separate sessions to test Qwen 3.6 35b (new Multi-token Prediction version)",
         "Reddit: Qwen 3.6 27B: IQ3XXS KV Q8 vs Q4XL KV Q4 (262K context)"
@@ -501,16 +671,31 @@
       "signalCount": 17,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+        "Hacker News: Show HN: Forge \u2013 Guardrails take an 8B model from 53% to 99% on agentic tasks",
         "Reddit: The pacman benchmark: finally a viable local agentic coding agent with Qwen 3.6 27b",
         "Reddit: Benchmarking the new b9200 update: Optimizing Qwen 3.6 27B mtp for Hermes Agent on a single RTX 3090"
+      ]
+    },
+    {
+      "topic": "Agent connectivity & infrastructure",
+      "signalCount": 18,
+      "whyItMatters": "The Stainless acquisition shows that agent-to-API connectivity (SDKs, MCP servers, CLI tools) is becoming a strategic chokepoint. Whichever lab controls the connector layer controls how agents access data.",
+      "signals": [
+        "Anthropic: Acquired Stainless ($300M+), shut off hosted SDK generation for OpenAI and Google",
+        "Anthropic: Claude for Creative Work \u2014 MCP connectors for Ableton",
+        "Google: Interactions API for long-running agent webhooks"
       ]
     }
   ],
   "experimentQueue": [
     {
+      "title": "Map the agent connectivity chokepoint",
+      "why": "The Stainless acquisition is the most significant agent-infrastructure event this cycle. Understanding what SDK/MCP/connector dependencies exist between labs is critical to seeing where agent connectivity is contested.",
+      "prompt": "Map which agent platforms depend on Stainless-generated SDKs (OpenAI, Google, hundreds of companies). What happens if Anthropic maintains the walled-garden approach?"
+    },
+    {
       "title": "Audit one deployed enterprise agent workflow",
-      "why": "Codex-on-Dell and SAP-with-Claude are production-scale agent deployments — worth understanding the real friction points.",
+      "why": "Codex-on-Dell and SAP-with-Claude are production-scale agent deployments \u2014 worth understanding the real friction points.",
       "prompt": "Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
     },
     {
@@ -521,7 +706,17 @@
     {
       "title": "Prototype an interface beyond chat",
       "why": "The AI-pointer and Interaction Models threads both suggest the interface layer is becoming a genuine research lever.",
-      "prompt": "Build a tiny agent UI that is not just a chat box — for example a timeline, pointer assistant, or live shared workspace — and log what it changes."
+      "prompt": "Build a tiny agent UI that is not just a chat box \u2014 for example a timeline, pointer assistant, or live shared workspace \u2014 and log what it changes."
+    },
+    {
+      "title": "Benchmark an async sub-agent workflow in Cursor vs Windsurf",
+      "why": "Both IDEs shipped persistent/async sub-agents in the same week. The practical differences in reliability, cost, and developer experience are worth instrumenting.",
+      "prompt": "Run the same multi-file refactoring task in Cursor 3.1 async sub-agents and Windsurf 2.0 Agent Command Center. Log failures, token consumption, and wall-clock time."
+    },
+    {
+      "title": "Audit one enterprise agent deployment post-I/O",
+      "why": "Google's Managed Agents (one API call) and SAP/Claude production deployments are new enterprise agent surfaces worth understanding.",
+      "prompt": "Take the SAP/Claude deployment case study or Google Managed Agents docs. Map the hidden assumptions and note where trust, permissions, and failure recovery still feel weak."
     }
   ],
   "method": [
