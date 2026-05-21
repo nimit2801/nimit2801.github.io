@@ -46,6 +46,13 @@ const HN_QUERY_SPECS = [
   { query: 'codex enterprise', boost: 90 },
   { query: 'codex dell', boost: 85 },
   { query: 'harness engineering', boost: 75 },
+  { query: 'tencent marvis', boost: 130 },
+  { query: 'antigravity cli', boost: 120 },
+  { query: 'claude dreaming', boost: 110 },
+  { query: 'stainless anthropic', boost: 140 },
+  { query: 'cursor windsurf', boost: 100 },
+  { query: 'openai geometry conjecture', boost: 90 },
+  { query: 'mistral emmi', boost: 80 },
 ];
 
 const REDDIT_SPECS = [
@@ -83,6 +90,8 @@ const GITHUB_REPO_WATCH = [
   { repo: 'tRidha/pokegents', boost: 135 },
   { repo: 'stormzhang/token-tracker', boost: 130 },
   { repo: 'MinishLab/semble', boost: 120 },
+  { repo: 'TencentARC/Marvis', boost: 180 },
+  { repo: 'google-gemini/gemini-cli', boost: 140 },
 ];
 const GITHUB_RELEASE_WATCH = [
   { repo: 'QwenLM/qwen-code', label: 'Qwen', boost: 140 },
@@ -92,6 +101,7 @@ const LAB_FEEDS = [
   ['Google AI', 'https://blog.google/technology/ai/rss/'],
   ['Google AI', 'https://developers.googleblog.com/feeds/posts/default'],
   ['Anthropic', 'https://www.anthropic.com/feed.xml'],
+  ['Qwen', 'https://qwen.ai/rss.xml'],
 ];
 
 const OFFICIAL_SOURCES = [
@@ -295,6 +305,30 @@ const HAND_CURATED_WHY = [
   {
     match: /ramp.*codex|code review.*codex/i,
     why: 'Real enterprise case studies showing Codex-in-production are more actionable than benchmark scores — they reveal the practical friction points in agent adoption.',
+  },
+  {
+    match: /tencent.*marvis|marvis.*agent/i,
+    why: 'Tencent launching an OS-level AI assistant with 6 coordinated agents is a strong signal that major Chinese tech companies are treating multi-agent systems as a consumer product category, not just an enterprise tool.',
+  },
+  {
+    match: /antigravity cli|gemini cli.*antigravity/i,
+    why: 'Google transitioning its open-source Gemini CLI into the Antigravity CLI platform signals a strategic shift from model-access tool to full agent platform — the CLI is the wedge, the agent harness is the product.',
+  },
+  {
+    match: /claude.*dreaming|dreaming.*agent/i,
+    why: "Anthropic's \"dreaming\" capability for Claude Managed Agents — async session review, memory consolidation, and self-improvement — is one of the most interesting agent-infrastructure novelties this cycle: agents that learn from their own history without human retraining.",
+  },
+  {
+    match: /stainless.*anthropic|anthropic.*stainless/i,
+    why: "This is one of the most consequential agent-infrastructure moves this year: Anthropic didn't just buy a tooling company — it bought the connectivity layer that all agent frameworks depend on, and then walled it off from competitors.",
+  },
+  {
+    match: /cursor.*windsurf|windsurf.*cursor/i,
+    why: 'The convergence of Cursor and Windsurf on persistent, async sub-agents signals that IDE makers see agent-workflow management as the next competitive frontier — not just code completion quality.',
+  },
+  {
+    match: /gemini spark|spark.*agent/i,
+    why: "Always-on personal agents that integrate with your actual data (Gmail, calendar) are a fundamentally different product from chat interfaces — this is Google's bet on persistent, delegated AI.",
   },
 ];
 
@@ -502,6 +536,7 @@ function highlightScore(item) {
   if (haystack.includes('semble') && haystack.includes('code search')) bonus += 800;
   if (haystack.includes('gemini spark')) bonus += 700;
   if (haystack.includes('antigravity 2.0') || (haystack.includes('antigravity') && haystack.includes('desktop'))) bonus += 650;
+  if (haystack.includes('antigravity cli') || (haystack.includes('antigravity') && haystack.includes('cli'))) bonus += 400;
   if (haystack.includes('marco-deepresearch')) bonus += 180;
   if (haystack.includes('remote client for claude code')) bonus += 160;
   if (haystack.includes('qwenlm/qwen-code') || haystack.includes('qwen code')) bonus += 260;
@@ -516,6 +551,12 @@ function highlightScore(item) {
   if (haystack.includes('dell') && haystack.includes('codex')) bonus += 300;
   if (haystack.includes('harness engineering') || haystack.includes('unrolling the codex')) bonus += 200;
   if (haystack.includes('ramp') && haystack.includes('codex')) bonus += 150;
+  if (haystack.includes('tencent marvis') || haystack.includes('marvis agent')) bonus += 350;
+  if (haystack.includes('claude dreaming') || (haystack.includes('dreaming') && haystack.includes('agent'))) bonus += 300;
+  if (haystack.includes('stainless') && haystack.includes('anthropic')) bonus += 400;
+  if (haystack.includes('cursor') && (haystack.includes('windsurf') || haystack.includes('3.1'))) bonus += 280;
+  if (haystack.includes('geometry') && haystack.includes('conjecture')) bonus += 200;
+  if (haystack.includes('mistral') && haystack.includes('emmi')) bonus += 180;
   return (item.score ?? 0) + bonus;
 }
 
@@ -807,10 +848,20 @@ function buildSummary(highlights) {
   const hasSupervision = titles.some((title) => title.includes('agent view') || title.includes('usage limits') || title.includes('dashboard'));
   const hasEnterprise = titles.some((title) => title.includes('dell') || title.includes('sap') || title.includes('enterprise'));
   const hasSemble = titles.some((title) => title.includes('semble') && title.includes('code search'));
+  const hasTencent = titles.some((title) => title.includes('tencent') || title.includes('marvis'));
+  const hasClaudeDreaming = titles.some((title) => title.includes('dreaming'));
+  const hasStainless = titles.some((title) => title.includes('stainless'));
+  const hasAntigravityCli = titles.some((title) => title.includes('antigravity cli'));
+  const hasMathBreakthrough = titles.some((title) => title.includes('geometry') || (title.includes('conjecture')));
 
   const bits = [];
   if (hasForge) bits.push('guardrails on local models close the reliability gap with frontier APIs (Forge: 53%→99%)');
   if (hasSemble) bits.push('semantic code search for agents cuts token use by 98% — a massive efficiency unlock');
+  if (hasTencent) bits.push('Tencent launches OS-level multi-agent assistant (Marvis: 6 coordinated agents)');
+  if (hasClaudeDreaming) bits.push('Anthropic "dreaming" lets Claude agents self-improve via async session review');
+  if (hasStainless) bits.push('Anthropic acquires Stainless — the SDK connectivity layer every agent depends on');
+  if (hasAntigravityCli) bits.push('Google transitions Gemini CLI into Antigravity CLI — CLI-to-agent-platform play');
+  if (hasMathBreakthrough) bits.push('OpenAI model disproves 80-year-old discrete geometry conjecture');
   if (hasEnterprise) bits.push('enterprise agents are going production-scale (SAP/Claude, Dell/Codex)');
   if (hasPackaging) bits.push('major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile)');
   if (hasCodex) bits.push('Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering');
