@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-05-25T11:49:06Z",
+  "generatedAt": "2026-05-25T18:21:00Z",
   "windowDays": 7,
-  "summary": "This cycle says OpenAI model disproves 80-year-old discrete geometry conjecture, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "DeepSeek Reasonix landed as a cache-optimized coding agent hitting 99.82% prefix hits and 5x cost savings over Claude on equivalent workloads. The local/open-weight stack keeps strengthening around Qwen, and Forge guardrails continue to prove that framework engineering can close the capability gap between small local models and frontier APIs.",
   "sourceStats": {
-    "items": 76,
+    "items": 79,
     "sources": {
       "Anthropic": 2,
-      "GitHub": 39,
+      "GitHub": 40,
       "Google AI": 3,
       "Google DeepMind": 1,
-      "Hacker News": 4,
+      "Hacker News": 5,
       "OpenAI": 4,
       "Qwen": 2,
       "Reddit": 21
@@ -26,7 +26,7 @@
       ],
       "publishedAt": "2026-05-20T19:05:30Z",
       "score": 6081,
-      "summary": "https:&#x2F;&#x2F;x.com&#x2F;wtgowers&#x2F;status&#x2F;2057175727271800912 , https:&#x2F;&#x2F;xcancel.com&#x2F;wtgowers&#x2F;status&#x2F;2057175727271800912",
+      "summary": "https://x.com/wtgowers/status/2057175727271800912 , https://xcancel.com/wtgowers/status/2057175727271800912",
       "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
     },
     {
@@ -39,7 +39,7 @@
       ],
       "publishedAt": "2026-05-19T17:43:45Z",
       "score": 4033,
-      "summary": "https:&#x2F;&#x2F;ai.google.dev&#x2F;gemini-api&#x2F;docs&#x2F;models&#x2F;gemini-3.5-flas...",
+      "summary": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flas...",
       "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight — faster inference directly enables more complex, multi-step agent loops."
     },
     {
@@ -71,6 +71,21 @@
       "score": 662.8,
       "summary": "**BeeLlama v0.2.0 is here!** >Not quite a pegasus, but close enough. [**GitHub**](https://github.com/Anbeeld/beellama.cpp) **|** [**Qwen 3.6 27B Quick Start**](https://github.com/Anbeeld/beellama.cpp/blob/main/docs/quic…",
       "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
+    },
+    {
+      "title": "DeepSeek Reasonix — DeepSeek-native coding agent with 99.82% prefix-cache hit rate, $12 vs $61 for equivalent Claude sessions",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=48256953",
+      "meta": "601 pts · 252 comments",
+      "topics": [
+        "Tool use",
+        "Coding agents",
+        "Infra and retrieval"
+      ],
+      "publishedAt": "2026-05-24T19:00:00Z",
+      "score": 2500,
+      "summary": "A DeepSeek-native terminal coding agent engineered around prefix-cache stability. Achieves 99.82% cache hit rates on long-running sessions — a real user logged 435M input tokens in a single day for ~$12 instead of the ~$61 the same workload would cost uncached on v4-flash. Ships with MCP support, skills, memory, web search, and a Tauri desktop client. DeepSeek even added Reasonix to their API docs as a recommended integration. https://github.com/esengine/deepseek-reasonix",
+      "why": "Reasonix signals a new paradigm: model-provider-specific agent harnesses optimized for cache economics. The 5x cost advantage vs Claude on cacheable workloads changes the ROI calculation for production agent deployments, and DeepSeek officially endorsing it in their docs makes this more than just a side project."
     },
     {
       "title": "google-gemini/gemini-cli",
@@ -120,7 +135,7 @@
           ],
           "publishedAt": "2026-05-20T19:05:30Z",
           "score": 6081,
-          "summary": "https:&#x2F;&#x2F;x.com&#x2F;wtgowers&#x2F;status&#x2F;2057175727271800912 , https:&#x2F;&#x2F;xcancel.com&#x2F;wtgowers&#x2F;status&#x2F;2057175727271800912",
+          "summary": "https://x.com/wtgowers/status/2057175727271800912 , https://xcancel.com/wtgowers/status/2057175727271800912",
           "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
         },
         {
@@ -133,7 +148,7 @@
           ],
           "publishedAt": "2026-05-19T17:43:45Z",
           "score": 4033,
-          "summary": "https:&#x2F;&#x2F;ai.google.dev&#x2F;gemini-api&#x2F;docs&#x2F;models&#x2F;gemini-3.5-flas...",
+          "summary": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flas...",
           "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight — faster inference directly enables more complex, multi-step agent loops."
         },
         {
@@ -198,6 +213,21 @@
       "label": "Hacker News",
       "items": [
         {
+          "title": "DeepSeek Reasonix — DeepSeek-native coding agent with 99.82% prefix-cache hit rate, $12 vs $61 for equivalent Claude sessions",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48256953",
+          "meta": "601 pts · 252 comments",
+          "topics": [
+            "Tool use",
+            "Coding agents",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-05-24T19:00:00Z",
+          "score": 2500,
+          "summary": "A DeepSeek-native terminal coding agent engineered around prefix-cache stability. Achieves 99.82% cache hit rates on long-running sessions — a real user logged 435M input tokens in a single day for ~$12 instead of the ~$61 the same workload would cost uncached on v4-flash. Ships with MCP support, skills, memory, web search, and a Tauri desktop client. DeepSeek even added Reasonix to their API docs as a recommended integration. https://github.com/esengine/deepseek-reasonix",
+          "why": "Reasonix signals a new paradigm: model-provider-specific agent harnesses optimized for cache economics. The 5x cost advantage vs Claude on cacheable workloads changes the ROI calculation for production agent deployments, and DeepSeek officially endorsing it in their docs makes this more than just a side project."
+        },
+        {
           "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
           "source": "Hacker News",
           "url": "https://github.com/antoinezambelli/forge",
@@ -210,7 +240,7 @@
           ],
           "publishedAt": "2026-05-19T12:23:07Z",
           "score": 2259,
-          "summary": "Hi HN, I&#x27;m Antoine Zambelli, AI Director at Texas Instruments. I built Forge, an open-source reliability layer for self-hosted LLM tool-calling. What it does: - Adds domain-and-tool-agnostic guardrails (retry nudges, step enforcement, error recovery, VRAM-aware context management) to local models running on consumer hardware - Takes an 8B model from ~53% to ~99% on multi-step agentic workflows without changing the model - just the system around it - Ships with an eval harness and interactive dashboard so you can reproduce every number I wanted to run a handful of always-on agentic systems for my portfolio, didn&#x27;t want to pay cloud frontier costs, and immediately hit the compounding math problem on local models. 90% per-step accuracy sounds great, but with a 5-step workflow that&#x27;s a 40% failure rate. No existing framework seemed to address this mechanical reliability issue - they all seemed tailor-made for cloud frontier. Demo video: https:&#x2F;&#x2F;youtu.be&#x2F;MzRgJoJAXGc (side-by-side: same model, same task, with and without Forge guardrails) The paper (accepted to ACM CAIS &#x27;26, presenting May 26-29 in San Jose) covers the peer-reviewed findings across 97 model&#x2F;backend configurations, 18 scenarios, 50 runs each. Key numbers: - Ministral 8B with Forge: 99.3%. Claude Sonnet with Forge: 100%. The gap between a free local 8B model on a $600 GPU and a frontier API is less than 1 point. - The same 8B local model with Forge (99.3%) outperforms Claude Sonnet without guardrails (87.2%) - an 8B model with framework support beats the best result you can get through frontier API alone. - Error recovery scores 0% for every model tested - local and frontier - without the retry mechanism. Not a capability gap, an architectural absence. I&#x27;m currently using this for my home assistant running on Ministral 14B-Reasoning, and for my locally hosted agentic coding harness (8B managed to contribute to the codebase!). The guardrail stack has five layers, each independently toggleable. The two that carry the most weight (per ablation study with McNemar&#x27;s test): retry nudges (24-49 point drops when disabled) and error recovery (~10 point drops, significant for every model tested). Step enforcement is situational - only fires for models with weaker sequencing discipline. Rescue parsing and context compaction showed no significance in the eval but are retained for production workloads where they activate once in a while. One thing I really didn&#x27;t expect: the serving backend matters. Same Mistral-Nemo 12B weights produce 7% accuracy on llama-server with native function calling and 83% on Llamafile in prompt mode. A 75-point swing from infrastructure alone. I don&#x27;t think anyone&#x27;s published this because standard benchmarks don&#x27;t control for serving backend. Another surprise: there&#x27;s no distinction in current LLM tool-calling between \"the tool ran successfully and returned data\" and \"the tool ran successfully but found nothing.\" Both return a value, the orchestrator marks the step complete, and bad data cascades downstream. It&#x27;s the equivalent of HTTP having 200 but no 404. Forge adds this as a new exception class (ToolResolutionError) - the model sees the error and can retry instead of silently passing garbage forward. Biggest technical challenge was context compaction for memory-constrained hardware. Both Ollama and Llamafile silently fall back to CPU when the model exceeds VRAM - no warning, no error, just 10-100x slower inference. Forge queries nvidia-smi at startup and derives a token budget to prevent this. How to try it: - Clone the repo, run the eval harness on a model I haven&#x27;t tested. If you get interesting results I&#x27;ll add them to the dashboard. - Try the proxy server mode - point any OpenAI-compatible client at Forge and it handles guardrails transparently. It&#x27;s the newest model and I&#x27;d love more eyes on it. - Dogfooding led me to optimize model parameters in v0.6.0. The harder eval suite (26 scenarios) is designed to raise the ceiling so no one sits at 100%. Several that did on the original suite can&#x27;t sweep it - including Opus 4.6. Curious if anyone finds scenarios that expose gaps I haven&#x27;t thought of. Paper numbers based on pre v0.6.0 code. Background: prior ML publication in unsupervised learning (83 citations). This paper accepted to ACM CAIS &#x27;26 - presenting May 26-29. Repo: https:&#x2F;&#x2F;github.com&#x2F;antoinezambelli&#x2F;forge Paper: https:&#x2F;&#x2F;www.caisconf.org&#x2F;program&#x2F;2026&#x2F;demos&#x2F;forge-agentic-re... https:&#x2F;&#x2F;github.com&#x2F;antoinezambelli&#x2F;forge&#x2F;blob&#x2F;main&#x2F;docs&#x2F;forg... Dashboard: https:&#x2F;&#x2F;github.com&#x2F;antoinezambelli&#x2F;forge&#x2F;docs&#x2F;results&#x2F;dashbo...",
+          "summary": "Hi HN, I'm Antoine Zambelli, AI Director at Texas Instruments. I built Forge, an open-source reliability layer for self-hosted LLM tool-calling. What it does: - Adds domain-and-tool-agnostic guardrails (retry nudges, step enforcement, error recovery, VRAM-aware context management) to local models running on consumer hardware - Takes an 8B model from ~53% to ~99% on multi-step agentic workflows without changing the model - just the system around it - Ships with an eval harness and interactive dashboard so you can reproduce every number I wanted to run a handful of always-on agentic systems for my portfolio, didn't want to pay cloud frontier costs, and immediately hit the compounding math problem on local models. 90% per-step accuracy sounds great, but with a 5-step workflow that's a 40% failure rate. No existing framework seemed to address this mechanical reliability issue - they all seemed tailor-made for cloud frontier. Demo video: https://youtu.be/MzRgJoJAXGc (side-by-side: same model, same task, with and without Forge guardrails) The paper (accepted to ACM CAIS '26, presenting May 26-29 in San Jose) covers the peer-reviewed findings across 97 model/backend configurations, 18 scenarios, 50 runs each. Key numbers: - Ministral 8B with Forge: 99.3%. Claude Sonnet with Forge: 100%. The gap between a free local 8B model on a $600 GPU and a frontier API is less than 1 point. - The same 8B local model with Forge (99.3%) outperforms Claude Sonnet without guardrails (87.2%) - an 8B model with framework support beats the best result you can get through frontier API alone. - Error recovery scores 0% for every model tested - local and frontier - without the retry mechanism. Not a capability gap, an architectural absence. I'm currently using this for my home assistant running on Ministral 14B-Reasoning, and for my locally hosted agentic coding harness (8B managed to contribute to the codebase!). The guardrail s... [truncated]",
           "why": "This is arguably the most important agent-engineering signal this cycle: reliability engineering via guardrails can close the gap between small local models and frontier APIs on structured agentic tasks."
         },
         {
@@ -251,7 +281,7 @@
           ],
           "publishedAt": "2026-05-22T15:42:32Z",
           "score": 173,
-          "summary": "Pablo is a Chrome extension that copies the HTML and CSS behind any element you hover. It captures computed styles, fonts (with @font-face and Google Fonts links), CSS keyframes, and animation props from GSAP and Framer Motion. The output is structured so it pastes cleanly into Claude Code, Cursor, or Codex when you want to rebuild a component in your own stack. Manifest v3, no host permissions, no backend. Free. https:&#x2F;&#x2F;usepablo.dev Happy to answer questions about how the extraction works, and would love to hear about sites where the output breaks.",
+          "summary": "Pablo is a Chrome extension that copies the HTML and CSS behind any element you hover. It captures computed styles, fonts (with @font-face and Google Fonts links), CSS keyframes, and animation props from GSAP and Framer Motion. The output is structured so it pastes cleanly into Claude Code, Cursor, or Codex when you want to rebuild a component in your own stack. Manifest v3, no host permissions, no backend. Free. https://usepablo.dev Happy to answer questions about how the extraction works, and would love to hear about sites where the output breaks.",
           "why": "One of the largest enterprise agent deployments yet — SAP embedding Claude as a primary reasoning engine across S/4HANA, SuccessFactors, and Ariba via MCP signals that enterprise agent workflows are moving into production at scale."
         }
       ]
@@ -289,7 +319,7 @@
           ],
           "publishedAt": "2026-05-20T15:42:29Z",
           "score": 566,
-          "summary": "Hey r/LocalLLaMA, We’ve released our ByteShape Qwen 3.6 35B GGUF quantizations in two families: standard NTP (Next Token Prediction or non-MTP) and MTP. [Blog](https://byteshape.com/blogs/Qwen3.6-35B-A3B/) / [Download N…",
+          "summary": "Hey r/LocalLLaMA, We've released our ByteShape Qwen 3.6 35B GGUF quantizations in two families: standard NTP (Next Token Prediction or non-MTP) and MTP. [Blog](https://byteshape.com/blogs/Qwen3.6-35B-A3B/) / [Download N…",
           "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
         },
         {
@@ -321,7 +351,7 @@
           ],
           "publishedAt": "2026-05-18T23:53:49Z",
           "score": 320.8,
-          "summary": "So far, I’ve tried Codex CLI, Claude Code, Gemini CLI, OpenCode, and recently, Pi with local models. Pi is the leanest of them all, with just four tools: read, write, edit, and bash. Its system prompt is only under 2K t…",
+          "summary": "So far, I've tried Codex CLI, Claude Code, Gemini CLI, OpenCode, and recently, Pi with local models. Pi is the leanest of them all, with just four tools: read, write, edit, and bash. Its system prompt is only under 2K t…",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
       ]
@@ -395,6 +425,21 @@
           "score": 11244,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "esengine/deepseek-reasonix",
+          "source": "GitHub",
+          "url": "https://github.com/esengine/deepseek-reasonix",
+          "meta": "7800 stars · updated Mon, 25 May 2026 17:00:00 UTC",
+          "topics": [
+            "Tool use",
+            "Coding agents",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-05-10T00:00:00Z",
+          "score": 48000,
+          "summary": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — 99.82% cache hit rates, $12 vs $61 for equivalent Claude sessions. MCP, skills, memory, web search, desktop client.",
+          "why": "Reasonix signals a new paradigm: model-provider-specific agent harnesses optimized for cache economics. The 5x cost advantage vs Claude on cacheable workloads changes the ROI calculation for production agent deployments."
         }
       ]
     }
@@ -402,22 +447,24 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 44,
+      "signalCount": 45,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
         "Anthropic: New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels",
-        "Hacker News: Show HN: Pablo – a Chrome extension that copies UI from any website"
+        "Hacker News: Show HN: Pablo – a Chrome extension that copies UI from any website",
+        "Hacker News: DeepSeek Reasonix — DeepSeek-native coding agent with 99.82% prefix-cache hit rate"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 42,
+      "signalCount": 43,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: Pablo – a Chrome extension that copies UI from any website",
         "Reddit: Comparison of Qwen 3.6 and Gemma4 (MoE and Dense models, Q4_K_M), generating a moderately complex MySQL query, only one produced acceptable results",
-        "Reddit: Thoughts on `DavidAU/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-NEO-CODE-Di-IMatrix-MAX-GGUF`"
+        "Reddit: Thoughts on `DavidAU/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-NEO-CODE-Di-IMatrix-MAX-GGUF`",
+        "Hacker News: DeepSeek Reasonix — DeepSeek-native coding agent with 99.82% prefix-cache hit rate"
       ]
     },
     {
@@ -466,6 +513,11 @@
       "title": "Benchmark one local-first agent stack",
       "why": "The local/open-weight ecosystem looks materially better this week, especially around Qwen and Forge guardrails.",
       "prompt": "Pick one real workflow and compare a local Qwen+Forge stack against a frontier hosted model on tool accuracy, latency, and cost."
+    },
+    {
+      "title": "Test cache-aware agent economics with DeepSeek Reasonix",
+      "why": "Reasonix's 99.82% cache hit rate and 5x cost advantage over Claude on cacheable workloads is a new variable in the agent cost equation worth measuring against your own usage patterns.",
+      "prompt": "Run the same multi-step agentic task on Claude Code (Opus) and DeepSeek Reasonix, tracking total token cost, cache hit rate, wall-clock time, and output quality. Does the 5x cost advantage hold for your workload?"
     },
     {
       "title": "Instrument one agent with better traces",
