@@ -68,16 +68,18 @@ const HN_QUERY_SPECS = [
   { query: 'agents buying domains', boost: 90 },
   { query: 'jobbench agent', boost: 85 },
   { query: 'cohere command a+', boost: 130 },
+  { query: 'torvalds ai linux kernel', boost: 120 },
+  { query: 'ai kernel coding agents', boost: 75 },
 ];
 
 const REDDIT_SPECS = [
   {
     subreddit: 'LocalLLaMA',
-    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents', 'web-search', 'game boy transformer', 'local deep research', 'karpathy anthropic', 'command a+', 'cohere', 'agent security', 'moltbook', 'rampart'],
+    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents', 'web-search', 'game boy transformer', 'local deep research', 'karpathy anthropic', 'command a+', 'cohere', 'agent security', 'moltbook', 'rampart', 'torvalds linux ai', 'linux kernel ai coding'],
   },
   {
     subreddit: 'ClaudeAI',
-    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code', 'agent view', 'usage limits', 'karpathy', 'self-hosted sandbox', 'mcp tunnel', 'command a+', 'cohere', 'anthropic consulting', 'claude dreaming'],
+    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code', 'agent view', 'usage limits', 'karpathy', 'self-hosted sandbox', 'mcp tunnel', 'command a+', 'cohere', 'anthropic consulting', 'claude dreaming', 'torvalds linux ai', 'linux kernel ai'],
   },
   {
     subreddit: 'OpenAI',
@@ -92,6 +94,7 @@ const GITHUB_QUERY_SPECS = [
   { query: 'mcp browser agent in:name,description,readme created:>=' + SINCE_DATE, boost: 130 },
   { query: 'agent dashboard workspace in:name,description,readme created:>=' + SINCE_DATE, boost: 125 },
   { query: 'qwen agent in:name,description,readme created:>=' + SINCE_DATE, boost: 120 },
+  { query: 'linux kernel ai agent in:name,description,readme created:>=' + SINCE_DATE, boost: 100 },
 ];
 const GITHUB_REPO_WATCH = [
   { repo: 'antoinezambelli/forge', boost: 250 },
@@ -386,6 +389,10 @@ const HAND_CURATED_WHY = [
     match: /jobbench|job-bench/i,
     why: 'Stanford JobBench shifts the agent evaluation conversation from "can it solve arbitrary benchmarks" to "would professionals actually delegate this work" — a more practical and human-centered framing for agent usefulness.',
   },
+  {
+    match: /torvalds.*ai.*linux|linus.*torvalds.*kernel.*ai|ai.*kernel.*coding|ai.*linux.*patch|pointless.*pull.*request.*ai/i,
+    why: 'Linus Torvalds threatening to crack down on AI-generated kernel patches is a real-world signal that AI coding agents are now producing code at a scale that overwhelms human review — not a theoretical future, but today\'s bottleneck.',
+  },
 ];
 
 function githubTokenFromCli() {
@@ -625,6 +632,7 @@ function highlightScore(item) {
   if (haystack.includes('clarity') && haystack.includes('agent')) bonus += 230;
   if (haystack.includes('notion') && haystack.includes('agent')) bonus += 220;
   if (haystack.includes('jobbench') || haystack.includes('job-bench')) bonus += 180;
+  if (haystack.includes('torvalds') && haystack.includes('linux')) bonus += 250;
   return (item.score ?? 0) + bonus;
 }
 
@@ -925,6 +933,7 @@ function buildSummary(highlights) {
   const hasMcpTunnels = titles.some((title) => title.includes('mcp tunnel') || title.includes('self-hosted sandbox'));
   const hasLocalDeepResearch = titles.some((title) => title.includes('local deep research'));
   const hasCommandAPlus = titles.some((title) => title.includes('command a+') || title.includes('command a-plus') || (title.includes('cohere') && title.includes('command')));
+  const hasTorvaldsAi = titles.some((title) => (title.includes('torvalds') || title.includes('linus')) && (title.includes('kernel') || title.includes('linux')) && (title.includes('ai') || title.includes('patch') || title.includes('coding')));
 
   const bits = [];
   if (hasForge) bits.push('guardrails on local models close the reliability gap with frontier APIs (Forge: 53%→99%)');
@@ -946,6 +955,7 @@ function buildSummary(highlights) {
   if (hasMcpTunnels) bits.push('MCP tunnels and self-hosted sandboxes unlock enterprise agent deployments');
   if (hasLocalDeepResearch) bits.push('local deep research agents hit production quality on consumer hardware');
   if (hasCommandAPlus) bits.push('Cohere releases Command A+ — a 25B/218B open-weight MoE agentic model under Apache 2.0');
+  if (hasTorvaldsAi) bits.push('Torvalds threatens crackdown on AI-generated kernel patches — coding agents producing code faster than human review can handle');
 
   if (!bits.length) {
     return 'The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.';
