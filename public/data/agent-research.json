@@ -1,18 +1,17 @@
 {
-  "generatedAt": "2026-05-25T11:49:06Z",
+  "generatedAt": "2026-05-25T11:56:18Z",
   "windowDays": 7,
   "summary": "This cycle says OpenAI model disproves 80-year-old discrete geometry conjecture, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 76,
+    "items": 56,
     "sources": {
       "Anthropic": 2,
-      "GitHub": 39,
+      "GitHub": 40,
       "Google AI": 3,
       "Google DeepMind": 1,
       "Hacker News": 4,
       "OpenAI": 4,
-      "Qwen": 2,
-      "Reddit": 21
+      "Qwen": 2
     }
   },
   "highlights": [
@@ -57,26 +56,10 @@
       "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
     },
     {
-      "title": "BeeLlama v0.2.0 – major DFlash update. Single RTX 3090: Qwen 3.6 27B up to 164 tps (4.40x), Gemma 4 31B up to 177.8 tps (4.93x). Prompt processing speed near baseline.",
-      "source": "Reddit",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tkpz2y/beellama_v020_major_dflash_update_single_rtx_3090/",
-      "meta": "218 upvotes · 127 comments",
-      "topics": [
-        "Tool use",
-        "Memory and state",
-        "Evaluation",
-        "Open weights"
-      ],
-      "publishedAt": "2026-05-22T17:34:59Z",
-      "score": 662.8,
-      "summary": "**BeeLlama v0.2.0 is here!** >Not quite a pegasus, but close enough. [**GitHub**](https://github.com/Anbeeld/beellama.cpp) **|** [**Qwen 3.6 27B Quick Start**](https://github.com/Anbeeld/beellama.cpp/blob/main/docs/quic…",
-      "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
-    },
-    {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "104581 stars · updated Sun, 24 May 2026 06:56:26 UTC",
+      "meta": "104582 stars · updated Sun, 24 May 2026 06:56:26 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -84,7 +67,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 655324,
+      "score": 655332,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -92,7 +75,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "7953 stars · updated Mon, 25 May 2026 11:44:37 UTC",
+      "meta": "7953 stars · updated Mon, 25 May 2026 11:53:44 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -259,72 +242,7 @@
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": [
-        {
-          "title": "BeeLlama v0.2.0 – major DFlash update. Single RTX 3090: Qwen 3.6 27B up to 164 tps (4.40x), Gemma 4 31B up to 177.8 tps (4.93x). Prompt processing speed near baseline.",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tkpz2y/beellama_v020_major_dflash_update_single_rtx_3090/",
-          "meta": "218 upvotes · 127 comments",
-          "topics": [
-            "Tool use",
-            "Memory and state",
-            "Evaluation",
-            "Open weights"
-          ],
-          "publishedAt": "2026-05-22T17:34:59Z",
-          "score": 662.8,
-          "summary": "**BeeLlama v0.2.0 is here!** >Not quite a pegasus, but close enough. [**GitHub**](https://github.com/Anbeeld/beellama.cpp) **|** [**Qwen 3.6 27B Quick Start**](https://github.com/Anbeeld/beellama.cpp/blob/main/docs/quic…",
-          "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
-        },
-        {
-          "title": "Qwen 3.6 35B GGUF: NTP vs MTP quantization results across GPUs and CPUs",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tipihx/qwen_36_35b_gguf_ntp_vs_mtp_quantization_results/",
-          "meta": "260 upvotes · 75 comments",
-          "topics": [
-            "Memory and state",
-            "Evaluation",
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2026-05-20T15:42:29Z",
-          "score": 566,
-          "summary": "Hey r/LocalLLaMA, We’ve released our ByteShape Qwen 3.6 35B GGUF quantizations in two families: standard NTP (Next Token Prediction or non-MTP) and MTP. [Blog](https://byteshape.com/blogs/Qwen3.6-35B-A3B/) / [Download N…",
-          "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
-        },
-        {
-          "title": "Same task in github-copilot, pi, claude-code, and opencode with Qwen3.6 27B",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tjbhjk/same_task_in_githubcopilot_pi_claudecode_and/",
-          "meta": "152 upvotes · 105 comments",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2026-05-21T06:02:36Z",
-          "score": 453.20000000000005,
-          "summary": "I wanted to know how much of a coding agent's performance came from the model and how much came from the harness, so I vibed a setup to allow me to test multiple agentic harnesses/model combinations on the same task. AL…",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "favorite Agentic Coding Harness",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1th5t1b/favorite_agentic_coding_harness/",
-          "meta": "68 upvotes · 76 comments",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-18T23:53:49Z",
-          "score": 320.8,
-          "summary": "So far, I’ve tried Codex CLI, Claude Code, Gemini CLI, OpenCode, and recently, Pi with local models. Pi is the leanest of them all, with just four tools: read, write, edit, and bash. Its system prompt is only under 2K t…",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        }
-      ]
+      "items": []
     },
     {
       "key": "hugging-face",
@@ -339,7 +257,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "104581 stars · updated Sun, 24 May 2026 06:56:26 UTC",
+          "meta": "104582 stars · updated Sun, 24 May 2026 06:56:26 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -347,7 +265,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 655324,
+          "score": 655332,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -355,7 +273,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "7953 stars · updated Mon, 25 May 2026 11:44:37 UTC",
+          "meta": "7953 stars · updated Mon, 25 May 2026 11:53:44 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -371,14 +289,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "4216 stars · updated Sun, 24 May 2026 18:30:30 UTC",
+          "meta": "4219 stars · updated Sun, 24 May 2026 18:30:30 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 25752,
+          "score": 25770,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -402,7 +320,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 44,
+      "signalCount": 31,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
@@ -412,17 +330,17 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 42,
+      "signalCount": 31,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: Pablo – a Chrome extension that copies UI from any website",
-        "Reddit: Comparison of Qwen 3.6 and Gemma4 (MoE and Dense models, Q4_K_M), generating a moderately complex MySQL query, only one produced acceptable results",
-        "Reddit: Thoughts on `DavidAU/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-NEO-CODE-Di-IMatrix-MAX-GGUF`"
+        "OpenAI: OpenAI named a Leader in enterprise coding agents by Gartner",
+        "OpenAI: How Virgin Atlantic ships faster with Codex"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 38,
+      "signalCount": 24,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Google AI: Gemini 3.5 Flash",
@@ -432,17 +350,17 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 27,
+      "signalCount": 24,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Hacker News: Show HN: Pablo – a Chrome extension that copies UI from any website",
         "Anthropic: Anthropic acquires Stainless",
-        "Reddit: Tired of keeping your laptop half-open to keep Claude Code running? Built a fix."
+        "GitHub: larajuniorlara/Claude-Design-Studio"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 23,
+      "signalCount": 14,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Qwen: Qwen3.7-Max: The Agent Frontier",
@@ -452,12 +370,12 @@
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 13,
+      "signalCount": 10,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
-        "Reddit: The pacman benchmark: finally a viable local agentic coding agent with Qwen 3.6 27b",
-        "Reddit: Qwen 3.6. struggling with German"
+        "GitHub: muhammadqasimkalhoro94-blip/claude-zeroclaw-agentics",
+        "GitHub: tejpalv/cc-wiki"
       ]
     }
   ],
