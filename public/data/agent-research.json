@@ -1,18 +1,19 @@
 {
-  "generatedAt": "2026-05-25T04:17:08Z",
+  "generatedAt": "2026-05-25T03:44:30Z",
   "windowDays": 7,
-  "summary": "This cycle says OpenAI model disproves 80-year-old discrete geometry conjecture, the local/open-weight stack keeps getting stronger around Qwen-style setups, Cohere releases Command A+ — a 25B/218B open-weight MoE agentic model under Apache 2.0. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says OpenAI model disproves 80-year-old discrete geometry conjecture, the local/open-weight stack keeps getting stronger around Qwen-style setups, Karpathy joins Anthropic — talent signal for the agentic AI research race, Cohere releases Command A+ — a 25B/218B open-weight MoE agentic model under Apache 2.0. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 57,
+    "items": 98,
     "sources": {
       "Anthropic": 2,
       "GitHub": 39,
       "Google AI": 3,
       "Google DeepMind": 1,
       "Hacker News": 3,
-      "Hugging Face": 2,
+      "Hugging Face": 4,
       "OpenAI": 5,
-      "Qwen": 2
+      "Qwen": 2,
+      "Reddit": 39
     }
   },
   "highlights": [
@@ -57,6 +58,19 @@
       "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
     },
     {
+      "title": "Karpathy joins Anthropic",
+      "source": "Reddit",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1thpuf1/karpathy_joins_anthropic/",
+      "meta": "6265 upvotes · 264 comments",
+      "topics": [
+        "Major labs"
+      ],
+      "publishedAt": "2026-05-19T15:10:01Z",
+      "score": 10552,
+      "summary": "",
+      "why": "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year — his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box."
+    },
+    {
       "title": "CohereLabs/command-a-plus-05-2026-w4a4",
       "source": "Hugging Face",
       "url": "https://huggingface.co/CohereLabs/command-a-plus-05-2026-w4a4",
@@ -71,7 +85,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "104572 stars · updated Sun, 24 May 2026 06:56:26 UTC",
+      "meta": "104570 stars · updated Sun, 24 May 2026 06:56:26 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -79,7 +93,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 655260,
+      "score": 655244,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -87,7 +101,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "7945 stars · updated Mon, 25 May 2026 04:06:15 UTC",
+      "meta": "7945 stars · updated Sun, 24 May 2026 23:40:12 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -238,7 +252,67 @@
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": []
+      "items": [
+        {
+          "title": "Karpathy joins Anthropic",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1thpuf1/karpathy_joins_anthropic/",
+          "meta": "6265 upvotes · 264 comments",
+          "topics": [
+            "Major labs"
+          ],
+          "publishedAt": "2026-05-19T15:10:01Z",
+          "score": 10552,
+          "summary": "",
+          "why": "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year — his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box."
+        },
+        {
+          "title": "OpenAI cofounder Andrej karpathy just joined anthropic and the talent war is officially over",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1thw3bu/openai_cofounder_andrej_karpathy_just_joined/",
+          "meta": "1560 upvotes · 92 comments",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows",
+            "Voice and multimodal",
+            "Major labs"
+          ],
+          "publishedAt": "2026-05-19T18:40:02Z",
+          "score": 2740,
+          "summary": "this happened literally today ,andrej karpathy one of the most respected ai researchers alive nd the guy whose youtube lectures taught half the developers in this sub how neural networks work, just announced he is joini…",
+          "why": "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year — his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box."
+        },
+        {
+          "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model, here's how",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgecrq/i_built_a_coding_agent_that_gets_87_on_benchmarks/",
+          "meta": "874 upvotes · 372 comments",
+          "topics": [
+            "Tool use",
+            "Memory and state",
+            "Evaluation",
+            "Open weights"
+          ],
+          "publishedAt": "2026-05-18T06:38:11Z",
+          "score": 2142.4,
+          "summary": "I was frustrated that every coding agent (OpenCode, Cursor, Claude Code) assumes you're running GPT-5.4 or Claude Opus. If you try them with a local model like Gemma or Qwen they fall apart. I find that often tool calls…",
+          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+        },
+        {
+          "title": "Re. what ever happened to Cohere’s Command-A series of models?",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tizmar/re_what_ever_happened_to_coheres_commanda_series/",
+          "meta": "535 upvotes · 100 comments",
+          "topics": [
+            "Open weights",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-20T21:25:50Z",
+          "score": 1056,
+          "summary": "Hey everyone, Nick Frosst here from Cohere. A few months ago Aidan (my cofounder) [left a comment](https://www.reddit.com/r/LocalLLaMA/comments/1rf8nou/comment/o8rkdrf/) in here about our Command series and how we were…",
+          "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
+        }
+      ]
     },
     {
       "key": "hugging-face",
@@ -265,6 +339,36 @@
           "score": 121.5,
           "summary": "transformers safetensors cohere2_vision image-text-to-text conversational chat en ar bg bn ca cs da de el es et fa fi fil fr ga he hi hr hu id is it ja ko lt lv ms mt nl no pa pl pt ro ru sk sl sr sv ta te th tr uk ur vi zh base_model:CohereLabs/command-a-plus-05-2026-bf16 base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16 license:apache-2.0 compressed-tensors deploy:azure region:us",
           "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
+        },
+        {
+          "title": "AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-i1-GGUF",
+          "meta": "3 likes · 3,638 downloads",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-05-18T03:51:57.000Z",
+          "score": 15.638,
+          "summary": "gguf quantized imatrix importance-matrix deep-research agent information-seeking web-search verification react llama-cpp qwen3 text-generation en zh arxiv:2603.28376 base_model:AIDC-AI/Marco-DeepResearch-8B base_model:quantized:AIDC-AI/Marco-DeepResearch-8B license:apache-2.0 model-index endpoints_compatible region:us conversational",
+          "why": "Compact \"deep research\" style models are getting easier to run and remix, which widens the range of people who can experiment with retrieval-heavy agent workflows."
+        },
+        {
+          "title": "AIDC-AI/Marco-DeepResearch-8B-GGUF",
+          "source": "Hugging Face",
+          "url": "https://huggingface.co/AIDC-AI/Marco-DeepResearch-8B-GGUF",
+          "meta": "3 likes · 1,112 downloads",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-05-18T03:51:13.000Z",
+          "score": 13.112,
+          "summary": "gguf quantized deep-research agent information-seeking web-search verification react llama-cpp qwen3 text-generation en zh arxiv:2603.28376 base_model:AIDC-AI/Marco-DeepResearch-8B base_model:quantized:AIDC-AI/Marco-DeepResearch-8B license:apache-2.0 model-index endpoints_compatible region:us conversational",
+          "why": "Compact \"deep research\" style models are getting easier to run and remix, which widens the range of people who can experiment with retrieval-heavy agent workflows."
         }
       ]
     },
@@ -276,7 +380,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "104572 stars · updated Sun, 24 May 2026 06:56:26 UTC",
+          "meta": "104570 stars · updated Sun, 24 May 2026 06:56:26 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -284,7 +388,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 655260,
+          "score": 655244,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -292,7 +396,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "7945 stars · updated Mon, 25 May 2026 04:06:15 UTC",
+          "meta": "7945 stars · updated Sun, 24 May 2026 23:40:12 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -308,14 +412,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "4161 stars · updated Sun, 24 May 2026 18:30:30 UTC",
+          "meta": "4158 stars · updated Sun, 24 May 2026 18:30:30 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 25412,
+          "score": 25394,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -339,27 +443,17 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 29,
+      "signalCount": 52,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
         "Anthropic: New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels",
-        "OpenAI: How Virgin Atlantic ships faster with Codex"
-      ]
-    },
-    {
-      "topic": "Coding agents",
-      "signalCount": 29,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
-      "signals": [
-        "OpenAI: OpenAI named a Leader in enterprise coding agents by Gartner",
-        "OpenAI: How Virgin Atlantic ships faster with Codex",
-        "OpenAI: How Ramp engineers accelerate code review with Codex"
+        "Reddit: BeeLlama v0.2.0 – major DFlash update. Single RTX 3090: Qwen 3.6 27B up to 164 tps (4.40x), Gemma 4 31B up to 177.8 tps (4.93x). Prompt processing speed near baseline."
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 23,
+      "signalCount": 45,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Google AI: Gemini 3.5 Flash",
@@ -368,18 +462,18 @@
       ]
     },
     {
-      "topic": "Interfaces",
-      "signalCount": 23,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "topic": "Coding agents",
+      "signalCount": 45,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "Anthropic: Anthropic acquires Stainless",
-        "GitHub: larajuniorlara/Claude-Design-Studio",
-        "GitHub: muhammadqasimkalhoro94-blip/claude-zeroclaw-agentics"
+        "Reddit: Comparison of Qwen 3.6 and Gemma4 (MoE and Dense models, Q4_K_M), generating a moderately complex MySQL query, only one produced acceptable results",
+        "Reddit: Qwen 3.6 27B Q8 on four Nvidia RTX A4000 (16GB each) with Llama.cpp and MTP enabled",
+        "Reddit: Thoughts on `DavidAU/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-NEO-CODE-Di-IMatrix-MAX-GGUF`"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 14,
+      "signalCount": 37,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Qwen: Qwen3.7-Max: The Agent Frontier",
@@ -388,13 +482,23 @@
       ]
     },
     {
+      "topic": "Interfaces",
+      "signalCount": 33,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signals": [
+        "Anthropic: Anthropic acquires Stainless",
+        "Reddit: Qwen 3.6 27B Q8 on four Nvidia RTX A4000 (16GB each) with Llama.cpp and MTP enabled",
+        "Reddit: Re. what ever happened to Cohere’s Command-A series of models?"
+      ]
+    },
+    {
       "topic": "Multi-agent workflows",
-      "signalCount": 10,
+      "signalCount": 19,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
-        "GitHub: muhammadqasimkalhoro94-blip/claude-zeroclaw-agentics",
-        "GitHub: tejpalv/cc-wiki"
+        "Reddit: The pacman benchmark: finally a viable local agentic coding agent with Qwen 3.6 27b",
+        "Reddit: Qwen 3.6. struggling with German"
       ]
     }
   ],
