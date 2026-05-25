@@ -60,24 +60,32 @@ const HN_QUERY_SPECS = [
   { query: 'command a+ cohere', boost: 130 },
   { query: 'gemini system prompt', boost: 100 },
   { query: 'anthropic consulting', boost: 100 },
+  { query: 'cloudflare agents stripe', boost: 130 },
+  { query: 'moltbook openclaw', boost: 120 },
+  { query: 'rampart agent security', boost: 110 },
+  { query: 'notion agent platform', boost: 100 },
+  { query: 'agentic commerce', boost: 95 },
+  { query: 'agents buying domains', boost: 90 },
+  { query: 'jobbench agent', boost: 85 },
+  { query: 'cohere command a+', boost: 130 },
 ];
 
 const REDDIT_SPECS = [
   {
     subreddit: 'LocalLLaMA',
-    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents', 'web-search', 'game boy transformer', 'local deep research', 'karpathy anthropic', 'command a+', 'cohere'],
+    queries: ['textgen', 'qwen 3.6', 'claude code', 'deep research', 'vector database for ai agents', 'web-search', 'game boy transformer', 'local deep research', 'karpathy anthropic', 'command a+', 'cohere', 'agent security', 'moltbook', 'rampart'],
   },
   {
     subreddit: 'ClaudeAI',
-    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code', 'agent view', 'usage limits', 'karpathy', 'self-hosted sandbox', 'mcp tunnel', 'command a+', 'cohere', 'anthropic consulting'],
+    queries: ['qwen 3.6', 'persistent memory', 'claude code mcp', 'built with claude code', 'remote client for claude code', 'agent view', 'usage limits', 'karpathy', 'self-hosted sandbox', 'mcp tunnel', 'command a+', 'cohere', 'anthropic consulting', 'claude dreaming'],
   },
   {
     subreddit: 'OpenAI',
-    queries: ['codex', 'openai codex sandbox', 'coding agent safety'],
+    queries: ['codex', 'openai codex sandbox', 'coding agent safety', 'agent security', 'stripe agents'],
   },
 ];
 
-const HF_QUERIES = ['qwen3.6', 'deepresearch', 'browser-use', 'agent', 'command-a-plus', 'cohere'];
+const HF_QUERIES = ['qwen3.6', 'deepresearch', 'browser-use', 'agent', 'command-a-plus', 'cohere', 'rampart-clarity', 'agent-security', 'agentic-coding-trajectories'];
 const GITHUB_QUERY_SPECS = [
   { query: '"claude code" in:name,description,readme created:>=' + SINCE_DATE, boost: 140 },
   { query: '"deep research" in:name,description,readme created:>=' + SINCE_DATE, boost: 135 },
@@ -101,6 +109,9 @@ const GITHUB_REPO_WATCH = [
   { repo: 'google-gemini/gemini-cli', boost: 140 },
   { repo: 'LearningCircuit/local-deep-research', boost: 110 },
   { repo: 'CohereLabs/command-a-plus-05-2026', boost: 180 },
+  { repo: 'microsoft/rampart', boost: 160 },
+  { repo: 'microsoft/agent-clarity', boost: 150 },
+  { repo: 'cloudflare/agents-stripe', boost: 140 },
 ];
 const GITHUB_RELEASE_WATCH = [
   { repo: 'QwenLM/qwen-code', label: 'Qwen', boost: 140 },
@@ -355,6 +366,26 @@ const HAND_CURATED_WHY = [
     match: /command a\+|command a-plus|cohere.*command/i,
     why: 'Cohere\'s Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem.',
   },
+  {
+    match: /cloudflare.*stripe|stripe.*agent|agent.*stripe|agents.*buying.*domain|agent.*commerce/i,
+    why: 'Agents becoming first-class economic actors — creating accounts, buying domains, deploying code — is one of the most consequential infrastructure shifts this cycle. The agent-as-customer model changes the design space for every SaaS platform.',
+  },
+  {
+    match: /moltbook|openclaw|agent.*credential.*leak|agent.*security.*incident/i,
+    why: 'The Moltbook/OpenClaw incident — 1.5M agent tokens exposed, CVSS 8.8 RCE, credential harvesting — is the Meltdown/Spectre moment for agent security. Every production agent deployer needs to understand what happened and why.',
+  },
+  {
+    match: /rampart.*agent|agent.*clarity|microsoft.*agent.*security/i,
+    why: 'Microsoft open-sourcing RAMPART (pytest-native agent security testing) and Clarity (agent behavior monitoring) signals that agent security tooling is transitioning from ad-hoc to standardized infrastructure.',
+  },
+  {
+    match: /notion agent|notion.*agent.*platform/i,
+    why: 'Notion becoming a programmable agent hub with hosted code execution is a strong signal that workspace SaaS platforms see agents as the next integration surface — not just LLM chat, but full agentic automation inside documents.',
+  },
+  {
+    match: /jobbench|job-bench/i,
+    why: 'Stanford JobBench shifts the agent evaluation conversation from "can it solve arbitrary benchmarks" to "would professionals actually delegate this work" — a more practical and human-centered framing for agent usefulness.',
+  },
 ];
 
 function githubTokenFromCli() {
@@ -588,6 +619,12 @@ function highlightScore(item) {
   if (haystack.includes('local deep research')) bonus += 180;
   if (haystack.includes('gemini system prompt') || haystack.includes('gemini dumped')) bonus += 180;
   if (haystack.includes('command a+') || haystack.includes('command a-plus') || (haystack.includes('cohere') && haystack.includes('command'))) bonus += 350;
+  if (haystack.includes('cloudflare') && (haystack.includes('stripe') || haystack.includes('agent'))) bonus += 300;
+  if (haystack.includes('moltbook') || haystack.includes('openclaw')) bonus += 280;
+  if (haystack.includes('rampart') && haystack.includes('agent')) bonus += 250;
+  if (haystack.includes('clarity') && haystack.includes('agent')) bonus += 230;
+  if (haystack.includes('notion') && haystack.includes('agent')) bonus += 220;
+  if (haystack.includes('jobbench') || haystack.includes('job-bench')) bonus += 180;
   return (item.score ?? 0) + bonus;
 }
 
