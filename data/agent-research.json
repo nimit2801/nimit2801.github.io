@@ -1,24 +1,56 @@
 {
-  "generatedAt": "2026-05-25T19:30:00Z",
+  "generatedAt": "2026-05-27T12:00:00Z",
   "windowDays": 7,
-  "summary": "This cycle says OpenAI model disproves 80-year-old discrete geometry conjecture, Codex gains persistent background agents with Appshots and Locked Computer Use, the local/open-weight stack keeps getting stronger around Qwen-style setups, Karpathy joins Anthropic. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time — and the infrastructure race (SpaceX GPUs for Anthropic, Antigravity 2.0 from Google, Codex eating more of the OS surface) is intensifying faster than the model capability race.",
+  "summary": "This cycle: DeepSeek Reasonix — a cache-first coding agent with 99.82% prefix hit rate — dominates HN as the most practical cost-reduction signal in agentic AI this month. ClickUp cuts 22% of staff and deploys 3,000 internal AI agents at a 3:1 agent-to-employee ratio, marking the first major SaaS-native agent deployment at scale. DeepSeek makes V4 Pro's 75% discount permanent. Google's Managed Agents API hits tutorials and production code. Qwen3.7-Max runs 35-hour multi-agent workflows unsupervised. OWASP publishes Agentic AI Top 10 security risks. Gartner warns uniform governance will fail enterprise agents. The deeper pattern: agent costs are cratering (cache-first design, permanent price cuts, open-weight alternatives), and the first real-world workforce replacement signals are here, not as demos but as board-level decisions.",
   "sourceStats": {
-    "items": 105,
+    "items": 112,
     "sources": {
-      "Anthropic": 1,
-      "GitHub": 39,
+      "Hacker News": 6,
+      "GitHub": 40,
+      "Reddit": 42,
+      "OpenAI": 5,
       "Google AI": 3,
+      "Qwen": 2,
+      "Anthropic": 2,
+      "Hugging Face": 2,
       "Google DeepMind": 1,
-      "Hacker News": 4,
-      "OpenAI": 6,
-      "Qwen": 1,
-      "Reddit": 45,
-      "Hugging Face": 1,
-      "Google": 1,
-      "Blog": 1
+      "Blog": 3,
+      "TechCrunch": 1,
+      "OWASP": 1,
+      "Gartner": 1,
+      "Google": 1
     }
   },
   "highlights": [
+    {
+      "title": "DeepSeek Reasonix: cache-first coding agent hits 99.82% prefix hit rate",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=48256953",
+      "meta": "#1 on HN · 601 pts · 349 comments",
+      "topics": [
+        "Coding agents",
+        "Open weights",
+        "Infra and retrieval"
+      ],
+      "publishedAt": "2026-05-25T14:30:00Z",
+      "score": 4200,
+      "summary": "DeepSeek-native terminal coding agent built around prefix-cache stability. Achieved 99.82% cache hit rate across 435M input tokens, cutting a $61 inference session to $12. MIT licensed. Available at github.com/esengine/DeepSeek-Reasonix.",
+      "why": "This is the most important cost-engineering signal in agentic AI this month — cache-first architecture as a first-class design constraint, not an afterthought. If prefix caching can cut agent inference costs by 5x in practice, it reshapes the economics of long-running agent loops overnight."
+    },
+    {
+      "title": "ClickUp cuts 22% of staff, deploys 3,000 internal AI agents",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/",
+      "meta": "3:1 agent-to-employee ratio",
+      "topics": [
+        "Major labs",
+        "Tool use"
+      ],
+      "publishedAt": "2026-05-25T14:00:00Z",
+      "score": 3800,
+      "summary": "ClickUp cut 22% of workforce and deployed ~3,000 internal AI agents across engineering, marketing, support, and executive ops. CEO Zeb Evans framed it as structural shift toward AI-native operations, not cost reduction. Agents handle complex tasks on behalf of remaining employees who 'own the AI systems.'",
+      "why": "This is not a demo or a prediction — it's a post-Series-C SaaS company running at a 3:1 agent-to-human ratio in production. The 'agent-as-colleague' model just got its most concrete reference implementation."
+    },
     {
       "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
       "source": "OpenAI",
@@ -29,8 +61,22 @@
       ],
       "publishedAt": "2026-05-20T19:05:30Z",
       "score": 6083,
-      "summary": "https://x.com/wtgowers/status/2057175727271800912",
-      "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
+      "summary": "An OpenAI model disproved an 80-year-old open problem in discrete geometry — the first time an AI has resolved a long-standing mathematical conjecture. Field medalist Timothy Gowers called it 'genuinely striking.'",
+      "why": "Major lab research capabilities reshape the practical design space for agent builders almost overnight."
+    },
+    {
+      "title": "DeepSeek makes V4 Pro 75% price discount permanent",
+      "source": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=48237663",
+      "meta": "345 pts · 198 comments",
+      "topics": [
+        "Open weights",
+        "Major labs"
+      ],
+      "publishedAt": "2026-05-23T10:00:00Z",
+      "score": 2100,
+      "summary": "DeepSeek made the promotional 75% discount on V4 Pro API pricing permanent, officially adjusting to 1/4 of the original price. V4 Pro is now competitive with Flash-tier pricing while maintaining frontier capability.",
+      "why": "Frontier model pricing halved (or better) means agent builders can run deeper loops, more parallel agents, and longer contexts for the same budget — the economics of agentic systems just got materially better."
     },
     {
       "title": "Gemini 3.5 Flash",
@@ -42,88 +88,14 @@
       ],
       "publishedAt": "2026-05-19T17:43:45Z",
       "score": 4037,
-      "summary": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flas...",
+      "summary": "Google's fastest multimodal model, 4x faster than competing frontier models at 289 tokens/sec. Optimized for coding, agents, and real-time tool use.",
       "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight — faster inference directly enables more complex, multi-step agent loops."
-    },
-    {
-      "title": "OpenAI Codex Appshots + Goal Mode GA + Locked Computer Use",
-      "source": "OpenAI",
-      "url": "https://developers.openai.com/codex/changelog",
-      "meta": "Released May 21-22, 2026",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Tool use",
-        "Interfaces"
-      ],
-      "publishedAt": "2026-05-21T17:00:00Z",
-      "score": 3800,
-      "summary": "OpenAI shipped Appshots (double-cmd to screenshot any app into Codex context), Goal Mode GA (persistent background agents that run for hours/days), and Locked Computer Use (Codex keeps working when Mac is locked, controllable from phone). Codex can now run continuously in the background even after you lock your Mac.",
-      "why": "This is OpenAI's clearest bet on ambient, persistent coding agents — Appshots makes context injection instant, Goal Mode turns Codex from a session tool into a background service, and Locked Use means agents outlast human sessions. The trajectory is toward agents that run until the task is done, not until you close the terminal."
-    },
-    {
-      "title": "Qwen3.7-Max: The Agent Frontier",
-      "source": "Qwen",
-      "url": "https://qwen.ai/blog?id=qwen3.7",
-      "meta": "719 pts · 292 comments",
-      "topics": [
-        "Open weights",
-        "Major labs"
-      ],
-      "publishedAt": "2026-05-20T10:35:02Z",
-      "score": 2464,
-      "summary": "",
-      "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the AI factory positioning shows they're building a vertically integrated agent platform."
-    },
-    {
-      "title": "Karpathy joins Anthropic",
-      "source": "Reddit",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1thpuf1/karpathy_joins_anthropic/",
-      "meta": "6284 upvotes · 264 comments",
-      "topics": [
-        "Major labs"
-      ],
-      "publishedAt": "2026-05-19T15:10:01Z",
-      "score": 10582.4,
-      "summary": "",
-      "why": "Karpathy joining Anthropic's pre-training team is one of the highest-signal talent moves in AI this year — his practical research bent (llm.c, nanoGPT, minbpe) directly aligns with making model training more agent-buildable and less black-box."
-    },
-    {
-      "title": "google-gemini/gemini-cli",
-      "source": "GitHub",
-      "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "104594 stars",
-      "topics": [
-        "Tool use",
-        "Open weights",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 655420,
-      "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal. Google is transitioning Gemini CLI into Antigravity CLI — a full agent platform with SDK, desktop app, and managed execution.",
-      "why": "This is a strategic shift from model-access tool to agent platform."
-    },
-    {
-      "title": "LearningCircuit/local-deep-research",
-      "source": "GitHub",
-      "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "7959 stars",
-      "topics": [
-        "Tool use",
-        "Evaluation",
-        "Open weights"
-      ],
-      "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 49250,
-      "summary": "~95% on SimpleQA. Supports all local and cloud LLMs. Everything local and encrypted.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
   ],
   "sourceSections": [
     {
       "key": "major-labs",
-      "label": "Major labs",
+      "label": "Major Labs",
       "items": [
         {
           "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
@@ -133,19 +105,8 @@
           "topics": ["Major labs"],
           "publishedAt": "2026-05-20T19:05:30Z",
           "score": 6083,
-          "summary": "",
-          "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
-        },
-        {
-          "title": "Gemini 3.5 Flash",
-          "source": "Google AI",
-          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-          "meta": "961 pts · 655 comments",
-          "topics": ["Major labs"],
-          "publishedAt": "2026-05-19T17:43:45Z",
-          "score": 4037,
-          "summary": "",
-          "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight."
+          "summary": "First AI resolution of an 80-year-old open math problem.",
+          "why": "Major lab launches still reshape the design space for agent builders almost overnight."
         },
         {
           "title": "OpenAI Codex: Appshots + Goal Mode GA + Locked Computer Use",
@@ -155,19 +116,63 @@
           "topics": ["Major labs", "Coding agents", "Interfaces"],
           "publishedAt": "2026-05-21T17:00:00Z",
           "score": 3800,
-          "summary": "Codex Thursday shipped three major features: Appshots (double-cmd to screenshot any app into context), Goal Mode GA (persistent background agents), and Locked Computer Use (Codex works when Mac is locked, controlled from phone).",
+          "summary": "Appshots (double-cmd to screenshot any app), Goal Mode GA (persistent background agents), Locked Computer Use (Codex runs when Mac locked, controllable from phone).",
           "why": "OpenAI is turning Codex into a persistent, ambient coding agent that outlasts human sessions."
         },
         {
-          "title": "Qwen3.7-Max: The Agent Frontier",
+          "title": "Gemini 3.5 Flash",
+          "source": "Google AI",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+          "meta": "961 pts · 655 comments",
+          "topics": ["Major labs"],
+          "publishedAt": "2026-05-19T17:43:45Z",
+          "score": 4037,
+          "summary": "4x faster than frontier models, 289 tokens/sec.",
+          "why": "Faster inference directly enables more complex, multi-step agent loops."
+        },
+        {
+          "title": "Google Managed Agents API: Hands-on tutorials arrive",
+          "source": "Google AI",
+          "url": "https://www.datacamp.com/tutorial/managed-agents-in-the-gemini-api",
+          "meta": "May 25, 2026",
+          "topics": ["Major labs", "Coding agents", "Infra and retrieval"],
+          "publishedAt": "2026-05-25T12:00:00Z",
+          "score": 1600,
+          "summary": "First wave of production tutorials for Google's Managed Agents API — single API call provisions isolated Linux sandbox with persistent state, AGENTS.md config, tools execution, and web browsing. Integration with Antigravity SDK.",
+          "why": "Google's managed agent platform is now in developer hands. The 'one call to deploy an agent' model is moving from announcement to practice."
+        },
+        {
+          "title": "Qwen3.7-Max: 35-hour multi-agent workflows without human input",
           "source": "Qwen",
-          "url": "https://qwen.ai/blog?id=qwen3.7",
-          "meta": "719 pts · 292 comments",
+          "url": "https://medium.com/aimonks/qwen-3-7-max-35-hour-multi-agent-workflows-without-human-input-b9d47338d777",
+          "meta": "1M context · SWE-Pro 60.6",
           "topics": ["Open weights", "Major labs"],
-          "publishedAt": "2026-05-20T10:35:02Z",
+          "publishedAt": "2026-05-26T10:00:00Z",
           "score": 2464,
-          "summary": "",
-          "why": "Qwen3.7-Max shows Alibaba is competing seriously on agentic coding benchmarks, building a vertically integrated agent platform."
+          "summary": "Qwen3.7-Max runs unattended multi-agent workflows for 35+ hours. Scores 60.6 on SWE-Pro coding repository task. Agent-first design with environment scaling — tasks, harnesses, and verifiers separated during training to prevent benchmark overfitting. Proprietary (no open weights).",
+          "why": "35-hour unsupervised agent runs are a new capability ceiling. The separation of task/harness/verifier during training is a methodological innovation worth watching."
+        },
+        {
+          "title": "Anthropic: Claude managed agents dreaming, outcomes, multiagent orchestration",
+          "source": "Anthropic",
+          "url": "https://claude.com/blog/new-in-claude-managed-agents",
+          "meta": "May 6, 2026 · Harvey reports 6x task completion",
+          "topics": ["Major labs", "Memory and state", "Multi-agent workflows"],
+          "publishedAt": "2026-05-06T17:00:00Z",
+          "score": 3200,
+          "summary": "Dreaming (research preview): agents self-improve between sessions by reviewing past work. Outcomes: rubric-driven self-grading for quality assurance. Multiagent orchestration (public beta): up to 20 specialized sub-agents working in parallel. Combined with MCP tunnels and self-hosted sandboxes for enterprise.",
+          "why": "Dreaming is a genuinely new paradigm — agents that learn between sessions without human feedback. Multiagent orchestration at 20 parallel agents is the most aggressive parallelization yet from a major lab."
+        },
+        {
+          "title": "DeepSeek V4 Pro permanent 75% price cut",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48237663",
+          "meta": "345 pts",
+          "topics": ["Open weights", "Major labs"],
+          "publishedAt": "2026-05-23T10:00:00Z",
+          "score": 2100,
+          "summary": "Permanent price adjustment to 1/4 of original. V4 Pro now Flash-tier pricing with frontier capability.",
+          "why": "Frontier model pricing halved means deeper agent loops for the same budget."
         },
         {
           "title": "Anthropic x SpaceX: 220K GPU compute deal",
@@ -177,19 +182,19 @@
           "topics": ["Major labs", "Infra and retrieval"],
           "publishedAt": "2026-05-13T15:00:00Z",
           "score": 3200,
-          "summary": "Anthropic signed an agreement with SpaceX to access the entire compute capacity of Colossus 1 data center in Memphis - over 220,000 NVIDIA GPUs, 300+ MW. Doubled Claude Code rate limits, removed peak-hour throttling.",
-          "why": "One of the biggest infra moves in AI this year. Anthropic went from GPU-constrained to having one of the largest available compute clusters."
+          "summary": "Anthropic signed agreement for Colossus 1 data center access — 220,000+ NVIDIA GPUs, 300+ MW. Doubled Claude Code rate limits, removed peak-hour throttling.",
+          "why": "One of the biggest infra moves in AI this year."
         },
         {
-          "title": "Gemini Omni",
-          "source": "Google DeepMind",
-          "url": "https://deepmind.google/models/gemini-omni/",
-          "meta": "322 pts · 146 comments",
+          "title": "Karpathy joins Anthropic",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1thpuf1/karpathy_joins_anthropic/",
+          "meta": "6284 upvotes · 264 comments",
           "topics": ["Major labs"],
-          "publishedAt": "2026-05-19T17:46:19Z",
-          "score": 1182,
-          "summary": "",
-          "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
+          "publishedAt": "2026-05-19T15:10:01Z",
+          "score": 10582.4,
+          "summary": "Andrej Karpathy joins Anthropic's pre-training team.",
+          "why": "One of the highest-signal talent moves in AI this year."
         },
         {
           "title": "Google Antigravity 2.0: Full agentic development platform",
@@ -199,28 +204,8 @@
           "topics": ["Major labs", "Coding agents", "Interfaces"],
           "publishedAt": "2026-05-19T17:00:00Z",
           "score": 2500,
-          "summary": "Google upgraded Antigravity from coding assistant to full agent platform at I/O 2026 - new Go CLI, SDK for custom agents, desktop app, CodeMender for automated security patching, managed execution.",
-          "why": "Google's strategic pivot from model-as-product to platform-as-product. Antigravity 2.0 directly competes with Claude Managed Agents and OpenAI Agents SDK."
-        },
-        {
-          "title": "How Virgin Atlantic ships faster with Codex",
-          "url": "https://openai.com/index/virgin-atlantic",
-          "source": "OpenAI",
-          "meta": "May 22, 2026",
-          "topics": ["Tool use", "Major labs", "Coding agents"],
-          "score": 180,
-          "summary": "Case study of Codex deployment at Virgin Atlantic.",
-          "why": "Real enterprise case studies showing Codex-in-production are more actionable than benchmark scores."
-        },
-        {
-          "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
-          "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
-          "source": "OpenAI",
-          "meta": "May 22, 2026",
-          "topics": ["Major labs", "Coding agents"],
-          "score": 180,
-          "summary": "OpenAI named a Leader in enterprise coding agents by Gartner.",
-          "why": "Codex entering on-prem enterprise through Dell's channel signals coding agents graduating from dev-tool novelty to governed enterprise infrastructure."
+          "summary": "Antigravity 2.0: Go CLI, SDK, desktop app, CodeMender for automated security patching, managed execution.",
+          "why": "Google's strategic pivot from model-as-product to platform-as-product."
         }
       ]
     },
@@ -229,15 +214,37 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Show HN: Forge - Guardrails take an 8B model from 53% to 99% on agentic tasks",
+          "title": "DeepSeek Reasonix: cache-first coding agent, 99.82% hit rate",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48256953",
+          "meta": "601 pts · 349 comments · #1",
+          "topics": ["Coding agents", "Open weights", "Infra and retrieval"],
+          "publishedAt": "2026-05-25T14:30:00Z",
+          "score": 4200,
+          "summary": "MIT-licensed DeepSeek-native agent. 435M tokens/day session: $61 → $12 from prefix caching.",
+          "why": "Cache-first design as a first-class constraint cuts long-session costs by 5x. This is the most practical engineering insight of the month."
+        },
+        {
+          "title": "DeepSeek V4 Pro permanent price cut to 1/4 of original",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48237663",
+          "meta": "345 pts · 198 comments",
+          "topics": ["Open weights", "Major labs"],
+          "publishedAt": "2026-05-23T10:00:00Z",
+          "score": 2100,
+          "summary": "75% discount made permanent, not promotional.",
+          "why": "Permanent frontier pricing at Flash-tier means the cost ceiling for agent inference keeps dropping."
+        },
+        {
+          "title": "Show HN: Forge - Guardrails take 8B model from 53% to 99%",
           "source": "Hacker News",
           "url": "https://github.com/antoinezambelli/forge",
           "meta": "684 pts · 251 comments",
-          "topics": ["Tool use", "Multi-agent workflows", "Memory and state", "Evaluation"],
+          "topics": ["Tool use", "Multi-agent workflows", "Evaluation"],
           "publishedAt": "2026-05-19T12:23:07Z",
           "score": 2261,
-          "summary": "Open-source reliability layer for self-hosted LLM tool-calling. Takes an 8B model from ~53% to ~99% on multi-step agentic workflows without changing the model - just the system around it. Paper accepted to ACM CAIS '26.",
-          "why": "Arguably the most important agent-engineering signal this cycle: reliability engineering via guardrails can close the gap between small local models and frontier APIs."
+          "summary": "Open-source reliability layer for self-hosted LLM tool-calling. Takes 8B from ~53% to ~99% on multi-step agentic workflows. Accepted to ACM CAIS '26.",
+          "why": "Reliability engineering via guardrails can close the gap between small local models and frontier APIs."
         },
         {
           "title": "Testing distributed systems with AI agents",
@@ -247,19 +254,8 @@
           "topics": ["Infra and retrieval"],
           "publishedAt": "2026-05-20T14:40:42Z",
           "score": 314,
-          "summary": "",
-          "why": "Using agents to test distributed systems is a productive tangent: the same failure modes that plague agent workflows are well-studied in distributed systems."
-        },
-        {
-          "title": "Ask HN: Are advances in AI going to push Linux to a micro-kernel?",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=48196435",
-          "meta": "4 pts · 9 comments",
-          "topics": ["Coding agents"],
-          "publishedAt": "2026-05-19T17:33:10Z",
-          "score": 110,
-          "summary": "Discussion on whether AI coding agents finding bugs at scale will force Linux toward microkernel/unikernel approaches for security isolation.",
-          "why": "Torvalds threatening to crack down on AI-generated kernel patches is a real-world signal that AI coding agents are producing code at a scale that overwhelms human review."
+          "summary": "Using agents to test distributed systems.",
+          "why": "Agent failure modes are well-studied in distributed systems — productive cross-domain signal."
         }
       ]
     },
@@ -276,40 +272,40 @@
           "publishedAt": "2026-05-19T15:10:01Z",
           "score": 10582.4,
           "summary": "",
-          "why": "One of the highest-signal talent moves in AI this year."
+          "why": "Highest-signal talent move in AI this year."
         },
         {
-          "title": "OpenAI cofounder Andrej Karpathy just joined Anthropic and the talent war is officially over",
+          "title": "Coding Agent Tier List — production ranking",
           "source": "Reddit",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1thw3bu/openai_cofounder_andrej_karpathy_just_joined/",
-          "meta": "1571 upvotes · 92 comments",
-          "topics": ["Major labs"],
-          "publishedAt": "2026-05-19T18:40:02Z",
-          "score": 2757.6,
-          "summary": "",
-          "why": "Karpathy joining Anthropic's pre-training team aligns with making model training more agent-buildable."
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tmmdoi/coding_agent_tier_list_after_using_these_across/",
+          "meta": "847 upvotes · 203 comments",
+          "topics": ["Coding agents", "Evaluation"],
+          "publishedAt": "2026-05-25T16:30:00Z",
+          "score": 2100,
+          "summary": "Practical tier ranking of coding agents based on real production use: codebase understanding, multi-file refactors, PR quality, cost per task.",
+          "why": "Community-sourced production benchmarks are more actionable than lab benchmarks — and the gap between what's hot on HN vs what works in production is widening."
         },
         {
-          "title": "Re. what ever happened to Cohere's Command-A series of models?",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tizmar/re_what_ever_happened_to_coheres_commanda_series/",
-          "meta": "536 upvotes · 101 comments",
-          "topics": ["Open weights", "Interfaces"],
-          "publishedAt": "2026-05-20T21:25:50Z",
-          "score": 1059.6,
-          "summary": "Co-founder Nick Frosst addresses the community about Command A+ - 25B active / 218B total MoE under Apache 2.0.",
-          "why": "Major open-weight release designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs."
-        },
-        {
-          "title": "got my first rm -rf / today",
+          "title": "Got my first rm -rf / today",
           "source": "Reddit",
           "url": "https://www.reddit.com/r/LocalLLaMA/comments/1thosnt/got_my_first_rm_rf_today/",
           "meta": "351 upvotes · 141 comments",
-          "topics": ["Open weights", "Interfaces"],
+          "topics": ["Tool use", "Safety"],
           "publishedAt": "2026-05-19T14:33:13Z",
           "score": 903.6,
-          "summary": "Agent decided to test if harmful command block worked by issuing rm -rf /. Sandbox saved the day.",
-          "why": "Real-world reminder that agent safety tooling matters - sandboxing isn't optional."
+          "summary": "Agent tested if harmful command block worked by issuing rm -rf /. Sandbox saved the day.",
+          "why": "Real-world reminder that agent safety tooling isn't optional."
+        },
+        {
+          "title": "Cohere Command A+ 25B/218B MoE under Apache 2.0",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tizmar/re_what_ever_happened_to_coheres_commanda_series/",
+          "meta": "536 upvotes · 101 comments",
+          "topics": ["Open weights"],
+          "publishedAt": "2026-05-20T21:25:50Z",
+          "score": 1059.6,
+          "summary": "25B active / 218B total MoE.",
+          "why": "Deployable on as little as two H100s — meaningful open-weight agent option."
         }
       ]
     },
@@ -318,15 +314,26 @@
       "label": "Hugging Face",
       "items": [
         {
-          "title": "Software Forgets: Agent Traces Are the Memory",
+          "title": "HF: Software Forgets, Agent Traces Are the Memory",
           "source": "Hugging Face",
           "url": "https://huggingface.co/blog/huggingface/agent-traces-as-memory",
-          "meta": "Blog post - May 19, 2026",
-          "topics": ["Memory and state", "Evaluation", "Tool use"],
+          "meta": "Blog · May 19, 2026",
+          "topics": ["Memory and state", "Tool use"],
           "publishedAt": "2026-05-19T12:00:00Z",
           "score": 1200,
-          "summary": "HF argues agent traces (full history of observations, actions, reasoning steps) should be treated as first-class infrastructure - not debugging artifacts. Persistent traces enable replay, audit, and learning from past runs.",
-          "why": "Crystallizes a building concern: as agents run longer and more autonomously, the ability to inspect, replay, and learn from past runs determines whether a system is a tool or a black box."
+          "summary": "HF argues agent traces should be first-class infrastructure, not debugging artifacts.",
+          "why": "As agents run longer, trace inspectability determines whether systems are tools or black boxes."
+        },
+        {
+          "title": "OWASP Top 10 for Agentic AI 2026",
+          "source": "OWASP",
+          "url": "https://www.indusface.com/learning/owasp-top-10-agentic-ai/",
+          "meta": "May 26, 2026",
+          "topics": ["Safety", "Evaluation"],
+          "publishedAt": "2026-05-26T08:00:00Z",
+          "score": 900,
+          "summary": "OWASP published the first Top 10 security risks for agentic AI applications, covering prompt injection, excessive agency, tool access control, data leakage, and insecure output handling.",
+          "why": "As agent deployments move to production, security frameworks like OWASP become the compliance baseline. This is the agentic AI equivalent of the original OWASP Top 10 for web apps."
         }
       ]
     },
@@ -335,142 +342,148 @@
       "label": "GitHub",
       "items": [
         {
+          "title": "esengine/DeepSeek-Reasonix",
+          "source": "GitHub",
+          "url": "https://github.com/esengine/deepseek-reasonix",
+          "meta": "MIT · Trending · 99.82% cache hit",
+          "topics": ["Coding agents", "Open weights", "Infra and retrieval"],
+          "publishedAt": "2026-05-25T12:00:00Z",
+          "score": 4200,
+          "summary": "DeepSeek-native terminal coding agent built around prefix-cache stability. Cost 5x reduction in practice.",
+          "why": "Cache-first agent design is the most important cost-engineering insight for agentic AI this month."
+        },
+        {
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "104594 stars",
-          "topics": ["Tool use", "Open weights", "Major labs", "Coding agents"],
+          "meta": "~105K stars",
+          "topics": ["Tool use", "Major labs", "Coding agents"],
           "publishedAt": "2025-04-17T17:04:31Z",
           "score": 655420,
-          "summary": "Open-source AI agent bringing Gemini to your terminal.",
-          "why": "Gemini CLI transitioning to Antigravity CLI - strategic shift to full agent platform."
-        },
-        {
-          "title": "LearningCircuit/local-deep-research",
-          "source": "GitHub",
-          "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "7959 stars",
-          "topics": ["Tool use", "Evaluation", "Open weights"],
-          "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 49250,
-          "summary": "~95% on SimpleQA. Fully local deep research agent.",
-          "why": "Autonomous research workflows becoming deployable outside the cloud."
-        },
-        {
-          "title": "MinishLab/semble",
-          "source": "GitHub",
-          "url": "https://github.com/MinishLab/semble",
-          "meta": "4249 stars",
-          "topics": ["Tool use", "Evaluation", "Coding agents"],
-          "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 25950,
-          "summary": "Fast semantic code search for agents. Uses ~98% fewer tokens than grep+read.",
-          "why": "Semantic code search directly reduces cost and improves latency on every agent loop."
+          "summary": "Open-source Gemini CLI, transitioning to Antigravity CLI platform.",
+          "why": "Strategic shift from model-access tool to agent platform."
         },
         {
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "1808 stars",
+          "meta": "~1808 stars",
           "topics": ["Tool use", "Multi-agent workflows"],
           "publishedAt": "2026-02-16T16:59:06Z",
           "score": 11322,
-          "summary": "Self-hosted LLM tool-calling framework with guardrails.",
-          "why": "Strongest practical signal: better tooling around how models call, sequence, and recover from actions."
+          "summary": "Self-hosted guardrail framework, 8B→99% on agentic tasks.",
+          "why": "Strongest practical signal: better tooling around how models sequence and recover from actions."
+        },
+        {
+          "title": "MinishLab/semble",
+          "source": "GitHub",
+          "url": "https://github.com/MinishLab/semble",
+          "meta": "~4249 stars",
+          "topics": ["Tool use", "Coding agents"],
+          "publishedAt": "2026-04-06T14:56:45Z",
+          "score": 25950,
+          "summary": "Fast semantic code search for agents, ~98% fewer tokens than grep+read.",
+          "why": "Semantic search reduces cost and latency on every agent loop."
+        },
+        {
+          "title": "LearningCircuit/local-deep-research",
+          "source": "GitHub",
+          "url": "https://github.com/LearningCircuit/local-deep-research",
+          "meta": "~7959 stars",
+          "topics": ["Tool use", "Evaluation", "Open weights"],
+          "publishedAt": "2025-02-09T15:41:32Z",
+          "score": 49250,
+          "summary": "~95% on SimpleQA, fully local deep research agent.",
+          "why": "Autonomous research workflows deployable outside the cloud."
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Persistent agents",
-      "signalCount": 18,
-      "whyItMatters": "Both OpenAI (Codex Goal Mode/Locked Use) and Anthropic (Agent View/session persistence) shipped features that let agents outlast human sessions this week. The ability to run for hours or days separates demos from production.",
+      "topic": "Agent cost crash",
+      "signalCount": 22,
+      "whyItMatters": "Multiple signals this week point to the cost of running agents dropping faster than model capability is rising. Cache-first design (Reasonix: 5x cheaper), permanent price cuts (DeepSeek V4 Pro at 25% of original), and Forge guardrails making 8B models competitive with frontier — combined, these shift the economic equation for long-running agent loops.",
       "signals": [
-        "OpenAI: Codex Goal Mode GA + Locked Computer Use",
-        "Anthropic: Claude Code Agent View dashboard",
-        "HF Blog: Agent Traces Are the Memory"
+        "DeepSeek Reasonix: 99.82% cache hit, $61→$12 per day",
+        "DeepSeek V4 Pro: permanent 75% price cut",
+        "Forge: 8B with guardrails ≈ frontier without them",
+        "Qwen3.7-Max: 35-hour unattended runs"
       ]
     },
     {
-      "topic": "Tool use",
-      "signalCount": 50,
-      "whyItMatters": "Strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "topic": "Workforce replacement signals",
+      "signalCount": 12,
+      "whyItMatters": "ClickUp's 3,000 internal agents at 3:1 agent-to-employee ratio is the first board-level decision to replace human headcount with agents at a SaaS company. Not a demo, not a pilot — production deployment. This will be cited in every 'future of work' discussion going forward.",
       "signals": [
-        "Forge: Guardrails take 8B model from 53% to 99%",
-        "OpenAI Codex: Appshots for instant macOS context injection",
-        "Antigravity 2.0: CLI + SDK + managed execution"
+        "ClickUp: 22% layoff + 3,000 internal agents",
+        "Agents replicating human social dynamics in days (Nature)",
+        "Gartner: enterprises rushing agent adoption without governance"
       ]
     },
     {
-      "topic": "Coding agents",
-      "signalCount": 47,
-      "whyItMatters": "Comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "topic": "Managed agent platforms",
+      "signalCount": 28,
+      "whyItMatters": "Every major lab now ships a managed agent platform (Google Managed Agents API, Anthropic Claude Managed Agents, OpenAI Agents SDK). The 'one API call to deploy an agent' model is becoming the default — shifting the bottleneck from deployment infrastructure to agent quality and observability.",
       "signals": [
-        "HN: Linux microkernel AI question",
-        "Codex Goal Mode: multi-hour autonomous coding runs",
-        "Antigravity 2.0: full agent platform"
+        "Google: Managed Agents API tutorials and production code",
+        "Anthropic: dreaming, outcomes, multiagent (20-way parallel)",
+        "OpenAI: Agents SDK 0.14 with sandbox coding agents",
+        "Antigravity 2.0: desktop app + SDK + CLI"
       ]
     },
     {
-      "topic": "Major labs infra race",
-      "signalCount": 35,
-      "whyItMatters": "The infrastructure race is intensifying faster than the model capability race.",
+      "topic": "Agent security and governance",
+      "signalCount": 15,
+      "whyItMatters": "OWASP publishes Agentic AI Top 10. Gartner warns uniform governance will fail. DoD advisory on prompt injection. The security community is waking up to the fact that agentic systems introduce fundamentally new attack surfaces — tool misuse, excessive agency, credential theft via agent loops.",
       "signals": [
-        "Anthropic: SpaceX deal for 220K NVIDIA GPUs",
-        "Google: Antigravity 2.0 at I/O 2026",
-        "OpenAI: Codex Locked Computer Use"
+        "OWASP Top 10 for Agentic AI 2026",
+        "Gartner: uniform governance → enterprise agent failure",
+        "DoD: advisory on agentic AI prompt injection risks",
+        "rm -rf / anecdote: sandbox isn't optional"
       ]
     },
     {
-      "topic": "Open weights",
-      "signalCount": 34,
-      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "topic": "Open-weight agent stack",
+      "signalCount": 30,
+      "whyItMatters": "The combination of Qwen3.7-Max (proprietary but competitive), DeepSeek V4 Pro (permanently cheap), Forge guardrails (local models catching up), and Cohere Command A+ (two H100 deployable) means the open-weight agent stack is closing the gap to frontier for cost-sensitive workflows.",
       "signals": [
-        "Qwen3.7-Max agent-optimized model",
-        "Cohere Command A+ 25B/218B MoE under Apache 2.0",
-        "Forge guardrails shrink local-to-frontier gap to <1 point"
-      ]
-    },
-    {
-      "topic": "Interfaces",
-      "signalCount": 27,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
-      "signals": [
-        "OpenAI: Codex Appshots - double-cmd to screenshot any app",
-        "Anthropic: Claude Code Agent View dashboard",
-        "Google: Antigravity 2.0 desktop app"
+        "Qwen3.7-Max: 35-hour unsupervised workflows",
+        "DeepSeek Reasonix: cache-first design goes mainstream",
+        "Cohere Command A+: 25B/218B MoE under Apache 2.0",
+        "Forge: 8B + guardrails approaches frontier reliability"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Run a persistent agent overnight",
-      "why": "Codex Goal Mode and Locked Computer Use make this actually viable now. What breaks when an agent runs unsupervised for 8+ hours?",
-      "prompt": "Set up a Codex Goal Mode task (or Claude Code agent) that runs overnight on a real codebase. Log every stall, drift, and recovery at hour 3, hour 6, hour 8."
+      "title": "Benchmark cache-first agent economics",
+      "why": "DeepSeek Reasonix claims 5x cost reduction from prefix caching. Validate this on a real long-running task (8+ hour coding session) with cost tracking per step. Does the cache hit rate degrade over time as context shifts?",
+      "prompt": "Run a DeepSeek Reasonix session on a real codebase refactor for 4+ hours. Log cache hit rate, token cost, and effective $/hr at hour 1, 2, 3, 4. Compare against Claude Code and Codex on the same task."
     },
     {
-      "title": "Benchmark one local-first agent stack",
-      "why": "Forge guardrails + Qwen 3.6/3.7 is the most promising local stack right now. The claim that 8B model with guardrails beats frontier without them needs real-workflow validation.",
-      "prompt": "Compare a local Qwen+Forge stack against a frontier hosted model on tool accuracy, latency, and cost for one real workflow."
+      "title": "Build a 20-agent parallel workflow",
+      "why": "Anthropic's multiagent orchestration supports up to 20 parallel sub-agents. The scaling properties of parallel agent swarms are poorly understood — where does coordination overhead eat the parallelism gains?",
+      "prompt": "Design a task that decomposes into N parallel sub-tasks. Run with 1, 5, 10, 20 agents. Measure wall-clock time, total tokens, error rate, and output coherence at each N."
     },
     {
-      "title": "Instrument one agent with better traces",
-      "why": "The HF traces as memory framing is compelling. Trace formats across frameworks are still ad-hoc and incompatible.",
-      "prompt": "Log tool calls, retries, and summaries for one task across two different agent frameworks, then compare trace formats for completeness and replayability."
+      "title": "Deploy a Google Managed Agent",
+      "why": "The Managed Agents API is now in developer hands with production tutorials. The 'one call to deploy an agent' abstraction needs real-world testing — what breaks when you push it beyond a hello-world demo?",
+      "prompt": "Spin up a Google Managed Agent via the Gemini API that performs weekly dependency updates + PR creation on a real repo. Log every stall, capability gap, and error. How does it compare to a self-hosted agent stack?"
     },
     {
-      "title": "Test Agent-as-Customer flows",
-      "why": "Agents creating Cloudflare accounts and buying domains suggests the agent-as-economic-actor model is real.",
-      "prompt": "Design an API endpoint that could serve both human and agent customers. What changes for rate limiting, identity, payment, and error handling?"
+      "title": "Apply OWASP Agentic AI Top 10 to one agent",
+      "why": "The first security framework for agentic AI just dropped. Apply it to a real agent deployment and see which risks actually manifest vs which are theoretical.",
+      "prompt": "Run the OWASP Agentic AI Top 10 assessment against a production agent (or a realistic prototype). Score each risk, document actual breaches, and propose mitigations."
     }
   ],
   "method": [
     "Targeted Hacker News searches for high-signal agentic AI posts from the last 7 days",
-    "Reddit weekly top-post scan in LocalLLaMA and ClaudeAI filtered for practical agent-building signals",
-    "Hugging Face model search filtered toward fresh open-weight agent, deep-research, and Qwen-related releases",
+    "Reddit weekly top-post scan in LocalLLaMA, ClaudeAI, and AI_Agents filtered for practical agent-building signals",
+    "Hugging Face model search filtered toward fresh open-weight agent and deep-research releases",
     "Major-lab RSS checks plus official-domain matches surfaced through Hacker News",
-    "GitHub repo and release scans for fresh agent tooling, dashboards, browsers, workspaces, and coding-agent updates",
-    "Supplementary research: OpenAI changelog, Google I/O 2026 announcements, Anthropic developer blog, and industry analysis roundups for blind-spot coverage"
+    "GitHub repo and release scans for fresh agent tooling, dashboards, and coding-agent updates",
+    "OWASP, Gartner, and Nature direct reads for governance, security, and research blind-spot coverage",
+    "Supplementary research: OpenAI changelog, Google I/O 2026 follow-up analysis, Anthropic developer blog, TechCrunch enterprise reporting"
   ]
 }
