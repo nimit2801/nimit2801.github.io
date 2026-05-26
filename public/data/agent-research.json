@@ -1,15 +1,14 @@
 {
-  "generatedAt": "2026-05-26T04:02:50Z",
+  "generatedAt": "2026-05-26T15:51:55Z",
   "windowDays": 7,
   "summary": "This cycle says OpenAI model disproves 80-year-old discrete geometry conjecture, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 57,
+    "items": 56,
     "sources": {
-      "Anthropic": 1,
-      "GitHub": 44,
+      "GitHub": 45,
       "Google AI": 3,
       "Google DeepMind": 1,
-      "Hacker News": 3,
+      "Hacker News": 2,
       "OpenAI": 4,
       "Qwen": 1
     }
@@ -19,12 +18,12 @@
       "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
       "source": "OpenAI",
       "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "meta": "1427 pts · 1052 comments",
+      "meta": "1429 pts · 1052 comments",
       "topics": [
         "Major labs"
       ],
       "publishedAt": "2026-05-20T19:05:30Z",
-      "score": 6100,
+      "score": 6104,
       "summary": "https:&#x2F;&#x2F;x.com&#x2F;wtgowers&#x2F;status&#x2F;2057175727271800912 , https:&#x2F;&#x2F;xcancel.com&#x2F;wtgowers&#x2F;status&#x2F;2057175727271800912",
       "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
     },
@@ -59,7 +58,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "104601 stars · updated Sun, 24 May 2026 06:56:26 UTC",
+      "meta": "104606 stars · updated Tue, 26 May 2026 14:46:46 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -67,7 +66,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 655474,
+      "score": 655526,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -75,7 +74,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "7965 stars · updated Mon, 25 May 2026 23:21:47 UTC",
+      "meta": "7979 stars · updated Mon, 25 May 2026 23:21:47 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -83,7 +82,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 49290,
+      "score": 49374,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -97,12 +96,12 @@
           "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
           "source": "OpenAI",
           "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-          "meta": "1427 pts · 1052 comments",
+          "meta": "1429 pts · 1052 comments",
           "topics": [
             "Major labs"
           ],
           "publishedAt": "2026-05-20T19:05:30Z",
-          "score": 6100,
+          "score": 6104,
           "summary": "https:&#x2F;&#x2F;x.com&#x2F;wtgowers&#x2F;status&#x2F;2057175727271800912 , https:&#x2F;&#x2F;xcancel.com&#x2F;wtgowers&#x2F;status&#x2F;2057175727271800912",
           "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
         },
@@ -137,12 +136,12 @@
           "title": "Gemini Omni",
           "source": "Google DeepMind",
           "url": "https://deepmind.google/models/gemini-omni/",
-          "meta": "322 pts · 146 comments",
+          "meta": "323 pts · 146 comments",
           "topics": [
             "Major labs"
           ],
           "publishedAt": "2026-05-19T17:46:19Z",
-          "score": 1182,
+          "score": 1184,
           "summary": "",
           "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
         },
@@ -181,22 +180,6 @@
       "key": "hacker-news",
       "label": "Hacker News",
       "items": [
-        {
-          "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
-          "source": "Hacker News",
-          "url": "https://github.com/antoinezambelli/forge",
-          "meta": "685 pts · 251 comments",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows",
-            "Memory and state",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-05-19T12:23:07Z",
-          "score": 2263,
-          "summary": "Hi HN, I&#x27;m Antoine Zambelli, AI Director at Texas Instruments. I built Forge, an open-source reliability layer for self-hosted LLM tool-calling. What it does: - Adds domain-and-tool-agnostic guardrails (retry nudges, step enforcement, error recovery, VRAM-aware context management) to local models running on consumer hardware - Takes an 8B model from ~53% to ~99% on multi-step agentic workflows without changing the model - just the system around it - Ships with an eval harness and interactive dashboard so you can reproduce every number I wanted to run a handful of always-on agentic systems for my portfolio, didn&#x27;t want to pay cloud frontier costs, and immediately hit the compounding math problem on local models. 90% per-step accuracy sounds great, but with a 5-step workflow that&#x27;s a 40% failure rate. No existing framework seemed to address this mechanical reliability issue - they all seemed tailor-made for cloud frontier. Demo video: https:&#x2F;&#x2F;youtu.be&#x2F;MzRgJoJAXGc (side-by-side: same model, same task, with and without Forge guardrails) The paper (accepted to ACM CAIS &#x27;26, presenting May 26-29 in San Jose) covers the peer-reviewed findings across 97 model&#x2F;backend configurations, 18 scenarios, 50 runs each. Key numbers: - Ministral 8B with Forge: 99.3%. Claude Sonnet with Forge: 100%. The gap between a free local 8B model on a $600 GPU and a frontier API is less than 1 point. - The same 8B local model with Forge (99.3%) outperforms Claude Sonnet without guardrails (87.2%) - an 8B model with framework support beats the best result you can get through frontier API alone. - Error recovery scores 0% for every model tested - local and frontier - without the retry mechanism. Not a capability gap, an architectural absence. I&#x27;m currently using this for my home assistant running on Ministral 14B-Reasoning, and for my locally hosted agentic coding harness (8B managed to contribute to the codebase!). The guardrail stack has five layers, each independently toggleable. The two that carry the most weight (per ablation study with McNemar&#x27;s test): retry nudges (24-49 point drops when disabled) and error recovery (~10 point drops, significant for every model tested). Step enforcement is situational - only fires for models with weaker sequencing discipline. Rescue parsing and context compaction showed no significance in the eval but are retained for production workloads where they activate once in a while. One thing I really didn&#x27;t expect: the serving backend matters. Same Mistral-Nemo 12B weights produce 7% accuracy on llama-server with native function calling and 83% on Llamafile in prompt mode. A 75-point swing from infrastructure alone. I don&#x27;t think anyone&#x27;s published this because standard benchmarks don&#x27;t control for serving backend. Another surprise: there&#x27;s no distinction in current LLM tool-calling between \"the tool ran successfully and returned data\" and \"the tool ran successfully but found nothing.\" Both return a value, the orchestrator marks the step complete, and bad data cascades downstream. It&#x27;s the equivalent of HTTP having 200 but no 404. Forge adds this as a new exception class (ToolResolutionError) - the model sees the error and can retry instead of silently passing garbage forward. Biggest technical challenge was context compaction for memory-constrained hardware. Both Ollama and Llamafile silently fall back to CPU when the model exceeds VRAM - no warning, no error, just 10-100x slower inference. Forge queries nvidia-smi at startup and derives a token budget to prevent this. How to try it: - Clone the repo, run the eval harness on a model I haven&#x27;t tested. If you get interesting results I&#x27;ll add them to the dashboard. - Try the proxy server mode - point any OpenAI-compatible client at Forge and it handles guardrails transparently. It&#x27;s the newest model and I&#x27;d love more eyes on it. - Dogfooding led me to optimize model parameters in v0.6.0. The harder eval suite (26 scenarios) is designed to raise the ceiling so no one sits at 100%. Several that did on the original suite can&#x27;t sweep it - including Opus 4.6. Curious if anyone finds scenarios that expose gaps I haven&#x27;t thought of. Paper numbers based on pre v0.6.0 code. Background: prior ML publication in unsupervised learning (83 citations). This paper accepted to ACM CAIS &#x27;26 - presenting May 26-29. Repo: https:&#x2F;&#x2F;github.com&#x2F;antoinezambelli&#x2F;forge Paper: https:&#x2F;&#x2F;www.caisconf.org&#x2F;program&#x2F;2026&#x2F;demos&#x2F;forge-agentic-re... https:&#x2F;&#x2F;github.com&#x2F;antoinezambelli&#x2F;forge&#x2F;blob&#x2F;main&#x2F;docs&#x2F;forg... Dashboard: https:&#x2F;&#x2F;github.com&#x2F;antoinezambelli&#x2F;forge&#x2F;docs&#x2F;results&#x2F;dashbo...",
-          "why": "This is arguably the most important agent-engineering signal this cycle: reliability engineering via guardrails can close the gap between small local models and frontier APIs on structured agentic tasks."
-        },
         {
           "title": "Testing distributed systems with AI agents",
           "source": "Hacker News",
@@ -241,7 +224,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "104601 stars · updated Sun, 24 May 2026 06:56:26 UTC",
+          "meta": "104606 stars · updated Tue, 26 May 2026 14:46:46 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -249,7 +232,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 655474,
+          "score": 655526,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -257,7 +240,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "7965 stars · updated Mon, 25 May 2026 23:21:47 UTC",
+          "meta": "7979 stars · updated Mon, 25 May 2026 23:21:47 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -265,7 +248,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 49290,
+          "score": 49374,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -273,14 +256,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "4290 stars · updated Sun, 24 May 2026 18:30:30 UTC",
+          "meta": "4351 stars · updated Tue, 26 May 2026 15:50:13 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 26202,
+          "score": 26574,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -288,13 +271,13 @@
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "1817 stars · updated Mon, 25 May 2026 21:43:28 UTC",
+          "meta": "1837 stars · updated Tue, 26 May 2026 05:39:27 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows"
           ],
           "publishedAt": "2026-02-16T16:59:06Z",
-          "score": 11380,
+          "score": 11506,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -303,23 +286,23 @@
   ],
   "tangentRadar": [
     {
-      "topic": "Tool use",
-      "signalCount": 32,
-      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
-      "signals": [
-        "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
-        "Anthropic: New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels",
-        "OpenAI: How Virgin Atlantic ships faster with Codex"
-      ]
-    },
-    {
       "topic": "Coding agents",
-      "signalCount": 28,
+      "signalCount": 31,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Ask HN: Are advances in AI going to push Linux to a micro-kernel?",
         "OpenAI: How Virgin Atlantic ships faster with Codex",
         "OpenAI: OpenAI named a Leader in enterprise coding agents by Gartner"
+      ]
+    },
+    {
+      "topic": "Tool use",
+      "signalCount": 31,
+      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "signals": [
+        "OpenAI: How Virgin Atlantic ships faster with Codex",
+        "OpenAI: How Ramp engineers accelerate code review with Codex",
+        "GitHub: jianshuo/ccglass"
       ]
     },
     {
@@ -334,7 +317,7 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 20,
+      "signalCount": 17,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "GitHub: jianshuo/ccglass",
@@ -344,12 +327,12 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 13,
+      "signalCount": 15,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Qwen: Qwen3.7-Max: The Agent Frontier",
         "GitHub: jianshuo/ccglass",
-        "GitHub: veryyoldman/Genspark-AI"
+        "GitHub: study8677/awesome-architecture"
       ]
     },
     {
@@ -357,9 +340,9 @@
       "signalCount": 13,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "Hacker News: Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
         "GitHub: bryanyzhu/agentic-ai-system-course",
-        "GitHub: veryyoldman/Genspark-AI"
+        "GitHub: veryyoldman/Genspark-AI",
+        "GitHub: tejpalv/cc-wiki"
       ]
     }
   ],
