@@ -70,6 +70,14 @@ const HN_QUERY_SPECS = [
   { query: 'cohere command a+', boost: 130 },
   { query: 'torvalds ai linux kernel', boost: 120 },
   { query: 'ai kernel coding agents', boost: 75 },
+  { query: 'opus 4.8', boost: 200 },
+  { query: 'dynamic workflows', boost: 190 },
+  { query: 'cls agentic coding', boost: 140 },
+  { query: 'cls opus 4.8', boost: 190 },
+  { query: 'enterprise coding agents gartner', boost: 130 },
+  { query: 'self-improving agents', boost: 120 },
+  { query: 'cisco codex', boost: 170 },
+  { query: 'virgin atlantic codex', boost: 100 },
 ];
 
 const REDDIT_SPECS = [
@@ -393,6 +401,38 @@ const HAND_CURATED_WHY = [
     match: /torvalds.*ai.*linux|linus.*torvalds.*kernel.*ai|ai.*kernel.*coding|ai.*linux.*patch|pointless.*pull.*request.*ai/i,
     why: 'Linus Torvalds threatening to crack down on AI-generated kernel patches is a real-world signal that AI coding agents are now producing code at a scale that overwhelms human review — not a theoretical future, but today\'s bottleneck.',
   },
+  {
+    match: /opus 4\.8|claude opus 4\.8/i,
+    why: 'Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness.',
+  },
+  {
+    match: /dynamic workflow|dynamic workflo/i,
+    why: 'Dynamic Workflows is a genuinely new paradigm for agent orchestration — hundreds of parallel sub-agents coordinated by the frontier model itself. This signals that orchestration, not raw model quality, is becoming the competitive moat.',
+  },
+  {
+    match: /self-improving.*agent|self.*improving.*tax|self.*improving.*codex/i,
+    why: 'Self-improving agents that learn from their own production outputs without human retraining are the next frontier beyond RAG and fine-tuning. This pattern generalizes to any structured, repetitive workflow domain.',
+  },
+  {
+    match: /cisco.*codex|codex.*cisco|c.*deploys.*codex/i,
+    why: 'A Fortune 50 company saying 100% of new features are AI-written by Codex is the strongest enterprise agent adoption signal to date. Not a pilot — production at multi-repo, C/C++ scale with full compliance and governance.',
+  },
+  {
+    match: /virgin atlantic.*codex/i,
+    why: 'Industry-specific agent case studies are multiplying — airlines, retail, tax, and defense are all going production with agents beyond just tech companies.',
+  },
+  {
+    match: /gartner.*enterprise.*coding.*agent|enterprise.*coding.*agent.*gartner/i,
+    why: 'Gartner Magic Quadrant recognition for coding agents means formal analyst validation — enterprise procurement decisions will follow.',
+  },
+  {
+    match: /codex.*windows.*sandbox|windows.*sandbox.*codex/i,
+    why: 'Technical deep-dives on sandbox architecture are the infrastructure bottleneck content the agent-building community needs most. OpenAI treating containment as a first-class product feature is a strong signal.',
+  },
+  {
+    match: /coding.*agent.*social.*science|social.*science.*coding.*agent/i,
+    why: 'One of the first rigorous academic-adoption studies for coding agents. The 81% chatbot vs 20% agent gap reveals the trust and workflow barrier between AI-assisted and AI-autonomous work.',
+  },
 ];
 
 function githubTokenFromCli() {
@@ -633,6 +673,14 @@ function highlightScore(item) {
   if (haystack.includes('notion') && haystack.includes('agent')) bonus += 220;
   if (haystack.includes('jobbench') || haystack.includes('job-bench')) bonus += 180;
   if (haystack.includes('torvalds') && haystack.includes('linux')) bonus += 250;
+  if (haystack.includes('opus 4.8') || (haystack.includes('opus') && haystack.includes('4.8'))) bonus += 700;
+  if (haystack.includes('dynamic workflow') && (haystack.includes('opus') || haystack.includes('sub-agent') || haystack.includes('anthropic'))) bonus += 600;
+  if (haystack.includes('cisco') && (haystack.includes('codex') || haystack.includes('ai-written') || haystack.includes('enterprise engineering'))) bonus += 500;
+  if (haystack.includes('self-improving') && (haystack.includes('agent') || haystack.includes('tax') || haystack.includes('codex'))) bonus += 400;
+  if (haystack.includes('virgin atlantic') && haystack.includes('codex')) bonus += 300;
+  if (haystack.includes('gartner') && (haystack.includes('enterprise coding') || haystack.includes('coding agent') || haystack.includes('magic quadrant'))) bonus += 300;
+  if (haystack.includes('coding agent') && haystack.includes('social science')) bonus += 350;
+  if (haystack.includes('codex') && haystack.includes('windows sandbox')) bonus += 280;
   return (item.score ?? 0) + bonus;
 }
 
@@ -934,6 +982,12 @@ function buildSummary(highlights) {
   const hasLocalDeepResearch = titles.some((title) => title.includes('local deep research'));
   const hasCommandAPlus = titles.some((title) => title.includes('command a+') || title.includes('command a-plus') || (title.includes('cohere') && title.includes('command')));
   const hasTorvaldsAi = titles.some((title) => (title.includes('torvalds') || title.includes('linus')) && (title.includes('kernel') || title.includes('linux')) && (title.includes('ai') || title.includes('patch') || title.includes('coding')));
+  const hasOpus48 = titles.some((title) => title.includes('opus 4.8') || (title.includes('opus') && title.includes('4.8')));
+  const hasDynamicWorkflows = titles.some((title) => title.includes('dynamic workflow') && (title.includes('opus') || title.includes('sub-agent') || title.includes('anthropic')));
+  const hasCiscoCodex = titles.some((title) => title.includes('cisco') && title.includes('codex'));
+  const hasSelfImproving = titles.some((title) => title.includes('self-improving') && (title.includes('agent') || title.includes('tax')));
+  const hasSocialScience = titles.some((title) => title.includes('social science') && (title.includes('coding') || title.includes('agent')));
+  const hasCodexSandbox = titles.some((title) => title.includes('codex') && title.includes('windows'));
 
   const bits = [];
   if (hasForge) bits.push('guardrails on local models close the reliability gap with frontier APIs (Forge: 53%→99%)');
@@ -956,6 +1010,12 @@ function buildSummary(highlights) {
   if (hasLocalDeepResearch) bits.push('local deep research agents hit production quality on consumer hardware');
   if (hasCommandAPlus) bits.push('Cohere releases Command A+ — a 25B/218B open-weight MoE agentic model under Apache 2.0');
   if (hasTorvaldsAi) bits.push('Torvalds threatens crackdown on AI-generated kernel patches — coding agents producing code faster than human review can handle');
+  if (hasOpus48) bits.push('Anthropic Opus 4.8 drops with 69.2% SWE-Bench Pro and Dynamic Workflows for orchestrating hundreds of sub-agents');
+  if (hasDynamicWorkflows) bits.push('Dynamic Workflows enables hundreds of parallel sub-agents — agent orchestration becomes the competitive moat');
+  if (hasCiscoCodex) bits.push('Cisco deploys Codex across engineering — 100% of new features are now AI-written');
+  if (hasSelfImproving) bits.push('self-improving agents learn from their own production outputs without human retraining');
+  if (hasSocialScience) bits.push('Anthropic research finds only 20% of researchers use coding agents — huge adoption gap vs chatbots (81%)');
+  if (hasCodexSandbox) bits.push('OpenAI publishes Codex Windows sandbox technical deep-dive — containment as product feature');
 
   if (!bits.length) {
     return 'The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.';
