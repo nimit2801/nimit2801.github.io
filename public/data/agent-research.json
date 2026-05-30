@@ -1,22 +1,24 @@
 {
-  "generatedAt": "2026-05-29T00:00:00Z",
+  "generatedAt": "2026-05-31T00:00:00Z",
   "windowDays": 7,
-  "summary": "This cycle: Anthropic drops Opus 4.8 with 69.2% SWE-Bench Pro and 'Dynamic Workflows' for orchestrating hundreds of sub-agents — the biggest agent-infrastructure leap this week. Cisco deploys Codex across its engineering org and says 100% of new features are now AI-written: the most aggressive enterprise agent adoption signal yet. OpenAI ships self-improving tax agents with Codex and a Windows sandbox deep-dive. Anthropic publishes agent-adoption research in social sciences (only 20% of researchers use coding agents). Gemini Omni arrives as Google's multimodal world model. The deeper pattern: enterprise agent deployment is accelerating faster than academic adoption, and orchestration (parallel sub-agents, dynamic workflows) is becoming the competitive moat, not just model quality.",
+  "summary": "This cycle: Qwen 3.7-Max 'The Agent Frontier' drops — beating Opus 4.6 on SWE-Bench Pro (60.6%) and Terminal-Bench 2.0 (69.7, #1) at 1/6th the cost, the strongest challenge to the Anthropic/OpenAI duopoly since DeepSeek V4. Robinhood opens its platform to AI agents for stock trading and credit card purchases — first major consumer fintech to give agents financial autonomy. Anthropic drops Opus 4.8 with Dynamic Workflows for orchestrating hundreds of sub-agents. Cisco deploys Codex with 100% of new features AI-written. The deeper pattern: agent orchestration (Dynamic Workflows, MCP for financial agents) and agent-as-economic-actor (Robinhood, Stripe/Cloudflare) are the two structural shifts this week. Closed-weight agent models (Qwen 3.7-Max) are accelerating faster than open-weight, reversing a multi-year trend.",
   "sourceStats": {
-    "items": 72,
+    "items": 78,
     "sources": {
       "Anthropic": 3,
       "GitHub": 40,
       "Google AI": 2,
       "Hacker News": 8,
-      "OpenAI": 6,
-      "TechCrunch": 1,
+      "OpenAI": 5,
+      "TechCrunch": 2,
       "ZDNET": 1,
-      "Reddit": 4,
+      "Reddit": 5,
       "Hugging Face": 2,
       "Reuters": 1,
       "Axios": 1,
-      "MLQ.ai": 1
+      "MLQ.ai": 1,
+      "Qwen": 1,
+      "Fortune": 1
     }
   },
   "highlights": [
@@ -49,6 +51,36 @@
       "score": 8800,
       "summary": "Cisco integrates Codex across massive multi-repository, C/C++-heavy codebases with full enterprise security, compliance, and governance. Cisco SVP of AI Software & Platform says all new features are now AI-written via Codex. Codex handles defect remediation, code review, and AI Defense development.",
       "why": "This is the most aggressive enterprise agent adoption signal to date — a Fortune 50 company saying 100% of new features are AI-written. Not a pilot, not a demo. The agent-as-primary-developer model has its first production reference implementation at scale."
+    },
+    {
+      "title": "Qwen 3.7-Max 'The Agent Frontier' — 60.6% SWE-Bench Pro, 69.7 Terminal-Bench 2.0, 1M context at $2.50/M",
+      "source": "Qwen",
+      "url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+      "meta": "May 19, 2026 · 1M context · closed-weight · $2.50/$7.50 per M tokens",
+      "topics": [
+        "Major labs",
+        "Coding agents",
+        "Open weights"
+      ],
+      "publishedAt": "2026-05-19T08:00:00Z",
+      "score": 8500,
+      "summary": "Alibaba's Qwen 3.7-Max is an agent-first flagship model scoring 60.6% on SWE-Bench Pro (vs Opus 4.6's 57.3%), 92.4 on GPQA Diamond (vs Opus 4.6's 91.3), and 69.7 on Terminal-Bench 2.0 (top score). 1M-token context at $2.50/$7.50 per M tokens. Strong on MCP-Mark (60.8, MCP server orchestration), SciCode (53.5), and long-context retrieval (MRCR-v2). Lowest hallucination rate among frontier models at 22.9% — partly due to higher abstention (48% attempt rate). Open-weight Qwen 3.6 variants remain available.",
+      "why": "Qwen 3.7-Max is the strongest challenge to the Anthropic/OpenAI duopoly since DeepSeek V4 — matching or beating Opus 4.6 on most agent benchmarks at roughly one-sixth the cost. The 'Agent Frontier' branding signals Alibaba is building a vertically integrated agent platform. Also notable: the closed-weight pivot at the top tier reverses Alibaba's open-weight positioning."
+    },
+    {
+      "title": "Robinhood opens platform to AI agents — stock trading and credit card purchases via MCP",
+      "source": "TechCrunch",
+      "url": "https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/",
+      "meta": "May 27, 2026 · Agentic Credit Card with 3% cash back · MCP-native",
+      "topics": [
+        "Major labs",
+        "Tool use",
+        "Multi-agent workflows"
+      ],
+      "publishedAt": "2026-05-27T13:00:00Z",
+      "score": 7500,
+      "summary": "Robinhood launches Agentic Trading and Agentic Credit Card, letting users connect third-party AI agents via MCP to trade stocks and make purchases. Gold Card customers can link agents to dedicated virtual cards with spending limits. Built on Robinhood's MCP servers. Crypto and options support planned.",
+      "why": "First major consumer fintech to give AI agents direct financial autonomy — this marks the transition of agents from productivity tools to economic actors in the consumer market. Built on MCP, signaling that MCP is becoming the standard protocol for agent-to-financial-infrastructure connectivity."
     },
     {
       "title": "Building self-improving tax agents with Codex",
@@ -167,6 +199,28 @@
           "why": "The agent-as-primary-developer model has its first production reference at scale."
         },
         {
+          "title": "Qwen 3.7-Max 'The Agent Frontier' — 60.6% SWE-Bench Pro, 69.7 Terminal-Bench 2.0",
+          "source": "Qwen",
+          "url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+          "meta": "May 19, 2026 · 1M context · $2.50/M input",
+          "topics": ["Major labs", "Coding agents", "Open weights"],
+          "publishedAt": "2026-05-19T08:00:00Z",
+          "score": 8500,
+          "summary": "Agent-first model: 60.6% SWE-Bench Pro (beats Opus 4.6's 57.3%), 69.7 Terminal-Bench 2.0 (#1), 92.4 GPQA Diamond. Closed-weight. 1M context at $2.50/$7.50 per M tokens.",
+          "why": "Strongest challenge to Anthropic/OpenAI duopoly since DeepSeek V4 — matching frontier agent benchmarks at 1/6th the cost. The closed-weight pivot at the top tier is a strategic shift worth tracking."
+        },
+        {
+          "title": "Robinhood opens platform to AI agents — trading + credit card via MCP",
+          "source": "TechCrunch",
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/",
+          "meta": "May 27, 2026 · MCP-native",
+          "topics": ["Major labs", "Tool use", "Multi-agent workflows"],
+          "publishedAt": "2026-05-27T13:00:00Z",
+          "score": 7500,
+          "summary": "First major consumer fintech to let AI agents trade stocks and make purchases. Built on MCP servers. Agentic Credit Card with 3% cash back.",
+          "why": "Agents are becoming economic actors in the consumer market, not just enterprise productivity tools."
+        },
+        {
           "title": "Building self-improving tax agents with Codex",
           "source": "OpenAI",
           "url": "https://openai.com/index/building-self-improving-tax-agents-with-codex",
@@ -255,6 +309,17 @@
       "key": "reddit",
       "label": "Reddit",
       "items": [
+        {
+          "title": "I tracked 47 new agent products launched in 2026 — 5 observations",
+          "source": "Reddit",
+          "url": "https://www.reddit.com/r/AI_Agents/comments/1tn12df/i_tracked_47_new_agent_products_launched_in_2026/",
+          "meta": "May 26, 2026 · ecosystem mapping",
+          "topics": ["Evaluation", "Tool use"],
+          "publishedAt": "2026-05-26T12:00:00Z",
+          "score": 2200,
+          "summary": "Comprehensive thread tracking 47 new agent products from 2026. Key observations: (1) Recursive Superintelligence exits stealth at $650M valuation, (2) agent products are consolidating around MCP as the integration standard, (3) consumer agents are emerging alongside enterprise ones.",
+          "why": "Ecosystem-level mapping of the agent product landscape reveals where the market is actually forming, beyond individual product announcements."
+        },
         {
           "title": "What the AI-Agent Crowd on Reddit Is Arguing About in Early May 2026",
           "source": "Reddit",
@@ -402,9 +467,31 @@
       ]
     },
     {
+      "topic": "Closed-weight agent models accelerating faster than open-weight",
+      "signalCount": 14,
+      "whyItMatters": "Qwen 3.7-Max (closed-weight at top tier) and GPT-5.5 (fully closed) are setting the pace on agent benchmarks, while open-weight models (DeepSeek V4, Qwen 3.6) trail by 5-10 points. This reverses the narrative that open models are catching up — at the agentic frontier, closed-weight is pulling ahead again.",
+      "signals": [
+        "Qwen 3.7-Max closed-weight at top tier, only 3.6 variants remain open",
+        "GPT-5.5 leads Terminal-Bench 2.0 at 82.7%",
+        "Opus 4.8 leads SWE-Bench Pro at 69.2% — both closed-weight",
+        "DeepSeek V4 Flash (open, MIT) trails on complex agent benchmarks"
+      ]
+    },
+    {
+      "topic": "Agents as economic actors",
+      "signalCount": 16,
+      "whyItMatters": "Robinhood giving AI agents stock trading and credit card access, combined with Cloudflare+Stripe letting agents create accounts and buy domains, signals a structural shift: agents are transitioning from tools to independent economic actors. MCP is emerging as the standard protocol for agent-to-financial-infrastructure connectivity.",
+      "signals": [
+        "Robinhood Agentic Trading + Agentic Credit Card via MCP",
+        "Cloudflare + Stripe: agents create accounts, buy domains, deploy",
+        "Stripe Sessions 2026: 288 new products for agent economic infrastructure",
+        "MCP adoption: 97M monthly SDK downloads, 5,800+ servers"
+      ]
+    },
+    {
       "topic": "Open-weight agent stack strengthening",
       "signalCount": 20,
-      "whyItMatters": "DeepSeek Reasonix v0.53.0, Qwen3-Coder-Next, Forge guardrails, and local-deep-research all advancing simultaneously. The open-weight stack is closing the gap to frontier for cost-sensitive and privacy-sensitive workflows.",
+      "whyItMatters": "DeepSeek Reasonix v0.53.0, Qwen3-Coder-Next, Forge guardrails, and local-deep-research all advancing simultaneously. The open-weight stack is closing the gap to frontier for cost-sensitive and privacy-sensitive workflows, even as the closed-weight frontier accelerates.",
       "signals": [
         "DeepSeek Reasonix v0.53.0 — active development continues",
         "Qwen3-Coder-Next — open-weight coding agent model",
@@ -425,18 +512,24 @@
       "prompt": "Take Cisco's Codex deployment case study and map: what tasks are still human-driven, what's the review pipeline, and where does the '100% AI-written' claim break down under scrutiny."
     },
     {
-      "title": "Replicate self-improving tax agent pattern",
-      "why": "OpenAI's self-improving agent case study generalizes beyond tax. Implement the pattern (agent reviews own outputs, improves on next iteration) for a different domain.",
-      "prompt": "Build a self-improving agent loop for a structured domain (code review, document generation, data cleaning). Log improvement rate per iteration and measure where the self-improvement ceiling hits."
+      "title": "Evaluate Qwen 3.7-Max on agentic tasks vs Opus 4.7",
+      "why": "Qwen 3.7-Max claims competitive agent benchmarks at 1/6th the cost of Opus 4.7. Independent validation on real-world agentic coding tasks is needed — especially given the 48% attempt rate caveat.",
+      "prompt": "Design 10 real-world agentic coding tasks (multi-file edits, test writing, refactoring, terminal workflows). Run each with Qwen 3.7-Max and Opus 4.7. Measure completion rate, quality, token efficiency, and wall-clock time."
+    },
+    {
+      "title": "Build a Robinhood agentic trading experiment",
+      "why": "Robinhood's MCP-native agentic trading and credit card launch is the first consumer financial agent product. Understanding the UX, security model, and limitations is critical for anyone building agent-to-finance interfaces.",
+      "prompt": "Create an agent that uses Robinhood's MCP servers to execute a simple trading strategy and monitor purchases. Document the setup, permission model, error modes, and real-world reliability."
     }
   ],
   "method": [
-    "Anthropic/OpenAI/Google official blog and newsroom scans for May 27-29, 2026",
-    "TechCrunch, Axios, Reuters, ZDNET coverage of Opus 4.8 release",
-    "Hacker News top stories filtered for agentic AI signals",
+    "Anthropic/OpenAI/Google/Qwen official blog and newsroom scans for May 19-30, 2026",
+    "TechCrunch, Axios, Reuters, Fortune coverage of Opus 4.8, Robinhood agentic trading, Qwen 3.7-Max",
+    "Reddit r/AI_Agents and r/ClaudeAI for community signals and ecosystem mapping",
     "GitHub repo scans for fresh agent tooling, coding-agent updates",
     "Hugging Face model search for open-weight agent releases",
-    "Reddit AI_Agents and LocalLLaMA community discussion trends",
+    "Hacker News top stories filtered for agentic AI signals",
+    "MCP adoption statistics and ecosystem tracking",
     "Gartner Magic Quadrant and enterprise adoption signals"
   ]
 }
