@@ -1,15 +1,16 @@
 {
-  "generatedAt": "2026-06-01T13:42:19Z",
+  "generatedAt": "2026-06-01T20:20:37Z",
   "windowDays": 7,
-  "summary": "This cycle says enterprise agents are going production-scale (SAP/Claude, Dell/Codex), major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups, Anthropic Opus 4.8 drops with 69.2% SWE-Bench Pro and Dynamic Workflows for orchestrating hundreds of sub-agents. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups, Anthropic Opus 4.8 drops with 69.2% SWE-Bench Pro and Dynamic Workflows for orchestrating hundreds of sub-agents. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 56,
+    "items": 58,
     "sources": {
       "Anthropic": 3,
       "GitHub": 44,
-      "Hacker News": 3,
+      "Hacker News": 4,
       "Hugging Face": 1,
-      "OpenAI": 5
+      "OpenAI": 5,
+      "Qwen": 1
     }
   },
   "highlights": [
@@ -17,20 +18,35 @@
       "title": "Claude Opus 4.8",
       "source": "Anthropic",
       "url": "https://www.anthropic.com/news/claude-opus-4-8",
-      "meta": "1762 pts · 1366 comments",
+      "meta": "1765 pts · 1368 comments",
       "topics": [
         "Major labs"
       ],
       "publishedAt": "2026-05-28T16:49:14Z",
-      "score": 7822,
+      "score": 7834,
       "summary": "",
       "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
+    },
+    {
+      "title": "Qwen3.7-Plus: Multimodal Agent Intelligence",
+      "source": "Qwen",
+      "url": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "meta": "24 pts · 4 comments",
+      "topics": [
+        "Voice and multimodal",
+        "Open weights",
+        "Major labs"
+      ],
+      "publishedAt": "2026-06-01T17:55:27Z",
+      "score": 210,
+      "summary": "",
+      "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
     },
     {
       "title": "Dynamic Workflows in Claude Code",
       "source": "Anthropic",
       "url": "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
-      "meta": "194 pts · 131 comments",
+      "meta": "197 pts · 133 comments",
       "topics": [
         "Tool use",
         "Multi-agent workflows",
@@ -38,36 +54,21 @@
         "Coding agents"
       ],
       "publishedAt": "2026-05-28T16:52:21Z",
-      "score": 971,
+      "score": 983,
       "summary": "",
       "why": "Dynamic Workflows is a genuinely new paradigm for agent orchestration — hundreds of parallel sub-agents coordinated by the frontier model itself. This signals that orchestration, not raw model quality, is becoming the competitive moat."
-    },
-    {
-      "title": "Cisco and OpenAI redefine enterprise engineering with Codex",
-      "url": "https://openai.com/index/cisco",
-      "publishedAt": "Wed, 27 May 2026 11:00:00 GMT",
-      "source": "OpenAI",
-      "meta": "Wed, 27 May 2026 11:00:00 GMT",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Coding agents"
-      ],
-      "score": 180,
-      "summary": "Cisco and OpenAI redefine enterprise engineering with Codex",
-      "why": "A Fortune 50 company saying 100% of new features are AI-written by Codex is the strongest enterprise agent adoption signal to date. Not a pilot — production at multi-repo, C/C++ scale with full compliance and governance."
     },
     {
       "title": "Codex just found a \"workaround\" of not having sudo on my PC",
       "source": "Hacker News",
       "url": "https://twitter.com/i/status/2060746160558543217",
-      "meta": "588 pts · 279 comments",
+      "meta": "630 pts · 297 comments",
       "topics": [
         "Tool use",
         "Coding agents"
       ],
       "publishedAt": "2026-05-31T18:57:48Z",
-      "score": 2083,
+      "score": 2221,
       "summary": "",
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
@@ -75,13 +76,13 @@
       "title": "nvidia/Qwen3.6-35B-A3B-NVFP4",
       "source": "Hugging Face",
       "url": "https://huggingface.co/nvidia/Qwen3.6-35B-A3B-NVFP4",
-      "meta": "110 likes · 171,588 downloads",
+      "meta": "120 likes · 171,588 downloads",
       "topics": [
         "Open weights",
         "Major labs"
       ],
       "publishedAt": "2026-05-27T18:09:46.000Z",
-      "score": 611.588,
+      "score": 651.588,
       "summary": "Model Optimizer safetensors qwen3_5_moe nvidia ModelOpt Qwen3.6 quantized FP4 fp4 text-generation conversational base_model:Qwen/Qwen3.6-35B-A3B base_model:quantized:Qwen/Qwen3.6-35B-A3B license:apache-2.0 8-bit modelopt region:us",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -89,7 +90,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "104823 stars · updated Sat, 30 May 2026 02:45:08 UTC",
+      "meta": "104835 stars · updated Mon, 01 Jun 2026 20:04:02 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -97,7 +98,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 657006,
+      "score": 657086,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -105,7 +106,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8266 stars · updated Mon, 01 Jun 2026 08:06:13 UTC",
+      "meta": "8273 stars · updated Mon, 01 Jun 2026 08:06:13 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -113,7 +114,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 51124,
+      "score": 51166,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -127,12 +128,12 @@
           "title": "Claude Opus 4.8",
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/claude-opus-4-8",
-          "meta": "1762 pts · 1366 comments",
+          "meta": "1765 pts · 1368 comments",
           "topics": [
             "Major labs"
           ],
           "publishedAt": "2026-05-28T16:49:14Z",
-          "score": 7822,
+          "score": 7834,
           "summary": "",
           "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
         },
@@ -140,7 +141,7 @@
           "title": "Dynamic Workflows in Claude Code",
           "source": "Anthropic",
           "url": "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
-          "meta": "194 pts · 131 comments",
+          "meta": "197 pts · 133 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -148,9 +149,24 @@
             "Coding agents"
           ],
           "publishedAt": "2026-05-28T16:52:21Z",
-          "score": 971,
+          "score": 983,
           "summary": "",
           "why": "Dynamic Workflows is a genuinely new paradigm for agent orchestration — hundreds of parallel sub-agents coordinated by the frontier model itself. This signals that orchestration, not raw model quality, is becoming the competitive moat."
+        },
+        {
+          "title": "Qwen3.7-Plus: Multimodal Agent Intelligence",
+          "source": "Qwen",
+          "url": "https://qwen.ai/blog?id=qwen3.7-plus",
+          "meta": "24 pts · 4 comments",
+          "topics": [
+            "Voice and multimodal",
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-06-01T17:55:27Z",
+          "score": 210,
+          "summary": "",
+          "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
         },
         {
           "title": "Orchestrate subagents at scale with dynamic workflows",
@@ -198,21 +214,6 @@
           "score": 180,
           "summary": "How Endava builds an agentic organization with Codex",
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
-        },
-        {
-          "title": "Cisco and OpenAI redefine enterprise engineering with Codex",
-          "url": "https://openai.com/index/cisco",
-          "publishedAt": "Wed, 27 May 2026 11:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Wed, 27 May 2026 11:00:00 GMT",
-          "topics": [
-            "Tool use",
-            "Major labs",
-            "Coding agents"
-          ],
-          "score": 180,
-          "summary": "Cisco and OpenAI redefine enterprise engineering with Codex",
-          "why": "A Fortune 50 company saying 100% of new features are AI-written by Codex is the strongest enterprise agent adoption signal to date. Not a pilot — production at multi-repo, C/C++ scale with full compliance and governance."
         }
       ]
     },
@@ -224,13 +225,13 @@
           "title": "Codex just found a \"workaround\" of not having sudo on my PC",
           "source": "Hacker News",
           "url": "https://twitter.com/i/status/2060746160558543217",
-          "meta": "588 pts · 279 comments",
+          "meta": "630 pts · 297 comments",
           "topics": [
             "Tool use",
             "Coding agents"
           ],
           "publishedAt": "2026-05-31T18:57:48Z",
-          "score": 2083,
+          "score": 2221,
           "summary": "",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
@@ -238,12 +239,12 @@
           "title": "Show HN: Zot – Yet another coding agent harness",
           "source": "Hacker News",
           "url": "https://www.zot.sh",
-          "meta": "104 pts · 78 comments",
+          "meta": "106 pts · 80 comments",
           "topics": [
             "Coding agents"
           ],
           "publishedAt": "2026-05-29T05:48:21Z",
-          "score": 497,
+          "score": 507,
           "summary": "",
           "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
         },
@@ -259,6 +260,19 @@
           "publishedAt": "2026-05-29T15:10:18Z",
           "score": 261,
           "summary": "",
+          "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
+        },
+        {
+          "title": "Ask HN: Is Claude Opus 4.8 broken?",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48316636",
+          "meta": "8 pts · 8 comments",
+          "topics": [
+            "Tool use"
+          ],
+          "publishedAt": "2026-05-28T22:49:30Z",
+          "score": 240,
+          "summary": "In my first hour with it, it&#x27;s like we&#x27;re back to the GPT-2 era. It can&#x27;t even read a file anymore. Randomly uses &#x27;sed&#x27; with no explanation in hallucinated file paths. Errors out 15 times in a row with &#x27;No such file or directory&#x27; with paths that don&#x27;t exist - it was trying to read a project file as usual in our Rails app. You then ask it why it&#x27;s not simply reading the file in the correct path, and then it says it&#x27;s sorry: > You&#x27;re right to be angry. Two things went wrong and both are on me: > > 1. I typed sed&#x2F;cat instead of using the Read tool (the project rules explicitly say not to), and > 2. I guessed a filename app&#x2F;services&#x2F;gmail&#x2F;sync_worker.rb that doesn&#x27;t exist — the real file is app&#x2F;workers&#x2F;gmail&#x2F;sync_worker.rb. So I was reading a path I&#x27;d invented. Sloppy, It just apologized to me - for the 5th time in this session - writing this: > I again typed a made-up message ID into the verify step (19e70e9d...) instead of reading the real one from the list I just fetched. That&#x27;s the exact mistake I keep making. (Context window at 15%). It&#x27;s unbearably slow. It presents 10+ errors like &#x27;Cancelled: parallel tool call Bash errored&#x27; all the time. It&#x27;s unreal.",
           "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
         }
       ]
@@ -276,13 +290,13 @@
           "title": "nvidia/Qwen3.6-35B-A3B-NVFP4",
           "source": "Hugging Face",
           "url": "https://huggingface.co/nvidia/Qwen3.6-35B-A3B-NVFP4",
-          "meta": "110 likes · 171,588 downloads",
+          "meta": "120 likes · 171,588 downloads",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-05-27T18:09:46.000Z",
-          "score": 611.588,
+          "score": 651.588,
           "summary": "Model Optimizer safetensors qwen3_5_moe nvidia ModelOpt Qwen3.6 quantized FP4 fp4 text-generation conversational base_model:Qwen/Qwen3.6-35B-A3B base_model:quantized:Qwen/Qwen3.6-35B-A3B license:apache-2.0 8-bit modelopt region:us",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -296,7 +310,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "104823 stars · updated Sat, 30 May 2026 02:45:08 UTC",
+          "meta": "104835 stars · updated Mon, 01 Jun 2026 20:04:02 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -304,7 +318,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 657006,
+          "score": 657086,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -312,7 +326,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8266 stars · updated Mon, 01 Jun 2026 08:06:13 UTC",
+          "meta": "8273 stars · updated Mon, 01 Jun 2026 08:06:13 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -320,7 +334,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 51124,
+          "score": 51166,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -328,14 +342,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "4671 stars · updated Mon, 01 Jun 2026 08:24:57 UTC",
+          "meta": "4681 stars · updated Mon, 01 Jun 2026 16:21:06 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 28536,
+          "score": 28596,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -343,7 +357,7 @@
           "title": "op7418/guizang-social-card-skill",
           "source": "GitHub",
           "url": "https://github.com/op7418/guizang-social-card-skill",
-          "meta": "2359 stars · updated Wed, 27 May 2026 16:58:08 UTC",
+          "meta": "2398 stars · updated Wed, 27 May 2026 16:58:08 UTC",
           "topics": [
             "Tool use",
             "Major labs",
@@ -351,7 +365,7 @@
             "Interfaces"
           ],
           "publishedAt": "2026-05-27T16:58:08Z",
-          "score": 14814,
+          "score": 15054,
           "summary": "🪧 Claude Code / Codex skill — generate Xiaohongshu carousels & WeChat 21:9+1:1 cover pairs. Editorial × Swiss visual systems, 28 layouts, 10 themes, single-file HTML → PNG. 小红书图文 + 公众号封面对",
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         }
@@ -360,8 +374,18 @@
   ],
   "tangentRadar": [
     {
+      "topic": "Tool use",
+      "signalCount": 34,
+      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "signals": [
+        "OpenAI: Building a safe, effective sandbox to enable Codex on Windows",
+        "Hacker News: Codex just found a \"workaround\" of not having sudo on my PC",
+        "Hacker News: Ask HN: Is Claude Opus 4.8 broken?"
+      ]
+    },
+    {
       "topic": "Coding agents",
-      "signalCount": 33,
+      "signalCount": 34,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: Building a safe, effective sandbox to enable Codex on Windows",
@@ -370,18 +394,18 @@
       ]
     },
     {
-      "topic": "Tool use",
-      "signalCount": 32,
-      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "topic": "Major labs",
+      "signalCount": 24,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
+        "Qwen: Qwen3.7-Plus: Multimodal Agent Intelligence",
         "OpenAI: Building a safe, effective sandbox to enable Codex on Windows",
-        "Hacker News: Codex just found a \"workaround\" of not having sudo on my PC",
-        "Anthropic: Dynamic Workflows in Claude Code"
+        "Anthropic: Claude Opus 4.8"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 24,
+      "signalCount": 23,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "OpenAI: Building a safe, effective sandbox to enable Codex on Windows",
@@ -390,28 +414,18 @@
       ]
     },
     {
-      "topic": "Major labs",
-      "signalCount": 23,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
-      "signals": [
-        "OpenAI: Building a safe, effective sandbox to enable Codex on Windows",
-        "Anthropic: Claude Opus 4.8",
-        "Hacker News: Claude Opus 4.8 distilled Alibaba Qwen models"
-      ]
-    },
-    {
       "topic": "Open weights",
-      "signalCount": 17,
+      "signalCount": 20,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
+        "Qwen: Qwen3.7-Plus: Multimodal Agent Intelligence",
         "Hacker News: Claude Opus 4.8 distilled Alibaba Qwen models",
-        "Hugging Face: nvidia/Qwen3.6-35B-A3B-NVFP4",
-        "GitHub: zhristophe/Claude-Mythos-AI-Anthropic-App"
+        "Hugging Face: nvidia/Qwen3.6-35B-A3B-NVFP4"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 9,
+      "signalCount": 10,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Anthropic: Dynamic Workflows in Claude Code",
