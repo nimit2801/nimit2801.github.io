@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-05T04:13:51Z",
+  "generatedAt": "2026-06-05T11:32:11Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 61,
+    "items": 58,
     "sources": {
       "Anthropic": 1,
-      "GitHub": 47,
-      "Hacker News": 7,
+      "GitHub": 45,
+      "Hacker News": 6,
       "OpenAI": 5,
       "Qwen": 1
     }
@@ -64,13 +64,13 @@
       "title": "Codex just found a \"workaround\" of not having sudo on my PC",
       "source": "Hacker News",
       "url": "https://twitter.com/i/status/2060746160558543217",
-      "meta": "658 pts · 309 comments",
+      "meta": "660 pts · 310 comments",
       "topics": [
         "Tool use",
         "Coding agents"
       ],
       "publishedAt": "2026-05-31T18:57:48Z",
-      "score": 2313,
+      "score": 2320,
       "summary": "",
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
@@ -78,7 +78,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "104954 stars · updated Fri, 05 Jun 2026 03:38:51 UTC",
+      "meta": "104965 stars · updated Fri, 05 Jun 2026 03:38:51 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -86,7 +86,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 657840,
+      "score": 657912,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -94,7 +94,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8362 stars · updated Fri, 05 Jun 2026 01:30:38 UTC",
+      "meta": "8369 stars · updated Fri, 05 Jun 2026 07:30:37 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -102,7 +102,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 51732,
+      "score": 51774,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -212,37 +212,24 @@
           "title": "Codex just found a \"workaround\" of not having sudo on my PC",
           "source": "Hacker News",
           "url": "https://twitter.com/i/status/2060746160558543217",
-          "meta": "658 pts · 309 comments",
+          "meta": "660 pts · 310 comments",
           "topics": [
             "Tool use",
             "Coding agents"
           ],
           "publishedAt": "2026-05-31T18:57:48Z",
-          "score": 2313,
+          "score": 2320,
           "summary": "",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
-        {
-          "title": "Show HN: Zot – Yet another coding agent harness",
-          "source": "Hacker News",
-          "url": "https://www.zot.sh",
-          "meta": "106 pts · 82 comments",
-          "topics": [
-            "Coding agents"
-          ],
-          "publishedAt": "2026-05-29T05:48:21Z",
-          "score": 513,
-          "summary": "",
-          "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
         },
         {
           "title": "Self-hosted dev sandboxes with preview URLs (Docker, Go, no K8s)",
           "source": "Hacker News",
           "url": "https://github.com/tastyeffectco/sandboxes",
-          "meta": "106 pts · 33 comments",
+          "meta": "109 pts · 34 comments",
           "topics": [],
           "publishedAt": "2026-06-03T19:43:37Z",
-          "score": 406,
+          "score": 415,
           "summary": "",
           "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
         },
@@ -250,12 +237,12 @@
           "title": "Show HN: Formally verified polygon intersection – Opus 4.8 oneshots, prev failed",
           "source": "Hacker News",
           "url": "https://github.com/schildep/verified-polygon-intersection",
-          "meta": "39 pts · 6 comments",
+          "meta": "45 pts · 12 comments",
           "topics": [
             "Interfaces"
           ],
           "publishedAt": "2026-06-04T22:06:18Z",
-          "score": 296,
+          "score": 326,
           "summary": "To my knowledge, this is the first formally verified implementation of an intersection algorithm for polygons. The experience of working with AI agents on this project changed a lot with recent model releases, as I describe in the readme. Opus 4.8 is able to provide algorithm implementation with formal proof in one shot, whereas previous models required me to provide proof strategies in multiple steps. Trust in the correctness comes entirely from the Lean checker and human review of a small specification, not from the LLM. Also check out the web demo built around the verified core linked in the readme: https:&#x2F;&#x2F;schildep.github.io&#x2F;verified-polygon-intersection&#x2F; . It supports multipolygons including holes, self intersections, and overlapping edges.",
           "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
         },
@@ -270,6 +257,17 @@
           ],
           "publishedAt": "2026-05-29T15:10:18Z",
           "score": 267,
+          "summary": "",
+          "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
+        },
+        {
+          "title": "Claude Opus 4.8 Max responding to an empty message",
+          "source": "Hacker News",
+          "url": "https://xcancel.com/davidad/status/2061858258046898518",
+          "meta": "27 pts · 4 comments",
+          "topics": [],
+          "publishedAt": "2026-06-03T13:14:29Z",
+          "score": 266,
           "summary": "",
           "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
         }
@@ -293,7 +291,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "104954 stars · updated Fri, 05 Jun 2026 03:38:51 UTC",
+          "meta": "104965 stars · updated Fri, 05 Jun 2026 03:38:51 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -301,7 +299,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 657840,
+          "score": 657912,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -309,7 +307,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8362 stars · updated Fri, 05 Jun 2026 01:30:38 UTC",
+          "meta": "8369 stars · updated Fri, 05 Jun 2026 07:30:37 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -317,7 +315,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 51732,
+          "score": 51774,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -325,14 +323,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "4832 stars · updated Thu, 04 Jun 2026 19:38:52 UTC",
+          "meta": "4847 stars · updated Fri, 05 Jun 2026 04:47:33 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 29516,
+          "score": 29608,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -340,13 +338,13 @@
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "1994 stars · updated Fri, 05 Jun 2026 02:58:09 UTC",
+          "meta": "1999 stars · updated Fri, 05 Jun 2026 02:58:09 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows"
           ],
           "publishedAt": "2026-02-16T16:59:06Z",
-          "score": 12496,
+          "score": 12526,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -356,12 +354,12 @@
   "tangentRadar": [
     {
       "topic": "Coding agents",
-      "signalCount": 32,
+      "signalCount": 29,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Codex just found a \"workaround\" of not having sudo on my PC",
-        "Hacker News: Show HN: Zot – Yet another coding agent harness",
-        "Anthropic: A harness for every task: dynamic workflows in Claude Code"
+        "Anthropic: A harness for every task: dynamic workflows in Claude Code",
+        "OpenAI: How Wasmer used Codex to build a Node.js runtime for the edge"
       ]
     },
     {
@@ -381,12 +379,12 @@
       "signals": [
         "Qwen: Qwen3.7-Plus: Multimodal Agent Intelligence",
         "Hacker News: Claude Opus 4.8 distilled Alibaba Qwen models",
-        "GitHub: OnlyTerp/UltraCode-Shim"
+        "GitHub: chaitanyagiri/munder-difflin"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 23,
+      "signalCount": 22,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Hacker News: Show HN: Formally verified polygon intersection – Opus 4.8 oneshots, prev failed",
@@ -396,7 +394,7 @@
     },
     {
       "topic": "Major labs",
-      "signalCount": 21,
+      "signalCount": 20,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Qwen: Qwen3.7-Plus: Multimodal Agent Intelligence",
