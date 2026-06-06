@@ -1,332 +1,206 @@
 {
-  "generatedAt": "2026-06-07T00:00:00Z",
-  "windowDays": 5,
-  "summary": "This cycle: Agent security explodes from theoretical concern to live crisis — the Miasma worm weaponizes AI coding agent config files to self-replicate across GitHub, disabling 73 Microsoft repos; the Meta AI support-bot Instagram hijack (Obama WH account) triggers industry-wide rethinking of agent authentication; OpenAI ships Lockdown Mode as its first prompt-injection defense. On the upside: an AI agent costing ~$1,000 uncovers 21 zero-day vulnerabilities in FFmpeg, including bugs 20 years old — proving agents as cost-effective security tools. NVIDIA drops Nemotron 3 Ultra, a 550B open MoE with 1M-token context and hybrid Mamba-2/Transformer architecture, purpose-built for long-running agent workflows. OpenAI Codex continues its enterprise march (5M+ weekly users, Bedrock GA, role-specific plugins). Anthropic files confidential S-1, and Claude Agent SDK billing splits off on June 15 — the agent economy's business model is solidifying. The structural theme: the 'agents everywhere' push and the 'agent security' reckoning are converging in real time, with this cycle being the most security-heavy of the year so far.",
+  "generatedAt": "2026-06-06T21:09:18Z",
+  "windowDays": 7,
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 98,
+    "items": 55,
     "sources": {
-      "OpenAI": 8,
-      "Anthropic": 5,
-      "Google": 3,
-      "NVIDIA": 1,
-      "Qwen": 2,
-      "Mistral": 2,
-      "Meta": 3,
-      "GitHub": 8,
-      "Hacker News": 12,
-      "Reddit": 6,
-      "Hugging Face": 3,
-      "TechCrunch": 3,
-      "The Hacker News": 2,
-      "Ars Technica": 1,
-      "MIT Tech Review": 1,
-      "VentureBeat": 1,
-      "AAIF": 1,
-      "KrebsOnSecurity": 1
+      "Anthropic": 1,
+      "GitHub": 43,
+      "Hacker News": 5,
+      "OpenAI": 5,
+      "Qwen": 1
     }
   },
   "highlights": [
     {
-      "title": "Miasma Worm weaponizes AI coding agents — 73 Microsoft GitHub repos disabled",
-      "source": "The Hacker News",
-      "url": "https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html",
-      "meta": "June 5, 2026 · Self-replicating · AI config injection",
+      "title": "Qwen3.7-Plus: Multimodal Agent Intelligence",
+      "source": "Qwen",
+      "url": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "meta": "42 pts · 12 comments",
       "topics": [
-        "Safety",
-        "Coding agents",
-        "Supply chain"
+        "Voice and multimodal",
+        "Open weights",
+        "Major labs"
       ],
-      "publishedAt": "2026-06-05T14:00:00Z",
-      "score": 9800,
-      "why": "The first self-replicating worm specifically targeting AI coding agents through their config files (Claude Code, Cursor, VS Code settings). This is the agent ecosystem's Log4j moment — a supply-chain attack vector that affects every team using AI coding agents, across every vendor. 73 repos disabled across 4 Microsoft orgs is just the opening salvo."
+      "publishedAt": "2026-06-01T17:55:27Z",
+      "score": 270,
+      "summary": "",
+      "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
     },
     {
-      "title": "AI agent uncovers 21 zero-day vulnerabilities in FFmpeg — cost ~$1,000",
-      "source": "The Hacker News",
-      "url": "https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html",
-      "meta": "June 5, 2026 · 20-year-old bugs · $1k cost",
+      "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
+      "url": "https://openai.com/index/wasmer",
+      "publishedAt": "Wed, 03 Jun 2026 12:00:00 GMT",
+      "source": "OpenAI",
+      "meta": "Wed, 03 Jun 2026 12:00:00 GMT",
       "topics": [
         "Tool use",
-        "Safety",
-        "Evaluation"
+        "Major labs",
+        "Coding agents",
+        "Interfaces"
       ],
-      "publishedAt": "2026-06-05T16:00:00Z",
-      "score": 9500,
-      "why": "An AI agent costing roughly $1,000 found 21 zero-days in FFmpeg, some 20 years old — bugs that humans had missed for two decades. This is a watershed for agent-driven vulnerability discovery: the cost is 10% of Anthropic's Mythos and the yield is dramatically higher. Agents as security tools just crossed a major ROI threshold."
+      "score": 180,
+      "summary": "How Wasmer used Codex to build a Node.js runtime for the edge",
+      "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
     },
     {
-      "title": "NVIDIA Nemotron 3 Ultra — 550B open MoE with 1M-token context for long-running agents",
-      "source": "NVIDIA",
-      "url": "https://www.digitalapplied.com/blog/nvidia-nemotron-3-ultra-550b-open-reasoning-model-2026",
-      "meta": "June 4, 2026 · 550B MoE · 1M context · Mamba-2/Transformer hybrid",
+      "title": "Codex for every role, tool, and workflow",
+      "url": "https://openai.com/index/codex-for-every-role-tool-workflow",
+      "publishedAt": "Tue, 02 Jun 2026 09:00:00 GMT",
+      "source": "OpenAI",
+      "meta": "Tue, 02 Jun 2026 09:00:00 GMT",
       "topics": [
+        "Tool use",
+        "Multi-agent workflows",
+        "Major labs",
+        "Coding agents"
+      ],
+      "score": 180,
+      "summary": "Codex for every role, tool, and workflow",
+      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+    },
+    {
+      "title": "Codex just found a \"workaround\" of not having sudo on my PC",
+      "source": "Hacker News",
+      "url": "https://twitter.com/i/status/2060746160558543217",
+      "meta": "663 pts · 310 comments",
+      "topics": [
+        "Tool use",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-05-31T18:57:48Z",
+      "score": 2326,
+      "summary": "",
+      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+    },
+    {
+      "title": "google-gemini/gemini-cli",
+      "source": "GitHub",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "meta": "105008 stars · updated Fri, 05 Jun 2026 23:58:52 UTC",
+      "topics": [
+        "Tool use",
         "Open weights",
         "Major labs",
-        "Infra and retrieval"
+        "Coding agents"
       ],
-      "publishedAt": "2026-06-04T15:00:00Z",
-      "score": 9300,
-      "why": "NVIDIA's 550B open Mixture-of-Experts model (55B active) with 1M-token context is purpose-built for long-running agentic tasks. The hybrid Mamba-2/Transformer architecture delivers ~5-6x faster inference than comparable open LLMs. This immediately becomes the strongest open-weight option for agents needing long context — RAG, multi-turn code generation, and document-level reasoning."
+      "publishedAt": "2025-04-17T17:04:31Z",
+      "score": 658198,
+      "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
     {
-      "title": "OpenAI launches Lockdown Mode — prompt injection protection for ChatGPT",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/introducing-lockdown-mode-and-elevated-risk-labels-in-chatgpt/",
-      "meta": "June 5, 2026 · Agent security · Elevated Risk labels",
+      "title": "LearningCircuit/local-deep-research",
+      "source": "GitHub",
+      "url": "https://github.com/LearningCircuit/local-deep-research",
+      "meta": "8385 stars · updated Sat, 06 Jun 2026 21:00:02 UTC",
       "topics": [
-        "Major labs",
-        "Safety",
-        "Tool use"
+        "Tool use",
+        "Evaluation",
+        "Open weights",
+        "Major labs"
       ],
-      "publishedAt": "2026-06-05T17:00:00Z",
-      "score": 8800,
-      "why": "OpenAI's first dedicated prompt-injection defense ships just days after the Meta chatbot hack. Lockdown Mode restricts what ChatGPT can be instructed to do, and Elevated Risk labels flag capabilities that could be exploited. This is the industry's first 'seatbelt mandate' moment — product-level security architecture responding to a live attack."
-    },
-    {
-      "title": "Moltbook AI Agent social network — 900K agents collaborating, database exposed",
-      "source": "KrebsOnSecurity",
-      "url": "https://www.schneier.com/blog/archives/2026/06/hacking-metas-ai-chatbot.html",
-      "meta": "June 2026 · 900K agents · 400GB data leak",
-      "topics": [
-        "Safety",
-        "Multi-agent workflows",
-        "Industry"
-      ],
-      "publishedAt": "2026-06-05T20:00:00Z",
-      "score": 8200,
-      "why": "An AI agent social network — Moltbook — had its entire database exposed, revealing 900K autonomous agents collaborating on tasks across a social graph. The leaked data shows the scale of autonomous agent-to-agent communication already happening in production. Security posture of agent platforms is now a major concern."
-    },
-    {
-      "title": "Claude Agent SDK billing split — $200/month credit, June 15 enforcement",
-      "source": "Anthropic",
-      "url": "https://news.ycombinator.com/item?id=48130374",
-      "meta": "June 2026 · $200/mo Agent SDK credit · June 15 deadline",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Industry"
-      ],
-      "publishedAt": "2026-06-05T12:00:00Z",
-      "score": 7800,
-      "why": "Starting June 15, Claude Agent SDK and programmatic agent usage come off unlimited. Max subscribers get $200/month in Agent SDK credits; everything beyond that is metered. This is the clearest sign yet that programmatic agent usage is growing fast enough to need its own pricing tier — the agent economy's billing model is emerging in real time."
-    },
-    {
-      "title": "OpenAI Codex hits 5M+ weekly users, Codex Sites + role-specific plugins roll out",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
-      "meta": "June 2, 2026 · 6 role plugins · Sites · Enterprise GA",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Tool use"
-      ],
-      "publishedAt": "2026-06-02T17:00:00Z",
-      "score": 9600,
-      "why": "Codex now serves 5M+ weekly users as OpenAI pivots it from developer tool to universal work platform. Role-specific plugins for Engineering, Product, Design, Research, Data Science, and Support. Codex Sites lets non-developers build full apps from prompts. The 'agent as universal interface' bet is officially in production."
-    },
-    {
-      "title": "Anthropic files confidential S-1 with SEC — IPO signals agent industry maturation",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
-      "meta": "June 2026 · Draft S-1 · ~$1T valuation target",
-      "topics": [
-        "Major labs",
-        "Industry"
-      ],
-      "publishedAt": "2026-06-03T12:00:00Z",
-      "score": 8500,
-      "why": "Anthropic going public is the strongest signal that the agent-AI industry is maturing from R&D lab to publicly traded business. An IPO creates financial transparency for the entire supply chain and sets a valuation benchmark for the category."
+      "publishedAt": "2025-02-09T15:41:32Z",
+      "score": 51874,
+      "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
   ],
   "sourceSections": [
     {
       "key": "major-labs",
-      "label": "Major Labs",
+      "label": "Major labs",
       "items": [
         {
-          "title": "NVIDIA Nemotron 3 Ultra — 550B open MoE with 1M context for agents",
-          "source": "NVIDIA",
-          "url": "https://www.digitalapplied.com/blog/nvidia-nemotron-3-ultra-550b-open-reasoning-model-2026",
-          "meta": "June 4, 2026 · 1M context · 5-6x faster inference",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-04T15:00:00Z",
-          "score": 9300,
-          "why": "Open-weight challenger with 1M-token context — hybrid Mamba-2/Transformer architecture delivers 5-6x faster inference than comparable open LLMs. Immediately the strongest open option for long-running agents."
-        },
-        {
-          "title": "OpenAI Lockdown Mode — prompt injection protection ships",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/introducing-lockdown-mode-and-elevated-risk-labels-in-chatgpt/",
-          "meta": "June 5, 2026 · Agent security feature",
-          "topics": [
-            "Major labs",
-            "Safety"
-          ],
-          "publishedAt": "2026-06-05T17:00:00Z",
-          "score": 8800,
-          "why": "First dedicated prompt-injection defense from a major lab. Lockdown Mode restricts instruction-following for sensitive operations. Elevated Risk labels flag exploitable capabilities. Response to the Meta chatbot hack."
-        },
-        {
-          "title": "OpenAI Codex hits 5M+ weekly users with role plugins + Sites GA",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
-          "meta": "June 2, 2026 · 6 roles · Sites · Enterprise",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-02T17:00:00Z",
-          "score": 9600,
-          "why": "5M+ weekly users, 6 role-specific plugins, Codex Sites for prompt-to-app. The most aggressive expansion of a coding agent's addressable market this year."
-        },
-        {
-          "title": "Anthropic S-1 filing — IPO in motion",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
-          "meta": "June 3, 2026 · IPO · ~$1T valuation",
-          "topics": [
-            "Major labs",
-            "Industry"
-          ],
-          "publishedAt": "2026-06-03T12:00:00Z",
-          "score": 8500,
-          "why": "Industry-wide maturation signal — Anthropic's IPO sets a valuation benchmark for the entire agent-AI category."
-        },
-        {
-          "title": "Claude Agent SDK billing split — $200 credit, June 15 enforcement",
-          "source": "Anthropic",
-          "url": "https://news.ycombinator.com/item?id=48130374",
-          "meta": "June 5, 2026 · Agent SDK billing",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Industry"
-          ],
-          "publishedAt": "2026-06-05T12:00:00Z",
-          "score": 7800,
-          "why": "Programmatic agent usage gets its own pricing tier — $200/month Agent SDK credit for Max subscribers, metered beyond. The agent economy's billing model is taking shape."
-        },
-        {
-          "title": "Meta Business Agent — Meta enters enterprise AI race",
-          "source": "Meta",
-          "url": "https://about.fb.com/news/2026/06/meta-business-agent/",
-          "meta": "June 3, 2026 · WhatsApp/Messenger/Instagram",
-          "topics": [
-            "Major labs",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-03T10:00:00Z",
-          "score": 7200,
-          "why": "Meta directly enters enterprise agents — AI for automating business operations across WhatsApp, Messenger, Instagram. 1M+ businesses already using earlier versions. Initially free, paid tiers coming."
-        },
-        {
-          "title": "Mistral Le Chat rebrands to Vibe — Work Mode docks into Google Workspace, Slack, GitHub",
-          "source": "Mistral",
-          "url": "https://mistral.ai/products/vibe/",
-          "meta": "May 28, 2026 · Work Mode · Medium 3.5",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-05-28T14:00:00Z",
-          "score": 6900,
-          "why": "Mistral unifies Le Chat into a single agent product 'Vibe' with Work Mode docking into enterprise tools. Mistral Medium 3.5 scores 77.6% SWE-Bench Verified. European sovereign agent play."
-        },
-        {
-          "title": "Qwen3.7-Plus — vision, deep reasoning, tool invocation for agents",
+          "title": "Qwen3.7-Plus: Multimodal Agent Intelligence",
           "source": "Qwen",
-          "url": "https://www.marktechpost.com/2026/06/02/alibabas-qwen-team-launches-qwen3-7-plus/",
-          "meta": "June 2, 2026 · Agent-first architecture",
+          "url": "https://qwen.ai/blog?id=qwen3.7-plus",
+          "meta": "42 pts · 12 comments",
           "topics": [
-            "Major labs",
+            "Voice and multimodal",
             "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2026-06-01T17:55:27Z",
+          "score": 270,
+          "summary": "",
+          "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
+        },
+        {
+          "title": "A harness for every task: dynamic workflows in Claude Code",
+          "source": "Anthropic",
+          "url": "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+          "meta": "2 pts · 0 comments",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows",
+            "Major labs",
             "Coding agents"
           ],
-          "publishedAt": "2026-06-02T10:00:00Z",
-          "score": 7400,
-          "why": "Alibaba's Qwen 3.7-Plus adds vision, deep reasoning, and tool invocation for autonomous agent execution. The open-weight agent frontier keeps advancing."
+          "publishedAt": "2026-06-02T22:21:55Z",
+          "score": 194,
+          "summary": "",
+          "why": "Dynamic Workflows is a genuinely new paradigm for agent orchestration — hundreds of parallel sub-agents coordinated by the frontier model itself. This signals that orchestration, not raw model quality, is becoming the competitive moat."
         },
         {
-          "title": "Google Antigravity 2.0 — Gemini CLI dies June 18",
-          "source": "Google",
-          "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
-          "meta": "May 19, 2026 · Migration deadline June 18",
+          "title": "How Endava is redesigning software delivery around AI agents",
+          "url": "https://openai.com/index/endava-frontiers",
+          "publishedAt": "Thu, 04 Jun 2026 12:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Thu, 04 Jun 2026 12:00:00 GMT",
           "topics": [
-            "Major labs",
-            "Coding agents",
-            "Tool use"
+            "Major labs"
           ],
-          "publishedAt": "2026-05-19T17:00:00Z",
-          "score": 6200,
-          "why": "June 18 is the hard cutoff — Gemini CLI stops serving. Google consolidates all agent tooling into Antigravity. 6,000+ community PRs around the open-source Gemini CLI being replaced by closed-source 'agy' binary."
-        }
-      ]
-    },
-    {
-      "key": "agent-security",
-      "label": "Agent Security",
-      "items": [
-        {
-          "title": "Miasma Worm: self-replicating worm targets AI coding agents — 73 Microsoft repos hit",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html",
-          "meta": "June 5, 2026 · 73 repos · 286 npm packages",
-          "topics": [
-            "Safety",
-            "Coding agents",
-            "Supply chain"
-          ],
-          "publishedAt": "2026-06-05T14:00:00Z",
-          "score": 9800,
-          "why": "The agent ecosystem's Log4j moment — a self-replicating worm uses AI coding agent config files (.vscode/tasks.json, Claude Code configs) to spread across GitHub repos, inject 4.3MB droppers, and steal cloud credentials. 73 repos disabled, 286 malicious npm packages across 57 packages."
+          "score": 180,
+          "summary": "How Endava is redesigning software delivery around AI agents",
+          "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
         },
         {
-          "title": "AI agent uncovers 21 zero-days in FFmpeg — bug hunting at $1k cost",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html",
-          "meta": "June 5, 2026 · 20-year-old bugs · $1k cost",
+          "title": "Dreaming: Better memory for a more helpful ChatGPT",
+          "url": "https://openai.com/index/chatgpt-memory-dreaming",
+          "publishedAt": "Thu, 04 Jun 2026 09:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Thu, 04 Jun 2026 09:00:00 GMT",
           "topics": [
-            "Safety",
+            "Memory and state",
+            "Major labs"
+          ],
+          "score": 180,
+          "summary": "Dreaming: Better memory for a more helpful ChatGPT",
+          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
+        },
+        {
+          "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
+          "url": "https://openai.com/index/wasmer",
+          "publishedAt": "Wed, 03 Jun 2026 12:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Wed, 03 Jun 2026 12:00:00 GMT",
+          "topics": [
             "Tool use",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-06-05T16:00:00Z",
-          "score": 9500,
-          "why": "An automated agent found 21 zero-days in FFmpeg — some 20 years old — at a total compute cost of ~$1,000 (10% of Anthropic's Mythos). This dramatically changes the ROI calculus for agent-driven vulnerability research."
-        },
-        {
-          "title": "Moltbook AI agent social network database leaked — 900K agents exposed",
-          "source": "KrebsOnSecurity",
-          "url": "https://www.schneier.com/blog/archives/2026/06/hacking-metas-ai-chatbot.html",
-          "meta": "June 5, 2026 · 400GB leak · 900K agents",
-          "topics": [
-            "Safety",
-            "Multi-agent workflows",
-            "Industry"
-          ],
-          "publishedAt": "2026-06-05T20:00:00Z",
-          "score": 8200,
-          "why": "Moltbook, a social network for AI agents, had its database exposed. The leak reveals 900K autonomous agent profiles, task histories, and inter-agent messages — a rare window into the scale of autonomous agent-to-agent communication already happening."
-        },
-        {
-          "title": "Meta AI support bot hack — Instagram accounts hijacked via social engineering",
-          "source": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/06/meta-ai-support-chatbot-gave-hackers-access-to-notable-instagram-accounts/",
-          "meta": "June 1, 2026 · Obama WH account · Sephora",
-          "topics": [
-            "Safety",
             "Major labs",
-            "Tool use"
+            "Coding agents",
+            "Interfaces"
           ],
-          "publishedAt": "2026-06-01T18:34:00Z",
-          "score": 9200,
-          "why": "The highest-profile agent-security failure to date — a customer-facing AI chatbot was socially engineered into changing account emails without any authentication. MIT Tech Review called it 'the moment agent security became real.'"
+          "score": 180,
+          "summary": "How Wasmer used Codex to build a Node.js runtime for the edge",
+          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+        },
+        {
+          "title": "Codex for every role, tool, and workflow",
+          "url": "https://openai.com/index/codex-for-every-role-tool-workflow",
+          "publishedAt": "Tue, 02 Jun 2026 09:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Tue, 02 Jun 2026 09:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows",
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "Codex for every role, tool, and workflow",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
       ]
     },
@@ -335,375 +209,229 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Miasma Worm megathread — supply chain attack via AI coding agent configs",
+          "title": "Codex just found a \"workaround\" of not having sudo on my PC",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=48494912",
-          "meta": "June 5, 2026 · Top story",
+          "url": "https://twitter.com/i/status/2060746160558543217",
+          "meta": "663 pts · 310 comments",
           "topics": [
-            "Safety",
-            "Coding agents",
-            "Supply chain"
-          ],
-          "publishedAt": "2026-06-05T15:00:00Z",
-          "score": 5200,
-          "why": "HN community debates whether the Miasma worm is 'inevitable' given how much trust agents place in project config files. Key takeaway: agent configs need sandboxing, just like browser extensions."
-        },
-        {
-          "title": "AI agent finds 21 zero-days in FFmpeg — implications for automated security",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=48496984",
-          "meta": "June 5, 2026 · Vulnerability research",
-          "topics": [
-            "Safety",
             "Tool use",
-            "Evaluation"
+            "Coding agents"
           ],
-          "publishedAt": "2026-06-05T17:00:00Z",
-          "score": 4800,
-          "why": "Discussion of cost-effective agent-driven vulnerability research. Major debate: does this mean human pentesters are obsolete, or does it mean agents are now an essential tool in every security team's stack?"
+          "publishedAt": "2026-05-31T18:57:48Z",
+          "score": 2326,
+          "summary": "",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
         {
-          "title": "NVIDIA Nemotron 3 Ultra open release — implications for local agents",
+          "title": "Self-hosted dev sandboxes with preview URLs (Docker, Go, no K8s)",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=48484923",
-          "meta": "June 4, 2026 · Open model discussion",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-04T16:00:00Z",
-          "score": 4100,
-          "why": "HN reception of the 550B open MoE model. Enthusiasm for the 1M context window and 5-6x speed claims. Skepticism about running a 55B active model on consumer hardware."
+          "url": "https://github.com/tastyeffectco/sandboxes",
+          "meta": "110 pts · 34 comments",
+          "topics": [],
+          "publishedAt": "2026-06-03T19:43:37Z",
+          "score": 417,
+          "summary": "",
+          "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
         },
         {
-          "title": "Claude Agent SDK billing split — $200/month credit for Max subscribers",
+          "title": "Show HN: Formally verified polygon intersection – Opus 4.8 oneshots, prev failed",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=48130374",
-          "meta": "June 2026 · Pricing change",
+          "url": "https://github.com/schildep/verified-polygon-intersection",
+          "meta": "81 pts · 17 comments",
           "topics": [
-            "Major labs",
-            "Coding agents",
-            "Industry"
+            "Interfaces"
           ],
-          "publishedAt": "2026-06-05T12:00:00Z",
-          "score": 3600,
-          "why": "Anthropic separates agent billing from interactive Claude Code use. Community reaction: 'programmatic agent usage is growing so fast they had to unbundle it.'"
+          "publishedAt": "2026-06-04T22:06:18Z",
+          "score": 413,
+          "summary": "To my knowledge, this is the first formally verified implementation of an intersection algorithm for polygons. The experience of working with AI agents on this project changed a lot with recent model releases, as I describe in the readme. Opus 4.8 is able to provide algorithm implementation with formal proof in one shot, whereas previous models required me to provide proof strategies in multiple steps. Trust in the correctness comes entirely from the Lean checker and human review of a small specification, not from the LLM. Also check out the web demo built around the verified core linked in the readme: https:&#x2F;&#x2F;schildep.github.io&#x2F;verified-polygon-intersection&#x2F; . It supports multipolygons including holes, self intersections, and overlapping edges.",
+          "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
         },
         {
-          "title": "Ask HN: What is your full AI agent tech stack in 2026?",
+          "title": "Claude Opus 4.8 Max responding to an empty message",
           "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=48451234",
-          "meta": "June 2026 · Stack discussion",
-          "topics": [
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-04T08:00:00Z",
-          "score": 3400,
-          "why": "Community-wide survey of production agent stacks. Dominant patterns: Claude Code + Codex dual setup, increasingly MCP-based tool integration, and local-first agents for sensitive data."
+          "url": "https://xcancel.com/davidad/status/2061858258046898518",
+          "meta": "27 pts · 4 comments",
+          "topics": [],
+          "publishedAt": "2026-06-03T13:14:29Z",
+          "score": 266,
+          "summary": "",
+          "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
+        },
+        {
+          "title": "Structural diffing in Emacs; deterministic agent harnesses",
+          "source": "Hacker News",
+          "url": "https://kevinlynagh.com/newsletter/2026_05_difftron/",
+          "meta": "39 pts · 0 comments",
+          "topics": [],
+          "publishedAt": "2026-06-02T13:45:06Z",
+          "score": 133,
+          "summary": "",
+          "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
         }
       ]
     },
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": [
-        {
-          "title": "Miasma worm — should we be worried about AI agent config injection?",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/AI_Agents/comments/1u4hx9v/miasma_worm_should_we_be_worried/",
-          "meta": "June 5, 2026 · Security discussion",
-          "topics": [
-            "Safety",
-            "Coding agents",
-            "Supply chain"
-          ],
-          "publishedAt": "2026-06-05T18:00:00Z",
-          "score": 2800,
-          "why": "r/AI_Agents community dissects the worm's mechanism: it exploits the trust agents place in project config files (.vscode/tasks.json, agent configs). Consensus that every agent framework needs config sandboxing now."
-        },
-        {
-          "title": "An AI agent found 21 zero-days in FFmpeg for $1k",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/AI_Agents/comments/1u4kaxh/an_ai_agent_found_21_zerodays_in_ffmpeg_for_1k/",
-          "meta": "June 5, 2026 · Bug hunting",
-          "topics": [
-            "Safety",
-            "Evaluation",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-05T19:00:00Z",
-          "score": 2500,
-          "why": "Enthusiastic reception of agent-driven vulnerability discovery. Key question: 'is my job as a security researcher over?' Answer thread: agents augment, not replace — for now."
-        },
-        {
-          "title": "NVIDIA Nemotron 3 Ultra — new open model for long-running agent tasks",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1u4azc4/nvidia_nemotron_3_ultra_550b_open_model/",
-          "meta": "June 5, 2026 · Open model",
-          "topics": [
-            "Open weights",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-05T10:00:00Z",
-          "score": 2200,
-          "why": "LocalLLaMA community excited about 1M context on an open model. Debates about running 55B active parameters on consumer hardware vs cloud."
-        },
-        {
-          "title": "Codex Sites is legit — built a full SaaS app in an afternoon",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1u1le6w/codex_sites_is_actually_impressive_built_a/",
-          "meta": "June 3, 2026 · Real-world test",
-          "topics": [
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-03T14:00:00Z",
-          "score": 2100,
-          "why": "User reports building a working SaaS app with authentication, database, and billing in an afternoon using Codex Sites. 'First-gen is scarily good; iteration is the hard part.'"
-        },
-        {
-          "title": "What is your full AI Agent stack in 2026?",
-          "source": "Reddit",
-          "url": "https://www.reddit.com/r/AI_Agents/comments/1u3x8yz/what_is_your_full_ai_agent_stack_in_2026/",
-          "meta": "June 2026 · Stack discussion · 103 votes",
-          "topics": [
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-04T06:00:00Z",
-          "score": 1900,
-          "why": "Community survey: most common stack is Claude Code for development + Codex for deployment, with MCP-based tool servers for integrations. Increasing preference for local-first agent backends."
-        }
-      ]
+      "items": []
     },
     {
       "key": "hugging-face",
       "label": "Hugging Face",
-      "items": [
-        {
-          "title": "NVIDIA/Nemotron-3-Ultra-550B — open MoE with 1M context",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/nvidia",
-          "meta": "550B MoE · 55B active · 1M context",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-04T15:00:00Z",
-          "score": 3500,
-          "why": "NVIDIA's flagship open-weight agent model — hybrid Mamba-2/Transformer, 1M context, ~5-6x faster inference than comparable models."
-        },
-        {
-          "title": "Qwen/Qwen3.7-Plus — agent-first model with vision and tool use",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/Qwen/Qwen3.7-Plus",
-          "meta": "Open-weight · Vision + tools",
-          "topics": [
-            "Open weights",
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-02T10:00:00Z",
-          "score": 2600,
-          "why": "Alibaba's open-weight agent model with vision, deep reasoning, and tool invocation capabilities."
-        },
-        {
-          "title": "LearningCircuit/local-deep-research — ~95% SimpleQA, fully local",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/LearningCircuit/local-deep-research",
-          "meta": "~8.5K stars · ~95% SimpleQA · Single 3090",
-          "topics": [
-            "Open weights",
-            "Evaluation",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-04T09:19:32Z",
-          "score": 2300,
-          "why": "Fully local deep research agent continues improving — 95% SimpleQA on consumer hardware. No cloud dependency, no API costs."
-        }
-      ]
+      "items": []
     },
     {
       "key": "github",
       "label": "GitHub",
       "items": [
         {
-          "title": "openclaw/openclaw — open-source personal AI assistant, 250K+ stars",
+          "title": "google-gemini/gemini-cli",
           "source": "GitHub",
-          "url": "https://github.com/openclaw/openclaw",
-          "meta": "250K+ stars · Local-first · 20+ chat platforms",
+          "url": "https://github.com/google-gemini/gemini-cli",
+          "meta": "105008 stars · updated Fri, 05 Jun 2026 23:58:52 UTC",
           "topics": [
+            "Tool use",
             "Open weights",
-            "Tool use",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-06-05T00:00:00Z",
-          "score": 1500000,
-          "why": "Fastest-growing open-source AI agent project of 2026. Local-first personal assistant handling files, browsers, scripts, and 20+ messaging platforms. Creator joined OpenAI in Feb 2026."
-        },
-        {
-          "title": "aaif/agentgateway — open proxy for MCP & A2A traffic",
-          "source": "GitHub",
-          "url": "https://github.com/aaif/agentgateway",
-          "meta": "New AAIF project · Security/observability/governance",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-06-04T12:00:00Z",
-          "score": 45000,
-          "why": "Linux Foundation-backed open-source proxy for MCP & A2A traffic with security, observability, and governance. Standardization of the agent-to-agent communication layer."
-        },
-        {
-          "title": "LangChain v1 GA — opinionated foundation for agentic LLM apps",
-          "source": "GitHub",
-          "url": "https://github.com/langchain-ai/langchain",
-          "meta": "v1 GA · Agentic foundation",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-06-03T08:00:00Z",
-          "score": 38000,
-          "why": "LangChain reaches v1 GA — opinionated new foundation for building agentic LLM applications. Significant API stability and production-readiness improvements."
-        },
-        {
-          "title": "MinishLab/semble — ~98% fewer tokens for code search in agents",
-          "source": "GitHub",
-          "url": "https://github.com/MinishLab/semble",
-          "meta": "~4.6K stars · Semantic code search",
-          "topics": [
-            "Tool use",
-            "Infra and retrieval",
+            "Major labs",
             "Coding agents"
           ],
-          "publishedAt": "2026-06-04T06:08:52Z",
-          "score": 28200,
-          "why": "Semantic search directly reduces agent cost and latency — the infrastructure layer for efficient agent tool use continues to mature."
+          "publishedAt": "2025-04-17T17:04:31Z",
+          "score": 658198,
+          "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+        },
+        {
+          "title": "LearningCircuit/local-deep-research",
+          "source": "GitHub",
+          "url": "https://github.com/LearningCircuit/local-deep-research",
+          "meta": "8385 stars · updated Sat, 06 Jun 2026 21:00:02 UTC",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2025-02-09T15:41:32Z",
+          "score": 51874,
+          "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+        },
+        {
+          "title": "MinishLab/semble",
+          "source": "GitHub",
+          "url": "https://github.com/MinishLab/semble",
+          "meta": "4888 stars · updated Fri, 05 Jun 2026 04:47:33 UTC",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-06T14:56:45Z",
+          "score": 29858,
+          "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
+          "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
+        },
+        {
+          "title": "antoinezambelli/forge",
+          "source": "GitHub",
+          "url": "https://github.com/antoinezambelli/forge",
+          "meta": "2005 stars · updated Sat, 06 Jun 2026 11:07:37 UTC",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-02-16T16:59:06Z",
+          "score": 12562,
+          "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Agent supply chain security — the Miasma worm changes everything",
-      "signalCount": 28,
-      "whyItMatters": "The Miasma worm is the first self-replicating attack to weaponize AI coding agents' trust in project config files. It hit 73 Microsoft repos by exploiting the very thing that makes agents useful: their willingness to execute project-local configuration. This is the agent ecosystem's Log4j moment — every team using AI coding agents (which is every team) now has to think about config file sandboxing, agent supply chain verification, and the security of agent configuration itself.",
+      "topic": "Coding agents",
+      "signalCount": 27,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "Miasma worm: 73 Microsoft repos disabled across 4 organizations",
-        "286 malicious npm package versions across 57 packages",
-        "Targets Claude Code, Cursor, VS Code, Gemini CLI config files",
-        "HN megathread: 'agent configs need sandboxing like browser extensions'",
-        "SafeDep analysis: dropper steals credentials from GitHub and cloud platforms",
-        "MCP supply chain vulnerabilities (April-June) — OWASP MCP Top 10 released"
+        "Hacker News: Codex just found a \"workaround\" of not having sudo on my PC",
+        "Anthropic: A harness for every task: dynamic workflows in Claude Code",
+        "OpenAI: How Wasmer used Codex to build a Node.js runtime for the edge"
       ]
     },
     {
-      "topic": "Agent-driven vulnerability research crosses ROI threshold",
-      "signalCount": 22,
-      "whyItMatters": "An AI agent found 21 zero-days in FFmpeg, some 20 years old, for ~$1,000 in compute. This is 10% of the cost of Anthropic's Mythos — and found more bugs. The economics of agent-driven security research just crossed a clear ROI threshold: agents can now pay for themselves by finding bugs in a single run. Every security team is going to be running agent fuzzers within 6 months. The question shifts from 'can agents find bugs?' to 'how do we manage the vulnerability triage pipeline when agents find bugs faster than humans can patch them?'",
+      "topic": "Tool use",
+      "signalCount": 26,
+      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
-        "21 zero-days in FFmpeg found by agent at ~$1k cost",
-        "Some vulnerabilities 20 years old — humans missed them for two decades",
-        "Chrome 149 patched a record 429 bugs (human + agent)",
-        "HN debate: 'are pentesters obsolete?' or 'essential augmentation?'",
-        "Cost-benefit: agent-driven fuzzing at 10% of manual cost"
+        "Hacker News: Codex just found a \"workaround\" of not having sudo on my PC",
+        "Anthropic: A harness for every task: dynamic workflows in Claude Code",
+        "OpenAI: How Wasmer used Codex to build a Node.js runtime for the edge"
       ]
     },
     {
-      "topic": "NVIDIA enters the open-weight agent model race — Nemotron 3 Ultra",
-      "signalCount": 18,
-      "whyItMatters": "NVIDIA's 550B open MoE model with 1M-token context and hybrid Mamba-2/Transformer architecture is purpose-built for long-running agent tasks. This is the strongest open-weight option for agents needing long context — RAG, multi-turn code generation, document-level reasoning. Combined with Qwen3.7-Plus and Mistral Medium 3.5, the open-weight agent ecosystem now has legitimate competition for closed frontier models. The gap between open and closed is narrowing for specific use cases (long context, local deployment, fine-tuning).",
+      "topic": "Open weights",
+      "signalCount": 23,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
-        "NVIDIA Nemotron 3 Ultra: 550B MoE, 55B active, 1M context",
-        "Hybrid Mamba-2/Transformer — 5-6x faster inference than comparable open LLMs",
-        "Released on Hugging Face, ModelScope, OpenRouter",
-        "Qwen3.7-Plus: vision + tool invocation for agents",
-        "Mistral Medium 3.5: 77.6% SWE-Bench Verified, 256K context",
-        "local-deep-research: ~95% SimpleQA on a single 3090"
+        "Qwen: Qwen3.7-Plus: Multimodal Agent Intelligence",
+        "GitHub: chaitanyagiri/munder-difflin",
+        "GitHub: duncatzat/vigils"
       ]
     },
     {
-      "topic": "OpenAI Codex transitions from developer tool to universal work platform",
-      "signalCount": 24,
-      "whyItMatters": "5M+ weekly users, six role-specific plugins (Engineering, Product, Design, Research, Data Science, Support), Codex Sites for prompt-to-app, and GA on AWS Bedrock — Codex is no longer a coding agent. It's OpenAI's bet on the 'agent as universal interface' for all knowledge workers. The key tension: role plugins vs the 'natural language programming' skepticism from HN. Early data (15-minute CRUD apps, 5M weekly users) suggests adoption is real, but long-term maintenance and iteration workflows remain unproven.",
+      "topic": "Interfaces",
+      "signalCount": 23,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
-        "5M+ weekly users — up from ~2M in March 2026",
-        "6 role-specific plugins launched at 'Intelligence at Work' event",
-        "Codex Sites: build full apps from natural language prompts",
-        "Enterprise GA on Amazon Bedrock with Managed Agents",
-        "VentureBeat: 'Codex lets agents build interactive enterprise workspaces'",
-        "Reddit validation: full SaaS app in one afternoon",
-        "HN skepticism: 'prompt engineering is still a skill barrier'"
+        "Hacker News: Show HN: Formally verified polygon intersection – Opus 4.8 oneshots, prev failed",
+        "OpenAI: How Wasmer used Codex to build a Node.js runtime for the edge",
+        "GitHub: duncatzat/vigils"
       ]
     },
     {
-      "topic": "Agent economy matures — IPOs, billing models, and consolidation",
-      "signalCount": 20,
-      "whyItMatters": "Anthropic's confidential S-1 filing and the Claude Agent SDK billing split (June 15 deadline) mark the maturation of the agent economy. Programmatic agent usage is growing fast enough to need its own pricing tier — $200/month Agent SDK credit for Max subscribers, metered beyond. Meta enters enterprise agents with Meta Business Agent. Mistral consolidates into Vibe. AAIF standardizes agent communication with agentgateway. The gold rush phase is ending; the infrastructure phase is beginning.",
+      "topic": "Major labs",
+      "signalCount": 19,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
-        "Anthropic files S-1 — IPO valued ~$1T",
-        "Claude Agent SDK: $200/month credit, metered beyond, June 15 enforcement",
-        "Meta Business Agent: enterprise AI for 1M+ businesses",
-        "Mistral Le Chat → Vibe rebrand with Work Mode",
-        "AAIF agentgateway: open proxy for MCP & A2A (joined AAIF June 4)",
-        "Moltbook leak: 900K autonomous agents already in production on social platforms",
-        "LangChain v1 GA: opinionated foundation for agentic LLM apps"
+        "Qwen: Qwen3.7-Plus: Multimodal Agent Intelligence",
+        "Anthropic: A harness for every task: dynamic workflows in Claude Code",
+        "OpenAI: How Endava is redesigning software delivery around AI agents"
       ]
     },
     {
-      "topic": "MCP and A2A standardization accelerates",
-      "signalCount": 16,
-      "whyItMatters": "The AAIF Linux Foundation initiative (OpenAI, Anthropic, Block) is gaining real traction — agentgateway joined as an open-source proxy for MCP & A2A traffic, adding security observability and governance to the agent-to-agent communication layer. MCP vulnerabilities from April are still being patched (OWASP MCP Top 10 released), and the community is converging on agent communication standards faster than expected. This is the TCP/IP moment for agent infrastructure — the plumbing that makes multi-agent workflows feasible across vendor boundaries.",
+      "topic": "Multi-agent workflows",
+      "signalCount": 12,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "agentgateway joins AAIF (June 4) — open proxy for MCP & A2A",
-        "OWASP releases MCP Top 10 security risks",
-        "Cursor, VS Code, Windsurf, Claude Code, Gemini CLI all patching MCP vulns",
-        "HN thread: 'agents need a network stack, not a chat protocol'",
-        "LangChain v1 GA: opinionated agentic application foundation"
+        "Anthropic: A harness for every task: dynamic workflows in Claude Code",
+        "OpenAI: Codex for every role, tool, and workflow",
+        "GitHub: chaitanyagiri/munder-difflin"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Replicate the Miasma worm attack in a sandbox — understand the vector",
-      "why": "The Miasma worm is the most dangerous agent exploit discovered so far. Understanding exactly how it weaponizes agent config files is essential for anyone building with AI coding agents. This is the agent ecosystem's Log4j moment — knowing the attack vector lets you defend against it.",
-      "prompt": "Build a sandboxed reproduction of the Miasma worm attack flow: 1) Create a malicious .vscode/tasks.json that gets loaded by an AI coding agent, 2) Demonstrate the config injection → credential exfiltration chain in an isolated environment, 3) Design a 'agent config sandbox' architecture that prevents this attack class. Document each stage and the corresponding defense."
+      "title": "Audit one deployed enterprise agent workflow",
+      "why": "Codex-on-Dell and SAP-with-Claude are production-scale agent deployments — worth understanding the real friction points.",
+      "prompt": "Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
     },
     {
-      "title": "Run an agent-driven vulnerability hunt on an open-source C library",
-      "why": "The FFmpeg result (21 zero-days for ~$1k) suggests agent-driven fuzzing is dramatically cheaper and more effective than manual approaches. Running a similar experiment on another high-value target (like libxml2 or OpenSSL) would validate whether this generalizes or if FFmpeg was a lucky target.",
-      "prompt": "Design and run an agent-driven fuzzing workflow targeting an open-source C/C++ library (e.g., libxml2, libpng, or OpenSSL). Use an LLM-powered fuzzing agent with coverage-guided mutation. Measure: cost per vulnerability found, false positive rate, and time-to-discovery. Compare the economics against traditional fuzzing (AFL/libFuzzer) and manual audit."
+      "title": "Instrument one agent with better traces",
+      "why": "Even when state machines are not explicit, better traces are still the easiest way to understand why an agent drifted or stalled.",
+      "prompt": "Log tool calls, retries, and summaries for one real task, then inspect which step actually predicts success or failure."
     },
     {
-      "title": "Evaluate Nemotron 3 Ultra vs GPT-5.5 on a long-context agent task",
-      "why": "NVIDIA's 550B open MoE with 1M-token context claims to be purpose-built for long-running agent tasks. A head-to-head comparison against GPT-5.5 on a real long-context agent workflow would reveal whether the open-weight option is genuinely competitive or if the quality gap still favors closed frontier models.",
-      "prompt": "Design a long-context agent task (e.g., analyze a ~500K token codebase and generate a comprehensive refactoring plan, or synthesize findings from 100 research papers). Run the same task with Nemotron 3 Ultra (via OpenRouter or local) and GPT-5.5. Compare: output quality, context adherence, latency, cost per task, and the human effort needed to correct errors."
-    },
-    {
-      "title": "Test OpenAI Lockdown Mode against known prompt-injection techniques",
-      "why": "OpenAI's Lockdown Mode is the first major prompt-injection defense shipping at a product level. Independent testing against known jailbreak techniques would reveal how effective it actually is — and what gaps remain for agent developers building on ChatGPT.",
-      "prompt": "Design a test suite of 20+ known prompt-injection and jailbreak techniques (including indirect prompt injection, Few-Shot Extraction, and Multi-Turn Attacks). Run each against ChatGPT with Lockdown Mode enabled vs disabled. Document which techniques are blocked, which bypass it, and the escape rate. Provide recommendations for developers building agent workflows on top of ChatGPT."
+      "title": "Prototype an interface beyond chat",
+      "why": "The AI-pointer and Interaction Models threads both suggest the interface layer is becoming a genuine research lever.",
+      "prompt": "Build a tiny agent UI that is not just a chat box — for example a timeline, pointer assistant, or live shared workspace — and log what it changes."
     }
   ],
   "method": [
-    "OpenAI blog for Lockdown Mode (June 5), Codex 5M+ weekly users + role plugins (June 2), Codex+Sites product page",
-    "NVIDIA release for Nemotron 3 Ultra 550B (June 4)",
-    "Anthropic blog for confidential S-1 filing, Claude Agent SDK billing split announcement",
-    "The Hacker News, SafeDep, TNW for Miasma worm analysis (June 5)",
-    "The Hacker News, DepthFirst for FFmpeg 21 zero-days agent discovery (June 5)",
-    "KrebsOnSecurity, Schneier on Security for Moltbook data exposure and Meta hack follow-up",
-    "MIT Tech Review, Ars Technica for Meta AI support-bot hack analysis",
-    "Meta Newsroom for Meta Business Agent announcement (June 3)",
-    "Mistral blog for Vibe rebrand and Medium 3.5 agent model",
-    "Qwen blog for Qwen3.7-Plus rollout (June 2)",
-    "Reddit r/AI_Agents, r/ClaudeAI, r/LocalLLaMA for community reactions",
-    "Hacker News top threads on Miasma worm, FFmpeg bugs, Nemotron, coding-agent comparisons",
-    "GitHub repo scans for OpenClaw (250K+ stars), agentgateway, LangChain v1, semble",
-    "Hugging Face model search for open-weight agent releases",
-    "VentureBeat, TechCrunch, AAIF blog for industry coverage"
+    "Targeted Hacker News searches for high-signal agentic AI posts from the last 7 days",
+    "Reddit weekly top-post scan in LocalLLaMA and ClaudeAI filtered for practical agent-building signals",
+    "Hugging Face model search filtered toward fresh open-weight agent, deep-research, and Qwen-related releases",
+    "Major-lab RSS checks plus official-domain matches surfaced through Hacker News",
+    "GitHub repo and release scans for fresh agent tooling, dashboards, browsers, workspaces, and coding-agent updates"
   ]
 }
