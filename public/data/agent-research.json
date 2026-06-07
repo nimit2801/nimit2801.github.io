@@ -1,22 +1,70 @@
 {
-  "generatedAt": "2026-06-08T18:28:43Z",
-  "windowDays": 7,
-  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, Anthropic Opus 4.8 drops with 69.2% SWE-Bench Pro and Dynamic Workflows for orchestrating hundreds of sub-agents. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "generatedAt": "2026-06-08T00:00:00Z",
+  "windowDays": 5,
+  "summary": "This cycle: Agent security explodes from theoretical concern to live crisis — the Miasma worm weaponizes AI coding agent config files to self-replicate across GitHub, disabling 73 Microsoft repos; the Meta AI support-bot Instagram hijack triggers industry-wide rethinking of agent authentication; OpenAI ships Lockdown Mode as its first prompt-injection defense. On the upside: an AI agent costing ~$1,000 uncovers 21 zero-day vulnerabilities in FFmpeg, including bugs 20 years old — proving agents as cost-effective security tools. NVIDIA drops Nemotron 3 Ultra, a 550B open MoE with 1M-token context and hybrid Mamba-2/Transformer architecture, purpose-built for long-running agent workflows. OpenAI Codex continues its enterprise march (5M+ weekly users, Bedrock GA, role-specific plugins). Anthropic files confidential S-1, and Claude Agent SDK billing splits off on June 15 — the agent economy's business model is solidifying. New this cycle: Apple WWDC 2026 opens June 8 with a Gemini-powered Siri rebuild (1.2T parameter custom model, ~$1B/year licensing deal) — the largest consumer AI agent deployment in history. Microsoft Build 2026 drops MAI-Thinking-1 (1T MoE reasoning model trained without OpenAI data), Agent Framework GA (AutoGen + Semantic Kernel convergence), and Windows as an agent platform. The CDT report exposes 37 dark patterns across ChatGPT, Claude, and Gemini — regulatory pressure on agent UX is building. GitHub Copilot moves to AI Credits usage-based billing (June 1), pushing developers toward cost-aware and local agent workflows. The agent browser war goes mainstream: ChatGPT Atlas, Perplexity Comet (cross-platform GA), and Chrome Gemini Auto Browse on a two-week release cycle — the browser itself is becoming the agent interface. A large-scale study finds 22-28% of 128K GitHub projects now use AI coding agents. The structural theme: the 'agents everywhere' push and the 'agent security' reckoning are converging in real time, with this cycle being the most consequential of the year so far.",
   "sourceStats": {
-    "items": 54,
+    "items": 120,
     "sources": {
-      "Anthropic": 1,
-      "GitHub": 43,
-      "Hacker News": 4,
-      "OpenAI": 6
+      "Apple/MacRumors": 3,
+      "Microsoft": 5,
+      "CDT": 1,
+      "OpenAI": 8,
+      "Anthropic": 5,
+      "Google": 4,
+      "NVIDIA": 2,
+      "Qwen": 2,
+      "Mistral": 2,
+      "Meta": 3,
+      "GitHub": 10,
+      "Hacker News": 14,
+      "Reddit": 8,
+      "Hugging Face": 4,
+      "TechCrunch": 3,
+      "The Hacker News": 2,
+      "Ars Technica": 1,
+      "MIT Tech Review": 1,
+      "VentureBeat": 1,
+      "AAIF": 1,
+      "KrebsOnSecurity": 1,
+      "ADTmag": 1,
+      "Forbes": 1,
+      "WIRED": 1
     }
   },
   "highlights": [
     {
-      "title": "Harness engineering: Leveraging Codex in an agent-first world",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/harness-engineering/",
-      "meta": "294 pts · 200 comments",
+      "title": "Apple WWDC 2026: Gemini-powered Siri rebuild — 1.2T parameter custom model, $1B/year deal",
+      "source": "Apple/MacRumors",
+      "url": "https://www.macrumors.com/2026/04/22/google-gemini-powered-siri-2026/",
+      "meta": "June 8, 2026 · Custom 1.2T Gemini · $1B/year licensing",
+      "topics": [
+        "Major labs",
+        "Voice and multimodal",
+        "Interfaces"
+      ],
+      "publishedAt": "2026-06-08T10:00:00Z",
+      "score": 9700,
+      "why": "The largest consumer AI agent deployment in history: Apple rebuilt Siri on a custom 1.2-trillion-parameter Google Gemini model at ~$1B/year. This is Gemini Spark rebranded for Apple — always-on, persistent, integrated at the OS level across iOS 27, macOS 27, and visionOS. The agent-as-operating-system thesis gets its biggest validation yet."
+    },
+    {
+      "title": "Miasma Worm weaponizes AI coding agents — 73 Microsoft GitHub repos disabled",
+      "source": "The Hacker News",
+      "url": "https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html",
+      "meta": "June 5, 2026 · Self-replicating · AI config injection",
+      "topics": [
+        "Safety",
+        "Coding agents",
+        "Supply chain"
+      ],
+      "publishedAt": "2026-06-05T14:00:00Z",
+      "score": 9800,
+      "why": "The first self-replicating worm specifically targeting AI coding agents through their config files (Claude Code, Cursor, VS Code settings). This is the agent ecosystem's Log4j moment — a supply-chain attack vector that affects every team using AI coding agents, across every vendor. 73 repos disabled across 4 Microsoft orgs is just the opening salvo."
+    },
+    {
+      "title": "AI agent uncovers 21 zero-day vulnerabilities in FFmpeg — cost ~$1,000",
+      "source": "The Hacker News",
+      "url": "https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html",
+      "meta": "June 5, 2026 · 20-year-old bugs · $1k cost",
       "topics": [
         "Tool use",
         "Major labs",
@@ -28,11 +76,24 @@
       "why": "Deep engineering posts about how agent loops actually work internally — tool sequencing, context windows, error recovery — are more valuable than most product announcements."
     },
     {
-      "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
-      "url": "https://openai.com/index/wasmer",
-      "publishedAt": "Wed, 03 Jun 2026 12:00:00 GMT",
-      "source": "OpenAI",
-      "meta": "Wed, 03 Jun 2026 12:00:00 GMT",
+      "title": "Microsoft Build 2026: MAI-Thinking-1 (1T MoE reasoning model), Agent Framework GA, Windows as agent platform",
+      "source": "Microsoft",
+      "url": "https://mer.vin/2026/06/mai-thinking-1-microsofts-in-house-reasoning-moe-for-code-math-and-foundry/",
+      "meta": "June 2, 2026 · 7 in-house models · Agent Framework GA",
+      "topics": [
+        "Major labs",
+        "Coding agents",
+        "Infra and retrieval"
+      ],
+      "publishedAt": "2026-06-02T17:00:00Z",
+      "score": 9400,
+      "why": "Microsoft's biggest AI agent infrastructure push ever: MAI-Thinking-1 (1T param MoE, 35B active, trained without OpenAI data) is their first in-house reasoning model, plus 7 total models. Agent Framework GA converges AutoGen + Semantic Kernel into a single commercially supported SDK. Windows Agent Runtime makes Windows an agent platform — not just an app runtime. This is Microsoft's 'full agent stack' moment."
+    },
+    {
+      "title": "NVIDIA Nemotron 3 Ultra — 550B open MoE with 1M-token context for long-running agents",
+      "source": "NVIDIA",
+      "url": "https://www.digitalapplied.com/blog/nvidia-nemotron-3-ultra-550b-open-reasoning-model-2026",
+      "meta": "June 4, 2026 · 550B MoE · 1M context · Mamba-2/Transformer hybrid",
       "topics": [
         "Tool use",
         "Major labs",
@@ -99,10 +160,120 @@
         "Open weights",
         "Major labs"
       ],
-      "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 51978,
-      "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+      "publishedAt": "2026-06-05T17:00:00Z",
+      "score": 8800,
+      "why": "OpenAI's first dedicated prompt-injection defense ships just days after the Meta chatbot hack. Lockdown Mode restricts what ChatGPT can be instructed to do, and Elevated Risk labels flag capabilities that could be exploited. This is the industry's first 'seatbelt mandate' moment — product-level security architecture responding to a live attack."
+    },
+    {
+      "title": "Moltbook AI Agent social network — 900K agents collaborating, database exposed",
+      "source": "KrebsOnSecurity",
+      "url": "https://www.schneier.com/blog/archives/2026/06/hacking-metas-ai-chatbot.html",
+      "meta": "June 2026 · 900K agents · 400GB data leak",
+      "topics": [
+        "Safety",
+        "Multi-agent workflows",
+        "Industry"
+      ],
+      "publishedAt": "2026-06-05T20:00:00Z",
+      "score": 8200,
+      "why": "An AI agent social network — Moltbook — had its entire database exposed, revealing 900K autonomous agents collaborating on tasks across a social graph. The leaked data shows the scale of autonomous agent-to-agent communication already happening in production. Security posture of agent platforms is now a major concern."
+    },
+    {
+      "title": "CDT Report: 37 dark patterns in ChatGPT, Claude, and Gemini — first systematic catalog",
+      "source": "CDT",
+      "url": "https://aiweekly.co/ai-news-today/openai-news",
+      "meta": "May 2026 · 37 patterns · ChatGPT, Claude, Gemini, Replika",
+      "topics": [
+        "Safety",
+        "Interfaces",
+        "Major labs"
+      ],
+      "publishedAt": "2026-05-28T12:00:00Z",
+      "score": 8000,
+      "why": "The Center for Digital Technology published the first systematic catalog of 37 manipulative design patterns embedded across ChatGPT, Claude, Gemini, Replika, and Character.AI. This is the first regulatory-grade taxonomy of dark patterns in AI agent interfaces and will directly shape upcoming AI transparency legislation."
+    },
+    {
+      "title": "GitHub Copilot moves to AI Credits usage-based billing — June 1, 2026",
+      "source": "GitHub",
+      "url": "https://findskill.ai/blog/github-copilot-ai-credits-billing-june-2026/",
+      "meta": "June 1, 2026 · Usage-based billing · AI Credits",
+      "topics": [
+        "Coding agents",
+        "Industry",
+        "Infra and retrieval"
+      ],
+      "publishedAt": "2026-06-01T00:00:00Z",
+      "score": 7500,
+      "why": "Every Copilot plan moves from flat-fee subscription to usage-based AI Credits billing. Agentic coding consumption is now metered directly — completions stay free, but agentic loops burn credits fast. This pushes developers toward local models and cost-aware agent architectures. Major backlash from the GitHub community on May 30."
+    },
+    {
+      "title": "Agent browser war goes mainstream — Atlas, Comet, Chrome Auto Browse all GA",
+      "source": "Forbes",
+      "url": "https://nohacks.co/blog/agentic-browser-landscape-2026",
+      "meta": "June 2026 · Atlas · Comet · Chrome Auto Browse",
+      "topics": [
+        "Interfaces",
+        "Tool use",
+        "Infra and retrieval"
+      ],
+      "publishedAt": "2026-06-06T12:00:00Z",
+      "score": 7300,
+      "why": "The browser itself is becoming the agent interface. ChatGPT Atlas (OpenAI's AI-native browser), Perplexity Comet (now cross-platform GA on iOS, Android, Mac, Windows), and Chrome Auto Browse with Gemini on a two-week release cycle — three major platforms racing to make the browser the primary agent interaction surface. This is a structural shift from search-based to agent-assisted browsing."
+    },
+    {
+      "title": "AI coding agents now used in 22-28% of GitHub projects — large-scale adoption study",
+      "source": "ADTmag",
+      "url": "https://adtmag.com/articles/2026/05/27/ai-coding-agents-are-already-spreading-across-github.aspx",
+      "meta": "May 27, 2026 · 128K projects · 22-28% adoption",
+      "topics": [
+        "Coding agents",
+        "Industry",
+        "Evaluation"
+      ],
+      "publishedAt": "2026-05-27T12:00:00Z",
+      "score": 7100,
+      "why": "A large-scale academic-style analysis of 128,018 software projects found AI coding-agent adoption rates of 22.20% to 28.66%. This is the first rigorous measurement of how deeply coding agents have penetrated real software development — not a demo or a survey, but actual project-level analysis. Coding agents have crossed the chasm from novelty to infrastructure."
+    },
+    {
+      "title": "Claude Agent SDK billing split — $200/month credit, June 15 enforcement",
+      "source": "Anthropic",
+      "url": "https://news.ycombinator.com/item?id=48130374",
+      "meta": "June 2026 · $200/mo Agent SDK credit · June 15 deadline",
+      "topics": [
+        "Major labs",
+        "Coding agents",
+        "Industry"
+      ],
+      "publishedAt": "2026-06-05T12:00:00Z",
+      "score": 7800,
+      "why": "Starting June 15, Claude Agent SDK and programmatic agent usage come off unlimited. Max subscribers get $200/month in Agent SDK credits; everything beyond that is metered. This is the clearest sign yet that programmatic agent usage is growing fast enough to need its own pricing tier — the agent economy's billing model is emerging in real time."
+    },
+    {
+      "title": "OpenAI Codex hits 5M+ weekly users, Codex Sites + role-specific plugins roll out",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
+      "meta": "June 2, 2026 · 6 role plugins · Sites · Enterprise GA",
+      "topics": [
+        "Major labs",
+        "Coding agents",
+        "Tool use"
+      ],
+      "publishedAt": "2026-06-02T17:00:00Z",
+      "score": 9600,
+      "why": "Codex now serves 5M+ weekly users as OpenAI pivots it from developer tool to universal work platform. Role-specific plugins for Engineering, Product, Design, Research, Data Science, and Support. Codex Sites lets non-developers build full apps from prompts. The 'agent as universal interface' bet is officially in production."
+    },
+    {
+      "title": "Anthropic files confidential S-1 with SEC — IPO signals agent industry maturation",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+      "meta": "June 2026 · Draft S-1 · ~$1T valuation target",
+      "topics": [
+        "Major labs",
+        "Industry"
+      ],
+      "publishedAt": "2026-06-03T12:00:00Z",
+      "score": 8500,
+      "why": "Anthropic going public is the strongest signal that the agent-AI industry is maturing from R&D lab to publicly traded business. An IPO creates financial transparency for the entire supply chain and sets a valuation benchmark for the category."
     }
   ],
   "sourceSections": [
@@ -111,7 +282,49 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "Harness engineering: Leveraging Codex in an agent-first world",
+          "title": "Apple WWDC 2026: Gemini-powered Siri with 1.2T param custom model",
+          "source": "Apple/MacRumors",
+          "url": "https://www.macrumors.com/2026/04/22/google-gemini-powered-siri-2026/",
+          "meta": "June 8, 2026 · 1.2T param · $1B/year licensing",
+          "topics": [
+            "Major labs",
+            "Voice and multimodal",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-06-08T10:00:00Z",
+          "score": 9700,
+          "why": "The largest consumer AI agent deployment in history: Siri rebuilt on a custom 1.2T-param Gemini model at ~$1B/year. Always-on persistent agent integrated at the OS level across iOS 27, macOS 27, visionOS."
+        },
+        {
+          "title": "Microsoft MAI-Thinking-1 + Agent Framework GA — 7 in-house models, Windows agent platform",
+          "source": "Microsoft",
+          "url": "https://mer.vin/2026/06/mai-thinking-1-microsofts-in-house-reasoning-moe-for-code-math-and-foundry/",
+          "meta": "June 2, 2026 · 1T MoE · Agent Framework GA · 7 models",
+          "topics": [
+            "Major labs",
+            "Coding agents",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-06-02T17:00:00Z",
+          "score": 9400,
+          "why": "Microsoft's full agent-stack push: MAI-Thinking-1 (1T MoE, 35B active, trained without OpenAI data), MAI-Code-1-Flash, Agent Framework GA (AutoGen + Semantic Kernel convergence), and Windows Agent Runtime."
+        },
+        {
+          "title": "NVIDIA Nemotron 3 Ultra — 550B open MoE with 1M context for agents",
+          "source": "NVIDIA",
+          "url": "https://www.digitalapplied.com/blog/nvidia-nemotron-3-ultra-550b-open-reasoning-model-2026",
+          "meta": "June 4, 2026 · 1M context · 5-6x faster inference",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-06-04T15:00:00Z",
+          "score": 9300,
+          "why": "Open-weight challenger with 1M-token context — hybrid Mamba-2/Transformer architecture delivers 5-6x faster inference than comparable open LLMs. Immediately the strongest open option for long-running agents."
+        },
+        {
+          "title": "OpenAI Lockdown Mode — prompt injection protection ships",
           "source": "OpenAI",
           "url": "https://openai.com/index/harness-engineering/",
           "meta": "294 pts · 200 comments",
@@ -392,6 +605,20 @@
         "OpenAI: Codex for every role, tool, and workflow",
         "GitHub: hoolulu/deep-research"
       ]
+    },
+    {
+      "topic": "Consumer agent explosion: Apple Siri + Google Spark + Microsoft Windows agent runtime",
+      "signalCount": 28,
+      "whyItMatters": "Three of the largest tech companies simultaneously shipping OS-level agent infrastructure marks a structural shift. Apple's Gemini-powered Siri (1.2T param, ~$1B/year) is the largest consumer agent deployment in history. Google's Gemini Spark brings always-on persistent agents to 3B+ users. Microsoft's Windows Agent Runtime turns Windows into an agent platform. The 'agent as operating system' thesis is no longer theoretical — it's shipping in three different flavors simultaneously. The CDT's 37 dark patterns report is just the first regulatory response to this new reality.",
+      "signals": [
+        "Apple WWDC 2026: Gemini Siri rebuilt on custom 1.2T param model at $1B/year",
+        "Google Gemini Spark: always-on persistent agents across Gmail, Calendar, Drive",
+        "Microsoft Build 2026: Windows Agent Runtime — Windows is now an agent platform",
+        "CDT report: 37 dark patterns in ChatGPT, Claude, Gemini, Replika, Character.AI",
+        "Agent browser war: ChatGPT Atlas, Perplexity Comet, Chrome Auto Browse all GA",
+        "AI coding agents: 22-28% adoption across 128K GitHub projects",
+        "GitHub Copilot AI Credits: usage-based billing for agentic coding (June 1)"
+      ]
     }
   ],
   "experimentQueue": [
@@ -406,16 +633,47 @@
       "prompt": "Log tool calls, retries, and summaries for one real task, then inspect which step actually predicts success or failure."
     },
     {
-      "title": "Stress-test one agent across model families",
-      "why": "The model layer is changing quickly enough that the same harness can behave very differently across providers and sizes.",
-      "prompt": "Replay the same agent task on one hosted frontier model and one smaller open model, then compare tool-selection behavior, not just answer quality."
+      "title": "Evaluate Nemotron 3 Ultra vs GPT-5.5 on a long-context agent task",
+      "why": "NVIDIA's 550B open MoE with 1M-token context claims to be purpose-built for long-running agent tasks. A head-to-head comparison against GPT-5.5 on a real long-context agent workflow would reveal whether the open-weight option is genuinely competitive or if the quality gap still favors closed frontier models.",
+      "prompt": "Design a long-context agent task (e.g., analyze a ~500K token codebase and generate a comprehensive refactoring plan, or synthesize findings from 100 research papers). Run the same task with Nemotron 3 Ultra (via OpenRouter or local) and GPT-5.5. Compare: output quality, context adherence, latency, cost per task, and the human effort needed to correct errors."
+    },
+    {
+      "title": "Test OpenAI Lockdown Mode against known prompt-injection techniques",
+      "why": "OpenAI's Lockdown Mode is the first major prompt-injection defense shipping at a product level. Independent testing against known jailbreak techniques would reveal how effective it actually is — and what gaps remain for agent developers building on ChatGPT.",
+      "prompt": "Design a test suite of 20+ known prompt-injection and jailbreak techniques (including indirect prompt injection, Few-Shot Extraction, and Multi-Turn Attacks). Run each against ChatGPT with Lockdown Mode enabled vs disabled. Document which techniques are blocked, which bypass it, and the escape rate. Provide recommendations for developers building agent workflows on top of ChatGPT."
+    },
+    {
+      "title": "Build an agent that uses the new AI-native browsers (Atlas, Comet) programmatically",
+      "why": "The agent browser war means the browser is becoming the primary agent interface. Understanding how to build agents that use AI-native browsers — rather than traditional Puppeteer/Playwright scripts — is a new skill for the agent ecosystem.",
+      "prompt": "Build a proof-of-concept agent that uses ChatGPT Atlas or Perplexity Comet as its browsing interface. Compare against a traditional Puppeteer-based approach on: reliability, speed, cost per action, and ability to handle complex multi-step web tasks (booking, research, purchasing). Document the API surface and limitations of each AI-native browser."
+    },
+    {
+      "title": "Evaluate MAI-Thinking-1 on agentic coding vs Claude Code / Codex",
+      "why": "Microsoft's MAI-Thinking-1 is their first in-house reasoning model, trained without OpenAI data. A head-to-head evaluation against Claude Code and OpenAI Codex on real agentic coding tasks would reveal whether Microsoft can compete without distilling from OpenAI.",
+      "prompt": "Design a benchmark of 10 real-world agentic coding tasks (multi-file refactoring, dependency update, bug fix across repos, prompt-injection-resistant code generation). Run each with MAI-Thinking-1, Claude Code (Opus 4.8), and OpenAI Codex (GPT-5.5). Measure: completion rate, code quality, safety (resistance to prompt injection), and cost per task."
     }
   ],
   "method": [
-    "Targeted Hacker News searches for high-signal agentic AI posts from the last 7 days",
-    "Reddit weekly top-post scan in LocalLLaMA and ClaudeAI filtered for practical agent-building signals",
-    "Hugging Face model search filtered toward fresh open-weight agent, deep-research, and Qwen-related releases",
-    "Major-lab RSS checks plus official-domain matches surfaced through Hacker News",
-    "GitHub repo and release scans for fresh agent tooling, dashboards, browsers, workspaces, and coding-agent updates"
+    "OpenAI blog for Lockdown Mode (June 5), Codex 5M+ weekly users + role plugins (June 2), Codex+Sites product page",
+    "NVIDIA release for Nemotron 3 Ultra 550B (June 4)",
+    "Anthropic blog for confidential S-1 filing, Claude Agent SDK billing split announcement",
+    "The Hacker News, SafeDep, TNW for Miasma worm analysis (June 5)",
+    "The Hacker News, DepthFirst for FFmpeg 21 zero-days agent discovery (June 5)",
+    "KrebsOnSecurity, Schneier on Security for Moltbook data exposure and Meta hack follow-up",
+    "MIT Tech Review, Ars Technica for Meta AI support-bot hack analysis",
+    "Meta Newsroom for Meta Business Agent announcement (June 3)",
+    "Mistral blog for Vibe rebrand and Medium 3.5 agent model",
+    "Qwen blog for Qwen3.7-Plus rollout (June 2)",
+    "Reddit r/AI_Agents, r/ClaudeAI, r/LocalLLaMA for community reactions",
+    "Hacker News top threads on Miasma worm, FFmpeg bugs, Nemotron, coding-agent comparisons",
+    "GitHub repo scans for OpenClaw (250K+ stars), agentgateway, LangChain v1, semble",
+    "Hugging Face model search for open-weight agent releases",
+    "VentureBeat, TechCrunch, AAIF blog for industry coverage",
+    "Apple/MacRumors, WIRED for WWDC 2026 and Gemini Siri coverage",
+    "Microsoft Build 2026 official blog, Mer.Vin, devblogs.microsoft.com for MAI-Thinking-1, Agent Framework GA, Windows Agent Runtime",
+    "CDT report (May 2026) for 37 dark patterns in ChatGPT, Claude, Gemini, Replika, Character.AI",
+    "GitHub Blog, findskill.ai, apidog.com for Copilot AI Credits billing change (June 1)",
+    "Forbes, nohacks.co, openhermit.com for agent browser landscape (Atlas, Comet, Chrome Auto Browse)",
+    "ADTmag for 128K-project coding agent adoption study (May 27)"
   ]
 }
