@@ -1,191 +1,38 @@
 {
-  "generatedAt": "2026-06-09T00:00:00Z",
+  "generatedAt": "2026-06-08T21:53:26Z",
   "windowDays": 7,
-  "summary": "This cycle (June 8-9): Anthropic drops the most consequential AI alignment paper of 2026 — \"When AI Builds Itself\" reveals Claude's coding success rate hit 76% in May 2026, research accuracy jumped from 51% to 64% in 6 months, and agents autonomously solved nearly all of a key safety research challenge. Recursive self-improvement is no longer theoretical. Apple WWDC 2026 delivered: a 3-tier AI architecture for Siri (on-device 3B model → Private Cloud Compute → 1.2T Google Gemini) with Core AI replacing Core ML. OpenAI plans its biggest ChatGPT revamp since 2022 — a superapp combining Codex, AI agents, and third-party integrations ahead of IPO. Google releases Gemma 4 12B, the strongest open local agent model yet, running on 16GB laptops. Microsoft opens Visual Studio's AI layer to outside models with agents embedded in the debugger and profiler. NVIDIA Cosmos 3 brings the first open omnimodal world model for Physical AI. MiniMax M3 is the first open-weights model combining frontier coding, 1M context, and native multimodality. The structural theme: the open-weight agent ecosystem is catching up to closed frontier models at remarkable speed, Anthropic's RSI data reframes the safety conversation, and the platform-level agent infrastructure battle (Apple Siri, OpenAI superapp, Microsoft VS agents, Google local Gemma) is intensifying across every layer of the stack.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, Anthropic Opus 4.8 drops with 69.2% SWE-Bench Pro and Dynamic Workflows for orchestrating hundreds of sub-agents. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 127,
+    "items": 51,
     "sources": {
-      "Apple/MacRumors": 3,
-      "Microsoft": 5,
-      "CDT": 1,
-      "OpenAI": 8,
-      "Anthropic": 5,
-      "Google": 4,
-      "NVIDIA": 2,
-      "Qwen": 2,
-      "Mistral": 2,
-      "Meta": 3,
-      "GitHub": 10,
-      "Hacker News": 14,
-      "Reddit": 8,
-      "Hugging Face": 4,
-      "TechCrunch": 3,
-      "The Hacker News": 2,
-      "Ars Technica": 1,
-      "MIT Tech Review": 1,
-      "VentureBeat": 1,
-      "AAIF": 1,
-      "KrebsOnSecurity": 1,
-      "ADTmag": 1,
-      "Forbes": 1,
-      "WIRED": 1,
-      "Anthropic (RSI Paper)": 1,
-      "Financial Times": 1,
-      "Google DeepMind": 2,
-      "The New Stack": 1,
-      "MiniMax": 1
+      "Anthropic": 1,
+      "GitHub": 41,
+      "Hacker News": 4,
+      "OpenAI": 5
     }
   },
   "highlights": [
     {
-      "title": "Anthropic publishes 'When AI Builds Itself' — recursive self-improvement benchmark data shows Claude improving autonomously",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/institute/recursive-self-improvement",
-      "meta": "June 5-9, 2026 · RSI paper · Claude 76% coding success",
-      "topics": [
-        "Major labs",
-        "Safety",
-        "Evaluation",
-        "Tool use"
-      ],
-      "publishedAt": "2026-06-08T18:00:00Z",
-      "score": 9900,
-      "why": "Anthropic publishes the most consequential AI alignment paper of 2026: Claude's coding success rate hit 76% in May 2026, its next-step accuracy on research tasks grew from 51% (Opus 4.5, Nov 2025) to 64% (Mythos Preview, Apr 2026), and Claude-powered agents autonomously solved nearly all of a key AI safety research challenge. Anthropic warns that recursive self-improvement — AI designing and building its own successor — may arrive within years, not decades. The paper includes the first rigorous benchmark data on how fast AI is accelerating AI R&D."
-    },
-    {
-      "title": "Apple WWDC 2026 Day 1: Gemini-powered Siri revealed with 3-tier architecture — on-device 3B model + PCC + 1.2T Gemini",
-      "source": "Apple/MacRumors",
-      "url": "https://www.macrumors.com/2026/06/08/apple-reveals-new-ai-architecture/",
-      "meta": "June 8, 2026 · 3-tier Siri · Core AI replaces Core ML · iOS 27",
-      "topics": [
-        "Major labs",
-        "Voice and multimodal",
-        "Interfaces"
-      ],
-      "publishedAt": "2026-06-08T17:40:00Z",
-      "score": 9800,
-      "why": "Apple's WWDC keynote delivered: a 3-tier AI architecture — on-device Apple Foundation Models (~3B params) for simple tasks, Private Cloud Compute for medium complexity, and Google Gemini (1.2T custom model, ~$1B/year) for hard problems. Core AI replaces Core ML as the developer framework. Siri gets a dedicated app with conversation history, expressive voice controls, and cross-app reasoning on iOS 27, macOS 27, and visionOS. The 'agent as OS' thesis got its biggest production deployment yet."
-    },
-    {
-      "title": "OpenAI plans biggest ChatGPT revamp since 2022 — superapp with coding tools, AI agents, and third-party integrations ahead of IPO",
-      "source": "OpenAI/Financial Times",
-      "url": "https://nypost.com/2026/06/08/business/openai-is-giving-chatgpt-its-biggest-makeover-yet-with-plans-for-superapp/",
-      "meta": "June 7-8, 2026 · Superapp · IPO prep · Codex inside ChatGPT",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Industry",
-        "Interfaces"
-      ],
-      "publishedAt": "2026-06-07T12:00:00Z",
-      "score": 9700,
-      "why": "The Financial Times reports OpenAI is planning the most radical ChatGPT overhaul since its 2022 launch — rebuilding it as a superapp that bundles Codex coding tools, AI agents, and third-party integrations to drive revenue ahead of a planned IPO. Codex capabilities are expected to appear directly within ChatGPT 'in the coming weeks.' This is OpenAI's response to Claude Code's breakout success and the agent economy's rapid maturation."
-    },
-    {
-      "title": "Google Gemma 4 12B — open multimodal model runs local agent workflows on laptops with 16GB RAM",
-      "source": "Google DeepMind",
-      "url": "https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/",
-      "meta": "June 3, 2026 · 12B params · 16GB RAM · 256K context · Apache 2.0",
-      "topics": [
-        "Open weights",
-        "Major labs",
-        "Tool use",
-        "Interfaces"
-      ],
-      "publishedAt": "2026-06-03T14:00:00Z",
-      "score": 9600,
-      "why": "Google DeepMind's Gemma 4 12B brings agentic, multimodal AI to ordinary laptops with 16GB RAM under Apache 2.0 license. Unified encoder-free architecture handles text, image, audio, and video natively with 256K context. Comes with Google AI Edge tooling for local agent deployment — dynamic Python code execution, offline voice dictation. Nearly matches the twice-as-large 26B model on benchmarks while running entirely on consumer hardware. This is the strongest open-weight local agent model to date."
-    },
-    {
-      "title": "Microsoft opens Visual Studio AI layer — agents embedded in debugger and profiler, supports outside models",
-      "source": "Microsoft",
-      "url": "https://thenewstack.io/microsoft-visual-studio-ai-agents/",
-      "meta": "June 8, 2026 · Multi-model AI · Debugger agents · Profiler agents",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Tool use"
-      ],
-      "publishedAt": "2026-06-08T14:00:00Z",
-      "score": 9300,
-      "why": "Microsoft opens Visual Studio's AI layer to outside models and embeds agents directly into the debugger and profiler — a response to enterprises left behind by Copilot's single-model approach. This lets teams bring their own models (Claude, Gemini, open-source) into the IDE and get agent assistance inside debugging and performance profiling sessions. A major shift in how enterprise IDE agent integration works."
-    },
-    {
-      "title": "NVIDIA Cosmos 3 — first open omnimodal world foundation model for Physical AI",
-      "source": "NVIDIA",
-      "url": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf",
-      "meta": "June 1, 2026 · Text/Image/Video/Audio/Action · Open weights",
-      "topics": [
-        "Open weights",
-        "Major labs",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-06-01T15:00:00Z",
-      "score": 9100,
-      "why": "NVIDIA releases Cosmos 3, the first open 'omnimodal' world foundation model that jointly processes text, image, video, audio, and action for Physical AI — robotics, autonomous vehicles, and embodied agents. Ranked best open-source Text-to-Image and Image-to-Video by Artificial Analysis. This extends the agent model paradigm beyond language into physical world understanding."
-    },
-    {
-      "title": "MiniMax M3 — first open-weights model to combine frontier coding + 1M context + native multimodality",
-      "source": "MiniMax",
-      "url": "https://www.minimax.io/blog/minimax-m3",
-      "meta": "June 1, 2026 · Open weights · 1M context · Frontier coding",
-      "topics": [
-        "Open weights",
-        "Coding agents",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-06-01T12:00:00Z",
-      "score": 8900,
-      "why": "MiniMax M3 is the first open-weights model to stack frontier-level coding performance, a million-token context window, and native multimodality into a single architecture — capabilities that were previously only available in closed-source frontier models. Together with NVIDIA Nemotron 3 Ultra and Qwen3.7-Plus, the open-weight agent ecosystem now has genuine competition for closed frontier models."
-    },
-    {
-      "title": "Miasma Worm weaponizes AI coding agents — 73 Microsoft GitHub repos disabled",
-      "source": "The Hacker News",
-      "url": "https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html",
-      "meta": "June 5, 2026 · Self-replicating · AI config injection",
-      "topics": [
-        "Safety",
-        "Coding agents",
-        "Supply chain"
-      ],
-      "publishedAt": "2026-06-05T14:00:00Z",
-      "score": 9800,
-      "why": "The first self-replicating worm specifically targeting AI coding agents through their config files (Claude Code, Cursor, VS Code settings). This is the agent ecosystem's Log4j moment — a supply-chain attack vector that affects every team using AI coding agents, across every vendor. 73 repos disabled across 4 Microsoft orgs is just the opening salvo."
-    },
-    {
-      "title": "AI agent uncovers 21 zero-day vulnerabilities in FFmpeg — cost ~$1,000",
-      "source": "The Hacker News",
-      "url": "https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html",
-      "meta": "June 5, 2026 · 20-year-old bugs · $1k cost",
+      "title": "Harness engineering: Leveraging Codex in an agent-first world",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/harness-engineering/",
+      "meta": "295 pts · 201 comments",
       "topics": [
         "Tool use",
         "Major labs",
         "Coding agents"
       ],
       "publishedAt": "2026-06-05T18:20:06Z",
-      "score": 1263,
+      "score": 1268,
       "summary": "",
       "why": "Deep engineering posts about how agent loops actually work internally — tool sequencing, context windows, error recovery — are more valuable than most product announcements."
     },
     {
-      "title": "Microsoft Build 2026: MAI-Thinking-1 (1T MoE reasoning model), Agent Framework GA, Windows as agent platform",
-      "source": "Microsoft",
-      "url": "https://mer.vin/2026/06/mai-thinking-1-microsofts-in-house-reasoning-moe-for-code-math-and-foundry/",
-      "meta": "June 2, 2026 · 7 in-house models · Agent Framework GA",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-06-02T17:00:00Z",
-      "score": 9400,
-      "why": "Microsoft's biggest AI agent infrastructure push ever: MAI-Thinking-1 (1T param MoE, 35B active, trained without OpenAI data) is their first in-house reasoning model, plus 7 total models. Agent Framework GA converges AutoGen + Semantic Kernel into a single commercially supported SDK. Windows Agent Runtime makes Windows an agent platform — not just an app runtime. This is Microsoft's 'full agent stack' moment."
-    },
-    {
-      "title": "NVIDIA Nemotron 3 Ultra — 550B open MoE with 1M-token context for long-running agents",
-      "source": "NVIDIA",
-      "url": "https://www.digitalapplied.com/blog/nvidia-nemotron-3-ultra-550b-open-reasoning-model-2026",
-      "meta": "June 4, 2026 · 550B MoE · 1M context · Mamba-2/Transformer hybrid",
+      "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
+      "url": "https://openai.com/index/wasmer",
+      "publishedAt": "Wed, 03 Jun 2026 12:00:00 GMT",
+      "source": "OpenAI",
+      "meta": "Wed, 03 Jun 2026 12:00:00 GMT",
       "topics": [
         "Tool use",
         "Major labs",
@@ -229,7 +76,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105072 stars · updated Mon, 08 Jun 2026 16:39:59 UTC",
+      "meta": "105066 stars · updated Mon, 08 Jun 2026 21:35:55 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -237,7 +84,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 658628,
+      "score": 658572,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -245,127 +92,17 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8402 stars · updated Mon, 08 Jun 2026 16:55:19 UTC",
+      "meta": "8403 stars · updated Mon, 08 Jun 2026 21:21:56 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
         "Open weights",
         "Major labs"
       ],
-      "publishedAt": "2026-06-05T17:00:00Z",
-      "score": 8800,
-      "why": "OpenAI's first dedicated prompt-injection defense ships just days after the Meta chatbot hack. Lockdown Mode restricts what ChatGPT can be instructed to do, and Elevated Risk labels flag capabilities that could be exploited. This is the industry's first 'seatbelt mandate' moment — product-level security architecture responding to a live attack."
-    },
-    {
-      "title": "Moltbook AI Agent social network — 900K agents collaborating, database exposed",
-      "source": "KrebsOnSecurity",
-      "url": "https://www.schneier.com/blog/archives/2026/06/hacking-metas-ai-chatbot.html",
-      "meta": "June 2026 · 900K agents · 400GB data leak",
-      "topics": [
-        "Safety",
-        "Multi-agent workflows",
-        "Industry"
-      ],
-      "publishedAt": "2026-06-05T20:00:00Z",
-      "score": 8200,
-      "why": "An AI agent social network — Moltbook — had its entire database exposed, revealing 900K autonomous agents collaborating on tasks across a social graph. The leaked data shows the scale of autonomous agent-to-agent communication already happening in production. Security posture of agent platforms is now a major concern."
-    },
-    {
-      "title": "CDT Report: 37 dark patterns in ChatGPT, Claude, and Gemini — first systematic catalog",
-      "source": "CDT",
-      "url": "https://aiweekly.co/ai-news-today/openai-news",
-      "meta": "May 2026 · 37 patterns · ChatGPT, Claude, Gemini, Replika",
-      "topics": [
-        "Safety",
-        "Interfaces",
-        "Major labs"
-      ],
-      "publishedAt": "2026-05-28T12:00:00Z",
-      "score": 8000,
-      "why": "The Center for Digital Technology published the first systematic catalog of 37 manipulative design patterns embedded across ChatGPT, Claude, Gemini, Replika, and Character.AI. This is the first regulatory-grade taxonomy of dark patterns in AI agent interfaces and will directly shape upcoming AI transparency legislation."
-    },
-    {
-      "title": "GitHub Copilot moves to AI Credits usage-based billing — June 1, 2026",
-      "source": "GitHub",
-      "url": "https://findskill.ai/blog/github-copilot-ai-credits-billing-june-2026/",
-      "meta": "June 1, 2026 · Usage-based billing · AI Credits",
-      "topics": [
-        "Coding agents",
-        "Industry",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-06-01T00:00:00Z",
-      "score": 7500,
-      "why": "Every Copilot plan moves from flat-fee subscription to usage-based AI Credits billing. Agentic coding consumption is now metered directly — completions stay free, but agentic loops burn credits fast. This pushes developers toward local models and cost-aware agent architectures. Major backlash from the GitHub community on May 30."
-    },
-    {
-      "title": "Agent browser war goes mainstream — Atlas, Comet, Chrome Auto Browse all GA",
-      "source": "Forbes",
-      "url": "https://nohacks.co/blog/agentic-browser-landscape-2026",
-      "meta": "June 2026 · Atlas · Comet · Chrome Auto Browse",
-      "topics": [
-        "Interfaces",
-        "Tool use",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-06-06T12:00:00Z",
-      "score": 7300,
-      "why": "The browser itself is becoming the agent interface. ChatGPT Atlas (OpenAI's AI-native browser), Perplexity Comet (now cross-platform GA on iOS, Android, Mac, Windows), and Chrome Auto Browse with Gemini on a two-week release cycle — three major platforms racing to make the browser the primary agent interaction surface. This is a structural shift from search-based to agent-assisted browsing."
-    },
-    {
-      "title": "AI coding agents now used in 22-28% of GitHub projects — large-scale adoption study",
-      "source": "ADTmag",
-      "url": "https://adtmag.com/articles/2026/05/27/ai-coding-agents-are-already-spreading-across-github.aspx",
-      "meta": "May 27, 2026 · 128K projects · 22-28% adoption",
-      "topics": [
-        "Coding agents",
-        "Industry",
-        "Evaluation"
-      ],
-      "publishedAt": "2026-05-27T12:00:00Z",
-      "score": 7100,
-      "why": "A large-scale academic-style analysis of 128,018 software projects found AI coding-agent adoption rates of 22.20% to 28.66%. This is the first rigorous measurement of how deeply coding agents have penetrated real software development — not a demo or a survey, but actual project-level analysis. Coding agents have crossed the chasm from novelty to infrastructure."
-    },
-    {
-      "title": "Claude Agent SDK billing split — $200/month credit, June 15 enforcement",
-      "source": "Anthropic",
-      "url": "https://news.ycombinator.com/item?id=48130374",
-      "meta": "June 2026 · $200/mo Agent SDK credit · June 15 deadline",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Industry"
-      ],
-      "publishedAt": "2026-06-05T12:00:00Z",
-      "score": 7800,
-      "why": "Starting June 15, Claude Agent SDK and programmatic agent usage come off unlimited. Max subscribers get $200/month in Agent SDK credits; everything beyond that is metered. This is the clearest sign yet that programmatic agent usage is growing fast enough to need its own pricing tier — the agent economy's billing model is emerging in real time."
-    },
-    {
-      "title": "OpenAI Codex hits 5M+ weekly users, Codex Sites + role-specific plugins roll out",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
-      "meta": "June 2, 2026 · 6 role plugins · Sites · Enterprise GA",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Tool use"
-      ],
-      "publishedAt": "2026-06-02T17:00:00Z",
-      "score": 9600,
-      "why": "Codex now serves 5M+ weekly users as OpenAI pivots it from developer tool to universal work platform. Role-specific plugins for Engineering, Product, Design, Research, Data Science, and Support. Codex Sites lets non-developers build full apps from prompts. The 'agent as universal interface' bet is officially in production."
-    },
-    {
-      "title": "Anthropic files confidential S-1 with SEC — IPO signals agent industry maturation",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
-      "meta": "June 2026 · Draft S-1 · ~$1T valuation target",
-      "topics": [
-        "Major labs",
-        "Industry"
-      ],
-      "publishedAt": "2026-06-03T12:00:00Z",
-      "score": 8500,
-      "why": "Anthropic going public is the strongest signal that the agent-AI industry is maturing from R&D lab to publicly traded business. An IPO creates financial transparency for the entire supply chain and sets a valuation benchmark for the category."
+      "publishedAt": "2025-02-09T15:41:32Z",
+      "score": 51986,
+      "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
   ],
   "sourceSections": [
@@ -374,240 +111,26 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "Anthropic 'When AI Builds Itself' — recursive self-improvement benchmarks",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/institute/recursive-self-improvement",
-          "meta": "June 8, 2026 · RSI paper · 76% coding success",
-          "topics": [
-            "Major labs",
-            "Safety",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-06-08T18:00:00Z",
-          "score": 9900,
-          "why": "Anthropic's most consequential alignment paper: Claude's autonomous coding success rate is 76%, research next-step accuracy grew from 51% to 64% in 6 months, and agents autonomously solved nearly all of a key AI safety challenge. Recursive self-improvement is no longer theoretical."
-        },
-        {
-          "title": "Apple WWDC 2026: Gemini-powered Siri with 3-tier architecture — 3B on-device + PCC + 1.2T Gemini",
-          "source": "Apple/MacRumors",
-          "url": "https://www.macrumors.com/2026/06/08/apple-reveals-new-ai-architecture/",
-          "meta": "June 8, 2026 · 3-tier · Core AI · iOS 27",
-          "topics": [
-            "Major labs",
-            "Voice and multimodal",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-06-08T17:40:00Z",
-          "score": 9800,
-          "why": "Apple ships a 3-tier AI architecture: on-device Apple Foundation Models (3B), Private Cloud Compute for mid-complexity, and custom 1.2T Gemini for hard problems. Core AI replaces Core ML. Siri gets a dedicated app. The largest consumer agent deployment."
-        },
-        {
-          "title": "Google Gemma 4 12B — local agentic AI on laptops under Apache 2.0",
-          "source": "Google DeepMind",
-          "url": "https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/",
-          "meta": "June 3, 2026 · 12B · 16GB RAM · 256K context",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-03T14:00:00Z",
-          "score": 9600,
-          "why": "Open multimodal model running on 16GB laptops. Unified encoder-free architecture handles text, image, audio, video. Google AI Edge tooling enables local agent deployment. Nearly matches 26B model benchmarks."
-        },
-        {
-          "title": "OpenAI plans ChatGPT 'superapp' revamp with agents and Codex inside",
-          "source": "OpenAI/Financial Times",
-          "url": "https://nypost.com/2026/06/08/business/openai-is-giving-chatgpt-its-biggest-makeover-yet-with-plans-for-superapp/",
-          "meta": "June 7, 2026 · Superapp · IPO prep",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Industry"
-          ],
-          "publishedAt": "2026-06-07T12:00:00Z",
-          "score": 9700,
-          "why": "Biggest ChatGPT overhaul since 2022: bundling Codex, AI agents, and third-party integrations. IPO-driven strategic pivot to superapp model."
-        },
-        {
-          "title": "Microsoft opens Visual Studio AI layer — multi-model agents in debugger and profiler",
-          "source": "Microsoft",
-          "url": "https://thenewstack.io/microsoft-visual-studio-ai-agents/",
-          "meta": "June 8, 2026 · Multi-model · Debugger · Profiler",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-08T14:00:00Z",
-          "score": 9300,
-          "why": "VS opens AI layer to outside models (Claude, Gemini, open-source). Agents embedded directly in debugging and performance profiling — enterprise IDE agent integration reaches a new level."
-        },
-        {
-          "title": "NVIDIA Cosmos 3 — open omnimodal world foundation model for Physical AI",
-          "source": "NVIDIA",
-          "url": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf",
-          "meta": "June 1, 2026 · Open weights · Text/Video/Audio/Action",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-01T15:00:00Z",
-          "score": 9100,
-          "why": "First open omnimodal world model handling text, image, video, audio, and action for robotics and Physical AI. Extends agent paradigm beyond language."
-        },
-        {
-          "title": "MiniMax M3 — open-weights frontier coding + 1M context + native multimodality",
-          "source": "MiniMax",
-          "url": "https://www.minimax.io/blog/minimax-m3",
-          "meta": "June 1, 2026 · 1M context · Open weights",
-          "topics": [
-            "Open weights",
-            "Coding agents",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-01T12:00:00Z",
-          "score": 8900,
-          "why": "First open-weights model combining frontier coding, million-token context, and native multimodality. Closed-source-level capabilities in an open package."
-        },
-        {
-          "title": "Apple WWDC 2026: Gemini-powered Siri with 1.2T param custom model",
-          "source": "Apple/MacRumors",
-          "url": "https://www.macrumors.com/2026/04/22/google-gemini-powered-siri-2026/",
-          "meta": "June 8, 2026 · 1.2T param · $1B/year licensing",
-          "topics": [
-            "Major labs",
-            "Voice and multimodal",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-06-08T10:00:00Z",
-          "score": 9700,
-          "why": "The largest consumer AI agent deployment in history: Siri rebuilt on a custom 1.2T-param Gemini model at ~$1B/year. Always-on persistent agent integrated at the OS level across iOS 27, macOS 27, visionOS."
-        },
-        {
-          "title": "Microsoft MAI-Thinking-1 + Agent Framework GA — 7 in-house models, Windows agent platform",
-          "source": "Microsoft",
-          "url": "https://mer.vin/2026/06/mai-thinking-1-microsofts-in-house-reasoning-moe-for-code-math-and-foundry/",
-          "meta": "June 2, 2026 · 1T MoE · Agent Framework GA · 7 models",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-02T17:00:00Z",
-          "score": 9400,
-          "why": "Microsoft's full agent-stack push: MAI-Thinking-1 (1T MoE, 35B active, trained without OpenAI data), MAI-Code-1-Flash, Agent Framework GA (AutoGen + Semantic Kernel convergence), and Windows Agent Runtime."
-        },
-        {
-          "title": "NVIDIA Nemotron 3 Ultra — 550B open MoE with 1M context for agents",
-          "source": "NVIDIA",
-          "url": "https://www.digitalapplied.com/blog/nvidia-nemotron-3-ultra-550b-open-reasoning-model-2026",
-          "meta": "June 4, 2026 · 1M context · 5-6x faster inference",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-04T15:00:00Z",
-          "score": 9300,
-          "why": "Open-weight challenger with 1M-token context — hybrid Mamba-2/Transformer architecture delivers 5-6x faster inference than comparable open LLMs. Immediately the strongest open option for long-running agents."
-        },
-        {
-          "title": "OpenAI Lockdown Mode — prompt injection protection ships",
+          "title": "Harness engineering: Leveraging Codex in an agent-first world",
           "source": "OpenAI",
           "url": "https://openai.com/index/harness-engineering/",
-          "meta": "294 pts · 200 comments",
+          "meta": "295 pts · 201 comments",
           "topics": [
             "Tool use",
             "Major labs",
-            "Safety"
+            "Coding agents"
           ],
-          "publishedAt": "2026-06-05T17:00:00Z",
-          "score": 8800,
-          "why": "First dedicated prompt-injection defense from a major lab. Lockdown Mode restricts instruction-following for sensitive operations. Elevated Risk labels flag exploitable capabilities. Response to the Meta chatbot hack."
+          "publishedAt": "2026-06-05T18:20:06Z",
+          "score": 1268,
+          "summary": "",
+          "why": "Deep engineering posts about how agent loops actually work internally — tool sequencing, context windows, error recovery — are more valuable than most product announcements."
         },
         {
-          "title": "OpenAI Codex hits 5M+ weekly users with role plugins + Sites GA",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
-          "meta": "June 2, 2026 · 6 roles · Sites · Enterprise",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-02T17:00:00Z",
-          "score": 9600,
-          "why": "5M+ weekly users, 6 role-specific plugins, Codex Sites for prompt-to-app. The most aggressive expansion of a coding agent's addressable market this year."
-        },
-        {
-          "title": "Anthropic S-1 filing — IPO in motion",
+          "title": "A harness for every task: dynamic workflows in Claude Code",
           "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
-          "meta": "June 3, 2026 · IPO · ~$1T valuation",
+          "url": "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+          "meta": "2 pts · 0 comments",
           "topics": [
-            "Major labs",
-            "Industry"
-          ],
-          "publishedAt": "2026-06-03T12:00:00Z",
-          "score": 8500,
-          "why": "Industry-wide maturation signal — Anthropic's IPO sets a valuation benchmark for the entire agent-AI category."
-        },
-        {
-          "title": "Claude Agent SDK billing split — $200 credit, June 15 enforcement",
-          "source": "Anthropic",
-          "url": "https://news.ycombinator.com/item?id=48130374",
-          "meta": "June 5, 2026 · Agent SDK billing",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Industry"
-          ],
-          "publishedAt": "2026-06-05T12:00:00Z",
-          "score": 7800,
-          "why": "Programmatic agent usage gets its own pricing tier — $200/month Agent SDK credit for Max subscribers, metered beyond. The agent economy's billing model is taking shape."
-        },
-        {
-          "title": "Meta Business Agent — Meta enters enterprise AI race",
-          "source": "Meta",
-          "url": "https://about.fb.com/news/2026/06/meta-business-agent/",
-          "meta": "June 3, 2026 · WhatsApp/Messenger/Instagram",
-          "topics": [
-            "Major labs",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-03T10:00:00Z",
-          "score": 7200,
-          "why": "Meta directly enters enterprise agents — AI for automating business operations across WhatsApp, Messenger, Instagram. 1M+ businesses already using earlier versions. Initially free, paid tiers coming."
-        }
-      ]
-    },
-    {
-      "key": "agent-security",
-      "label": "Agent Security",
-      "items": [
-        {
-          "title": "Miasma Worm: self-replicating worm targets AI coding agents — 73 Microsoft repos hit",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html",
-          "meta": "June 5, 2026 · 73 repos · 286 npm packages",
-          "topics": [
-            "Safety",
-            "Coding agents",
-            "Supply chain"
-          ],
-          "publishedAt": "2026-06-05T14:00:00Z",
-          "score": 9800,
-          "why": "The agent ecosystem's Log4j moment — a self-replicating worm uses AI coding agent config files (.vscode/tasks.json, Claude Code configs) to spread across GitHub repos, inject 4.3MB droppers, and steal cloud credentials. 73 repos disabled, 286 malicious npm packages across 57 packages."
-        },
-        {
-          "title": "AI agent uncovers 21 zero-days in FFmpeg — bug hunting at $1k cost",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html",
-          "meta": "June 5, 2026 · 20-year-old bugs · $1k cost",
-          "topics": [
-            "Safety",
             "Tool use",
             "Multi-agent workflows",
             "Major labs",
@@ -749,7 +272,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105072 stars · updated Mon, 08 Jun 2026 16:39:59 UTC",
+          "meta": "105066 stars · updated Mon, 08 Jun 2026 21:35:55 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -757,7 +280,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 658628,
+          "score": 658572,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -765,7 +288,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8402 stars · updated Mon, 08 Jun 2026 16:55:19 UTC",
+          "meta": "8403 stars · updated Mon, 08 Jun 2026 21:21:56 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -773,7 +296,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 51978,
+          "score": 51986,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -781,14 +304,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "4939 stars · updated Fri, 05 Jun 2026 04:47:33 UTC",
+          "meta": "4942 stars · updated Fri, 05 Jun 2026 04:47:33 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 30170,
+          "score": 30190,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -807,98 +330,12 @@
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
       ]
-    },
-    {
-      "key": "open-weights",
-      "label": "Open-Weight Model Releases",
-      "items": [
-        {
-          "title": "Google Gemma 4 12B — local agentic AI on laptops",
-          "source": "Google DeepMind",
-          "url": "https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/",
-          "meta": "June 3, 2026 · 12B · 16GB RAM · Apache 2.0",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-03T14:00:00Z",
-          "score": 9600,
-          "why": "Runs on 16GB laptops. Unified encoder-free multimodal. Google AI Edge for local agent deployment. Nearly matches 26B model."
-        },
-        {
-          "title": "NVIDIA Cosmos 3 — first open omnimodal world foundation model",
-          "source": "NVIDIA",
-          "url": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf",
-          "meta": "June 1, 2026 · Open weights",
-          "topics": [
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2026-06-01T15:00:00Z",
-          "score": 9100,
-          "why": "First open model processing text, image, video, audio, action jointly. Built for Physical AI."
-        },
-        {
-          "title": "MiniMax M3 — frontier coding + 1M context + native multimodality",
-          "source": "MiniMax",
-          "url": "https://www.minimax.io/blog/minimax-m3",
-          "meta": "June 1, 2026 · 1M context",
-          "topics": [
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-01T12:00:00Z",
-          "score": 8900,
-          "why": "First open-weights model combining frontier coding, 1M context, and native multimodality."
-        }
-      ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Recursive self-improvement goes from theoretical to benchmarked — Anthropic's RSI data changes the timeline",
-      "signalCount": 32,
-      "whyItMatters": "Anthropic's 'When AI Builds Itself' paper is the first to publish rigorous benchmark data on AI accelerating AI R&D: Claude's coding success rate is 76%, next-step research accuracy went from 51% to 64% in 6 months, and agents autonomously solved nearly all of a key AI safety challenge. This isn't speculation — it's measured data showing AI systems are improving the pace of AI research faster than expected. The paper's central claim — that recursive self-improvement (AI designing and building its own successor) may arrive within years, not decades — has sparked the most substantive safety debate since the GPT-4 era. Every agent builder needs to understand this trajectory.",
-      "signals": [
-        "Claude coding success rate: 76% in May 2026 (up from ~50% in late 2025)",
-        "Next-step research accuracy: 51% (Opus 4.5, Nov 2025) → 64% (Mythos Preview, Apr 2026)",
-        "Claude-powered agents solved nearly all of a key AI safety research challenge autonomously",
-        "Anthropic asks rivals to pause — 'AI may soon design and train its own successors'",
-        "Forbes, Scientific American, Times of India, Indian Express all cover the paper",
-        "HN and Reddit debates: 'is this actually different from automation?' vs 'this is the biggest story of 2026'"
-      ]
-    },
-    {
-      "topic": "Open-weight agent models reach critical mass — Gemma 4 12B, MiniMax M3, Cosmos 3, Nemotron 3 all land in one week",
+      "topic": "Tool use",
       "signalCount": 26,
-      "whyItMatters": "In a single week, the open-weight ecosystem added: Gemma 4 12B (local laptops, Apache 2.0, multimodal), MiniMax M3 (frontier coding + 1M context), NVIDIA Cosmos 3 (omnimodal world model), and NVIDIA Nemotron 3 Ultra (550B MoE, 1M context). This is an unprecedented concentration of capable open models — each targeting a different agent use case. The open-vs-closed gap has narrowed to the point where for specific workloads (local deployment, long context, fine-tuning), open models are now the pragmatic choice, not just the ideological one.",
-      "signals": [
-        "Gemma 4 12B: runs on 16GB laptops, nearly matches 26B benchmarks, Apache 2.0",
-        "MiniMax M3: first open-weights model with frontier coding + 1M context + native multimodality",
-        "NVIDIA Cosmos 3: first open omnimodal world model for Physical AI",
-        "NVIDIA Nemotron 3 Ultra: 550B MoE, 55B active, 1M context, 5-6x faster inference",
-        "Reddit testing shows Gemma 4 12B works as local agent on M5 Pro and 4080 Super",
-        "Kimi K2.6 already leading open-weights on Artificial Analysis Index (54 points)",
-        "Open-weight coding models now competitive with Claude and GPT on specific benchmarks"
-      ]
-    },
-    {
-      "topic": "The 'agent platform' war escalates — Apple Siri, OpenAI superapp, Microsoft VS, Google Gemma local agents",
-      "signalCount": 30,
-      "whyItMatters": "Four major platforms announced agent infrastructure plays in a 48-hour window: Apple's 3-tier Siri architecture (WWDC), OpenAI's ChatGPT superapp plan (FT report), Microsoft opening VS's AI layer to multi-model agents (Build follow-up), and Google's Gemma 4 12B with local agent tooling. The common thread: every platform is converging on the same insight — the OS, the IDE, the browser, and the chat app are all becoming agent runtimes. The differentiation isn't in the model anymore; it's in the integration depth, the tool ecosystem, and the trust model. The agent platform war has officially begun.",
-      "signals": [
-        "Apple WWDC: 3-tier Siri architecture, Core AI replaces Core ML, iOS 27",
-        "OpenAI FT report: biggest ChatGPT revamp since 2022, superapp with Codex + agents",
-        "Microsoft VS: multi-model AI layer, agents in debugger + profiler",
-        "Google Gemma 4 12B: local agent deployment on laptops with Google AI Edge",
-        "CDT: 37 dark patterns catalogued across all major agent platforms",
-        "GitHub Copilot AI Credits: usage-based billing for agentic coding from June 1"
-      ]
-    },
-    {
-      "topic": "Agent supply chain security — the Miasma worm changes everything",
-      "signalCount": 28,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "OpenAI: Harness engineering: Leveraging Codex in an agent-first world",
@@ -908,7 +345,7 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 27,
+      "signalCount": 24,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: Harness engineering: Leveraging Codex in an agent-first world",
@@ -917,75 +354,68 @@
       ]
     },
     {
-      "topic": "NVIDIA enters the open-weight agent model race — Nemotron 3 Ultra",
-      "signalCount": 18,
-      "whyItMatters": "NVIDIA's 550B open MoE model with 1M-token context and hybrid Mamba-2/Transformer architecture is purpose-built for long-running agent tasks. This is the strongest open-weight option for agents needing long context — RAG, multi-turn code generation, document-level reasoning. Combined with Qwen3.7-Plus and Mistral Medium 3.5, the open-weight agent ecosystem now has legitimate competition for closed frontier models. The gap between open and closed is narrowing for specific use cases (long context, local deployment, fine-tuning).",
+      "topic": "Interfaces",
+      "signalCount": 19,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
-        "NVIDIA Nemotron 3 Ultra: 550B MoE, 55B active, 1M context",
-        "Hybrid Mamba-2/Transformer — 5-6x faster inference than comparable open LLMs",
-        "Released on Hugging Face, ModelScope, OpenRouter",
-        "Qwen3.7-Plus: vision + tool invocation for agents",
-        "Mistral Medium 3.5: 77.6% SWE-Bench Verified, 256K context",
-        "local-deep-research: ~95% SimpleQA on a single 3090"
+        "Hacker News: Show HN: Formally verified polygon intersection – Opus 4.8 oneshots, prev failed",
+        "OpenAI: How Wasmer used Codex to build a Node.js runtime for the edge",
+        "GitHub: JimLiu/baoyu-design"
       ]
     },
     {
-      "topic": "OpenAI Codex transitions from developer tool to universal work platform",
-      "signalCount": 24,
-      "whyItMatters": "5M+ weekly users, six role-specific plugins (Engineering, Product, Design, Research, Data Science, Support), Codex Sites for prompt-to-app, and GA on AWS Bedrock — Codex is no longer a coding agent. It's OpenAI's bet on the 'agent as universal interface' for all knowledge workers. The key tension: role plugins vs the 'natural language programming' skepticism from HN. Early data (15-minute CRUD apps, 5M weekly users) suggests adoption is real, but long-term maintenance and iteration workflows remain unproven.",
+      "topic": "Open weights",
+      "signalCount": 15,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
-        "5M+ weekly users — up from ~2M in March 2026",
-        "6 role-specific plugins launched at 'Intelligence at Work' event",
-        "Codex Sites: build full apps from natural language prompts",
-        "Enterprise GA on Amazon Bedrock with Managed Agents",
-        "VentureBeat: 'Codex lets agents build interactive enterprise workspaces'",
-        "Reddit validation: full SaaS app in one afternoon",
-        "HN skepticism: 'prompt engineering is still a skill barrier'"
+        "GitHub: JimLiu/baoyu-design",
+        "GitHub: Mrbaeksang/deepcloak",
+        "GitHub: mworldorg/markdown-memory"
+      ]
+    },
+    {
+      "topic": "Major labs",
+      "signalCount": 14,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "OpenAI: Harness engineering: Leveraging Codex in an agent-first world",
+        "Anthropic: A harness for every task: dynamic workflows in Claude Code",
+        "OpenAI: How Endava is redesigning software delivery around AI agents"
+      ]
+    },
+    {
+      "topic": "Multi-agent workflows",
+      "signalCount": 12,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "signals": [
+        "Anthropic: A harness for every task: dynamic workflows in Claude Code",
+        "OpenAI: Codex for every role, tool, and workflow",
+        "GitHub: hoolulu/deep-research"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Reproduce Anthropic's RSI findings — measure how fast an agent improves its own coding ability",
-      "why": "Anthropic's data showing 76% coding success rate and 64% next-step research accuracy is the most important empirical finding this cycle. Reproducing this on a different model family (Qwen, Nemotron, or GPT-5.5) would validate whether RSI is model-specific or a general phenomenon.",
-      "prompt": "Design an experiment to measure 'self-improvement velocity': 1) Have an agent attempt a set of N coding tasks, 2) Feed the successful trajectories back as in-context examples, 3) Measure the improvement rate over 5-10 iterations. Compare across Claude, GPT-5.5, Qwen3.7-Plus, and Nemotron 3 Ultra. Does the rate of improvement accelerate, and does it differ by model family?"
+      "title": "Audit one deployed enterprise agent workflow",
+      "why": "Codex-on-Dell and SAP-with-Claude are production-scale agent deployments — worth understanding the real friction points.",
+      "prompt": "Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
     },
     {
-      "title": "Test Gemma 4 12B as a local agent backend against cloud Claude/Codex on real workflows",
-      "why": "Gemma 4 12B claims near-26B performance on 16GB laptops. A head-to-head against cloud Claude and Codex on realistic agent workflows (multi-file refactoring, web research, data analysis) would reveal the true local-vs-cloud agent quality gap today.",
-      "prompt": "Set up Gemma 4 12B via Ollama/LM Studio on a Mac with 16GB+ RAM. Build 5 realistic agent workflows (code migration, research synthesis, data pipeline, API integration, bug hunt). Run each with Gemma 4 12B (local), Claude Code (cloud), and Codex (cloud). Measure: completion rate, quality score, time-to-complete, cost-per-task, and human correction effort. Publish as a benchmark."
+      "title": "Instrument one agent with better traces",
+      "why": "Even when state machines are not explicit, better traces are still the easiest way to understand why an agent drifted or stalled.",
+      "prompt": "Log tool calls, retries, and summaries for one real task, then inspect which step actually predicts success or failure."
     },
     {
-      "title": "Build an agent that uses the new 3-tier Apple Siri architecture (simulated)",
-      "why": "Apple's 3-tier Siri architecture (on-device → PCC → Gemini) is the most complex agent routing system ever deployed. Simulating this routing pattern with open models could reveal best practices for tiered agent compute.",
-      "prompt": "Design a 3-tier agent architecture mimicking Apple's: Tier 1 = local 3B model (Gemma 4 12B Q4 quantized as stand-in), Tier 2 = cloud small model, Tier 3 = frontier API. Build a router that classifies task complexity and routes accordingly. Measure cost savings vs always-using-frontier, latency distribution, and user satisfaction per tier. Document the routing logic and failure modes."
-    },
-    {
-      "title": "Simulate the OpenAI superapp — build a multi-agent workspace with Codex-style tools + third-party integrations",
-      "why": "OpenAI's superapp vision combines coding agents, AI agents, and third-party integrations. Building a prototype reveals what's real vs vaporware and what integration challenges exist.",
-      "prompt": "Design and build a mini 'superapp' workspace that integrates: 1) a coding agent (using Claude Code or Codex API), 2) a research agent (web search + synthesis), 3) a data analysis agent (Python + visualization), 4) third-party API integrations (email, calendar, CRM). Use MCP for tool connectivity. Measure: cross-agent context sharing quality, user switching cost, and total task completion time vs using separate tools."
+      "title": "Stress-test one agent across model families",
+      "why": "The model layer is changing quickly enough that the same harness can behave very differently across providers and sizes.",
+      "prompt": "Replay the same agent task on one hosted frontier model and one smaller open model, then compare tool-selection behavior, not just answer quality."
     }
   ],
   "method": [
-    "Anthropic Institute blog for 'When AI Builds Itself' recursive self-improvement paper (June 8)",
-    "MacRumors, Apple ML blog, Bloomberg WWDC live blog for Apple Foundation Models and 3-tier Siri architecture (June 8)",
-    "Financial Times, New York Post, The Rundown AI for OpenAI ChatGPT superapp plan (June 7-8)",
-    "Google Developers Blog, Google DeepMind blog for Gemma 4 12B local agent model (June 3)",
-    "The New Stack, Microsoft Dev Blog for Visual Studio multi-model AI agent layer (June 8)",
-    "NVIDIA Research, Hugging Face for Cosmos 3 omnimodal world foundation model (June 1)",
-    "MiniMax blog for M3 open-weights model with 1M context (June 1)",
-    "Reddit r/LocalLLaMA, r/AI_Agents for community testing of Gemma 4, Cosmos 3, M3",
-    "Hacker News top threads on Anthropic RSI, Apple WWDC, OpenAI superapp, VS AI agents",
-    "Scientific American, Forbes, The Indian Express, Times of India for RSI coverage analysis",
-    "OpenAI blog for Lockdown Mode (June 5), Codex 5M+ weekly users + role plugins (June 2), Codex+Sites product page",
-    "NVIDIA release for Nemotron 3 Ultra 550B (June 4)",
-    "Anthropic blog for confidential S-1 filing, Claude Agent SDK billing split announcement",
-    "The Hacker News, SafeDep, TNW for Miasma worm analysis (June 5)",
-    "The Hacker News, DepthFirst for FFmpeg 21 zero-days agent discovery (June 5)",
-    "KrebsOnSecurity, Schneier on Security for Moltbook data exposure and Meta hack follow-up",
-    "MIT Tech Review, Ars Technica for Meta AI support-bot hack analysis",
-    "Meta Newsroom for Meta Business Agent announcement (June 3)",
-    "Mistral blog for Vibe rebrand and Medium 3.5 agent model",
-    "Qwen blog for Qwen3.7-Plus rollout (June 2)"
+    "Targeted Hacker News searches for high-signal agentic AI posts from the last 7 days",
+    "Reddit weekly top-post scan in LocalLLaMA and ClaudeAI filtered for practical agent-building signals",
+    "Hugging Face model search filtered toward fresh open-weight agent, deep-research, and Qwen-related releases",
+    "Major-lab RSS checks plus official-domain matches surfaced through Hacker News",
+    "GitHub repo and release scans for fresh agent tooling, dashboards, browsers, workspaces, and coding-agent updates"
   ]
 }
