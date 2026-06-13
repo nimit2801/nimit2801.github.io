@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-13T10:33:25Z",
+  "generatedAt": "2026-06-13T14:10:12Z",
   "windowDays": 7,
-  "summary": "This cycle says guardrails on local models close the reliability gap with frontier APIs (Forge: 53%→99%), major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 43,
+    "items": 51,
     "sources": {
-      "GitHub": 34,
+      "GitHub": 42,
       "Hacker News": 5,
       "OpenAI": 4
     }
@@ -83,32 +83,36 @@
       "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
     },
     {
-      "title": "antoinezambelli/forge",
+      "title": "google-gemini/gemini-cli",
       "source": "GitHub",
-      "url": "https://github.com/antoinezambelli/forge",
-      "meta": "2059 stars · updated Fri, 12 Jun 2026 01:45:12 UTC",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "meta": "105235 stars · updated Sat, 13 Jun 2026 00:21:20 UTC",
       "topics": [
         "Tool use",
-        "Multi-agent workflows"
+        "Open weights",
+        "Major labs",
+        "Coding agents"
       ],
-      "publishedAt": "2026-02-16T16:59:06Z",
-      "score": 12892,
-      "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
-      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+      "publishedAt": "2025-04-17T17:04:31Z",
+      "score": 659652,
+      "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
     {
-      "title": "HermannBjorgvin/Clawdmeter",
+      "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
-      "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-      "meta": "1604 stars · updated Mon, 08 Jun 2026 16:46:23 UTC",
+      "url": "https://github.com/LearningCircuit/local-deep-research",
+      "meta": "8462 stars · updated Sat, 13 Jun 2026 14:08:33 UTC",
       "topics": [
-        "Coding agents",
-        "Interfaces"
+        "Tool use",
+        "Evaluation",
+        "Open weights",
+        "Major labs"
       ],
-      "publishedAt": "2026-05-11T03:07:49Z",
-      "score": 10194,
-      "summary": "ESP32 desk dashboard that shows Claude Code usage",
-      "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
+      "publishedAt": "2025-02-09T15:41:32Z",
+      "score": 52358,
+      "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
   ],
   "sourceSections": [
@@ -198,7 +202,7 @@
           "title": "Show HN: HelixDB – A graph database built on object storage",
           "source": "Hacker News",
           "url": "https://github.com/HelixDB/helix-db/tree/main",
-          "meta": "153 pts · 42 comments",
+          "meta": "154 pts · 42 comments",
           "topics": [
             "Memory and state",
             "Open weights",
@@ -206,7 +210,7 @@
             "Interfaces"
           ],
           "publishedAt": "2026-06-10T15:47:31Z",
-          "score": 487,
+          "score": 489,
           "summary": "Hey HN, it’s been just over a year since we launched HelixDB ( https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=43975423 ), a project a friend and I started in college. It’s an OLTP graph database built on object-storage, with native vector search and full-text search (FTS). Why graph, vector and FTS? Graph databases provide a natural cognitive model for data, vectors allow for a semantic understanding of the entities and relationships in the graph, and FTS provides more specific filtering. Many AI-driven applications attempt to combine all of these functionalities by stitching together multiple disconnected systems, but even then there’s no native way to perform joins or queries that span all systems. You still need to handle this logic at the application level. Helix started as a graph DB, but we moved to a hybrid graph&#x2F;vector approach after attempting to build an AI memory system, which led us down the GraphRAG and HybridRAG rabbit hole, where we would need separate graph and vector databases. We knew scalability would be a challenge at each stage of our product&#x27;s development, however our initial focus this past year was to prove out the product through local deployments and was only meant to be run on a single node. Scaling graph DBs remained a difficult and expensive problem we’d have to solve later. Some common ways other graph DBs solve scaling is by duplicating entire datasets across distributed machines (extremely expensive per node), or by sharding the data. Sharding databases is effective and affordable, however, graph data doesn’t have explicit partitions like relational databases do. For example, sharding a relational DB involves splitting up tables. When it comes to graph DBs, the edges can span across any of the partitions, and hopping across multiple machines when traversing nodes is ineffective and computationally expensive. Replicating graph DBs for high availability and better throughput drastically increases the operational cost of the db and still has a limit of how big you can vertically scale. The workload that we’re used for requires storing a huge amount of data for agents, where only a subset of that data is ever needed at any one time. So rather than having the whole thing in memory, we can store it all in object-storage and get the bits we need when they’re needed. Agents benefit from better context, which is achieved from more and better data (more relationships etc). By using S3 as the persistence&#x2F;data layer there is no limit to how big the graph can be or how many relationships you can have, and we can scale to serve throughput and requests by horizontally spinning up nodes and caching relevant subsets of the graph on each node. This way, you get extremely low latency for “hot” data and a p99 of ~100ms for writes and ~50ms for reads from cold storage (S3). Plus you get the benefit of dirt cheap storage. Workloads that HelixDB is currently supporting: - Huge amounts of data (TBs) from which the agents need to search and traverse over - Offering affordable graph storage for companies where cost of graph data is a bottleneck - Consolidating multiple databases, enabling AI agents to have autonomy over companies, helping them become more autonomous. - AI memory - Company brains We’re currently working on our own generalised AI memory layer which will use HelixDB under the hood and be completely open-source. Also, we’re finishing up on pre-filtering for vector search which will allow you to pre-filter based on relationships in the graph, metadata, and sub-graphs. And lastly, GA cloud will be available in the coming weeks. If you want to run Helix locally (either on-disk or in-memory), you can find more info on our github ( https:&#x2F;&#x2F;github.com&#x2F;HelixDB&#x2F;helix-db ) or via our docs ( https:&#x2F;&#x2F;docs.helix-db.com&#x2F;database&#x2F;local-development ). If you’re interested in getting started with our distributed cloud, please email us founders@helix-db.com. Many thanks! Comments and feedback welcome!",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -269,6 +273,53 @@
       "label": "GitHub",
       "items": [
         {
+          "title": "google-gemini/gemini-cli",
+          "source": "GitHub",
+          "url": "https://github.com/google-gemini/gemini-cli",
+          "meta": "105235 stars · updated Sat, 13 Jun 2026 00:21:20 UTC",
+          "topics": [
+            "Tool use",
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2025-04-17T17:04:31Z",
+          "score": 659652,
+          "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+        },
+        {
+          "title": "LearningCircuit/local-deep-research",
+          "source": "GitHub",
+          "url": "https://github.com/LearningCircuit/local-deep-research",
+          "meta": "8462 stars · updated Sat, 13 Jun 2026 14:08:33 UTC",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2025-02-09T15:41:32Z",
+          "score": 52358,
+          "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+        },
+        {
+          "title": "MinishLab/semble",
+          "source": "GitHub",
+          "url": "https://github.com/MinishLab/semble",
+          "meta": "5122 stars · updated Sat, 13 Jun 2026 10:27:43 UTC",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-04-06T14:56:45Z",
+          "score": 31290,
+          "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
+          "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
+        },
+        {
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
@@ -281,67 +332,14 @@
           "score": 12892,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
-        {
-          "title": "HermannBjorgvin/Clawdmeter",
-          "source": "GitHub",
-          "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "1604 stars · updated Mon, 08 Jun 2026 16:46:23 UTC",
-          "topics": [
-            "Coding agents",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-05-11T03:07:49Z",
-          "score": 10194,
-          "summary": "ESP32 desk dashboard that shows Claude Code usage",
-          "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
-        },
-        {
-          "title": "DietrichGebert/ponytail",
-          "source": "GitHub",
-          "url": "https://github.com/DietrichGebert/ponytail",
-          "meta": "1079 stars · updated Sat, 13 Jun 2026 04:35:03 UTC",
-          "topics": [
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-13T04:35:03Z",
-          "score": 6750,
-          "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
-        {
-          "title": "JimLiu/baoyu-design",
-          "source": "GitHub",
-          "url": "https://github.com/JimLiu/baoyu-design",
-          "meta": "848 stars · updated Thu, 11 Jun 2026 17:09:14 UTC",
-          "topics": [
-            "Open weights",
-            "Coding agents",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-06-11T17:09:14Z",
-          "score": 5398,
-          "summary": "Run Claude Design locally as an Agent Skill — Cursor, Claude Code & more. Produce polished UI mockups, prototypes, decks & wireframes as self-contained HTML, without claude.ai/design. Best with Opus 4.8.",
-          "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Tool use",
-      "signalCount": 25,
-      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
-      "signals": [
-        "Hacker News: Ask HN: What coding agents are you using?",
-        "OpenAI: How an astrophysicist uses Codex to help simulate black holes",
-        "OpenAI: Access OpenAI models and Codex through your Oracle cloud commitment"
-      ]
-    },
-    {
       "topic": "Coding agents",
-      "signalCount": 24,
+      "signalCount": 30,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Running Claude Code Offline on an M3 Pro with Qwen3.6",
@@ -350,8 +348,18 @@
       ]
     },
     {
+      "topic": "Tool use",
+      "signalCount": 30,
+      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "signals": [
+        "Hacker News: Ask HN: What coding agents are you using?",
+        "OpenAI: How an astrophysicist uses Codex to help simulate black holes",
+        "OpenAI: Access OpenAI models and Codex through your Oracle cloud commitment"
+      ]
+    },
+    {
       "topic": "Interfaces",
-      "signalCount": 19,
+      "signalCount": 21,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Hacker News: Show HN: HelixDB – A graph database built on object storage",
@@ -361,12 +369,22 @@
     },
     {
       "topic": "Major labs",
-      "signalCount": 12,
+      "signalCount": 15,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Hacker News: Running Claude Code Offline on an M3 Pro with Qwen3.6",
         "Hacker News: Show HN: HelixDB – A graph database built on object storage",
         "OpenAI: How an astrophysicist uses Codex to help simulate black holes"
+      ]
+    },
+    {
+      "topic": "Open weights",
+      "signalCount": 13,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "signals": [
+        "Hacker News: Running Claude Code Offline on an M3 Pro with Qwen3.6",
+        "Hacker News: Show HN: HelixDB – A graph database built on object storage",
+        "GitHub: JimLiu/baoyu-design"
       ]
     },
     {
@@ -377,16 +395,6 @@
         "GitHub: DanMcInerney/architect-loop",
         "GitHub: ApodexAI/AgentHarness",
         "GitHub: CYC2002tommy/Deep-Research-Agent"
-      ]
-    },
-    {
-      "topic": "Open weights",
-      "signalCount": 8,
-      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
-      "signals": [
-        "Hacker News: Running Claude Code Offline on an M3 Pro with Qwen3.6",
-        "Hacker News: Show HN: HelixDB – A graph database built on object storage",
-        "GitHub: JimLiu/baoyu-design"
       ]
     }
   ],
