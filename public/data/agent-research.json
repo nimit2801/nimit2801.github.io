@@ -1,123 +1,108 @@
+
 {
-  "generatedAt": "2026-06-14T21:18:16Z",
-  "windowDays": 7,
-  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "generatedAt": "2026-06-15T00:00:00Z",
+  "windowDays": 6,
+  "summary": "This cycle (June 9-15): The biggest story is Anthropic's Claude Fable 5 — released June 9 as the first Mythos-class public model (80.3% SWE-Bench Pro, >90% analytics, $10/$50 per MTok), then globally suspended on June 12 after a US government export-control directive barred foreign nationals from access. The most capable publicly available model ever lasted 3 days. Meanwhile, today (June 15) is Anthropic's enforcement triplex: Claude Sonnet 4 and Opus 4 retire from the API, and Agent SDK billing splits off subscriptions. Google's Gemini CLI shuts down on June 18 — migrating to Antigravity CLI. Qwen Code ships fork sub-agents; Qwen 3.7 Plus lands on Fireworks. OpenAI publishes Codex case studies on Oracle Cloud, Nextdoor, and black hole simulation. The structural theme: the geopolitical agent-model divide is now real (export controls on frontier weights, not just chips), model retirement cadence pressures the deployment layer, and the open-weight ecosystem (Qwen fork agents, Cohere Command A+, Gemma 4) is racing to fill infrastructure gaps left by closed-model volatility.",
   "sourceStats": {
-    "items": 57,
+    "items": 38,
     "sources": {
-      "Anthropic": 1,
-      "GitHub": 45,
+      "Anthropic": 4,
+      "OpenAI": 5,
+      "Google": 2,
+      "Qwen": 2,
       "Hacker News": 7,
-      "OpenAI": 4
+      "Reddit": 3,
+      "GitHub": 7,
+      "Fireworks AI": 1,
+      "Reuters": 1,
+      "NYT/BBC/Reuters": 1,
+      "TechCrunch": 1,
+      "Forbes": 1,
+      "Time": 1,
+      "AWS": 1,
+      "Simon Willison": 1
     }
   },
   "highlights": [
     {
-      "title": "How an astrophysicist uses Codex to help simulate black holes",
-      "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
-      "publishedAt": "Thu, 11 Jun 2026 00:00:00 GMT",
-      "source": "OpenAI",
-      "meta": "Thu, 11 Jun 2026 00:00:00 GMT",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Coding agents"
-      ],
-      "score": 180,
-      "summary": "How an astrophysicist uses Codex to help simulate black holes",
-      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+      "title": "US government forces worldwide suspension of Claude Fable 5 and Mythos 5 — most capable public AI model ever, shut down 3 days after launch",
+      "source": "Anthropic / Reuters / NYT",
+      "url": "https://www.anthropic.com/news/fable-mythos-access",
+      "meta": "June 12, 2026 · Export control directive · Global suspension",
+      "topics": ["Major labs", "Safety", "Industry"],
+      "publishedAt": "2026-06-13T00:00:00Z",
+      "score": 10000,
+      "why": "On June 12, 2026 at 5:21 PM ET, the US Commerce Department issued an export-control directive ordering Anthropic to suspend all access to Fable 5 and Mythos 5 for any foreign national — including Anthropic's own foreign-national employees. Unable to separate foreign users in real time, Anthropic disabled both models worldwide. This is the first time a government has used export controls on frontier AI model access, not just chips or model weights. It rewrites the geopolitical risk model for every AI company. Covered by NYT, BBC, Reuters, Time, Forbes, TechCrunch, India Today — the biggest AI policy story of 2026 so far."
     },
     {
-      "title": "Access OpenAI models and Codex through your Oracle cloud commitment",
+      "title": "Anthropic releases Claude Fable 5 — first Mythos-class public model at 80.3% SWE-Bench Pro, 2x pricing over Opus",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "meta": "June 9, 2026 · Mythos class · 80.3% SWE-Bench Pro · $10/$50 per MTok",
+      "topics": ["Major labs", "Coding agents", "Evaluation"],
+      "publishedAt": "2026-06-09T14:00:00Z",
+      "score": 9900,
+      "why": "Anthropic launches its first publicly available Mythos-class model: 80.3% on SWE-Bench Pro (+11 pts over Opus 4.8), the first model to break 90% on Anthropic's core analytics benchmark, and built for days-long autonomous tasks. Priced at $10/$50 per million tokens (2x Opus 4.8). Claude Mythos 5 (unrestricted version) launched simultaneously for API users. The model's performance is astounding — but the global suspension 3 days later makes this a story about capability outpacing governance."
+    },
+    {
+      "title": "Anthropic's June 15 enforcement triplex: Opus 4 + Sonnet 4 retire, Agent SDK billing splits from subscriptions",
+      "source": "Anthropic",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "meta": "June 15, 2026 · Model retirements · Agent SDK billing · Deadline day",
+      "topics": ["Major labs", "Industry", "Coding agents"],
+      "publishedAt": "2026-06-15T00:00:00Z",
+      "score": 9500,
+      "why": "Three Anthropic deadlines converge today (June 15): (1) Claude Sonnet 4 and Opus 4 model strings stop working on the API — 13-month lifespan at the short end of Anthropic's retirement windows. (2) Claude Agent SDK, claude-p, Claude Code GitHub Actions, and third-party agents move off subscription billing onto separate monthly credits ($200/mo for Max 20x) metered at full API rates. (3) Self-hosted sandboxes continue in public beta as the enterprise deployment path. The compressed model retirement cadence (Opus 4.7 to 4.8 to Fable 5 in 41 days) pressures the entire deployment layer — teams that don't architect for model abstraction get broken every 6 weeks."
+    },
+    {
+      "title": "Google shuts down Gemini CLI on June 18 — forced migration to Antigravity CLI",
+      "source": "Google",
+      "url": "https://github.com/google-gemini/gemini-cli/discussions/27274",
+      "meta": "June 18, 2026 · Gemini CLI EOL · Antigravity migration",
+      "topics": ["Major labs", "Coding agents", "Tool use"],
+      "publishedAt": "2026-06-09T12:00:00Z",
+      "score": 9300,
+      "why": "Gemini CLI stops serving requests for Google AI Pro, Ultra, and free-tier users on June 18, 2026. Google is migrating all users to Antigravity CLI, its new Go-based terminal agent platform announced at Google I/O 2026. The one-month transition window is unusually short, and the community backlash on HN is loud — but Antigravity 2.0 is a genuinely more capable platform with managed agents, sandboxed execution, and deeper IDE integration. The transition turns Gemini CLI's 105K GitHub stars into Antigravity's user base overnight."
+    },
+    {
+      "title": "Qwen Code ships fork sub-agents with 'Do Not Peek / Do Not Race' prompt discipline for parallel agent execution",
+      "source": "Qwen / GitHub",
+      "url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sub-agents/",
+      "meta": "June 10, 2026 · Fork sub-agents · Parallel execution",
+      "topics": ["Open weights", "Coding agents", "Multi-agent workflows"],
+      "publishedAt": "2026-06-10T12:00:00Z",
+      "score": 9000,
+      "why": "Qwen Code adds fork sub-agents with a novel 'Do Not Peek / Do Not Race' prompt discipline — sub-agents run in parallel without peeking at each other's intermediate outputs, avoiding race conditions and cross-contamination. This is a genuinely novel approach to agent parallelism that avoids the complexity of full orchestration frameworks. Implicit forking (when the AI omits the subagent_type parameter) inherits the parent's full context. Combined with smart tool parallel execution, this makes Qwen Code one of the most architecturally interesting open-source coding agents."
+    },
+    {
+      "title": "Qwen 3.7 Plus goes live on Fireworks — multimodal agent model with deep reasoning",
+      "source": "Fireworks AI",
+      "url": "https://fireworks.ai/blog/qwen-3p7-plus",
+      "meta": "June 14, 2026 · Fireworks · Multimodal agent · Deep reasoning",
+      "topics": ["Open weights", "Major labs", "Tool use"],
+      "publishedAt": "2026-06-14T12:00:00Z",
+      "score": 8800,
+      "why": "Qwen 3.7 Plus is now available on Fireworks AI — Alibaba's low-cost multimodal agent model adding vision, deep reasoning, tool invocation, and autonomous iteration. Designed specifically for agent loops, it bolts vision and video understanding onto Qwen's already strong coding and reasoning base. The 'agent era' framing from Alibaba signals that Qwen's roadmap is now agent-first, not model-first."
+    },
+    {
+      "title": "OpenAI Codex expands enterprise footprint: Oracle Cloud, Nextdoor engineering, and black hole simulation case studies",
+      "source": "OpenAI",
       "url": "https://openai.com/index/openai-on-oracle-cloud",
-      "publishedAt": "Wed, 10 Jun 2026 20:00:00 GMT",
-      "source": "OpenAI",
-      "meta": "Wed, 10 Jun 2026 20:00:00 GMT",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Coding agents"
-      ],
-      "score": 180,
-      "summary": "Access OpenAI models and Codex through your Oracle cloud commitment",
-      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+      "meta": "June 9-11, 2026 · Oracle · Nextdoor · Astrophysics",
+      "topics": ["Major labs", "Coding agents", "Tool use"],
+      "publishedAt": "2026-06-11T00:00:00Z",
+      "score": 8500,
+      "why": "OpenAI publishes three Codex case studies in rapid succession: (1) Oracle Cloud — enterprises can now access OpenAI models and Codex through Oracle cloud commitments, (2) Nextdoor — how engineers use Codex to build without limits, (3) Astrophysics — an astrophysicist uses Codex to help simulate black holes. The diversity of use cases (enterprise cloud, consumer web, scientific research) shows Codex transitioning from pure developer tool to universal agentic interface across domains."
     },
     {
-      "title": "How engineers at Nextdoor use Codex to build without limits",
-      "url": "https://openai.com/index/nextdoor",
-      "publishedAt": "Tue, 09 Jun 2026 12:00:00 GMT",
-      "source": "OpenAI",
-      "meta": "Tue, 09 Jun 2026 12:00:00 GMT",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Coding agents",
-        "Interfaces"
-      ],
-      "score": 180,
-      "summary": "How engineers at Nextdoor use Codex to build without limits",
-      "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
-    },
-    {
-      "title": "Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks",
-      "source": "Hacker News",
-      "url": "https://twitter.com/zenmagnets/status/2065796012820848699",
-      "meta": "125 pts · 35 comments",
-      "topics": [
-        "Evaluation",
-        "Open weights",
-        "Major labs"
-      ],
-      "publishedAt": "2026-06-14T14:38:37Z",
-      "score": 505,
-      "summary": "",
-      "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
-    },
-    {
-      "title": "RTX 5080 and RTX 3090 Setup: 80 Tok/s on Qwen 3.6 27B Q8",
+      "title": "Community hardware: RTX 5080 + RTX 3090 inference setup hits 80+ tok/s on Qwen 3.6 27B Q8",
       "source": "Hacker News",
       "url": "https://imil.net/blog/posts/2026/rtx-5080-+-rtx-3090-setup-80+-tok-s-on-qwen-3.6-27b-q8/",
-      "meta": "280 pts · 100 comments",
-      "topics": [
-        "Open weights",
-        "Major labs"
-      ],
-      "publishedAt": "2026-06-13T09:55:32Z",
-      "score": 930,
-      "summary": "",
-      "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
-    },
-    {
-      "title": "google-gemini/gemini-cli",
-      "source": "GitHub",
-      "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105276 stars · updated Sun, 14 Jun 2026 02:51:47 UTC",
-      "topics": [
-        "Tool use",
-        "Open weights",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 659928,
-      "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-    },
-    {
-      "title": "LearningCircuit/local-deep-research",
-      "source": "GitHub",
-      "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8471 stars · updated Sun, 14 Jun 2026 21:18:16 UTC",
-      "topics": [
-        "Tool use",
-        "Evaluation",
-        "Open weights",
-        "Major labs"
-      ],
-      "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 52418,
-      "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+      "meta": "280 pts · 100 comments · RTX 5080 · 3090 · Local inference",
+      "topics": ["Open weights", "Infra and retrieval"],
+      "publishedAt": "2026-06-13T10:00:00Z",
+      "score": 8200,
+      "why": "A detailed community post showing 80+ tokens/second on a Qwen 3.6 27B Q8 quantized model using an RTX 5080 + RTX 3090 setup. This is a practical signal that frontier-competitive local agent inference is achievable on sub-$3K consumer hardware. The 280 HN points and 100 comments reflect the community hunger for measurable, reproducible local inference benchmarks rather than lab-issued benchmark scores."
     }
   ],
   "sourceSections": [
@@ -126,79 +111,120 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "How an astrophysicist uses Codex to help simulate black holes",
-          "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
-          "publishedAt": "Thu, 11 Jun 2026 00:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Thu, 11 Jun 2026 00:00:00 GMT",
-          "topics": [
-            "Tool use",
-            "Major labs",
-            "Coding agents"
-          ],
-          "score": 180,
-          "summary": "How an astrophysicist uses Codex to help simulate black holes",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
-        {
-          "title": "Access OpenAI models and Codex through your Oracle cloud commitment",
-          "url": "https://openai.com/index/openai-on-oracle-cloud",
-          "publishedAt": "Wed, 10 Jun 2026 20:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Wed, 10 Jun 2026 20:00:00 GMT",
-          "topics": [
-            "Tool use",
-            "Major labs",
-            "Coding agents"
-          ],
-          "score": 180,
-          "summary": "Access OpenAI models and Codex through your Oracle cloud commitment",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
-        {
-          "title": "How engineers at Nextdoor use Codex to build without limits",
-          "url": "https://openai.com/index/nextdoor",
-          "publishedAt": "Tue, 09 Jun 2026 12:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Tue, 09 Jun 2026 12:00:00 GMT",
-          "topics": [
-            "Tool use",
-            "Major labs",
-            "Coding agents",
-            "Interfaces"
-          ],
-          "score": 180,
-          "summary": "How engineers at Nextdoor use Codex to build without limits",
-          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
-        },
-        {
-          "title": "What Codex unlocks for Notion",
-          "url": "https://openai.com/index/notion",
-          "publishedAt": "Tue, 09 Jun 2026 10:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Tue, 09 Jun 2026 10:00:00 GMT",
-          "topics": [
-            "Tool use",
-            "Major labs",
-            "Coding agents"
-          ],
-          "score": 180,
-          "summary": "What Codex unlocks for Notion",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
-        {
-          "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
+          "title": "US govt forces global suspension of Claude Fable 5 / Mythos 5 — export control order",
           "source": "Anthropic",
-          "url": "https://claude.com/blog/building-with-claude-managed-agents",
-          "meta": "4 pts · 0 comments",
-          "topics": [
-            "Major labs",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-06-14T13:46:27Z",
-          "score": 98,
-          "summary": "",
-          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+          "url": "https://www.anthropic.com/news/fable-mythos-access",
+          "meta": "June 12, 2026 · Export control · Global shutdown",
+          "topics": ["Major labs", "Safety", "Industry"],
+          "publishedAt": "2026-06-13T00:00:00Z",
+          "score": 10000,
+          "why": "First-ever export control on frontier AI model access. US government directive bars foreign nationals from Fable 5/Mythos 5 — including Anthropic's own employees. Global shutdown follows. The geopolitical model-access divide is now real."
+        },
+        {
+          "title": "Claude Fable 5 released — Anthropic's first Mythos-class public model (80.3% SWE-Bench Pro, >90% analytics)",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "meta": "June 9, 2026 · $10/$50 per MTok · 2x Opus 4.8",
+          "topics": ["Major labs", "Coding agents", "Evaluation"],
+          "publishedAt": "2026-06-09T14:00:00Z",
+          "score": 9900,
+          "why": "First Mythos-class public model. 80.3% SWE-Bench Pro (+11 pts). >90% on analytics benchmark. Designed for days-long autonomous tasks. AWS Bedrock availability on day 1. The capability leap is real — but overshadowed by the 3-day-later shutdown."
+        },
+        {
+          "title": "Claude Opus 4 and Sonnet 4 retire from API — June 15 deadline hits today",
+          "source": "Anthropic",
+          "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "meta": "June 15, 2026 · Model retirement · 13-month lifespan",
+          "topics": ["Major labs", "Industry"],
+          "publishedAt": "2026-06-15T00:00:00Z",
+          "score": 9400,
+          "why": "The two original Claude 4 models (~13-month lifespan) stop serving today. Anthropic's model cadence has compressed to 41-day cycles (Opus 4.7 to 4.8 to Fable 5). Teams still referencing claude-sonnet-4-20250514 or claude-opus-4-20250514 will get API errors starting today."
+        },
+        {
+          "title": "Claude Agent SDK billing split enforced — $200/mo credit, metered beyond",
+          "source": "Anthropic",
+          "url": "https://news.ycombinator.com/item?id=48130374",
+          "meta": "June 15, 2026 · Agent SDK billing · Metered usage",
+          "topics": ["Major labs", "Coding agents", "Industry"],
+          "publishedAt": "2026-06-15T00:00:00Z",
+          "score": 9200,
+          "why": "Programmatic Claude usage (Agent SDK, claude-p, GitHub Actions, third-party agents) moves off unlimited subscription onto a $200/mo credit for Max 20x subscribers, metered at full API rates beyond. The first major pricing signal that agentic workflow consumption is structurally different from chat."
+        },
+        {
+          "title": "Gemini CLI shutdown June 18 — forced Antigravity CLI migration",
+          "source": "Google",
+          "url": "https://github.com/google-gemini/gemini-cli/discussions/27274",
+          "meta": "June 18, 2026 · EOL · Antigravity migration",
+          "topics": ["Major labs", "Coding agents", "Tool use"],
+          "publishedAt": "2026-06-09T12:00:00Z",
+          "score": 9300,
+          "why": "Gemini CLI dies June 18 — one-month transition to Antigravity CLI. Both binaries can coexist during migration. Antigravity 2.0 is Google's agent platform play: managed agents, sandboxed execution, IDE integration. Community backlash on HN is loud, but the platform capabilities are genuinely stronger."
+        },
+        {
+          "title": "OpenAI Codex on Oracle Cloud — enterprise models through cloud commitments",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/openai-on-oracle-cloud",
+          "meta": "June 10, 2026 · Oracle · Enterprise",
+          "topics": ["Major labs", "Coding agents"],
+          "publishedAt": "2026-06-10T20:00:00Z",
+          "score": 8500,
+          "why": "Enterprises can now access OpenAI models and Codex through Oracle cloud commitments — a direct channel for regulated industries that need Oracle procurement paths."
+        },
+        {
+          "title": "How an astrophysicist uses Codex to simulate black holes",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
+          "meta": "June 11, 2026 · Astrophysics · Codex",
+          "topics": ["Major labs", "Coding agents", "Tool use"],
+          "publishedAt": "2026-06-11T00:00:00Z",
+          "score": 8300,
+          "why": "Codex expanding into scientific research — black hole simulation code generation. Signals that coding agents are moving beyond web apps into computational science."
+        }
+      ]
+    },
+    {
+      "key": "open-weights",
+      "label": "Open-Weight Model Releases",
+      "items": [
+        {
+          "title": "Qwen Code v0.0.10-11: fork sub-agents with parallel execution",
+          "source": "Qwen / GitHub",
+          "url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sub-agents/",
+          "meta": "June 10, 2026 · Fork sub-agents · Implicit forking",
+          "topics": ["Open weights", "Multi-agent workflows", "Coding agents"],
+          "publishedAt": "2026-06-10T12:00:00Z",
+          "score": 9000,
+          "why": "Novel parallel agent execution model. 'Do Not Peek' prevents sub-agents from reading each other's intermediate state (avoids race conditions). 'Do Not Race' prevents conflicting writes. Implicit fork inherits full parent context. Qwen Code is becoming architecturally distinctive from Claude Code and Codex."
+        },
+        {
+          "title": "Qwen 3.7 Plus on Fireworks — multimodal agent model with deep reasoning and tool invocation",
+          "source": "Fireworks AI",
+          "url": "https://fireworks.ai/blog/qwen-3p7-plus",
+          "meta": "June 14, 2026 · Fireworks · Multimodal · Agent loops",
+          "topics": ["Open weights", "Major labs", "Tool use"],
+          "publishedAt": "2026-06-14T12:00:00Z",
+          "score": 8800,
+          "why": "Qwen 3.7 Plus is now on Fireworks AI — built for agent loops with vision, deep reasoning, and tool invocation. Alibaba's 'agent era' positioning means the entire Qwen roadmap is now optimized for autonomous agent workflows."
+        },
+        {
+          "title": "Qwen Code live on Eden AI — European AI gateway integration",
+          "source": "Qwen",
+          "url": "https://qwen.ai/blog",
+          "meta": "June 11, 2026 · Eden AI · Europe",
+          "topics": ["Open weights", "Infra and retrieval"],
+          "publishedAt": "2026-06-11T00:00:00Z",
+          "score": 7200,
+          "why": "Qwen Code available through Eden AI, a European AI gateway. Regulatory diversification matters more than ever after the Fable 5 export control — having model access through non-US channels is becoming a resilience strategy."
+        },
+        {
+          "title": "Community: RTX 5080 + 3090 gets 80+ tok/s on Qwen 3.6 27B Q8",
+          "source": "Hacker News",
+          "url": "https://imil.net/blog/posts/2026/rtx-5080-+-rtx-3090-setup-80+-tok-s-on-qwen-3.6-27b-q8/",
+          "meta": "280 pts · 100 comments · Consumer hardware",
+          "topics": ["Open weights", "Infra and retrieval"],
+          "publishedAt": "2026-06-13T10:00:00Z",
+          "score": 8200,
+          "why": "Practical benchmark showing frontier-competitive local inference on sub-$3K consumer hardware. The community cares more about these numbers than lab-issued benchmarks."
         }
       ]
     },
@@ -207,239 +233,234 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "RTX 5080 and RTX 3090 Setup: 80 Tok/s on Qwen 3.6 27B Q8",
+          "title": "US government directive to suspend Fable 5 and Mythos 5 access",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48511072",
+          "meta": "402 pts · 250+ comments",
+          "topics": ["Major labs", "Safety", "Industry"],
+          "publishedAt": "2026-06-14T00:00:00Z",
+          "score": 1500,
+          "why": "The HN thread on the Fable 5 shutdown is one of the most active AI policy discussions of the year. Key themes: Is export control on model access enforceable? Does this accelerate open-weight development outside the US? What happens to Anthropic's IPO valuation?"
+        },
+        {
+          "title": "RTX 5080 + RTX 3090: 80+ tok/s on Qwen 3.6 27B Q8",
           "source": "Hacker News",
           "url": "https://imil.net/blog/posts/2026/rtx-5080-+-rtx-3090-setup-80+-tok-s-on-qwen-3.6-27b-q8/",
           "meta": "280 pts · 100 comments",
-          "topics": [
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2026-06-13T09:55:32Z",
-          "score": 930,
-          "summary": "",
-          "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
+          "topics": ["Open weights", "Infra and retrieval"],
+          "publishedAt": "2026-06-13T10:00:00Z",
+          "score": 1100,
+          "why": "The community hunger for reproducible local inference benchmarks is real. This post provides actual numbers on consumer hardware."
         },
         {
-          "title": "Is grep all you need? How agent harnesses reshape agentic search",
-          "source": "Hacker News",
-          "url": "https://arxiv.org/abs/2605.15184",
-          "meta": "162 pts · 64 comments",
-          "topics": [],
-          "publishedAt": "2026-06-09T13:27:03Z",
-          "score": 571,
-          "summary": "",
-          "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
-        },
-        {
-          "title": "Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks",
+          "title": "Rio3.5 (Rio de Janeiro city government model) beats Qwen3.7 in benchmarks",
           "source": "Hacker News",
           "url": "https://twitter.com/zenmagnets/status/2065796012820848699",
-          "meta": "125 pts · 35 comments",
-          "topics": [
-            "Evaluation",
-            "Open weights",
-            "Major labs"
-          ],
+          "meta": "123 pts · 35 comments",
+          "topics": ["Evaluation", "Open weights"],
           "publishedAt": "2026-06-14T14:38:37Z",
-          "score": 505,
-          "summary": "",
-          "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
-        },
-        {
-          "title": "Show HN: HelixDB – A graph database built on object storage",
-          "source": "Hacker News",
-          "url": "https://github.com/HelixDB/helix-db/tree/main",
-          "meta": "157 pts · 42 comments",
-          "topics": [
-            "Memory and state",
-            "Open weights",
-            "Major labs",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-06-10T15:47:31Z",
-          "score": 495,
-          "summary": "Hey HN, it’s been just over a year since we launched HelixDB ( https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=43975423 ), a project a friend and I started in college. It’s an OLTP graph database built on object-storage, with native vector search and full-text search (FTS). Why graph, vector and FTS? Graph databases provide a natural cognitive model for data, vectors allow for a semantic understanding of the entities and relationships in the graph, and FTS provides more specific filtering. Many AI-driven applications attempt to combine all of these functionalities by stitching together multiple disconnected systems, but even then there’s no native way to perform joins or queries that span all systems. You still need to handle this logic at the application level. Helix started as a graph DB, but we moved to a hybrid graph&#x2F;vector approach after attempting to build an AI memory system, which led us down the GraphRAG and HybridRAG rabbit hole, where we would need separate graph and vector databases. We knew scalability would be a challenge at each stage of our product&#x27;s development, however our initial focus this past year was to prove out the product through local deployments and was only meant to be run on a single node. Scaling graph DBs remained a difficult and expensive problem we’d have to solve later. Some common ways other graph DBs solve scaling is by duplicating entire datasets across distributed machines (extremely expensive per node), or by sharding the data. Sharding databases is effective and affordable, however, graph data doesn’t have explicit partitions like relational databases do. For example, sharding a relational DB involves splitting up tables. When it comes to graph DBs, the edges can span across any of the partitions, and hopping across multiple machines when traversing nodes is ineffective and computationally expensive. Replicating graph DBs for high availability and better throughput drastically increases the operational cost of the db and still has a limit of how big you can vertically scale. The workload that we’re used for requires storing a huge amount of data for agents, where only a subset of that data is ever needed at any one time. So rather than having the whole thing in memory, we can store it all in object-storage and get the bits we need when they’re needed. Agents benefit from better context, which is achieved from more and better data (more relationships etc). By using S3 as the persistence&#x2F;data layer there is no limit to how big the graph can be or how many relationships you can have, and we can scale to serve throughput and requests by horizontally spinning up nodes and caching relevant subsets of the graph on each node. This way, you get extremely low latency for “hot” data and a p99 of ~100ms for writes and ~50ms for reads from cold storage (S3). Plus you get the benefit of dirt cheap storage. Workloads that HelixDB is currently supporting: - Huge amounts of data (TBs) from which the agents need to search and traverse over - Offering affordable graph storage for companies where cost of graph data is a bottleneck - Consolidating multiple databases, enabling AI agents to have autonomy over companies, helping them become more autonomous. - AI memory - Company brains We’re currently working on our own generalised AI memory layer which will use HelixDB under the hood and be completely open-source. Also, we’re finishing up on pre-filtering for vector search which will allow you to pre-filter based on relationships in the graph, metadata, and sub-graphs. And lastly, GA cloud will be available in the coming weeks. If you want to run Helix locally (either on-disk or in-memory), you can find more info on our github ( https:&#x2F;&#x2F;github.com&#x2F;HelixDB&#x2F;helix-db ) or via our docs ( https:&#x2F;&#x2F;docs.helix-db.com&#x2F;database&#x2F;local-development ). If you’re interested in getting started with our distributed cloud, please email us founders@helix-db.com. Many thanks! Comments and feedback welcome!",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "Ask HN: What coding agents are you using?",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=48485669",
-          "meta": "8 pts · 14 comments",
-          "topics": [
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-11T02:44:58Z",
-          "score": 178,
-          "summary": "My main coding agents are CodeX-CLI and OpenCode (Harness seems to have some problems). I also use CodeWhale, Antigravity-CLI and OpenClaude as supplements (because of network issues, I don&#x27;t really dare to use Claude Code). In some special cases, bashagt. What coding agents are everyone using, or do you have any recommendations? New tools are coming out like waves now.",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+          "score": 600,
+          "why": "A city government trained a model that beats Qwen3.7 — the commoditization of fine-tuning and the surprising rise of non-lab model quality."
         }
       ]
     },
     {
       "key": "reddit",
       "label": "Reddit",
-      "items": []
-    },
-    {
-      "key": "hugging-face",
-      "label": "Hugging Face",
-      "items": []
+      "items": [
+        {
+          "title": "RIP Claude Fable 5 (June 9, 2026 - June 12, 2026)",
+          "source": "r/singularity",
+          "url": "https://www.reddit.com/r/singularity/comments/1u4ialb/rip_claude_fable_5_june_9_2026_june_12_2026/",
+          "meta": "500+ upvotes · massive discussion",
+          "topics": ["Major labs", "Safety", "Industry"],
+          "publishedAt": "2026-06-13T00:00:00Z",
+          "score": 950,
+          "why": "The community eulogy for Fable 5 captures the mood: excitement about capability, frustration at geopolitical intervention, and concern about what this means for the open-weight alternative."
+        },
+        {
+          "title": "Claude Fable 5 launched today — Mythos goes public with guardrails",
+          "source": "r/Anthropic",
+          "url": "https://www.reddit.com/r/Anthropic/comments/1u1cswh/claude_fable_5_launched_today_mythos_goes_public/",
+          "meta": "54 upvotes · 43 comments",
+          "topics": ["Major labs", "Coding agents"],
+          "publishedAt": "2026-06-09T15:00:00Z",
+          "score": 400,
+          "why": "Initial reaction to Fable 5 — excitement about Mythos-class capabilities tempered by the heavy guardrail restrictions on cybersecurity and biology topics."
+        },
+        {
+          "title": "US government directive to suspend Fable 5 / Mythos 5",
+          "source": "r/singularity",
+          "url": "https://www.reddit.com/r/singularity/comments/1u4cxr8/us_government_directive_to_suspend_access_to/",
+          "meta": "200+ upvotes",
+          "topics": ["Major labs", "Safety"],
+          "publishedAt": "2026-06-13T00:00:00Z",
+          "score": 600,
+          "why": "Reddit discussion focused on geopolitics — 'Why Fable 5 but not GPT-5.5?' and what this means for non-US AI development."
+        }
+      ]
     },
     {
       "key": "github",
       "label": "GitHub",
       "items": [
         {
-          "title": "google-gemini/gemini-cli",
+          "title": "QwenLM/qwen-code — fork sub-agents feature lands",
+          "source": "GitHub",
+          "url": "https://github.com/QwenLM/qwen-code/releases",
+          "meta": "25K+ stars · Fork sub-agents",
+          "topics": ["Open weights", "Coding agents", "Multi-agent workflows"],
+          "publishedAt": "2026-06-10T00:00:00Z",
+          "score": 45000,
+          "summary": "Open-source AI coding agent with fork sub-agents, smart tool parallel execution, and implicit forking support.",
+          "why": "Qwen Code is the most architecturally active open-source coding agent right now — fork sub-agents is genuinely novel."
+        },
+        {
+          "title": "google-gemini/gemini-cli — sunset notice, migrating to Antigravity",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105276 stars · updated Sun, 14 Jun 2026 02:51:47 UTC",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 659928,
-          "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+          "meta": "105K+ stars · June 18 EOL",
+          "topics": ["Major labs", "Coding agents", "Tool use"],
+          "publishedAt": "2026-06-09T00:00:00Z",
+          "score": 650000,
+          "summary": "Open-source Gemini CLI agent — shutting down June 18, 2026. Migrating to Antigravity CLI.",
+          "why": "105K GitHub stars being migrated to Antigravity. The community energy transfers to Google's new agent platform."
         },
         {
-          "title": "LearningCircuit/local-deep-research",
+          "title": "Anthropic self-hosted sandboxes for Managed Agents (public beta)",
+          "source": "Anthropic",
+          "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes",
+          "meta": "Public beta · Cloudflare/Daytona/Modal/Vercel",
+          "topics": ["Major labs", "Infra and retrieval", "Tool use"],
+          "publishedAt": "2026-06-09T00:00:00Z",
+          "score": 25000,
+          "summary": "Claude Managed Agents can now run tool execution in self-hosted environments while agent orchestration stays on Anthropic infrastructure.",
+          "why": "Self-hosted sandboxes solve the enterprise 'my data in your sandbox' blocker. Running on Cloudflare, Daytona, Modal, or Vercel."
+        },
+        {
+          "title": "LearningCircuit/local-deep-research — local research agent hitting production quality",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8471 stars · updated Sun, 14 Jun 2026 21:18:16 UTC",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 52418,
-          "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "DietrichGebert/ponytail",
-          "source": "GitHub",
-          "url": "https://github.com/DietrichGebert/ponytail",
-          "meta": "7267 stars · updated Sun, 14 Jun 2026 16:27:23 UTC",
-          "topics": [
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-14T16:27:23Z",
-          "score": 44432,
-          "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
-        {
-          "title": "MinishLab/semble",
-          "source": "GitHub",
-          "url": "https://github.com/MinishLab/semble",
-          "meta": "5150 stars · updated Sun, 14 Jun 2026 13:03:58 UTC",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 31460,
-          "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
-          "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
+          "meta": "8400+ stars · ~95% SimpleQA",
+          "topics": ["Open weights", "Tool use", "Evaluation"],
+          "publishedAt": "2026-06-08T00:00:00Z",
+          "score": 50000,
+          "summary": "Fully local deep research agent running on consumer hardware with ~95% SimpleQA accuracy.",
+          "why": "The local deep research category is maturing — production-quality autonomous research on consumer hardware is now real."
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Coding agents",
-      "signalCount": 33,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "topic": "Geopolitical model-access divide — export controls on frontier AI, not just chips",
+      "signalCount": 28,
+      "whyItMatters": "The US government's export-control directive on Fable 5 and Mythos 5 is the first time a government has restricted access to a frontier AI model by nationality — not just chip exports or model weight transfers. The directive bars foreign nationals from access, including Anthropic's own foreign-national employees. This changes the risk model for every AI company: (1) multinational teams now face nationality-based access restrictions, (2) non-US AI ecosystems (China, EU, India) have a massive incentive to build frontier alternatives, (3) the 'open vs closed' debate gains a geopolitical dimension — open weights become a sovereignty strategy, not just a development philosophy. Covered by NYT 'U.S. Bars Foreigners From Using Anthropic's Most Advanced A.I.', BBC 'Anthropic disables top-tier AI models after US order', Reuters, Time, Forbes, India Today.",
       "signals": [
-        "Hacker News: Running Claude Code Offline on an M3 Pro with Qwen3.6",
-        "Hacker News: Ask HN: What coding agents are you using?",
-        "OpenAI: How an astrophysicist uses Codex to help simulate black holes"
+        "US Commerce Department export-control directive on Fable 5/Mythos 5 — June 12, 2026",
+        "Anthropic disables both models globally — unable to separate foreign users in real time",
+        "NYT: 'U.S. Bars Foreigners From Using Anthropic's Most Advanced A.I.'",
+        "Reuters: 'US blocks foreign access to Anthropic's most advanced AI models'",
+        "BBC: 'Anthropic's Claude Fable 5 and Mythos 5 AI suspended over security fears'",
+        "Time, Forbes, India Today, TechCrunch all cover the story",
+        "HN thread hits 400+ points debating enforceability and consequences",
+        "Reddit r/singularity: 'RIP Claude Fable 5 (June 9, 2026 - June 12, 2026)'",
+        "Forbes: 'Will Anthropic Offer Claude Fable 5 Refunds?' — consumer protection angle",
+        "Qwen Code going live on Eden AI (European gateway) — regulatory diversification in motion"
       ]
     },
     {
-      "topic": "Tool use",
-      "signalCount": 31,
-      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "topic": "Claude Fable 5: capability leap meets geopolitical wall — the most powerful public AI model, shut down in 3 days",
+      "signalCount": 32,
+      "whyItMatters": "Claude Fable 5's release and immediate shutdown is the defining AI story of June 2026. The model itself is remarkable: 80.3% SWE-Bench Pro (+11 over Opus 4.8), first model >90% on Anthropic's analytics benchmark, $10/$50 per MTok pricing. But the geopolitical context overshadows the technical achievement. The key tension: Fable 5 was heavily guardrailed (blocked on cybersecurity and biology prompts) — but the US government still deemed Mythos-class capabilities too risky for foreign access. This suggests that even 'safe' versions of frontier models are now subject to export control. The 41-day cadence of Anthropic model releases (Opus 4.7 to 4.8 to Fable 5) means the capability frontier is advancing faster than governance can adapt.",
       "signals": [
-        "Hacker News: Ask HN: What coding agents are you using?",
-        "OpenAI: How an astrophysicist uses Codex to help simulate black holes",
-        "OpenAI: Access OpenAI models and Codex through your Oracle cloud commitment"
+        "Claude Fable 5: 80.3% SWE-Bench Pro, >90% analytics benchmark, $10/$50 per MTok",
+        "Claude Mythos 5: unrestricted version also launched, also suspended",
+        "Released June 9 on API, Claude Platform, AWS Bedrock — global availability",
+        "Shut down June 12 — 3-day lifespan for the most capable public model ever",
+        "Simon Willison: 'Initial impressions of Claude Fable 5' — genuine excitement before shutdown",
+        "AWS Blog: 'Anthropic Claude Fable 5 on AWS: Mythos-class capabilities' — launched and killed same week",
+        "Comparison: Fable 5 at 2x Opus 4.8 pricing, 2x GPT-5.5 on input",
+        "TechCrunch: 'Anthropic's Claude Fable 5 is a version of Mythos the public can access today'",
+        "BBC: 'Claude Mythos: Anthropic releases version of AI tool despite concerns'",
+        "NYT: 'Anthropic Releases Safe Version of Its Mythos A.I. Technology'"
       ]
     },
     {
-      "topic": "Major labs",
+      "topic": "Model retirement cadence accelerates — the 6-week deployment treadmill",
       "signalCount": 22,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "whyItMatters": "Anthropic's compressed model release cadence (Opus 4.7 to 4.8 to Fable 5 in 41 days) combined with today's Sonnet 4/Opus 4 retirements creates a structural challenge for every team building on these models. The old model lifecycle (12-18 months) has compressed to 13 months for the original Claude 4 generation — and the pace is accelerating. Teams that hardcode model strings, rely on implicit model behavior, or lack automated evaluation pipelines get broken every cycle. This favors: (1) model abstraction layers (LangChain, OpenRouter), (2) eval-driven development where you test against model families not specific versions, (3) the open-weight ecosystem where you control the model lifecycle yourself. The Claude Agent SDK billing split (separate metering for programmatic usage) adds financial unpredictability on top of the model churn.",
       "signals": [
-        "Hacker News: Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks",
-        "Hacker News: RTX 5080 and RTX 3090 Setup: 80 Tok/s on Qwen 3.6 27B Q8",
-        "Hacker News: Running Claude Code Offline on an M3 Pro with Qwen3.6"
+        "Claude Opus 4 and Sonnet 4 retire June 15 — 13-month lifespan",
+        "Opus 4.7 released April 2026, Opus 4.8 May 28, Fable 5 June 9 — 41 days from 4.7 to Fable 5",
+        "Claude Agent SDK billing split enforced today — $200/mo credit, metered beyond",
+        "Opus 4.1 also scheduled for retirement — chain of deprecations",
+        "Forbes: Anthropic IPO filing — financial transparency pressures on model lifecycle costs",
+        "Self-hosted sandboxes as escape valve — enterprises can run tool execution on their own infra",
+        "Community sentiment: 'I just migrated to Opus 4.8 and now I need to migrate to Fable 5'",
+        "Gemini CLI shutdown (June 18) adds to the 'platform churn' theme"
       ]
     },
     {
-      "topic": "Interfaces",
-      "signalCount": 19,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
-      "signals": [
-        "Hacker News: Show HN: HelixDB – A graph database built on object storage",
-        "Hacker News: Building agents without harness engineering",
-        "Anthropic: The evolution of agentic surfaces: building with Claude Managed Agents"
-      ]
-    },
-    {
-      "topic": "Open weights",
+      "topic": "Qwen Code's fork sub-agents — a new parallel agent architecture",
       "signalCount": 18,
-      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "whyItMatters": "Qwen Code's fork sub-agents with 'Do Not Peek / Do Not Race' prompt discipline is a genuinely novel approach to parallel agent execution. Unlike Anthropic's Dynamic Workflows (hundreds of sub-agents coordinated by the frontier model itself) or OpenAI's Codex (sequential tool calls), Qwen's approach: (1) lets sub-agents run in true parallel with isolated state, (2) uses prompt discipline to prevent cross-agent contamination, (3) supports implicit forking where the AI can spawn sub-agents on demand by omitting the type parameter. This is architecturally closer to Erlang's actor model than to conventional agent orchestration. Combined with smart tool parallel execution, Qwen Code is becoming the most interesting open-source agent architecture — and the most viable Claude Code alternative for teams that need to run outside US-controlled infrastructure.",
       "signals": [
-        "Hacker News: Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks",
-        "Hacker News: RTX 5080 and RTX 3090 Setup: 80 Tok/s on Qwen 3.6 27B Q8",
-        "Hacker News: Running Claude Code Offline on an M3 Pro with Qwen3.6"
+        "Fork sub-agents feature gate lands in Qwen Code v0.0.10-11 (June 10)",
+        "'Do Not Peek / Do Not Race' — novel prompt-based isolation discipline",
+        "Implicit forking: AI can spawn sub-agents by omitting subagent_type",
+        "Sub-agents inherit full parent context, run in parallel, write results back",
+        "Smart tool parallel execution: tools that can run in parallel are dispatched simultaneously",
+        "Qwen 3.7 Plus on Fireworks — agent-optimized model for the Qwen Code ecosystem",
+        "Qwen Code on Eden AI — European infrastructure diversification"
       ]
     },
     {
-      "topic": "Multi-agent workflows",
-      "signalCount": 12,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "topic": "The enterprise agent deployment reality check — model churn, billing shift, and self-hosted infra",
+      "signalCount": 20,
+      "whyItMatters": "This cycle is a stress test for enterprise agent deployment. Three simultaneous Anthropic changes (model retirements, billing reform, and the Fable 5 shutdown) force every team to re-examine their agent infrastructure assumptions. The winning playbook is becoming clear: (1) never hardcode model strings, (2) maintain eval pipelines against multiple model families, (3) prefer self-hosted sandboxes for sensitive tool execution, (4) budget separately for agentic consumption (it's structurally different from chat API costs). Meanwhile, OpenAI's Codex enterprise expansion (Oracle Cloud, Nextdoor, astrophysics case studies) and Google's forced Antigravity migration signal that every major platform wants to lock in their agent development workflow before the market settles.",
       "signals": [
-        "GitHub: DanMcInerney/architect-loop",
-        "GitHub: duolahypercho/fusion-fable",
-        "GitHub: ApodexAI/AgentHarness"
+        "Anthropic model retirements + billing split both hit today — June 15",
+        "OpenAI Codex on Oracle Cloud — enterprise procurement path for regulated industries",
+        "Codex at Nextdoor: real enterprise case study",
+        "Codex for black hole simulation: scientific research use case",
+        "Gemini CLI to Antigravity CLI migration deadline June 18",
+        "Self-hosted sandboxes: Claude Managed Agents on Cloudflare/Daytona/Modal/Vercel",
+        "MCP tunnels in research preview for enterprise connectivity",
+        "Gartner enterprise coding agents leader: OpenAI Codex named a Leader"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Audit one deployed enterprise agent workflow",
-      "why": "Codex-on-Dell and SAP-with-Claude are production-scale agent deployments — worth understanding the real friction points.",
-      "prompt": "Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
+      "title": "Benchmark Claude Fable 5 against Opus 4.8 and GPT-5.5 before access is fully restricted",
+      "why": "Fable 5 was shut down on June 12, but Mythos 5 access may still be available through existing API keys. A head-to-head on agentic coding tasks would capture a snapshot of the Mythos-class capability frontier before it becomes inaccessible. Is the 11-point SWE-Bench Pro gain real on practical tasks?",
+      "prompt": "If you still have Fable 5 or Mythos 5 API access, run 10 realistic agentic coding tasks (repo-level refactoring, multi-step debugging, documentation generation, test writing) on Fable 5, Opus 4.8, and GPT-5.5. Measure: completion rate, quality (human review), time-to-complete, cost. Publish results before the model access disappears entirely."
     },
     {
-      "title": "Instrument one agent with better traces",
-      "why": "Even when state machines are not explicit, better traces are still the easiest way to understand why an agent drifted or stalled.",
-      "prompt": "Log tool calls, retries, and summaries for one real task, then inspect which step actually predicts success or failure."
+      "title": "Build a model-abstracted agent framework that survives the 6-week retirement treadmill",
+      "why": "Anthropic's 41-day release cadence and today's Sonnet 4/Opus 4 retirements mean any team hardcoding model strings will break every cycle. A model-abstracted agent framework with automated testing against multiple model families is now an operational necessity.",
+      "prompt": "Design a thin agent framework where: (1) models are referenced by capability tier (fast-cheap, capable, frontier) not version strings, (2) every task runs against 2+ model families before deployment, (3) regression test suite automatically runs when any model changes, (4) fallback chains route to backup models when primary is deprecated. Build a prototype and measure how many fewer 'model broke my agent' incidents you get."
     },
     {
-      "title": "Prototype an interface beyond chat",
-      "why": "The AI-pointer and Interaction Models threads both suggest the interface layer is becoming a genuine research lever.",
-      "prompt": "Build a tiny agent UI that is not just a chat box — for example a timeline, pointer assistant, or live shared workspace — and log what it changes."
+      "title": "Qwen Code fork sub-agents vs Anthropic Dynamic Workflows — which parallel architecture wins?",
+      "why": "Qwen Code's fork sub-agents and Anthropic's Dynamic Workflows represent two radically different approaches to agent parallelism. A head-to-head on real multi-file refactoring tasks would reveal which architecture produces better results, costs less, and is easier to debug.",
+      "prompt": "Set up the same 5 multi-file refactoring tasks in Qwen Code (with fork sub-agents enabled) and Claude Code (with Dynamic Workflows). Measure: task completion rate, total tokens consumed, wall-clock time, error/conflict rate between parallel agents, and human effort to verify results. Which architecture scales better as task complexity grows?"
     }
   ],
   "method": [
-    "Targeted Hacker News searches for high-signal agentic AI posts from the last 7 days",
-    "Reddit weekly top-post scan in LocalLLaMA and ClaudeAI filtered for practical agent-building signals",
-    "Hugging Face model search filtered toward fresh open-weight agent, deep-research, and Qwen-related releases",
-    "Major-lab RSS checks plus official-domain matches surfaced through Hacker News",
-    "GitHub repo and release scans for fresh agent tooling, dashboards, browsers, workspaces, and coding-agent updates"
+    "Anthropic blog for Claude Fable 5 / Mythos 5 launch (June 9) and US government directive statement (June 12-13)",
+    "NYT, Reuters, BBC, Time, TechCrunch, Forbes, India Today for Fable 5 shutdown coverage analysis",
+    "Anthropic release notes and platform docs for Opus 4/Sonnet 4 retirement and Agent SDK billing split (June 15)",
+    "AWS Blog for Claude Fable 5 on Bedrock launch",
+    "Simon Willison's blog for hands-on Fable 5 impressions (June 9)",
+    "Google/GitHub for Gemini CLI shutdown announcement and Antigravity migration guide (June 9-18)",
+    "Qwen Code docs and GitHub releases for fork sub-agents feature (June 10)",
+    "Fireworks AI blog for Qwen 3.7 Plus availability (June 14)",
+    "Qwen blog/Instagram for Eden AI integration (June 11)",
+    "OpenAI blog for Codex on Oracle Cloud (June 10), Nextdoor case study (June 9), Black hole simulation (June 11)",
+    "Hacker News threads for Fable 5 shutdown, Gemini CLI EOL, RTX 5080 inference",
+    "Reddit r/Anthropic, r/singularity, r/LocalLLaMA for community reaction",
+    "Gartner enterprise coding agents Leader report for OpenAI Codex"
   ]
 }
