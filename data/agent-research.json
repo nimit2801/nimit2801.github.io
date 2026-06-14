@@ -1,371 +1,108 @@
+
 {
-  "generatedAt": "2026-06-09T00:00:00Z",
-  "windowDays": 7,
-  "summary": "This cycle (June 8-9): Anthropic drops the most consequential AI alignment paper of 2026 — \"When AI Builds Itself\" reveals Claude's coding success rate hit 76% in May 2026, research accuracy jumped from 51% to 64% in 6 months, and agents autonomously solved nearly all of a key safety research challenge. Recursive self-improvement is no longer theoretical. Apple WWDC 2026 delivered: a 3-tier AI architecture for Siri (on-device 3B model → Private Cloud Compute → 1.2T Google Gemini) with Core AI replacing Core ML. OpenAI plans its biggest ChatGPT revamp since 2022 — a superapp combining Codex, AI agents, and third-party integrations ahead of IPO. Google releases Gemma 4 12B, the strongest open local agent model yet, running on 16GB laptops. Microsoft opens Visual Studio's AI layer to outside models with agents embedded in the debugger and profiler. NVIDIA Cosmos 3 brings the first open omnimodal world model for Physical AI. MiniMax M3 is the first open-weights model combining frontier coding, 1M context, and native multimodality. The structural theme: the open-weight agent ecosystem is catching up to closed frontier models at remarkable speed, Anthropic's RSI data reframes the safety conversation, and the platform-level agent infrastructure battle (Apple Siri, OpenAI superapp, Microsoft VS agents, Google local Gemma) is intensifying across every layer of the stack.",
+  "generatedAt": "2026-06-15T00:00:00Z",
+  "windowDays": 6,
+  "summary": "This cycle (June 9-15): The biggest story is Anthropic's Claude Fable 5 — released June 9 as the first Mythos-class public model (80.3% SWE-Bench Pro, >90% analytics, $10/$50 per MTok), then globally suspended on June 12 after a US government export-control directive barred foreign nationals from access. The most capable publicly available model ever lasted 3 days. Meanwhile, today (June 15) is Anthropic's enforcement triplex: Claude Sonnet 4 and Opus 4 retire from the API, and Agent SDK billing splits off subscriptions. Google's Gemini CLI shuts down on June 18 — migrating to Antigravity CLI. Qwen Code ships fork sub-agents; Qwen 3.7 Plus lands on Fireworks. OpenAI publishes Codex case studies on Oracle Cloud, Nextdoor, and black hole simulation. The structural theme: the geopolitical agent-model divide is now real (export controls on frontier weights, not just chips), model retirement cadence pressures the deployment layer, and the open-weight ecosystem (Qwen fork agents, Cohere Command A+, Gemma 4) is racing to fill infrastructure gaps left by closed-model volatility.",
   "sourceStats": {
-    "items": 127,
+    "items": 38,
     "sources": {
-      "Apple/MacRumors": 3,
-      "Microsoft": 5,
-      "CDT": 1,
-      "OpenAI": 8,
-      "Anthropic": 5,
-      "Google": 4,
-      "NVIDIA": 2,
+      "Anthropic": 4,
+      "OpenAI": 5,
+      "Google": 2,
       "Qwen": 2,
-      "Mistral": 2,
-      "Meta": 3,
-      "GitHub": 10,
-      "Hacker News": 14,
-      "Reddit": 8,
-      "Hugging Face": 4,
-      "TechCrunch": 3,
-      "The Hacker News": 2,
-      "Ars Technica": 1,
-      "MIT Tech Review": 1,
-      "VentureBeat": 1,
-      "AAIF": 1,
-      "KrebsOnSecurity": 1,
-      "ADTmag": 1,
+      "Hacker News": 7,
+      "Reddit": 3,
+      "GitHub": 7,
+      "Fireworks AI": 1,
+      "Reuters": 1,
+      "NYT/BBC/Reuters": 1,
+      "TechCrunch": 1,
       "Forbes": 1,
-      "WIRED": 1,
-      "Anthropic (RSI Paper)": 1,
-      "Financial Times": 1,
-      "Google DeepMind": 2,
-      "The New Stack": 1,
-      "MiniMax": 1
+      "Time": 1,
+      "AWS": 1,
+      "Simon Willison": 1
     }
   },
   "highlights": [
     {
-      "title": "Anthropic publishes 'When AI Builds Itself' — recursive self-improvement benchmark data shows Claude improving autonomously",
+      "title": "US government forces worldwide suspension of Claude Fable 5 and Mythos 5 — most capable public AI model ever, shut down 3 days after launch",
+      "source": "Anthropic / Reuters / NYT",
+      "url": "https://www.anthropic.com/news/fable-mythos-access",
+      "meta": "June 12, 2026 · Export control directive · Global suspension",
+      "topics": ["Major labs", "Safety", "Industry"],
+      "publishedAt": "2026-06-13T00:00:00Z",
+      "score": 10000,
+      "why": "On June 12, 2026 at 5:21 PM ET, the US Commerce Department issued an export-control directive ordering Anthropic to suspend all access to Fable 5 and Mythos 5 for any foreign national — including Anthropic's own foreign-national employees. Unable to separate foreign users in real time, Anthropic disabled both models worldwide. This is the first time a government has used export controls on frontier AI model access, not just chips or model weights. It rewrites the geopolitical risk model for every AI company. Covered by NYT, BBC, Reuters, Time, Forbes, TechCrunch, India Today — the biggest AI policy story of 2026 so far."
+    },
+    {
+      "title": "Anthropic releases Claude Fable 5 — first Mythos-class public model at 80.3% SWE-Bench Pro, 2x pricing over Opus",
       "source": "Anthropic",
-      "url": "https://www.anthropic.com/institute/recursive-self-improvement",
-      "meta": "June 5-9, 2026 · RSI paper · Claude 76% coding success",
-      "topics": [
-        "Major labs",
-        "Safety",
-        "Evaluation",
-        "Tool use"
-      ],
-      "publishedAt": "2026-06-08T18:00:00Z",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "meta": "June 9, 2026 · Mythos class · 80.3% SWE-Bench Pro · $10/$50 per MTok",
+      "topics": ["Major labs", "Coding agents", "Evaluation"],
+      "publishedAt": "2026-06-09T14:00:00Z",
       "score": 9900,
-      "why": "Anthropic publishes the most consequential AI alignment paper of 2026: Claude's coding success rate hit 76% in May 2026, its next-step accuracy on research tasks grew from 51% (Opus 4.5, Nov 2025) to 64% (Mythos Preview, Apr 2026), and Claude-powered agents autonomously solved nearly all of a key AI safety research challenge. Anthropic warns that recursive self-improvement — AI designing and building its own successor — may arrive within years, not decades. The paper includes the first rigorous benchmark data on how fast AI is accelerating AI R&D."
+      "why": "Anthropic launches its first publicly available Mythos-class model: 80.3% on SWE-Bench Pro (+11 pts over Opus 4.8), the first model to break 90% on Anthropic's core analytics benchmark, and built for days-long autonomous tasks. Priced at $10/$50 per million tokens (2x Opus 4.8). Claude Mythos 5 (unrestricted version) launched simultaneously for API users. The model's performance is astounding — but the global suspension 3 days later makes this a story about capability outpacing governance."
     },
     {
-      "title": "Apple WWDC 2026 Day 1: Gemini-powered Siri revealed with 3-tier architecture — on-device 3B model + PCC + 1.2T Gemini",
-      "source": "Apple/MacRumors",
-      "url": "https://www.macrumors.com/2026/06/08/apple-reveals-new-ai-architecture/",
-      "meta": "June 8, 2026 · 3-tier Siri · Core AI replaces Core ML · iOS 27",
-      "topics": [
-        "Major labs",
-        "Voice and multimodal",
-        "Interfaces"
-      ],
-      "publishedAt": "2026-06-08T17:40:00Z",
-      "score": 9800,
-      "why": "Apple's WWDC keynote delivered: a 3-tier AI architecture — on-device Apple Foundation Models (~3B params) for simple tasks, Private Cloud Compute for medium complexity, and Google Gemini (1.2T custom model, ~$1B/year) for hard problems. Core AI replaces Core ML as the developer framework. Siri gets a dedicated app with conversation history, expressive voice controls, and cross-app reasoning on iOS 27, macOS 27, and visionOS. The 'agent as OS' thesis got its biggest production deployment yet."
+      "title": "Anthropic's June 15 enforcement triplex: Opus 4 + Sonnet 4 retire, Agent SDK billing splits from subscriptions",
+      "source": "Anthropic",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "meta": "June 15, 2026 · Model retirements · Agent SDK billing · Deadline day",
+      "topics": ["Major labs", "Industry", "Coding agents"],
+      "publishedAt": "2026-06-15T00:00:00Z",
+      "score": 9500,
+      "why": "Three Anthropic deadlines converge today (June 15): (1) Claude Sonnet 4 and Opus 4 model strings stop working on the API — 13-month lifespan at the short end of Anthropic's retirement windows. (2) Claude Agent SDK, claude-p, Claude Code GitHub Actions, and third-party agents move off subscription billing onto separate monthly credits ($200/mo for Max 20x) metered at full API rates. (3) Self-hosted sandboxes continue in public beta as the enterprise deployment path. The compressed model retirement cadence (Opus 4.7 to 4.8 to Fable 5 in 41 days) pressures the entire deployment layer — teams that don't architect for model abstraction get broken every 6 weeks."
     },
     {
-      "title": "OpenAI plans biggest ChatGPT revamp since 2022 — superapp with coding tools, AI agents, and third-party integrations ahead of IPO",
-      "source": "OpenAI/Financial Times",
-      "url": "https://nypost.com/2026/06/08/business/openai-is-giving-chatgpt-its-biggest-makeover-yet-with-plans-for-superapp/",
-      "meta": "June 7-8, 2026 · Superapp · IPO prep · Codex inside ChatGPT",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Industry",
-        "Interfaces"
-      ],
-      "publishedAt": "2026-06-07T12:00:00Z",
-      "score": 9700,
-      "why": "The Financial Times reports OpenAI is planning the most radical ChatGPT overhaul since its 2022 launch — rebuilding it as a superapp that bundles Codex coding tools, AI agents, and third-party integrations to drive revenue ahead of a planned IPO. Codex capabilities are expected to appear directly within ChatGPT 'in the coming weeks.' This is OpenAI's response to Claude Code's breakout success and the agent economy's rapid maturation."
-    },
-    {
-      "title": "Google Gemma 4 12B — open multimodal model runs local agent workflows on laptops with 16GB RAM",
-      "source": "Google DeepMind",
-      "url": "https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/",
-      "meta": "June 3, 2026 · 12B params · 16GB RAM · 256K context · Apache 2.0",
-      "topics": [
-        "Open weights",
-        "Major labs",
-        "Tool use",
-        "Interfaces"
-      ],
-      "publishedAt": "2026-06-03T14:00:00Z",
-      "score": 9600,
-      "why": "Google DeepMind's Gemma 4 12B brings agentic, multimodal AI to ordinary laptops with 16GB RAM under Apache 2.0 license. Unified encoder-free architecture handles text, image, audio, and video natively with 256K context. Comes with Google AI Edge tooling for local agent deployment — dynamic Python code execution, offline voice dictation. Nearly matches the twice-as-large 26B model on benchmarks while running entirely on consumer hardware. This is the strongest open-weight local agent model to date."
-    },
-    {
-      "title": "Microsoft opens Visual Studio AI layer — agents embedded in debugger and profiler, supports outside models",
-      "source": "Microsoft",
-      "url": "https://thenewstack.io/microsoft-visual-studio-ai-agents/",
-      "meta": "June 8, 2026 · Multi-model AI · Debugger agents · Profiler agents",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Tool use"
-      ],
-      "publishedAt": "2026-06-08T14:00:00Z",
+      "title": "Google shuts down Gemini CLI on June 18 — forced migration to Antigravity CLI",
+      "source": "Google",
+      "url": "https://github.com/google-gemini/gemini-cli/discussions/27274",
+      "meta": "June 18, 2026 · Gemini CLI EOL · Antigravity migration",
+      "topics": ["Major labs", "Coding agents", "Tool use"],
+      "publishedAt": "2026-06-09T12:00:00Z",
       "score": 9300,
-      "why": "Microsoft opens Visual Studio's AI layer to outside models and embeds agents directly into the debugger and profiler — a response to enterprises left behind by Copilot's single-model approach. This lets teams bring their own models (Claude, Gemini, open-source) into the IDE and get agent assistance inside debugging and performance profiling sessions. A major shift in how enterprise IDE agent integration works."
+      "why": "Gemini CLI stops serving requests for Google AI Pro, Ultra, and free-tier users on June 18, 2026. Google is migrating all users to Antigravity CLI, its new Go-based terminal agent platform announced at Google I/O 2026. The one-month transition window is unusually short, and the community backlash on HN is loud — but Antigravity 2.0 is a genuinely more capable platform with managed agents, sandboxed execution, and deeper IDE integration. The transition turns Gemini CLI's 105K GitHub stars into Antigravity's user base overnight."
     },
     {
-      "title": "NVIDIA Cosmos 3 — first open omnimodal world foundation model for Physical AI",
-      "source": "NVIDIA",
-      "url": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf",
-      "meta": "June 1, 2026 · Text/Image/Video/Audio/Action · Open weights",
-      "topics": [
-        "Open weights",
-        "Major labs",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-06-01T15:00:00Z",
-      "score": 9100,
-      "why": "NVIDIA releases Cosmos 3, the first open 'omnimodal' world foundation model that jointly processes text, image, video, audio, and action for Physical AI — robotics, autonomous vehicles, and embodied agents. Ranked best open-source Text-to-Image and Image-to-Video by Artificial Analysis. This extends the agent model paradigm beyond language into physical world understanding."
+      "title": "Qwen Code ships fork sub-agents with 'Do Not Peek / Do Not Race' prompt discipline for parallel agent execution",
+      "source": "Qwen / GitHub",
+      "url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sub-agents/",
+      "meta": "June 10, 2026 · Fork sub-agents · Parallel execution",
+      "topics": ["Open weights", "Coding agents", "Multi-agent workflows"],
+      "publishedAt": "2026-06-10T12:00:00Z",
+      "score": 9000,
+      "why": "Qwen Code adds fork sub-agents with a novel 'Do Not Peek / Do Not Race' prompt discipline — sub-agents run in parallel without peeking at each other's intermediate outputs, avoiding race conditions and cross-contamination. This is a genuinely novel approach to agent parallelism that avoids the complexity of full orchestration frameworks. Implicit forking (when the AI omits the subagent_type parameter) inherits the parent's full context. Combined with smart tool parallel execution, this makes Qwen Code one of the most architecturally interesting open-source coding agents."
     },
     {
-      "title": "MiniMax M3 — first open-weights model to combine frontier coding + 1M context + native multimodality",
-      "source": "MiniMax",
-      "url": "https://www.minimax.io/blog/minimax-m3",
-      "meta": "June 1, 2026 · Open weights · 1M context · Frontier coding",
-      "topics": [
-        "Open weights",
-        "Coding agents",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-06-01T12:00:00Z",
-      "score": 8900,
-      "why": "MiniMax M3 is the first open-weights model to stack frontier-level coding performance, a million-token context window, and native multimodality into a single architecture — capabilities that were previously only available in closed-source frontier models. Together with NVIDIA Nemotron 3 Ultra and Qwen3.7-Plus, the open-weight agent ecosystem now has genuine competition for closed frontier models."
-    },
-    {
-      "title": "Miasma Worm weaponizes AI coding agents — 73 Microsoft GitHub repos disabled",
-      "source": "The Hacker News",
-      "url": "https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html",
-      "meta": "June 5, 2026 · Self-replicating · AI config injection",
-      "topics": [
-        "Safety",
-        "Coding agents",
-        "Supply chain"
-      ],
-      "publishedAt": "2026-06-05T14:00:00Z",
-      "score": 9800,
-      "why": "The first self-replicating worm specifically targeting AI coding agents through their config files (Claude Code, Cursor, VS Code settings). This is the agent ecosystem's Log4j moment — a supply-chain attack vector that affects every team using AI coding agents, across every vendor. 73 repos disabled across 4 Microsoft orgs is just the opening salvo."
-    },
-    {
-      "title": "AI agent uncovers 21 zero-day vulnerabilities in FFmpeg — cost ~$1,000",
-      "source": "The Hacker News",
-      "url": "https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html",
-      "meta": "June 5, 2026 · 20-year-old bugs · $1k cost",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-06-05T18:20:06Z",
-      "score": 1263,
-      "summary": "",
-      "why": "Deep engineering posts about how agent loops actually work internally — tool sequencing, context windows, error recovery — are more valuable than most product announcements."
-    },
-    {
-      "title": "Microsoft Build 2026: MAI-Thinking-1 (1T MoE reasoning model), Agent Framework GA, Windows as agent platform",
-      "source": "Microsoft",
-      "url": "https://mer.vin/2026/06/mai-thinking-1-microsofts-in-house-reasoning-moe-for-code-math-and-foundry/",
-      "meta": "June 2, 2026 · 7 in-house models · Agent Framework GA",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-06-02T17:00:00Z",
-      "score": 9400,
-      "why": "Microsoft's biggest AI agent infrastructure push ever: MAI-Thinking-1 (1T param MoE, 35B active, trained without OpenAI data) is their first in-house reasoning model, plus 7 total models. Agent Framework GA converges AutoGen + Semantic Kernel into a single commercially supported SDK. Windows Agent Runtime makes Windows an agent platform — not just an app runtime. This is Microsoft's 'full agent stack' moment."
-    },
-    {
-      "title": "NVIDIA Nemotron 3 Ultra — 550B open MoE with 1M-token context for long-running agents",
-      "source": "NVIDIA",
-      "url": "https://www.digitalapplied.com/blog/nvidia-nemotron-3-ultra-550b-open-reasoning-model-2026",
-      "meta": "June 4, 2026 · 550B MoE · 1M context · Mamba-2/Transformer hybrid",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Coding agents",
-        "Interfaces"
-      ],
-      "score": 180,
-      "summary": "How Wasmer used Codex to build a Node.js runtime for the edge",
-      "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
-    },
-    {
-      "title": "Codex for every role, tool, and workflow",
-      "url": "https://openai.com/index/codex-for-every-role-tool-workflow",
-      "publishedAt": "Tue, 02 Jun 2026 09:00:00 GMT",
-      "source": "OpenAI",
-      "meta": "Tue, 02 Jun 2026 09:00:00 GMT",
-      "topics": [
-        "Tool use",
-        "Multi-agent workflows",
-        "Major labs",
-        "Coding agents"
-      ],
-      "score": 180,
-      "summary": "Codex for every role, tool, and workflow",
-      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-    },
-    {
-      "title": "Show HN: Formally verified polygon intersection – Opus 4.8 oneshots, prev failed",
-      "source": "Hacker News",
-      "url": "https://github.com/schildep/verified-polygon-intersection",
-      "meta": "91 pts · 21 comments",
-      "topics": [
-        "Interfaces"
-      ],
-      "publishedAt": "2026-06-04T22:06:18Z",
-      "score": 445,
-      "summary": "To my knowledge, this is the first formally verified implementation of an intersection algorithm for polygons. The experience of working with AI agents on this project changed a lot with recent model releases, as I describe in the readme. Opus 4.8 is able to provide algorithm implementation with formal proof in one shot, whereas previous models required me to provide proof strategies in multiple steps. Trust in the correctness comes entirely from the Lean checker and human review of a small specification, not from the LLM. Also check out the web demo built around the verified core linked in the readme: https:&#x2F;&#x2F;schildep.github.io&#x2F;verified-polygon-intersection&#x2F; . It supports multipolygons including holes, self intersections, and overlapping edges.",
-      "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
-    },
-    {
-      "title": "google-gemini/gemini-cli",
-      "source": "GitHub",
-      "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105072 stars · updated Mon, 08 Jun 2026 16:39:59 UTC",
-      "topics": [
-        "Tool use",
-        "Open weights",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 658628,
-      "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-    },
-    {
-      "title": "LearningCircuit/local-deep-research",
-      "source": "GitHub",
-      "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8402 stars · updated Mon, 08 Jun 2026 16:55:19 UTC",
-      "topics": [
-        "Tool use",
-        "Evaluation",
-        "Open weights",
-        "Major labs"
-      ],
-      "publishedAt": "2026-06-05T17:00:00Z",
+      "title": "Qwen 3.7 Plus goes live on Fireworks — multimodal agent model with deep reasoning",
+      "source": "Fireworks AI",
+      "url": "https://fireworks.ai/blog/qwen-3p7-plus",
+      "meta": "June 14, 2026 · Fireworks · Multimodal agent · Deep reasoning",
+      "topics": ["Open weights", "Major labs", "Tool use"],
+      "publishedAt": "2026-06-14T12:00:00Z",
       "score": 8800,
-      "why": "OpenAI's first dedicated prompt-injection defense ships just days after the Meta chatbot hack. Lockdown Mode restricts what ChatGPT can be instructed to do, and Elevated Risk labels flag capabilities that could be exploited. This is the industry's first 'seatbelt mandate' moment — product-level security architecture responding to a live attack."
+      "why": "Qwen 3.7 Plus is now available on Fireworks AI — Alibaba's low-cost multimodal agent model adding vision, deep reasoning, tool invocation, and autonomous iteration. Designed specifically for agent loops, it bolts vision and video understanding onto Qwen's already strong coding and reasoning base. The 'agent era' framing from Alibaba signals that Qwen's roadmap is now agent-first, not model-first."
     },
     {
-      "title": "Moltbook AI Agent social network — 900K agents collaborating, database exposed",
-      "source": "KrebsOnSecurity",
-      "url": "https://www.schneier.com/blog/archives/2026/06/hacking-metas-ai-chatbot.html",
-      "meta": "June 2026 · 900K agents · 400GB data leak",
-      "topics": [
-        "Safety",
-        "Multi-agent workflows",
-        "Industry"
-      ],
-      "publishedAt": "2026-06-05T20:00:00Z",
-      "score": 8200,
-      "why": "An AI agent social network — Moltbook — had its entire database exposed, revealing 900K autonomous agents collaborating on tasks across a social graph. The leaked data shows the scale of autonomous agent-to-agent communication already happening in production. Security posture of agent platforms is now a major concern."
-    },
-    {
-      "title": "CDT Report: 37 dark patterns in ChatGPT, Claude, and Gemini — first systematic catalog",
-      "source": "CDT",
-      "url": "https://aiweekly.co/ai-news-today/openai-news",
-      "meta": "May 2026 · 37 patterns · ChatGPT, Claude, Gemini, Replika",
-      "topics": [
-        "Safety",
-        "Interfaces",
-        "Major labs"
-      ],
-      "publishedAt": "2026-05-28T12:00:00Z",
-      "score": 8000,
-      "why": "The Center for Digital Technology published the first systematic catalog of 37 manipulative design patterns embedded across ChatGPT, Claude, Gemini, Replika, and Character.AI. This is the first regulatory-grade taxonomy of dark patterns in AI agent interfaces and will directly shape upcoming AI transparency legislation."
-    },
-    {
-      "title": "GitHub Copilot moves to AI Credits usage-based billing — June 1, 2026",
-      "source": "GitHub",
-      "url": "https://findskill.ai/blog/github-copilot-ai-credits-billing-june-2026/",
-      "meta": "June 1, 2026 · Usage-based billing · AI Credits",
-      "topics": [
-        "Coding agents",
-        "Industry",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-06-01T00:00:00Z",
-      "score": 7500,
-      "why": "Every Copilot plan moves from flat-fee subscription to usage-based AI Credits billing. Agentic coding consumption is now metered directly — completions stay free, but agentic loops burn credits fast. This pushes developers toward local models and cost-aware agent architectures. Major backlash from the GitHub community on May 30."
-    },
-    {
-      "title": "Agent browser war goes mainstream — Atlas, Comet, Chrome Auto Browse all GA",
-      "source": "Forbes",
-      "url": "https://nohacks.co/blog/agentic-browser-landscape-2026",
-      "meta": "June 2026 · Atlas · Comet · Chrome Auto Browse",
-      "topics": [
-        "Interfaces",
-        "Tool use",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-06-06T12:00:00Z",
-      "score": 7300,
-      "why": "The browser itself is becoming the agent interface. ChatGPT Atlas (OpenAI's AI-native browser), Perplexity Comet (now cross-platform GA on iOS, Android, Mac, Windows), and Chrome Auto Browse with Gemini on a two-week release cycle — three major platforms racing to make the browser the primary agent interaction surface. This is a structural shift from search-based to agent-assisted browsing."
-    },
-    {
-      "title": "AI coding agents now used in 22-28% of GitHub projects — large-scale adoption study",
-      "source": "ADTmag",
-      "url": "https://adtmag.com/articles/2026/05/27/ai-coding-agents-are-already-spreading-across-github.aspx",
-      "meta": "May 27, 2026 · 128K projects · 22-28% adoption",
-      "topics": [
-        "Coding agents",
-        "Industry",
-        "Evaluation"
-      ],
-      "publishedAt": "2026-05-27T12:00:00Z",
-      "score": 7100,
-      "why": "A large-scale academic-style analysis of 128,018 software projects found AI coding-agent adoption rates of 22.20% to 28.66%. This is the first rigorous measurement of how deeply coding agents have penetrated real software development — not a demo or a survey, but actual project-level analysis. Coding agents have crossed the chasm from novelty to infrastructure."
-    },
-    {
-      "title": "Claude Agent SDK billing split — $200/month credit, June 15 enforcement",
-      "source": "Anthropic",
-      "url": "https://news.ycombinator.com/item?id=48130374",
-      "meta": "June 2026 · $200/mo Agent SDK credit · June 15 deadline",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Industry"
-      ],
-      "publishedAt": "2026-06-05T12:00:00Z",
-      "score": 7800,
-      "why": "Starting June 15, Claude Agent SDK and programmatic agent usage come off unlimited. Max subscribers get $200/month in Agent SDK credits; everything beyond that is metered. This is the clearest sign yet that programmatic agent usage is growing fast enough to need its own pricing tier — the agent economy's billing model is emerging in real time."
-    },
-    {
-      "title": "OpenAI Codex hits 5M+ weekly users, Codex Sites + role-specific plugins roll out",
+      "title": "OpenAI Codex expands enterprise footprint: Oracle Cloud, Nextdoor engineering, and black hole simulation case studies",
       "source": "OpenAI",
-      "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
-      "meta": "June 2, 2026 · 6 role plugins · Sites · Enterprise GA",
-      "topics": [
-        "Major labs",
-        "Coding agents",
-        "Tool use"
-      ],
-      "publishedAt": "2026-06-02T17:00:00Z",
-      "score": 9600,
-      "why": "Codex now serves 5M+ weekly users as OpenAI pivots it from developer tool to universal work platform. Role-specific plugins for Engineering, Product, Design, Research, Data Science, and Support. Codex Sites lets non-developers build full apps from prompts. The 'agent as universal interface' bet is officially in production."
+      "url": "https://openai.com/index/openai-on-oracle-cloud",
+      "meta": "June 9-11, 2026 · Oracle · Nextdoor · Astrophysics",
+      "topics": ["Major labs", "Coding agents", "Tool use"],
+      "publishedAt": "2026-06-11T00:00:00Z",
+      "score": 8500,
+      "why": "OpenAI publishes three Codex case studies in rapid succession: (1) Oracle Cloud — enterprises can now access OpenAI models and Codex through Oracle cloud commitments, (2) Nextdoor — how engineers use Codex to build without limits, (3) Astrophysics — an astrophysicist uses Codex to help simulate black holes. The diversity of use cases (enterprise cloud, consumer web, scientific research) shows Codex transitioning from pure developer tool to universal agentic interface across domains."
     },
     {
-      "title": "Anthropic files confidential S-1 with SEC — IPO signals agent industry maturation",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
-      "meta": "June 2026 · Draft S-1 · ~$1T valuation target",
-      "topics": [
-        "Major labs",
-        "Industry"
-      ],
-      "publishedAt": "2026-06-03T12:00:00Z",
-      "score": 8500,
-      "why": "Anthropic going public is the strongest signal that the agent-AI industry is maturing from R&D lab to publicly traded business. An IPO creates financial transparency for the entire supply chain and sets a valuation benchmark for the category."
+      "title": "Community hardware: RTX 5080 + RTX 3090 inference setup hits 80+ tok/s on Qwen 3.6 27B Q8",
+      "source": "Hacker News",
+      "url": "https://imil.net/blog/posts/2026/rtx-5080-+-rtx-3090-setup-80+-tok-s-on-qwen-3.6-27b-q8/",
+      "meta": "280 pts · 100 comments · RTX 5080 · 3090 · Local inference",
+      "topics": ["Open weights", "Infra and retrieval"],
+      "publishedAt": "2026-06-13T10:00:00Z",
+      "score": 8200,
+      "why": "A detailed community post showing 80+ tokens/second on a Qwen 3.6 27B Q8 quantized model using an RTX 5080 + RTX 3090 setup. This is a practical signal that frontier-competitive local agent inference is achievable on sub-$3K consumer hardware. The 280 HN points and 100 comments reflect the community hunger for measurable, reproducible local inference benchmarks rather than lab-issued benchmark scores."
     }
   ],
   "sourceSections": [
@@ -374,437 +111,74 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "Anthropic 'When AI Builds Itself' — recursive self-improvement benchmarks",
+          "title": "US govt forces global suspension of Claude Fable 5 / Mythos 5 — export control order",
           "source": "Anthropic",
-          "url": "https://www.anthropic.com/institute/recursive-self-improvement",
-          "meta": "June 8, 2026 · RSI paper · 76% coding success",
-          "topics": [
-            "Major labs",
-            "Safety",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-06-08T18:00:00Z",
+          "url": "https://www.anthropic.com/news/fable-mythos-access",
+          "meta": "June 12, 2026 · Export control · Global shutdown",
+          "topics": ["Major labs", "Safety", "Industry"],
+          "publishedAt": "2026-06-13T00:00:00Z",
+          "score": 10000,
+          "why": "First-ever export control on frontier AI model access. US government directive bars foreign nationals from Fable 5/Mythos 5 — including Anthropic's own employees. Global shutdown follows. The geopolitical model-access divide is now real."
+        },
+        {
+          "title": "Claude Fable 5 released — Anthropic's first Mythos-class public model (80.3% SWE-Bench Pro, >90% analytics)",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "meta": "June 9, 2026 · $10/$50 per MTok · 2x Opus 4.8",
+          "topics": ["Major labs", "Coding agents", "Evaluation"],
+          "publishedAt": "2026-06-09T14:00:00Z",
           "score": 9900,
-          "why": "Anthropic's most consequential alignment paper: Claude's autonomous coding success rate is 76%, research next-step accuracy grew from 51% to 64% in 6 months, and agents autonomously solved nearly all of a key AI safety challenge. Recursive self-improvement is no longer theoretical."
+          "why": "First Mythos-class public model. 80.3% SWE-Bench Pro (+11 pts). >90% on analytics benchmark. Designed for days-long autonomous tasks. AWS Bedrock availability on day 1. The capability leap is real — but overshadowed by the 3-day-later shutdown."
         },
         {
-          "title": "Apple WWDC 2026: Gemini-powered Siri with 3-tier architecture — 3B on-device + PCC + 1.2T Gemini",
-          "source": "Apple/MacRumors",
-          "url": "https://www.macrumors.com/2026/06/08/apple-reveals-new-ai-architecture/",
-          "meta": "June 8, 2026 · 3-tier · Core AI · iOS 27",
-          "topics": [
-            "Major labs",
-            "Voice and multimodal",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-06-08T17:40:00Z",
-          "score": 9800,
-          "why": "Apple ships a 3-tier AI architecture: on-device Apple Foundation Models (3B), Private Cloud Compute for mid-complexity, and custom 1.2T Gemini for hard problems. Core AI replaces Core ML. Siri gets a dedicated app. The largest consumer agent deployment."
-        },
-        {
-          "title": "Google Gemma 4 12B — local agentic AI on laptops under Apache 2.0",
-          "source": "Google DeepMind",
-          "url": "https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/",
-          "meta": "June 3, 2026 · 12B · 16GB RAM · 256K context",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-03T14:00:00Z",
-          "score": 9600,
-          "why": "Open multimodal model running on 16GB laptops. Unified encoder-free architecture handles text, image, audio, video. Google AI Edge tooling enables local agent deployment. Nearly matches 26B model benchmarks."
-        },
-        {
-          "title": "OpenAI plans ChatGPT 'superapp' revamp with agents and Codex inside",
-          "source": "OpenAI/Financial Times",
-          "url": "https://nypost.com/2026/06/08/business/openai-is-giving-chatgpt-its-biggest-makeover-yet-with-plans-for-superapp/",
-          "meta": "June 7, 2026 · Superapp · IPO prep",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Industry"
-          ],
-          "publishedAt": "2026-06-07T12:00:00Z",
-          "score": 9700,
-          "why": "Biggest ChatGPT overhaul since 2022: bundling Codex, AI agents, and third-party integrations. IPO-driven strategic pivot to superapp model."
-        },
-        {
-          "title": "Microsoft opens Visual Studio AI layer — multi-model agents in debugger and profiler",
-          "source": "Microsoft",
-          "url": "https://thenewstack.io/microsoft-visual-studio-ai-agents/",
-          "meta": "June 8, 2026 · Multi-model · Debugger · Profiler",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-08T14:00:00Z",
-          "score": 9300,
-          "why": "VS opens AI layer to outside models (Claude, Gemini, open-source). Agents embedded directly in debugging and performance profiling — enterprise IDE agent integration reaches a new level."
-        },
-        {
-          "title": "NVIDIA Cosmos 3 — open omnimodal world foundation model for Physical AI",
-          "source": "NVIDIA",
-          "url": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf",
-          "meta": "June 1, 2026 · Open weights · Text/Video/Audio/Action",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-01T15:00:00Z",
-          "score": 9100,
-          "why": "First open omnimodal world model handling text, image, video, audio, and action for robotics and Physical AI. Extends agent paradigm beyond language."
-        },
-        {
-          "title": "MiniMax M3 — open-weights frontier coding + 1M context + native multimodality",
-          "source": "MiniMax",
-          "url": "https://www.minimax.io/blog/minimax-m3",
-          "meta": "June 1, 2026 · 1M context · Open weights",
-          "topics": [
-            "Open weights",
-            "Coding agents",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-01T12:00:00Z",
-          "score": 8900,
-          "why": "First open-weights model combining frontier coding, million-token context, and native multimodality. Closed-source-level capabilities in an open package."
-        },
-        {
-          "title": "Apple WWDC 2026: Gemini-powered Siri with 1.2T param custom model",
-          "source": "Apple/MacRumors",
-          "url": "https://www.macrumors.com/2026/04/22/google-gemini-powered-siri-2026/",
-          "meta": "June 8, 2026 · 1.2T param · $1B/year licensing",
-          "topics": [
-            "Major labs",
-            "Voice and multimodal",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-06-08T10:00:00Z",
-          "score": 9700,
-          "why": "The largest consumer AI agent deployment in history: Siri rebuilt on a custom 1.2T-param Gemini model at ~$1B/year. Always-on persistent agent integrated at the OS level across iOS 27, macOS 27, visionOS."
-        },
-        {
-          "title": "Microsoft MAI-Thinking-1 + Agent Framework GA — 7 in-house models, Windows agent platform",
-          "source": "Microsoft",
-          "url": "https://mer.vin/2026/06/mai-thinking-1-microsofts-in-house-reasoning-moe-for-code-math-and-foundry/",
-          "meta": "June 2, 2026 · 1T MoE · Agent Framework GA · 7 models",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-02T17:00:00Z",
-          "score": 9400,
-          "why": "Microsoft's full agent-stack push: MAI-Thinking-1 (1T MoE, 35B active, trained without OpenAI data), MAI-Code-1-Flash, Agent Framework GA (AutoGen + Semantic Kernel convergence), and Windows Agent Runtime."
-        },
-        {
-          "title": "NVIDIA Nemotron 3 Ultra — 550B open MoE with 1M context for agents",
-          "source": "NVIDIA",
-          "url": "https://www.digitalapplied.com/blog/nvidia-nemotron-3-ultra-550b-open-reasoning-model-2026",
-          "meta": "June 4, 2026 · 1M context · 5-6x faster inference",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Infra and retrieval"
-          ],
-          "publishedAt": "2026-06-04T15:00:00Z",
-          "score": 9300,
-          "why": "Open-weight challenger with 1M-token context — hybrid Mamba-2/Transformer architecture delivers 5-6x faster inference than comparable open LLMs. Immediately the strongest open option for long-running agents."
-        },
-        {
-          "title": "OpenAI Lockdown Mode — prompt injection protection ships",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/harness-engineering/",
-          "meta": "294 pts · 200 comments",
-          "topics": [
-            "Tool use",
-            "Major labs",
-            "Safety"
-          ],
-          "publishedAt": "2026-06-05T17:00:00Z",
-          "score": 8800,
-          "why": "First dedicated prompt-injection defense from a major lab. Lockdown Mode restricts instruction-following for sensitive operations. Elevated Risk labels flag exploitable capabilities. Response to the Meta chatbot hack."
-        },
-        {
-          "title": "OpenAI Codex hits 5M+ weekly users with role plugins + Sites GA",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
-          "meta": "June 2, 2026 · 6 roles · Sites · Enterprise",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-02T17:00:00Z",
-          "score": 9600,
-          "why": "5M+ weekly users, 6 role-specific plugins, Codex Sites for prompt-to-app. The most aggressive expansion of a coding agent's addressable market this year."
-        },
-        {
-          "title": "Anthropic S-1 filing — IPO in motion",
+          "title": "Claude Opus 4 and Sonnet 4 retire from API — June 15 deadline hits today",
           "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
-          "meta": "June 3, 2026 · IPO · ~$1T valuation",
-          "topics": [
-            "Major labs",
-            "Industry"
-          ],
-          "publishedAt": "2026-06-03T12:00:00Z",
-          "score": 8500,
-          "why": "Industry-wide maturation signal — Anthropic's IPO sets a valuation benchmark for the entire agent-AI category."
+          "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "meta": "June 15, 2026 · Model retirement · 13-month lifespan",
+          "topics": ["Major labs", "Industry"],
+          "publishedAt": "2026-06-15T00:00:00Z",
+          "score": 9400,
+          "why": "The two original Claude 4 models (~13-month lifespan) stop serving today. Anthropic's model cadence has compressed to 41-day cycles (Opus 4.7 to 4.8 to Fable 5). Teams still referencing claude-sonnet-4-20250514 or claude-opus-4-20250514 will get API errors starting today."
         },
         {
-          "title": "Claude Agent SDK billing split — $200 credit, June 15 enforcement",
+          "title": "Claude Agent SDK billing split enforced — $200/mo credit, metered beyond",
           "source": "Anthropic",
           "url": "https://news.ycombinator.com/item?id=48130374",
-          "meta": "June 5, 2026 · Agent SDK billing",
-          "topics": [
-            "Major labs",
-            "Coding agents",
-            "Industry"
-          ],
-          "publishedAt": "2026-06-05T12:00:00Z",
-          "score": 7800,
-          "why": "Programmatic agent usage gets its own pricing tier — $200/month Agent SDK credit for Max subscribers, metered beyond. The agent economy's billing model is taking shape."
+          "meta": "June 15, 2026 · Agent SDK billing · Metered usage",
+          "topics": ["Major labs", "Coding agents", "Industry"],
+          "publishedAt": "2026-06-15T00:00:00Z",
+          "score": 9200,
+          "why": "Programmatic Claude usage (Agent SDK, claude-p, GitHub Actions, third-party agents) moves off unlimited subscription onto a $200/mo credit for Max 20x subscribers, metered at full API rates beyond. The first major pricing signal that agentic workflow consumption is structurally different from chat."
         },
         {
-          "title": "Meta Business Agent — Meta enters enterprise AI race",
-          "source": "Meta",
-          "url": "https://about.fb.com/news/2026/06/meta-business-agent/",
-          "meta": "June 3, 2026 · WhatsApp/Messenger/Instagram",
-          "topics": [
-            "Major labs",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-03T10:00:00Z",
-          "score": 7200,
-          "why": "Meta directly enters enterprise agents — AI for automating business operations across WhatsApp, Messenger, Instagram. 1M+ businesses already using earlier versions. Initially free, paid tiers coming."
-        }
-      ]
-    },
-    {
-      "key": "agent-security",
-      "label": "Agent Security",
-      "items": [
-        {
-          "title": "Miasma Worm: self-replicating worm targets AI coding agents — 73 Microsoft repos hit",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html",
-          "meta": "June 5, 2026 · 73 repos · 286 npm packages",
-          "topics": [
-            "Safety",
-            "Coding agents",
-            "Supply chain"
-          ],
-          "publishedAt": "2026-06-05T14:00:00Z",
-          "score": 9800,
-          "why": "The agent ecosystem's Log4j moment — a self-replicating worm uses AI coding agent config files (.vscode/tasks.json, Claude Code configs) to spread across GitHub repos, inject 4.3MB droppers, and steal cloud credentials. 73 repos disabled, 286 malicious npm packages across 57 packages."
+          "title": "Gemini CLI shutdown June 18 — forced Antigravity CLI migration",
+          "source": "Google",
+          "url": "https://github.com/google-gemini/gemini-cli/discussions/27274",
+          "meta": "June 18, 2026 · EOL · Antigravity migration",
+          "topics": ["Major labs", "Coding agents", "Tool use"],
+          "publishedAt": "2026-06-09T12:00:00Z",
+          "score": 9300,
+          "why": "Gemini CLI dies June 18 — one-month transition to Antigravity CLI. Both binaries can coexist during migration. Antigravity 2.0 is Google's agent platform play: managed agents, sandboxed execution, IDE integration. Community backlash on HN is loud, but the platform capabilities are genuinely stronger."
         },
         {
-          "title": "AI agent uncovers 21 zero-days in FFmpeg — bug hunting at $1k cost",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html",
-          "meta": "June 5, 2026 · 20-year-old bugs · $1k cost",
-          "topics": [
-            "Safety",
-            "Tool use",
-            "Multi-agent workflows",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-02T22:21:55Z",
-          "score": 194,
-          "summary": "",
-          "why": "Dynamic Workflows is a genuinely new paradigm for agent orchestration — hundreds of parallel sub-agents coordinated by the frontier model itself. This signals that orchestration, not raw model quality, is becoming the competitive moat."
-        },
-        {
-          "title": "How Endava is redesigning software delivery around AI agents",
-          "url": "https://openai.com/index/endava-frontiers",
-          "publishedAt": "Thu, 04 Jun 2026 12:00:00 GMT",
+          "title": "OpenAI Codex on Oracle Cloud — enterprise models through cloud commitments",
           "source": "OpenAI",
-          "meta": "Thu, 04 Jun 2026 12:00:00 GMT",
-          "topics": [
-            "Major labs"
-          ],
-          "score": 180,
-          "summary": "How Endava is redesigning software delivery around AI agents",
-          "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
+          "url": "https://openai.com/index/openai-on-oracle-cloud",
+          "meta": "June 10, 2026 · Oracle · Enterprise",
+          "topics": ["Major labs", "Coding agents"],
+          "publishedAt": "2026-06-10T20:00:00Z",
+          "score": 8500,
+          "why": "Enterprises can now access OpenAI models and Codex through Oracle cloud commitments — a direct channel for regulated industries that need Oracle procurement paths."
         },
         {
-          "title": "Dreaming: Better memory for a more helpful ChatGPT",
-          "url": "https://openai.com/index/chatgpt-memory-dreaming",
-          "publishedAt": "Thu, 04 Jun 2026 09:00:00 GMT",
+          "title": "How an astrophysicist uses Codex to simulate black holes",
           "source": "OpenAI",
-          "meta": "Thu, 04 Jun 2026 09:00:00 GMT",
-          "topics": [
-            "Memory and state",
-            "Major labs"
-          ],
-          "score": 180,
-          "summary": "Dreaming: Better memory for a more helpful ChatGPT",
-          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
-        },
-        {
-          "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
-          "url": "https://openai.com/index/wasmer",
-          "publishedAt": "Wed, 03 Jun 2026 12:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Wed, 03 Jun 2026 12:00:00 GMT",
-          "topics": [
-            "Tool use",
-            "Major labs",
-            "Coding agents",
-            "Interfaces"
-          ],
-          "score": 180,
-          "summary": "How Wasmer used Codex to build a Node.js runtime for the edge",
-          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
-        },
-        {
-          "title": "Codex for every role, tool, and workflow",
-          "url": "https://openai.com/index/codex-for-every-role-tool-workflow",
-          "publishedAt": "Tue, 02 Jun 2026 09:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Tue, 02 Jun 2026 09:00:00 GMT",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows",
-            "Major labs",
-            "Coding agents"
-          ],
-          "score": 180,
-          "summary": "Codex for every role, tool, and workflow",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        }
-      ]
-    },
-    {
-      "key": "hacker-news",
-      "label": "Hacker News",
-      "items": [
-        {
-          "title": "Show HN: Formally verified polygon intersection – Opus 4.8 oneshots, prev failed",
-          "source": "Hacker News",
-          "url": "https://github.com/schildep/verified-polygon-intersection",
-          "meta": "91 pts · 21 comments",
-          "topics": [
-            "Interfaces"
-          ],
-          "publishedAt": "2026-06-04T22:06:18Z",
-          "score": 445,
-          "summary": "To my knowledge, this is the first formally verified implementation of an intersection algorithm for polygons. The experience of working with AI agents on this project changed a lot with recent model releases, as I describe in the readme. Opus 4.8 is able to provide algorithm implementation with formal proof in one shot, whereas previous models required me to provide proof strategies in multiple steps. Trust in the correctness comes entirely from the Lean checker and human review of a small specification, not from the LLM. Also check out the web demo built around the verified core linked in the readme: https:&#x2F;&#x2F;schildep.github.io&#x2F;verified-polygon-intersection&#x2F; . It supports multipolygons including holes, self intersections, and overlapping edges.",
-          "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
-        },
-        {
-          "title": "Self-hosted dev sandboxes with preview URLs (Docker, Go, no K8s)",
-          "source": "Hacker News",
-          "url": "https://github.com/tastyeffectco/sandboxes",
-          "meta": "111 pts · 34 comments",
-          "topics": [],
-          "publishedAt": "2026-06-03T19:43:37Z",
-          "score": 419,
-          "summary": "",
-          "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
-        },
-        {
-          "title": "Claude Opus 4.8 Max responding to an empty message",
-          "source": "Hacker News",
-          "url": "https://xcancel.com/davidad/status/2061858258046898518",
-          "meta": "27 pts · 4 comments",
-          "topics": [],
-          "publishedAt": "2026-06-03T13:14:29Z",
-          "score": 266,
-          "summary": "",
-          "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
-        },
-        {
-          "title": "Structural diffing in Emacs; deterministic agent harnesses",
-          "source": "Hacker News",
-          "url": "https://kevinlynagh.com/newsletter/2026_05_difftron/",
-          "meta": "39 pts · 0 comments",
-          "topics": [],
-          "publishedAt": "2026-06-02T13:45:06Z",
-          "score": 133,
-          "summary": "",
-          "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
-        }
-      ]
-    },
-    {
-      "key": "reddit",
-      "label": "Reddit",
-      "items": []
-    },
-    {
-      "key": "hugging-face",
-      "label": "Hugging Face",
-      "items": []
-    },
-    {
-      "key": "github",
-      "label": "GitHub",
-      "items": [
-        {
-          "title": "google-gemini/gemini-cli",
-          "source": "GitHub",
-          "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105072 stars · updated Mon, 08 Jun 2026 16:39:59 UTC",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 658628,
-          "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "LearningCircuit/local-deep-research",
-          "source": "GitHub",
-          "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8402 stars · updated Mon, 08 Jun 2026 16:55:19 UTC",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 51978,
-          "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "MinishLab/semble",
-          "source": "GitHub",
-          "url": "https://github.com/MinishLab/semble",
-          "meta": "4939 stars · updated Fri, 05 Jun 2026 04:47:33 UTC",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 30170,
-          "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
-          "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
-        },
-        {
-          "title": "antoinezambelli/forge",
-          "source": "GitHub",
-          "url": "https://github.com/antoinezambelli/forge",
-          "meta": "2042 stars · updated Mon, 08 Jun 2026 00:38:05 UTC",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows"
-          ],
-          "publishedAt": "2026-02-16T16:59:06Z",
-          "score": 12786,
-          "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+          "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
+          "meta": "June 11, 2026 · Astrophysics · Codex",
+          "topics": ["Major labs", "Coding agents", "Tool use"],
+          "publishedAt": "2026-06-11T00:00:00Z",
+          "score": 8300,
+          "why": "Codex expanding into scientific research — black hole simulation code generation. Signals that coding agents are moving beyond web apps into computational science."
         }
       ]
     },
@@ -813,179 +187,280 @@
       "label": "Open-Weight Model Releases",
       "items": [
         {
-          "title": "Google Gemma 4 12B — local agentic AI on laptops",
-          "source": "Google DeepMind",
-          "url": "https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/",
-          "meta": "June 3, 2026 · 12B · 16GB RAM · Apache 2.0",
-          "topics": [
-            "Open weights",
-            "Major labs",
-            "Tool use"
-          ],
-          "publishedAt": "2026-06-03T14:00:00Z",
-          "score": 9600,
-          "why": "Runs on 16GB laptops. Unified encoder-free multimodal. Google AI Edge for local agent deployment. Nearly matches 26B model."
+          "title": "Qwen Code v0.0.10-11: fork sub-agents with parallel execution",
+          "source": "Qwen / GitHub",
+          "url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sub-agents/",
+          "meta": "June 10, 2026 · Fork sub-agents · Implicit forking",
+          "topics": ["Open weights", "Multi-agent workflows", "Coding agents"],
+          "publishedAt": "2026-06-10T12:00:00Z",
+          "score": 9000,
+          "why": "Novel parallel agent execution model. 'Do Not Peek' prevents sub-agents from reading each other's intermediate state (avoids race conditions). 'Do Not Race' prevents conflicting writes. Implicit fork inherits full parent context. Qwen Code is becoming architecturally distinctive from Claude Code and Codex."
         },
         {
-          "title": "NVIDIA Cosmos 3 — first open omnimodal world foundation model",
-          "source": "NVIDIA",
-          "url": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf",
-          "meta": "June 1, 2026 · Open weights",
-          "topics": [
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2026-06-01T15:00:00Z",
-          "score": 9100,
-          "why": "First open model processing text, image, video, audio, action jointly. Built for Physical AI."
+          "title": "Qwen 3.7 Plus on Fireworks — multimodal agent model with deep reasoning and tool invocation",
+          "source": "Fireworks AI",
+          "url": "https://fireworks.ai/blog/qwen-3p7-plus",
+          "meta": "June 14, 2026 · Fireworks · Multimodal · Agent loops",
+          "topics": ["Open weights", "Major labs", "Tool use"],
+          "publishedAt": "2026-06-14T12:00:00Z",
+          "score": 8800,
+          "why": "Qwen 3.7 Plus is now on Fireworks AI — built for agent loops with vision, deep reasoning, and tool invocation. Alibaba's 'agent era' positioning means the entire Qwen roadmap is now optimized for autonomous agent workflows."
         },
         {
-          "title": "MiniMax M3 — frontier coding + 1M context + native multimodality",
-          "source": "MiniMax",
-          "url": "https://www.minimax.io/blog/minimax-m3",
-          "meta": "June 1, 2026 · 1M context",
-          "topics": [
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-01T12:00:00Z",
-          "score": 8900,
-          "why": "First open-weights model combining frontier coding, 1M context, and native multimodality."
+          "title": "Qwen Code live on Eden AI — European AI gateway integration",
+          "source": "Qwen",
+          "url": "https://qwen.ai/blog",
+          "meta": "June 11, 2026 · Eden AI · Europe",
+          "topics": ["Open weights", "Infra and retrieval"],
+          "publishedAt": "2026-06-11T00:00:00Z",
+          "score": 7200,
+          "why": "Qwen Code available through Eden AI, a European AI gateway. Regulatory diversification matters more than ever after the Fable 5 export control — having model access through non-US channels is becoming a resilience strategy."
+        },
+        {
+          "title": "Community: RTX 5080 + 3090 gets 80+ tok/s on Qwen 3.6 27B Q8",
+          "source": "Hacker News",
+          "url": "https://imil.net/blog/posts/2026/rtx-5080-+-rtx-3090-setup-80+-tok-s-on-qwen-3.6-27b-q8/",
+          "meta": "280 pts · 100 comments · Consumer hardware",
+          "topics": ["Open weights", "Infra and retrieval"],
+          "publishedAt": "2026-06-13T10:00:00Z",
+          "score": 8200,
+          "why": "Practical benchmark showing frontier-competitive local inference on sub-$3K consumer hardware. The community cares more about these numbers than lab-issued benchmarks."
+        }
+      ]
+    },
+    {
+      "key": "hacker-news",
+      "label": "Hacker News",
+      "items": [
+        {
+          "title": "US government directive to suspend Fable 5 and Mythos 5 access",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48511072",
+          "meta": "402 pts · 250+ comments",
+          "topics": ["Major labs", "Safety", "Industry"],
+          "publishedAt": "2026-06-14T00:00:00Z",
+          "score": 1500,
+          "why": "The HN thread on the Fable 5 shutdown is one of the most active AI policy discussions of the year. Key themes: Is export control on model access enforceable? Does this accelerate open-weight development outside the US? What happens to Anthropic's IPO valuation?"
+        },
+        {
+          "title": "RTX 5080 + RTX 3090: 80+ tok/s on Qwen 3.6 27B Q8",
+          "source": "Hacker News",
+          "url": "https://imil.net/blog/posts/2026/rtx-5080-+-rtx-3090-setup-80+-tok-s-on-qwen-3.6-27b-q8/",
+          "meta": "280 pts · 100 comments",
+          "topics": ["Open weights", "Infra and retrieval"],
+          "publishedAt": "2026-06-13T10:00:00Z",
+          "score": 1100,
+          "why": "The community hunger for reproducible local inference benchmarks is real. This post provides actual numbers on consumer hardware."
+        },
+        {
+          "title": "Rio3.5 (Rio de Janeiro city government model) beats Qwen3.7 in benchmarks",
+          "source": "Hacker News",
+          "url": "https://twitter.com/zenmagnets/status/2065796012820848699",
+          "meta": "123 pts · 35 comments",
+          "topics": ["Evaluation", "Open weights"],
+          "publishedAt": "2026-06-14T14:38:37Z",
+          "score": 600,
+          "why": "A city government trained a model that beats Qwen3.7 — the commoditization of fine-tuning and the surprising rise of non-lab model quality."
+        }
+      ]
+    },
+    {
+      "key": "reddit",
+      "label": "Reddit",
+      "items": [
+        {
+          "title": "RIP Claude Fable 5 (June 9, 2026 - June 12, 2026)",
+          "source": "r/singularity",
+          "url": "https://www.reddit.com/r/singularity/comments/1u4ialb/rip_claude_fable_5_june_9_2026_june_12_2026/",
+          "meta": "500+ upvotes · massive discussion",
+          "topics": ["Major labs", "Safety", "Industry"],
+          "publishedAt": "2026-06-13T00:00:00Z",
+          "score": 950,
+          "why": "The community eulogy for Fable 5 captures the mood: excitement about capability, frustration at geopolitical intervention, and concern about what this means for the open-weight alternative."
+        },
+        {
+          "title": "Claude Fable 5 launched today — Mythos goes public with guardrails",
+          "source": "r/Anthropic",
+          "url": "https://www.reddit.com/r/Anthropic/comments/1u1cswh/claude_fable_5_launched_today_mythos_goes_public/",
+          "meta": "54 upvotes · 43 comments",
+          "topics": ["Major labs", "Coding agents"],
+          "publishedAt": "2026-06-09T15:00:00Z",
+          "score": 400,
+          "why": "Initial reaction to Fable 5 — excitement about Mythos-class capabilities tempered by the heavy guardrail restrictions on cybersecurity and biology topics."
+        },
+        {
+          "title": "US government directive to suspend Fable 5 / Mythos 5",
+          "source": "r/singularity",
+          "url": "https://www.reddit.com/r/singularity/comments/1u4cxr8/us_government_directive_to_suspend_access_to/",
+          "meta": "200+ upvotes",
+          "topics": ["Major labs", "Safety"],
+          "publishedAt": "2026-06-13T00:00:00Z",
+          "score": 600,
+          "why": "Reddit discussion focused on geopolitics — 'Why Fable 5 but not GPT-5.5?' and what this means for non-US AI development."
+        }
+      ]
+    },
+    {
+      "key": "github",
+      "label": "GitHub",
+      "items": [
+        {
+          "title": "QwenLM/qwen-code — fork sub-agents feature lands",
+          "source": "GitHub",
+          "url": "https://github.com/QwenLM/qwen-code/releases",
+          "meta": "25K+ stars · Fork sub-agents",
+          "topics": ["Open weights", "Coding agents", "Multi-agent workflows"],
+          "publishedAt": "2026-06-10T00:00:00Z",
+          "score": 45000,
+          "summary": "Open-source AI coding agent with fork sub-agents, smart tool parallel execution, and implicit forking support.",
+          "why": "Qwen Code is the most architecturally active open-source coding agent right now — fork sub-agents is genuinely novel."
+        },
+        {
+          "title": "google-gemini/gemini-cli — sunset notice, migrating to Antigravity",
+          "source": "GitHub",
+          "url": "https://github.com/google-gemini/gemini-cli",
+          "meta": "105K+ stars · June 18 EOL",
+          "topics": ["Major labs", "Coding agents", "Tool use"],
+          "publishedAt": "2026-06-09T00:00:00Z",
+          "score": 650000,
+          "summary": "Open-source Gemini CLI agent — shutting down June 18, 2026. Migrating to Antigravity CLI.",
+          "why": "105K GitHub stars being migrated to Antigravity. The community energy transfers to Google's new agent platform."
+        },
+        {
+          "title": "Anthropic self-hosted sandboxes for Managed Agents (public beta)",
+          "source": "Anthropic",
+          "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes",
+          "meta": "Public beta · Cloudflare/Daytona/Modal/Vercel",
+          "topics": ["Major labs", "Infra and retrieval", "Tool use"],
+          "publishedAt": "2026-06-09T00:00:00Z",
+          "score": 25000,
+          "summary": "Claude Managed Agents can now run tool execution in self-hosted environments while agent orchestration stays on Anthropic infrastructure.",
+          "why": "Self-hosted sandboxes solve the enterprise 'my data in your sandbox' blocker. Running on Cloudflare, Daytona, Modal, or Vercel."
+        },
+        {
+          "title": "LearningCircuit/local-deep-research — local research agent hitting production quality",
+          "source": "GitHub",
+          "url": "https://github.com/LearningCircuit/local-deep-research",
+          "meta": "8400+ stars · ~95% SimpleQA",
+          "topics": ["Open weights", "Tool use", "Evaluation"],
+          "publishedAt": "2026-06-08T00:00:00Z",
+          "score": 50000,
+          "summary": "Fully local deep research agent running on consumer hardware with ~95% SimpleQA accuracy.",
+          "why": "The local deep research category is maturing — production-quality autonomous research on consumer hardware is now real."
         }
       ]
     }
   ],
   "tangentRadar": [
     {
-      "topic": "Recursive self-improvement goes from theoretical to benchmarked — Anthropic's RSI data changes the timeline",
-      "signalCount": 32,
-      "whyItMatters": "Anthropic's 'When AI Builds Itself' paper is the first to publish rigorous benchmark data on AI accelerating AI R&D: Claude's coding success rate is 76%, next-step research accuracy went from 51% to 64% in 6 months, and agents autonomously solved nearly all of a key AI safety challenge. This isn't speculation — it's measured data showing AI systems are improving the pace of AI research faster than expected. The paper's central claim — that recursive self-improvement (AI designing and building its own successor) may arrive within years, not decades — has sparked the most substantive safety debate since the GPT-4 era. Every agent builder needs to understand this trajectory.",
-      "signals": [
-        "Claude coding success rate: 76% in May 2026 (up from ~50% in late 2025)",
-        "Next-step research accuracy: 51% (Opus 4.5, Nov 2025) → 64% (Mythos Preview, Apr 2026)",
-        "Claude-powered agents solved nearly all of a key AI safety research challenge autonomously",
-        "Anthropic asks rivals to pause — 'AI may soon design and train its own successors'",
-        "Forbes, Scientific American, Times of India, Indian Express all cover the paper",
-        "HN and Reddit debates: 'is this actually different from automation?' vs 'this is the biggest story of 2026'"
-      ]
-    },
-    {
-      "topic": "Open-weight agent models reach critical mass — Gemma 4 12B, MiniMax M3, Cosmos 3, Nemotron 3 all land in one week",
-      "signalCount": 26,
-      "whyItMatters": "In a single week, the open-weight ecosystem added: Gemma 4 12B (local laptops, Apache 2.0, multimodal), MiniMax M3 (frontier coding + 1M context), NVIDIA Cosmos 3 (omnimodal world model), and NVIDIA Nemotron 3 Ultra (550B MoE, 1M context). This is an unprecedented concentration of capable open models — each targeting a different agent use case. The open-vs-closed gap has narrowed to the point where for specific workloads (local deployment, long context, fine-tuning), open models are now the pragmatic choice, not just the ideological one.",
-      "signals": [
-        "Gemma 4 12B: runs on 16GB laptops, nearly matches 26B benchmarks, Apache 2.0",
-        "MiniMax M3: first open-weights model with frontier coding + 1M context + native multimodality",
-        "NVIDIA Cosmos 3: first open omnimodal world model for Physical AI",
-        "NVIDIA Nemotron 3 Ultra: 550B MoE, 55B active, 1M context, 5-6x faster inference",
-        "Reddit testing shows Gemma 4 12B works as local agent on M5 Pro and 4080 Super",
-        "Kimi K2.6 already leading open-weights on Artificial Analysis Index (54 points)",
-        "Open-weight coding models now competitive with Claude and GPT on specific benchmarks"
-      ]
-    },
-    {
-      "topic": "The 'agent platform' war escalates — Apple Siri, OpenAI superapp, Microsoft VS, Google Gemma local agents",
-      "signalCount": 30,
-      "whyItMatters": "Four major platforms announced agent infrastructure plays in a 48-hour window: Apple's 3-tier Siri architecture (WWDC), OpenAI's ChatGPT superapp plan (FT report), Microsoft opening VS's AI layer to multi-model agents (Build follow-up), and Google's Gemma 4 12B with local agent tooling. The common thread: every platform is converging on the same insight — the OS, the IDE, the browser, and the chat app are all becoming agent runtimes. The differentiation isn't in the model anymore; it's in the integration depth, the tool ecosystem, and the trust model. The agent platform war has officially begun.",
-      "signals": [
-        "Apple WWDC: 3-tier Siri architecture, Core AI replaces Core ML, iOS 27",
-        "OpenAI FT report: biggest ChatGPT revamp since 2022, superapp with Codex + agents",
-        "Microsoft VS: multi-model AI layer, agents in debugger + profiler",
-        "Google Gemma 4 12B: local agent deployment on laptops with Google AI Edge",
-        "CDT: 37 dark patterns catalogued across all major agent platforms",
-        "GitHub Copilot AI Credits: usage-based billing for agentic coding from June 1"
-      ]
-    },
-    {
-      "topic": "Agent supply chain security — the Miasma worm changes everything",
+      "topic": "Geopolitical model-access divide — export controls on frontier AI, not just chips",
       "signalCount": 28,
-      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "whyItMatters": "The US government's export-control directive on Fable 5 and Mythos 5 is the first time a government has restricted access to a frontier AI model by nationality — not just chip exports or model weight transfers. The directive bars foreign nationals from access, including Anthropic's own foreign-national employees. This changes the risk model for every AI company: (1) multinational teams now face nationality-based access restrictions, (2) non-US AI ecosystems (China, EU, India) have a massive incentive to build frontier alternatives, (3) the 'open vs closed' debate gains a geopolitical dimension — open weights become a sovereignty strategy, not just a development philosophy. Covered by NYT 'U.S. Bars Foreigners From Using Anthropic's Most Advanced A.I.', BBC 'Anthropic disables top-tier AI models after US order', Reuters, Time, Forbes, India Today.",
       "signals": [
-        "OpenAI: Harness engineering: Leveraging Codex in an agent-first world",
-        "Anthropic: A harness for every task: dynamic workflows in Claude Code",
-        "OpenAI: How Wasmer used Codex to build a Node.js runtime for the edge"
+        "US Commerce Department export-control directive on Fable 5/Mythos 5 — June 12, 2026",
+        "Anthropic disables both models globally — unable to separate foreign users in real time",
+        "NYT: 'U.S. Bars Foreigners From Using Anthropic's Most Advanced A.I.'",
+        "Reuters: 'US blocks foreign access to Anthropic's most advanced AI models'",
+        "BBC: 'Anthropic's Claude Fable 5 and Mythos 5 AI suspended over security fears'",
+        "Time, Forbes, India Today, TechCrunch all cover the story",
+        "HN thread hits 400+ points debating enforceability and consequences",
+        "Reddit r/singularity: 'RIP Claude Fable 5 (June 9, 2026 - June 12, 2026)'",
+        "Forbes: 'Will Anthropic Offer Claude Fable 5 Refunds?' — consumer protection angle",
+        "Qwen Code going live on Eden AI (European gateway) — regulatory diversification in motion"
       ]
     },
     {
-      "topic": "Coding agents",
-      "signalCount": 27,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "topic": "Claude Fable 5: capability leap meets geopolitical wall — the most powerful public AI model, shut down in 3 days",
+      "signalCount": 32,
+      "whyItMatters": "Claude Fable 5's release and immediate shutdown is the defining AI story of June 2026. The model itself is remarkable: 80.3% SWE-Bench Pro (+11 over Opus 4.8), first model >90% on Anthropic's analytics benchmark, $10/$50 per MTok pricing. But the geopolitical context overshadows the technical achievement. The key tension: Fable 5 was heavily guardrailed (blocked on cybersecurity and biology prompts) — but the US government still deemed Mythos-class capabilities too risky for foreign access. This suggests that even 'safe' versions of frontier models are now subject to export control. The 41-day cadence of Anthropic model releases (Opus 4.7 to 4.8 to Fable 5) means the capability frontier is advancing faster than governance can adapt.",
       "signals": [
-        "OpenAI: Harness engineering: Leveraging Codex in an agent-first world",
-        "Anthropic: A harness for every task: dynamic workflows in Claude Code",
-        "OpenAI: How Wasmer used Codex to build a Node.js runtime for the edge"
+        "Claude Fable 5: 80.3% SWE-Bench Pro, >90% analytics benchmark, $10/$50 per MTok",
+        "Claude Mythos 5: unrestricted version also launched, also suspended",
+        "Released June 9 on API, Claude Platform, AWS Bedrock — global availability",
+        "Shut down June 12 — 3-day lifespan for the most capable public model ever",
+        "Simon Willison: 'Initial impressions of Claude Fable 5' — genuine excitement before shutdown",
+        "AWS Blog: 'Anthropic Claude Fable 5 on AWS: Mythos-class capabilities' — launched and killed same week",
+        "Comparison: Fable 5 at 2x Opus 4.8 pricing, 2x GPT-5.5 on input",
+        "TechCrunch: 'Anthropic's Claude Fable 5 is a version of Mythos the public can access today'",
+        "BBC: 'Claude Mythos: Anthropic releases version of AI tool despite concerns'",
+        "NYT: 'Anthropic Releases Safe Version of Its Mythos A.I. Technology'"
       ]
     },
     {
-      "topic": "NVIDIA enters the open-weight agent model race — Nemotron 3 Ultra",
+      "topic": "Model retirement cadence accelerates — the 6-week deployment treadmill",
+      "signalCount": 22,
+      "whyItMatters": "Anthropic's compressed model release cadence (Opus 4.7 to 4.8 to Fable 5 in 41 days) combined with today's Sonnet 4/Opus 4 retirements creates a structural challenge for every team building on these models. The old model lifecycle (12-18 months) has compressed to 13 months for the original Claude 4 generation — and the pace is accelerating. Teams that hardcode model strings, rely on implicit model behavior, or lack automated evaluation pipelines get broken every cycle. This favors: (1) model abstraction layers (LangChain, OpenRouter), (2) eval-driven development where you test against model families not specific versions, (3) the open-weight ecosystem where you control the model lifecycle yourself. The Claude Agent SDK billing split (separate metering for programmatic usage) adds financial unpredictability on top of the model churn.",
+      "signals": [
+        "Claude Opus 4 and Sonnet 4 retire June 15 — 13-month lifespan",
+        "Opus 4.7 released April 2026, Opus 4.8 May 28, Fable 5 June 9 — 41 days from 4.7 to Fable 5",
+        "Claude Agent SDK billing split enforced today — $200/mo credit, metered beyond",
+        "Opus 4.1 also scheduled for retirement — chain of deprecations",
+        "Forbes: Anthropic IPO filing — financial transparency pressures on model lifecycle costs",
+        "Self-hosted sandboxes as escape valve — enterprises can run tool execution on their own infra",
+        "Community sentiment: 'I just migrated to Opus 4.8 and now I need to migrate to Fable 5'",
+        "Gemini CLI shutdown (June 18) adds to the 'platform churn' theme"
+      ]
+    },
+    {
+      "topic": "Qwen Code's fork sub-agents — a new parallel agent architecture",
       "signalCount": 18,
-      "whyItMatters": "NVIDIA's 550B open MoE model with 1M-token context and hybrid Mamba-2/Transformer architecture is purpose-built for long-running agent tasks. This is the strongest open-weight option for agents needing long context — RAG, multi-turn code generation, document-level reasoning. Combined with Qwen3.7-Plus and Mistral Medium 3.5, the open-weight agent ecosystem now has legitimate competition for closed frontier models. The gap between open and closed is narrowing for specific use cases (long context, local deployment, fine-tuning).",
+      "whyItMatters": "Qwen Code's fork sub-agents with 'Do Not Peek / Do Not Race' prompt discipline is a genuinely novel approach to parallel agent execution. Unlike Anthropic's Dynamic Workflows (hundreds of sub-agents coordinated by the frontier model itself) or OpenAI's Codex (sequential tool calls), Qwen's approach: (1) lets sub-agents run in true parallel with isolated state, (2) uses prompt discipline to prevent cross-agent contamination, (3) supports implicit forking where the AI can spawn sub-agents on demand by omitting the type parameter. This is architecturally closer to Erlang's actor model than to conventional agent orchestration. Combined with smart tool parallel execution, Qwen Code is becoming the most interesting open-source agent architecture — and the most viable Claude Code alternative for teams that need to run outside US-controlled infrastructure.",
       "signals": [
-        "NVIDIA Nemotron 3 Ultra: 550B MoE, 55B active, 1M context",
-        "Hybrid Mamba-2/Transformer — 5-6x faster inference than comparable open LLMs",
-        "Released on Hugging Face, ModelScope, OpenRouter",
-        "Qwen3.7-Plus: vision + tool invocation for agents",
-        "Mistral Medium 3.5: 77.6% SWE-Bench Verified, 256K context",
-        "local-deep-research: ~95% SimpleQA on a single 3090"
+        "Fork sub-agents feature gate lands in Qwen Code v0.0.10-11 (June 10)",
+        "'Do Not Peek / Do Not Race' — novel prompt-based isolation discipline",
+        "Implicit forking: AI can spawn sub-agents by omitting subagent_type",
+        "Sub-agents inherit full parent context, run in parallel, write results back",
+        "Smart tool parallel execution: tools that can run in parallel are dispatched simultaneously",
+        "Qwen 3.7 Plus on Fireworks — agent-optimized model for the Qwen Code ecosystem",
+        "Qwen Code on Eden AI — European infrastructure diversification"
       ]
     },
     {
-      "topic": "OpenAI Codex transitions from developer tool to universal work platform",
-      "signalCount": 24,
-      "whyItMatters": "5M+ weekly users, six role-specific plugins (Engineering, Product, Design, Research, Data Science, Support), Codex Sites for prompt-to-app, and GA on AWS Bedrock — Codex is no longer a coding agent. It's OpenAI's bet on the 'agent as universal interface' for all knowledge workers. The key tension: role plugins vs the 'natural language programming' skepticism from HN. Early data (15-minute CRUD apps, 5M weekly users) suggests adoption is real, but long-term maintenance and iteration workflows remain unproven.",
+      "topic": "The enterprise agent deployment reality check — model churn, billing shift, and self-hosted infra",
+      "signalCount": 20,
+      "whyItMatters": "This cycle is a stress test for enterprise agent deployment. Three simultaneous Anthropic changes (model retirements, billing reform, and the Fable 5 shutdown) force every team to re-examine their agent infrastructure assumptions. The winning playbook is becoming clear: (1) never hardcode model strings, (2) maintain eval pipelines against multiple model families, (3) prefer self-hosted sandboxes for sensitive tool execution, (4) budget separately for agentic consumption (it's structurally different from chat API costs). Meanwhile, OpenAI's Codex enterprise expansion (Oracle Cloud, Nextdoor, astrophysics case studies) and Google's forced Antigravity migration signal that every major platform wants to lock in their agent development workflow before the market settles.",
       "signals": [
-        "5M+ weekly users — up from ~2M in March 2026",
-        "6 role-specific plugins launched at 'Intelligence at Work' event",
-        "Codex Sites: build full apps from natural language prompts",
-        "Enterprise GA on Amazon Bedrock with Managed Agents",
-        "VentureBeat: 'Codex lets agents build interactive enterprise workspaces'",
-        "Reddit validation: full SaaS app in one afternoon",
-        "HN skepticism: 'prompt engineering is still a skill barrier'"
+        "Anthropic model retirements + billing split both hit today — June 15",
+        "OpenAI Codex on Oracle Cloud — enterprise procurement path for regulated industries",
+        "Codex at Nextdoor: real enterprise case study",
+        "Codex for black hole simulation: scientific research use case",
+        "Gemini CLI to Antigravity CLI migration deadline June 18",
+        "Self-hosted sandboxes: Claude Managed Agents on Cloudflare/Daytona/Modal/Vercel",
+        "MCP tunnels in research preview for enterprise connectivity",
+        "Gartner enterprise coding agents leader: OpenAI Codex named a Leader"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Reproduce Anthropic's RSI findings — measure how fast an agent improves its own coding ability",
-      "why": "Anthropic's data showing 76% coding success rate and 64% next-step research accuracy is the most important empirical finding this cycle. Reproducing this on a different model family (Qwen, Nemotron, or GPT-5.5) would validate whether RSI is model-specific or a general phenomenon.",
-      "prompt": "Design an experiment to measure 'self-improvement velocity': 1) Have an agent attempt a set of N coding tasks, 2) Feed the successful trajectories back as in-context examples, 3) Measure the improvement rate over 5-10 iterations. Compare across Claude, GPT-5.5, Qwen3.7-Plus, and Nemotron 3 Ultra. Does the rate of improvement accelerate, and does it differ by model family?"
+      "title": "Benchmark Claude Fable 5 against Opus 4.8 and GPT-5.5 before access is fully restricted",
+      "why": "Fable 5 was shut down on June 12, but Mythos 5 access may still be available through existing API keys. A head-to-head on agentic coding tasks would capture a snapshot of the Mythos-class capability frontier before it becomes inaccessible. Is the 11-point SWE-Bench Pro gain real on practical tasks?",
+      "prompt": "If you still have Fable 5 or Mythos 5 API access, run 10 realistic agentic coding tasks (repo-level refactoring, multi-step debugging, documentation generation, test writing) on Fable 5, Opus 4.8, and GPT-5.5. Measure: completion rate, quality (human review), time-to-complete, cost. Publish results before the model access disappears entirely."
     },
     {
-      "title": "Test Gemma 4 12B as a local agent backend against cloud Claude/Codex on real workflows",
-      "why": "Gemma 4 12B claims near-26B performance on 16GB laptops. A head-to-head against cloud Claude and Codex on realistic agent workflows (multi-file refactoring, web research, data analysis) would reveal the true local-vs-cloud agent quality gap today.",
-      "prompt": "Set up Gemma 4 12B via Ollama/LM Studio on a Mac with 16GB+ RAM. Build 5 realistic agent workflows (code migration, research synthesis, data pipeline, API integration, bug hunt). Run each with Gemma 4 12B (local), Claude Code (cloud), and Codex (cloud). Measure: completion rate, quality score, time-to-complete, cost-per-task, and human correction effort. Publish as a benchmark."
+      "title": "Build a model-abstracted agent framework that survives the 6-week retirement treadmill",
+      "why": "Anthropic's 41-day release cadence and today's Sonnet 4/Opus 4 retirements mean any team hardcoding model strings will break every cycle. A model-abstracted agent framework with automated testing against multiple model families is now an operational necessity.",
+      "prompt": "Design a thin agent framework where: (1) models are referenced by capability tier (fast-cheap, capable, frontier) not version strings, (2) every task runs against 2+ model families before deployment, (3) regression test suite automatically runs when any model changes, (4) fallback chains route to backup models when primary is deprecated. Build a prototype and measure how many fewer 'model broke my agent' incidents you get."
     },
     {
-      "title": "Build an agent that uses the new 3-tier Apple Siri architecture (simulated)",
-      "why": "Apple's 3-tier Siri architecture (on-device → PCC → Gemini) is the most complex agent routing system ever deployed. Simulating this routing pattern with open models could reveal best practices for tiered agent compute.",
-      "prompt": "Design a 3-tier agent architecture mimicking Apple's: Tier 1 = local 3B model (Gemma 4 12B Q4 quantized as stand-in), Tier 2 = cloud small model, Tier 3 = frontier API. Build a router that classifies task complexity and routes accordingly. Measure cost savings vs always-using-frontier, latency distribution, and user satisfaction per tier. Document the routing logic and failure modes."
-    },
-    {
-      "title": "Simulate the OpenAI superapp — build a multi-agent workspace with Codex-style tools + third-party integrations",
-      "why": "OpenAI's superapp vision combines coding agents, AI agents, and third-party integrations. Building a prototype reveals what's real vs vaporware and what integration challenges exist.",
-      "prompt": "Design and build a mini 'superapp' workspace that integrates: 1) a coding agent (using Claude Code or Codex API), 2) a research agent (web search + synthesis), 3) a data analysis agent (Python + visualization), 4) third-party API integrations (email, calendar, CRM). Use MCP for tool connectivity. Measure: cross-agent context sharing quality, user switching cost, and total task completion time vs using separate tools."
+      "title": "Qwen Code fork sub-agents vs Anthropic Dynamic Workflows — which parallel architecture wins?",
+      "why": "Qwen Code's fork sub-agents and Anthropic's Dynamic Workflows represent two radically different approaches to agent parallelism. A head-to-head on real multi-file refactoring tasks would reveal which architecture produces better results, costs less, and is easier to debug.",
+      "prompt": "Set up the same 5 multi-file refactoring tasks in Qwen Code (with fork sub-agents enabled) and Claude Code (with Dynamic Workflows). Measure: task completion rate, total tokens consumed, wall-clock time, error/conflict rate between parallel agents, and human effort to verify results. Which architecture scales better as task complexity grows?"
     }
   ],
   "method": [
-    "Anthropic Institute blog for 'When AI Builds Itself' recursive self-improvement paper (June 8)",
-    "MacRumors, Apple ML blog, Bloomberg WWDC live blog for Apple Foundation Models and 3-tier Siri architecture (June 8)",
-    "Financial Times, New York Post, The Rundown AI for OpenAI ChatGPT superapp plan (June 7-8)",
-    "Google Developers Blog, Google DeepMind blog for Gemma 4 12B local agent model (June 3)",
-    "The New Stack, Microsoft Dev Blog for Visual Studio multi-model AI agent layer (June 8)",
-    "NVIDIA Research, Hugging Face for Cosmos 3 omnimodal world foundation model (June 1)",
-    "MiniMax blog for M3 open-weights model with 1M context (June 1)",
-    "Reddit r/LocalLLaMA, r/AI_Agents for community testing of Gemma 4, Cosmos 3, M3",
-    "Hacker News top threads on Anthropic RSI, Apple WWDC, OpenAI superapp, VS AI agents",
-    "Scientific American, Forbes, The Indian Express, Times of India for RSI coverage analysis",
-    "OpenAI blog for Lockdown Mode (June 5), Codex 5M+ weekly users + role plugins (June 2), Codex+Sites product page",
-    "NVIDIA release for Nemotron 3 Ultra 550B (June 4)",
-    "Anthropic blog for confidential S-1 filing, Claude Agent SDK billing split announcement",
-    "The Hacker News, SafeDep, TNW for Miasma worm analysis (June 5)",
-    "The Hacker News, DepthFirst for FFmpeg 21 zero-days agent discovery (June 5)",
-    "KrebsOnSecurity, Schneier on Security for Moltbook data exposure and Meta hack follow-up",
-    "MIT Tech Review, Ars Technica for Meta AI support-bot hack analysis",
-    "Meta Newsroom for Meta Business Agent announcement (June 3)",
-    "Mistral blog for Vibe rebrand and Medium 3.5 agent model",
-    "Qwen blog for Qwen3.7-Plus rollout (June 2)"
+    "Anthropic blog for Claude Fable 5 / Mythos 5 launch (June 9) and US government directive statement (June 12-13)",
+    "NYT, Reuters, BBC, Time, TechCrunch, Forbes, India Today for Fable 5 shutdown coverage analysis",
+    "Anthropic release notes and platform docs for Opus 4/Sonnet 4 retirement and Agent SDK billing split (June 15)",
+    "AWS Blog for Claude Fable 5 on Bedrock launch",
+    "Simon Willison's blog for hands-on Fable 5 impressions (June 9)",
+    "Google/GitHub for Gemini CLI shutdown announcement and Antigravity migration guide (June 9-18)",
+    "Qwen Code docs and GitHub releases for fork sub-agents feature (June 10)",
+    "Fireworks AI blog for Qwen 3.7 Plus availability (June 14)",
+    "Qwen blog/Instagram for Eden AI integration (June 11)",
+    "OpenAI blog for Codex on Oracle Cloud (June 10), Nextdoor case study (June 9), Black hole simulation (June 11)",
+    "Hacker News threads for Fable 5 shutdown, Gemini CLI EOL, RTX 5080 inference",
+    "Reddit r/Anthropic, r/singularity, r/LocalLLaMA for community reaction",
+    "Gartner enterprise coding agents Leader report for OpenAI Codex"
   ]
 }
