@@ -1,14 +1,13 @@
 {
-  "generatedAt": "2026-06-16T12:58:22Z",
+  "generatedAt": "2026-06-16T19:40:58Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 58,
+    "items": 53,
     "sources": {
       "Anthropic": 1,
-      "GitHub": 47,
-      "Hacker News": 6,
-      "Hugging Face": 2,
+      "GitHub": 45,
+      "Hacker News": 5,
       "OpenAI": 2
     }
   },
@@ -61,14 +60,14 @@
       "title": "Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks",
       "source": "Hacker News",
       "url": "https://twitter.com/zenmagnets/status/2065796012820848699",
-      "meta": "142 pts · 43 comments",
+      "meta": "142 pts · 44 comments",
       "topics": [
         "Evaluation",
         "Open weights",
         "Major labs"
       ],
       "publishedAt": "2026-06-14T14:38:37Z",
-      "score": 563,
+      "score": 566,
       "summary": "",
       "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
     },
@@ -87,23 +86,10 @@
       "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
     },
     {
-      "title": "bartowski/command-a-plus-05-2026-GGUF",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/bartowski/command-a-plus-05-2026-GGUF",
-      "meta": "7 likes · 3,285 downloads",
-      "topics": [
-        "Open weights"
-      ],
-      "publishedAt": "2026-06-13T23:18:30.000Z",
-      "score": 31.285,
-      "summary": "gguf conversational chat text-generation en ar bg bn ca cs da de el es et fa fi fil fr ga he hi hr hu id is it ja ko lt lv ms mt nl no pa pl pt ro ru sk sl sr sv ta te th tr uk ur vi zh base_model:CohereLabs/command-a-plus-05-2026-bf16 base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16 license:apache-2.0 region:us imatrix",
-      "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
-    },
-    {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105336 stars · updated Tue, 16 Jun 2026 01:49:50 UTC",
+      "meta": "105343 stars · updated Tue, 16 Jun 2026 18:49:04 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -111,7 +97,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 660310,
+      "score": 660364,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -119,13 +105,13 @@
       "title": "DietrichGebert/ponytail",
       "source": "GitHub",
       "url": "https://github.com/DietrichGebert/ponytail",
-      "meta": "20559 stars · updated Tue, 16 Jun 2026 11:56:54 UTC",
+      "meta": "23648 stars · updated Tue, 16 Jun 2026 16:12:23 UTC",
       "topics": [
         "Tool use",
         "Coding agents"
       ],
-      "publishedAt": "2026-06-16T11:56:54Z",
-      "score": 125262,
+      "publishedAt": "2026-06-16T16:12:23Z",
+      "score": 144146,
       "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     }
@@ -200,28 +186,17 @@
           "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
         },
         {
-          "title": "Is grep all you need? How agent harnesses reshape agentic search",
-          "source": "Hacker News",
-          "url": "https://arxiv.org/abs/2605.15184",
-          "meta": "162 pts · 64 comments",
-          "topics": [],
-          "publishedAt": "2026-06-09T13:27:03Z",
-          "score": 571,
-          "summary": "",
-          "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
-        },
-        {
           "title": "Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks",
           "source": "Hacker News",
           "url": "https://twitter.com/zenmagnets/status/2065796012820848699",
-          "meta": "142 pts · 43 comments",
+          "meta": "142 pts · 44 comments",
           "topics": [
             "Evaluation",
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-06-14T14:38:37Z",
-          "score": 563,
+          "score": 566,
           "summary": "",
           "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
         },
@@ -251,6 +226,21 @@
           "score": 161,
           "summary": "",
           "why": "Deep engineering posts about how agent loops actually work internally — tool sequencing, context windows, error recovery — are more valuable than most product announcements."
+        },
+        {
+          "title": "Running Claude Code Offline on an M3 Pro with Qwen3.6",
+          "source": "Hacker News",
+          "url": "https://har-ki.github.io/claude-code-sre-handbook/handbook/06-air-gapped/",
+          "meta": "18 pts · 10 comments",
+          "topics": [
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-06-11T16:32:04Z",
+          "score": 136,
+          "summary": "",
+          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
       ]
     },
@@ -262,35 +252,7 @@
     {
       "key": "hugging-face",
       "label": "Hugging Face",
-      "items": [
-        {
-          "title": "bartowski/command-a-plus-05-2026-GGUF",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/bartowski/command-a-plus-05-2026-GGUF",
-          "meta": "7 likes · 3,285 downloads",
-          "topics": [
-            "Open weights"
-          ],
-          "publishedAt": "2026-06-13T23:18:30.000Z",
-          "score": 31.285,
-          "summary": "gguf conversational chat text-generation en ar bg bn ca cs da de el es et fa fi fil fr ga he hi hr hu id is it ja ko lt lv ms mt nl no pa pl pt ro ru sk sl sr sv ta te th tr uk ur vi zh base_model:CohereLabs/command-a-plus-05-2026-bf16 base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16 license:apache-2.0 region:us imatrix",
-          "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
-        },
-        {
-          "title": "coder543/command-a-plus-05-2026-gguf",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/coder543/command-a-plus-05-2026-gguf",
-          "meta": "4 likes · 452 downloads",
-          "topics": [
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-15T00:08:07.000Z",
-          "score": 16.452,
-          "summary": "transformers gguf conversational chat image-text-to-text en ar bg bn ca cs da de el es et fa fi fil fr ga he hi hr hu id is it ja ko lt lv ms mt nl no pa pl pt ro ru sk sl sr sv ta te th tr uk ur vi zh base_model:CohereLabs/command-a-plus-05-2026-bf16 base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16 license:apache-2.0 region:us",
-          "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
-        }
-      ]
+      "items": []
     },
     {
       "key": "github",
@@ -300,7 +262,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105336 stars · updated Tue, 16 Jun 2026 01:49:50 UTC",
+          "meta": "105343 stars · updated Tue, 16 Jun 2026 18:49:04 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -308,7 +270,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 660310,
+          "score": 660364,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -316,13 +278,13 @@
           "title": "DietrichGebert/ponytail",
           "source": "GitHub",
           "url": "https://github.com/DietrichGebert/ponytail",
-          "meta": "20559 stars · updated Tue, 16 Jun 2026 11:56:54 UTC",
+          "meta": "23648 stars · updated Tue, 16 Jun 2026 16:12:23 UTC",
           "topics": [
             "Tool use",
             "Coding agents"
           ],
-          "publishedAt": "2026-06-16T11:56:54Z",
-          "score": 125262,
+          "publishedAt": "2026-06-16T16:12:23Z",
+          "score": 144146,
           "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
@@ -330,7 +292,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8487 stars · updated Tue, 16 Jun 2026 07:22:06 UTC",
+          "meta": "8488 stars · updated Tue, 16 Jun 2026 19:36:41 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -338,7 +300,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 52522,
+          "score": 52528,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -346,14 +308,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5193 stars · updated Tue, 16 Jun 2026 07:14:36 UTC",
+          "meta": "5203 stars · updated Tue, 16 Jun 2026 16:38:47 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 31724,
+          "score": 31786,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         }
@@ -363,17 +325,17 @@
   "tangentRadar": [
     {
       "topic": "Coding agents",
-      "signalCount": 35,
+      "signalCount": 33,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Running Claude Code Offline on an M3 Pro with Qwen3.6",
         "Hacker News: Ask HN: What coding agents are you using?",
-        "Hugging Face: coder543/command-a-plus-05-2026-gguf"
+        "OpenAI: How an astrophysicist uses Codex to help simulate black holes"
       ]
     },
     {
       "topic": "Tool use",
-      "signalCount": 31,
+      "signalCount": 32,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Ask HN: What coding agents are you using?",
@@ -403,7 +365,7 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 15,
+      "signalCount": 13,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks",
@@ -413,7 +375,7 @@
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 12,
+      "signalCount": 11,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: duolahypercho/fusion-fable",
