@@ -54,7 +54,7 @@ onMounted(() => {
                 <img src="https://img.icons8.com/ios-glyphs/48/null/circled-envelope.png" alt="Email" />
                 <h4>Contact Me</h4>
             </a>
-            <a href="https://cal.com/nimit2801" target="_blank" class="item" @click="trackClick('meeting', 'https://cal.com/nimit2801')">
+            <a href="https://cal.com/nimit2801/aaifg" target="_blank" class="item" @click="trackClick('meeting', 'https://cal.com/nimit2801/aaifg')">
                 <img width="48" src="https://img.icons8.com/wired/64/google-meet--v1.png" alt="Meet" />
                 <h4>Let's Meet</h4>
             </a>
