@@ -1,33 +1,17 @@
 {
-  "generatedAt": "2026-06-17T22:04:56Z",
+  "generatedAt": "2026-06-18T04:26:40Z",
   "windowDays": 7,
-  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 54,
+    "items": 43,
     "sources": {
       "Anthropic": 1,
-      "GitHub": 45,
-      "Hacker News": 5,
-      "Hugging Face": 2,
-      "OpenAI": 1
+      "GitHub": 36,
+      "Hacker News": 4,
+      "Hugging Face": 2
     }
   },
   "highlights": [
-    {
-      "title": "How an astrophysicist uses Codex to help simulate black holes",
-      "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
-      "publishedAt": "Thu, 11 Jun 2026 00:00:00 GMT",
-      "source": "OpenAI",
-      "meta": "Thu, 11 Jun 2026 00:00:00 GMT",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Coding agents"
-      ],
-      "score": 180,
-      "summary": "How an astrophysicist uses Codex to help simulate black holes",
-      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-    },
     {
       "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
       "source": "Anthropic",
@@ -85,34 +69,34 @@
       "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
     },
     {
-      "title": "google-gemini/gemini-cli",
-      "source": "GitHub",
-      "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105362 stars · updated Wed, 17 Jun 2026 21:48:59 UTC",
-      "topics": [
-        "Tool use",
-        "Open weights",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 660502,
-      "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-    },
-    {
       "title": "DietrichGebert/ponytail",
       "source": "GitHub",
       "url": "https://github.com/DietrichGebert/ponytail",
-      "meta": "31256 stars · updated Wed, 17 Jun 2026 02:35:22 UTC",
+      "meta": "32542 stars · updated Wed, 17 Jun 2026 02:35:22 UTC",
       "topics": [
         "Tool use",
         "Coding agents"
       ],
       "publishedAt": "2026-06-17T02:35:22Z",
-      "score": 190536,
+      "score": 198368,
       "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+    },
+    {
+      "title": "omnigent-ai/omnigent",
+      "source": "GitHub",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "meta": "3574 stars · updated Thu, 18 Jun 2026 04:25:26 UTC",
+      "topics": [
+        "Tool use",
+        "Multi-agent workflows",
+        "Open weights",
+        "Major labs"
+      ],
+      "publishedAt": "2026-06-18T04:25:26Z",
+      "score": 22416,
+      "summary": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+      "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
     }
   ],
   "sourceSections": [
@@ -120,21 +104,6 @@
       "key": "major-labs",
       "label": "Major labs",
       "items": [
-        {
-          "title": "How an astrophysicist uses Codex to help simulate black holes",
-          "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
-          "publishedAt": "Thu, 11 Jun 2026 00:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Thu, 11 Jun 2026 00:00:00 GMT",
-          "topics": [
-            "Tool use",
-            "Major labs",
-            "Coding agents"
-          ],
-          "score": 180,
-          "summary": "How an astrophysicist uses Codex to help simulate black holes",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
         {
           "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
           "source": "Anthropic",
@@ -183,20 +152,6 @@
           "score": 566,
           "summary": "",
           "why": "Qwen3.7-Max is the clearest signal yet that Alibaba is competing seriously on agentic coding benchmarks, and the \"AI factory\" positioning shows they're building a vertically integrated agent platform, not just a model."
-        },
-        {
-          "title": "Ask HN: What coding agents are you using?",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=48485669",
-          "meta": "8 pts · 14 comments",
-          "topics": [
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-11T02:44:58Z",
-          "score": 178,
-          "summary": "My main coding agents are CodeX-CLI and OpenCode (Harness seems to have some problems). I also use CodeWhale, Antigravity-CLI and OpenClaude as supplements (because of network issues, I don&#x27;t really dare to use Claude Code). In some special cases, bashagt. What coding agents are everyone using, or do you have any recommendations? New tools are coming out like waves now.",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
         {
           "title": "Building agents without harness engineering",
@@ -254,13 +209,13 @@
           "title": "coder543/command-a-plus-05-2026-gguf",
           "source": "Hugging Face",
           "url": "https://huggingface.co/coder543/command-a-plus-05-2026-gguf",
-          "meta": "4 likes · 869 downloads",
+          "meta": "5 likes · 869 downloads",
           "topics": [
             "Open weights",
             "Coding agents"
           ],
           "publishedAt": "2026-06-15T00:08:07.000Z",
-          "score": 16.869,
+          "score": 20.869,
           "summary": "transformers gguf conversational chat image-text-to-text en ar bg bn ca cs da de el es et fa fi fil fr ga he hi hr hu id is it ja ko lt lv ms mt nl no pa pl pt ro ru sk sl sr sv ta te th tr uk ur vi zh base_model:CohereLabs/command-a-plus-05-2026-bf16 base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16 license:apache-2.0 region:us",
           "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
         }
@@ -271,63 +226,66 @@
       "label": "GitHub",
       "items": [
         {
-          "title": "google-gemini/gemini-cli",
-          "source": "GitHub",
-          "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105362 stars · updated Wed, 17 Jun 2026 21:48:59 UTC",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 660502,
-          "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
           "title": "DietrichGebert/ponytail",
           "source": "GitHub",
           "url": "https://github.com/DietrichGebert/ponytail",
-          "meta": "31256 stars · updated Wed, 17 Jun 2026 02:35:22 UTC",
+          "meta": "32542 stars · updated Wed, 17 Jun 2026 02:35:22 UTC",
           "topics": [
             "Tool use",
             "Coding agents"
           ],
           "publishedAt": "2026-06-17T02:35:22Z",
-          "score": 190536,
+          "score": 198368,
           "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
         {
-          "title": "XiaomiMiMo/MiMo-Code",
+          "title": "omnigent-ai/omnigent",
           "source": "GitHub",
-          "url": "https://github.com/XiaomiMiMo/MiMo-Code",
-          "meta": "9576 stars · updated Wed, 17 Jun 2026 14:58:07 UTC",
-          "topics": [
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-17T14:58:07Z",
-          "score": 59322,
-          "summary": "MiMo Code: Where Models and Agents Co-Evolve",
-          "why": "This is a live signal for where agent building is getting more real, usable, or weirdly interesting."
-        },
-        {
-          "title": "LearningCircuit/local-deep-research",
-          "source": "GitHub",
-          "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8493 stars · updated Wed, 17 Jun 2026 22:01:18 UTC",
+          "url": "https://github.com/omnigent-ai/omnigent",
+          "meta": "3574 stars · updated Thu, 18 Jun 2026 04:25:26 UTC",
           "topics": [
             "Tool use",
-            "Evaluation",
+            "Multi-agent workflows",
             "Open weights",
             "Major labs"
           ],
-          "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 52554,
-          "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+          "publishedAt": "2026-06-18T04:25:26Z",
+          "score": 22416,
+          "summary": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+          "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
+        },
+        {
+          "title": "joeseesun/qiaomu-goal-meta-skill",
+          "source": "GitHub",
+          "url": "https://github.com/joeseesun/qiaomu-goal-meta-skill",
+          "meta": "648 stars · updated Thu, 11 Jun 2026 15:10:56 UTC",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Coding agents",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-06-11T15:10:56Z",
+          "score": 4162,
+          "summary": "Turn vague or complex Codex tasks into strong `/goal` commands with outcome, verification, constraints, boundaries, iteration policy, completion evide",
+          "why": "A lot of real-world agent performance now depends on infrastructure details like eventing, search access, and reliability under external constraints."
+        },
+        {
+          "title": "DanMcInerney/architect-loop",
+          "source": "GitHub",
+          "url": "https://github.com/DanMcInerney/architect-loop",
+          "meta": "501 stars · updated Sat, 13 Jun 2026 01:53:20 UTC",
+          "topics": [
+            "Tool use",
+            "Memory and state",
+            "Coding agents",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-06-13T01:53:20Z",
+          "score": 3276,
+          "summary": "Claude Fable 5 as architect, GPT-5.5 Codex as builder, the repo as memory - a research-backed Claude Code skill for the cross-vendor agent loop",
+          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
         }
       ]
     }
@@ -335,27 +293,27 @@
   "tangentRadar": [
     {
       "topic": "Coding agents",
-      "signalCount": 30,
+      "signalCount": 22,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Running Claude Code Offline on an M3 Pro with Qwen3.6",
-        "Hacker News: Ask HN: What coding agents are you using?",
-        "Hugging Face: coder543/command-a-plus-05-2026-gguf"
-      ]
-    },
-    {
-      "topic": "Tool use",
-      "signalCount": 30,
-      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
-      "signals": [
-        "Hacker News: Ask HN: What coding agents are you using?",
-        "OpenAI: How an astrophysicist uses Codex to help simulate black holes",
+        "Hugging Face: coder543/command-a-plus-05-2026-gguf",
         "GitHub: DietrichGebert/ponytail"
       ]
     },
     {
+      "topic": "Tool use",
+      "signalCount": 22,
+      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "signals": [
+        "GitHub: DietrichGebert/ponytail",
+        "GitHub: omnigent-ai/omnigent",
+        "GitHub: joeseesun/qiaomu-goal-meta-skill"
+      ]
+    },
+    {
       "topic": "Interfaces",
-      "signalCount": 23,
+      "signalCount": 18,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Hacker News: Building agents without harness engineering",
@@ -365,7 +323,7 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 20,
+      "signalCount": 15,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks",
@@ -375,7 +333,7 @@
     },
     {
       "topic": "Major labs",
-      "signalCount": 19,
+      "signalCount": 14,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Hacker News: Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks",
@@ -385,7 +343,7 @@
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 9,
+      "signalCount": 11,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: omnigent-ai/omnigent",
@@ -396,9 +354,9 @@
   ],
   "experimentQueue": [
     {
-      "title": "Audit one deployed enterprise agent workflow",
-      "why": "Codex-on-Dell and SAP-with-Claude are production-scale agent deployments — worth understanding the real friction points.",
-      "prompt": "Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
+      "title": "Benchmark one local-first agent stack",
+      "why": "The local/open-weight ecosystem looks materially better this week, especially around Qwen and Forge guardrails.",
+      "prompt": "Pick one real workflow and compare a local Qwen+Forge stack against a frontier hosted model on tool accuracy, latency, and cost."
     },
     {
       "title": "Instrument one agent with better traces",
