@@ -22,7 +22,10 @@ const routes = [
   {
     path: "/agent-research",
     name: "AgentResearch",
-    component: AgentResearch,
+    beforeEnter: () => {
+      window.location.href = "https://agenticaiforgood.com/agent-research"
+    },
+    component: () => import("../views/Main.vue") as any,
   },
   {
     path: "/termsandconditions",
