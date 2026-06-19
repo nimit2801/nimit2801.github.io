@@ -146,6 +146,7 @@ const OFFICIAL_SOURCES = [
   ['mistral.ai', 'Mistral'],
   ['ai.meta.com', 'Meta AI'],
   ['meta.com/ai', 'Meta AI'],
+  ['nousresearch.com', 'Nous Research'],
 ];
 
 const TOPIC_RULES = [
