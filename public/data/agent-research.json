@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-19T21:12:53Z",
+  "generatedAt": "2026-06-20T04:08:59Z",
   "windowDays": 7,
   "summary": "This cycle says the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 53,
+    "items": 49,
     "sources": {
       "Anthropic": 1,
-      "GitHub": 47,
+      "GitHub": 43,
       "Hacker News": 2,
       "Hugging Face": 3
     }
@@ -56,23 +56,26 @@
       "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
     },
     {
-      "title": "bartowski/command-a-plus-05-2026-GGUF",
+      "title": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
       "source": "Hugging Face",
-      "url": "https://huggingface.co/bartowski/command-a-plus-05-2026-GGUF",
-      "meta": "11 likes · 6,651 downloads",
+      "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+      "meta": "110 likes · 0 downloads",
       "topics": [
-        "Open weights"
+        "Tool use",
+        "Open weights",
+        "Major labs",
+        "Coding agents"
       ],
-      "publishedAt": "2026-06-13T23:18:30.000Z",
-      "score": 50.650999999999996,
-      "summary": "gguf conversational chat text-generation en ar bg bn ca cs da de el es et fa fi fil fr ga he hi hr hu id is it ja ko lt lv ms mt nl no pa pl pt ro ru sk sl sr sv ta te th tr uk ur vi zh base_model:CohereLabs/command-a-plus-05-2026-bf16 base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16 license:apache-2.0 region:us imatrix",
-      "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
+      "publishedAt": "2026-06-19T00:06:07.000Z",
+      "score": 440,
+      "summary": "gguf gemma4 coding agentic terminal tool-use reasoning thinking llama.cpp local-llm text-generation base_model:google/gemma-4-12B-it base_model:quantized:google/gemma-4-12B-it license:apache-2.0 endpoints_compatible region:us conversational",
+      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
     {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105414 stars · updated Fri, 19 Jun 2026 18:22:20 UTC",
+      "meta": "105418 stars · updated Sat, 20 Jun 2026 01:40:00 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -80,23 +83,25 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 660884,
+      "score": 660916,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
     {
-      "title": "DietrichGebert/ponytail",
+      "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
-      "url": "https://github.com/DietrichGebert/ponytail",
-      "meta": "39827 stars · updated Fri, 19 Jun 2026 08:50:56 UTC",
+      "url": "https://github.com/LearningCircuit/local-deep-research",
+      "meta": "8535 stars · updated Fri, 19 Jun 2026 23:56:41 UTC",
       "topics": [
         "Tool use",
-        "Coding agents"
+        "Evaluation",
+        "Open weights",
+        "Major labs"
       ],
-      "publishedAt": "2026-06-19T08:50:56Z",
-      "score": 242856,
-      "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+      "publishedAt": "2025-02-09T15:41:32Z",
+      "score": 52816,
+      "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
   ],
   "sourceSections": [
@@ -168,7 +173,7 @@
           "title": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-          "meta": "87 likes · 0 downloads",
+          "meta": "110 likes · 0 downloads",
           "topics": [
             "Tool use",
             "Open weights",
@@ -176,7 +181,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-06-19T00:06:07.000Z",
-          "score": 348,
+          "score": 440,
           "summary": "gguf gemma4 coding agentic terminal tool-use reasoning thinking llama.cpp local-llm text-generation base_model:google/gemma-4-12B-it base_model:quantized:google/gemma-4-12B-it license:apache-2.0 endpoints_compatible region:us conversational",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -217,7 +222,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105414 stars · updated Fri, 19 Jun 2026 18:22:20 UTC",
+          "meta": "105418 stars · updated Sat, 20 Jun 2026 01:40:00 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -225,29 +230,15 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 660884,
+          "score": 660916,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "DietrichGebert/ponytail",
-          "source": "GitHub",
-          "url": "https://github.com/DietrichGebert/ponytail",
-          "meta": "39827 stars · updated Fri, 19 Jun 2026 08:50:56 UTC",
-          "topics": [
-            "Tool use",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-19T08:50:56Z",
-          "score": 242856,
-          "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
         {
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8528 stars · updated Fri, 19 Jun 2026 18:09:40 UTC",
+          "meta": "8535 stars · updated Fri, 19 Jun 2026 23:56:41 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -255,7 +246,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 52770,
+          "score": 52816,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -263,16 +254,30 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5297 stars · updated Fri, 19 Jun 2026 05:37:51 UTC",
+          "meta": "5304 stars · updated Fri, 19 Jun 2026 05:37:51 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 32360,
+          "score": 32402,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
+        },
+        {
+          "title": "antoinezambelli/forge",
+          "source": "GitHub",
+          "url": "https://github.com/antoinezambelli/forge",
+          "meta": "2096 stars · updated Thu, 18 Jun 2026 07:28:06 UTC",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows"
+          ],
+          "publishedAt": "2026-02-16T16:59:06Z",
+          "score": 13130,
+          "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
       ]
     }
@@ -280,32 +285,22 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 29,
+      "signalCount": 28,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-        "GitHub: DietrichGebert/ponytail",
-        "GitHub: DanMcInerney/architect-loop"
+        "GitHub: dzcmemory-web/bazi-ziwei-skill",
+        "GitHub: duolahypercho/fusion-fable"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 29,
+      "signalCount": 25,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
         "Hugging Face: coder543/command-a-plus-05-2026-gguf",
-        "GitHub: DietrichGebert/ponytail"
-      ]
-    },
-    {
-      "topic": "Interfaces",
-      "signalCount": 23,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
-      "signals": [
-        "Anthropic: The evolution of agentic surfaces: building with Claude Managed Agents",
-        "GitHub: DanMcInerney/architect-loop",
-        "GitHub: gary23w/neuron-db"
+        "GitHub: mrtooher/fable-mode"
       ]
     },
     {
@@ -319,8 +314,18 @@
       ]
     },
     {
+      "topic": "Interfaces",
+      "signalCount": 20,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signals": [
+        "Anthropic: The evolution of agentic surfaces: building with Claude Managed Agents",
+        "GitHub: gary23w/neuron-db",
+        "GitHub: rebel0789/codexpro"
+      ]
+    },
+    {
       "topic": "Major labs",
-      "signalCount": 18,
+      "signalCount": 17,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Hacker News: Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks",
@@ -330,7 +335,7 @@
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 10,
+      "signalCount": 11,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: ruvnet/agent-harness-generator",
