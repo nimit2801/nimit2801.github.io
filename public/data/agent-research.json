@@ -1,20 +1,50 @@
 {
-  "generatedAt": "2026-06-21T21:19:43Z",
+  "generatedAt": "2026-06-22T04:59:06Z",
   "windowDays": 7,
-  "summary": "The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, Anthropic Opus 4.8 drops with 69.2% SWE-Bench Pro and Dynamic Workflows for orchestrating hundreds of sub-agents. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 45,
+    "items": 41,
     "sources": {
-      "GitHub": 43,
-      "Hugging Face": 2
+      "Anthropic": 1,
+      "GitHub": 38,
+      "Hugging Face": 1,
+      "OpenAI": 1
     }
   },
   "highlights": [
     {
+      "title": "Claude: Elevated Error Rates for Opus 4.8, Opus 4.7, Opus 4.6, and Sonnet 4.6",
+      "source": "Anthropic",
+      "url": "https://status.claude.com/incidents/lv35v0q9nsj2",
+      "meta": "32 pts · 35 comments",
+      "topics": [
+        "Major labs"
+      ],
+      "publishedAt": "2026-06-22T00:38:50Z",
+      "score": 369,
+      "summary": "",
+      "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
+    },
+    {
+      "title": "Samsung Electronics brings ChatGPT and Codex to employees",
+      "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
+      "publishedAt": "Sun, 21 Jun 2026 23:00:00 GMT",
+      "source": "OpenAI",
+      "meta": "Sun, 21 Jun 2026 23:00:00 GMT",
+      "topics": [
+        "Tool use",
+        "Major labs",
+        "Coding agents"
+      ],
+      "score": 180,
+      "summary": "Samsung Electronics brings ChatGPT and Codex to employees",
+      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+    },
+    {
       "title": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
       "source": "Hugging Face",
       "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-      "meta": "265 likes · 21,730 downloads",
+      "meta": "293 likes · 21,730 downloads",
       "topics": [
         "Tool use",
         "Open weights",
@@ -22,7 +52,7 @@
         "Coding agents"
       ],
       "publishedAt": "2026-06-19T00:06:07.000Z",
-      "score": 1081.73,
+      "score": 1193.73,
       "summary": "gguf gemma4 coding agentic terminal tool-use reasoning thinking llama.cpp local-llm text-generation base_model:google/gemma-4-12B-it base_model:quantized:google/gemma-4-12B-it license:apache-2.0 endpoints_compatible region:us conversational",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -30,7 +60,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105470 stars · updated Sun, 21 Jun 2026 01:43:40 UTC",
+      "meta": "105476 stars · updated Mon, 22 Jun 2026 01:43:05 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -38,7 +68,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 661248,
+      "score": 661292,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -46,7 +76,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8559 stars · updated Sun, 21 Jun 2026 20:29:45 UTC",
+      "meta": "8562 stars · updated Mon, 22 Jun 2026 04:12:34 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -54,7 +84,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 52966,
+      "score": 52986,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -63,7 +93,36 @@
     {
       "key": "major-labs",
       "label": "Major labs",
-      "items": []
+      "items": [
+        {
+          "title": "Claude: Elevated Error Rates for Opus 4.8, Opus 4.7, Opus 4.6, and Sonnet 4.6",
+          "source": "Anthropic",
+          "url": "https://status.claude.com/incidents/lv35v0q9nsj2",
+          "meta": "32 pts · 35 comments",
+          "topics": [
+            "Major labs"
+          ],
+          "publishedAt": "2026-06-22T00:38:50Z",
+          "score": 369,
+          "summary": "",
+          "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
+        },
+        {
+          "title": "Samsung Electronics brings ChatGPT and Codex to employees",
+          "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
+          "publishedAt": "Sun, 21 Jun 2026 23:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Sun, 21 Jun 2026 23:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "Samsung Electronics brings ChatGPT and Codex to employees",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        }
+      ]
     },
     {
       "key": "hacker-news",
@@ -83,7 +142,7 @@
           "title": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-          "meta": "265 likes · 21,730 downloads",
+          "meta": "293 likes · 21,730 downloads",
           "topics": [
             "Tool use",
             "Open weights",
@@ -91,23 +150,9 @@
             "Coding agents"
           ],
           "publishedAt": "2026-06-19T00:06:07.000Z",
-          "score": 1081.73,
+          "score": 1193.73,
           "summary": "gguf gemma4 coding agentic terminal tool-use reasoning thinking llama.cpp local-llm text-generation base_model:google/gemma-4-12B-it base_model:quantized:google/gemma-4-12B-it license:apache-2.0 endpoints_compatible region:us conversational",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "coder543/command-a-plus-05-2026-gguf",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/coder543/command-a-plus-05-2026-gguf",
-          "meta": "6 likes · 1,348 downloads",
-          "topics": [
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-15T00:08:07.000Z",
-          "score": 25.348,
-          "summary": "transformers gguf conversational chat image-text-to-text en ar bg bn ca cs da de el es et fa fi fil fr ga he hi hr hu id is it ja ko lt lv ms mt nl no pa pl pt ro ru sk sl sr sv ta te th tr uk ur vi zh base_model:CohereLabs/command-a-plus-05-2026-bf16 base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16 license:apache-2.0 region:us",
-          "why": "Cohere's Command A+ is a major open-weight release — a 25B active / 218B total MoE model under Apache 2.0, designed for agentic, multimodal, and multilingual tasks, deployable on as little as two H100 GPUs. This directly expands the open-source agentic model ecosystem."
         }
       ]
     },
@@ -119,7 +164,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105470 stars · updated Sun, 21 Jun 2026 01:43:40 UTC",
+          "meta": "105476 stars · updated Mon, 22 Jun 2026 01:43:05 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -127,7 +172,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 661248,
+          "score": 661292,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -135,7 +180,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8559 stars · updated Sun, 21 Jun 2026 20:29:45 UTC",
+          "meta": "8562 stars · updated Mon, 22 Jun 2026 04:12:34 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -143,7 +188,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 52966,
+          "score": 52986,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -151,14 +196,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5342 stars · updated Sun, 21 Jun 2026 16:34:37 UTC",
+          "meta": "5347 stars · updated Sun, 21 Jun 2026 16:34:37 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 32632,
+          "score": 32662,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -166,13 +211,13 @@
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "2098 stars · updated Sat, 20 Jun 2026 22:48:39 UTC",
+          "meta": "2100 stars · updated Sat, 20 Jun 2026 22:48:39 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows"
           ],
           "publishedAt": "2026-02-16T16:59:06Z",
-          "score": 13144,
+          "score": 13158,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -181,28 +226,28 @@
   ],
   "tangentRadar": [
     {
-      "topic": "Tool use",
-      "signalCount": 27,
-      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
-      "signals": [
-        "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-        "GitHub: Forsy-AI/agent-apprenticeship",
-        "GitHub: hashangit/openfusion"
-      ]
-    },
-    {
       "topic": "Coding agents",
-      "signalCount": 27,
+      "signalCount": 26,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-        "Hugging Face: coder543/command-a-plus-05-2026-gguf",
+        "OpenAI: Samsung Electronics brings ChatGPT and Codex to employees",
+        "GitHub: Forsy-AI/agent-apprenticeship"
+      ]
+    },
+    {
+      "topic": "Tool use",
+      "signalCount": 25,
+      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "signals": [
+        "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+        "OpenAI: Samsung Electronics brings ChatGPT and Codex to employees",
         "GitHub: Forsy-AI/agent-apprenticeship"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 25,
+      "signalCount": 21,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "GitHub: Sorathiya123/claude-ai-free-desktop-app",
@@ -212,40 +257,40 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 19,
+      "signalCount": 15,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-        "Hugging Face: coder543/command-a-plus-05-2026-gguf",
-        "GitHub: Sorathiya123/claude-ai-free-desktop-app"
+        "GitHub: Sorathiya123/claude-ai-free-desktop-app",
+        "GitHub: hashangit/openfusion"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 13,
+      "signalCount": 11,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
+        "Anthropic: Claude: Elevated Error Rates for Opus 4.8, Opus 4.7, Opus 4.6, and Sonnet 4.6",
         "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-        "GitHub: fivetaku/fablize",
-        "GitHub: Sorathiya123/claude-ai-free-desktop-app"
+        "OpenAI: Samsung Electronics brings ChatGPT and Codex to employees"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 9,
+      "signalCount": 8,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: Forsy-AI/agent-apprenticeship",
         "GitHub: atherio-danp/cde-dotnetcc",
-        "GitHub: hashangit/openfusion"
+        "GitHub: yuting0624/antigravity-for-claude-code"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Benchmark one local-first agent stack",
-      "why": "The local/open-weight ecosystem looks materially better this week, especially around Qwen and Forge guardrails.",
-      "prompt": "Pick one real workflow and compare a local Qwen+Forge stack against a frontier hosted model on tool accuracy, latency, and cost."
+      "title": "Audit one deployed enterprise agent workflow",
+      "why": "Codex-on-Dell and SAP-with-Claude are production-scale agent deployments — worth understanding the real friction points.",
+      "prompt": "Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
     },
     {
       "title": "Instrument one agent with better traces",
