@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-06-23T07:55:53Z",
+  "generatedAt": "2026-06-23T11:23:38Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, Anthropic Opus 4.8 drops with 69.2% SWE-Bench Pro and Dynamic Workflows for orchestrating hundreds of sub-agents. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 43,
+    "items": 46,
     "sources": {
       "Anthropic": 1,
-      "GitHub": 38,
+      "GitHub": 40,
+      "Hacker News": 1,
       "Hugging Face": 1,
       "OpenAI": 3
     }
@@ -57,10 +58,26 @@
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
     {
+      "title": "Codex logging bug may write TBs to local SSDs",
+      "source": "Hacker News",
+      "url": "https://github.com/openai/codex/issues/28224",
+      "meta": "487 pts · 266 comments",
+      "topics": [
+        "Tool use",
+        "Open weights",
+        "Major labs",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-06-22T07:30:17Z",
+      "score": 1842,
+      "summary": "",
+      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+    },
+    {
       "title": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
       "source": "Hugging Face",
       "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-      "meta": "400 likes · 50,314 downloads",
+      "meta": "409 likes · 96,459 downloads",
       "topics": [
         "Tool use",
         "Open weights",
@@ -68,7 +85,7 @@
         "Coding agents"
       ],
       "publishedAt": "2026-06-19T00:06:07.000Z",
-      "score": 1650.314,
+      "score": 1732.459,
       "summary": "gguf gemma4 coding agentic terminal tool-use reasoning thinking llama.cpp local-llm text-generation base_model:google/gemma-4-12B-it base_model:quantized:google/gemma-4-12B-it license:apache-2.0 endpoints_compatible region:us conversational",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -76,7 +93,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105507 stars · updated Tue, 23 Jun 2026 01:35:50 UTC",
+      "meta": "105512 stars · updated Tue, 23 Jun 2026 01:35:50 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -84,7 +101,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 661486,
+      "score": 661518,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -92,7 +109,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8573 stars · updated Tue, 23 Jun 2026 03:33:20 UTC",
+      "meta": "8574 stars · updated Tue, 23 Jun 2026 03:33:20 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -100,7 +117,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 53056,
+      "score": 53064,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -173,7 +190,24 @@
     {
       "key": "hacker-news",
       "label": "Hacker News",
-      "items": []
+      "items": [
+        {
+          "title": "Codex logging bug may write TBs to local SSDs",
+          "source": "Hacker News",
+          "url": "https://github.com/openai/codex/issues/28224",
+          "meta": "487 pts · 266 comments",
+          "topics": [
+            "Tool use",
+            "Open weights",
+            "Major labs",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-06-22T07:30:17Z",
+          "score": 1842,
+          "summary": "",
+          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+        }
+      ]
     },
     {
       "key": "reddit",
@@ -188,7 +222,7 @@
           "title": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-          "meta": "400 likes · 50,314 downloads",
+          "meta": "409 likes · 96,459 downloads",
           "topics": [
             "Tool use",
             "Open weights",
@@ -196,7 +230,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-06-19T00:06:07.000Z",
-          "score": 1650.314,
+          "score": 1732.459,
           "summary": "gguf gemma4 coding agentic terminal tool-use reasoning thinking llama.cpp local-llm text-generation base_model:google/gemma-4-12B-it base_model:quantized:google/gemma-4-12B-it license:apache-2.0 endpoints_compatible region:us conversational",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -210,7 +244,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105507 stars · updated Tue, 23 Jun 2026 01:35:50 UTC",
+          "meta": "105512 stars · updated Tue, 23 Jun 2026 01:35:50 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -218,7 +252,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 661486,
+          "score": 661518,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -226,7 +260,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8573 stars · updated Tue, 23 Jun 2026 03:33:20 UTC",
+          "meta": "8574 stars · updated Tue, 23 Jun 2026 03:33:20 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -234,7 +268,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 53056,
+          "score": 53064,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -242,14 +276,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5362 stars · updated Tue, 23 Jun 2026 07:54:31 UTC",
+          "meta": "5363 stars · updated Tue, 23 Jun 2026 09:02:44 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 32756,
+          "score": 32762,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -257,13 +291,13 @@
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "2115 stars · updated Sat, 20 Jun 2026 22:48:39 UTC",
+          "meta": "2116 stars · updated Sat, 20 Jun 2026 22:48:39 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows"
           ],
           "publishedAt": "2026-02-16T16:59:06Z",
-          "score": 13252,
+          "score": 13258,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -272,22 +306,22 @@
   ],
   "tangentRadar": [
     {
-      "topic": "Coding agents",
-      "signalCount": 29,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "topic": "Tool use",
+      "signalCount": 31,
+      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
+        "Hacker News: Codex logging bug may write TBs to local SSDs",
         "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-        "OpenAI: Codex-maxxing for long-running work",
-        "OpenAI: Samsung Electronics brings ChatGPT and Codex to employees"
+        "OpenAI: Daybreak: Tools for securing every organization in the world"
       ]
     },
     {
-      "topic": "Tool use",
-      "signalCount": 28,
-      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "topic": "Coding agents",
+      "signalCount": 31,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
+        "Hacker News: Codex logging bug may write TBs to local SSDs",
         "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-        "OpenAI: Daybreak: Tools for securing every organization in the world",
         "OpenAI: Codex-maxxing for long-running work"
       ]
     },
@@ -298,27 +332,27 @@
       "signals": [
         "GitHub: HKUDS/AgentSpace",
         "GitHub: Sorathiya123/claude-ai-free-desktop-app",
-        "GitHub: tongxuluo/gamecraft-bench"
+        "GitHub: Johell1NS/browser-search"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 15,
+      "signalCount": 17,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
+        "Hacker News: Codex logging bug may write TBs to local SSDs",
         "Anthropic: Claude: Elevated Error Rates for Opus 4.8, Opus 4.7, Opus 4.6, and Sonnet 4.6",
-        "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-        "OpenAI: Daybreak: Tools for securing every organization in the world"
+        "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 14,
+      "signalCount": 16,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
+        "Hacker News: Codex logging bug may write TBs to local SSDs",
         "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-        "GitHub: raiyanyahya/recall",
-        "GitHub: Sorathiya123/claude-ai-free-desktop-app"
+        "GitHub: raiyanyahya/recall"
       ]
     },
     {
