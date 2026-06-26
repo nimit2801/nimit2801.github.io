@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-06-25T21:47:29Z",
+  "generatedAt": "2026-06-26T04:09:07Z",
   "windowDays": 7,
-  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, Anthropic Opus 4.8 drops with 69.2% SWE-Bench Pro and Dynamic Workflows for orchestrating hundreds of sub-agents. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups, Anthropic Opus 4.8 drops with 69.2% SWE-Bench Pro and Dynamic Workflows for orchestrating hundreds of sub-agents. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 57,
+    "items": 55,
     "sources": {
       "Anthropic": 2,
-      "GitHub": 46,
+      "GitHub": 45,
       "Google AI": 1,
       "Hacker News": 2,
-      "Hugging Face": 2,
+      "Hugging Face": 1,
       "OpenAI": 4
     }
   },
@@ -18,12 +18,12 @@
       "title": "Computer use in Gemini 3.5 Flash",
       "source": "Google AI",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
-      "meta": "239 pts · 164 comments",
+      "meta": "239 pts · 165 comments",
       "topics": [
         "Major labs"
       ],
       "publishedAt": "2026-06-24T17:21:34Z",
-      "score": 1120,
+      "score": 1123,
       "summary": "",
       "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight — faster inference directly enables more complex, multi-step agent loops."
     },
@@ -70,26 +70,24 @@
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
     {
-      "title": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+      "title": "Qwen/Qwen-AgentWorld-35B-A3B",
       "source": "Hugging Face",
-      "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-      "meta": "605 likes · 165,187 downloads",
+      "url": "https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B",
+      "meta": "253 likes · 3,389 downloads",
       "topics": [
-        "Tool use",
         "Open weights",
-        "Major labs",
-        "Coding agents"
+        "Major labs"
       ],
-      "publishedAt": "2026-06-19T00:06:07.000Z",
-      "score": 2585.187,
-      "summary": "gguf gemma4 coding agentic terminal tool-use reasoning thinking llama.cpp local-llm text-generation base_model:google/gemma-4-12B-it base_model:quantized:google/gemma-4-12B-it license:apache-2.0 endpoints_compatible region:us conversational",
+      "publishedAt": "2026-06-22T14:49:37.000Z",
+      "score": 1015.389,
+      "summary": "transformers safetensors qwen3_5_moe image-text-to-text qwen world-model agent environment-simulation text-generation conversational dataset:Qwen/AgentWorldBench arxiv:2606.24597 base_model:Qwen/Qwen3.5-35B-A3B-Base base_model:finetune:Qwen/Qwen3.5-35B-A3B-Base license:apache-2.0 endpoints_compatible region:us",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
     {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105545 stars · updated Thu, 25 Jun 2026 20:55:41 UTC",
+      "meta": "105557 stars · updated Fri, 26 Jun 2026 01:46:37 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -97,7 +95,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 661734,
+      "score": 661808,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -105,7 +103,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8597 stars · updated Thu, 25 Jun 2026 21:42:12 UTC",
+      "meta": "8599 stars · updated Thu, 25 Jun 2026 23:43:59 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -113,7 +111,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 53200,
+      "score": 53214,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -127,12 +125,12 @@
           "title": "Computer use in Gemini 3.5 Flash",
           "source": "Google AI",
           "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
-          "meta": "239 pts · 164 comments",
+          "meta": "239 pts · 165 comments",
           "topics": [
             "Major labs"
           ],
           "publishedAt": "2026-06-24T17:21:34Z",
-          "score": 1120,
+          "score": 1123,
           "summary": "",
           "why": "A frontier-level model at 4x speed parity reshapes the practical design space for agent builders overnight — faster inference directly enables more complex, multi-step agent loops."
         },
@@ -231,7 +229,7 @@
           "title": "Show HN: peerd – AI agent harness that runs entirely in your browser",
           "source": "Hacker News",
           "url": "https://github.com/NotASithLord/peerd",
-          "meta": "67 pts · 22 comments",
+          "meta": "68 pts · 22 comments",
           "topics": [
             "Tool use",
             "Memory and state",
@@ -239,7 +237,7 @@
             "Major labs"
           ],
           "publishedAt": "2026-06-23T15:05:00Z",
-          "score": 255,
+          "score": 257,
           "summary": "Hey HN. http:&#x2F;&#x2F;peerd.ai is an AI agent harness that lives entirely in your browser as a web extension. You don’t have to install a separate “AI browser”. You don’t have to bolt on or run some external process or manage a clunky mcp integration. It’s just a fully contained web extension, written in no build vanilla JS with minimal non-browser dependencies, using your own provider keys, and Apache 2. This isn’t just a fun hack. While it has largely been a solo side project, I genuinely believe the browser and the web could be the most natural platform for AI agents to operate safely, autonomously, and most importantly without A2A middlemen (more on that in a sec). To demonstrate that point peerd doesn’t just drive browser automation. It spins up isolated sandboxes using tabs and worker instances to support various real workload types. Those include headless JS computational work, visual JS notebooks, personal client side apps, and real Linux VMs on top of wasm with full http networking. The industry discourse over the last several months has been dominated by “which substrate is the best for ai agent sandboxes” with many competing answers focused on different models and use cases. Cloudflare is one of the most prominent examples, positioning its v8 isolate based workers as the best in class solution thanks to faster than container startup times and strong isolation guarantees. The v8 isolate is of course the product of chromium, which runs on billions of browsers around the world for free. The browser as a whole is perhaps the most battle tested sandbox system in the entire software industry. It’s been built on 3 decades of learning from hostile content, hostile code, and hostile users. Native and cloud agents are necessarily rebuilding all or most of this posture from scratch. peerd doesn’t. It leverages everything the browser has to offer and pushes it to its functional limits, while inheriting its security baseline and isolation from the host system. Robust sandboxing isn’t the only thing the browser offers and peerd uses. It comes with extremely powerful and underrated primitives, from webCrypto, webRTC, webAuthn, webGPU, and ~soon WebNN. Direct web access, with your real live sessions, and api calls with fetch present an alternative model to MCP integrations. The agent can write and spawn web apps right there in a tab, no hosted service necessary. Then there’s the A2A piece: peerd already has a rudimentary p2p (peerd-to-peerd?) network in place using webRTC. Today you can connect with peers on the network, add them as contacts, and share signed apps you’ve created. I’m working on extending these apps to be able to leverage the same p2p network to support decentralized web apps (dwapps), as well as facilitate true p2p A2A with no platform or middlemen. Given this is an early part time project, this is an extremely experimental build and in a v0.x preview state. I’ve taken care to attempt to address the lethal trifecta: the main agent loops&#x2F;sessions never ingest untrusted DOM code or possess low level navigation tools. It delegates those tasks to dedicated web runners with no wider tooling or secrets access that return summarized results. Both the DOM and the summarized results are bracketed as untrusted, meaning two stacked prompt injection escapes are needed. All egress goes through a central module that has a customizable deny list, and only models calls to designated allowed endpoints are possible. See more in the docs, site, and the code itself. Ultimately, use at your own risk. Today anthropic, open router, local ollama, and even an experimental WebGPU instance of Gemma are supported. Honest limitations: Chrome store and AMO are still pending until it can get more eyeballs and live usage. Just loading unpacked from GitHub is the easiest way to go, and as a bonus makes it easy to audit thanks to no build. Linux on wasm depends on the Cheerpx engine, which is not open source and has restrictions for commercial use. That may be a good reason to reassess it compared to alternatives, but it’s also the most performant and looks closest to implementing 64bit support. Poke around, use it, critique it, and have fun.",
           "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
         }
@@ -255,32 +253,16 @@
       "label": "Hugging Face",
       "items": [
         {
-          "title": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-          "source": "Hugging Face",
-          "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-          "meta": "605 likes · 165,187 downloads",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-06-19T00:06:07.000Z",
-          "score": 2585.187,
-          "summary": "gguf gemma4 coding agentic terminal tool-use reasoning thinking llama.cpp local-llm text-generation base_model:google/gemma-4-12B-it base_model:quantized:google/gemma-4-12B-it license:apache-2.0 endpoints_compatible region:us conversational",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
           "title": "Qwen/Qwen-AgentWorld-35B-A3B",
           "source": "Hugging Face",
           "url": "https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B",
-          "meta": "231 likes · 3,389 downloads",
+          "meta": "253 likes · 3,389 downloads",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-06-22T14:49:37.000Z",
-          "score": 927.389,
+          "score": 1015.389,
           "summary": "transformers safetensors qwen3_5_moe image-text-to-text qwen world-model agent environment-simulation text-generation conversational dataset:Qwen/AgentWorldBench arxiv:2606.24597 base_model:Qwen/Qwen3.5-35B-A3B-Base base_model:finetune:Qwen/Qwen3.5-35B-A3B-Base license:apache-2.0 endpoints_compatible region:us",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -294,7 +276,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105545 stars · updated Thu, 25 Jun 2026 20:55:41 UTC",
+          "meta": "105557 stars · updated Fri, 26 Jun 2026 01:46:37 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -302,7 +284,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 661734,
+          "score": 661808,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -310,7 +292,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8597 stars · updated Thu, 25 Jun 2026 21:42:12 UTC",
+          "meta": "8599 stars · updated Thu, 25 Jun 2026 23:43:59 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -318,7 +300,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 53200,
+          "score": 53214,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -326,14 +308,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5393 stars · updated Wed, 24 Jun 2026 05:31:56 UTC",
+          "meta": "5398 stars · updated Wed, 24 Jun 2026 05:31:56 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 32942,
+          "score": 32972,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -341,13 +323,13 @@
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "2128 stars · updated Tue, 23 Jun 2026 12:49:05 UTC",
+          "meta": "2129 stars · updated Tue, 23 Jun 2026 12:49:05 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows"
           ],
           "publishedAt": "2026-02-16T16:59:06Z",
-          "score": 13332,
+          "score": 13338,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -357,42 +339,32 @@
   "tangentRadar": [
     {
       "topic": "Coding agents",
-      "signalCount": 34,
+      "signalCount": 31,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Codex logging bug may write TBs to local SSDs",
-        "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
-        "OpenAI: Codex-maxxing for long-running work"
+        "OpenAI: Codex-maxxing for long-running work",
+        "OpenAI: Samsung Electronics brings ChatGPT and Codex to employees"
       ]
     },
     {
       "topic": "Tool use",
-      "signalCount": 31,
+      "signalCount": 28,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Codex logging bug may write TBs to local SSDs",
         "Hacker News: Show HN: peerd – AI agent harness that runs entirely in your browser",
-        "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF"
+        "OpenAI: Daybreak: Tools for securing every organization in the world"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 25,
+      "signalCount": 24,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Google AI: Computer use in Gemini 3.5 Flash",
         "Hacker News: Codex logging bug may write TBs to local SSDs",
         "Hacker News: Show HN: peerd – AI agent harness that runs entirely in your browser"
-      ]
-    },
-    {
-      "topic": "Open weights",
-      "signalCount": 20,
-      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
-      "signals": [
-        "Hacker News: Codex logging bug may write TBs to local SSDs",
-        "Hacker News: Show HN: peerd – AI agent harness that runs entirely in your browser",
-        "Hugging Face: yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF"
       ]
     },
     {
@@ -403,6 +375,16 @@
         "GitHub: HKUDS/AgentSpace",
         "GitHub: benchflow-ai/awesome-evals",
         "GitHub: Johell1NS/browser-search"
+      ]
+    },
+    {
+      "topic": "Open weights",
+      "signalCount": 18,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "signals": [
+        "Hacker News: Codex logging bug may write TBs to local SSDs",
+        "Hacker News: Show HN: peerd – AI agent harness that runs entirely in your browser",
+        "Hugging Face: Qwen/Qwen-AgentWorld-35B-A3B"
       ]
     },
     {
@@ -428,9 +410,9 @@
       "prompt": "Log tool calls, retries, and summaries for one real task, then inspect which step actually predicts success or failure."
     },
     {
-      "title": "Stress-test one agent across model families",
-      "why": "The model layer is changing quickly enough that the same harness can behave very differently across providers and sizes.",
-      "prompt": "Replay the same agent task on one hosted frontier model and one smaller open model, then compare tool-selection behavior, not just answer quality."
+      "title": "Prototype an interface beyond chat",
+      "why": "The AI-pointer and Interaction Models threads both suggest the interface layer is becoming a genuine research lever.",
+      "prompt": "Build a tiny agent UI that is not just a chat box — for example a timeline, pointer assistant, or live shared workspace — and log what it changes."
     }
   ],
   "method": [
