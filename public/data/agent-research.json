@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-28T17:18:30Z",
+  "generatedAt": "2026-06-28T21:07:46Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups, Anthropic Opus 4.8 drops with 69.2% SWE-Bench Pro and Dynamic Workflows for orchestrating hundreds of sub-agents. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
     "items": 59,
     "sources": {
-      "Anthropic": 2,
-      "GitHub": 48,
+      "Anthropic": 1,
+      "GitHub": 49,
       "Google AI": 1,
       "Hacker News": 2,
       "Hugging Face": 2,
@@ -41,17 +41,20 @@
       "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
     },
     {
-      "title": "Elevated error rate on Claude Opus 4.8",
-      "source": "Anthropic",
-      "url": "https://status.claude.com/incidents/8b0rggdfh1hv",
-      "meta": "6 pts · 2 comments",
+      "title": "Codex-maxxing for long-running work",
+      "url": "https://openai.com/index/codex-maxxing-long-running-work",
+      "publishedAt": "Mon, 22 Jun 2026 00:00:00 GMT",
+      "source": "OpenAI",
+      "meta": "Mon, 22 Jun 2026 00:00:00 GMT",
       "topics": [
-        "Major labs"
+        "Tool use",
+        "Major labs",
+        "Coding agents",
+        "Infra and retrieval"
       ],
-      "publishedAt": "2026-06-24T13:35:19Z",
-      "score": 218,
-      "summary": "",
-      "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
+      "score": 180,
+      "summary": "Codex-maxxing for long-running work",
+      "why": "A lot of real-world agent performance now depends on infrastructure details like eventing, search access, and reliability under external constraints."
     },
     {
       "title": "Codex logging bug may write TBs to local SSDs",
@@ -73,13 +76,13 @@
       "title": "Qwen/Qwen-AgentWorld-35B-A3B",
       "source": "Hugging Face",
       "url": "https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B",
-      "meta": "392 likes · 23,697 downloads",
+      "meta": "397 likes · 23,697 downloads",
       "topics": [
         "Open weights",
         "Major labs"
       ],
       "publishedAt": "2026-06-22T14:49:37.000Z",
-      "score": 1591.697,
+      "score": 1611.697,
       "summary": "transformers safetensors qwen3_5_moe image-text-to-text qwen world-model agent environment-simulation text-generation conversational dataset:Qwen/AgentWorldBench arxiv:2606.24597 base_model:Qwen/Qwen3.5-35B-A3B-Base base_model:finetune:Qwen/Qwen3.5-35B-A3B-Base license:apache-2.0 endpoints_compatible region:us deploy:azure",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -87,7 +90,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105628 stars · updated Sun, 28 Jun 2026 01:45:53 UTC",
+      "meta": "105634 stars · updated Sun, 28 Jun 2026 01:45:53 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -95,7 +98,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 662256,
+      "score": 662294,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -103,7 +106,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8610 stars · updated Sun, 28 Jun 2026 16:10:39 UTC",
+      "meta": "8611 stars · updated Sun, 28 Jun 2026 20:51:51 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -111,7 +114,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 53288,
+      "score": 53294,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -144,19 +147,6 @@
           ],
           "publishedAt": "2026-06-22T00:38:50Z",
           "score": 382,
-          "summary": "",
-          "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
-        },
-        {
-          "title": "Elevated error rate on Claude Opus 4.8",
-          "source": "Anthropic",
-          "url": "https://status.claude.com/incidents/8b0rggdfh1hv",
-          "meta": "6 pts · 2 comments",
-          "topics": [
-            "Major labs"
-          ],
-          "publishedAt": "2026-06-24T13:35:19Z",
-          "score": 218,
           "summary": "",
           "why": "Opus 4.8 with Dynamic Workflows orchestrating hundreds of sub-agents is the biggest agent-infrastructure release this cycle. Combined with 69.2% SWE-Bench Pro, Fast Mode (3x cheaper), and 41-day release cadence, Anthropic is sprinting on both capability and trustworthiness."
         },
@@ -202,6 +192,21 @@
           "score": 180,
           "summary": "Codex-maxxing for long-running work",
           "why": "A lot of real-world agent performance now depends on infrastructure details like eventing, search access, and reliability under external constraints."
+        },
+        {
+          "title": "Samsung Electronics brings ChatGPT and Codex to employees",
+          "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
+          "publishedAt": "Sun, 21 Jun 2026 23:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Sun, 21 Jun 2026 23:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "Samsung Electronics brings ChatGPT and Codex to employees",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
       ]
     },
@@ -256,13 +261,13 @@
           "title": "Qwen/Qwen-AgentWorld-35B-A3B",
           "source": "Hugging Face",
           "url": "https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B",
-          "meta": "392 likes · 23,697 downloads",
+          "meta": "397 likes · 23,697 downloads",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-06-22T14:49:37.000Z",
-          "score": 1591.697,
+          "score": 1611.697,
           "summary": "transformers safetensors qwen3_5_moe image-text-to-text qwen world-model agent environment-simulation text-generation conversational dataset:Qwen/AgentWorldBench arxiv:2606.24597 base_model:Qwen/Qwen3.5-35B-A3B-Base base_model:finetune:Qwen/Qwen3.5-35B-A3B-Base license:apache-2.0 endpoints_compatible region:us deploy:azure",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -270,13 +275,13 @@
           "title": "unsloth/Qwen-AgentWorld-35B-A3B-GGUF",
           "source": "Hugging Face",
           "url": "https://huggingface.co/unsloth/Qwen-AgentWorld-35B-A3B-GGUF",
-          "meta": "90 likes · 79,503 downloads",
+          "meta": "94 likes · 79,503 downloads",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-06-24T23:45:03.000Z",
-          "score": 439.503,
+          "score": 455.503,
           "summary": "transformers gguf qwen unsloth world-model agent environment-simulation text-generation dataset:Qwen/AgentWorldBench arxiv:2606.24597 base_model:Qwen/Qwen-AgentWorld-35B-A3B base_model:quantized:Qwen/Qwen-AgentWorld-35B-A3B license:apache-2.0 endpoints_compatible region:us imatrix conversational",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -290,7 +295,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105628 stars · updated Sun, 28 Jun 2026 01:45:53 UTC",
+          "meta": "105634 stars · updated Sun, 28 Jun 2026 01:45:53 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -298,7 +303,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 662256,
+          "score": 662294,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -306,7 +311,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8610 stars · updated Sun, 28 Jun 2026 16:10:39 UTC",
+          "meta": "8611 stars · updated Sun, 28 Jun 2026 20:51:51 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -314,7 +319,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 53288,
+          "score": 53294,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -322,14 +327,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5424 stars · updated Wed, 24 Jun 2026 05:31:56 UTC",
+          "meta": "5425 stars · updated Wed, 24 Jun 2026 05:31:56 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 33128,
+          "score": 33134,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -337,13 +342,13 @@
           "title": "bozhouDev/codex-orange-book",
           "source": "GitHub",
           "url": "https://github.com/bozhouDev/codex-orange-book",
-          "meta": "2266 stars · updated Wed, 24 Jun 2026 10:46:54 UTC",
+          "meta": "2272 stars · updated Wed, 24 Jun 2026 10:46:54 UTC",
           "topics": [
             "Tool use",
             "Coding agents"
           ],
           "publishedAt": "2026-06-24T10:46:54Z",
-          "score": 14228,
+          "score": 14264,
           "summary": "Codex 橙皮书：从安装到实战案例的全链路 Codex 使用指南（非官方开源，含可下载 PDF）",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -353,7 +358,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 31,
+      "signalCount": 32,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Codex logging bug may write TBs to local SSDs",
@@ -363,7 +368,7 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 28,
+      "signalCount": 29,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Codex logging bug may write TBs to local SSDs",
@@ -372,23 +377,23 @@
       ]
     },
     {
-      "topic": "Major labs",
-      "signalCount": 25,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
-      "signals": [
-        "Google AI: Computer use in Gemini 3.5 Flash",
-        "Hacker News: Codex logging bug may write TBs to local SSDs",
-        "Hacker News: Show HN: peerd – AI agent harness that runs entirely in your browser"
-      ]
-    },
-    {
       "topic": "Interfaces",
-      "signalCount": 23,
+      "signalCount": 24,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "GitHub: benchflow-ai/awesome-evals",
         "GitHub: HKUDS/AgentSpace",
         "GitHub: m1ckc3s/claude-status-bar"
+      ]
+    },
+    {
+      "topic": "Major labs",
+      "signalCount": 23,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "Google AI: Computer use in Gemini 3.5 Flash",
+        "Hacker News: Codex logging bug may write TBs to local SSDs",
+        "Hacker News: Show HN: peerd – AI agent harness that runs entirely in your browser"
       ]
     },
     {
