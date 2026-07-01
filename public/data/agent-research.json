@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T18:02:23Z",
+  "generatedAt": "2026-07-01T21:40:29Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
@@ -57,13 +57,13 @@
       "title": "Qwen 3.6 27B is the sweet spot for local development",
       "source": "Hacker News",
       "url": "https://quesma.com/blog/qwen-36-is-awesome/",
-      "meta": "1172 pts · 742 comments",
+      "meta": "1172 pts · 744 comments",
       "topics": [
         "Open weights",
         "Major labs"
       ],
       "publishedAt": "2026-06-29T17:05:16Z",
-      "score": 4640,
+      "score": 4646,
       "summary": "",
       "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
     },
@@ -85,7 +85,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105699 stars · updated Wed, 01 Jul 2026 01:49:23 UTC",
+      "meta": "105700 stars · updated Wed, 01 Jul 2026 19:39:15 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -93,7 +93,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 662726,
+      "score": 662728,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -101,7 +101,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8630 stars · updated Wed, 01 Jul 2026 17:55:22 UTC",
+      "meta": "8631 stars · updated Wed, 01 Jul 2026 21:25:06 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -109,7 +109,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 53408,
+      "score": 53414,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -169,13 +169,13 @@
           "title": "Qwen 3.6 27B is the sweet spot for local development",
           "source": "Hacker News",
           "url": "https://quesma.com/blog/qwen-36-is-awesome/",
-          "meta": "1172 pts · 742 comments",
+          "meta": "1172 pts · 744 comments",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-06-29T17:05:16Z",
-          "score": 4640,
+          "score": 4646,
           "summary": "",
           "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
         },
@@ -183,7 +183,7 @@
           "title": "Launch HN: Parsewise (YC P25) – Reason Across Documents with an API",
           "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=48746752",
-          "meta": "32 pts · 29 comments",
+          "meta": "43 pts · 38 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -191,7 +191,7 @@
             "Evaluation"
           ],
           "publishedAt": "2026-07-01T13:48:44Z",
-          "score": 251,
+          "score": 300,
           "summary": "Hi all, it’s Greg and Max, founders of Parsewise here ( https:&#x2F;&#x2F;www.parsewise.ai&#x2F;api ). Parsewise transforms a bucket of unstructured data into schema compliant data, retaining lineage for values resolved across documents. Imagine giving Claude a bunch of files and asking for a CSV or JSON output. If you have tried this, you know both the system limitations (number of files, type of inputs, cost, latency) but also the human-facing challenge of having no way to validate the results quickly. We solve both. We help tech teams simplify their unstructured data ETL, and loop in business experts for the definitions and for instant validation. Here is a video with a few use cases: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=dbRllnnh47w Parsewise in the words of someone coming to us: ”I need to extract information from insurance policy PDFs, phone calls that have been transcribed, emails, etc. I am NOT looking for something that would just extract data point by data point, page by page into a structured well-defined schema but more something more agentic that can understand that information might be across documents and that it should reason over what to extract.” We started the company based on a decade of experience (and pain) in complex data transformation and data analysis &#x2F; synthesis. Greg was building both classical ETL and implemented AI workflows at Palantir. At Bain, Max did highly complex data analysis in the financial sector, similar to many of our customers. Parsewise works by taking in a bucket of data (think hundreds or thousands of pdfs, excels etc.), and outputting schema compliant data where every single value is traceable down to word level citations across multiple documents in the bucket. We provide API customers with ways to show the lineage in their own applications, or they can use our platform for internal operations. At the core of the data processing we have self-improving agent definitions. They define the acceptable sources, the logic for resolving or combining values, and the rule for highlighting uncertainty to the end user. The underlying tech is model and cloud agnostic and can be deployed in private networks. We have seen the best results with Gemini models for visual reasoning, achieving SOTA (beating Claude Fable) on the strongest grounded reasoning benchmark we have found (Databricks OfficeQA). Notably, we focused more on the “human harness” rather than the model harness, leaning into the actual friction we saw in uptake, which is around verifiability. That means optimizing the time and clicks required to trust the outcomes. We use vLLMs for parsing, and then we use small models for efficient large scale exhaustive search. Unlike RAG, we do not sample; instead, we exhaustively find all relevant values for a given query. We use larger models for decision making around resolutions and flagging inconsistencies to users. This exhaustiveness and explicit value sourcing is unique to our platform, and it goes beyond the first step of data parsing that many existing providers cover. We would love to welcome builders and tinkerers to try Parsewise on your complex document challenges. We have a ton of ideas on how we can expand the product and make it better, but would appreciate feedback and ideas from the community!",
           "why": "Self-improving agents that learn from their own production outputs without human retraining are the next frontier beyond RAG and fine-tuning. This pattern generalizes to any structured, repetitive workflow domain."
         }
@@ -230,7 +230,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105699 stars · updated Wed, 01 Jul 2026 01:49:23 UTC",
+          "meta": "105700 stars · updated Wed, 01 Jul 2026 19:39:15 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -238,7 +238,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 662726,
+          "score": 662728,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -246,7 +246,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8630 stars · updated Wed, 01 Jul 2026 17:55:22 UTC",
+          "meta": "8631 stars · updated Wed, 01 Jul 2026 21:25:06 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -254,7 +254,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 53408,
+          "score": 53414,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -262,14 +262,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5461 stars · updated Wed, 24 Jun 2026 05:31:56 UTC",
+          "meta": "5463 stars · updated Wed, 24 Jun 2026 05:31:56 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 33350,
+          "score": 33362,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -277,13 +277,13 @@
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "2145 stars · updated Sun, 28 Jun 2026 02:13:08 UTC",
+          "meta": "2146 stars · updated Sun, 28 Jun 2026 02:13:08 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows"
           ],
           "publishedAt": "2026-02-16T16:59:06Z",
-          "score": 13438,
+          "score": 13444,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
