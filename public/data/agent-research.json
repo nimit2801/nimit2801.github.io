@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-03T21:12:59Z",
+  "generatedAt": "2026-07-04T03:36:26Z",
   "windowDays": 7,
-  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says guardrails on local models close the reliability gap with frontier APIs (Forge: 53%→99%), major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 50,
+    "items": 42,
     "sources": {
-      "GitHub": 46,
+      "GitHub": 38,
       "Google AI": 2,
       "Hacker News": 2
     }
@@ -42,47 +42,43 @@
       "title": "Qwen 3.6 27B is the sweet spot for local development",
       "source": "Hacker News",
       "url": "https://quesma.com/blog/qwen-36-is-awesome/",
-      "meta": "1185 pts · 755 comments",
+      "meta": "1186 pts · 756 comments",
       "topics": [
         "Open weights",
         "Major labs"
       ],
       "publishedAt": "2026-06-29T17:05:16Z",
-      "score": 4705,
+      "score": 4710,
       "summary": "",
       "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
     },
     {
-      "title": "google-gemini/gemini-cli",
+      "title": "antoinezambelli/forge",
       "source": "GitHub",
-      "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105733 stars · updated Fri, 03 Jul 2026 01:52:36 UTC",
+      "url": "https://github.com/antoinezambelli/forge",
+      "meta": "2152 stars · updated Sat, 04 Jul 2026 00:53:24 UTC",
       "topics": [
         "Tool use",
-        "Open weights",
-        "Major labs",
-        "Coding agents"
+        "Multi-agent workflows"
       ],
-      "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 662934,
-      "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+      "publishedAt": "2026-02-16T16:59:06Z",
+      "score": 13482,
+      "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
+      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
     {
-      "title": "LearningCircuit/local-deep-research",
+      "title": "HermannBjorgvin/Clawdmeter",
       "source": "GitHub",
-      "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8644 stars · updated Fri, 03 Jul 2026 19:17:20 UTC",
+      "url": "https://github.com/HermannBjorgvin/Clawdmeter",
+      "meta": "1759 stars · updated Wed, 01 Jul 2026 23:18:29 UTC",
       "topics": [
-        "Tool use",
-        "Evaluation",
-        "Open weights",
-        "Major labs"
+        "Coding agents",
+        "Interfaces"
       ],
-      "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 53498,
-      "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+      "publishedAt": "2026-05-11T03:07:49Z",
+      "score": 11194,
+      "summary": "ESP32 desk dashboard that shows Claude Code usage",
+      "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
     }
   ],
   "sourceSections": [
@@ -127,13 +123,13 @@
           "title": "Qwen 3.6 27B is the sweet spot for local development",
           "source": "Hacker News",
           "url": "https://quesma.com/blog/qwen-36-is-awesome/",
-          "meta": "1185 pts · 755 comments",
+          "meta": "1186 pts · 756 comments",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-06-29T17:05:16Z",
-          "score": 4705,
+          "score": 4710,
           "summary": "",
           "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
         },
@@ -141,7 +137,7 @@
           "title": "Launch HN: Parsewise (YC P25) – Reason Across Documents with an API",
           "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=48746752",
-          "meta": "55 pts · 54 comments",
+          "meta": "56 pts · 54 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -149,7 +145,7 @@
             "Evaluation"
           ],
           "publishedAt": "2026-07-01T13:48:44Z",
-          "score": 372,
+          "score": 374,
           "summary": "Hi all, it’s Greg and Max, founders of Parsewise here ( https:&#x2F;&#x2F;www.parsewise.ai&#x2F;api ). Parsewise transforms a bucket of unstructured data into schema compliant data, retaining lineage for values resolved across documents. Imagine giving Claude a bunch of files and asking for a CSV or JSON output. If you have tried this, you know both the system limitations (number of files, type of inputs, cost, latency) but also the human-facing challenge of having no way to validate the results quickly. We solve both. We help tech teams simplify their unstructured data ETL, and loop in business experts for the definitions and for instant validation. Here is a video with a few use cases: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=dbRllnnh47w Parsewise in the words of someone coming to us: ”I need to extract information from insurance policy PDFs, phone calls that have been transcribed, emails, etc. I am NOT looking for something that would just extract data point by data point, page by page into a structured well-defined schema but more something more agentic that can understand that information might be across documents and that it should reason over what to extract.” We started the company based on a decade of experience (and pain) in complex data transformation and data analysis &#x2F; synthesis. Greg was building both classical ETL and implemented AI workflows at Palantir. At Bain, Max did highly complex data analysis in the financial sector, similar to many of our customers. Parsewise works by taking in a bucket of data (think hundreds or thousands of pdfs, excels etc.), and outputting schema compliant data where every single value is traceable down to word level citations across multiple documents in the bucket. We provide API customers with ways to show the lineage in their own applications, or they can use our platform for internal operations. At the core of the data processing we have self-improving agent definitions. They define the acceptable sources, the logic for resolving or combining values, and the rule for highlighting uncertainty to the end user. The underlying tech is model and cloud agnostic and can be deployed in private networks. We have seen the best results with Gemini models for visual reasoning, achieving SOTA (beating Claude Fable) on the strongest grounded reasoning benchmark we have found (Databricks OfficeQA). Notably, we focused more on the “human harness” rather than the model harness, leaning into the actual friction we saw in uptake, which is around verifiability. That means optimizing the time and clicks required to trust the outcomes. We use vLLMs for parsing, and then we use small models for efficient large scale exhaustive search. Unlike RAG, we do not sample; instead, we exhaustively find all relevant values for a given query. We use larger models for decision making around resolutions and flagging inconsistencies to users. This exhaustiveness and explicit value sourcing is unique to our platform, and it goes beyond the first step of data parsing that many existing providers cover. We would love to welcome builders and tinkerers to try Parsewise on your complex document challenges. We have a ton of ideas on how we can expand the product and make it better, but would appreciate feedback and ideas from the community!",
           "why": "Self-improving agents that learn from their own production outputs without human retraining are the next frontier beyond RAG and fine-tuning. This pattern generalizes to any structured, repetitive workflow domain."
         }
@@ -170,57 +166,10 @@
       "label": "GitHub",
       "items": [
         {
-          "title": "google-gemini/gemini-cli",
-          "source": "GitHub",
-          "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105733 stars · updated Fri, 03 Jul 2026 01:52:36 UTC",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 662934,
-          "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "LearningCircuit/local-deep-research",
-          "source": "GitHub",
-          "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8644 stars · updated Fri, 03 Jul 2026 19:17:20 UTC",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 53498,
-          "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "MinishLab/semble",
-          "source": "GitHub",
-          "url": "https://github.com/MinishLab/semble",
-          "meta": "5489 stars · updated Fri, 03 Jul 2026 14:26:37 UTC",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 33520,
-          "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
-          "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
-        },
-        {
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "2152 stars · updated Fri, 03 Jul 2026 18:23:46 UTC",
+          "meta": "2152 stars · updated Sat, 04 Jul 2026 00:53:24 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows"
@@ -229,6 +178,51 @@
           "score": 13482,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "HermannBjorgvin/Clawdmeter",
+          "source": "GitHub",
+          "url": "https://github.com/HermannBjorgvin/Clawdmeter",
+          "meta": "1759 stars · updated Wed, 01 Jul 2026 23:18:29 UTC",
+          "topics": [
+            "Coding agents",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-11T03:07:49Z",
+          "score": 11194,
+          "summary": "ESP32 desk dashboard that shows Claude Code usage",
+          "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
+        },
+        {
+          "title": "HUANGCHIHHUNGLeo/claude-real-video",
+          "source": "GitHub",
+          "url": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video",
+          "meta": "549 stars · updated Fri, 03 Jul 2026 23:25:18 UTC",
+          "topics": [
+            "Voice and multimodal",
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-07-03T23:25:18Z",
+          "score": 3516,
+          "summary": "Let Claude (or any LLM) actually watch a video — scene-aware, deduplicated frames + transcript, from a URL or local file. Runs locally, MIT.",
+          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+        },
+        {
+          "title": "rahilp/second-brain-cloudflare",
+          "source": "GitHub",
+          "url": "https://github.com/rahilp/second-brain-cloudflare",
+          "meta": "490 stars · updated Fri, 03 Jul 2026 15:35:19 UTC",
+          "topics": [
+            "Tool use",
+            "Memory and state",
+            "Coding agents",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-05-09T23:10:58Z",
+          "score": 3214,
+          "summary": "One memory layer, every AI tool. Store anything once — recall it in Claude, ChatGPT, Cursor, or any MCP client. Self-hosted on Cloudflare's free tier.",
+          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
         }
       ]
     }
@@ -236,27 +230,37 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 26,
+      "signalCount": 20,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Launch HN: Parsewise (YC P25) – Reason Across Documents with an API",
         "GitHub: Jia-Ethan/codex-keysmith",
-        "GitHub: ivorpad/mercadona-cli"
+        "GitHub: SuperJJ007/CSswitch"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 22,
+      "signalCount": 19,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
+        "GitHub: HUANGCHIHHUNGLeo/claude-real-video",
         "GitHub: Jia-Ethan/codex-keysmith",
-        "GitHub: Einsia/Browser-BC",
-        "GitHub: ivorpad/mercadona-cli"
+        "GitHub: LinXiaoTao/FuckClaude"
+      ]
+    },
+    {
+      "topic": "Interfaces",
+      "signalCount": 18,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signals": [
+        "Google AI: Start Building with Nano Banana 2 Lite and Gemini Omni Flash",
+        "GitHub: xt4d/GameBlocks",
+        "GitHub: lazymac2x/agent-wiki"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 20,
+      "signalCount": 16,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Google AI: Gemini Spark updates: macOS launch, connected apps and more",
@@ -265,28 +269,18 @@
       ]
     },
     {
-      "topic": "Interfaces",
-      "signalCount": 20,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
-      "signals": [
-        "Google AI: Start Building with Nano Banana 2 Lite and Gemini Omni Flash",
-        "GitHub: Einsia/Browser-BC",
-        "GitHub: ivorpad/mercadona-cli"
-      ]
-    },
-    {
       "topic": "Open weights",
-      "signalCount": 18,
+      "signalCount": 13,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Qwen 3.6 27B is the sweet spot for local development",
-        "GitHub: Jia-Ethan/codex-keysmith",
-        "GitHub: SouthpawIN/sirvir"
+        "GitHub: HUANGCHIHHUNGLeo/claude-real-video",
+        "GitHub: Jia-Ethan/codex-keysmith"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 13,
+      "signalCount": 12,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Launch HN: Parsewise (YC P25) – Reason Across Documents with an API",
