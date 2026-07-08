@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-07T21:27:27Z",
+  "generatedAt": "2026-07-08T03:19:16Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, event-driven and browser/MCP plumbing is becoming part of the agent conversation. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 45,
+    "items": 49,
     "sources": {
-      "GitHub": 41,
+      "GitHub": 45,
       "Google AI": 1,
       "Hacker News": 2,
       "OpenAI": 1
@@ -62,7 +62,7 @@
       "title": "Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop",
       "source": "Hacker News",
       "url": "https://github.com/rowboatlabs/rowboat",
-      "meta": "39 pts · 12 comments",
+      "meta": "108 pts · 27 comments",
       "topics": [
         "Tool use",
         "Multi-agent workflows",
@@ -70,7 +70,7 @@
         "Voice and multimodal"
       ],
       "publishedAt": "2026-07-07T16:10:44Z",
-      "score": 204,
+      "score": 387,
       "summary": "Claude’s desktop app is brilliant, but for our own daily work we kept wanting it to be less like a chat app and more like a full-fledged work app. Rowboat is our attempt at that, including the ability to build your own work surfaces inside Rowboat (more below). Our repo is https:&#x2F;&#x2F;github.com&#x2F;rowboatlabs&#x2F;rowboat , and there’s a demo video here: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=et5yQABJ3xI In a previous startup, we built a deep-learning product for enterprise support reps, including teams supporting P&G brands. Models took live notes, suggested replies, and recommended actions while support reps were on calls or handling emails. One lesson stuck with us: it&#x27;s not enough for the AI to be right, the help has to show up where the work is happening. So we added what we came to call “work surfaces”: dedicated areas for email, meetings, notes, browser, and parallel coding, where the assistant can help inside the workflow itself rather than only through chat: - Email client: Rowboat has a simple email client that sorts incoming emails into important vs. everything else, and pre-creates drafts for important emails. As you edit and send emails, it takes notes on your style, so future drafts get closer to your voice. - Meeting notes: We built a Granola-style local meeting notetaker. Notes are stored as plain Markdown files on your machine. After a meeting, Rowboat feeds the notes back into the knowledge graph and updates the relevant people, project, and topic notes. - Browser: We added a built-in browser, isolated from your main one, where you can log in only to the accounts you want the assistant to help with. The assistant uses browser-use skills to navigate websites. - Parallel coding: The code-mode inside Rowboat lets you spin multiple instances of Claude Code or Codex and either work with them directly or let Rowboat use your work context to orchestrate them. We built an ACP (Agent Client Protocol) client in Rowboat for this. - Notes: Rowboat has an Obsidian-style local note-taking system. It comes with graph view, bases view, and voice notes. You can also sync Google Docs files and edit them inside Rowboat. You can also build your own work surfaces inside Rowboat (web apps). Each app gets its own UI and a background agent, and can use all of Rowboat&#x27;s tools, product integrations, and your work memory. For instance: an app to manage GitHub activity, project tracking, or ads campaign management. There are a few community apps at launch you can search and install, and you can publish your own by creating a GitHub repo for it and registering it. Rowboat also indexes your work into a knowledge graph that all of the above surfaces use to have better context. We did a Show HN a few months back on this: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46962641 . As an example that ties some of these together: you can create an app inside Rowboat that collects feature requests from your email, meetings, and Slack and ranks them, then uses Claude Code to draft a first version of the top-ranked feature, pulling prior context about it from your knowledge graph. Rowboat is local-first: data is stored as plain Markdown files you can read, edit, or delete anytime. It is Apache-2.0 and works with any LLM, including local models through Ollama or LM Studio. We’d love to hear your thoughts, and contributions are welcome!",
       "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
     },
@@ -78,7 +78,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105827 stars · updated Tue, 07 Jul 2026 20:38:23 UTC",
+      "meta": "105833 stars · updated Wed, 08 Jul 2026 01:24:10 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -86,7 +86,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 663554,
+      "score": 663590,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -94,7 +94,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8681 stars · updated Tue, 07 Jul 2026 21:10:16 UTC",
+      "meta": "8682 stars · updated Wed, 08 Jul 2026 00:26:31 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -102,7 +102,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 53732,
+      "score": 53738,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -149,6 +149,22 @@
       "label": "Hacker News",
       "items": [
         {
+          "title": "Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop",
+          "source": "Hacker News",
+          "url": "https://github.com/rowboatlabs/rowboat",
+          "meta": "108 pts · 27 comments",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows",
+            "Memory and state",
+            "Voice and multimodal"
+          ],
+          "publishedAt": "2026-07-07T16:10:44Z",
+          "score": 387,
+          "summary": "Claude’s desktop app is brilliant, but for our own daily work we kept wanting it to be less like a chat app and more like a full-fledged work app. Rowboat is our attempt at that, including the ability to build your own work surfaces inside Rowboat (more below). Our repo is https:&#x2F;&#x2F;github.com&#x2F;rowboatlabs&#x2F;rowboat , and there’s a demo video here: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=et5yQABJ3xI In a previous startup, we built a deep-learning product for enterprise support reps, including teams supporting P&G brands. Models took live notes, suggested replies, and recommended actions while support reps were on calls or handling emails. One lesson stuck with us: it&#x27;s not enough for the AI to be right, the help has to show up where the work is happening. So we added what we came to call “work surfaces”: dedicated areas for email, meetings, notes, browser, and parallel coding, where the assistant can help inside the workflow itself rather than only through chat: - Email client: Rowboat has a simple email client that sorts incoming emails into important vs. everything else, and pre-creates drafts for important emails. As you edit and send emails, it takes notes on your style, so future drafts get closer to your voice. - Meeting notes: We built a Granola-style local meeting notetaker. Notes are stored as plain Markdown files on your machine. After a meeting, Rowboat feeds the notes back into the knowledge graph and updates the relevant people, project, and topic notes. - Browser: We added a built-in browser, isolated from your main one, where you can log in only to the accounts you want the assistant to help with. The assistant uses browser-use skills to navigate websites. - Parallel coding: The code-mode inside Rowboat lets you spin multiple instances of Claude Code or Codex and either work with them directly or let Rowboat use your work context to orchestrate them. We built an ACP (Agent Client Protocol) client in Rowboat for this. - Notes: Rowboat has an Obsidian-style local note-taking system. It comes with graph view, bases view, and voice notes. You can also sync Google Docs files and edit them inside Rowboat. You can also build your own work surfaces inside Rowboat (web apps). Each app gets its own UI and a background agent, and can use all of Rowboat&#x27;s tools, product integrations, and your work memory. For instance: an app to manage GitHub activity, project tracking, or ads campaign management. There are a few community apps at launch you can search and install, and you can publish your own by creating a GitHub repo for it and registering it. Rowboat also indexes your work into a knowledge graph that all of the above surfaces use to have better context. We did a Show HN a few months back on this: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46962641 . As an example that ties some of these together: you can create an app inside Rowboat that collects feature requests from your email, meetings, and Slack and ranks them, then uses Claude Code to draft a first version of the top-ranked feature, pulling prior context about it from your knowledge graph. Rowboat is local-first: data is stored as plain Markdown files you can read, edit, or delete anytime. It is Apache-2.0 and works with any LLM, including local models through Ollama or LM Studio. We’d love to hear your thoughts, and contributions are welcome!",
+          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
+        },
+        {
           "title": "Launch HN: Parsewise (YC P25) – Reason Across Documents with an API",
           "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=48746752",
@@ -163,22 +179,6 @@
           "score": 374,
           "summary": "Hi all, it’s Greg and Max, founders of Parsewise here ( https:&#x2F;&#x2F;www.parsewise.ai&#x2F;api ). Parsewise transforms a bucket of unstructured data into schema compliant data, retaining lineage for values resolved across documents. Imagine giving Claude a bunch of files and asking for a CSV or JSON output. If you have tried this, you know both the system limitations (number of files, type of inputs, cost, latency) but also the human-facing challenge of having no way to validate the results quickly. We solve both. We help tech teams simplify their unstructured data ETL, and loop in business experts for the definitions and for instant validation. Here is a video with a few use cases: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=dbRllnnh47w Parsewise in the words of someone coming to us: ”I need to extract information from insurance policy PDFs, phone calls that have been transcribed, emails, etc. I am NOT looking for something that would just extract data point by data point, page by page into a structured well-defined schema but more something more agentic that can understand that information might be across documents and that it should reason over what to extract.” We started the company based on a decade of experience (and pain) in complex data transformation and data analysis &#x2F; synthesis. Greg was building both classical ETL and implemented AI workflows at Palantir. At Bain, Max did highly complex data analysis in the financial sector, similar to many of our customers. Parsewise works by taking in a bucket of data (think hundreds or thousands of pdfs, excels etc.), and outputting schema compliant data where every single value is traceable down to word level citations across multiple documents in the bucket. We provide API customers with ways to show the lineage in their own applications, or they can use our platform for internal operations. At the core of the data processing we have self-improving agent definitions. They define the acceptable sources, the logic for resolving or combining values, and the rule for highlighting uncertainty to the end user. The underlying tech is model and cloud agnostic and can be deployed in private networks. We have seen the best results with Gemini models for visual reasoning, achieving SOTA (beating Claude Fable) on the strongest grounded reasoning benchmark we have found (Databricks OfficeQA). Notably, we focused more on the “human harness” rather than the model harness, leaning into the actual friction we saw in uptake, which is around verifiability. That means optimizing the time and clicks required to trust the outcomes. We use vLLMs for parsing, and then we use small models for efficient large scale exhaustive search. Unlike RAG, we do not sample; instead, we exhaustively find all relevant values for a given query. We use larger models for decision making around resolutions and flagging inconsistencies to users. This exhaustiveness and explicit value sourcing is unique to our platform, and it goes beyond the first step of data parsing that many existing providers cover. We would love to welcome builders and tinkerers to try Parsewise on your complex document challenges. We have a ton of ideas on how we can expand the product and make it better, but would appreciate feedback and ideas from the community!",
           "why": "Self-improving agents that learn from their own production outputs without human retraining are the next frontier beyond RAG and fine-tuning. This pattern generalizes to any structured, repetitive workflow domain."
-        },
-        {
-          "title": "Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop",
-          "source": "Hacker News",
-          "url": "https://github.com/rowboatlabs/rowboat",
-          "meta": "39 pts · 12 comments",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows",
-            "Memory and state",
-            "Voice and multimodal"
-          ],
-          "publishedAt": "2026-07-07T16:10:44Z",
-          "score": 204,
-          "summary": "Claude’s desktop app is brilliant, but for our own daily work we kept wanting it to be less like a chat app and more like a full-fledged work app. Rowboat is our attempt at that, including the ability to build your own work surfaces inside Rowboat (more below). Our repo is https:&#x2F;&#x2F;github.com&#x2F;rowboatlabs&#x2F;rowboat , and there’s a demo video here: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=et5yQABJ3xI In a previous startup, we built a deep-learning product for enterprise support reps, including teams supporting P&G brands. Models took live notes, suggested replies, and recommended actions while support reps were on calls or handling emails. One lesson stuck with us: it&#x27;s not enough for the AI to be right, the help has to show up where the work is happening. So we added what we came to call “work surfaces”: dedicated areas for email, meetings, notes, browser, and parallel coding, where the assistant can help inside the workflow itself rather than only through chat: - Email client: Rowboat has a simple email client that sorts incoming emails into important vs. everything else, and pre-creates drafts for important emails. As you edit and send emails, it takes notes on your style, so future drafts get closer to your voice. - Meeting notes: We built a Granola-style local meeting notetaker. Notes are stored as plain Markdown files on your machine. After a meeting, Rowboat feeds the notes back into the knowledge graph and updates the relevant people, project, and topic notes. - Browser: We added a built-in browser, isolated from your main one, where you can log in only to the accounts you want the assistant to help with. The assistant uses browser-use skills to navigate websites. - Parallel coding: The code-mode inside Rowboat lets you spin multiple instances of Claude Code or Codex and either work with them directly or let Rowboat use your work context to orchestrate them. We built an ACP (Agent Client Protocol) client in Rowboat for this. - Notes: Rowboat has an Obsidian-style local note-taking system. It comes with graph view, bases view, and voice notes. You can also sync Google Docs files and edit them inside Rowboat. You can also build your own work surfaces inside Rowboat (web apps). Each app gets its own UI and a background agent, and can use all of Rowboat&#x27;s tools, product integrations, and your work memory. For instance: an app to manage GitHub activity, project tracking, or ads campaign management. There are a few community apps at launch you can search and install, and you can publish your own by creating a GitHub repo for it and registering it. Rowboat also indexes your work into a knowledge graph that all of the above surfaces use to have better context. We did a Show HN a few months back on this: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46962641 . As an example that ties some of these together: you can create an app inside Rowboat that collects feature requests from your email, meetings, and Slack and ranks them, then uses Claude Code to draft a first version of the top-ranked feature, pulling prior context about it from your knowledge graph. Rowboat is local-first: data is stored as plain Markdown files you can read, edit, or delete anytime. It is Apache-2.0 and works with any LLM, including local models through Ollama or LM Studio. We’d love to hear your thoughts, and contributions are welcome!",
-          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
         }
       ]
     },
@@ -200,7 +200,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105827 stars · updated Tue, 07 Jul 2026 20:38:23 UTC",
+          "meta": "105833 stars · updated Wed, 08 Jul 2026 01:24:10 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -208,7 +208,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 663554,
+          "score": 663590,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -216,7 +216,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8681 stars · updated Tue, 07 Jul 2026 21:10:16 UTC",
+          "meta": "8682 stars · updated Wed, 08 Jul 2026 00:26:31 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -224,7 +224,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 53732,
+          "score": 53738,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -239,7 +239,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 33816,
+          "score": 33818,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -247,14 +247,14 @@
           "title": "elder-plinius/T3MP3ST",
           "source": "GitHub",
           "url": "https://github.com/elder-plinius/T3MP3ST",
-          "meta": "3225 stars · updated Tue, 07 Jul 2026 16:59:37 UTC",
+          "meta": "3351 stars · updated Tue, 07 Jul 2026 16:59:37 UTC",
           "topics": [
             "Multi-agent workflows",
             "Major labs",
             "Coding agents"
           ],
           "publishedAt": "2026-07-07T16:59:37Z",
-          "score": 21010,
+          "score": 21810,
           "summary": "autonomous red teaming platform; multi-agent offensive-security meta-harness",
           "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
         }
@@ -264,7 +264,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 26,
+      "signalCount": 28,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Launch HN: Parsewise (YC P25) – Reason Across Documents with an API",
@@ -274,7 +274,7 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 25,
+      "signalCount": 26,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: Australian Payments Plus moves faster with ChatGPT and Codex",
@@ -284,27 +284,17 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 17,
+      "signalCount": 18,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
-        "GitHub: HUANGCHIHHUNGLeo/claude-real-video",
         "GitHub: ammaarreshi/Generals-Mac-iOS-iPad",
+        "GitHub: kaka86mm/TitanVault",
         "GitHub: oxbshw/watch-skill"
       ]
     },
     {
-      "topic": "Interfaces",
-      "signalCount": 14,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
-      "signals": [
-        "GitHub: simonlin1212/Vibe-Research",
-        "GitHub: agentrhq/webcmd",
-        "GitHub: michaelshimeles/boring-computers"
-      ]
-    },
-    {
       "topic": "Major labs",
-      "signalCount": 13,
+      "signalCount": 15,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "OpenAI: Australian Payments Plus moves faster with ChatGPT and Codex",
@@ -313,8 +303,18 @@
       ]
     },
     {
+      "topic": "Interfaces",
+      "signalCount": 15,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signals": [
+        "GitHub: simonlin1212/Vibe-Research",
+        "GitHub: agentrhq/webcmd",
+        "GitHub: shlokkhemani/rabbithole"
+      ]
+    },
+    {
       "topic": "Multi-agent workflows",
-      "signalCount": 11,
+      "signalCount": 12,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Launch HN: Parsewise (YC P25) – Reason Across Documents with an API",
