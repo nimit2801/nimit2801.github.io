@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-12T17:03:58Z",
+  "generatedAt": "2026-07-12T20:55:54Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups, event-driven and browser/MCP plumbing is becoming part of the agent conversation. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 53,
+    "items": 54,
     "sources": {
       "GitHub": 48,
       "Google AI": 1,
-      "Hacker News": 2,
+      "Hacker News": 3,
       "Hugging Face": 1,
       "OpenAI": 1
     }
@@ -60,33 +60,28 @@
       "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
     },
     {
-      "title": "Show HN: Requirements Engineering with Formal Verification",
+      "title": "Agent Harness Engineering",
       "source": "Hacker News",
-      "url": "https://fizzbee.ai/",
-      "meta": "27 pts · 4 comments",
-      "topics": [
-        "Open weights",
-        "Coding agents",
-        "Interfaces",
-        "Infra and retrieval"
-      ],
-      "publishedAt": "2026-07-08T17:52:57Z",
-      "score": 141,
-      "summary": "I&#x27;ve been building an open source formal methods system (fizzbee.io) for the past few years. Today I&#x27;m launching a new app built on the same technology. It performs requirements engineering using formal verification to uncover gaps and produce precise instructions for your coding agents to follow. When given a prompt, it - asks high signal follow-up questions - converts to formal spec and identifies complex requirements gaps - generates validation scenario At the end, it produces a specification document that can be shared with coding agents. In my trials on various projects, it produces working code in fewer iterations. Please give it a try and share your feedback. https:&#x2F;&#x2F;fizzbee.ai&#x2F; You can also look at a sample project. https:&#x2F;&#x2F;fizzbee.ai&#x2F;projects&#x2F;94bf2869-97a1-445c-8f5d-4445848b...",
-      "why": "Applying formal verification to AI coding loops signals a maturing view of agent reliability — moving beyond empirical testing toward provable correctness guarantees."
+      "url": "https://addyosmani.com/blog/agent-harness-engineering/",
+      "meta": "18 pts · 1 comments",
+      "topics": [],
+      "publishedAt": "2026-07-12T14:16:31Z",
+      "score": 94,
+      "summary": "",
+      "why": "Deep engineering posts about how agent loops actually work internally — tool sequencing, context windows, error recovery — are more valuable than most product announcements."
     },
     {
       "title": "bottlecapai/ThinkingCap-Qwen3.6-27B",
       "source": "Hugging Face",
       "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B",
-      "meta": "253 likes · 4,463 downloads",
+      "meta": "259 likes · 4,463 downloads",
       "topics": [
         "Evaluation",
         "Open weights",
         "Major labs"
       ],
       "publishedAt": "2026-07-06T13:16:04.000Z",
-      "score": 1016.463,
+      "score": 1040.463,
       "summary": "transformers safetensors qwen3_5 image-text-to-text qwen3_6 token-efficient efficient-thinking conversational base_model:Qwen/Qwen3.6-27B base_model:finetune:Qwen/Qwen3.6-27B license:apache-2.0 eval-results endpoints_compatible region:us",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -102,7 +97,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 664244,
+      "score": 664250,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -110,7 +105,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8702 stars · updated Sun, 12 Jul 2026 08:56:08 UTC",
+      "meta": "8705 stars · updated Sun, 12 Jul 2026 19:06:43 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -118,7 +113,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 53852,
+      "score": 53870,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -195,6 +190,17 @@
           "score": 141,
           "summary": "I&#x27;ve been building an open source formal methods system (fizzbee.io) for the past few years. Today I&#x27;m launching a new app built on the same technology. It performs requirements engineering using formal verification to uncover gaps and produce precise instructions for your coding agents to follow. When given a prompt, it - asks high signal follow-up questions - converts to formal spec and identifies complex requirements gaps - generates validation scenario At the end, it produces a specification document that can be shared with coding agents. In my trials on various projects, it produces working code in fewer iterations. Please give it a try and share your feedback. https:&#x2F;&#x2F;fizzbee.ai&#x2F; You can also look at a sample project. https:&#x2F;&#x2F;fizzbee.ai&#x2F;projects&#x2F;94bf2869-97a1-445c-8f5d-4445848b...",
           "why": "Applying formal verification to AI coding loops signals a maturing view of agent reliability — moving beyond empirical testing toward provable correctness guarantees."
+        },
+        {
+          "title": "Agent Harness Engineering",
+          "source": "Hacker News",
+          "url": "https://addyosmani.com/blog/agent-harness-engineering/",
+          "meta": "18 pts · 1 comments",
+          "topics": [],
+          "publishedAt": "2026-07-12T14:16:31Z",
+          "score": 94,
+          "summary": "",
+          "why": "Deep engineering posts about how agent loops actually work internally — tool sequencing, context windows, error recovery — are more valuable than most product announcements."
         }
       ]
     },
@@ -211,14 +217,14 @@
           "title": "bottlecapai/ThinkingCap-Qwen3.6-27B",
           "source": "Hugging Face",
           "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B",
-          "meta": "253 likes · 4,463 downloads",
+          "meta": "259 likes · 4,463 downloads",
           "topics": [
             "Evaluation",
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-07-06T13:16:04.000Z",
-          "score": 1016.463,
+          "score": 1040.463,
           "summary": "transformers safetensors qwen3_5 image-text-to-text qwen3_6 token-efficient efficient-thinking conversational base_model:Qwen/Qwen3.6-27B base_model:finetune:Qwen/Qwen3.6-27B license:apache-2.0 eval-results endpoints_compatible region:us",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -240,7 +246,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 664244,
+          "score": 664250,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -248,7 +254,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8702 stars · updated Sun, 12 Jul 2026 08:56:08 UTC",
+          "meta": "8705 stars · updated Sun, 12 Jul 2026 19:06:43 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -256,7 +262,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 53852,
+          "score": 53870,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -325,7 +331,7 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 20,
+      "signalCount": 19,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Show HN: Requirements Engineering with Formal Verification",
