@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-13T03:28:31Z",
+  "generatedAt": "2026-07-13T07:25:48Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups, event-driven and browser/MCP plumbing is becoming part of the agent conversation. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 54,
+    "items": 53,
     "sources": {
-      "GitHub": 48,
+      "GitHub": 47,
       "Google AI": 1,
       "Hacker News": 3,
       "Hugging Face": 1,
@@ -47,7 +47,7 @@
       "title": "Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop",
       "source": "Hacker News",
       "url": "https://github.com/rowboatlabs/rowboat",
-      "meta": "217 pts · 94 comments",
+      "meta": "218 pts · 94 comments",
       "topics": [
         "Tool use",
         "Multi-agent workflows",
@@ -55,7 +55,7 @@
         "Voice and multimodal"
       ],
       "publishedAt": "2026-07-07T16:10:44Z",
-      "score": 806,
+      "score": 808,
       "summary": "Claude’s desktop app is brilliant, but for our own daily work we kept wanting it to be less like a chat app and more like a full-fledged work app. Rowboat is our attempt at that, including the ability to build your own work surfaces inside Rowboat (more below). Our repo is https:&#x2F;&#x2F;github.com&#x2F;rowboatlabs&#x2F;rowboat , and there’s a demo video here: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=et5yQABJ3xI In a previous startup, we built a deep-learning product for enterprise support reps, including teams supporting P&G brands. Models took live notes, suggested replies, and recommended actions while support reps were on calls or handling emails. One lesson stuck with us: it&#x27;s not enough for the AI to be right, the help has to show up where the work is happening. So we added what we came to call “work surfaces”: dedicated areas for email, meetings, notes, browser, and parallel coding, where the assistant can help inside the workflow itself rather than only through chat: - Email client: Rowboat has a simple email client that sorts incoming emails into important vs. everything else, and pre-creates drafts for important emails. As you edit and send emails, it takes notes on your style, so future drafts get closer to your voice. - Meeting notes: We built a Granola-style local meeting notetaker. Notes are stored as plain Markdown files on your machine. After a meeting, Rowboat feeds the notes back into the knowledge graph and updates the relevant people, project, and topic notes. - Browser: We added a built-in browser, isolated from your main one, where you can log in only to the accounts you want the assistant to help with. The assistant uses browser-use skills to navigate websites. - Parallel coding: The code-mode inside Rowboat lets you spin multiple instances of Claude Code or Codex and either work with them directly or let Rowboat use your work context to orchestrate them. We built an ACP (Agent Client Protocol) client in Rowboat for this. - Notes: Rowboat has an Obsidian-style local note-taking system. It comes with graph view, bases view, and voice notes. You can also sync Google Docs files and edit them inside Rowboat. You can also build your own work surfaces inside Rowboat (web apps). Each app gets its own UI and a background agent, and can use all of Rowboat&#x27;s tools, product integrations, and your work memory. For instance: an app to manage GitHub activity, project tracking, or ads campaign management. There are a few community apps at launch you can search and install, and you can publish your own by creating a GitHub repo for it and registering it. Rowboat also indexes your work into a knowledge graph that all of the above surfaces use to have better context. We did a Show HN a few months back on this: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46962641 . As an example that ties some of these together: you can create an app inside Rowboat that collects feature requests from your email, meetings, and Slack and ranks them, then uses Claude Code to draft a first version of the top-ranked feature, pulling prior context about it from your knowledge graph. Rowboat is local-first: data is stored as plain Markdown files you can read, edit, or delete anytime. It is Apache-2.0 and works with any LLM, including local models through Ollama or LM Studio. We’d love to hear your thoughts, and contributions are welcome!",
       "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
     },
@@ -74,14 +74,14 @@
       "title": "bottlecapai/ThinkingCap-Qwen3.6-27B",
       "source": "Hugging Face",
       "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B",
-      "meta": "268 likes · 4,463 downloads",
+      "meta": "272 likes · 4,463 downloads",
       "topics": [
         "Evaluation",
         "Open weights",
         "Major labs"
       ],
       "publishedAt": "2026-07-06T13:16:04.000Z",
-      "score": 1076.463,
+      "score": 1092.463,
       "summary": "transformers safetensors qwen3_5 image-text-to-text qwen3_6 token-efficient efficient-thinking conversational base_model:Qwen/Qwen3.6-27B base_model:finetune:Qwen/Qwen3.6-27B license:apache-2.0 eval-results endpoints_compatible region:us",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -89,7 +89,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105940 stars · updated Mon, 13 Jul 2026 01:32:43 UTC",
+      "meta": "105944 stars · updated Mon, 13 Jul 2026 01:32:43 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -97,7 +97,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 664290,
+      "score": 664302,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -105,7 +105,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8705 stars · updated Sun, 12 Jul 2026 23:38:14 UTC",
+      "meta": "8706 stars · updated Mon, 13 Jul 2026 04:13:20 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -113,7 +113,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 53870,
+      "score": 53878,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -163,7 +163,7 @@
           "title": "Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop",
           "source": "Hacker News",
           "url": "https://github.com/rowboatlabs/rowboat",
-          "meta": "217 pts · 94 comments",
+          "meta": "218 pts · 94 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -171,7 +171,7 @@
             "Voice and multimodal"
           ],
           "publishedAt": "2026-07-07T16:10:44Z",
-          "score": 806,
+          "score": 808,
           "summary": "Claude’s desktop app is brilliant, but for our own daily work we kept wanting it to be less like a chat app and more like a full-fledged work app. Rowboat is our attempt at that, including the ability to build your own work surfaces inside Rowboat (more below). Our repo is https:&#x2F;&#x2F;github.com&#x2F;rowboatlabs&#x2F;rowboat , and there’s a demo video here: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=et5yQABJ3xI In a previous startup, we built a deep-learning product for enterprise support reps, including teams supporting P&G brands. Models took live notes, suggested replies, and recommended actions while support reps were on calls or handling emails. One lesson stuck with us: it&#x27;s not enough for the AI to be right, the help has to show up where the work is happening. So we added what we came to call “work surfaces”: dedicated areas for email, meetings, notes, browser, and parallel coding, where the assistant can help inside the workflow itself rather than only through chat: - Email client: Rowboat has a simple email client that sorts incoming emails into important vs. everything else, and pre-creates drafts for important emails. As you edit and send emails, it takes notes on your style, so future drafts get closer to your voice. - Meeting notes: We built a Granola-style local meeting notetaker. Notes are stored as plain Markdown files on your machine. After a meeting, Rowboat feeds the notes back into the knowledge graph and updates the relevant people, project, and topic notes. - Browser: We added a built-in browser, isolated from your main one, where you can log in only to the accounts you want the assistant to help with. The assistant uses browser-use skills to navigate websites. - Parallel coding: The code-mode inside Rowboat lets you spin multiple instances of Claude Code or Codex and either work with them directly or let Rowboat use your work context to orchestrate them. We built an ACP (Agent Client Protocol) client in Rowboat for this. - Notes: Rowboat has an Obsidian-style local note-taking system. It comes with graph view, bases view, and voice notes. You can also sync Google Docs files and edit them inside Rowboat. You can also build your own work surfaces inside Rowboat (web apps). Each app gets its own UI and a background agent, and can use all of Rowboat&#x27;s tools, product integrations, and your work memory. For instance: an app to manage GitHub activity, project tracking, or ads campaign management. There are a few community apps at launch you can search and install, and you can publish your own by creating a GitHub repo for it and registering it. Rowboat also indexes your work into a knowledge graph that all of the above surfaces use to have better context. We did a Show HN a few months back on this: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46962641 . As an example that ties some of these together: you can create an app inside Rowboat that collects feature requests from your email, meetings, and Slack and ranks them, then uses Claude Code to draft a first version of the top-ranked feature, pulling prior context about it from your knowledge graph. Rowboat is local-first: data is stored as plain Markdown files you can read, edit, or delete anytime. It is Apache-2.0 and works with any LLM, including local models through Ollama or LM Studio. We’d love to hear your thoughts, and contributions are welcome!",
           "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
         },
@@ -217,14 +217,14 @@
           "title": "bottlecapai/ThinkingCap-Qwen3.6-27B",
           "source": "Hugging Face",
           "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B",
-          "meta": "268 likes · 4,463 downloads",
+          "meta": "272 likes · 4,463 downloads",
           "topics": [
             "Evaluation",
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-07-06T13:16:04.000Z",
-          "score": 1076.463,
+          "score": 1092.463,
           "summary": "transformers safetensors qwen3_5 image-text-to-text qwen3_6 token-efficient efficient-thinking conversational base_model:Qwen/Qwen3.6-27B base_model:finetune:Qwen/Qwen3.6-27B license:apache-2.0 eval-results endpoints_compatible region:us",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -238,7 +238,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105940 stars · updated Mon, 13 Jul 2026 01:32:43 UTC",
+          "meta": "105944 stars · updated Mon, 13 Jul 2026 01:32:43 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -246,7 +246,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 664290,
+          "score": 664302,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -254,7 +254,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8705 stars · updated Sun, 12 Jul 2026 23:38:14 UTC",
+          "meta": "8706 stars · updated Mon, 13 Jul 2026 04:13:20 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -262,7 +262,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 53870,
+          "score": 53878,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -270,14 +270,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5592 stars · updated Wed, 08 Jul 2026 08:59:00 UTC",
+          "meta": "5596 stars · updated Wed, 08 Jul 2026 08:59:00 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 34144,
+          "score": 34168,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -301,7 +301,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 31,
+      "signalCount": 30,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop",
@@ -331,7 +331,7 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 20,
+      "signalCount": 19,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Show HN: Requirements Engineering with Formal Verification",
@@ -351,7 +351,7 @@
     },
     {
       "topic": "Major labs",
-      "signalCount": 14,
+      "signalCount": 13,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Hugging Face: bottlecapai/ThinkingCap-Qwen3.6-27B",
