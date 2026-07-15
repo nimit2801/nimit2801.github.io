@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-15T06:19:20Z",
+  "generatedAt": "2026-07-15T10:07:15Z",
   "windowDays": 7,
   "summary": "The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.",
   "sourceStats": {
-    "items": 50,
+    "items": 52,
     "sources": {
-      "GitHub": 47,
-      "Hacker News": 2,
+      "GitHub": 48,
+      "Hacker News": 3,
       "OpenAI": 1
     }
   },
@@ -28,7 +28,7 @@
       "title": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
       "source": "Hacker News",
       "url": "https://agnost.ai",
-      "meta": "47 pts · 37 comments",
+      "meta": "77 pts · 40 comments",
       "topics": [
         "Tool use",
         "Memory and state",
@@ -36,7 +36,7 @@
         "Voice and multimodal"
       ],
       "publishedAt": "2026-07-14T16:06:18Z",
-      "score": 300,
+      "score": 369,
       "summary": "Hey HN, we’re Shubham & Parth, childhood friends building Agnost AI ( https:&#x2F;&#x2F;agnost.ai ), product analytics for teams building chat and voice agents. We read production conversations and find behavioral failures like users rageprompting (cursing at the agent), repeatedly rephrasing the same request, correcting the agent, asking for missing features, or leaving after an answer that was technically successful. We have an interactive demo with no signup here: https:&#x2F;&#x2F;app.agnost.ai?demo=true Here&#x27;s a demo video: https:&#x2F;&#x2F;www.tella.tv&#x2F;video&#x2F;agnost-ai-launch-hn-demo-9haa The core problem is that chat and voice products do not have the same metrics as web apps. When the product interface is language, clicks and funnels become much less useful. Users also rarely give explicit feedback, and when they do it&#x27;s usually sugarcoated. I barely type &#x2F;feedback in Claude or Codex myself. Most users just curse, ask again, correct the agent, or leave. So product engineers get technical visibility from latency, errors, and traces, but still have to guess whether users got what they wanted. We got here after building around agents for the last year and got a couple of founders asking for something like a PostHog for conversations for the AI assistants they were building. We are not trying to be in the observability or evals space. Observability tells you what happened technically. Evals validate cases you already know. We&#x27;re more on the discovery side like what users wanted, where they got frustrated, what they asked for repeatedly, and what new evals should exist. Teams send us agent conversation messages through SDKs or OTel, optionally with metadata like account, plan, source, organization, etc. We cluster conversations into product-specific intents. Feature requests and bugs are default categories; most other clusters are created dynamically from the customer’s data and evolve over time. You can create your own cluster in plain English. If a cluster gets too broad, we split it. If a new pattern appears, we suggest it. One AI video editor company used Agnost AI to find feature requests hidden inside chat. The biggest one was that around 70 users wanted auto-subtitles, but users said it as “add this text in this frame” 12x in a single session, “can you caption it”, “give me transcript of audio” and variations across languages. The team later built the feature. Doing this over millions of messages without sending everything to an LLM was the hard part initially. In ClickHouse, “fetch the last 50 events by time across conversations” and “fetch all events in this conversation” want different sort orders, so we had to iterate a lot on sorting keys, partitions, materialized views, and projections. For finding new clusters, sending everything through an LLM was too slow and expensive. HDBSCAN-style embedding clustering also gets painful at scale because of pairwise comparisons. We first split conversations into segments based on cosine drift, run BIRCH to compress the candidate space, and then use HDBSCAN-like clustering on the smaller set. For matching existing clusters, we use embeddings, smaller classifiers&#x2F;BERT-style models, and LLMs only as fallback for ambiguous cases. We’re live with multiple companies and ingesting ~1M chat and voice messages per day. Pricing is public: Starter is free, Pro is $499&#x2F;month, and Enterprise is for higher volume, security, retention needs. We use each customer’s data only for that customer. We are SOC 2 Type 1 compliant, Type 2 is in progress, and our SDKs are on PyPI and npm. We’d love feedback from the HN community and people building chat or voice agents: how do you detect these signals today, what feedback methods have worked, and what would block you from trying this? Happy to answer questions and take criticism.",
       "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
     },
@@ -55,7 +55,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "105991 stars · updated Wed, 15 Jul 2026 01:28:44 UTC",
+      "meta": "105996 stars · updated Wed, 15 Jul 2026 06:55:37 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -63,7 +63,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 664610,
+      "score": 664642,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -71,7 +71,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8718 stars · updated Wed, 15 Jul 2026 01:13:08 UTC",
+      "meta": "8719 stars · updated Wed, 15 Jul 2026 08:47:39 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -79,7 +79,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 53952,
+      "score": 53958,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -112,7 +112,7 @@
           "title": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
           "source": "Hacker News",
           "url": "https://agnost.ai",
-          "meta": "47 pts · 37 comments",
+          "meta": "77 pts · 40 comments",
           "topics": [
             "Tool use",
             "Memory and state",
@@ -120,9 +120,25 @@
             "Voice and multimodal"
           ],
           "publishedAt": "2026-07-14T16:06:18Z",
-          "score": 300,
+          "score": 369,
           "summary": "Hey HN, we’re Shubham & Parth, childhood friends building Agnost AI ( https:&#x2F;&#x2F;agnost.ai ), product analytics for teams building chat and voice agents. We read production conversations and find behavioral failures like users rageprompting (cursing at the agent), repeatedly rephrasing the same request, correcting the agent, asking for missing features, or leaving after an answer that was technically successful. We have an interactive demo with no signup here: https:&#x2F;&#x2F;app.agnost.ai?demo=true Here&#x27;s a demo video: https:&#x2F;&#x2F;www.tella.tv&#x2F;video&#x2F;agnost-ai-launch-hn-demo-9haa The core problem is that chat and voice products do not have the same metrics as web apps. When the product interface is language, clicks and funnels become much less useful. Users also rarely give explicit feedback, and when they do it&#x27;s usually sugarcoated. I barely type &#x2F;feedback in Claude or Codex myself. Most users just curse, ask again, correct the agent, or leave. So product engineers get technical visibility from latency, errors, and traces, but still have to guess whether users got what they wanted. We got here after building around agents for the last year and got a couple of founders asking for something like a PostHog for conversations for the AI assistants they were building. We are not trying to be in the observability or evals space. Observability tells you what happened technically. Evals validate cases you already know. We&#x27;re more on the discovery side like what users wanted, where they got frustrated, what they asked for repeatedly, and what new evals should exist. Teams send us agent conversation messages through SDKs or OTel, optionally with metadata like account, plan, source, organization, etc. We cluster conversations into product-specific intents. Feature requests and bugs are default categories; most other clusters are created dynamically from the customer’s data and evolve over time. You can create your own cluster in plain English. If a cluster gets too broad, we split it. If a new pattern appears, we suggest it. One AI video editor company used Agnost AI to find feature requests hidden inside chat. The biggest one was that around 70 users wanted auto-subtitles, but users said it as “add this text in this frame” 12x in a single session, “can you caption it”, “give me transcript of audio” and variations across languages. The team later built the feature. Doing this over millions of messages without sending everything to an LLM was the hard part initially. In ClickHouse, “fetch the last 50 events by time across conversations” and “fetch all events in this conversation” want different sort orders, so we had to iterate a lot on sorting keys, partitions, materialized views, and projections. For finding new clusters, sending everything through an LLM was too slow and expensive. HDBSCAN-style embedding clustering also gets painful at scale because of pairwise comparisons. We first split conversations into segments based on cosine drift, run BIRCH to compress the candidate space, and then use HDBSCAN-like clustering on the smaller set. For matching existing clusters, we use embeddings, smaller classifiers&#x2F;BERT-style models, and LLMs only as fallback for ambiguous cases. We’re live with multiple companies and ingesting ~1M chat and voice messages per day. Pricing is public: Starter is free, Pro is $499&#x2F;month, and Enterprise is for higher volume, security, retention needs. We use each customer’s data only for that customer. We are SOC 2 Type 1 compliant, Type 2 is in progress, and our SDKs are on PyPI and npm. We’d love feedback from the HN community and people building chat or voice agents: how do you detect these signals today, what feedback methods have worked, and what would block you from trying this? Happy to answer questions and take criticism.",
           "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
+        },
+        {
+          "title": "Show HN: Requirements Engineering with Formal Verification",
+          "source": "Hacker News",
+          "url": "https://fizzbee.ai/",
+          "meta": "27 pts · 4 comments",
+          "topics": [
+            "Open weights",
+            "Coding agents",
+            "Interfaces",
+            "Infra and retrieval"
+          ],
+          "publishedAt": "2026-07-08T17:52:57Z",
+          "score": 141,
+          "summary": "I&#x27;ve been building an open source formal methods system (fizzbee.io) for the past few years. Today I&#x27;m launching a new app built on the same technology. It performs requirements engineering using formal verification to uncover gaps and produce precise instructions for your coding agents to follow. When given a prompt, it - asks high signal follow-up questions - converts to formal spec and identifies complex requirements gaps - generates validation scenario At the end, it produces a specification document that can be shared with coding agents. In my trials on various projects, it produces working code in fewer iterations. Please give it a try and share your feedback. https:&#x2F;&#x2F;fizzbee.ai&#x2F; You can also look at a sample project. https:&#x2F;&#x2F;fizzbee.ai&#x2F;projects&#x2F;94bf2869-97a1-445c-8f5d-4445848b...",
+          "why": "Applying formal verification to AI coding loops signals a maturing view of agent reliability — moving beyond empirical testing toward provable correctness guarantees."
         },
         {
           "title": "Agent Harness Engineering",
@@ -155,7 +171,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "105991 stars · updated Wed, 15 Jul 2026 01:28:44 UTC",
+          "meta": "105996 stars · updated Wed, 15 Jul 2026 06:55:37 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -163,7 +179,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 664610,
+          "score": 664642,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -171,7 +187,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8718 stars · updated Wed, 15 Jul 2026 01:13:08 UTC",
+          "meta": "8719 stars · updated Wed, 15 Jul 2026 08:47:39 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -179,7 +195,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 53952,
+          "score": 53958,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -187,14 +203,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5616 stars · updated Mon, 13 Jul 2026 15:50:08 UTC",
+          "meta": "5615 stars · updated Mon, 13 Jul 2026 15:50:08 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 34288,
+          "score": 34282,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -218,7 +234,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 30,
+      "signalCount": 31,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
@@ -228,37 +244,37 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 26,
+      "signalCount": 28,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
+        "Hacker News: Show HN: Requirements Engineering with Formal Verification",
         "GitHub: modiqo/waggle",
-        "GitHub: cosmtrek/mindwalk",
-        "GitHub: Raymondhou0917/speak-human-tw"
+        "GitHub: cosmtrek/mindwalk"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 21,
+      "signalCount": 23,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
+        "Hacker News: Show HN: Requirements Engineering with Formal Verification",
         "GitHub: yetone/kill-ai-slop",
-        "GitHub: Cjbuilds/Codex-Orchestration",
-        "GitHub: mereyabdenbekuly-ctrl/clodex-ide"
+        "GitHub: Cjbuilds/Codex-Orchestration"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 16,
+      "signalCount": 17,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
+        "Hacker News: Show HN: Requirements Engineering with Formal Verification",
         "GitHub: Moore-developers/moore-wechat-article-downloader",
-        "GitHub: mereyabdenbekuly-ctrl/clodex-ide",
-        "GitHub: thecodacus/understory"
+        "GitHub: mereyabdenbekuly-ctrl/clodex-ide"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 14,
+      "signalCount": 15,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: Nanako0129/pilotfish",
