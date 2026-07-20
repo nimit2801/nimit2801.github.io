@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-19T20:56:00Z",
+  "generatedAt": "2026-07-20T03:35:43Z",
   "windowDays": 7,
-  "summary": "This cycle says the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 44,
+    "items": 39,
     "sources": {
       "Anthropic": 1,
-      "GitHub": 39,
+      "GitHub": 34,
       "Hacker News": 2,
       "OpenAI": 2
     }
@@ -56,7 +56,7 @@
       "title": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
       "source": "Hacker News",
       "url": "https://agnost.ai",
-      "meta": "85 pts · 50 comments",
+      "meta": "85 pts · 52 comments",
       "topics": [
         "Tool use",
         "Memory and state",
@@ -64,7 +64,7 @@
         "Voice and multimodal"
       ],
       "publishedAt": "2026-07-14T16:06:18Z",
-      "score": 415,
+      "score": 421,
       "summary": "Hey HN, we’re Shubham & Parth, childhood friends building Agnost AI ( https:&#x2F;&#x2F;agnost.ai ), product analytics for teams building chat and voice agents. We read production conversations and find behavioral failures like users rageprompting (cursing at the agent), repeatedly rephrasing the same request, correcting the agent, asking for missing features, or leaving after an answer that was technically successful. We have an interactive demo with no signup here: https:&#x2F;&#x2F;app.agnost.ai?demo=true Here&#x27;s a demo video: https:&#x2F;&#x2F;www.tella.tv&#x2F;video&#x2F;agnost-ai-launch-hn-demo-9haa The core problem is that chat and voice products do not have the same metrics as web apps. When the product interface is language, clicks and funnels become much less useful. Users also rarely give explicit feedback, and when they do it&#x27;s usually sugarcoated. I barely type &#x2F;feedback in Claude or Codex myself. Most users just curse, ask again, correct the agent, or leave. So product engineers get technical visibility from latency, errors, and traces, but still have to guess whether users got what they wanted. We got here after building around agents for the last year and got a couple of founders asking for something like a PostHog for conversations for the AI assistants they were building. We are not trying to be in the observability or evals space. Observability tells you what happened technically. Evals validate cases you already know. We&#x27;re more on the discovery side like what users wanted, where they got frustrated, what they asked for repeatedly, and what new evals should exist. Teams send us agent conversation messages through SDKs or OTel, optionally with metadata like account, plan, source, organization, etc. We cluster conversations into product-specific intents. Feature requests and bugs are default categories; most other clusters are created dynamically from the customer’s data and evolve over time. You can create your own cluster in plain English. If a cluster gets too broad, we split it. If a new pattern appears, we suggest it. One AI video editor company used Agnost AI to find feature requests hidden inside chat. The biggest one was that around 70 users wanted auto-subtitles, but users said it as “add this text in this frame” 12x in a single session, “can you caption it”, “give me transcript of audio” and variations across languages. The team later built the feature. Doing this over millions of messages without sending everything to an LLM was the hard part initially. In ClickHouse, “fetch the last 50 events by time across conversations” and “fetch all events in this conversation” want different sort orders, so we had to iterate a lot on sorting keys, partitions, materialized views, and projections. For finding new clusters, sending everything through an LLM was too slow and expensive. HDBSCAN-style embedding clustering also gets painful at scale because of pairwise comparisons. We first split conversations into segments based on cosine drift, run BIRCH to compress the candidate space, and then use HDBSCAN-like clustering on the smaller set. For matching existing clusters, we use embeddings, smaller classifiers&#x2F;BERT-style models, and LLMs only as fallback for ambiguous cases. We’re live with multiple companies and ingesting ~1M chat and voice messages per day. Pricing is public: Starter is free, Pro is $499&#x2F;month, and Enterprise is for higher volume, security, retention needs. We use each customer’s data only for that customer. We are SOC 2 Type 1 compliant, Type 2 is in progress, and our SDKs are on PyPI and npm. We’d love feedback from the HN community and people building chat or voice agents: how do you detect these signals today, what feedback methods have worked, and what would block you from trying this? Happy to answer questions and take criticism.",
       "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
     },
@@ -72,46 +72,44 @@
       "title": "Show HN: Qwen3.6-35B-A3B on a 16 GB M1 Pro with SSD-streamed MoE",
       "source": "Hacker News",
       "url": "https://github.com/andreaborio/ds4",
-      "meta": "20 pts · 2 comments",
+      "meta": "21 pts · 2 comments",
       "topics": [
         "Open weights",
         "Major labs"
       ],
       "publishedAt": "2026-07-17T23:20:14Z",
-      "score": 116,
+      "score": 118,
       "summary": "",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-    },
-    {
-      "title": "google-gemini/gemini-cli",
-      "source": "GitHub",
-      "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106073 stars · updated Sun, 19 Jul 2026 01:32:54 UTC",
-      "topics": [
-        "Tool use",
-        "Open weights",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 665146,
-      "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
     {
       "title": "xai-org/grok-build",
       "source": "GitHub",
       "url": "https://github.com/xai-org/grok-build",
-      "meta": "19945 stars · updated Sun, 19 Jul 2026 17:44:05 UTC",
+      "meta": "20230 stars · updated Sun, 19 Jul 2026 17:44:05 UTC",
       "topics": [
         "Tool use",
         "Coding agents",
         "Interfaces"
       ],
       "publishedAt": "2026-07-19T17:44:05Z",
-      "score": 127044,
+      "score": 128908,
       "summary": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
       "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+    },
+    {
+      "title": "Fei-Away/Codex-Dream-Skin",
+      "source": "GitHub",
+      "url": "https://github.com/Fei-Away/Codex-Dream-Skin",
+      "meta": "10502 stars · updated Sun, 19 Jul 2026 19:31:52 UTC",
+      "topics": [
+        "Tool use",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-07-19T19:31:52Z",
+      "score": 65366,
+      "summary": "Codex Dream Skin",
+      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     }
   ],
   "sourceSections": [
@@ -169,7 +167,7 @@
           "title": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
           "source": "Hacker News",
           "url": "https://agnost.ai",
-          "meta": "85 pts · 50 comments",
+          "meta": "85 pts · 52 comments",
           "topics": [
             "Tool use",
             "Memory and state",
@@ -177,7 +175,7 @@
             "Voice and multimodal"
           ],
           "publishedAt": "2026-07-14T16:06:18Z",
-          "score": 415,
+          "score": 421,
           "summary": "Hey HN, we’re Shubham & Parth, childhood friends building Agnost AI ( https:&#x2F;&#x2F;agnost.ai ), product analytics for teams building chat and voice agents. We read production conversations and find behavioral failures like users rageprompting (cursing at the agent), repeatedly rephrasing the same request, correcting the agent, asking for missing features, or leaving after an answer that was technically successful. We have an interactive demo with no signup here: https:&#x2F;&#x2F;app.agnost.ai?demo=true Here&#x27;s a demo video: https:&#x2F;&#x2F;www.tella.tv&#x2F;video&#x2F;agnost-ai-launch-hn-demo-9haa The core problem is that chat and voice products do not have the same metrics as web apps. When the product interface is language, clicks and funnels become much less useful. Users also rarely give explicit feedback, and when they do it&#x27;s usually sugarcoated. I barely type &#x2F;feedback in Claude or Codex myself. Most users just curse, ask again, correct the agent, or leave. So product engineers get technical visibility from latency, errors, and traces, but still have to guess whether users got what they wanted. We got here after building around agents for the last year and got a couple of founders asking for something like a PostHog for conversations for the AI assistants they were building. We are not trying to be in the observability or evals space. Observability tells you what happened technically. Evals validate cases you already know. We&#x27;re more on the discovery side like what users wanted, where they got frustrated, what they asked for repeatedly, and what new evals should exist. Teams send us agent conversation messages through SDKs or OTel, optionally with metadata like account, plan, source, organization, etc. We cluster conversations into product-specific intents. Feature requests and bugs are default categories; most other clusters are created dynamically from the customer’s data and evolve over time. You can create your own cluster in plain English. If a cluster gets too broad, we split it. If a new pattern appears, we suggest it. One AI video editor company used Agnost AI to find feature requests hidden inside chat. The biggest one was that around 70 users wanted auto-subtitles, but users said it as “add this text in this frame” 12x in a single session, “can you caption it”, “give me transcript of audio” and variations across languages. The team later built the feature. Doing this over millions of messages without sending everything to an LLM was the hard part initially. In ClickHouse, “fetch the last 50 events by time across conversations” and “fetch all events in this conversation” want different sort orders, so we had to iterate a lot on sorting keys, partitions, materialized views, and projections. For finding new clusters, sending everything through an LLM was too slow and expensive. HDBSCAN-style embedding clustering also gets painful at scale because of pairwise comparisons. We first split conversations into segments based on cosine drift, run BIRCH to compress the candidate space, and then use HDBSCAN-like clustering on the smaller set. For matching existing clusters, we use embeddings, smaller classifiers&#x2F;BERT-style models, and LLMs only as fallback for ambiguous cases. We’re live with multiple companies and ingesting ~1M chat and voice messages per day. Pricing is public: Starter is free, Pro is $499&#x2F;month, and Enterprise is for higher volume, security, retention needs. We use each customer’s data only for that customer. We are SOC 2 Type 1 compliant, Type 2 is in progress, and our SDKs are on PyPI and npm. We’d love feedback from the HN community and people building chat or voice agents: how do you detect these signals today, what feedback methods have worked, and what would block you from trying this? Happy to answer questions and take criticism.",
           "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
         },
@@ -185,13 +183,13 @@
           "title": "Show HN: Qwen3.6-35B-A3B on a 16 GB M1 Pro with SSD-streamed MoE",
           "source": "Hacker News",
           "url": "https://github.com/andreaborio/ds4",
-          "meta": "20 pts · 2 comments",
+          "meta": "21 pts · 2 comments",
           "topics": [
             "Open weights",
             "Major labs"
           ],
           "publishedAt": "2026-07-17T23:20:14Z",
-          "score": 116,
+          "score": 118,
           "summary": "",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -212,33 +210,17 @@
       "label": "GitHub",
       "items": [
         {
-          "title": "google-gemini/gemini-cli",
-          "source": "GitHub",
-          "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106073 stars · updated Sun, 19 Jul 2026 01:32:54 UTC",
-          "topics": [
-            "Tool use",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 665146,
-          "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
           "title": "xai-org/grok-build",
           "source": "GitHub",
           "url": "https://github.com/xai-org/grok-build",
-          "meta": "19945 stars · updated Sun, 19 Jul 2026 17:44:05 UTC",
+          "meta": "20230 stars · updated Sun, 19 Jul 2026 17:44:05 UTC",
           "topics": [
             "Tool use",
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-07-19T17:44:05Z",
-          "score": 127044,
+          "score": 128908,
           "summary": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         },
@@ -246,31 +228,43 @@
           "title": "Fei-Away/Codex-Dream-Skin",
           "source": "GitHub",
           "url": "https://github.com/Fei-Away/Codex-Dream-Skin",
-          "meta": "10266 stars · updated Sun, 19 Jul 2026 19:31:52 UTC",
+          "meta": "10502 stars · updated Sun, 19 Jul 2026 19:31:52 UTC",
           "topics": [
             "Tool use",
             "Coding agents"
           ],
           "publishedAt": "2026-07-19T19:31:52Z",
-          "score": 63918,
+          "score": 65366,
           "summary": "Codex Dream Skin",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
         {
-          "title": "LearningCircuit/local-deep-research",
+          "title": "antoinezambelli/forge",
           "source": "GitHub",
-          "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8741 stars · updated Sun, 19 Jul 2026 20:47:51 UTC",
+          "url": "https://github.com/antoinezambelli/forge",
+          "meta": "2180 stars · updated Sat, 18 Jul 2026 16:44:16 UTC",
           "topics": [
             "Tool use",
-            "Evaluation",
-            "Open weights",
-            "Major labs"
+            "Multi-agent workflows"
           ],
-          "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 54094,
-          "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+          "publishedAt": "2026-02-16T16:59:06Z",
+          "score": 13664,
+          "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "HermannBjorgvin/Clawdmeter",
+          "source": "GitHub",
+          "url": "https://github.com/HermannBjorgvin/Clawdmeter",
+          "meta": "1884 stars · updated Sat, 18 Jul 2026 18:22:37 UTC",
+          "topics": [
+            "Coding agents",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-11T03:07:49Z",
+          "score": 11998,
+          "summary": "ESP32 desk dashboard that shows Claude Code usage",
+          "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
         }
       ]
     }
@@ -278,17 +272,17 @@
   "tangentRadar": [
     {
       "topic": "Coding agents",
-      "signalCount": 25,
+      "signalCount": 22,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: Fei-Away/Codex-Dream-Skin",
         "GitHub: stackblitz/bolt-slides",
-        "GitHub: PromptPartner/agentsmith"
+        "GitHub: vshulcz/deja-vu"
       ]
     },
     {
       "topic": "Tool use",
-      "signalCount": 22,
+      "signalCount": 18,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
@@ -298,17 +292,17 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 17,
+      "signalCount": 18,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "GitHub: claudecodemythos/Claude-Mythos-AI-Free-desktop",
         "GitHub: xai-org/grok-build",
-        "GitHub: mereyabdenbekuly-ctrl/clodex-ide"
+        "GitHub: agutinbaigo28/financial-agent-api"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 16,
+      "signalCount": 11,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Anthropic: Claude for K-12 teachers: Get back to why you started teaching",
@@ -318,7 +312,7 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 16,
+      "signalCount": 10,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Show HN: Qwen3.6-35B-A3B on a 16 GB M1 Pro with SSD-streamed MoE",
@@ -328,7 +322,7 @@
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 10,
+      "signalCount": 9,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: zjp1997720/codex-model-routing-team",
@@ -339,9 +333,9 @@
   ],
   "experimentQueue": [
     {
-      "title": "Benchmark one local-first agent stack",
-      "why": "The local/open-weight ecosystem looks materially better this week, especially around Qwen and Forge guardrails.",
-      "prompt": "Pick one real workflow and compare a local Qwen+Forge stack against a frontier hosted model on tool accuracy, latency, and cost."
+      "title": "Audit one deployed enterprise agent workflow",
+      "why": "Codex-on-Dell and SAP-with-Claude are production-scale agent deployments — worth understanding the real friction points.",
+      "prompt": "Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
     },
     {
       "title": "Instrument one agent with better traces",
