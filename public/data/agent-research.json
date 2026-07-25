@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-07-25T09:53:25Z",
+  "generatedAt": "2026-07-25T13:44:48Z",
   "windowDays": 7,
-  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, MCP tunnels and self-hosted sandboxes unlock enterprise agent deployments. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 44,
+    "items": 45,
     "sources": {
       "GitHub": 42,
       "Google DeepMind": 1,
+      "Hacker News": 1,
       "OpenAI": 1
     }
   },
@@ -40,10 +41,21 @@
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
     {
+      "title": "Show HN: AgentNest, self-hosted sandboxes for AI agents",
+      "source": "Hacker News",
+      "url": "https://github.com/mihirahuja1/agentnestOSS",
+      "meta": "12 pts · 2 comments",
+      "topics": [],
+      "publishedAt": "2026-07-23T01:54:06Z",
+      "score": 125,
+      "summary": "",
+      "why": "Self-hosted sandboxes and MCP tunnels solve the enterprise 'my data in your sandbox' blocker that has been the single biggest friction point for production agent deployments."
+    },
+    {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106163 stars · updated Sat, 25 Jul 2026 01:24:18 UTC",
+      "meta": "106164 stars · updated Sat, 25 Jul 2026 01:24:18 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -51,7 +63,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 665742,
+      "score": 665750,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -59,7 +71,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8775 stars · updated Sat, 25 Jul 2026 09:51:26 UTC",
+      "meta": "8780 stars · updated Sat, 25 Jul 2026 13:26:33 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -67,7 +79,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 54300,
+      "score": 54332,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -110,7 +122,19 @@
     {
       "key": "hacker-news",
       "label": "Hacker News",
-      "items": []
+      "items": [
+        {
+          "title": "Show HN: AgentNest, self-hosted sandboxes for AI agents",
+          "source": "Hacker News",
+          "url": "https://github.com/mihirahuja1/agentnestOSS",
+          "meta": "12 pts · 2 comments",
+          "topics": [],
+          "publishedAt": "2026-07-23T01:54:06Z",
+          "score": 125,
+          "summary": "",
+          "why": "Self-hosted sandboxes and MCP tunnels solve the enterprise 'my data in your sandbox' blocker that has been the single biggest friction point for production agent deployments."
+        }
+      ]
     },
     {
       "key": "reddit",
@@ -130,7 +154,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106163 stars · updated Sat, 25 Jul 2026 01:24:18 UTC",
+          "meta": "106164 stars · updated Sat, 25 Jul 2026 01:24:18 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -138,7 +162,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 665742,
+          "score": 665750,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -146,7 +170,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8775 stars · updated Sat, 25 Jul 2026 09:51:26 UTC",
+          "meta": "8780 stars · updated Sat, 25 Jul 2026 13:26:33 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -154,7 +178,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 54300,
+          "score": 54332,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -162,14 +186,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5698 stars · updated Wed, 22 Jul 2026 10:19:18 UTC",
+          "meta": "5699 stars · updated Sat, 25 Jul 2026 12:28:01 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 34784,
+          "score": 34790,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
