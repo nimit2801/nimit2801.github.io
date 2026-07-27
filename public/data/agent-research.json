@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-26T21:02:33Z",
+  "generatedAt": "2026-07-27T03:35:49Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, MCP tunnels and self-hosted sandboxes unlock enterprise agent deployments. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 46,
+    "items": 47,
     "sources": {
-      "GitHub": 43,
+      "GitHub": 44,
       "Google DeepMind": 1,
       "Hacker News": 1,
       "OpenAI": 1
@@ -55,7 +55,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106199 stars · updated Sun, 26 Jul 2026 01:31:03 UTC",
+      "meta": "106204 stars · updated Mon, 27 Jul 2026 01:32:29 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -63,7 +63,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 665976,
+      "score": 666010,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -71,7 +71,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8784 stars · updated Sun, 26 Jul 2026 15:53:03 UTC",
+      "meta": "8784 stars · updated Mon, 27 Jul 2026 03:35:20 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -154,7 +154,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106199 stars · updated Sun, 26 Jul 2026 01:31:03 UTC",
+          "meta": "106204 stars · updated Mon, 27 Jul 2026 01:32:29 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -162,7 +162,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 665976,
+          "score": 666010,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -170,7 +170,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8784 stars · updated Sun, 26 Jul 2026 15:53:03 UTC",
+          "meta": "8784 stars · updated Mon, 27 Jul 2026 03:35:20 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -186,14 +186,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5709 stars · updated Sat, 25 Jul 2026 12:28:01 UTC",
+          "meta": "5713 stars · updated Sat, 25 Jul 2026 12:28:01 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 34850,
+          "score": 34874,
           "summary": "Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -217,32 +217,42 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 28,
+      "signalCount": 27,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "OpenAI: NTT DATA Group cuts incident analysis to 30 minutes with Codex",
-        "GitHub: Vincentwei1021/video-shotcraft",
-        "GitHub: pireel/pireel"
-      ]
-    },
-    {
-      "topic": "Coding agents",
-      "signalCount": 25,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
-      "signals": [
-        "OpenAI: NTT DATA Group cuts incident analysis to 30 minutes with Codex",
-        "GitHub: Vincentwei1021/video-shotcraft",
-        "GitHub: pireel/pireel"
+        "GitHub: pireel/pireel",
+        "GitHub: makecindy/cindy"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 20,
+      "signalCount": 26,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "GitHub: pireel/pireel",
         "GitHub: makecindy/cindy",
         "GitHub: mikehasa/agentacct"
+      ]
+    },
+    {
+      "topic": "Coding agents",
+      "signalCount": 24,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "signals": [
+        "OpenAI: NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+        "GitHub: pireel/pireel",
+        "GitHub: gnipbao/story-to-handdrawn-video"
+      ]
+    },
+    {
+      "topic": "Major labs",
+      "signalCount": 15,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "Google DeepMind: Gemini 3.5 Flash Cyber",
+        "OpenAI: NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+        "GitHub: mythosclaude5/Claude-Mythos-AI-Free-desktop"
       ]
     },
     {
@@ -252,27 +262,17 @@
       "signals": [
         "GitHub: mikehasa/agentacct",
         "GitHub: NVIDIA-NeMo/labs-OO-Agents",
-        "GitHub: duolahypercho/codex-router"
-      ]
-    },
-    {
-      "topic": "Major labs",
-      "signalCount": 12,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
-      "signals": [
-        "Google DeepMind: Gemini 3.5 Flash Cyber",
-        "OpenAI: NTT DATA Group cuts incident analysis to 30 minutes with Codex",
-        "GitHub: mythosclaude5/Claude-Mythos-AI-Free-desktop"
+        "GitHub: risa-labs-inc/BossConsole"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 10,
+      "signalCount": 11,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: Kritt-ai/open-kritt",
         "GitHub: deerwork-ai/deer-workflow",
-        "GitHub: mythosclaude5/Claude-Mythos-AI-Free-desktop"
+        "GitHub: YintongHuo/awesome-agent-trajectory"
       ]
     }
   ],
