@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-03T17:55:59Z",
+  "generatedAt": "2026-08-03T21:08:35Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 45,
+    "items": 48,
     "sources": {
-      "GitHub": 39,
+      "GitHub": 41,
       "Google AI": 2,
-      "Hacker News": 2,
+      "Hacker News": 3,
       "OpenAI": 2
     }
   },
@@ -84,7 +84,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106332 stars · updated Mon, 03 Aug 2026 01:34:43 UTC",
+      "meta": "106337 stars · updated Mon, 03 Aug 2026 19:46:17 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -92,7 +92,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 666880,
+      "score": 666912,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -188,6 +188,17 @@
           "score": 1888,
           "summary": "",
           "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
+        },
+        {
+          "title": "Stanford CS329A: Self-Improving AI Agents",
+          "source": "Hacker News",
+          "url": "https://www.youtube.com/playlist?list=PLangBM27OtEA",
+          "meta": "15 pts · 0 comments",
+          "topics": [],
+          "publishedAt": "2026-08-03T17:57:25Z",
+          "score": 150,
+          "summary": "",
+          "why": "Self-improving agents that learn from their own production outputs without human retraining are the next frontier beyond RAG and fine-tuning. This pattern generalizes to any structured, repetitive workflow domain."
         }
       ]
     },
@@ -209,7 +220,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106332 stars · updated Mon, 03 Aug 2026 01:34:43 UTC",
+          "meta": "106337 stars · updated Mon, 03 Aug 2026 19:46:17 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -217,7 +228,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 666880,
+          "score": 666912,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -225,12 +236,12 @@
           "title": "yc-software/qm",
           "source": "GitHub",
           "url": "https://github.com/yc-software/qm",
-          "meta": "9139 stars · updated Mon, 03 Aug 2026 17:43:26 UTC",
+          "meta": "9398 stars · updated Mon, 03 Aug 2026 21:02:20 UTC",
           "topics": [
             "Coding agents"
           ],
-          "publishedAt": "2026-08-03T17:43:26Z",
-          "score": 56928,
+          "publishedAt": "2026-08-03T21:02:20Z",
+          "score": 58538,
           "summary": "Multiplayer agent harness for work",
           "why": "This is a live signal for where agent building is getting more real, usable, or weirdly interesting."
         },
@@ -238,7 +249,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8839 stars · updated Mon, 03 Aug 2026 17:21:27 UTC",
+          "meta": "8838 stars · updated Mon, 03 Aug 2026 20:06:24 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -246,7 +257,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 54714,
+          "score": 54708,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -254,14 +265,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5810 stars · updated Mon, 03 Aug 2026 06:45:25 UTC",
+          "meta": "5811 stars · updated Mon, 03 Aug 2026 06:45:25 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 35468,
+          "score": 35474,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         }
@@ -271,22 +282,32 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 22,
+      "signalCount": 23,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Codex Security",
         "Google AI: Gemini API Managed Agents: 3.6 Flash, hooks, and more",
-        "GitHub: qa10devteam/behive"
+        "GitHub: 0rangec3t/Black-cat"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 20,
+      "signalCount": 21,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Codex Security",
         "Google AI: Gemini API Managed Agents: 3.6 Flash, hooks, and more",
         "GitHub: QwenAudio/qwen-audio-agent"
+      ]
+    },
+    {
+      "topic": "Interfaces",
+      "signalCount": 19,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signals": [
+        "OpenAI: How avatarin built a 24/7 retail agent with GPT-Realtime",
+        "GitHub: qa10devteam/behive",
+        "GitHub: HezaoHezao/poirot"
       ]
     },
     {
@@ -297,16 +318,6 @@
         "Google AI: Gemini Spark now integrates with Chrome",
         "Hacker News: Codex Security",
         "OpenAI: How avatarin built a 24/7 retail agent with GPT-Realtime"
-      ]
-    },
-    {
-      "topic": "Interfaces",
-      "signalCount": 18,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
-      "signals": [
-        "OpenAI: How avatarin built a 24/7 retail agent with GPT-Realtime",
-        "GitHub: qa10devteam/behive",
-        "GitHub: HezaoHezao/poirot"
       ]
     },
     {
