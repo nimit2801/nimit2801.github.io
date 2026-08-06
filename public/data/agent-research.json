@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-05T21:16:21Z",
+  "generatedAt": "2026-08-06T02:55:20Z",
   "windowDays": 7,
-  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says guardrails on local models close the reliability gap with frontier APIs (Forge: 53%→99%), major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 49,
+    "items": 42,
     "sources": {
-      "GitHub": 44,
+      "GitHub": 38,
       "Google AI": 1,
       "Hacker News": 2,
-      "OpenAI": 2
+      "OpenAI": 1
     }
   },
   "highlights": [
@@ -41,20 +41,6 @@
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
     {
-      "title": "How avatarin built a 24/7 retail agent with GPT-Realtime",
-      "url": "https://openai.com/index/avatarin",
-      "publishedAt": "Thu, 30 Jul 2026 00:00:00 GMT",
-      "source": "OpenAI",
-      "meta": "Thu, 30 Jul 2026 00:00:00 GMT",
-      "topics": [
-        "Major labs",
-        "Interfaces"
-      ],
-      "score": 180,
-      "summary": "How avatarin built a 24/7 retail agent with GPT-Realtime",
-      "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
-    },
-    {
       "title": "qm – Multiplayer agent harness for work",
       "source": "Hacker News",
       "url": "https://github.com/yc-software/qm",
@@ -69,7 +55,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106377 stars · updated Wed, 05 Aug 2026 19:07:44 UTC",
+      "meta": "106382 stars · updated Thu, 06 Aug 2026 02:06:27 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -77,9 +63,23 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 667178,
+      "score": 667208,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+    },
+    {
+      "title": "antoinezambelli/forge",
+      "source": "GitHub",
+      "url": "https://github.com/antoinezambelli/forge",
+      "meta": "2211 stars · updated Mon, 03 Aug 2026 23:33:56 UTC",
+      "topics": [
+        "Tool use",
+        "Multi-agent workflows"
+      ],
+      "publishedAt": "2026-02-16T16:59:06Z",
+      "score": 13858,
+      "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
+      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     }
   ],
   "sourceSections": [
@@ -101,20 +101,6 @@
           "score": 180,
           "summary": "New ways to learn and teach with ChatGPT Work and Codex",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
-        {
-          "title": "How avatarin built a 24/7 retail agent with GPT-Realtime",
-          "url": "https://openai.com/index/avatarin",
-          "publishedAt": "Thu, 30 Jul 2026 00:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Thu, 30 Jul 2026 00:00:00 GMT",
-          "topics": [
-            "Major labs",
-            "Interfaces"
-          ],
-          "score": 180,
-          "summary": "How avatarin built a 24/7 retail agent with GPT-Realtime",
-          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         },
         {
           "title": "Gemini Spark now integrates with Chrome",
@@ -177,7 +163,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106377 stars · updated Wed, 05 Aug 2026 19:07:44 UTC",
+          "meta": "106382 stars · updated Thu, 06 Aug 2026 02:06:27 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -185,53 +171,53 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 667178,
+          "score": 667208,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
         {
-          "title": "yc-software/qm",
+          "title": "antoinezambelli/forge",
           "source": "GitHub",
-          "url": "https://github.com/yc-software/qm",
-          "meta": "11648 stars · updated Tue, 04 Aug 2026 21:34:35 UTC",
-          "topics": [
-            "Coding agents"
-          ],
-          "publishedAt": "2026-08-04T21:34:35Z",
-          "score": 72602,
-          "summary": "Multiplayer agent harness for work",
-          "why": "This is a live signal for where agent building is getting more real, usable, or weirdly interesting."
-        },
-        {
-          "title": "LearningCircuit/local-deep-research",
-          "source": "GitHub",
-          "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8851 stars · updated Wed, 05 Aug 2026 21:15:35 UTC",
+          "url": "https://github.com/antoinezambelli/forge",
+          "meta": "2211 stars · updated Mon, 03 Aug 2026 23:33:56 UTC",
           "topics": [
             "Tool use",
-            "Evaluation",
-            "Open weights",
-            "Major labs"
+            "Multi-agent workflows"
           ],
-          "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 54786,
-          "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+          "publishedAt": "2026-02-16T16:59:06Z",
+          "score": 13858,
+          "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
         {
-          "title": "MinishLab/semble",
+          "title": "HermannBjorgvin/Clawdmeter",
           "source": "GitHub",
-          "url": "https://github.com/MinishLab/semble",
-          "meta": "5827 stars · updated Wed, 05 Aug 2026 09:09:20 UTC",
+          "url": "https://github.com/HermannBjorgvin/Clawdmeter",
+          "meta": "1973 stars · updated Tue, 04 Aug 2026 14:41:35 UTC",
+          "topics": [
+            "Coding agents",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-05-11T03:07:49Z",
+          "score": 12584,
+          "summary": "ESP32 desk dashboard that shows Claude Code usage",
+          "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
+        },
+        {
+          "title": "Accio-Lab/RealReplicaBench",
+          "source": "GitHub",
+          "url": "https://github.com/Accio-Lab/RealReplicaBench",
+          "meta": "1019 stars · updated Wed, 05 Aug 2026 09:12:57 UTC",
           "topics": [
             "Tool use",
+            "Memory and state",
             "Evaluation",
-            "Coding agents"
+            "Interfaces"
           ],
-          "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 35570,
-          "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
-          "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
+          "publishedAt": "2026-08-05T09:12:57Z",
+          "score": 6422,
+          "summary": "RealReplicaBench: Benchmarking Long-Horizon Agents in High-Fidelity, Stateful, and Reproducible Replicas of Real Online Services",
+          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
         }
       ]
     }
@@ -239,17 +225,17 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 27,
+      "signalCount": 23,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "OpenAI: New ways to learn and teach with ChatGPT Work and Codex",
         "GitHub: disler/super-simple-software-factory",
-        "GitHub: h4444433333/net-deep-research"
+        "GitHub: Anionex/agent-vision-toolkit"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 21,
+      "signalCount": 19,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: New ways to learn and teach with ChatGPT Work and Codex",
@@ -259,32 +245,12 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 18,
+      "signalCount": 16,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
-        "OpenAI: How avatarin built a 24/7 retail agent with GPT-Realtime",
         "GitHub: Binaryify/open-kimi-ppt-skill",
-        "GitHub: fableclaude5free/Claude-Fable-5-Free"
-      ]
-    },
-    {
-      "topic": "Major labs",
-      "signalCount": 15,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
-      "signals": [
-        "Google AI: Gemini Spark now integrates with Chrome",
-        "OpenAI: New ways to learn and teach with ChatGPT Work and Codex",
-        "OpenAI: How avatarin built a 24/7 retail agent with GPT-Realtime"
-      ]
-    },
-    {
-      "topic": "Open weights",
-      "signalCount": 14,
-      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
-      "signals": [
-        "GitHub: Binaryify/open-kimi-ppt-skill",
-        "GitHub: Tongyi-MAI/Qwen-UI-Agent",
-        "GitHub: QoderAI/qodercli-bench-qwen3.8"
+        "GitHub: fableclaude5free/Claude-Fable-5-Free",
+        "GitHub: limenagent/prodagent"
       ]
     },
     {
@@ -293,8 +259,28 @@
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: disler/super-simple-software-factory",
-        "GitHub: h4444433333/net-deep-research",
+        "GitHub: fableclaude5free/Claude-Fable-5-Free",
+        "GitHub: h4444433333/net-deep-research"
+      ]
+    },
+    {
+      "topic": "Major labs",
+      "signalCount": 9,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "Google AI: Gemini Spark now integrates with Chrome",
+        "OpenAI: New ways to learn and teach with ChatGPT Work and Codex",
         "GitHub: fableclaude5free/Claude-Fable-5-Free"
+      ]
+    },
+    {
+      "topic": "Open weights",
+      "signalCount": 9,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "signals": [
+        "GitHub: Binaryify/open-kimi-ppt-skill",
+        "GitHub: QoderAI/qodercli-bench-qwen3.8",
+        "GitHub: gquthier/autonomous-learning-os"
       ]
     }
   ],
