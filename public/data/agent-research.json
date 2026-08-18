@@ -1,15 +1,31 @@
 {
-  "generatedAt": "2026-08-18T12:53:56Z",
+  "generatedAt": "2026-08-18T16:36:16Z",
   "windowDays": 7,
-  "summary": "The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 36,
+    "items": 37,
     "sources": {
       "GitHub": 34,
-      "Hacker News": 2
+      "Hacker News": 2,
+      "OpenAI": 1
     }
   },
   "highlights": [
+    {
+      "title": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+      "url": "https://openai.com/index/asana",
+      "publishedAt": "Tue, 18 Aug 2026 07:00:00 GMT",
+      "source": "OpenAI",
+      "meta": "Tue, 18 Aug 2026 07:00:00 GMT",
+      "topics": [
+        "Tool use",
+        "Major labs",
+        "Coding agents"
+      ],
+      "score": 180,
+      "summary": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+    },
     {
       "title": "Show HN: Mole – Deep research agent for your terminal",
       "source": "Hacker News",
@@ -41,7 +57,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106548 stars · updated Tue, 18 Aug 2026 02:01:01 UTC",
+      "meta": "106554 stars · updated Tue, 18 Aug 2026 13:56:49 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -49,7 +65,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 668306,
+      "score": 668348,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -57,7 +73,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8938 stars · updated Mon, 17 Aug 2026 23:19:22 UTC",
+      "meta": "8940 stars · updated Mon, 17 Aug 2026 23:19:22 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -65,7 +81,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 55320,
+      "score": 55332,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -74,7 +90,23 @@
     {
       "key": "major-labs",
       "label": "Major labs",
-      "items": []
+      "items": [
+        {
+          "title": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+          "url": "https://openai.com/index/asana",
+          "publishedAt": "Tue, 18 Aug 2026 07:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Tue, 18 Aug 2026 07:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        }
+      ]
     },
     {
       "key": "hacker-news",
@@ -127,7 +159,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106548 stars · updated Tue, 18 Aug 2026 02:01:01 UTC",
+          "meta": "106554 stars · updated Tue, 18 Aug 2026 13:56:49 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -135,7 +167,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 668306,
+          "score": 668348,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -143,7 +175,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8938 stars · updated Mon, 17 Aug 2026 23:19:22 UTC",
+          "meta": "8940 stars · updated Mon, 17 Aug 2026 23:19:22 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -151,7 +183,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 55320,
+          "score": 55332,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -171,17 +203,18 @@
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
         {
-          "title": "antoinezambelli/forge",
+          "title": "yetone/cumora",
           "source": "GitHub",
-          "url": "https://github.com/antoinezambelli/forge",
-          "meta": "2219 stars · updated Tue, 18 Aug 2026 00:23:25 UTC",
+          "url": "https://github.com/yetone/cumora",
+          "meta": "2287 stars · updated Tue, 18 Aug 2026 14:23:32 UTC",
           "topics": [
             "Tool use",
-            "Multi-agent workflows"
+            "Multi-agent workflows",
+            "Coding agents"
           ],
-          "publishedAt": "2026-02-16T16:59:06Z",
-          "score": 13910,
-          "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
+          "publishedAt": "2026-08-18T14:23:32Z",
+          "score": 14400,
+          "summary": "Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-own (Claude Code / Codex) brains.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
       ]
@@ -190,22 +223,22 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 21,
+      "signalCount": 22,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Mole – Deep research agent for your terminal",
-        "GitHub: yetone/cumora",
-        "GitHub: Leutenegger/book-to-skill"
+        "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex",
+        "GitHub: yetone/cumora"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 20,
+      "signalCount": 21,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: Mole – Deep research agent for your terminal",
-        "GitHub: yetone/cumora",
-        "GitHub: ccch1mneyyy/dsh-TUI"
+        "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex",
+        "GitHub: yetone/cumora"
       ]
     },
     {
@@ -240,20 +273,20 @@
     },
     {
       "topic": "Major labs",
-      "signalCount": 7,
+      "signalCount": 8,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
+        "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex",
         "GitHub: Anionex/dsh-vision-toolkit",
-        "GitHub: SigmanticAI/Qwen7BInferenceChip",
-        "GitHub: sudoingX/qwen38-mtp"
+        "GitHub: SigmanticAI/Qwen7BInferenceChip"
       ]
     }
   ],
   "experimentQueue": [
     {
-      "title": "Benchmark one local-first agent stack",
-      "why": "The local/open-weight ecosystem looks materially better this week, especially around Qwen and Forge guardrails.",
-      "prompt": "Pick one real workflow and compare a local Qwen+Forge stack against a frontier hosted model on tool accuracy, latency, and cost."
+      "title": "Audit one deployed enterprise agent workflow",
+      "why": "Codex-on-Dell and SAP-with-Claude are production-scale agent deployments — worth understanding the real friction points.",
+      "prompt": "Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
     },
     {
       "title": "Instrument one agent with better traces",
