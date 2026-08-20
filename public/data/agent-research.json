@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-20T04:41:27Z",
+  "generatedAt": "2026-08-20T08:44:17Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 39,
+    "items": 41,
     "sources": {
-      "GitHub": 35,
+      "GitHub": 37,
       "Hacker News": 3,
       "OpenAI": 1
     }
@@ -30,7 +30,7 @@
       "title": "Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
       "source": "Hacker News",
       "url": "https://github.com/onecli/onecli",
-      "meta": "62 pts · 17 comments",
+      "meta": "75 pts · 22 comments",
       "topics": [
         "Tool use",
         "Multi-agent workflows",
@@ -38,7 +38,7 @@
         "Evaluation"
       ],
       "publishedAt": "2026-08-19T16:29:02Z",
-      "score": 230,
+      "score": 271,
       "summary": "Hi HN, Jonathan & Guy here from OneCLI, an agent harness built for teams, giving every employee a secured, sandboxed personal agent. Here’s what you can do with it: 1. get a sandboxed agent, with all the OneCLI capabilities in place like connect your GitHub account, Gmail, Notion, or Dropbox simply from the chat. 2. deterministic human in the loop approval in the chat itself for things that you need 100% control like sending an email or deleting the Linear ticket. 3. manage team policy in one place, enforced across every agent in the workspace 4. enjoy global connections at the team level, like shared LLM keys or service accounts Here’s a demo: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=dlW-44ntpbE We started working on this by accident, even though our careers were in the security space. We were working on a devtool called ChartDB, an open-source DB tool. When OpenClaw took off back in January, we started using it to orchestrate agents on top of ChartDB. We quickly understood there is a big issue around auth. Agents need credentials to do real work, but to give them those secrets would not be the best idea. They keep them in their memory and also write them down to local files and their sessions as plain text. And we knew that agents can easily be fooled into giving up those API keys&#x2F;secrets. So we needed some way to control the agent and stop prompt injections from tricking it into using its services for an attacker&#x27;s benefit. We created OneCLI that started as a vault for AI Agents built in Rust. We found out that most of our demand for OneCLI came from autonomous agents like Hermes, OpenClaw and NanoClaw for individuals and teams. Users looked for useful agents that do things for the person who runs them with two missing parts: 1) managing secrets and permissions. 2) and for teams - multiplayer management. We decided to pivot and provide the agent itself as a harness for teams, to give each employee an agent. We saw that teams had to deal with setting up their own harness again and again, and basically as we already had the vault as a gateway. We got the idea to provide the missing piece of the agent management out of the box and open source it (Apache-2.0, with a small enterprise exception). We&#x27;re open source first - the entire platform, not just a small portion of it like other agents, so companies can actually see the code, evaluate it, and trust it instead of taking our word for it. They run it isolated, in their own environment, fully under their control, at production quality, not a locked black box hosted somewhere else. That means the safety isn&#x27;t just a promise, it&#x27;s something they can verify themselves. Combined with real autonomy and least-privilege access, that&#x27;s what makes it something a company can fully own and trust, not just adopt. We also approach this from a company perspective rather than an individual one. Our solution manages agents on behalf of each employee, wrapped in deterministic guardrails that company admins configure through centralized policies. For the agent engine itself we’re using jcode which is the core of the agent-loop. We found out that it improves the experience and makes the agent smarter and faster. Here’s how it works: It runs on infra you control. Fully open-source, self-host or cloud in minutes. The agent never holds a real secret. It gets a placeholder. The real credential is injected at the gateway, per request, after the call is authorized. It never enters the agent&#x27;s context, memory, or logs. Enforcement outside the model. Prompts are suggestions. Policies defined by the org admin run at the network layer, outside the agent and the LLM. Block endpoints, rate limit per agent, require approval, scope per employee. The gateway decides. The agent can&#x27;t bypass it. Isolated VM per agent. Own memory, own keys, own permissions. Blast radius is one agent. Speed of the Harness: Rust engine under the agent loop. Full identity trail. Every agent is bound to an employee. Every call logged with who it acted for and which policy allowed it. Some things people are doing with the platform include: - Managing their company life cycle entirely from the sales calls, to the product side automatically open tickets to the engineering teams, that would kick the development agents to deliver and ship to production. - Operational side, like automatically hygiene the CRM after calls, sourcing leads, book meetings and manage follow ups emails. - Some of our customers also doing their entire grocery shopping using those agents and send them to take care of their chores like ordering things online. About the team: Both founders come from cybersecurity backgrounds. Jonathan spent years at Axis Security building zero trust network access. The core idea is that you never trust the client. You decide exactly what a person can reach, and you enforce it outside of them, at the network layer, so it doesn&#x27;t matter what the client tries to do. That&#x27;s how every serious company gives access to humans today. Guy was the 1st employee in Argon security doing AppSec. We would love to hear your thoughts on the move, happy to get issues open to improve and get your agent to be powerful and secure - designed for teams, not just individuals.",
       "why": "The Moltbook/OpenClaw incident — 1.5M agent tokens exposed, CVSS 8.8 RCE, credential harvesting — is the Meltdown/Spectre moment for agent security. Every production agent deployer needs to understand what happened and why."
     },
@@ -62,7 +62,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106585 stars · updated Thu, 20 Aug 2026 01:27:23 UTC",
+      "meta": "106588 stars · updated Thu, 20 Aug 2026 01:27:23 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -70,7 +70,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 668536,
+      "score": 668562,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -78,7 +78,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8949 stars · updated Thu, 20 Aug 2026 00:20:10 UTC",
+      "meta": "8950 stars · updated Thu, 20 Aug 2026 08:13:49 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -86,7 +86,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 55386,
+      "score": 55392,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -137,7 +137,7 @@
           "title": "Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
           "source": "Hacker News",
           "url": "https://github.com/onecli/onecli",
-          "meta": "62 pts · 17 comments",
+          "meta": "75 pts · 22 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -145,7 +145,7 @@
             "Evaluation"
           ],
           "publishedAt": "2026-08-19T16:29:02Z",
-          "score": 230,
+          "score": 271,
           "summary": "Hi HN, Jonathan & Guy here from OneCLI, an agent harness built for teams, giving every employee a secured, sandboxed personal agent. Here’s what you can do with it: 1. get a sandboxed agent, with all the OneCLI capabilities in place like connect your GitHub account, Gmail, Notion, or Dropbox simply from the chat. 2. deterministic human in the loop approval in the chat itself for things that you need 100% control like sending an email or deleting the Linear ticket. 3. manage team policy in one place, enforced across every agent in the workspace 4. enjoy global connections at the team level, like shared LLM keys or service accounts Here’s a demo: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=dlW-44ntpbE We started working on this by accident, even though our careers were in the security space. We were working on a devtool called ChartDB, an open-source DB tool. When OpenClaw took off back in January, we started using it to orchestrate agents on top of ChartDB. We quickly understood there is a big issue around auth. Agents need credentials to do real work, but to give them those secrets would not be the best idea. They keep them in their memory and also write them down to local files and their sessions as plain text. And we knew that agents can easily be fooled into giving up those API keys&#x2F;secrets. So we needed some way to control the agent and stop prompt injections from tricking it into using its services for an attacker&#x27;s benefit. We created OneCLI that started as a vault for AI Agents built in Rust. We found out that most of our demand for OneCLI came from autonomous agents like Hermes, OpenClaw and NanoClaw for individuals and teams. Users looked for useful agents that do things for the person who runs them with two missing parts: 1) managing secrets and permissions. 2) and for teams - multiplayer management. We decided to pivot and provide the agent itself as a harness for teams, to give each employee an agent. We saw that teams had to deal with setting up their own harness again and again, and basically as we already had the vault as a gateway. We got the idea to provide the missing piece of the agent management out of the box and open source it (Apache-2.0, with a small enterprise exception). We&#x27;re open source first - the entire platform, not just a small portion of it like other agents, so companies can actually see the code, evaluate it, and trust it instead of taking our word for it. They run it isolated, in their own environment, fully under their control, at production quality, not a locked black box hosted somewhere else. That means the safety isn&#x27;t just a promise, it&#x27;s something they can verify themselves. Combined with real autonomy and least-privilege access, that&#x27;s what makes it something a company can fully own and trust, not just adopt. We also approach this from a company perspective rather than an individual one. Our solution manages agents on behalf of each employee, wrapped in deterministic guardrails that company admins configure through centralized policies. For the agent engine itself we’re using jcode which is the core of the agent-loop. We found out that it improves the experience and makes the agent smarter and faster. Here’s how it works: It runs on infra you control. Fully open-source, self-host or cloud in minutes. The agent never holds a real secret. It gets a placeholder. The real credential is injected at the gateway, per request, after the call is authorized. It never enters the agent&#x27;s context, memory, or logs. Enforcement outside the model. Prompts are suggestions. Policies defined by the org admin run at the network layer, outside the agent and the LLM. Block endpoints, rate limit per agent, require approval, scope per employee. The gateway decides. The agent can&#x27;t bypass it. Isolated VM per agent. Own memory, own keys, own permissions. Blast radius is one agent. Speed of the Harness: Rust engine under the agent loop. Full identity trail. Every agent is bound to an employee. Every call logged with who it acted for and which policy allowed it. Some things people are doing with the platform include: - Managing their company life cycle entirely from the sales calls, to the product side automatically open tickets to the engineering teams, that would kick the development agents to deliver and ship to production. - Operational side, like automatically hygiene the CRM after calls, sourcing leads, book meetings and manage follow ups emails. - Some of our customers also doing their entire grocery shopping using those agents and send them to take care of their chores like ordering things online. About the team: Both founders come from cybersecurity backgrounds. Jonathan spent years at Axis Security building zero trust network access. The core idea is that you never trust the client. You decide exactly what a person can reach, and you enforce it outside of them, at the network layer, so it doesn&#x27;t matter what the client tries to do. That&#x27;s how every serious company gives access to humans today. Guy was the 1st employee in Argon security doing AppSec. We would love to hear your thoughts on the move, happy to get issues open to improve and get your agent to be powerful and secure - designed for teams, not just individuals.",
           "why": "The Moltbook/OpenClaw incident — 1.5M agent tokens exposed, CVSS 8.8 RCE, credential harvesting — is the Meltdown/Spectre moment for agent security. Every production agent deployer needs to understand what happened and why."
         },
@@ -180,7 +180,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106585 stars · updated Thu, 20 Aug 2026 01:27:23 UTC",
+          "meta": "106588 stars · updated Thu, 20 Aug 2026 01:27:23 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -188,7 +188,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 668536,
+          "score": 668562,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -196,7 +196,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8949 stars · updated Thu, 20 Aug 2026 00:20:10 UTC",
+          "meta": "8950 stars · updated Thu, 20 Aug 2026 08:13:49 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -204,7 +204,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 55386,
+          "score": 55392,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -212,14 +212,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5909 stars · updated Wed, 12 Aug 2026 05:30:37 UTC",
+          "meta": "5913 stars · updated Wed, 12 Aug 2026 05:30:37 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 36086,
+          "score": 36110,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -227,14 +227,14 @@
           "title": "yetone/cumora",
           "source": "GitHub",
           "url": "https://github.com/yetone/cumora",
-          "meta": "2717 stars · updated Thu, 20 Aug 2026 03:49:59 UTC",
+          "meta": "2742 stars · updated Thu, 20 Aug 2026 07:12:57 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
             "Coding agents"
           ],
-          "publishedAt": "2026-08-20T03:49:59Z",
-          "score": 17112,
+          "publishedAt": "2026-08-20T07:12:57Z",
+          "score": 17272,
           "summary": "Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-own (Claude Code / Codex) brains.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -244,7 +244,7 @@
   "tangentRadar": [
     {
       "topic": "Coding agents",
-      "signalCount": 23,
+      "signalCount": 24,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: Mole – Deep research agent for your terminal",
@@ -264,7 +264,7 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 17,
+      "signalCount": 18,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "GitHub: ccch1mneyyy/dsh-TUI",
@@ -283,6 +283,16 @@
       ]
     },
     {
+      "topic": "Multi-agent workflows",
+      "signalCount": 10,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "signals": [
+        "Hacker News: Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
+        "Hacker News: Show HN: Mole – Deep research agent for your terminal",
+        "GitHub: yetone/cumora"
+      ]
+    },
+    {
       "topic": "Major labs",
       "signalCount": 10,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
@@ -290,16 +300,6 @@
         "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex",
         "GitHub: Anionex/dsh-vision-toolkit",
         "GitHub: SigmanticAI/apex-inference-chip"
-      ]
-    },
-    {
-      "topic": "Multi-agent workflows",
-      "signalCount": 9,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
-      "signals": [
-        "Hacker News: Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
-        "Hacker News: Show HN: Mole – Deep research agent for your terminal",
-        "GitHub: yetone/cumora"
       ]
     }
   ],
