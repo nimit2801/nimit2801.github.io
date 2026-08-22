@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-21T20:30:13Z",
+  "generatedAt": "2026-08-22T01:26:35Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 42,
+    "items": 46,
     "sources": {
-      "GitHub": 39,
-      "Hacker News": 2,
+      "GitHub": 42,
+      "Hacker News": 3,
       "OpenAI": 1
     }
   },
@@ -30,7 +30,7 @@
       "title": "Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
       "source": "Hacker News",
       "url": "https://github.com/onecli/onecli",
-      "meta": "87 pts · 28 comments",
+      "meta": "87 pts · 29 comments",
       "topics": [
         "Tool use",
         "Multi-agent workflows",
@@ -38,26 +38,31 @@
         "Evaluation"
       ],
       "publishedAt": "2026-08-19T16:29:02Z",
-      "score": 313,
+      "score": 316,
       "summary": "Hi HN, Jonathan & Guy here from OneCLI, an agent harness built for teams, giving every employee a secured, sandboxed personal agent. Here’s what you can do with it: 1. get a sandboxed agent, with all the OneCLI capabilities in place like connect your GitHub account, Gmail, Notion, or Dropbox simply from the chat. 2. deterministic human in the loop approval in the chat itself for things that you need 100% control like sending an email or deleting the Linear ticket. 3. manage team policy in one place, enforced across every agent in the workspace 4. enjoy global connections at the team level, like shared LLM keys or service accounts Here’s a demo: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=dlW-44ntpbE We started working on this by accident, even though our careers were in the security space. We were working on a devtool called ChartDB, an open-source DB tool. When OpenClaw took off back in January, we started using it to orchestrate agents on top of ChartDB. We quickly understood there is a big issue around auth. Agents need credentials to do real work, but to give them those secrets would not be the best idea. They keep them in their memory and also write them down to local files and their sessions as plain text. And we knew that agents can easily be fooled into giving up those API keys&#x2F;secrets. So we needed some way to control the agent and stop prompt injections from tricking it into using its services for an attacker&#x27;s benefit. We created OneCLI that started as a vault for AI Agents built in Rust. We found out that most of our demand for OneCLI came from autonomous agents like Hermes, OpenClaw and NanoClaw for individuals and teams. Users looked for useful agents that do things for the person who runs them with two missing parts: 1) managing secrets and permissions. 2) and for teams - multiplayer management. We decided to pivot and provide the agent itself as a harness for teams, to give each employee an agent. We saw that teams had to deal with setting up their own harness again and again, and basically as we already had the vault as a gateway. We got the idea to provide the missing piece of the agent management out of the box and open source it (Apache-2.0, with a small enterprise exception). We&#x27;re open source first - the entire platform, not just a small portion of it like other agents, so companies can actually see the code, evaluate it, and trust it instead of taking our word for it. They run it isolated, in their own environment, fully under their control, at production quality, not a locked black box hosted somewhere else. That means the safety isn&#x27;t just a promise, it&#x27;s something they can verify themselves. Combined with real autonomy and least-privilege access, that&#x27;s what makes it something a company can fully own and trust, not just adopt. We also approach this from a company perspective rather than an individual one. Our solution manages agents on behalf of each employee, wrapped in deterministic guardrails that company admins configure through centralized policies. For the agent engine itself we’re using jcode which is the core of the agent-loop. We found out that it improves the experience and makes the agent smarter and faster. Here’s how it works: It runs on infra you control. Fully open-source, self-host or cloud in minutes. The agent never holds a real secret. It gets a placeholder. The real credential is injected at the gateway, per request, after the call is authorized. It never enters the agent&#x27;s context, memory, or logs. Enforcement outside the model. Prompts are suggestions. Policies defined by the org admin run at the network layer, outside the agent and the LLM. Block endpoints, rate limit per agent, require approval, scope per employee. The gateway decides. The agent can&#x27;t bypass it. Isolated VM per agent. Own memory, own keys, own permissions. Blast radius is one agent. Speed of the Harness: Rust engine under the agent loop. Full identity trail. Every agent is bound to an employee. Every call logged with who it acted for and which policy allowed it. Some things people are doing with the platform include: - Managing their company life cycle entirely from the sales calls, to the product side automatically open tickets to the engineering teams, that would kick the development agents to deliver and ship to production. - Operational side, like automatically hygiene the CRM after calls, sourcing leads, book meetings and manage follow ups emails. - Some of our customers also doing their entire grocery shopping using those agents and send them to take care of their chores like ordering things online. About the team: Both founders come from cybersecurity backgrounds. Jonathan spent years at Axis Security building zero trust network access. The core idea is that you never trust the client. You decide exactly what a person can reach, and you enforce it outside of them, at the network layer, so it doesn&#x27;t matter what the client tries to do. That&#x27;s how every serious company gives access to humans today. Guy was the 1st employee in Argon security doing AppSec. We would love to hear your thoughts on the move, happy to get issues open to improve and get your agent to be powerful and secure - designed for teams, not just individuals.",
       "why": "The Moltbook/OpenClaw incident — 1.5M agent tokens exposed, CVSS 8.8 RCE, credential harvesting — is the Meltdown/Spectre moment for agent security. Every production agent deployer needs to understand what happened and why."
     },
     {
-      "title": "Seed: Minimal, self-modifying agent harness",
+      "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
       "source": "Hacker News",
-      "url": "https://github.com/vivekhaldar/seed",
-      "meta": "52 pts · 19 comments",
-      "topics": [],
-      "publishedAt": "2026-08-21T05:20:50Z",
-      "score": 216,
-      "summary": "",
-      "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
+      "url": "https://ozbrain.com",
+      "meta": "31 pts · 10 comments",
+      "topics": [
+        "Tool use",
+        "Multi-agent workflows",
+        "Voice and multimodal",
+        "Open weights"
+      ],
+      "publishedAt": "2026-08-21T23:09:06Z",
+      "score": 192,
+      "summary": "I think agent-first chat interfaces will be a primary software modality and busy dashboard&#x2F;UI will go away. I’m not sure who exactly wins it, but I want my knowledge to grow&#x2F;go with me. A lot of the “knowledge” ie research, analysis, reasoning will be done by agents as the primary user. Our current notes tools & tasks management systems were built for humans… I don’t care what the 17th thing on my bug backlog is. I want to conduct agents that can execute for me and do great work. What I built OzBrain to do: + Create a central place for agent reasoned knowledge to live + Be agnostic about what apps&#x2F;agents connect to it + Capture everything and track it so I can audit it + Enable teams, collaborators or partners to share brains + Handle conflicts so many agents in the same article doesn’t blow up + Refactor knowledge into more token friendly chunks and map the index well + Close the knowledge loop so new thinking supersedes old thinking across the corpus. Don’t erase, depreciate and link + Keep user data safe and secure ++ Be easy enough to use that you don’t have to have any technical knowledge Some among us will always build their own custom solutions, but there are millions of tech professionals and small business owners that will use agents heavily and need a solution. So I’m trying to build that. Isn’t this like gBrain? Yes, similar. I think it’s like AWS vs Vercel. AWS is very powerful, configurable, and useful if you’re technical and want to invest the time into really fine tuning your system… but if you just want your web deploy&#x2F;hosting to just work and be easy to deal with you use Vercel. &#x2F;&#x2F; WHY I MADE IT I’ve been enjoying getting back to my technical roots, as I lost my coding skills more than a decade ago, but with AI I can focus on the system and the product in partnership with agent coding workflows. I recently built a Voice AI for older people. To build it I created an agentic engineering workflow (feel free to rip that up as I’m always looking to improve systems: https:&#x2F;&#x2F;ozbrain.com&#x2F;resources&#x2F;eng-flow ) My approach with coding agents is trust but verify, and I’m trying to replace the parts where a human would review with an adversarial or specialized agent who would give a better answer&#x2F;review. I have workflows that will go high level task to shipped PR running in Claude cloud sessions. I use Claude Code locally and Cursor when I want a tighter loop on doing visual work like UI or layout. And Codex to either load balance usage for TokenThriffting or when I want a different llm to think thru something. It was a pain in the ass passing .md files around and keep track of which version was the most recent, so I built a hosted .md storage right in Supabase and any of my agents already have Supabase access. This let me build a solid, scalable, secure voice AI from my phone at the gym. All my agents have access to our knowledge, can write to it, update and refer to it as we build and improve the product and the systems we use. Out of 75 founder friends I asked about how they manage shared knowledge, 26 built their own custom knowledge systems… Obsidian vaults with 7k files synced through a VPS, markdown repos behind their own MCP servers, cron jobs stitching Supabase to a skills file… each a different Frankenstein they have to maintain. 32 said they felt the pain of moving static files around but didn’t have any solution for it. So I rebuilt my brain better and used it to build it. &#x2F;&#x2F; HOW YOU CAN HELP Would love to have you try it out. The maintenance loop is still in alpha so not running it on customer data yet. If you built your own brain I’d love to hear how you did it. What criteria was most important for you in its design & function. If you are tired of shuffling .md files around I’d love to have you try out OzBrain and to give feedback, just ask your agent to put it in the shared bugs & features brain! Cheers! Bubs.co",
+      "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
     },
     {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106602 stars · updated Fri, 21 Aug 2026 17:19:13 UTC",
+      "meta": "106609 stars · updated Sat, 22 Aug 2026 01:10:05 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -65,7 +70,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 668668,
+      "score": 668710,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -73,7 +78,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8957 stars · updated Fri, 21 Aug 2026 15:53:06 UTC",
+      "meta": "8959 stars · updated Fri, 21 Aug 2026 15:53:06 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -81,7 +86,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 55436,
+      "score": 55446,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -116,7 +121,7 @@
           "title": "Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
           "source": "Hacker News",
           "url": "https://github.com/onecli/onecli",
-          "meta": "87 pts · 28 comments",
+          "meta": "87 pts · 29 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -124,7 +129,7 @@
             "Evaluation"
           ],
           "publishedAt": "2026-08-19T16:29:02Z",
-          "score": 313,
+          "score": 316,
           "summary": "Hi HN, Jonathan & Guy here from OneCLI, an agent harness built for teams, giving every employee a secured, sandboxed personal agent. Here’s what you can do with it: 1. get a sandboxed agent, with all the OneCLI capabilities in place like connect your GitHub account, Gmail, Notion, or Dropbox simply from the chat. 2. deterministic human in the loop approval in the chat itself for things that you need 100% control like sending an email or deleting the Linear ticket. 3. manage team policy in one place, enforced across every agent in the workspace 4. enjoy global connections at the team level, like shared LLM keys or service accounts Here’s a demo: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=dlW-44ntpbE We started working on this by accident, even though our careers were in the security space. We were working on a devtool called ChartDB, an open-source DB tool. When OpenClaw took off back in January, we started using it to orchestrate agents on top of ChartDB. We quickly understood there is a big issue around auth. Agents need credentials to do real work, but to give them those secrets would not be the best idea. They keep them in their memory and also write them down to local files and their sessions as plain text. And we knew that agents can easily be fooled into giving up those API keys&#x2F;secrets. So we needed some way to control the agent and stop prompt injections from tricking it into using its services for an attacker&#x27;s benefit. We created OneCLI that started as a vault for AI Agents built in Rust. We found out that most of our demand for OneCLI came from autonomous agents like Hermes, OpenClaw and NanoClaw for individuals and teams. Users looked for useful agents that do things for the person who runs them with two missing parts: 1) managing secrets and permissions. 2) and for teams - multiplayer management. We decided to pivot and provide the agent itself as a harness for teams, to give each employee an agent. We saw that teams had to deal with setting up their own harness again and again, and basically as we already had the vault as a gateway. We got the idea to provide the missing piece of the agent management out of the box and open source it (Apache-2.0, with a small enterprise exception). We&#x27;re open source first - the entire platform, not just a small portion of it like other agents, so companies can actually see the code, evaluate it, and trust it instead of taking our word for it. They run it isolated, in their own environment, fully under their control, at production quality, not a locked black box hosted somewhere else. That means the safety isn&#x27;t just a promise, it&#x27;s something they can verify themselves. Combined with real autonomy and least-privilege access, that&#x27;s what makes it something a company can fully own and trust, not just adopt. We also approach this from a company perspective rather than an individual one. Our solution manages agents on behalf of each employee, wrapped in deterministic guardrails that company admins configure through centralized policies. For the agent engine itself we’re using jcode which is the core of the agent-loop. We found out that it improves the experience and makes the agent smarter and faster. Here’s how it works: It runs on infra you control. Fully open-source, self-host or cloud in minutes. The agent never holds a real secret. It gets a placeholder. The real credential is injected at the gateway, per request, after the call is authorized. It never enters the agent&#x27;s context, memory, or logs. Enforcement outside the model. Prompts are suggestions. Policies defined by the org admin run at the network layer, outside the agent and the LLM. Block endpoints, rate limit per agent, require approval, scope per employee. The gateway decides. The agent can&#x27;t bypass it. Isolated VM per agent. Own memory, own keys, own permissions. Blast radius is one agent. Speed of the Harness: Rust engine under the agent loop. Full identity trail. Every agent is bound to an employee. Every call logged with who it acted for and which policy allowed it. Some things people are doing with the platform include: - Managing their company life cycle entirely from the sales calls, to the product side automatically open tickets to the engineering teams, that would kick the development agents to deliver and ship to production. - Operational side, like automatically hygiene the CRM after calls, sourcing leads, book meetings and manage follow ups emails. - Some of our customers also doing their entire grocery shopping using those agents and send them to take care of their chores like ordering things online. About the team: Both founders come from cybersecurity backgrounds. Jonathan spent years at Axis Security building zero trust network access. The core idea is that you never trust the client. You decide exactly what a person can reach, and you enforce it outside of them, at the network layer, so it doesn&#x27;t matter what the client tries to do. That&#x27;s how every serious company gives access to humans today. Guy was the 1st employee in Argon security doing AppSec. We would love to hear your thoughts on the move, happy to get issues open to improve and get your agent to be powerful and secure - designed for teams, not just individuals.",
           "why": "The Moltbook/OpenClaw incident — 1.5M agent tokens exposed, CVSS 8.8 RCE, credential harvesting — is the Meltdown/Spectre moment for agent security. Every production agent deployer needs to understand what happened and why."
         },
@@ -132,12 +137,28 @@
           "title": "Seed: Minimal, self-modifying agent harness",
           "source": "Hacker News",
           "url": "https://github.com/vivekhaldar/seed",
-          "meta": "52 pts · 19 comments",
+          "meta": "54 pts · 20 comments",
           "topics": [],
           "publishedAt": "2026-08-21T05:20:50Z",
-          "score": 216,
+          "score": 223,
           "summary": "",
           "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
+        },
+        {
+          "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+          "source": "Hacker News",
+          "url": "https://ozbrain.com",
+          "meta": "31 pts · 10 comments",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows",
+            "Voice and multimodal",
+            "Open weights"
+          ],
+          "publishedAt": "2026-08-21T23:09:06Z",
+          "score": 192,
+          "summary": "I think agent-first chat interfaces will be a primary software modality and busy dashboard&#x2F;UI will go away. I’m not sure who exactly wins it, but I want my knowledge to grow&#x2F;go with me. A lot of the “knowledge” ie research, analysis, reasoning will be done by agents as the primary user. Our current notes tools & tasks management systems were built for humans… I don’t care what the 17th thing on my bug backlog is. I want to conduct agents that can execute for me and do great work. What I built OzBrain to do: + Create a central place for agent reasoned knowledge to live + Be agnostic about what apps&#x2F;agents connect to it + Capture everything and track it so I can audit it + Enable teams, collaborators or partners to share brains + Handle conflicts so many agents in the same article doesn’t blow up + Refactor knowledge into more token friendly chunks and map the index well + Close the knowledge loop so new thinking supersedes old thinking across the corpus. Don’t erase, depreciate and link + Keep user data safe and secure ++ Be easy enough to use that you don’t have to have any technical knowledge Some among us will always build their own custom solutions, but there are millions of tech professionals and small business owners that will use agents heavily and need a solution. So I’m trying to build that. Isn’t this like gBrain? Yes, similar. I think it’s like AWS vs Vercel. AWS is very powerful, configurable, and useful if you’re technical and want to invest the time into really fine tuning your system… but if you just want your web deploy&#x2F;hosting to just work and be easy to deal with you use Vercel. &#x2F;&#x2F; WHY I MADE IT I’ve been enjoying getting back to my technical roots, as I lost my coding skills more than a decade ago, but with AI I can focus on the system and the product in partnership with agent coding workflows. I recently built a Voice AI for older people. To build it I created an agentic engineering workflow (feel free to rip that up as I’m always looking to improve systems: https:&#x2F;&#x2F;ozbrain.com&#x2F;resources&#x2F;eng-flow ) My approach with coding agents is trust but verify, and I’m trying to replace the parts where a human would review with an adversarial or specialized agent who would give a better answer&#x2F;review. I have workflows that will go high level task to shipped PR running in Claude cloud sessions. I use Claude Code locally and Cursor when I want a tighter loop on doing visual work like UI or layout. And Codex to either load balance usage for TokenThriffting or when I want a different llm to think thru something. It was a pain in the ass passing .md files around and keep track of which version was the most recent, so I built a hosted .md storage right in Supabase and any of my agents already have Supabase access. This let me build a solid, scalable, secure voice AI from my phone at the gym. All my agents have access to our knowledge, can write to it, update and refer to it as we build and improve the product and the systems we use. Out of 75 founder friends I asked about how they manage shared knowledge, 26 built their own custom knowledge systems… Obsidian vaults with 7k files synced through a VPS, markdown repos behind their own MCP servers, cron jobs stitching Supabase to a skills file… each a different Frankenstein they have to maintain. 32 said they felt the pain of moving static files around but didn’t have any solution for it. So I rebuilt my brain better and used it to build it. &#x2F;&#x2F; HOW YOU CAN HELP Would love to have you try it out. The maintenance loop is still in alpha so not running it on customer data yet. If you built your own brain I’d love to hear how you did it. What criteria was most important for you in its design & function. If you are tired of shuffling .md files around I’d love to have you try out OzBrain and to give feedback, just ask your agent to put it in the shared bugs & features brain! Cheers! Bubs.co",
+          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
         }
       ]
     },
@@ -159,7 +180,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106602 stars · updated Fri, 21 Aug 2026 17:19:13 UTC",
+          "meta": "106609 stars · updated Sat, 22 Aug 2026 01:10:05 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -167,7 +188,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 668668,
+          "score": 668710,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -175,7 +196,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8957 stars · updated Fri, 21 Aug 2026 15:53:06 UTC",
+          "meta": "8959 stars · updated Fri, 21 Aug 2026 15:53:06 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -183,7 +204,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 55436,
+          "score": 55446,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -206,14 +227,14 @@
           "title": "yetone/cumora",
           "source": "GitHub",
           "url": "https://github.com/yetone/cumora",
-          "meta": "2857 stars · updated Fri, 21 Aug 2026 09:52:33 UTC",
+          "meta": "2858 stars · updated Fri, 21 Aug 2026 09:52:33 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
             "Coding agents"
           ],
           "publishedAt": "2026-08-21T09:52:33Z",
-          "score": 18014,
+          "score": 18020,
           "summary": "Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-own (Claude Code / Codex) brains.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -223,62 +244,62 @@
   "tangentRadar": [
     {
       "topic": "Coding agents",
-      "signalCount": 23,
+      "signalCount": 26,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex",
         "GitHub: yetone/cumora",
-        "GitHub: zouyuxuan122/Deepseek-Harness-EAC"
+        "GitHub: missuo/herdrm"
       ]
     },
     {
       "topic": "Tool use",
-      "signalCount": 19,
+      "signalCount": 24,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
+        "Hacker News: Show HN: OzBrain, a shared brain for knowledge between agents and your team",
         "Hacker News: Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
-        "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex",
-        "GitHub: yetone/cumora"
-      ]
-    },
-    {
-      "topic": "Interfaces",
-      "signalCount": 19,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
-      "signals": [
-        "GitHub: zouyuxuan122/Deepseek-Harness-EAC",
-        "GitHub: iAmCorey/Wake",
-        "GitHub: CopilotKit/OpenBot"
+        "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 14,
+      "signalCount": 19,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
-        "GitHub: bawadou/ai-data-extractor",
+        "Hacker News: Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+        "GitHub: Leutenegger/claudish-to-english",
+        "GitHub: bawadou/ai-data-extractor"
+      ]
+    },
+    {
+      "topic": "Interfaces",
+      "signalCount": 17,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signals": [
+        "GitHub: iAmCorey/Wake",
         "GitHub: CopilotKit/OpenBot",
         "GitHub: cinderline/northcinder"
       ]
     },
     {
-      "topic": "Multi-agent workflows",
-      "signalCount": 10,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
-      "signals": [
-        "Hacker News: Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
-        "GitHub: yetone/cumora",
-        "GitHub: Spielewoy/autoprompt-skill"
-      ]
-    },
-    {
       "topic": "Major labs",
-      "signalCount": 10,
+      "signalCount": 12,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex",
-        "GitHub: SigmanticAI/apex-inference-chip",
-        "GitHub: MiaAI-Lab/Qwen3.8-27B-SGLang-DGX-Spark"
+        "GitHub: Leutenegger/claudish-to-english",
+        "GitHub: SigmanticAI/apex-inference-chip"
+      ]
+    },
+    {
+      "topic": "Multi-agent workflows",
+      "signalCount": 11,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "signals": [
+        "Hacker News: Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+        "Hacker News: Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
+        "GitHub: yetone/cumora"
       ]
     }
   ],
