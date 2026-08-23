@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-23T01:41:17Z",
+  "generatedAt": "2026-08-23T04:41:20Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 46,
+    "items": 47,
     "sources": {
-      "GitHub": 41,
+      "GitHub": 42,
       "Hacker News": 4,
       "OpenAI": 1
     }
@@ -46,10 +46,10 @@
       "title": "Munder Difflin – Agent harness to run an office of your clones",
       "source": "Hacker News",
       "url": "https://munderdiffl.in/",
-      "meta": "250 pts · 114 comments",
+      "meta": "264 pts · 117 comments",
       "topics": [],
       "publishedAt": "2026-08-22T09:49:14Z",
-      "score": 897,
+      "score": 934,
       "summary": "",
       "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
     },
@@ -57,7 +57,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106618 stars · updated Sun, 23 Aug 2026 01:15:05 UTC",
+      "meta": "106619 stars · updated Sun, 23 Aug 2026 01:15:05 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -65,7 +65,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 668782,
+      "score": 668788,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -73,7 +73,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "8967 stars · updated Sat, 22 Aug 2026 22:42:44 UTC",
+      "meta": "8968 stars · updated Sat, 22 Aug 2026 22:42:44 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -81,7 +81,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 55496,
+      "score": 55502,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -116,10 +116,10 @@
           "title": "Munder Difflin – Agent harness to run an office of your clones",
           "source": "Hacker News",
           "url": "https://munderdiffl.in/",
-          "meta": "250 pts · 114 comments",
+          "meta": "264 pts · 117 comments",
           "topics": [],
           "publishedAt": "2026-08-22T09:49:14Z",
-          "score": 897,
+          "score": 934,
           "summary": "",
           "why": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to."
         },
@@ -127,7 +127,7 @@
           "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
           "source": "Hacker News",
           "url": "https://ozbrain.com",
-          "meta": "79 pts · 46 comments",
+          "meta": "82 pts · 48 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -135,7 +135,7 @@
             "Open weights"
           ],
           "publishedAt": "2026-08-21T23:09:06Z",
-          "score": 396,
+          "score": 408,
           "summary": "I think agent-first chat interfaces will be a primary software modality and busy dashboard&#x2F;UI will go away. I’m not sure who exactly wins it, but I want my knowledge to grow&#x2F;go with me. A lot of the “knowledge” ie research, analysis, reasoning will be done by agents as the primary user. Our current notes tools & tasks management systems were built for humans… I don’t care what the 17th thing on my bug backlog is. I want to conduct agents that can execute for me and do great work. What I built OzBrain to do: + Create a central place for agent reasoned knowledge to live + Be agnostic about what apps&#x2F;agents connect to it + Capture everything and track it so I can audit it + Enable teams, collaborators or partners to share brains + Handle conflicts so many agents in the same article doesn’t blow up + Refactor knowledge into more token friendly chunks and map the index well + Close the knowledge loop so new thinking supersedes old thinking across the corpus. Don’t erase, depreciate and link + Keep user data safe and secure ++ Be easy enough to use that you don’t have to have any technical knowledge Some among us will always build their own custom solutions, but there are millions of tech professionals and small business owners that will use agents heavily and need a solution. So I’m trying to build that. Isn’t this like gBrain? Yes, similar. I think it’s like AWS vs Vercel. AWS is very powerful, configurable, and useful if you’re technical and want to invest the time into really fine tuning your system… but if you just want your web deploy&#x2F;hosting to just work and be easy to deal with you use Vercel. &#x2F;&#x2F; WHY I MADE IT I’ve been enjoying getting back to my technical roots, as I lost my coding skills more than a decade ago, but with AI I can focus on the system and the product in partnership with agent coding workflows. I recently built a Voice AI for older people. To build it I created an agentic engineering workflow (feel free to rip that up as I’m always looking to improve systems: https:&#x2F;&#x2F;ozbrain.com&#x2F;resources&#x2F;eng-flow ) My approach with coding agents is trust but verify, and I’m trying to replace the parts where a human would review with an adversarial or specialized agent who would give a better answer&#x2F;review. I have workflows that will go high level task to shipped PR running in Claude cloud sessions. I use Claude Code locally and Cursor when I want a tighter loop on doing visual work like UI or layout. And Codex to either load balance usage for TokenThriffting or when I want a different llm to think thru something. It was a pain in the ass passing .md files around and keep track of which version was the most recent, so I built a hosted .md storage right in Supabase and any of my agents already have Supabase access. This let me build a solid, scalable, secure voice AI from my phone at the gym. All my agents have access to our knowledge, can write to it, update and refer to it as we build and improve the product and the systems we use. Out of 75 founder friends I asked about how they manage shared knowledge, 26 built their own custom knowledge systems… Obsidian vaults with 7k files synced through a VPS, markdown repos behind their own MCP servers, cron jobs stitching Supabase to a skills file… each a different Frankenstein they have to maintain. 32 said they felt the pain of moving static files around but didn’t have any solution for it. So I rebuilt my brain better and used it to build it. &#x2F;&#x2F; HOW YOU CAN HELP Would love to have you try it out. The maintenance loop is still in alpha so not running it on customer data yet. If you built your own brain I’d love to hear how you did it. What criteria was most important for you in its design & function. If you are tired of shuffling .md files around I’d love to have you try out OzBrain and to give feedback, just ask your agent to put it in the shared bugs & features brain! Cheers! Bubs.co",
           "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
         },
@@ -186,7 +186,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106618 stars · updated Sun, 23 Aug 2026 01:15:05 UTC",
+          "meta": "106619 stars · updated Sun, 23 Aug 2026 01:15:05 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -194,7 +194,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 668782,
+          "score": 668788,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -202,7 +202,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "8967 stars · updated Sat, 22 Aug 2026 22:42:44 UTC",
+          "meta": "8968 stars · updated Sat, 22 Aug 2026 22:42:44 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -210,7 +210,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 55496,
+          "score": 55502,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -233,14 +233,14 @@
           "title": "yetone/cumora",
           "source": "GitHub",
           "url": "https://github.com/yetone/cumora",
-          "meta": "2901 stars · updated Sat, 22 Aug 2026 19:23:08 UTC",
+          "meta": "2904 stars · updated Sat, 22 Aug 2026 19:23:08 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
             "Coding agents"
           ],
           "publishedAt": "2026-08-22T19:23:08Z",
-          "score": 18286,
+          "score": 18308,
           "summary": "Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-own (Claude Code / Codex) brains.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -250,7 +250,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 26,
+      "signalCount": 27,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: OzBrain, a shared brain for knowledge between agents and your team",
@@ -260,7 +260,7 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 26,
+      "signalCount": 27,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex",
