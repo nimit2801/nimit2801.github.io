@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-24T08:53:03Z",
+  "generatedAt": "2026-08-24T12:58:15Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 24,
+    "items": 40,
     "sources": {
-      "GitHub": 19,
+      "GitHub": 35,
       "Hacker News": 4,
       "OpenAI": 1
     }
@@ -54,6 +54,22 @@
       "why": "The Moltbook/OpenClaw incident — 1.5M agent tokens exposed, CVSS 8.8 RCE, credential harvesting — is the Meltdown/Spectre moment for agent security. Every production agent deployer needs to understand what happened and why."
     },
     {
+      "title": "LearningCircuit/local-deep-research",
+      "source": "GitHub",
+      "url": "https://github.com/LearningCircuit/local-deep-research",
+      "meta": "8978 stars · updated Mon, 24 Aug 2026 06:48:06 UTC",
+      "topics": [
+        "Tool use",
+        "Evaluation",
+        "Open weights",
+        "Major labs"
+      ],
+      "publishedAt": "2025-02-09T15:41:32Z",
+      "score": 55564,
+      "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+    },
+    {
       "title": "MinishLab/semble",
       "source": "GitHub",
       "url": "https://github.com/MinishLab/semble",
@@ -67,21 +83,6 @@
       "score": 36284,
       "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
       "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
-    },
-    {
-      "title": "yetone/cumora",
-      "source": "GitHub",
-      "url": "https://github.com/yetone/cumora",
-      "meta": "3004 stars · updated Mon, 24 Aug 2026 08:09:59 UTC",
-      "topics": [
-        "Tool use",
-        "Multi-agent workflows",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-08-24T08:09:59Z",
-      "score": 18922,
-      "summary": "Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-own (Claude Code / Codex) brains.",
-      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     }
   ],
   "sourceSections": [
@@ -181,6 +182,22 @@
       "label": "GitHub",
       "items": [
         {
+          "title": "LearningCircuit/local-deep-research",
+          "source": "GitHub",
+          "url": "https://github.com/LearningCircuit/local-deep-research",
+          "meta": "8978 stars · updated Mon, 24 Aug 2026 06:48:06 UTC",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "Open weights",
+            "Major labs"
+          ],
+          "publishedAt": "2025-02-09T15:41:32Z",
+          "score": 55564,
+          "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+        },
+        {
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
@@ -199,45 +216,31 @@
           "title": "yetone/cumora",
           "source": "GitHub",
           "url": "https://github.com/yetone/cumora",
-          "meta": "3004 stars · updated Mon, 24 Aug 2026 08:09:59 UTC",
+          "meta": "3019 stars · updated Mon, 24 Aug 2026 11:08:25 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
             "Coding agents"
           ],
-          "publishedAt": "2026-08-24T08:09:59Z",
-          "score": 18922,
+          "publishedAt": "2026-08-24T11:08:25Z",
+          "score": 18972,
           "summary": "Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-own (Claude Code / Codex) brains.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
         {
-          "title": "HermannBjorgvin/Clawdmeter",
+          "title": "CopilotKit/OpenBot",
           "source": "GitHub",
-          "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "2099 stars · updated Fri, 21 Aug 2026 16:54:14 UTC",
-          "topics": [
-            "Coding agents",
-            "Interfaces"
-          ],
-          "publishedAt": "2026-05-11T03:07:49Z",
-          "score": 13388,
-          "summary": "ESP32 desk dashboard that shows Claude Code usage",
-          "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
-        },
-        {
-          "title": "Spielewoy/autoprompt-skill",
-          "source": "GitHub",
-          "url": "https://github.com/Spielewoy/autoprompt-skill",
-          "meta": "790 stars · updated Fri, 21 Aug 2026 16:35:53 UTC",
+          "url": "https://github.com/CopilotKit/OpenBot",
+          "meta": "2577 stars · updated Mon, 24 Aug 2026 02:47:34 UTC",
           "topics": [
             "Tool use",
-            "Multi-agent workflows",
-            "Coding agents"
+            "Open weights",
+            "Interfaces"
           ],
-          "publishedAt": "2026-08-21T16:35:53Z",
-          "score": 5022,
-          "summary": "Autoprompt is a coding-agent skill that cuts failures by 45% on agentic coding tasks.",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+          "publishedAt": "2026-08-24T02:47:34Z",
+          "score": 16190,
+          "summary": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
       ]
     }
@@ -245,7 +248,7 @@
   "tangentRadar": [
     {
       "topic": "Coding agents",
-      "signalCount": 15,
+      "signalCount": 23,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex",
@@ -255,7 +258,7 @@
     },
     {
       "topic": "Tool use",
-      "signalCount": 10,
+      "signalCount": 22,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: OzBrain, a shared brain for knowledge between agents and your team",
@@ -264,18 +267,28 @@
       ]
     },
     {
-      "topic": "Multi-agent workflows",
-      "signalCount": 9,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "topic": "Open weights",
+      "signalCount": 14,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Show HN: OzBrain, a shared brain for knowledge between agents and your team",
-        "Hacker News: Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
-        "GitHub: yetone/cumora"
+        "GitHub: CopilotKit/OpenBot",
+        "GitHub: cinderline/northcinder"
+      ]
+    },
+    {
+      "topic": "Interfaces",
+      "signalCount": 14,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signals": [
+        "GitHub: nateherkai/scroll-craft",
+        "GitHub: iAmCorey/Wake",
+        "GitHub: furkankly/zoetrope"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 7,
+      "signalCount": 11,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "OpenAI: Asana cleared 5 years of engineering work in 2 weeks with Codex",
@@ -284,23 +297,13 @@
       ]
     },
     {
-      "topic": "Open weights",
-      "signalCount": 6,
-      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "topic": "Multi-agent workflows",
+      "signalCount": 10,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: OzBrain, a shared brain for knowledge between agents and your team",
-        "GitHub: SigmanticAI/apex-inference-chip",
-        "GitHub: HanyuanWang/LiveStream-Agent-Studio"
-      ]
-    },
-    {
-      "topic": "Interfaces",
-      "signalCount": 4,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
-      "signals": [
-        "GitHub: iAmCorey/Wake",
-        "GitHub: nateherkai/scroll-craft",
-        "GitHub: HermannBjorgvin/Clawdmeter"
+        "Hacker News: Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
+        "GitHub: yetone/cumora"
       ]
     }
   ],
