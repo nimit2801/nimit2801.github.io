@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-08-29T19:18:34Z",
+  "generatedAt": "2026-08-29T22:30:44Z",
   "windowDays": 7,
-  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, the local/open-weight stack keeps getting stronger around Qwen-style setups. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, self-improving agents learn from their own production outputs without human retraining. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 51,
+    "items": 50,
     "sources": {
-      "GitHub": 47,
+      "Anthropic": 1,
+      "GitHub": 45,
       "Google AI": 1,
       "Hacker News": 1,
       "OpenAI": 2
@@ -29,6 +30,20 @@
       "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
     },
     {
+      "title": "Warp builds self-improving agents on Claude",
+      "source": "Anthropic",
+      "url": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
+      "meta": "51 pts · 49 comments",
+      "topics": [
+        "Major labs",
+        "Interfaces"
+      ],
+      "publishedAt": "2026-08-29T19:09:33Z",
+      "score": 369,
+      "summary": "",
+      "why": "Self-improving agents that learn from their own production outputs without human retraining are the next frontier beyond RAG and fine-tuning. This pattern generalizes to any structured, repetitive workflow domain."
+    },
+    {
       "title": "How loveholidays is making everyone a builder with Codex",
       "url": "https://openai.com/index/loveholidays",
       "publishedAt": "Wed, 26 Aug 2026 00:00:00 GMT",
@@ -45,35 +60,6 @@
       "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
     },
     {
-      "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
-      "url": "https://openai.com/index/introducing-admin-plugin",
-      "publishedAt": "Tue, 25 Aug 2026 00:00:00 GMT",
-      "source": "OpenAI",
-      "meta": "Tue, 25 Aug 2026 00:00:00 GMT",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Coding agents"
-      ],
-      "score": 180,
-      "summary": "Introducing the Admin plugin for ChatGPT Work and Codex",
-      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-    },
-    {
-      "title": "Qwen 3.6 is now much easier to run locally on your Mac, thanks to JetBrains",
-      "source": "Hacker News",
-      "url": "https://www.neowin.net/news/qwen-36-is-now-much-easier-to-run-locally-on-your-mac-thanks-to-jetbrains/",
-      "meta": "39 pts · 14 comments",
-      "topics": [
-        "Open weights",
-        "Major labs"
-      ],
-      "publishedAt": "2026-08-24T19:47:51Z",
-      "score": 190,
-      "summary": "",
-      "why": "Qwen 3.6 keeps showing up as the local-first coding and agent workhorse. The momentum here is less about hype and more about the open ecosystem hardening around one strong base model family."
-    },
-    {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
@@ -85,7 +71,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 669590,
+      "score": 669596,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -93,7 +79,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9005 stars · updated Sat, 29 Aug 2026 18:48:40 UTC",
+      "meta": "9005 stars · updated Sat, 29 Aug 2026 21:32:04 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -126,6 +112,20 @@
           "score": 1391,
           "summary": "",
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+        },
+        {
+          "title": "Warp builds self-improving agents on Claude",
+          "source": "Anthropic",
+          "url": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
+          "meta": "51 pts · 49 comments",
+          "topics": [
+            "Major labs",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-08-29T19:09:33Z",
+          "score": 369,
+          "summary": "",
+          "why": "Self-improving agents that learn from their own production outputs without human retraining are the next frontier beyond RAG and fine-tuning. This pattern generalizes to any structured, repetitive workflow domain."
         },
         {
           "title": "How loveholidays is making everyone a builder with Codex",
@@ -206,7 +206,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 669590,
+          "score": 669596,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -214,7 +214,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9005 stars · updated Sat, 29 Aug 2026 18:48:40 UTC",
+          "meta": "9005 stars · updated Sat, 29 Aug 2026 21:32:04 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -281,22 +281,22 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 26,
+      "signalCount": 27,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Google AI: Gemini Omni 1.1 Flash",
-        "OpenAI: How loveholidays is making everyone a builder with Codex",
-        "GitHub: nateherkai/scroll-craft"
+        "Anthropic: Warp builds self-improving agents on Claude",
+        "OpenAI: How loveholidays is making everyone a builder with Codex"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 21,
+      "signalCount": 22,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Hacker News: Qwen 3.6 is now much easier to run locally on your Mac, thanks to JetBrains",
         "Google AI: Gemini Omni 1.1 Flash",
-        "OpenAI: How loveholidays is making everyone a builder with Codex"
+        "Anthropic: Warp builds self-improving agents on Claude"
       ]
     },
     {
@@ -311,12 +311,12 @@
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 8,
+      "signalCount": 6,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: devfraga/ai-tools-list",
-        "GitHub: alphaparkinc/genpark-deep-research-autonomous-knowledge-page-synthesizer-skill",
-        "GitHub: alphaparkinc/genpark-deep-research-curation-interactive-article-publisher-skill"
+        "GitHub: totec448-spec/chat-on-steroids",
+        "GitHub: 2youg1/sprawling"
       ]
     }
   ],
@@ -332,9 +332,9 @@
       "prompt": "Log tool calls, retries, and summaries for one real task, then inspect which step actually predicts success or failure."
     },
     {
-      "title": "Prototype an interface beyond chat",
-      "why": "The AI-pointer and Interaction Models threads both suggest the interface layer is becoming a genuine research lever.",
-      "prompt": "Build a tiny agent UI that is not just a chat box — for example a timeline, pointer assistant, or live shared workspace — and log what it changes."
+      "title": "Stress-test one agent across model families",
+      "why": "The model layer is changing quickly enough that the same harness can behave very differently across providers and sizes.",
+      "prompt": "Replay the same agent task on one hosted frontier model and one smaller open model, then compare tool-selection behavior, not just answer quality."
     }
   ],
   "method": [
