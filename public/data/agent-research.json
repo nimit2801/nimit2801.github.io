@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-09-01T22:29:27Z",
+  "generatedAt": "2026-09-02T03:50:06Z",
   "windowDays": 7,
   "summary": "This cycle says self-improving agents learn from their own production outputs without human retraining. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 48,
+    "items": 49,
     "sources": {
       "Anthropic": 1,
       "GitHub": 45,
       "Google AI": 1,
+      "Hacker News": 1,
       "OpenAI": 1
     }
   },
@@ -61,7 +62,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106761 stars · updated Tue, 01 Sep 2026 21:26:37 UTC",
+      "meta": "106762 stars · updated Wed, 02 Sep 2026 01:29:09 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -69,7 +70,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 669738,
+      "score": 669742,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -77,7 +78,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9018 stars · updated Tue, 01 Sep 2026 22:27:30 UTC",
+      "meta": "9019 stars · updated Wed, 02 Sep 2026 03:00:49 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -85,7 +86,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 55818,
+      "score": 55824,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -145,7 +146,22 @@
     {
       "key": "hacker-news",
       "label": "Hacker News",
-      "items": []
+      "items": [
+        {
+          "title": "Show HN: Mcptunnels – ngrok for MCP with basic OAuth",
+          "source": "Hacker News",
+          "url": "https://terragohan.github.io/mcptunnels/",
+          "meta": "13 pts · 0 comments",
+          "topics": [
+            "Tool use",
+            "Major labs"
+          ],
+          "publishedAt": "2026-09-01T20:34:55Z",
+          "score": 126,
+          "summary": "Basically, OpenAI tunneling sucks and is broken most of the time. This can get you tunneling pretty trivially to share with someone temporarily. Roadmap includes being able to host MCP servers trivially as well.",
+          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
+        }
+      ]
     },
     {
       "key": "reddit",
@@ -165,7 +181,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106761 stars · updated Tue, 01 Sep 2026 21:26:37 UTC",
+          "meta": "106762 stars · updated Wed, 02 Sep 2026 01:29:09 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -173,7 +189,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 669738,
+          "score": 669742,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -181,7 +197,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9018 stars · updated Tue, 01 Sep 2026 22:27:30 UTC",
+          "meta": "9019 stars · updated Wed, 02 Sep 2026 03:00:49 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -189,7 +205,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 55818,
+          "score": 55824,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -197,14 +213,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5980 stars · updated Wed, 26 Aug 2026 04:48:21 UTC",
+          "meta": "5979 stars · updated Wed, 26 Aug 2026 04:48:21 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 36518,
+          "score": 36512,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -227,18 +243,8 @@
   ],
   "tangentRadar": [
     {
-      "topic": "Tool use",
-      "signalCount": 27,
-      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
-      "signals": [
-        "Google AI: Gemini Omni 1.1 Flash",
-        "OpenAI: How AI-native companies turn workflows into operating capability",
-        "GitHub: damejan80/tokentab"
-      ]
-    },
-    {
       "topic": "Coding agents",
-      "signalCount": 27,
+      "signalCount": 28,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Google AI: Gemini Omni 1.1 Flash",
@@ -247,28 +253,28 @@
       ]
     },
     {
-      "topic": "Major labs",
-      "signalCount": 18,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "topic": "Tool use",
+      "signalCount": 27,
+      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Google AI: Gemini Omni 1.1 Flash",
-        "Anthropic: Warp builds self-improving agents on Claude",
+        "Hacker News: Show HN: Mcptunnels – ngrok for MCP with basic OAuth",
         "OpenAI: How AI-native companies turn workflows into operating capability"
       ]
     },
     {
-      "topic": "Interfaces",
-      "signalCount": 18,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "topic": "Major labs",
+      "signalCount": 21,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Google AI: Gemini Omni 1.1 Flash",
-        "Anthropic: Warp builds self-improving agents on Claude",
-        "GitHub: s0xDk/refactoring-ui-skill"
+        "Hacker News: Show HN: Mcptunnels – ngrok for MCP with basic OAuth",
+        "Anthropic: Warp builds self-improving agents on Claude"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 18,
+      "signalCount": 20,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "GitHub: hkqr/my-free-code",
@@ -277,13 +283,23 @@
       ]
     },
     {
+      "topic": "Interfaces",
+      "signalCount": 16,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signals": [
+        "Google AI: Gemini Omni 1.1 Flash",
+        "Anthropic: Warp builds self-improving agents on Claude",
+        "GitHub: s0xDk/refactoring-ui-skill"
+      ]
+    },
+    {
       "topic": "Multi-agent workflows",
-      "signalCount": 8,
+      "signalCount": 9,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: How AI-native companies turn workflows into operating capability",
-        "GitHub: romangojiberryAI/gojiberryai-sales-os",
-        "GitHub: kyky2347/ALTA"
+        "GitHub: 2akouwu/codex-cli-portable-setup-kit",
+        "GitHub: romangojiberryAI/gojiberryai-sales-os"
       ]
     }
   ],
