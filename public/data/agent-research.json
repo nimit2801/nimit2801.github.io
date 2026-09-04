@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-04T08:42:05Z",
+  "generatedAt": "2026-09-04T16:03:22Z",
   "windowDays": 7,
   "summary": "This cycle says event-driven and browser/MCP plumbing is becoming part of the agent conversation, self-improving agents learn from their own production outputs without human retraining. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 48,
+    "items": 45,
     "sources": {
       "Anthropic": 1,
-      "GitHub": 45,
+      "GitHub": 42,
       "Hacker News": 1,
       "OpenAI": 1
     }
@@ -59,7 +59,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106808 stars · updated Fri, 04 Sep 2026 01:40:22 UTC",
+      "meta": "106813 stars · updated Fri, 04 Sep 2026 01:40:22 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -67,7 +67,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 670040,
+      "score": 670074,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -75,7 +75,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9035 stars · updated Fri, 04 Sep 2026 08:38:51 UTC",
+      "meta": "9038 stars · updated Fri, 04 Sep 2026 16:02:41 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -83,7 +83,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 55922,
+      "score": 55942,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -162,7 +162,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106808 stars · updated Fri, 04 Sep 2026 01:40:22 UTC",
+          "meta": "106813 stars · updated Fri, 04 Sep 2026 01:40:22 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -170,7 +170,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 670040,
+          "score": 670074,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -178,7 +178,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9035 stars · updated Fri, 04 Sep 2026 08:38:51 UTC",
+          "meta": "9038 stars · updated Fri, 04 Sep 2026 16:02:41 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -186,7 +186,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 55922,
+          "score": 55942,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -194,14 +194,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "5991 stars · updated Wed, 26 Aug 2026 04:48:21 UTC",
+          "meta": "5993 stars · updated Wed, 26 Aug 2026 04:48:21 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 36586,
+          "score": 36598,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -209,14 +209,14 @@
           "title": "XiaoDuoYa/codex-with-chatgpt",
           "source": "GitHub",
           "url": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
-          "meta": "2441 stars · updated Thu, 03 Sep 2026 13:54:28 UTC",
+          "meta": "2463 stars · updated Fri, 04 Sep 2026 10:46:18 UTC",
           "topics": [
             "Tool use",
             "Coding agents",
             "Interfaces"
           ],
-          "publishedAt": "2026-09-03T13:54:28Z",
-          "score": 15320,
+          "publishedAt": "2026-09-04T10:46:18Z",
+          "score": 15426,
           "summary": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         }
@@ -226,12 +226,22 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 27,
+      "signalCount": 25,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Mcptunnels – ngrok for MCP with basic OAuth",
         "OpenAI: How AI-native companies turn workflows into operating capability",
         "GitHub: 2akouwu/reverify"
+      ]
+    },
+    {
+      "topic": "Major labs",
+      "signalCount": 23,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "Hacker News: Show HN: Mcptunnels – ngrok for MCP with basic OAuth",
+        "Anthropic: Warp builds self-improving agents on Claude",
+        "OpenAI: How AI-native companies turn workflows into operating capability"
       ]
     },
     {
@@ -241,17 +251,7 @@
       "signals": [
         "GitHub: anthropics/commerce-agents",
         "GitHub: 2akouwu/reverify",
-        "GitHub: useagenthq/useagent"
-      ]
-    },
-    {
-      "topic": "Major labs",
-      "signalCount": 22,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
-      "signals": [
-        "Hacker News: Show HN: Mcptunnels – ngrok for MCP with basic OAuth",
-        "Anthropic: Warp builds self-improving agents on Claude",
-        "OpenAI: How AI-native companies turn workflows into operating capability"
+        "GitHub: op7418/guizang-yingzao-skill"
       ]
     },
     {
@@ -266,7 +266,7 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 17,
+      "signalCount": 15,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Anthropic: Warp builds self-improving agents on Claude",
