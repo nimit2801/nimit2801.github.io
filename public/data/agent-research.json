@@ -1,34 +1,35 @@
 {
-  "generatedAt": "2026-09-08T16:21:22Z",
+  "generatedAt": "2026-09-08T22:28:44Z",
   "windowDays": 7,
-  "summary": "This cycle says event-driven and browser/MCP plumbing is becoming part of the agent conversation. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 38,
+    "items": 37,
     "sources": {
-      "GitHub": 37,
-      "Hacker News": 1
+      "GitHub": 36,
+      "OpenAI": 1
     }
   },
   "highlights": [
     {
-      "title": "Show HN: Mcptunnels – ngrok for MCP with basic OAuth",
-      "source": "Hacker News",
-      "url": "https://terragohan.github.io/mcptunnels/",
-      "meta": "15 pts · 4 comments",
+      "title": "1Password increases engineering productivity 21% with Codex",
+      "url": "https://openai.com/index/1password",
+      "publishedAt": "Tue, 08 Sep 2026 00:00:00 GMT",
+      "source": "OpenAI",
+      "meta": "Tue, 08 Sep 2026 00:00:00 GMT",
       "topics": [
         "Tool use",
-        "Major labs"
+        "Major labs",
+        "Coding agents"
       ],
-      "publishedAt": "2026-09-01T20:34:55Z",
-      "score": 142,
-      "summary": "Basically, OpenAI tunneling sucks and is broken most of the time. This can get you tunneling pretty trivially to share with someone temporarily. Roadmap includes being able to host MCP servers trivially as well.",
-      "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
+      "score": 180,
+      "summary": "1Password increases engineering productivity 21% with Codex",
+      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
     {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106870 stars · updated Tue, 08 Sep 2026 14:52:23 UTC",
+      "meta": "106872 stars · updated Tue, 08 Sep 2026 22:24:54 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -36,7 +37,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 670442,
+      "score": 670456,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -44,7 +45,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9055 stars · updated Tue, 08 Sep 2026 06:36:50 UTC",
+      "meta": "9056 stars · updated Tue, 08 Sep 2026 21:42:26 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -52,7 +53,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 56052,
+      "score": 56062,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -61,27 +62,28 @@
     {
       "key": "major-labs",
       "label": "Major labs",
-      "items": []
+      "items": [
+        {
+          "title": "1Password increases engineering productivity 21% with Codex",
+          "url": "https://openai.com/index/1password",
+          "publishedAt": "Tue, 08 Sep 2026 00:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Tue, 08 Sep 2026 00:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "1Password increases engineering productivity 21% with Codex",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        }
+      ]
     },
     {
       "key": "hacker-news",
       "label": "Hacker News",
-      "items": [
-        {
-          "title": "Show HN: Mcptunnels – ngrok for MCP with basic OAuth",
-          "source": "Hacker News",
-          "url": "https://terragohan.github.io/mcptunnels/",
-          "meta": "15 pts · 4 comments",
-          "topics": [
-            "Tool use",
-            "Major labs"
-          ],
-          "publishedAt": "2026-09-01T20:34:55Z",
-          "score": 142,
-          "summary": "Basically, OpenAI tunneling sucks and is broken most of the time. This can get you tunneling pretty trivially to share with someone temporarily. Roadmap includes being able to host MCP servers trivially as well.",
-          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
-        }
-      ]
+      "items": []
     },
     {
       "key": "reddit",
@@ -101,7 +103,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106870 stars · updated Tue, 08 Sep 2026 14:52:23 UTC",
+          "meta": "106872 stars · updated Tue, 08 Sep 2026 22:24:54 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -109,7 +111,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 670442,
+          "score": 670456,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -117,7 +119,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9055 stars · updated Tue, 08 Sep 2026 06:36:50 UTC",
+          "meta": "9056 stars · updated Tue, 08 Sep 2026 21:42:26 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -125,7 +127,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 56052,
+          "score": 56062,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -133,14 +135,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6026 stars · updated Tue, 08 Sep 2026 13:02:33 UTC",
+          "meta": "6028 stars · updated Tue, 08 Sep 2026 13:02:33 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 36804,
+          "score": 36816,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -148,14 +150,14 @@
           "title": "anthropics/commerce-agents",
           "source": "GitHub",
           "url": "https://github.com/anthropics/commerce-agents",
-          "meta": "2506 stars · updated Tue, 01 Sep 2026 20:41:14 UTC",
+          "meta": "2521 stars · updated Tue, 01 Sep 2026 20:41:14 UTC",
           "topics": [
             "Major labs",
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-09-01T20:41:14Z",
-          "score": 16046,
+          "score": 16144,
           "summary": "Reference blueprint for building shopping and merchant agents with Claude. Examples in retail, commerce, telecom, and entertainment included.",
           "why": "Agents becoming first-class economic actors — creating accounts, buying domains, deploying code — is one of the most consequential infrastructure shifts this cycle. The agent-as-customer model changes the design space for every SaaS platform."
         }
@@ -165,47 +167,37 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 19,
+      "signalCount": 21,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
-        "Hacker News: Show HN: Mcptunnels – ngrok for MCP with basic OAuth",
-        "GitHub: vinzdg/codenotch",
-        "GitHub: okf-memory/okf-agent-memory"
-      ]
-    },
-    {
-      "topic": "Major labs",
-      "signalCount": 17,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
-      "signals": [
-        "Hacker News: Show HN: Mcptunnels – ngrok for MCP with basic OAuth",
-        "GitHub: anthropics/commerce-agents",
-        "GitHub: okf-memory/okf-agent-memory"
-      ]
-    },
-    {
-      "topic": "Coding agents",
-      "signalCount": 17,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
-      "signals": [
-        "GitHub: anthropics/commerce-agents",
+        "OpenAI: 1Password increases engineering productivity 21% with Codex",
         "GitHub: vinzdg/codenotch",
         "GitHub: tigerless-labs/agent-memory"
       ]
     },
     {
-      "topic": "Open weights",
-      "signalCount": 12,
-      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "topic": "Coding agents",
+      "signalCount": 16,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "GitHub: Agenta-AI/awesome-ai-agent-platforms",
-        "GitHub: MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark",
-        "GitHub: jarrenrocks/bot-crossing"
+        "OpenAI: 1Password increases engineering productivity 21% with Codex",
+        "GitHub: anthropics/commerce-agents",
+        "GitHub: vinzdg/codenotch"
+      ]
+    },
+    {
+      "topic": "Major labs",
+      "signalCount": 15,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "OpenAI: 1Password increases engineering productivity 21% with Codex",
+        "GitHub: anthropics/commerce-agents",
+        "GitHub: okf-memory/okf-agent-memory"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 11,
+      "signalCount": 13,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "GitHub: anthropics/commerce-agents",
@@ -214,8 +206,18 @@
       ]
     },
     {
+      "topic": "Open weights",
+      "signalCount": 12,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "signals": [
+        "GitHub: tigerless-labs/agent-memory",
+        "GitHub: Agenta-AI/awesome-ai-agent-platforms",
+        "GitHub: MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark"
+      ]
+    },
+    {
       "topic": "Multi-agent workflows",
-      "signalCount": 9,
+      "signalCount": 8,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: romangojiberryAI/gojiberryai-sales-os",
@@ -226,9 +228,9 @@
   ],
   "experimentQueue": [
     {
-      "title": "Benchmark one local-first agent stack",
-      "why": "The local/open-weight ecosystem looks materially better this week, especially around Qwen and Forge guardrails.",
-      "prompt": "Pick one real workflow and compare a local Qwen+Forge stack against a frontier hosted model on tool accuracy, latency, and cost."
+      "title": "Audit one deployed enterprise agent workflow",
+      "why": "Codex-on-Dell and SAP-with-Claude are production-scale agent deployments — worth understanding the real friction points.",
+      "prompt": "Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
     },
     {
       "title": "Instrument one agent with better traces",
