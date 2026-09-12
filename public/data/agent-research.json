@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-12T03:58:22Z",
+  "generatedAt": "2026-09-12T08:34:54Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 44,
+    "items": 48,
     "sources": {
-      "GitHub": 41,
+      "GitHub": 45,
       "OpenAI": 3
     }
   },
@@ -57,7 +57,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "106928 stars · updated Sat, 12 Sep 2026 01:25:00 UTC",
+      "meta": "106933 stars · updated Sat, 12 Sep 2026 01:25:00 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -65,7 +65,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 670818,
+      "score": 670852,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -73,7 +73,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9073 stars · updated Thu, 10 Sep 2026 08:15:40 UTC",
+      "meta": "9073 stars · updated Sat, 12 Sep 2026 08:30:24 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -159,7 +159,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "106928 stars · updated Sat, 12 Sep 2026 01:25:00 UTC",
+          "meta": "106933 stars · updated Sat, 12 Sep 2026 01:25:00 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -167,7 +167,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 670818,
+          "score": 670852,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -175,7 +175,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9073 stars · updated Thu, 10 Sep 2026 08:15:40 UTC",
+          "meta": "9073 stars · updated Sat, 12 Sep 2026 08:30:24 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -191,14 +191,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6054 stars · updated Fri, 11 Sep 2026 10:37:04 UTC",
+          "meta": "6056 stars · updated Sat, 12 Sep 2026 08:27:46 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 36974,
+          "score": 36986,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -206,13 +206,13 @@
           "title": "antoinezambelli/forge",
           "source": "GitHub",
           "url": "https://github.com/antoinezambelli/forge",
-          "meta": "2243 stars · updated Tue, 01 Sep 2026 01:05:25 UTC",
+          "meta": "2242 stars · updated Tue, 01 Sep 2026 01:05:25 UTC",
           "topics": [
             "Tool use",
             "Multi-agent workflows"
           ],
           "publishedAt": "2026-02-16T16:59:06Z",
-          "score": 14054,
+          "score": 14048,
           "summary": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -222,7 +222,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 24,
+      "signalCount": 28,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "OpenAI: How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
@@ -232,12 +232,22 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 24,
+      "signalCount": 28,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
         "GitHub: vinzdg/codenotch",
         "GitHub: Vincentwei1021/anything2explainer"
+      ]
+    },
+    {
+      "topic": "Interfaces",
+      "signalCount": 16,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signals": [
+        "GitHub: Jarvis322/macos-sysdata",
+        "GitHub: achimala/dream-loop",
+        "GitHub: MiaAI-Lab/Qwen3.8-27B-16gb-NVIDIA-GPUs-one-click-install"
       ]
     },
     {
@@ -252,27 +262,17 @@
     },
     {
       "topic": "Open weights",
-      "signalCount": 14,
+      "signalCount": 15,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "OpenAI: Expanding AI access and cyber defense for federal, state, local, and tribal governments",
         "GitHub: MiaAI-Lab/Qwen3.8-27B-16gb-NVIDIA-GPUs-one-click-install",
-        "GitHub: codejunkie99/agentic-stack-desktop"
-      ]
-    },
-    {
-      "topic": "Interfaces",
-      "signalCount": 14,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
-      "signals": [
-        "GitHub: achimala/dream-loop",
-        "GitHub: MiaAI-Lab/Qwen3.8-27B-16gb-NVIDIA-GPUs-one-click-install",
-        "GitHub: punkpeye/awesome-remote-mcp-servers"
+        "GitHub: FankChen/tracecrate"
       ]
     },
     {
       "topic": "Memory and state",
-      "signalCount": 8,
+      "signalCount": 9,
       "whyItMatters": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow.",
       "signals": [
         "OpenAI: Expanding AI access and cyber defense for federal, state, local, and tribal governments",
