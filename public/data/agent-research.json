@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-19T03:59:30Z",
+  "generatedAt": "2026-09-19T08:44:52Z",
   "windowDays": 7,
   "summary": "This cycle says tiny tool-calling models are becoming real, self-improving agents learn from their own production outputs without human retraining. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 39,
+    "items": 38,
     "sources": {
-      "GitHub": 37,
+      "GitHub": 36,
       "Hacker News": 2
     }
   },
@@ -14,7 +14,7 @@
       "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
       "source": "Hacker News",
       "url": "https://cactuscompute.com/needle",
-      "meta": "174 pts · 79 comments",
+      "meta": "198 pts · 88 comments",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -22,7 +22,7 @@
         "Major labs"
       ],
       "publishedAt": "2026-09-18T00:11:44Z",
-      "score": 705,
+      "score": 780,
       "summary": "Hey HN, Henry from Cactus here. We submitted Needle 2 here a few weeks ago, and the feedback in the discussion thread was incredibly valuable, thanks! Thanks to all that feedback, we’ve been able to move quickly to release Needle 3 and I&#x27;d love to hear what you think again. The key features: 1) Automation (tool calls & structured JSON output): Needle still doesn&#x27;t chat by design, its quite challenging to pack general capacity into such small models, so we focus on tool calls and structured JSON. If no tool you declared fits the request, you get an empty list back (note for when playing with the demo). 2) Intelligence Laddering: Every layer (2 to 20) is a deployable subnetwork, so one set of weights, 25 to 121 million parameters at 2-bit, shipping as 8-29MB binaries. On a Raspberry Pi 5 it decodes at up to 4k tokens&#x2F;sec and prefills at up to 10k. 3) Monarch Hadamard MLP: replaces the dense FFN with three learnable Walsh-Hadamard-initialized Kronecker (Monarch) factor pairs interleaved with per-channel diagonal scales, fixed permutations, a SiLU nonlinearity, and a rank-8 input-conditioned gate, so each token gets a fully mixed nonlinear transform of its d_model channels at O(d√d) parameters and compute instead of the O(d²) a dense 4x-expansion MLP would cost. 4) Performance: On Mobile Actions (phone commands, scored on the exact call) the 20-layer model gets 86.0 through the shipped 2-bit binary; LFM2.5 1.2B is at 82.4, Qwen3.5 0.8B at 76.0, Apple&#x27;s on-device model at 57.6, all at f16. More results on the link, we do not win everywhere ofc. 5) Multilingual: Needle 3 now supports English, French, Spanish, German, Dutch, Italian, Polish, with more languages coming. 6) Finetuning: You can achieve DeepSeek v4 Flash grade performance on a narrow task with just 4L, stress on \"narrow task\", we found that production users often prefer tuning before production. 7) Triggers: Grounding is a common challenge for tool call, at least for Needle 2, so we added support case-insensitive regular expressions matched against each request to gate false negatives. 8) Confidence: Every response also carries a calibrated confidence score, the minimum of a judgement on the finished call and its decode probability. Act above your threshold, show the call and ask below it, or escalate to a bigger model. 9) Supported Platforms: macOS, Linux on x86-64, ARM64, ARMv7, RISC-V and MIPS32, Windows x64 and ARM, Android, iOS, watchOS, tvOS, the browser as WebAssembly, and a WASI component. Thanks for reading and as always, thoughts appreciated!",
       "why": "A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs."
     },
@@ -43,7 +43,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "107073 stars · updated Sat, 19 Sep 2026 01:25:15 UTC",
+      "meta": "107075 stars · updated Sat, 19 Sep 2026 01:25:15 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -51,7 +51,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 671784,
+      "score": 671794,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -59,7 +59,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9106 stars · updated Sat, 19 Sep 2026 01:01:19 UTC",
+      "meta": "9106 stars · updated Sat, 19 Sep 2026 08:08:20 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -86,7 +86,7 @@
           "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
           "source": "Hacker News",
           "url": "https://cactuscompute.com/needle",
-          "meta": "174 pts · 79 comments",
+          "meta": "198 pts · 88 comments",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -94,7 +94,7 @@
             "Major labs"
           ],
           "publishedAt": "2026-09-18T00:11:44Z",
-          "score": 705,
+          "score": 780,
           "summary": "Hey HN, Henry from Cactus here. We submitted Needle 2 here a few weeks ago, and the feedback in the discussion thread was incredibly valuable, thanks! Thanks to all that feedback, we’ve been able to move quickly to release Needle 3 and I&#x27;d love to hear what you think again. The key features: 1) Automation (tool calls & structured JSON output): Needle still doesn&#x27;t chat by design, its quite challenging to pack general capacity into such small models, so we focus on tool calls and structured JSON. If no tool you declared fits the request, you get an empty list back (note for when playing with the demo). 2) Intelligence Laddering: Every layer (2 to 20) is a deployable subnetwork, so one set of weights, 25 to 121 million parameters at 2-bit, shipping as 8-29MB binaries. On a Raspberry Pi 5 it decodes at up to 4k tokens&#x2F;sec and prefills at up to 10k. 3) Monarch Hadamard MLP: replaces the dense FFN with three learnable Walsh-Hadamard-initialized Kronecker (Monarch) factor pairs interleaved with per-channel diagonal scales, fixed permutations, a SiLU nonlinearity, and a rank-8 input-conditioned gate, so each token gets a fully mixed nonlinear transform of its d_model channels at O(d√d) parameters and compute instead of the O(d²) a dense 4x-expansion MLP would cost. 4) Performance: On Mobile Actions (phone commands, scored on the exact call) the 20-layer model gets 86.0 through the shipped 2-bit binary; LFM2.5 1.2B is at 82.4, Qwen3.5 0.8B at 76.0, Apple&#x27;s on-device model at 57.6, all at f16. More results on the link, we do not win everywhere ofc. 5) Multilingual: Needle 3 now supports English, French, Spanish, German, Dutch, Italian, Polish, with more languages coming. 6) Finetuning: You can achieve DeepSeek v4 Flash grade performance on a narrow task with just 4L, stress on \"narrow task\", we found that production users often prefer tuning before production. 7) Triggers: Grounding is a common challenge for tool call, at least for Needle 2, so we added support case-insensitive regular expressions matched against each request to gate false negatives. 8) Confidence: Every response also carries a calibrated confidence score, the minimum of a judgement on the finished call and its decode probability. Act above your threshold, show the call and ask below it, or escalate to a bigger model. 9) Supported Platforms: macOS, Linux on x86-64, ARM64, ARMv7, RISC-V and MIPS32, Windows x64 and ARM, Android, iOS, watchOS, tvOS, the browser as WebAssembly, and a WASI component. Thanks for reading and as always, thoughts appreciated!",
           "why": "A 26M-parameter function-calling model is a real compression milestone: useful tool use is getting small enough to run on tiny devices, not just cloud GPUs."
         },
@@ -131,7 +131,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "107073 stars · updated Sat, 19 Sep 2026 01:25:15 UTC",
+          "meta": "107075 stars · updated Sat, 19 Sep 2026 01:25:15 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -139,7 +139,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 671784,
+          "score": 671794,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -147,7 +147,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9106 stars · updated Sat, 19 Sep 2026 01:01:19 UTC",
+          "meta": "9106 stars · updated Sat, 19 Sep 2026 08:08:20 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -178,13 +178,13 @@
           "title": "tamaratran/fast-jev-compaction",
           "source": "GitHub",
           "url": "https://github.com/tamaratran/fast-jev-compaction",
-          "meta": "3401 stars · updated Fri, 18 Sep 2026 04:45:31 UTC",
+          "meta": "3624 stars · updated Fri, 18 Sep 2026 04:45:31 UTC",
           "topics": [
             "Tool use",
             "Coding agents"
           ],
           "publishedAt": "2026-09-18T04:45:31Z",
-          "score": 20934,
+          "score": 22310,
           "summary": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbatim.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -194,7 +194,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 20,
+      "signalCount": 19,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
