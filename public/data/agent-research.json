@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-24T19:53:33Z",
+  "generatedAt": "2026-09-24T23:06:33Z",
   "windowDays": 7,
   "summary": "This cycle says tiny tool-calling models are becoming real. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 28,
+    "items": 13,
     "sources": {
-      "GitHub": 26,
+      "GitHub": 11,
       "Hacker News": 1,
       "OpenAI": 1
     }
@@ -44,7 +44,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "107149 stars · updated Thu, 24 Sep 2026 19:40:51 UTC",
+      "meta": "107152 stars · updated Thu, 24 Sep 2026 22:03:26 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -52,7 +52,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 672292,
+      "score": 672310,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -60,7 +60,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9128 stars · updated Thu, 24 Sep 2026 18:24:00 UTC",
+      "meta": "9128 stars · updated Thu, 24 Sep 2026 23:04:33 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -133,7 +133,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "107149 stars · updated Thu, 24 Sep 2026 19:40:51 UTC",
+          "meta": "107152 stars · updated Thu, 24 Sep 2026 22:03:26 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -141,7 +141,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 672292,
+          "score": 672310,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -149,7 +149,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9128 stars · updated Thu, 24 Sep 2026 18:24:00 UTC",
+          "meta": "9128 stars · updated Thu, 24 Sep 2026 23:04:33 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -162,33 +162,33 @@
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
         {
-          "title": "tamaratran/fast-jev-compaction",
+          "title": "MinishLab/semble",
           "source": "GitHub",
-          "url": "https://github.com/tamaratran/fast-jev-compaction",
-          "meta": "6703 stars · updated Fri, 18 Sep 2026 04:45:31 UTC",
+          "url": "https://github.com/MinishLab/semble",
+          "meta": "6140 stars · updated Fri, 18 Sep 2026 08:15:22 UTC",
           "topics": [
             "Tool use",
+            "Evaluation",
             "Coding agents"
           ],
-          "publishedAt": "2026-09-18T04:45:31Z",
-          "score": 41142,
-          "summary": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbatim.",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+          "publishedAt": "2026-04-06T14:56:45Z",
+          "score": 37500,
+          "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
+          "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
         {
-          "title": "jaredpalmer/kev",
+          "title": "HermannBjorgvin/Clawdmeter",
           "source": "GitHub",
-          "url": "https://github.com/jaredpalmer/kev",
-          "meta": "6698 stars · updated Thu, 24 Sep 2026 19:39:07 UTC",
+          "url": "https://github.com/HermannBjorgvin/Clawdmeter",
+          "meta": "2218 stars · updated Thu, 24 Sep 2026 17:36:05 UTC",
           "topics": [
-            "Open weights",
-            "Major labs",
+            "Coding agents",
             "Interfaces"
           ],
-          "publishedAt": "2026-09-24T19:39:07Z",
-          "score": 41114,
-          "summary": "Jev-like family of decision models built on top of Qwen3.5/3.8 you can train and run on your own",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+          "publishedAt": "2026-05-11T03:07:49Z",
+          "score": 14188,
+          "summary": "ESP32 desk dashboard that shows Claude Code usage",
+          "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
         }
       ]
     }
@@ -196,62 +196,62 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 16,
+      "signalCount": 8,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
-        "GitHub: tamaratran/fast-jev-compaction",
-        "GitHub: mikehasa/golive-skill"
+        "GitHub: antoinezambelli/forge",
+        "GitHub: Unagi-cq/cdp-bridge-mcp"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 16,
+      "signalCount": 7,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "GitHub: tamaratran/fast-jev-compaction",
-        "GitHub: mikehasa/golive-skill",
-        "GitHub: riba2534/claude-opus-5-5-demo"
-      ]
-    },
-    {
-      "topic": "Interfaces",
-      "signalCount": 13,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
-      "signals": [
-        "GitHub: mikehasa/golive-skill",
-        "GitHub: v-modal/awesome-jev-tools",
-        "GitHub: wh000wh000/awesome-jev-live"
-      ]
-    },
-    {
-      "topic": "Open weights",
-      "signalCount": 8,
-      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
-      "signals": [
-        "Hacker News: Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
-        "GitHub: mikehasa/golive-skill",
-        "GitHub: tin-computer/tin"
+        "GitHub: HermannBjorgvin/Clawdmeter",
+        "GitHub: rahilp/second-brain-cloudflare",
+        "GitHub: smithersai/claude-p"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 7,
+      "signalCount": 6,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Hacker News: Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
         "OpenAI: Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
-        "GitHub: jaredpalmer/kev"
+        "GitHub: stormzhang/token-tracker"
+      ]
+    },
+    {
+      "topic": "Open weights",
+      "signalCount": 5,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "signals": [
+        "Hacker News: Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
+        "GitHub: stormzhang/token-tracker",
+        "GitHub: google-gemini/gemini-cli"
       ]
     },
     {
       "topic": "Evaluation",
-      "signalCount": 4,
+      "signalCount": 3,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
-        "GitHub: AbdelStark/awesome-typesafe-jev",
-        "GitHub: MinishLab/semble"
+        "GitHub: MinishLab/semble",
+        "GitHub: LearningCircuit/local-deep-research"
+      ]
+    },
+    {
+      "topic": "Interfaces",
+      "signalCount": 3,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "signals": [
+        "GitHub: HermannBjorgvin/Clawdmeter",
+        "GitHub: Unagi-cq/cdp-bridge-mcp",
+        "GitHub: smithersai/claude-p"
       ]
     }
   ],
