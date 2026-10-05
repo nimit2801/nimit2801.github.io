@@ -1,19 +1,36 @@
 {
-  "generatedAt": "2026-10-05T04:56:28Z",
+  "generatedAt": "2026-10-05T16:58:46Z",
   "windowDays": 7,
-  "summary": "The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.",
+  "summary": "This cycle says event-driven and browser/MCP plumbing is becoming part of the agent conversation. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 39,
+    "items": 44,
     "sources": {
-      "GitHub": 39
+      "GitHub": 43,
+      "Hacker News": 1
     }
   },
   "highlights": [
     {
+      "title": "Launch HN: Vespper (YC F24) – SOTA Docx MCP",
+      "source": "Hacker News",
+      "url": "https://www.vespper.com/blog/launching-vespper-docx-mcp",
+      "meta": "37 pts · 17 comments",
+      "topics": [
+        "Tool use",
+        "Evaluation",
+        "Open weights",
+        "Coding agents"
+      ],
+      "publishedAt": "2026-09-28T17:34:36Z",
+      "score": 180,
+      "summary": "Hey HN! We&#x27;re Dudu and Topaz from Vespper ( https:&#x2F;&#x2F;vespper.com ). Vespper is an MCP that lets AI agents efficiently edit Word documents, powered by our fine-tuned model. It&#x27;s currently 3× faster, 2× cheaper and more accurate than the closest alternative. Check out an overview of how the product works here: https:&#x2F;&#x2F;youtu.be&#x2F;odKxsgPjzzw We came to work on this problem after spending a year building an AI document editor for pharma companies. Before that, Topaz(myself) was a senior SWE at Snyk, working on distributed systems, and Dudu was a deep learning engineer at Viz.ai, building computer vision models for stroke detection. Our editor helped pharma companies generate regulatory documents (e.g. CSRs) to speed up their submissions. Initially, the output was Markdown, displayed in a WYSIWYG editor. However, users preferred working with their own Word templates. That&#x27;s when the problems began. AI agents aren&#x27;t great at editing Word documents. A Word document is a zip file of verbose XML files following the OOXML spec. Even \"small\" changes require backflips, for example: adding a numbered list requires creating an entry in numbering.xml with a fresh ID and linking it back in document.xml, bolding a sentence requires splitting it into 3+ run elements. The list goes on. This makes editing the zip directly (unzip + grep + sed) a bad idea for agents because they burn a lot of time + tokens on these mechanics. In practice, today&#x27;s tooling falls into roughly three categories. You can let the agent write code against low-level libraries like python-docx or the Open XML SDK, you can give it an MCP with opinionated editing tools (SuperDoc, Office CLI, Adeu, etc), or you can round-trip the file through Markdown&#x2F;HTML with something like pandoc&#x2F;mammoth.js. None of them really work. The first two categories still burn the agent&#x27;s context on Word mechanics instead of the task at hand (MCPs also introduce a new DSL to learn), and the third is very lossy (pandoc&#x2F;mammoth.js&#x2F;etc don&#x27;t preserve enough fidelity). From firsthand experience, these problems hurt performance in downstream tasks. When we tried having our agent fill large documents, things broke quickly. The context window was already packed with customer data (files, user context, global rules, etc.), and the agent burned tokens + time on exploring the document and debugging failed edits. Filling a single CSR (clinical study report) took ~50 minutes, and the result was bad (missed fields&#x2F;sections, broken styling, etc.). Harvey.ai&#x27;s team reached similar conclusions: https:&#x2F;&#x2F;www.harvey.ai&#x2F;blog&#x2F;building-an-agent-for-complex-doc... That&#x27;s when we shifted our focus. We designed an MCP that lets agents edit Word docs as if they were editing HTML. The agent receives HTML, makes find-and-replace edits, and we reconcile those edits back into the original .docx file. We picked HTML over Markdown because it&#x27;s structurally much closer to OOXML and because CSS associates styles with elements roughly the way OOXML does. We had to write our own DOCX→HTML converter, since pandoc and mammoth.js didn&#x27;t preserve enough fidelity. To be clear, our DOCX → HTML conversion is lossy too. That&#x27;s fine though, because we never convert the HTML back to DOCX. The HTML is just a projection for the agent, so it only needs enough fidelity for the agent to understand the structure and styling of what it&#x27;s editing. The original file stays the source of truth, and we mutate it in place. This also means the agent doesn&#x27;t need to learn a new DSL. Editing a Word document feels just like editing an HTML file on the file system, something agents are already great at. A lot of DOCX MCPs hand agents dozens or even hundreds of tools to figure out on the fly. Our MCP exposes just three tools (read, search, edit). The Word document is completely abstracted. After an agent sends us an edit request (an \"old_html\" and \"new_html\" pair), we reconcile it to the original .docx file. The reconciliation is powered by our fine-tuned model, a 3-8B base with a LoRA adapter. It takes the HTML diff as input along with the original localized OOXML block and emits the new OOXML. The \"localization\" is done deterministically: we take the anchors the agent specifies and we try to find their XML twins, so the reconciler model has a single responsibility. On this narrow task a small model reaches the level of a frontier, well prompt-tuned model, while being small and fast enough to sit in the hot path. This project turned into months of work, but we&#x27;re happy to release our v1. Our internal benchmark shows it&#x27;s more accurate than the DOCX skill and raw python-docx while being ~2x cheaper and ~3x faster, mostly because it takes 3 tool calls (p50) per task whereas the DOCX skill takes 10 and Office CLI takes 13. Things aren&#x27;t perfect yet. For example, we don&#x27;t support manipulating images or comments at the moment. That said, we&#x27;re already seeing people use our MCP in various ways: - Legal tech companies powering their live-editing flow in Office.js. - AI startup optimizing people’s resumes and applying on their behalf. - Govtech who need to draft policy memos. - A life sciences startup using long-running agents to complete regulatory forms. A note on privacy: our MCP runs in the cloud, so users send us their .docx files. We don&#x27;t train on user data, and teams can opt for ZDR or self-hosting. There&#x27;s a free tier with 500 edits a month, and we’d love you all to try. We want to bump that later, but we&#x27;re a small team and running a fine-tuned model isn&#x27;t cheap :( We&#x27;d love to hear your ideas and comments about docx editing in general! We&#x27;ll be in the comments for the next few hours to respond",
+      "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
+    },
+    {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "107240 stars · updated Mon, 05 Oct 2026 01:39:01 UTC",
+      "meta": "107231 stars · updated Mon, 05 Oct 2026 11:07:50 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -21,7 +38,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 672966,
+      "score": 672914,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -29,7 +46,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9154 stars · updated Mon, 05 Oct 2026 04:43:36 UTC",
+      "meta": "9153 stars · updated Mon, 05 Oct 2026 06:05:23 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -37,7 +54,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 56700,
+      "score": 56694,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -51,7 +68,24 @@
     {
       "key": "hacker-news",
       "label": "Hacker News",
-      "items": []
+      "items": [
+        {
+          "title": "Launch HN: Vespper (YC F24) – SOTA Docx MCP",
+          "source": "Hacker News",
+          "url": "https://www.vespper.com/blog/launching-vespper-docx-mcp",
+          "meta": "37 pts · 17 comments",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "Open weights",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-09-28T17:34:36Z",
+          "score": 180,
+          "summary": "Hey HN! We&#x27;re Dudu and Topaz from Vespper ( https:&#x2F;&#x2F;vespper.com ). Vespper is an MCP that lets AI agents efficiently edit Word documents, powered by our fine-tuned model. It&#x27;s currently 3× faster, 2× cheaper and more accurate than the closest alternative. Check out an overview of how the product works here: https:&#x2F;&#x2F;youtu.be&#x2F;odKxsgPjzzw We came to work on this problem after spending a year building an AI document editor for pharma companies. Before that, Topaz(myself) was a senior SWE at Snyk, working on distributed systems, and Dudu was a deep learning engineer at Viz.ai, building computer vision models for stroke detection. Our editor helped pharma companies generate regulatory documents (e.g. CSRs) to speed up their submissions. Initially, the output was Markdown, displayed in a WYSIWYG editor. However, users preferred working with their own Word templates. That&#x27;s when the problems began. AI agents aren&#x27;t great at editing Word documents. A Word document is a zip file of verbose XML files following the OOXML spec. Even \"small\" changes require backflips, for example: adding a numbered list requires creating an entry in numbering.xml with a fresh ID and linking it back in document.xml, bolding a sentence requires splitting it into 3+ run elements. The list goes on. This makes editing the zip directly (unzip + grep + sed) a bad idea for agents because they burn a lot of time + tokens on these mechanics. In practice, today&#x27;s tooling falls into roughly three categories. You can let the agent write code against low-level libraries like python-docx or the Open XML SDK, you can give it an MCP with opinionated editing tools (SuperDoc, Office CLI, Adeu, etc), or you can round-trip the file through Markdown&#x2F;HTML with something like pandoc&#x2F;mammoth.js. None of them really work. The first two categories still burn the agent&#x27;s context on Word mechanics instead of the task at hand (MCPs also introduce a new DSL to learn), and the third is very lossy (pandoc&#x2F;mammoth.js&#x2F;etc don&#x27;t preserve enough fidelity). From firsthand experience, these problems hurt performance in downstream tasks. When we tried having our agent fill large documents, things broke quickly. The context window was already packed with customer data (files, user context, global rules, etc.), and the agent burned tokens + time on exploring the document and debugging failed edits. Filling a single CSR (clinical study report) took ~50 minutes, and the result was bad (missed fields&#x2F;sections, broken styling, etc.). Harvey.ai&#x27;s team reached similar conclusions: https:&#x2F;&#x2F;www.harvey.ai&#x2F;blog&#x2F;building-an-agent-for-complex-doc... That&#x27;s when we shifted our focus. We designed an MCP that lets agents edit Word docs as if they were editing HTML. The agent receives HTML, makes find-and-replace edits, and we reconcile those edits back into the original .docx file. We picked HTML over Markdown because it&#x27;s structurally much closer to OOXML and because CSS associates styles with elements roughly the way OOXML does. We had to write our own DOCX→HTML converter, since pandoc and mammoth.js didn&#x27;t preserve enough fidelity. To be clear, our DOCX → HTML conversion is lossy too. That&#x27;s fine though, because we never convert the HTML back to DOCX. The HTML is just a projection for the agent, so it only needs enough fidelity for the agent to understand the structure and styling of what it&#x27;s editing. The original file stays the source of truth, and we mutate it in place. This also means the agent doesn&#x27;t need to learn a new DSL. Editing a Word document feels just like editing an HTML file on the file system, something agents are already great at. A lot of DOCX MCPs hand agents dozens or even hundreds of tools to figure out on the fly. Our MCP exposes just three tools (read, search, edit). The Word document is completely abstracted. After an agent sends us an edit request (an \"old_html\" and \"new_html\" pair), we reconcile it to the original .docx file. The reconciliation is powered by our fine-tuned model, a 3-8B base with a LoRA adapter. It takes the HTML diff as input along with the original localized OOXML block and emits the new OOXML. The \"localization\" is done deterministically: we take the anchors the agent specifies and we try to find their XML twins, so the reconciler model has a single responsibility. On this narrow task a small model reaches the level of a frontier, well prompt-tuned model, while being small and fast enough to sit in the hot path. This project turned into months of work, but we&#x27;re happy to release our v1. Our internal benchmark shows it&#x27;s more accurate than the DOCX skill and raw python-docx while being ~2x cheaper and ~3x faster, mostly because it takes 3 tool calls (p50) per task whereas the DOCX skill takes 10 and Office CLI takes 13. Things aren&#x27;t perfect yet. For example, we don&#x27;t support manipulating images or comments at the moment. That said, we&#x27;re already seeing people use our MCP in various ways: - Legal tech companies powering their live-editing flow in Office.js. - AI startup optimizing people’s resumes and applying on their behalf. - Govtech who need to draft policy memos. - A life sciences startup using long-running agents to complete regulatory forms. A note on privacy: our MCP runs in the cloud, so users send us their .docx files. We don&#x27;t train on user data, and teams can opt for ZDR or self-hosting. There&#x27;s a free tier with 500 edits a month, and we’d love you all to try. We want to bump that later, but we&#x27;re a small team and running a fine-tuned model isn&#x27;t cheap :( We&#x27;d love to hear your ideas and comments about docx editing in general! We&#x27;ll be in the comments for the next few hours to respond",
+          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
+        }
+      ]
     },
     {
       "key": "reddit",
@@ -71,7 +105,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "107240 stars · updated Mon, 05 Oct 2026 01:39:01 UTC",
+          "meta": "107231 stars · updated Mon, 05 Oct 2026 11:07:50 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -79,7 +113,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 672966,
+          "score": 672914,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -87,7 +121,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9154 stars · updated Mon, 05 Oct 2026 04:43:36 UTC",
+          "meta": "9153 stars · updated Mon, 05 Oct 2026 06:05:23 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -95,7 +129,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 56700,
+          "score": 56694,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -103,14 +137,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6182 stars · updated Sat, 03 Oct 2026 06:12:17 UTC",
+          "meta": "6184 stars · updated Mon, 05 Oct 2026 09:24:41 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 37758,
+          "score": 37770,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -118,7 +152,7 @@
           "title": "feder-cr/dots",
           "source": "GitHub",
           "url": "https://github.com/feder-cr/dots",
-          "meta": "2605 stars · updated Sat, 03 Oct 2026 15:21:24 UTC",
+          "meta": "2612 stars · updated Sat, 03 Oct 2026 15:21:24 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -126,7 +160,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-10-03T15:21:24Z",
-          "score": 16684,
+          "score": 16726,
           "summary": "Open-source dots for the web: an AI agent with its own browser, one that does not get blocked.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -136,62 +170,62 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 21,
+      "signalCount": 24,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
+        "Hacker News: Launch HN: Vespper (YC F24) – SOTA Docx MCP",
         "GitHub: feder-cr/dots",
-        "GitHub: nanaism/yomiyasu",
-        "GitHub: edenfunf/reelmimic"
+        "GitHub: nanaism/yomiyasu"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 19,
+      "signalCount": 24,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
+        "Hacker News: Launch HN: Vespper (YC F24) – SOTA Docx MCP",
         "GitHub: feder-cr/dots",
-        "GitHub: nanaism/yomiyasu",
-        "GitHub: edenfunf/reelmimic"
+        "GitHub: nanaism/yomiyasu"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 17,
+      "signalCount": 21,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "GitHub: nykooi1/vibe-wise",
-        "GitHub: xop01/ai_goodpractice",
-        "GitHub: soliluqoy/midnight.app"
+        "GitHub: lucasmarkes/hairline",
+        "GitHub: xop01/ai_goodpractice"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 13,
+      "signalCount": 15,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
+        "Hacker News: Launch HN: Vespper (YC F24) – SOTA Docx MCP",
         "GitHub: feder-cr/dots",
-        "GitHub: arjunkshah12345-hash/openpages",
-        "GitHub: Router0824/OpsPilot-AI"
-      ]
-    },
-    {
-      "topic": "Multi-agent workflows",
-      "signalCount": 12,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
-      "signals": [
-        "GitHub: edenfunf/reelmimic",
-        "GitHub: xop01/ai_goodpractice",
-        "GitHub: justxor/ChatGPT_ru"
+        "GitHub: arjunkshah12345-hash/openpages"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 11,
+      "signalCount": 12,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "GitHub: feder-cr/dots",
         "GitHub: vayungodara/cliproxy-rs",
         "GitHub: composio-community/open-dot"
+      ]
+    },
+    {
+      "topic": "Multi-agent workflows",
+      "signalCount": 11,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "signals": [
+        "GitHub: edenfunf/reelmimic",
+        "GitHub: xop01/ai_goodpractice",
+        "GitHub: justxor/ChatGPT_ru"
       ]
     }
   ],
