@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-18T03:53:13Z",
+  "generatedAt": "2026-10-18T08:43:34Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 38,
+    "items": 39,
     "sources": {
-      "GitHub": 31,
+      "GitHub": 32,
       "Hacker News": 2,
       "OpenAI": 5
     }
@@ -72,7 +72,7 @@
       "title": "Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data",
       "source": "Hacker News",
       "url": "https://news.ycombinator.com/item?id=50073471",
-      "meta": "36 pts · 20 comments",
+      "meta": "36 pts · 21 comments",
       "topics": [
         "Tool use",
         "Multi-agent workflows",
@@ -80,7 +80,7 @@
         "Open weights"
       ],
       "publishedAt": "2026-10-13T15:41:00Z",
-      "score": 232,
+      "score": 235,
       "summary": "Hey Hacker News! I&#x27;m Eric, the founder of Consus. We route all AI requests to ITAR restricted and controlled unclassified information (CUI) compliant infrastructure. Consus itself satisfies ITAR restrictions, and we recently completed our FedRAMP equivalency audit against the 410 FedRAMP High controls. FedRAMP High is the U.S. government’s strictest security baseline for cloud services handling sensitive unclassified data. A breach of this data could cause severe or catastrophic harm. Achieving FedRAMP equivalency, or authorization, is required before processing CUI information. Demo: https:&#x2F;&#x2F;youtu.be&#x2F;6MYxJe6P4oY Aerospace and defense is experiencing rapid growth. Unfortunately, most companies are struggling to use AI because of necessary data protections & compliance risk. These companies can move even faster if they could use the AI tools that most other industries take for granted. I spent most of my career prior to Consus in aerospace & defense. I launched national security payloads at SpaceX, and was an early employee at Castelion. I’ve watched first hand how compliance red-tape makes it difficult for companies to adopt new technologies and trust vendors that touch their sensitive data. For example, I worked with a satellite manufacturer that doesn’t allow any AI tools, even for non-sensitive work. Even as AI has become extremely useful over the past 9-12 months, I was surprised by how many aerospace & defense companies refused to touch it. They could see how it could be helpful, but they were scared about model providers training on their data, violating an ITAR rule, or risk losing new business because of a failed cyber assessment. These are all rational fears. There were a lot of ways to solve some&#x2F;all of these problems, but we focused on building a compliant AI inference layer that can \"plug\" into any AI tool or workflow. Just as OpenRouter integrates with most tools, Consus can connect to tools like ChatGPT or Claude, open source tools including the Pi coding agent or Open WebUI, or integrate with applications built and maintained by individual organizations. Almost no aerospace & defense company lives in all three major GovClouds (AWS, Azure, Google). When I mapped where frontier models can legally run for ITAR and CUI work, each provider had some subset of models, and each model achieved varying levels of compliance. Our customers don’t think in terms of cloud providers. They think about the data controls they require, and the model they want to use. That is why we built the compliance suffix. Under the hood, every request hits a single OpenAI-compatible endpoint, where keys are verified and policy is enforced before anything touches inference. Every model name must carry a compliance suffix, such as gpt-5.6-sol:fedramp-high or claude-opus-5-5:itar, and any bare model name is rejected. We never proxy to the standard commercial endpoints. Our customers are also able to build an allowlist of models, and assign spend & model restrictions to individual users in the organization. This is all handled through our Consus Portal where teams can manage spend, keys, and policies. A typical question we hear is why not just use Bedrock in AWS GovCloud or Azure Government directly. For small teams, just getting access to these platforms is difficult. For larger organizations, GovCloud lets you inherit some but not all of the controls needed to handle sensitive data. Also, models are split across providers: GPT-5.6 Sol is only available in Azure Government, while Claude Opus 5.5 is served through Bedrock in AWS GovCloud. If you want both, you are standing up and securing two separate government cloud environments. We run all of them behind one endpoint so customers don’t have to pick a cloud, and we handle the compliance work for each one. Given the data sensitivities, Consus does not store any customer data at rest. All prompts and completions stay in memory only for the length of the request and are never logged or written to disk. Zero data retention is strictly enforced both on ourselves and the infrastructure&#x2F;model providers. We do keep metadata on each request and response for billing and audit purposes. Consus is not self-serve by design. ITAR requires us to know exactly who is on the other end of every key, so we verify every organization and put a contract in place before issuing API keys. We charge our customers a compliance fee starting at $40&#x2F;mo&#x2F;seat plus AI tokens at cost. We are actively serving customers, and would love any feedback from security experts, or developers&#x2F;engineers working in highly regulated industries! References: API Documentation: https:&#x2F;&#x2F;gateway.consus.io&#x2F;overview Security & Architecture: https:&#x2F;&#x2F;gateway.consus.io&#x2F;security Compliance Details: https:&#x2F;&#x2F;consus.io&#x2F;compliance",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -88,7 +88,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "107431 stars · updated Sun, 18 Oct 2026 01:34:41 UTC",
+      "meta": "107434 stars · updated Sun, 18 Oct 2026 01:34:41 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -96,7 +96,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 674192,
+      "score": 674206,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -104,7 +104,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9281 stars · updated Sun, 18 Oct 2026 03:16:44 UTC",
+      "meta": "9282 stars · updated Sun, 18 Oct 2026 08:37:01 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -112,7 +112,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 57520,
+      "score": 57526,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -215,7 +215,7 @@
           "title": "Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data",
           "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=50073471",
-          "meta": "36 pts · 20 comments",
+          "meta": "36 pts · 21 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -223,7 +223,7 @@
             "Open weights"
           ],
           "publishedAt": "2026-10-13T15:41:00Z",
-          "score": 232,
+          "score": 235,
           "summary": "Hey Hacker News! I&#x27;m Eric, the founder of Consus. We route all AI requests to ITAR restricted and controlled unclassified information (CUI) compliant infrastructure. Consus itself satisfies ITAR restrictions, and we recently completed our FedRAMP equivalency audit against the 410 FedRAMP High controls. FedRAMP High is the U.S. government’s strictest security baseline for cloud services handling sensitive unclassified data. A breach of this data could cause severe or catastrophic harm. Achieving FedRAMP equivalency, or authorization, is required before processing CUI information. Demo: https:&#x2F;&#x2F;youtu.be&#x2F;6MYxJe6P4oY Aerospace and defense is experiencing rapid growth. Unfortunately, most companies are struggling to use AI because of necessary data protections & compliance risk. These companies can move even faster if they could use the AI tools that most other industries take for granted. I spent most of my career prior to Consus in aerospace & defense. I launched national security payloads at SpaceX, and was an early employee at Castelion. I’ve watched first hand how compliance red-tape makes it difficult for companies to adopt new technologies and trust vendors that touch their sensitive data. For example, I worked with a satellite manufacturer that doesn’t allow any AI tools, even for non-sensitive work. Even as AI has become extremely useful over the past 9-12 months, I was surprised by how many aerospace & defense companies refused to touch it. They could see how it could be helpful, but they were scared about model providers training on their data, violating an ITAR rule, or risk losing new business because of a failed cyber assessment. These are all rational fears. There were a lot of ways to solve some&#x2F;all of these problems, but we focused on building a compliant AI inference layer that can \"plug\" into any AI tool or workflow. Just as OpenRouter integrates with most tools, Consus can connect to tools like ChatGPT or Claude, open source tools including the Pi coding agent or Open WebUI, or integrate with applications built and maintained by individual organizations. Almost no aerospace & defense company lives in all three major GovClouds (AWS, Azure, Google). When I mapped where frontier models can legally run for ITAR and CUI work, each provider had some subset of models, and each model achieved varying levels of compliance. Our customers don’t think in terms of cloud providers. They think about the data controls they require, and the model they want to use. That is why we built the compliance suffix. Under the hood, every request hits a single OpenAI-compatible endpoint, where keys are verified and policy is enforced before anything touches inference. Every model name must carry a compliance suffix, such as gpt-5.6-sol:fedramp-high or claude-opus-5-5:itar, and any bare model name is rejected. We never proxy to the standard commercial endpoints. Our customers are also able to build an allowlist of models, and assign spend & model restrictions to individual users in the organization. This is all handled through our Consus Portal where teams can manage spend, keys, and policies. A typical question we hear is why not just use Bedrock in AWS GovCloud or Azure Government directly. For small teams, just getting access to these platforms is difficult. For larger organizations, GovCloud lets you inherit some but not all of the controls needed to handle sensitive data. Also, models are split across providers: GPT-5.6 Sol is only available in Azure Government, while Claude Opus 5.5 is served through Bedrock in AWS GovCloud. If you want both, you are standing up and securing two separate government cloud environments. We run all of them behind one endpoint so customers don’t have to pick a cloud, and we handle the compliance work for each one. Given the data sensitivities, Consus does not store any customer data at rest. All prompts and completions stay in memory only for the length of the request and are never logged or written to disk. Zero data retention is strictly enforced both on ourselves and the infrastructure&#x2F;model providers. We do keep metadata on each request and response for billing and audit purposes. Consus is not self-serve by design. ITAR requires us to know exactly who is on the other end of every key, so we verify every organization and put a contract in place before issuing API keys. We charge our customers a compliance fee starting at $40&#x2F;mo&#x2F;seat plus AI tokens at cost. We are actively serving customers, and would love any feedback from security experts, or developers&#x2F;engineers working in highly regulated industries! References: API Documentation: https:&#x2F;&#x2F;gateway.consus.io&#x2F;overview Security & Architecture: https:&#x2F;&#x2F;gateway.consus.io&#x2F;security Compliance Details: https:&#x2F;&#x2F;consus.io&#x2F;compliance",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         }
@@ -247,7 +247,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "107431 stars · updated Sun, 18 Oct 2026 01:34:41 UTC",
+          "meta": "107434 stars · updated Sun, 18 Oct 2026 01:34:41 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -255,7 +255,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 674192,
+          "score": 674206,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -263,7 +263,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9281 stars · updated Sun, 18 Oct 2026 03:16:44 UTC",
+          "meta": "9282 stars · updated Sun, 18 Oct 2026 08:37:01 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -271,7 +271,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 57520,
+          "score": 57526,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -286,7 +286,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 38038,
+          "score": 38044,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -294,7 +294,7 @@
           "title": "Arekejoker/qwen21-nsfw-pose-skill",
           "source": "GitHub",
           "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
-          "meta": "2657 stars · updated Sat, 17 Oct 2026 04:54:54 UTC",
+          "meta": "2680 stars · updated Sat, 17 Oct 2026 04:54:54 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -302,7 +302,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-10-17T04:54:54Z",
-          "score": 17144,
+          "score": 17286,
           "summary": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw",
           "why": "The Moltbook/OpenClaw incident — 1.5M agent tokens exposed, CVSS 8.8 RCE, credential harvesting — is the Meltdown/Spectre moment for agent security. Every production agent deployer needs to understand what happened and why."
         }
@@ -311,6 +311,16 @@
   ],
   "tangentRadar": [
     {
+      "topic": "Coding agents",
+      "signalCount": 22,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "signals": [
+        "Hacker News: Codex CLI installs a persistent, self-updating background daemon by default",
+        "OpenAI: Benefit Street Partners answers questions faster with Codex",
+        "OpenAI: Amp puts AI agents to work beyond code with OpenAI models"
+      ]
+    },
+    {
       "topic": "Tool use",
       "signalCount": 21,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
@@ -318,16 +328,6 @@
         "Hacker News: Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data",
         "Hacker News: Codex CLI installs a persistent, self-updating background daemon by default",
         "OpenAI: Benefit Street Partners answers questions faster with Codex"
-      ]
-    },
-    {
-      "topic": "Coding agents",
-      "signalCount": 21,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
-      "signals": [
-        "Hacker News: Codex CLI installs a persistent, self-updating background daemon by default",
-        "OpenAI: Benefit Street Partners answers questions faster with Codex",
-        "OpenAI: Amp puts AI agents to work beyond code with OpenAI models"
       ]
     },
     {
@@ -352,12 +352,12 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 10,
+      "signalCount": 11,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "GitHub: Caho1/open-claude-ui",
-        "GitHub: 0xgetz/sorin-bulk-apikey",
-        "GitHub: i12bp8/decomp.wtf"
+        "GitHub: Gathin23/tv-vibehack",
+        "GitHub: 0xgetz/sorin-bulk-apikey"
       ]
     },
     {
