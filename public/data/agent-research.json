@@ -1,15 +1,30 @@
 {
-  "generatedAt": "2026-10-28T04:56:28Z",
+  "generatedAt": "2026-10-28T14:57:39Z",
   "windowDays": 7,
   "summary": "The strongest current signal is that agentic AI keeps moving away from vague demos and toward workflows people can actually run, inspect, and compare.",
   "sourceStats": {
     "items": 50,
     "sources": {
-      "GitHub": 48,
-      "Hacker News": 2
+      "GitHub": 47,
+      "Hacker News": 2,
+      "OpenAI": 1
     }
   },
   "highlights": [
+    {
+      "title": "Legora is building the agentic operating system for legal work",
+      "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
+      "publishedAt": "Wed, 28 Oct 2026 09:30:00 GMT",
+      "source": "OpenAI",
+      "meta": "Wed, 28 Oct 2026 09:30:00 GMT",
+      "topics": [
+        "Major labs",
+        "Interfaces"
+      ],
+      "score": 180,
+      "summary": "Legora is building the agentic operating system for legal work",
+      "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+    },
     {
       "title": "Show HN: Omnara – Open-source alternative to Claude Managed Agents",
       "source": "Hacker News",
@@ -30,7 +45,7 @@
       "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
       "source": "Hacker News",
       "url": "https://github.com/FrigadeHQ/hob",
-      "meta": "167 pts · 42 comments",
+      "meta": "170 pts · 42 comments",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -38,7 +53,7 @@
         "Major labs"
       ],
       "publishedAt": "2026-10-26T16:12:29Z",
-      "score": 560,
+      "score": 566,
       "summary": "Hey HN, I&#x27;m Christian and this is a new OSS project I&#x27;ve been noodling on for the last couple of weeks. Hob is a free, MIT-licensed desktop app for Mac, Windows and Linux that works on your files the way the Claude and ChatGPT desktop apps do, except the model runs on your own computer. It uses open-weight models (currently Gemma 4 and gpt-oss). All your chats and files never leave your system. The only things that go online are web search (can be turned off in settings) and any MCP connectors you add yourself. Main features: - Automatically finds the best open-weight model for your hardware on first install (Mac&#x2F;Linux&#x2F;Windows) - Writes sandboxed Python code for ad hoc tools (data processing, document conversion, graphs etc.) - Built-in web search (powered by SearXNG) - MCP support - Image recognition - CRUD to your local filesystem - Works fully offline with no internet Before building this I tried every local AI app I could find, but it seemed each one had different problems. The main thing I noticed is that none of them could do what the ChatGPT and Claude apps do with your files, e.g. read and change files in a folder, look at images, run code in a sandbox, draw a chart. The most advanced thing any of them did was paste a plain text file into a small context window, which basically failed as soon as you had a file larger than a few KB. I couldn&#x27;t find anything that could easily parse images and bigger PDFs. The OSS solutions that were more advanced all seemed to default to hosted models (either OSS or closed), which defeats the entire point of the privacy that on-device OSS offers. They also seemed to push towards an account&#x2F;open-core style business. I build it using Electron bridged with llama.cpp in its own process. On initial load, the system will try and figure out if you have a compatible graphics card and if not default to CPU-only (I ran into a lot of issues of graphics card beeing seemingly compatible but then crashing on first query, there&#x27;s a whole saga to this lol). Code execution happens in a sandbox that can only write to the chat&#x27;s folder and has no network unless asked (sandbox-exec on macOS, Landlock on Linux and a low-integrity process on Windows). Images go to a small Qwen3-VL model. Dictation is a local Whisper model. The hardest part was definitely to get the smaller models to use tools reliably. Ran into a ton of issues of 4B models happily saying \"here&#x27;s your chart\" without ever calling the chart tool or get stuck in an infinite call loop. I spent a fair amount of the work building guards vs tweaking prompts (that didn&#x27;t really work for small models). I understand the pushback that local models are weaker than frontier cloud models. This is true, but for most tasks for most normal people, I&#x27;d argue you rarely need the newest frontier model. From my own evals, systems with 16+ GB of RAM do really well, and if you have a GPU or more RAM, you get very close to what you&#x27;ll get out of the box with a frontier hosted model. Excited to hear what you think and see how it runs on other systems!",
       "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
     },
@@ -46,7 +61,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "108586 stars · updated Wed, 28 Oct 2026 02:26:41 UTC",
+      "meta": "108594 stars · updated Wed, 28 Oct 2026 02:26:41 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -54,7 +69,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 681366,
+      "score": 681428,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -62,7 +77,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9431 stars · updated Tue, 27 Oct 2026 20:23:09 UTC",
+      "meta": "9434 stars · updated Wed, 28 Oct 2026 14:56:27 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -70,7 +85,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 58476,
+      "score": 58492,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -79,7 +94,22 @@
     {
       "key": "major-labs",
       "label": "Major labs",
-      "items": []
+      "items": [
+        {
+          "title": "Legora is building the agentic operating system for legal work",
+          "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
+          "publishedAt": "Wed, 28 Oct 2026 09:30:00 GMT",
+          "source": "OpenAI",
+          "meta": "Wed, 28 Oct 2026 09:30:00 GMT",
+          "topics": [
+            "Major labs",
+            "Interfaces"
+          ],
+          "score": 180,
+          "summary": "Legora is building the agentic operating system for legal work",
+          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+        }
+      ]
     },
     {
       "key": "hacker-news",
@@ -89,7 +119,7 @@
           "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
           "source": "Hacker News",
           "url": "https://github.com/FrigadeHQ/hob",
-          "meta": "167 pts · 42 comments",
+          "meta": "170 pts · 42 comments",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -97,7 +127,7 @@
             "Major labs"
           ],
           "publishedAt": "2026-10-26T16:12:29Z",
-          "score": 560,
+          "score": 566,
           "summary": "Hey HN, I&#x27;m Christian and this is a new OSS project I&#x27;ve been noodling on for the last couple of weeks. Hob is a free, MIT-licensed desktop app for Mac, Windows and Linux that works on your files the way the Claude and ChatGPT desktop apps do, except the model runs on your own computer. It uses open-weight models (currently Gemma 4 and gpt-oss). All your chats and files never leave your system. The only things that go online are web search (can be turned off in settings) and any MCP connectors you add yourself. Main features: - Automatically finds the best open-weight model for your hardware on first install (Mac&#x2F;Linux&#x2F;Windows) - Writes sandboxed Python code for ad hoc tools (data processing, document conversion, graphs etc.) - Built-in web search (powered by SearXNG) - MCP support - Image recognition - CRUD to your local filesystem - Works fully offline with no internet Before building this I tried every local AI app I could find, but it seemed each one had different problems. The main thing I noticed is that none of them could do what the ChatGPT and Claude apps do with your files, e.g. read and change files in a folder, look at images, run code in a sandbox, draw a chart. The most advanced thing any of them did was paste a plain text file into a small context window, which basically failed as soon as you had a file larger than a few KB. I couldn&#x27;t find anything that could easily parse images and bigger PDFs. The OSS solutions that were more advanced all seemed to default to hosted models (either OSS or closed), which defeats the entire point of the privacy that on-device OSS offers. They also seemed to push towards an account&#x2F;open-core style business. I build it using Electron bridged with llama.cpp in its own process. On initial load, the system will try and figure out if you have a compatible graphics card and if not default to CPU-only (I ran into a lot of issues of graphics card beeing seemingly compatible but then crashing on first query, there&#x27;s a whole saga to this lol). Code execution happens in a sandbox that can only write to the chat&#x27;s folder and has no network unless asked (sandbox-exec on macOS, Landlock on Linux and a low-integrity process on Windows). Images go to a small Qwen3-VL model. Dictation is a local Whisper model. The hardest part was definitely to get the smaller models to use tools reliably. Ran into a ton of issues of 4B models happily saying \"here&#x27;s your chart\" without ever calling the chart tool or get stuck in an infinite call loop. I spent a fair amount of the work building guards vs tweaking prompts (that didn&#x27;t really work for small models). I understand the pushback that local models are weaker than frontier cloud models. This is true, but for most tasks for most normal people, I&#x27;d argue you rarely need the newest frontier model. From my own evals, systems with 16+ GB of RAM do really well, and if you have a GPU or more RAM, you get very close to what you&#x27;ll get out of the box with a frontier hosted model. Excited to hear what you think and see how it runs on other systems!",
           "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
         },
@@ -137,7 +167,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "108586 stars · updated Wed, 28 Oct 2026 02:26:41 UTC",
+          "meta": "108594 stars · updated Wed, 28 Oct 2026 02:26:41 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -145,7 +175,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 681366,
+          "score": 681428,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -153,7 +183,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9431 stars · updated Tue, 27 Oct 2026 20:23:09 UTC",
+          "meta": "9434 stars · updated Wed, 28 Oct 2026 14:56:27 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -161,7 +191,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 58476,
+          "score": 58492,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -169,14 +199,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6311 stars · updated Tue, 27 Oct 2026 07:36:17 UTC",
+          "meta": "6315 stars · updated Tue, 27 Oct 2026 07:36:17 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 38552,
+          "score": 38574,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -184,12 +214,12 @@
           "title": "HermannBjorgvin/Clawdmeter",
           "source": "GitHub",
           "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "2297 stars · updated Wed, 28 Oct 2026 00:35:53 UTC",
+          "meta": "2298 stars · updated Wed, 28 Oct 2026 12:43:24 UTC",
           "topics": [
             "Coding agents"
           ],
           "publishedAt": "2026-05-11T03:07:49Z",
-          "score": 14768,
+          "score": 14774,
           "summary": "ESP32 display that shows you your Claude Code usage",
           "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
         }
@@ -209,22 +239,12 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 26,
+      "signalCount": 25,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "GitHub: andyhuo520/digital-human-koubo",
         "GitHub: DenisSergeevitch/ex-ussr-kinship-research",
         "GitHub: udhaykumarbala/cleanyourtv-app"
-      ]
-    },
-    {
-      "topic": "Open weights",
-      "signalCount": 21,
-      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
-      "signals": [
-        "Hacker News: Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
-        "Hacker News: Show HN: Omnara – Open-source alternative to Claude Managed Agents",
-        "GitHub: ZiChuanLan/agent-purge"
       ]
     },
     {
@@ -234,17 +254,27 @@
       "signals": [
         "Hacker News: Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
         "Hacker News: Show HN: Omnara – Open-source alternative to Claude Managed Agents",
-        "GitHub: udhaykumarbala/cleanyourtv-app"
+        "OpenAI: Legora is building the agentic operating system for legal work"
+      ]
+    },
+    {
+      "topic": "Open weights",
+      "signalCount": 20,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "signals": [
+        "Hacker News: Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
+        "Hacker News: Show HN: Omnara – Open-source alternative to Claude Managed Agents",
+        "GitHub: ZiChuanLan/agent-purge"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 19,
+      "signalCount": 20,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
+        "OpenAI: Legora is building the agentic operating system for legal work",
         "GitHub: udhaykumarbala/cleanyourtv-app",
-        "GitHub: Motionsites-AI/claude-skill",
-        "GitHub: bhoomabrsr/skimlet"
+        "GitHub: Motionsites-AI/claude-skill"
       ]
     },
     {
