@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-02T05:19:21Z",
+  "generatedAt": "2026-11-02T18:01:47Z",
   "windowDays": 7,
   "summary": "This cycle says enterprise agents are going production-scale (SAP/Claude, Dell/Codex). The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 44,
+    "items": 46,
     "sources": {
-      "GitHub": 40,
-      "Hacker News": 2,
+      "GitHub": 43,
+      "Hacker News": 1,
       "OpenAI": 2
     }
   },
@@ -41,33 +41,17 @@
       "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
     },
     {
-      "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
-      "source": "Hacker News",
-      "url": "https://github.com/FrigadeHQ/hob",
-      "meta": "177 pts · 43 comments",
-      "topics": [
-        "Tool use",
-        "Evaluation",
-        "Open weights",
-        "Major labs"
-      ],
-      "publishedAt": "2026-10-26T16:12:29Z",
-      "score": 583,
-      "summary": "Hey HN, I&#x27;m Christian and this is a new OSS project I&#x27;ve been noodling on for the last couple of weeks. Hob is a free, MIT-licensed desktop app for Mac, Windows and Linux that works on your files the way the Claude and ChatGPT desktop apps do, except the model runs on your own computer. It uses open-weight models (currently Gemma 4 and gpt-oss). All your chats and files never leave your system. The only things that go online are web search (can be turned off in settings) and any MCP connectors you add yourself. Main features: - Automatically finds the best open-weight model for your hardware on first install (Mac&#x2F;Linux&#x2F;Windows) - Writes sandboxed Python code for ad hoc tools (data processing, document conversion, graphs etc.) - Built-in web search (powered by SearXNG) - MCP support - Image recognition - CRUD to your local filesystem - Works fully offline with no internet Before building this I tried every local AI app I could find, but it seemed each one had different problems. The main thing I noticed is that none of them could do what the ChatGPT and Claude apps do with your files, e.g. read and change files in a folder, look at images, run code in a sandbox, draw a chart. The most advanced thing any of them did was paste a plain text file into a small context window, which basically failed as soon as you had a file larger than a few KB. I couldn&#x27;t find anything that could easily parse images and bigger PDFs. The OSS solutions that were more advanced all seemed to default to hosted models (either OSS or closed), which defeats the entire point of the privacy that on-device OSS offers. They also seemed to push towards an account&#x2F;open-core style business. I build it using Electron bridged with llama.cpp in its own process. On initial load, the system will try and figure out if you have a compatible graphics card and if not default to CPU-only (I ran into a lot of issues of graphics card beeing seemingly compatible but then crashing on first query, there&#x27;s a whole saga to this lol). Code execution happens in a sandbox that can only write to the chat&#x27;s folder and has no network unless asked (sandbox-exec on macOS, Landlock on Linux and a low-integrity process on Windows). Images go to a small Qwen3-VL model. Dictation is a local Whisper model. The hardest part was definitely to get the smaller models to use tools reliably. Ran into a ton of issues of 4B models happily saying \"here&#x27;s your chart\" without ever calling the chart tool or get stuck in an infinite call loop. I spent a fair amount of the work building guards vs tweaking prompts (that didn&#x27;t really work for small models). I understand the pushback that local models are weaker than frontier cloud models. This is true, but for most tasks for most normal people, I&#x27;d argue you rarely need the newest frontier model. From my own evals, systems with 16+ GB of RAM do really well, and if you have a GPU or more RAM, you get very close to what you&#x27;ll get out of the box with a frontier hosted model. Excited to hear what you think and see how it runs on other systems!",
-      "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
-    },
-    {
       "title": "Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
       "source": "Hacker News",
       "url": "https://bbrouter.com/bbrouter/ben-eater-sap-1",
-      "meta": "49 pts · 10 comments",
+      "meta": "57 pts · 14 comments",
       "topics": [
         "Tool use",
         "Coding agents",
         "Interfaces"
       ],
       "publishedAt": "2026-11-01T00:10:30Z",
-      "score": 208,
+      "score": 236,
       "summary": "Hi HN, I kept wiring Ben Eater&#x27;s 8-bit computer wrong, so I built a realistic virtual breadboard editor. Some of the nice features are side-by-side diff, scope, schematics auto-sync, auto-router (BBRouter stands for breadboard router), and my favorites: upload from the real Arduino IDE and connect to your AI with MCP, let Claude & co build it or help you troubleshoot. The link is the SAP-1 running. You can orbit it, probe a hole with the scope, slow the clock down, play with the virtual displays for debugging, then you can actually build it following the step-by-step instructions. A side-goal is to create a community, there are quite a lot of simulators out there but mostly offline &#x2F; too abstract to realistically use it for a real build. I also never found one that had a decent UI&#x2F;UX and worked well on mobile or with a trackpad. Happy to answer anything, and tell me what breaks. p.s. Maker plan is $7&#x2F;month; code HACKERNEWS makes the first month free and then $5&#x2F;month for as long as you keep it.",
       "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
     },
@@ -75,7 +59,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "108661 stars · updated Mon, 02 Nov 2026 01:22:37 UTC",
+      "meta": "108671 stars · updated Mon, 02 Nov 2026 01:22:37 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -83,7 +67,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 681926,
+      "score": 681998,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -91,7 +75,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9479 stars · updated Mon, 02 Nov 2026 04:47:36 UTC",
+      "meta": "9483 stars · updated Mon, 02 Nov 2026 11:00:02 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -99,7 +83,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 58780,
+      "score": 58806,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -145,33 +129,17 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
-          "source": "Hacker News",
-          "url": "https://github.com/FrigadeHQ/hob",
-          "meta": "177 pts · 43 comments",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2026-10-26T16:12:29Z",
-          "score": 583,
-          "summary": "Hey HN, I&#x27;m Christian and this is a new OSS project I&#x27;ve been noodling on for the last couple of weeks. Hob is a free, MIT-licensed desktop app for Mac, Windows and Linux that works on your files the way the Claude and ChatGPT desktop apps do, except the model runs on your own computer. It uses open-weight models (currently Gemma 4 and gpt-oss). All your chats and files never leave your system. The only things that go online are web search (can be turned off in settings) and any MCP connectors you add yourself. Main features: - Automatically finds the best open-weight model for your hardware on first install (Mac&#x2F;Linux&#x2F;Windows) - Writes sandboxed Python code for ad hoc tools (data processing, document conversion, graphs etc.) - Built-in web search (powered by SearXNG) - MCP support - Image recognition - CRUD to your local filesystem - Works fully offline with no internet Before building this I tried every local AI app I could find, but it seemed each one had different problems. The main thing I noticed is that none of them could do what the ChatGPT and Claude apps do with your files, e.g. read and change files in a folder, look at images, run code in a sandbox, draw a chart. The most advanced thing any of them did was paste a plain text file into a small context window, which basically failed as soon as you had a file larger than a few KB. I couldn&#x27;t find anything that could easily parse images and bigger PDFs. The OSS solutions that were more advanced all seemed to default to hosted models (either OSS or closed), which defeats the entire point of the privacy that on-device OSS offers. They also seemed to push towards an account&#x2F;open-core style business. I build it using Electron bridged with llama.cpp in its own process. On initial load, the system will try and figure out if you have a compatible graphics card and if not default to CPU-only (I ran into a lot of issues of graphics card beeing seemingly compatible but then crashing on first query, there&#x27;s a whole saga to this lol). Code execution happens in a sandbox that can only write to the chat&#x27;s folder and has no network unless asked (sandbox-exec on macOS, Landlock on Linux and a low-integrity process on Windows). Images go to a small Qwen3-VL model. Dictation is a local Whisper model. The hardest part was definitely to get the smaller models to use tools reliably. Ran into a ton of issues of 4B models happily saying \"here&#x27;s your chart\" without ever calling the chart tool or get stuck in an infinite call loop. I spent a fair amount of the work building guards vs tweaking prompts (that didn&#x27;t really work for small models). I understand the pushback that local models are weaker than frontier cloud models. This is true, but for most tasks for most normal people, I&#x27;d argue you rarely need the newest frontier model. From my own evals, systems with 16+ GB of RAM do really well, and if you have a GPU or more RAM, you get very close to what you&#x27;ll get out of the box with a frontier hosted model. Excited to hear what you think and see how it runs on other systems!",
-          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
-        },
-        {
           "title": "Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
           "source": "Hacker News",
           "url": "https://bbrouter.com/bbrouter/ben-eater-sap-1",
-          "meta": "49 pts · 10 comments",
+          "meta": "57 pts · 14 comments",
           "topics": [
             "Tool use",
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-11-01T00:10:30Z",
-          "score": 208,
+          "score": 236,
           "summary": "Hi HN, I kept wiring Ben Eater&#x27;s 8-bit computer wrong, so I built a realistic virtual breadboard editor. Some of the nice features are side-by-side diff, scope, schematics auto-sync, auto-router (BBRouter stands for breadboard router), and my favorites: upload from the real Arduino IDE and connect to your AI with MCP, let Claude & co build it or help you troubleshoot. The link is the SAP-1 running. You can orbit it, probe a hole with the scope, slow the clock down, play with the virtual displays for debugging, then you can actually build it following the step-by-step instructions. A side-goal is to create a community, there are quite a lot of simulators out there but mostly offline &#x2F; too abstract to realistically use it for a real build. I also never found one that had a decent UI&#x2F;UX and worked well on mobile or with a trackpad. Happy to answer anything, and tell me what breaks. p.s. Maker plan is $7&#x2F;month; code HACKERNEWS makes the first month free and then $5&#x2F;month for as long as you keep it.",
           "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
         }
@@ -195,7 +163,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "108661 stars · updated Mon, 02 Nov 2026 01:22:37 UTC",
+          "meta": "108671 stars · updated Mon, 02 Nov 2026 01:22:37 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -203,7 +171,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 681926,
+          "score": 681998,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -211,7 +179,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9479 stars · updated Mon, 02 Nov 2026 04:47:36 UTC",
+          "meta": "9483 stars · updated Mon, 02 Nov 2026 11:00:02 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -219,7 +187,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 58780,
+          "score": 58806,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -227,14 +195,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6344 stars · updated Thu, 29 Oct 2026 07:59:20 UTC",
+          "meta": "6347 stars · updated Mon, 02 Nov 2026 16:26:47 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 38752,
+          "score": 38772,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -242,13 +210,13 @@
           "title": "heydamir/unslop",
           "source": "GitHub",
           "url": "https://github.com/heydamir/unslop",
-          "meta": "5069 stars · updated Sun, 01 Nov 2026 16:46:10 UTC",
+          "meta": "5924 stars · updated Sun, 01 Nov 2026 16:46:10 UTC",
           "topics": [
             "Coding agents",
             "Interfaces"
           ],
           "publishedAt": "2026-11-01T16:46:10Z",
-          "score": 31104,
+          "score": 36338,
           "summary": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         }
@@ -257,18 +225,8 @@
   ],
   "tangentRadar": [
     {
-      "topic": "Tool use",
-      "signalCount": 25,
-      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
-      "signals": [
-        "Hacker News: Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
-        "Hacker News: Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
-        "OpenAI: OpenAI and ServiceNow expand partnership across enterprise workflows"
-      ]
-    },
-    {
       "topic": "Coding agents",
-      "signalCount": 25,
+      "signalCount": 27,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
@@ -277,8 +235,18 @@
       ]
     },
     {
+      "topic": "Tool use",
+      "signalCount": 24,
+      "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
+      "signals": [
+        "Hacker News: Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
+        "OpenAI: OpenAI and ServiceNow expand partnership across enterprise workflows",
+        "GitHub: haydenschmitty/floorplan"
+      ]
+    },
+    {
       "topic": "Interfaces",
-      "signalCount": 17,
+      "signalCount": 18,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Hacker News: Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
@@ -291,24 +259,24 @@
       "signalCount": 16,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
-        "Hacker News: Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
         "OpenAI: OpenAI and ServiceNow expand partnership across enterprise workflows",
-        "OpenAI: Legora is building the agentic operating system for legal work"
+        "OpenAI: Legora is building the agentic operating system for legal work",
+        "GitHub: haydenschmitty/floorplan"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 14,
+      "signalCount": 13,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
-        "Hacker News: Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
         "GitHub: PierreTucker147/deepseek-uncensored",
+        "GitHub: rust-spielberg/G.L.A.S.S",
         "GitHub: routerhubSI/openrouter-alternative"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 9,
+      "signalCount": 11,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: OpenAI and ServiceNow expand partnership across enterprise workflows",
