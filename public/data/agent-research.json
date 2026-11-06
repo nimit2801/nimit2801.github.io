@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-06T00:54:07Z",
+  "generatedAt": "2026-11-06T11:56:27Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 40,
+    "items": 42,
     "sources": {
-      "GitHub": 34,
+      "GitHub": 36,
       "Google AI": 1,
       "Hacker News": 2,
       "OpenAI": 3
@@ -13,17 +13,33 @@
   },
   "highlights": [
     {
+      "title": "Cult.fit builds operational muscle with Codex",
+      "url": "https://openai.com/index/cultfit-builds-with-codex",
+      "publishedAt": "Thu, 05 Nov 2026 20:00:00 GMT",
+      "source": "OpenAI",
+      "meta": "Thu, 05 Nov 2026 20:00:00 GMT",
+      "topics": [
+        "Tool use",
+        "Major labs",
+        "Coding agents",
+        "Interfaces"
+      ],
+      "score": 180,
+      "summary": "Cult.fit builds operational muscle with Codex",
+      "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+    },
+    {
       "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
       "source": "Google AI",
       "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-      "meta": "5 pts · 1 comments",
+      "meta": "6 pts · 1 comments",
       "topics": [
         "Tool use",
         "Major labs",
         "Coding agents"
       ],
       "publishedAt": "2026-11-05T17:10:09Z",
-      "score": 113,
+      "score": 115,
       "summary": "",
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
@@ -41,32 +57,17 @@
       "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
     },
     {
-      "title": "Merge builds product and business tools with OpenAI technology",
-      "url": "https://openai.com/index/merge-builds-with-openai",
-      "publishedAt": "Thu, 05 Nov 2026 08:00:00 GMT",
-      "source": "OpenAI",
-      "meta": "Thu, 05 Nov 2026 08:00:00 GMT",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Interfaces"
-      ],
-      "score": 180,
-      "summary": "Merge builds product and business tools with OpenAI technology",
-      "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
-    },
-    {
       "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
       "source": "Hacker News",
       "url": "https://news.ycombinator.com/item?id=50352757",
-      "meta": "524 pts · 161 comments",
+      "meta": "526 pts · 163 comments",
       "topics": [
         "Tool use",
         "Major labs",
         "Coding agents"
       ],
       "publishedAt": "2026-11-03T14:53:41Z",
-      "score": 1601,
+      "score": 1611,
       "summary": "My company is pretty paranoid about leaking IP to the frontier labs through prompts, so we&#x27;ve all been diligent about disabling data sharing in Codex&#x2F;Claude Code&#x2F;etc. But yesterday my coworkers and I noticed that the setting had been silently reenabled in Codex. None of us knowingly opted back in. You can check your settings here: https:&#x2F;&#x2F;chatgpt.com&#x2F;settings&#x2F;data-controls. Look for \"Improve the model for everyone\". Curious if this is an isolated issue or something more widespread. EDIT: looks like this has been noted before https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49643556 EDIT: apparently you can also turn off data sharing here: https:&#x2F;&#x2F;privacy.openai.com&#x2F;policies?modal=take-control",
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
@@ -89,7 +90,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "108742 stars · updated Thu, 05 Nov 2026 22:00:09 UTC",
+      "meta": "108746 stars · updated Fri, 06 Nov 2026 01:09:43 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -97,7 +98,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 682448,
+      "score": 682480,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -105,7 +106,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9506 stars · updated Fri, 06 Nov 2026 00:00:08 UTC",
+      "meta": "9508 stars · updated Fri, 06 Nov 2026 08:07:17 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -113,7 +114,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 58952,
+      "score": 58964,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -123,6 +124,22 @@
       "key": "major-labs",
       "label": "Major labs",
       "items": [
+        {
+          "title": "Cult.fit builds operational muscle with Codex",
+          "url": "https://openai.com/index/cultfit-builds-with-codex",
+          "publishedAt": "Thu, 05 Nov 2026 20:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Thu, 05 Nov 2026 20:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Major labs",
+            "Coding agents",
+            "Interfaces"
+          ],
+          "score": 180,
+          "summary": "Cult.fit builds operational muscle with Codex",
+          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
+        },
         {
           "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
           "url": "https://openai.com/index/introducing-gpt-6-cyber",
@@ -152,31 +169,17 @@
           "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         },
         {
-          "title": "Heimstaden is changing residential real estate management with AI",
-          "url": "https://openai.com/index/heimstaden",
-          "publishedAt": "Tue, 03 Nov 2026 08:00:00 GMT",
-          "source": "OpenAI",
-          "meta": "Tue, 03 Nov 2026 08:00:00 GMT",
-          "topics": [
-            "Memory and state",
-            "Major labs"
-          ],
-          "score": 180,
-          "summary": "Heimstaden is changing residential real estate management with AI",
-          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
-        },
-        {
           "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
           "source": "Google AI",
           "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-          "meta": "5 pts · 1 comments",
+          "meta": "6 pts · 1 comments",
           "topics": [
             "Tool use",
             "Major labs",
             "Coding agents"
           ],
           "publishedAt": "2026-11-05T17:10:09Z",
-          "score": 113,
+          "score": 115,
           "summary": "",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -190,14 +193,14 @@
           "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
           "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=50352757",
-          "meta": "524 pts · 161 comments",
+          "meta": "526 pts · 163 comments",
           "topics": [
             "Tool use",
             "Major labs",
             "Coding agents"
           ],
           "publishedAt": "2026-11-03T14:53:41Z",
-          "score": 1601,
+          "score": 1611,
           "summary": "My company is pretty paranoid about leaking IP to the frontier labs through prompts, so we&#x27;ve all been diligent about disabling data sharing in Codex&#x2F;Claude Code&#x2F;etc. But yesterday my coworkers and I noticed that the setting had been silently reenabled in Codex. None of us knowingly opted back in. You can check your settings here: https:&#x2F;&#x2F;chatgpt.com&#x2F;settings&#x2F;data-controls. Look for \"Improve the model for everyone\". Curious if this is an isolated issue or something more widespread. EDIT: looks like this has been noted before https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49643556 EDIT: apparently you can also turn off data sharing here: https:&#x2F;&#x2F;privacy.openai.com&#x2F;policies?modal=take-control",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         },
@@ -236,7 +239,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "108742 stars · updated Thu, 05 Nov 2026 22:00:09 UTC",
+          "meta": "108746 stars · updated Fri, 06 Nov 2026 01:09:43 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -244,7 +247,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 682448,
+          "score": 682480,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -252,7 +255,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9506 stars · updated Fri, 06 Nov 2026 00:00:08 UTC",
+          "meta": "9508 stars · updated Fri, 06 Nov 2026 08:07:17 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -260,7 +263,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 58952,
+          "score": 58964,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -268,14 +271,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6363 stars · updated Tue, 03 Nov 2026 08:37:09 UTC",
+          "meta": "6366 stars · updated Tue, 03 Nov 2026 08:37:09 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 38870,
+          "score": 38888,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -283,12 +286,12 @@
           "title": "patch-gg/pixelfx",
           "source": "GitHub",
           "url": "https://github.com/patch-gg/pixelfx",
-          "meta": "5266 stars · updated Sat, 31 Oct 2026 08:44:14 UTC",
+          "meta": "5471 stars · updated Sat, 31 Oct 2026 08:44:14 UTC",
           "topics": [
             "Coding agents"
           ],
           "publishedAt": "2026-10-31T08:44:14Z",
-          "score": 33166,
+          "score": 34410,
           "summary": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
           "why": "This is a live signal for where agent building is getting more real, usable, or weirdly interesting."
         }
@@ -308,7 +311,7 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 22,
+      "signalCount": 24,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: OpenAI seems to be silently re-enabling model training on Codex chats",
@@ -318,31 +321,31 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 13,
+      "signalCount": 16,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Hacker News: Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
-        "OpenAI: Merge builds product and business tools with OpenAI technology",
-        "GitHub: Balanov/latch"
+        "OpenAI: Cult.fit builds operational muscle with Codex",
+        "OpenAI: Merge builds product and business tools with OpenAI technology"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 12,
+      "signalCount": 14,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "Hacker News: OpenAI seems to be silently re-enabling model training on Codex chats",
         "Google AI: Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
-        "OpenAI: GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents"
+        "OpenAI: Cult.fit builds operational muscle with Codex"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 10,
+      "signalCount": 11,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
+        "GitHub: HerdBuilderEstimate/roblox-studio-mcp",
         "GitHub: zeekk0/OpenAmika",
-        "GitHub: glincker/awesome-selfhosted-ai",
         "GitHub: pepsisteelcorporation/sp-flash-tool"
       ]
     },
