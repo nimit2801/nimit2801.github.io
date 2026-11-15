@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-15T05:43:45Z",
+  "generatedAt": "2026-11-15T15:29:38Z",
   "windowDays": 7,
   "summary": "This cycle says enterprise agents are going production-scale (SAP/Claude, Dell/Codex), major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, self-improving agents learn from their own production outputs without human retraining. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 38,
+    "items": 29,
     "sources": {
-      "GitHub": 33,
+      "GitHub": 24,
       "Google AI": 1,
       "Hacker News": 2,
       "OpenAI": 2
@@ -62,7 +62,7 @@
       "title": "Show HN: AgentRun – open-source, Self-improving Managed Agents",
       "source": "Hacker News",
       "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md",
-      "meta": "137 pts · 39 comments",
+      "meta": "138 pts · 40 comments",
       "topics": [
         "Tool use",
         "Multi-agent workflows",
@@ -70,7 +70,7 @@
         "Coding agents"
       ],
       "publishedAt": "2026-11-12T18:15:48Z",
-      "score": 481,
+      "score": 486,
       "summary": "We (GREP.AI, YC F26) are open-sourcing AgentRun and turning it into a full managed agents platform. Read more about it in this post: https:&#x2F;&#x2F;agentrun.ai&#x2F;blog&#x2F;introducing-agentrun-run-smarter-ag... . It includes what we originally built for our own agent harness: - Self-improving agents - Web-grounded workflows - A range of sandboxes and computer environments - Thousands of tools and integrations - Detailed analytics on how your agents behave You can bring your own agent. AgentRun works with Pi, Claude Agents, Codex, OpenCode, and any other harness that supports ACP. You can self-host it (see 1-click install on Render) with an OpenRouter key, or try the hosted version at console.agentrun.ai. We’d love feedback, especially on the architecture (see README), or anything we may be missing to make it useful to you.",
       "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
     },
@@ -91,36 +91,33 @@
       "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
     },
     {
-      "title": "google-gemini/gemini-cli",
+      "title": "agentes-chat/agentes-chat",
       "source": "GitHub",
-      "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "108838 stars · updated Sun, 15 Nov 2026 01:12:38 UTC",
+      "url": "https://github.com/agentes-chat/agentes-chat",
+      "meta": "1473 stars · updated Sun, 15 Nov 2026 15:12:32 UTC",
       "topics": [
         "Tool use",
-        "Open weights",
-        "Major labs",
-        "Coding agents"
+        "Multi-agent workflows",
+        "Memory and state",
+        "Open weights"
       ],
-      "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 683080,
-      "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+      "publishedAt": "2026-11-15T15:12:32Z",
+      "score": 9540,
+      "summary": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0.",
+      "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
     },
     {
-      "title": "LearningCircuit/local-deep-research",
+      "title": "JDhruv14/line-art-animation",
       "source": "GitHub",
-      "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9584 stars · updated Sun, 15 Nov 2026 01:43:19 UTC",
+      "url": "https://github.com/JDhruv14/line-art-animation",
+      "meta": "811 stars · updated Tue, 10 Nov 2026 09:25:38 UTC",
       "topics": [
-        "Tool use",
-        "Evaluation",
-        "Open weights",
-        "Major labs"
+        "Coding agents"
       ],
-      "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 59462,
-      "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-      "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+      "publishedAt": "2026-11-10T09:25:38Z",
+      "score": 5296,
+      "summary": "A Claude skill and TypeScript library for animated line-art SVG components: ink figures that walk and react, scenes with a day/night cycle.",
+      "why": "This is a live signal for where agent building is getting more real, usable, or weirdly interesting."
     }
   ],
   "sourceSections": [
@@ -184,7 +181,7 @@
           "title": "Show HN: AgentRun – open-source, Self-improving Managed Agents",
           "source": "Hacker News",
           "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md",
-          "meta": "137 pts · 39 comments",
+          "meta": "138 pts · 40 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -192,7 +189,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-11-12T18:15:48Z",
-          "score": 481,
+          "score": 486,
           "summary": "We (GREP.AI, YC F26) are open-sourcing AgentRun and turning it into a full managed agents platform. Read more about it in this post: https:&#x2F;&#x2F;agentrun.ai&#x2F;blog&#x2F;introducing-agentrun-run-smarter-ag... . It includes what we originally built for our own agent harness: - Self-improving agents - Web-grounded workflows - A range of sandboxes and computer environments - Thousands of tools and integrations - Detailed analytics on how your agents behave You can bring your own agent. AgentRun works with Pi, Claude Agents, Codex, OpenCode, and any other harness that supports ACP. You can self-host it (see 1-click install on Render) with an OpenRouter key, or try the hosted version at console.agentrun.ai. We’d love feedback, especially on the architecture (see README), or anything we may be missing to make it useful to you.",
           "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
         },
@@ -229,64 +226,63 @@
       "label": "GitHub",
       "items": [
         {
-          "title": "google-gemini/gemini-cli",
+          "title": "agentes-chat/agentes-chat",
           "source": "GitHub",
-          "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "108838 stars · updated Sun, 15 Nov 2026 01:12:38 UTC",
+          "url": "https://github.com/agentes-chat/agentes-chat",
+          "meta": "1473 stars · updated Sun, 15 Nov 2026 15:12:32 UTC",
           "topics": [
             "Tool use",
-            "Open weights",
-            "Major labs",
-            "Coding agents"
+            "Multi-agent workflows",
+            "Memory and state",
+            "Open weights"
           ],
-          "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 683080,
-          "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
+          "publishedAt": "2026-11-15T15:12:32Z",
+          "score": 9540,
+          "summary": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0.",
+          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
         },
         {
-          "title": "LearningCircuit/local-deep-research",
+          "title": "JDhruv14/line-art-animation",
           "source": "GitHub",
-          "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9584 stars · updated Sun, 15 Nov 2026 01:43:19 UTC",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Open weights",
-            "Major labs"
-          ],
-          "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 59462,
-          "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-          "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
-        },
-        {
-          "title": "MinishLab/semble",
-          "source": "GitHub",
-          "url": "https://github.com/MinishLab/semble",
-          "meta": "6423 stars · updated Sun, 08 Nov 2026 08:23:11 UTC",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 39238,
-          "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
-          "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
-        },
-        {
-          "title": "HermannBjorgvin/Clawdmeter",
-          "source": "GitHub",
-          "url": "https://github.com/HermannBjorgvin/Clawdmeter",
-          "meta": "2352 stars · updated Sat, 14 Nov 2026 22:43:48 UTC",
+          "url": "https://github.com/JDhruv14/line-art-animation",
+          "meta": "811 stars · updated Tue, 10 Nov 2026 09:25:38 UTC",
           "topics": [
             "Coding agents"
           ],
-          "publishedAt": "2026-05-11T03:07:49Z",
-          "score": 15128,
-          "summary": "ESP32 display that shows you your Claude Code usage",
-          "why": "This is playful but telling: once people start building physical dashboards for an agent, it usually means the tool has become part of their everyday workflow rather than a one-off demo."
+          "publishedAt": "2026-11-10T09:25:38Z",
+          "score": 5296,
+          "summary": "A Claude skill and TypeScript library for animated line-art SVG components: ink figures that walk and react, scenes with a day/night cycle.",
+          "why": "This is a live signal for where agent building is getting more real, usable, or weirdly interesting."
+        },
+        {
+          "title": "Dodaios/ste80-humanizer",
+          "source": "GitHub",
+          "url": "https://github.com/Dodaios/ste80-humanizer",
+          "meta": "667 stars · updated Sat, 14 Nov 2026 14:20:14 UTC",
+          "topics": [
+            "Tool use",
+            "Coding agents"
+          ],
+          "publishedAt": "2026-11-14T14:20:14Z",
+          "score": 4272,
+          "summary": "STE80 Humanizer: agent skill that removes AI tells and rewrites text 80% of the way to ASD-STE100 (Simplified Technical English), the method Andrej Karpathy shared.",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "Moh4696/cinematic-skill",
+          "source": "GitHub",
+          "url": "https://github.com/Moh4696/cinematic-skill",
+          "meta": "454 stars · updated Mon, 09 Nov 2026 15:35:12 UTC",
+          "topics": [
+            "Tool use",
+            "Voice and multimodal",
+            "Coding agents",
+            "Interfaces"
+          ],
+          "publishedAt": "2026-11-09T15:35:12Z",
+          "score": 2992,
+          "summary": "Agent skill for narrated cinematic films built entirely from code: one continuous camera over photos, maps and cards, timed to the voice. Claude Code, Codex, Cursor, Gemini CLI.",
+          "why": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier."
         }
       ]
     }
@@ -294,7 +290,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 22,
+      "signalCount": 16,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
@@ -304,22 +300,12 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 21,
+      "signalCount": 16,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
         "OpenAI: Gondola doubles revenue as its team builds more with Codex",
         "OpenAI: Holiday Extras is rethinking what it can build with Codex"
-      ]
-    },
-    {
-      "topic": "Major labs",
-      "signalCount": 14,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
-      "signals": [
-        "OpenAI: Gondola doubles revenue as its team builds more with Codex",
-        "OpenAI: Holiday Extras is rethinking what it can build with Codex",
-        "Google AI: We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps."
       ]
     },
     {
@@ -334,7 +320,7 @@
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 12,
+      "signalCount": 10,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
@@ -343,13 +329,23 @@
       ]
     },
     {
+      "topic": "Major labs",
+      "signalCount": 10,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "OpenAI: Gondola doubles revenue as its team builds more with Codex",
+        "OpenAI: Holiday Extras is rethinking what it can build with Codex",
+        "Google AI: We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps."
+      ]
+    },
+    {
       "topic": "Open weights",
-      "signalCount": 12,
+      "signalCount": 8,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
         "GitHub: agentes-chat/agentes-chat",
-        "GitHub: Outpostkrewhirl86/Capri-AI"
+        "GitHub: techgptoffical/thrones"
       ]
     }
   ],
