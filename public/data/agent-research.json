@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T23:24:44Z",
+  "generatedAt": "2026-11-18T06:45:51Z",
   "windowDays": 7,
   "summary": "This cycle says enterprise agents are going production-scale (SAP/Claude, Dell/Codex), self-improving agents learn from their own production outputs without human retraining. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
@@ -61,7 +61,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "108902 stars · updated Tue, 17 Nov 2026 22:14:35 UTC",
+      "meta": "108913 stars · updated Wed, 18 Nov 2026 01:06:44 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -69,7 +69,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 683470,
+      "score": 683540,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -77,7 +77,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9600 stars · updated Tue, 17 Nov 2026 20:33:01 UTC",
+      "meta": "9599 stars · updated Wed, 18 Nov 2026 06:45:06 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -85,7 +85,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 59570,
+      "score": 59564,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -151,7 +151,7 @@
           "title": "Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
           "source": "Hacker News",
           "url": "https://github.com/RunanywhereAI/trnrt",
-          "meta": "39 pts · 5 comments",
+          "meta": "48 pts · 7 comments",
           "topics": [
             "Memory and state",
             "Evaluation",
@@ -159,7 +159,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-11-17T16:01:04Z",
-          "score": 168,
+          "score": 192,
           "summary": "Hi HN, Sanchit here from RunAnywhere (YC W26). We just open-sourced TrnRT: Trainium RunTime, our inference engine for AWS Trainium. We started 3 weeks back, and currently we’re able to serve and run GLM 5.3 flash (FP8) on AWS trn2.48xlarge, and will bring more models support soon. It’s open to contributions :) What it does today: - Serves 2 instances of GLM-5.3 flash on a single box, 8 trn2 with a cache aware router. - Can process 3.57M TPM (tokens per minute) on SemiAnalysis&#x27;s AgentX benchmarks. - Runs decode as one NKI kernel per layer half, or for the 11 sparse-attention layers fuses both blocks into a single kernel, for faster performance. We started working on Trn2 because we wanted to explore it and see if we can come close to beating it’s performance in terms of cost efficiency compared to H100&#x2F;H200. A big MoE with 1M context window such as GLM-5.3 flash requires a lot of memory, and memory&#x2F;tb on a trn2.48xlarge costs less than half compared to 8x h200 on AWS, and hence we wanted to experiment with it and now we’re sharing some early results. But AWS&#x27;s own stack didn&#x27;t support the model: vLLM Neuron&#x27;s latest release did not register any GLM model, and NxDI, AWS&#x27;s own distributed inference framework, is no longer under active development. We also saw the drop of SGLang Neuron implementation yesterday, but there is no good support for Trn2, which is the only chip available for public use right now. We ran semiAnalysis&#x27;s AgentX benchmarks, which replays real coding agent sessions: - 1 box served 28.9 RPM(requests per minute) with 32 agents at batch 12 (also known as concurrency) -The P50 TTFT with a cached prompt at 16 agents is ~1.24 seconds with a decode of 35.9 tps. Initially, the recurrence in one kda (linear attention) layer was ~2% of the layer&#x27;s attention time at batch 1, and the rest was projections, transposes and XLA glue between small kernels. So we wrote the megakernel so that it covers the whole layer in 2 kernel dispatch, which made decode 25% faster at batch 8. The sparse attention kernel keep a layer’s working weights in SBUF, distributing weighted streaming across the cores and handling the interchip communication within There’s an approximation in the sparse-attention prefill, affecting about 1.2% of block selections. You can refer to the write-up for the profiling results: https:&#x2F;&#x2F;runanywhere.ai&#x2F;blog&#x2F;glm-5-3-flash-trainium2-nki-mega... Please give it a try yourself on a trn2.48xlarge and reproduce the AgentX results by following the steps in docs&#x2F;RESULTS.md. Happy to collaborate and hear any feedback. Deploying high performant dedicated inference at lab like performance and half the price for open models such as the GLM-5.3 family, Kimi K3, Deepseek flash etc. is how we make money. You can talk to us regarding the same at founders@runanywhere.ai. We hope you find this useful. If you are working with Trainium or have experience with NKI kernels, we&#x27;d love to get your honest feedback. Feel free to share the models you want support for next, and we welcome any contributions to the repository.",
           "why": "Linus Torvalds threatening to crack down on AI-generated kernel patches is a real-world signal that AI coding agents are now producing code at a scale that overwhelms human review — not a theoretical future, but today's bottleneck."
         }
@@ -183,7 +183,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "108902 stars · updated Tue, 17 Nov 2026 22:14:35 UTC",
+          "meta": "108913 stars · updated Wed, 18 Nov 2026 01:06:44 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -191,7 +191,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 683470,
+          "score": 683540,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -199,7 +199,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9600 stars · updated Tue, 17 Nov 2026 20:33:01 UTC",
+          "meta": "9599 stars · updated Wed, 18 Nov 2026 06:45:06 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -207,7 +207,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 59570,
+          "score": 59564,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -215,14 +215,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6436 stars · updated Sun, 08 Nov 2026 08:23:11 UTC",
+          "meta": "6437 stars · updated Sun, 08 Nov 2026 08:23:11 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 39324,
+          "score": 39332,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -244,18 +244,8 @@
   ],
   "tangentRadar": [
     {
-      "topic": "Coding agents",
-      "signalCount": 19,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
-      "signals": [
-        "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
-        "Hacker News: Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
-        "GitHub: JDhruv14/line-art-animation"
-      ]
-    },
-    {
       "topic": "Tool use",
-      "signalCount": 18,
+      "signalCount": 19,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
@@ -264,13 +254,23 @@
       ]
     },
     {
-      "topic": "Major labs",
-      "signalCount": 17,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "topic": "Interfaces",
+      "signalCount": 18,
+      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
-        "OpenAI: Strengthening the fight against online child sexual abuse with new tools and support",
-        "GitHub: KenjiIra5580/openai-o3-deep-research-applepay-vcc",
-        "GitHub: zjshen14/agy-hq"
+        "GitHub: BigPizzaV3/ClaudeMom",
+        "GitHub: ysunyang4/Nexus",
+        "GitHub: AayushPandey2/teachme-skill"
+      ]
+    },
+    {
+      "topic": "Coding agents",
+      "signalCount": 17,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
+      "signals": [
+        "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
+        "Hacker News: Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
+        "GitHub: sybil-solutions/inference-optimisation-skill"
       ]
     },
     {
@@ -284,18 +284,18 @@
       ]
     },
     {
-      "topic": "Interfaces",
-      "signalCount": 16,
-      "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
+      "topic": "Major labs",
+      "signalCount": 15,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
-        "GitHub: BigPizzaV3/ClaudeMom",
-        "GitHub: ysunyang4/Nexus",
-        "GitHub: menhguin/how-to-do-good-research"
+        "OpenAI: Strengthening the fight against online child sexual abuse with new tools and support",
+        "GitHub: KenjiIra5580/openai-o3-deep-research-applepay-vcc",
+        "GitHub: zjshen14/agy-hq"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 13,
+      "signalCount": 12,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
