@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-19T12:39:36Z",
+  "generatedAt": "2026-11-19T22:57:32Z",
   "windowDays": 7,
-  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, self-improving agents learn from their own production outputs without human retraining. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
+  "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
     "items": 45,
     "sources": {
-      "GitHub": 39,
-      "Google AI": 1,
-      "Hacker News": 3,
+      "GitHub": 40,
+      "Google AI": 2,
+      "Hacker News": 1,
       "OpenAI": 2
     }
   },
@@ -31,52 +31,54 @@
       "title": "The Codex Sandbox",
       "source": "OpenAI",
       "url": "https://openai.com/index/inside-the-codex-sandbox/",
-      "meta": "12 pts · 3 comments",
+      "meta": "14 pts · 4 comments",
       "topics": [
         "Tool use",
         "Major labs",
         "Coding agents"
       ],
       "publishedAt": "2026-11-18T18:04:04Z",
-      "score": 123,
+      "score": 130,
       "summary": "",
       "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
     },
     {
-      "title": "The Gemini app is now available on lower-memory Android devices.",
-      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
-      "publishedAt": "Wed, 18 Nov 2026 17:00:00 +0000",
+      "title": "Introducing Tool Retrieval in the Gemini API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+      "publishedAt": "Thu, 19 Nov 2026 18:00:00 +0000",
       "source": "Google AI",
-      "meta": "Wed, 18 Nov 2026 17:00:00 GMT",
-      "topics": [
-        "Memory and state",
-        "Major labs"
-      ],
-      "score": 180,
-      "summary": "The Gemini app is now available on lower-memory Android devices.",
-      "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
-    },
-    {
-      "title": "Show HN: AgentRun – open-source, Self-improving Managed Agents",
-      "source": "Hacker News",
-      "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md",
-      "meta": "138 pts · 41 comments",
+      "meta": "Thu, 19 Nov 2026 18:00:00 GMT",
       "topics": [
         "Tool use",
-        "Multi-agent workflows",
+        "Evaluation",
+        "Major labs",
+        "Coding agents"
+      ],
+      "score": 180,
+      "summary": "Introducing Tool Retrieval in the Gemini API",
+      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+    },
+    {
+      "title": "Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
+      "source": "Hacker News",
+      "url": "https://github.com/RunanywhereAI/trnrt",
+      "meta": "54 pts · 8 comments",
+      "topics": [
+        "Memory and state",
+        "Evaluation",
         "Open weights",
         "Coding agents"
       ],
-      "publishedAt": "2026-11-12T18:15:48Z",
-      "score": 489,
-      "summary": "We (GREP.AI, YC F26) are open-sourcing AgentRun and turning it into a full managed agents platform. Read more about it in this post: https:&#x2F;&#x2F;agentrun.ai&#x2F;blog&#x2F;introducing-agentrun-run-smarter-ag... . It includes what we originally built for our own agent harness: - Self-improving agents - Web-grounded workflows - A range of sandboxes and computer environments - Thousands of tools and integrations - Detailed analytics on how your agents behave You can bring your own agent. AgentRun works with Pi, Claude Agents, Codex, OpenCode, and any other harness that supports ACP. You can self-host it (see 1-click install on Render) with an OpenRouter key, or try the hosted version at console.agentrun.ai. We’d love feedback, especially on the architecture (see README), or anything we may be missing to make it useful to you.",
-      "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
+      "publishedAt": "2026-11-17T16:01:04Z",
+      "score": 207,
+      "summary": "Hi HN, Sanchit here from RunAnywhere (YC W26). We just open-sourced TrnRT: Trainium RunTime, our inference engine for AWS Trainium. We started 3 weeks back, and currently we’re able to serve and run GLM 5.3 flash (FP8) on AWS trn2.48xlarge, and will bring more models support soon. It’s open to contributions :) What it does today: - Serves 2 instances of GLM-5.3 flash on a single box, 8 trn2 with a cache aware router. - Can process 3.57M TPM (tokens per minute) on SemiAnalysis&#x27;s AgentX benchmarks. - Runs decode as one NKI kernel per layer half, or for the 11 sparse-attention layers fuses both blocks into a single kernel, for faster performance. We started working on Trn2 because we wanted to explore it and see if we can come close to beating it’s performance in terms of cost efficiency compared to H100&#x2F;H200. A big MoE with 1M context window such as GLM-5.3 flash requires a lot of memory, and memory&#x2F;tb on a trn2.48xlarge costs less than half compared to 8x h200 on AWS, and hence we wanted to experiment with it and now we’re sharing some early results. But AWS&#x27;s own stack didn&#x27;t support the model: vLLM Neuron&#x27;s latest release did not register any GLM model, and NxDI, AWS&#x27;s own distributed inference framework, is no longer under active development. We also saw the drop of SGLang Neuron implementation yesterday, but there is no good support for Trn2, which is the only chip available for public use right now. We ran semiAnalysis&#x27;s AgentX benchmarks, which replays real coding agent sessions: - 1 box served 28.9 RPM(requests per minute) with 32 agents at batch 12 (also known as concurrency) -The P50 TTFT with a cached prompt at 16 agents is ~1.24 seconds with a decode of 35.9 tps. Initially, the recurrence in one kda (linear attention) layer was ~2% of the layer&#x27;s attention time at batch 1, and the rest was projections, transposes and XLA glue between small kernels. So we wrote the megakernel so that it covers the whole layer in 2 kernel dispatch, which made decode 25% faster at batch 8. The sparse attention kernel keep a layer’s working weights in SBUF, distributing weighted streaming across the cores and handling the interchip communication within There’s an approximation in the sparse-attention prefill, affecting about 1.2% of block selections. You can refer to the write-up for the profiling results: https:&#x2F;&#x2F;runanywhere.ai&#x2F;blog&#x2F;glm-5-3-flash-trainium2-nki-mega... Please give it a try yourself on a trn2.48xlarge and reproduce the AgentX results by following the steps in docs&#x2F;RESULTS.md. Happy to collaborate and hear any feedback. Deploying high performant dedicated inference at lab like performance and half the price for open models such as the GLM-5.3 family, Kimi K3, Deepseek flash etc. is how we make money. You can talk to us regarding the same at founders@runanywhere.ai. We hope you find this useful. If you are working with Trainium or have experience with NKI kernels, we&#x27;d love to get your honest feedback. Feel free to share the models you want support for next, and we welcome any contributions to the repository.",
+      "why": "Linus Torvalds threatening to crack down on AI-generated kernel patches is a real-world signal that AI coding agents are now producing code at a scale that overwhelms human review — not a theoretical future, but today's bottleneck."
     },
     {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "108940 stars · updated Thu, 19 Nov 2026 09:25:07 UTC",
+      "meta": "108939 stars · updated Thu, 19 Nov 2026 22:41:13 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -84,7 +86,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 683704,
+      "score": 683706,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -92,7 +94,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9609 stars · updated Thu, 19 Nov 2026 08:53:36 UTC",
+      "meta": "9613 stars · updated Thu, 19 Nov 2026 22:51:39 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -100,7 +102,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 59626,
+      "score": 59656,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -126,6 +128,22 @@
           "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
         },
         {
+          "title": "Introducing Tool Retrieval in the Gemini API",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+          "publishedAt": "Thu, 19 Nov 2026 18:00:00 +0000",
+          "source": "Google AI",
+          "meta": "Thu, 19 Nov 2026 18:00:00 GMT",
+          "topics": [
+            "Tool use",
+            "Evaluation",
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "Introducing Tool Retrieval in the Gemini API",
+          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "publishedAt": "Wed, 18 Nov 2026 17:00:00 +0000",
@@ -143,14 +161,14 @@
           "title": "The Codex Sandbox",
           "source": "OpenAI",
           "url": "https://openai.com/index/inside-the-codex-sandbox/",
-          "meta": "12 pts · 3 comments",
+          "meta": "14 pts · 4 comments",
           "topics": [
             "Tool use",
             "Major labs",
             "Coding agents"
           ],
           "publishedAt": "2026-11-18T18:04:04Z",
-          "score": 123,
+          "score": 130,
           "summary": "",
           "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
         }
@@ -161,42 +179,10 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Show HN: AgentRun – open-source, Self-improving Managed Agents",
-          "source": "Hacker News",
-          "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md",
-          "meta": "138 pts · 41 comments",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows",
-            "Open weights",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-11-12T18:15:48Z",
-          "score": 489,
-          "summary": "We (GREP.AI, YC F26) are open-sourcing AgentRun and turning it into a full managed agents platform. Read more about it in this post: https:&#x2F;&#x2F;agentrun.ai&#x2F;blog&#x2F;introducing-agentrun-run-smarter-ag... . It includes what we originally built for our own agent harness: - Self-improving agents - Web-grounded workflows - A range of sandboxes and computer environments - Thousands of tools and integrations - Detailed analytics on how your agents behave You can bring your own agent. AgentRun works with Pi, Claude Agents, Codex, OpenCode, and any other harness that supports ACP. You can self-host it (see 1-click install on Render) with an OpenRouter key, or try the hosted version at console.agentrun.ai. We’d love feedback, especially on the architecture (see README), or anything we may be missing to make it useful to you.",
-          "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
-        },
-        {
-          "title": "Show HN: Kapso – Iterative learning from enterprise data",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=50471281",
-          "meta": "61 pts · 18 comments",
-          "topics": [
-            "Tool use",
-            "Multi-agent workflows",
-            "Memory and state",
-            "Evaluation"
-          ],
-          "publishedAt": "2026-11-12T17:51:23Z",
-          "score": 306,
-          "summary": "Hey HN! We&#x27;re Alireza and Majid building Leeroo ( https:&#x2F;&#x2F;leeroo.com&#x2F; ). Previously we’ve built AI systems for products with millions of users, including at LinkedIn and Meta. We’re now focusing on building AI systems for enterprise data. Today, we&#x27;re open-sourcing Kapso ( https:&#x2F;&#x2F;github.com&#x2F;Leeroo-AI&#x2F;kapso ), an engine that runs experiments, deploys the best solution, and learns from every run. The nature of data work is iterative: investigate, form hypotheses, experiment, and improve based on what you learn. This bottom-up process is the only way to deliver meaningful outcomes quickly in large, messy enterprise data environments. Consultants gathering context in meetings or teams defining a business ontology upfront to fit into the data has no chance of execution, in quarters and sometimes years. An AI-native system should automate this process, compounding learning to each new investigation and implementation. For instance, one of our enterprise projects was moving a company off its old data estate onto a lakehouse with more than 30 source-system families, thousands of tables and transformations, and hundreds of BI reports. No individual or AI agent knew how that data estate was connected and operated. The only way to learn it was to investigate the company&#x27;s repos, dbt models, documentation, and data itself and propose hypotheses about the estate, run experiments, and learn from them, until we understand how each system behaves and under which conditions. The iterative work goes beyond understanding how data and systems fit together, and the business operations. Building useful software is iterative too. Whether you’re optimizing a warehouse, building a lakehouse pipeline or predicting churn, you need to run experiments and learn what works best in that environment. As you deliver more projects, that know-how compounds, similar in principle to RL. RAGing documentation has little value until it has been tried in a specific environment and the consequences are learned. As with human engineering work, experimentation and learning should happen in a sandbox. We built Kapso for this kind of work, you give it an objective and success criteria, and it works towards an optimum solution that can be deployed on your stack. You can view a video walkthrough here: https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=W4FHlza1fRs Here’s how it works… Kapso has a bank of lessons that are induced or deduced from the past experiments, and each carries a credence score, conditions on where it applies, and the evidence behind it. For each new experiment, an ideation module proposes ideas considering the earlier lessons, re-ranks them by expected return against the budget each would use, and sends the top-ranked ones to the implementor. Because the bank keeps learning from the past experiments in that environment, the proposed ideas are better suited to it than generic hypotheses from an LLM or RAG. Also, results of each experiment are verified by a verifier module that no experiment can access and cheat. As we’ve found when building such systems, sometimes the success criteria and evaluation tests need to be evolved. The experimentation modules can propose updates to the metrics and criteria for the verifier to approve or reject. After each run, learn() updates the bank of lessons’ scores and boundaries using the evidence from that run. Changes to the bank can also be A&#x2F;B tested by running otherwise identical builds with the previous and updated banks. The bank is built on git, so you can share your experience with others, list the banks available to you, and update them (`kapso experience share&#x2F;list&#x2F;update` in CLI). The system is model-agnostic and coding-agent-agnostic. kapso.deploy(solution, target_stack) follows the same workflow, runs a shorter experimentation loop to adapt the best solution to the target stack (e.g. Docker, Modal, BentoCloud, LangGraph). Every domain has a harness to start from, you can write your own domain harness with &#x2F;kapso:harness in the plugin or through CLI (kapso harness new <name>), and compound over that by running experimentations. We ran it on some public benchmarks and live competitions, with the following results… - Predictive modelling on relational databases: first on RelBench, Kumo AI (now Nvidia) and Stanford&#x27;s benchmark, ahead of the best tabular foundation model ( https:&#x2F;&#x2F;star-project.stanford.edu&#x2F;relbench&#x2F;leaderboard&#x2F; ). This shows that keeping the learning in the harness-level can beat foundational table models. Updating a bank of lessons costs far less than retraining a tabular foundation model. - ML Engineering: First on OpenAI&#x27;s MLE-bench at submission, still among the top open-source systems ( https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;mle-bench&#x2F;pull&#x2F;107 ). - AI competitions: ahead of the best agent the ALE-Bench authors at Sakana AI reported, and running autonomously at the live International Olympiad in AI 2026, above all 471 human contestants and in the top three AI systems ( https:&#x2F;&#x2F;ioai-official.org&#x2F;ai-models-track&#x2F;ioai%c2%b2-2026-re... ). We have a public bank for ML and Data at Leeroopedia ( https:&#x2F;&#x2F;leeroopedia.com&#x2F; ): around 100k pages extracted by experimenting on papers and repos, about 6M requests a month, about 28% from AI agents. If you are at a growing company with a complex data estate across multiple systems and functions, and your data and AI team is stretched, we would love to help! https:&#x2F;&#x2F;github.com&#x2F;Leeroo-AI&#x2F;kapso",
-          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
-        },
-        {
           "title": "Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
           "source": "Hacker News",
           "url": "https://github.com/RunanywhereAI/trnrt",
-          "meta": "54 pts · 7 comments",
+          "meta": "54 pts · 8 comments",
           "topics": [
             "Memory and state",
             "Evaluation",
@@ -204,7 +190,7 @@
             "Coding agents"
           ],
           "publishedAt": "2026-11-17T16:01:04Z",
-          "score": 204,
+          "score": 207,
           "summary": "Hi HN, Sanchit here from RunAnywhere (YC W26). We just open-sourced TrnRT: Trainium RunTime, our inference engine for AWS Trainium. We started 3 weeks back, and currently we’re able to serve and run GLM 5.3 flash (FP8) on AWS trn2.48xlarge, and will bring more models support soon. It’s open to contributions :) What it does today: - Serves 2 instances of GLM-5.3 flash on a single box, 8 trn2 with a cache aware router. - Can process 3.57M TPM (tokens per minute) on SemiAnalysis&#x27;s AgentX benchmarks. - Runs decode as one NKI kernel per layer half, or for the 11 sparse-attention layers fuses both blocks into a single kernel, for faster performance. We started working on Trn2 because we wanted to explore it and see if we can come close to beating it’s performance in terms of cost efficiency compared to H100&#x2F;H200. A big MoE with 1M context window such as GLM-5.3 flash requires a lot of memory, and memory&#x2F;tb on a trn2.48xlarge costs less than half compared to 8x h200 on AWS, and hence we wanted to experiment with it and now we’re sharing some early results. But AWS&#x27;s own stack didn&#x27;t support the model: vLLM Neuron&#x27;s latest release did not register any GLM model, and NxDI, AWS&#x27;s own distributed inference framework, is no longer under active development. We also saw the drop of SGLang Neuron implementation yesterday, but there is no good support for Trn2, which is the only chip available for public use right now. We ran semiAnalysis&#x27;s AgentX benchmarks, which replays real coding agent sessions: - 1 box served 28.9 RPM(requests per minute) with 32 agents at batch 12 (also known as concurrency) -The P50 TTFT with a cached prompt at 16 agents is ~1.24 seconds with a decode of 35.9 tps. Initially, the recurrence in one kda (linear attention) layer was ~2% of the layer&#x27;s attention time at batch 1, and the rest was projections, transposes and XLA glue between small kernels. So we wrote the megakernel so that it covers the whole layer in 2 kernel dispatch, which made decode 25% faster at batch 8. The sparse attention kernel keep a layer’s working weights in SBUF, distributing weighted streaming across the cores and handling the interchip communication within There’s an approximation in the sparse-attention prefill, affecting about 1.2% of block selections. You can refer to the write-up for the profiling results: https:&#x2F;&#x2F;runanywhere.ai&#x2F;blog&#x2F;glm-5-3-flash-trainium2-nki-mega... Please give it a try yourself on a trn2.48xlarge and reproduce the AgentX results by following the steps in docs&#x2F;RESULTS.md. Happy to collaborate and hear any feedback. Deploying high performant dedicated inference at lab like performance and half the price for open models such as the GLM-5.3 family, Kimi K3, Deepseek flash etc. is how we make money. You can talk to us regarding the same at founders@runanywhere.ai. We hope you find this useful. If you are working with Trainium or have experience with NKI kernels, we&#x27;d love to get your honest feedback. Feel free to share the models you want support for next, and we welcome any contributions to the repository.",
           "why": "Linus Torvalds threatening to crack down on AI-generated kernel patches is a real-world signal that AI coding agents are now producing code at a scale that overwhelms human review — not a theoretical future, but today's bottleneck."
         }
@@ -228,7 +214,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "108940 stars · updated Thu, 19 Nov 2026 09:25:07 UTC",
+          "meta": "108939 stars · updated Thu, 19 Nov 2026 22:41:13 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -236,7 +222,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 683704,
+          "score": 683706,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -244,7 +230,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9609 stars · updated Thu, 19 Nov 2026 08:53:36 UTC",
+          "meta": "9613 stars · updated Thu, 19 Nov 2026 22:51:39 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -252,7 +238,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 59626,
+          "score": 59656,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -260,14 +246,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6452 stars · updated Sun, 08 Nov 2026 08:23:11 UTC",
+          "meta": "6454 stars · updated Sun, 08 Nov 2026 08:23:11 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 39420,
+          "score": 39432,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -294,58 +280,58 @@
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: The Codex Sandbox",
-        "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
-        "Hacker News: Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium"
+        "Hacker News: Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
+        "OpenAI: Inside the Codex sandbox"
       ]
     },
     {
       "topic": "Tool use",
-      "signalCount": 21,
+      "signalCount": 20,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "OpenAI: The Codex Sandbox",
-        "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
-        "Hacker News: Show HN: Kapso – Iterative learning from enterprise data"
+        "OpenAI: Inside the Codex sandbox",
+        "Google AI: Introducing Tool Retrieval in the Gemini API"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 18,
+      "signalCount": 19,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "GitHub: BigPizzaV3/ClaudeMom",
-        "GitHub: AayushPandey2/teachme-skill",
-        "GitHub: fumbdendade19718/blender-ai-copilot-desk"
+        "GitHub: mankidev/antialgorithm",
+        "GitHub: AayushPandey2/teachme-skill"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 16,
+      "signalCount": 17,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "OpenAI: The Codex Sandbox",
         "OpenAI: Inside the Codex sandbox",
-        "Google AI: The Gemini app is now available on lower-memory Android devices."
+        "Google AI: Introducing Tool Retrieval in the Gemini API"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 15,
+      "signalCount": 16,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
-        "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
         "Hacker News: Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
-        "GitHub: sybil-solutions/inference-optimisation-skill"
+        "GitHub: sybil-solutions/inference-optimisation-skill",
+        "GitHub: Underspace1/relais"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 11,
+      "signalCount": 9,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "Hacker News: Show HN: AgentRun – open-source, Self-improving Managed Agents",
-        "Hacker News: Show HN: Kapso – Iterative learning from enterprise data",
-        "GitHub: oujingzhou/agent-interview-questions"
+        "GitHub: oujingzhou/agent-interview-questions",
+        "GitHub: DerrekKarkut846380/virtual-card-usdt-autonomous-research-agents-finops",
+        "GitHub: 582835293/gemini-web-agent"
       ]
     }
   ],
@@ -356,9 +342,9 @@
       "prompt": "Take one enterprise agent deployment case study, map the hidden assumptions, and note where trust, permissions, and failure recovery still feel weak."
     },
     {
-      "title": "Add explicit state to one messy workflow",
-      "why": "Statewright-style thinking keeps surfacing because hidden state is still where agent reliability quietly falls apart.",
-      "prompt": "Take a brittle multi-step agent task and force it through explicit states, retries, and checkpoints. Measure whether failure recovery gets simpler."
+      "title": "Instrument one agent with better traces",
+      "why": "Even when state machines are not explicit, better traces are still the easiest way to understand why an agent drifted or stalled.",
+      "prompt": "Log tool calls, retries, and summaries for one real task, then inspect which step actually predicts success or failure."
     },
     {
       "title": "Stress-test one agent across model families",
