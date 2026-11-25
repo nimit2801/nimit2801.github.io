@@ -1,30 +1,30 @@
 {
-  "generatedAt": "2026-11-24T14:40:15Z",
+  "generatedAt": "2026-11-25T00:28:13Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 48,
+    "items": 52,
     "sources": {
-      "GitHub": 43,
-      "Google AI": 2,
-      "Hacker News": 1,
-      "OpenAI": 2
+      "GitHub": 44,
+      "Google AI": 3,
+      "Hacker News": 2,
+      "OpenAI": 3
     }
   },
   "highlights": [
     {
-      "title": "Explore the Codex Security Plugin",
-      "url": "https://openai.com/business/learn/codex-security-plugin-demo",
-      "publishedAt": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "title": "Clay helps sales teams win with Codex and ChatGPT",
+      "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+      "publishedAt": "Tue, 24 Nov 2026 00:00:00 GMT",
       "source": "OpenAI",
-      "meta": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "meta": "Tue, 24 Nov 2026 00:00:00 GMT",
       "topics": [
         "Tool use",
         "Major labs",
         "Coding agents"
       ],
       "score": 180,
-      "summary": "Explore the Codex Security Plugin",
+      "summary": "Clay helps sales teams win with Codex and ChatGPT",
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
     {
@@ -43,42 +43,40 @@
       "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
     },
     {
-      "title": "Introducing Tool Retrieval in the Gemini API",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
-      "publishedAt": "Thu, 19 Nov 2026 18:00:00 +0000",
-      "source": "Google AI",
-      "meta": "Thu, 19 Nov 2026 18:00:00 GMT",
+      "title": "How iFood scales coding agents across 15,000 repositories",
+      "url": "https://openai.com/business/customer-stories/ifood",
+      "publishedAt": "Tue, 24 Nov 2026 00:00:00 GMT",
+      "source": "OpenAI",
+      "meta": "Tue, 24 Nov 2026 00:00:00 GMT",
       "topics": [
-        "Tool use",
-        "Evaluation",
         "Major labs",
         "Coding agents"
       ],
       "score": 180,
-      "summary": "Introducing Tool Retrieval in the Gemini API",
-      "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+      "summary": "How iFood scales coding agents across 15,000 repositories",
+      "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
     },
     {
-      "title": "Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
+      "title": "Show HN: Brickie – Deploy sandboxes in your own AWS account",
       "source": "Hacker News",
-      "url": "https://github.com/RunanywhereAI/trnrt",
-      "meta": "54 pts · 8 comments",
+      "url": "https://github.com/hatchet-dev/brickie",
+      "meta": "26 pts · 5 comments",
       "topics": [
+        "Tool use",
+        "Multi-agent workflows",
         "Memory and state",
-        "Evaluation",
-        "Open weights",
-        "Coding agents"
+        "Open weights"
       ],
-      "publishedAt": "2026-11-17T16:01:04Z",
-      "score": 207,
-      "summary": "Hi HN, Sanchit here from RunAnywhere (YC W26). We just open-sourced TrnRT: Trainium RunTime, our inference engine for AWS Trainium. We started 3 weeks back, and currently we’re able to serve and run GLM 5.3 flash (FP8) on AWS trn2.48xlarge, and will bring more models support soon. It’s open to contributions :) What it does today: - Serves 2 instances of GLM-5.3 flash on a single box, 8 trn2 with a cache aware router. - Can process 3.57M TPM (tokens per minute) on SemiAnalysis&#x27;s AgentX benchmarks. - Runs decode as one NKI kernel per layer half, or for the 11 sparse-attention layers fuses both blocks into a single kernel, for faster performance. We started working on Trn2 because we wanted to explore it and see if we can come close to beating it’s performance in terms of cost efficiency compared to H100&#x2F;H200. A big MoE with 1M context window such as GLM-5.3 flash requires a lot of memory, and memory&#x2F;tb on a trn2.48xlarge costs less than half compared to 8x h200 on AWS, and hence we wanted to experiment with it and now we’re sharing some early results. But AWS&#x27;s own stack didn&#x27;t support the model: vLLM Neuron&#x27;s latest release did not register any GLM model, and NxDI, AWS&#x27;s own distributed inference framework, is no longer under active development. We also saw the drop of SGLang Neuron implementation yesterday, but there is no good support for Trn2, which is the only chip available for public use right now. We ran semiAnalysis&#x27;s AgentX benchmarks, which replays real coding agent sessions: - 1 box served 28.9 RPM(requests per minute) with 32 agents at batch 12 (also known as concurrency) -The P50 TTFT with a cached prompt at 16 agents is ~1.24 seconds with a decode of 35.9 tps. Initially, the recurrence in one kda (linear attention) layer was ~2% of the layer&#x27;s attention time at batch 1, and the rest was projections, transposes and XLA glue between small kernels. So we wrote the megakernel so that it covers the whole layer in 2 kernel dispatch, which made decode 25% faster at batch 8. The sparse attention kernel keep a layer’s working weights in SBUF, distributing weighted streaming across the cores and handling the interchip communication within There’s an approximation in the sparse-attention prefill, affecting about 1.2% of block selections. You can refer to the write-up for the profiling results: https:&#x2F;&#x2F;runanywhere.ai&#x2F;blog&#x2F;glm-5-3-flash-trainium2-nki-mega... Please give it a try yourself on a trn2.48xlarge and reproduce the AgentX results by following the steps in docs&#x2F;RESULTS.md. Happy to collaborate and hear any feedback. Deploying high performant dedicated inference at lab like performance and half the price for open models such as the GLM-5.3 family, Kimi K3, Deepseek flash etc. is how we make money. You can talk to us regarding the same at founders@runanywhere.ai. We hope you find this useful. If you are working with Trainium or have experience with NKI kernels, we&#x27;d love to get your honest feedback. Feel free to share the models you want support for next, and we welcome any contributions to the repository.",
-      "why": "Linus Torvalds threatening to crack down on AI-generated kernel patches is a real-world signal that AI coding agents are now producing code at a scale that overwhelms human review — not a theoretical future, but today's bottleneck."
+      "publishedAt": "2026-11-24T15:48:34Z",
+      "score": 162,
+      "summary": "Hey HN, this is Alexander from Hatchet ( https:&#x2F;&#x2F;github.com&#x2F;hatchet-dev&#x2F;hatchet ). We’re releasing a new open-source project today called Brickie. Brickie lets you run sandboxes in your own cloud account, primarily targeting EKS on AWS. Sandboxes are an incredibly useful primitive for agentic applications. They serve two main functions: (1) a way for the agent to safely execute untrusted code, and (2) a durable filesystem for agents to preserve their state via snapshots. We decided to start building this after we started on a package called `@hatchet-dev&#x2F;sandbox` to integrate more directly with various sandbox providers, like E2B, Daytona, Archil, and Modal. We discovered that a lot of users had a requirement to self-host their sandbox infra for part of (or all of) their stack, due to a self-host requirement for enterprises. We searched around for the easiest way for users to self-host a sandbox stack and agent-sandbox ( https:&#x2F;&#x2F;agent-sandbox.sigs.k8s.io ) was the closest thing to what we had in mind: it’s a kubernetes-sigs project implementing a Kubernetes operator which spawns sandboxes as pods on supported isolation layers like Firecracker, gVisor, and Kata Containers. We learned that many platform teams were adopting this because it&#x27;s a standard k8s-based deployment model and is pretty easy to customize the isolation layer, network config, etc. However, it was missing some necessary features. brickie builds on top of the agent-sandbox project and extends it to support proper sandbox (filesystem-based) snapshots, fork, pause, and resume, all while bundling a proper orchestration and observability layer via Hatchet. Zooming out a bit, Hatchet is an orchestration engine which supports durable execution ( https:&#x2F;&#x2F;hatchet.run&#x2F;blog&#x2F;durable-execution ). Throughout 2026, we saw high adoption from users building agents using durable workflows as the statefulness layer and execution model. But as sandboxes became more popular, something didn’t sit right with us. Sandboxes _also_ provide a durability layer, but at the filesystem level, and it became important to disambiguate what we call session state from filesystem state . I wrote a lot more about this here: https:&#x2F;&#x2F;hatchet.run&#x2F;blog&#x2F;agent-statefulness . The problem with having state in multiple places is that it needs coordination, which adds complexity to your application. This was part of the motivation behind `@hatchet-dev&#x2F;sandbox`: we wanted to provide an easy way to take coordinated snapshots of agent state, even when using an external sandbox provider. So when we started looking at self-hosted sandbox options, it was critical that this architecture was supported well. We decided to support this in brickie using a pretty simple snapshotting mechanism which tars and stores snapshots in an object store (S3). This is something we’re actively working to improve and make more performant. Brickie is early and in beta, we&#x27;re looking for testers, contributors, and feedback on the deployment model. Thanks in advance!",
+      "why": "Self-hosted sandboxes and MCP tunnels solve the enterprise 'my data in your sandbox' blocker that has been the single biggest friction point for production agent deployments."
     },
     {
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "109050 stars · updated Tue, 24 Nov 2026 03:54:31 UTC",
+      "meta": "109065 stars · updated Wed, 25 Nov 2026 00:08:03 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -86,7 +84,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 684418,
+      "score": 684508,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -94,7 +92,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9643 stars · updated Tue, 24 Nov 2026 04:28:44 UTC",
+      "meta": "9649 stars · updated Wed, 25 Nov 2026 00:28:02 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -102,7 +100,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 59862,
+      "score": 59902,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -113,19 +111,47 @@
       "label": "Major labs",
       "items": [
         {
-          "title": "Explore the Codex Security Plugin",
-          "url": "https://openai.com/business/learn/codex-security-plugin-demo",
-          "publishedAt": "Thu, 19 Nov 2026 00:00:00 GMT",
+          "title": "How iFood scales coding agents across 15,000 repositories",
+          "url": "https://openai.com/business/customer-stories/ifood",
+          "publishedAt": "Tue, 24 Nov 2026 00:00:00 GMT",
           "source": "OpenAI",
-          "meta": "Thu, 19 Nov 2026 00:00:00 GMT",
+          "meta": "Tue, 24 Nov 2026 00:00:00 GMT",
+          "topics": [
+            "Major labs",
+            "Coding agents"
+          ],
+          "score": 180,
+          "summary": "How iFood scales coding agents across 15,000 repositories",
+          "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
+        },
+        {
+          "title": "Clay helps sales teams win with Codex and ChatGPT",
+          "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+          "publishedAt": "Tue, 24 Nov 2026 00:00:00 GMT",
+          "source": "OpenAI",
+          "meta": "Tue, 24 Nov 2026 00:00:00 GMT",
           "topics": [
             "Tool use",
             "Major labs",
             "Coding agents"
           ],
           "score": 180,
-          "summary": "Explore the Codex Security Plugin",
+          "summary": "Clay helps sales teams win with Codex and ChatGPT",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
+        },
+        {
+          "title": "How Gemini is changing the game for Golden State's organization and fans.",
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+          "publishedAt": "Tue, 24 Nov 2026 16:00:00 +0000",
+          "source": "Google AI",
+          "meta": "Tue, 24 Nov 2026 16:00:00 GMT",
+          "topics": [
+            "Memory and state",
+            "Major labs"
+          ],
+          "score": 180,
+          "summary": "How Gemini is changing the game for Golden State's organization and fans.",
+          "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
         },
         {
           "title": "Introducing Tool Retrieval in the Gemini API",
@@ -179,20 +205,35 @@
       "label": "Hacker News",
       "items": [
         {
-          "title": "Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
+          "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
           "source": "Hacker News",
-          "url": "https://github.com/RunanywhereAI/trnrt",
-          "meta": "54 pts · 8 comments",
+          "url": "https://news.ycombinator.com/item?id=50634426",
+          "meta": "60 pts · 42 comments",
           "topics": [
-            "Memory and state",
+            "Tool use",
             "Evaluation",
-            "Open weights",
-            "Coding agents"
+            "Interfaces"
           ],
-          "publishedAt": "2026-11-17T16:01:04Z",
-          "score": 207,
-          "summary": "Hi HN, Sanchit here from RunAnywhere (YC W26). We just open-sourced TrnRT: Trainium RunTime, our inference engine for AWS Trainium. We started 3 weeks back, and currently we’re able to serve and run GLM 5.3 flash (FP8) on AWS trn2.48xlarge, and will bring more models support soon. It’s open to contributions :) What it does today: - Serves 2 instances of GLM-5.3 flash on a single box, 8 trn2 with a cache aware router. - Can process 3.57M TPM (tokens per minute) on SemiAnalysis&#x27;s AgentX benchmarks. - Runs decode as one NKI kernel per layer half, or for the 11 sparse-attention layers fuses both blocks into a single kernel, for faster performance. We started working on Trn2 because we wanted to explore it and see if we can come close to beating it’s performance in terms of cost efficiency compared to H100&#x2F;H200. A big MoE with 1M context window such as GLM-5.3 flash requires a lot of memory, and memory&#x2F;tb on a trn2.48xlarge costs less than half compared to 8x h200 on AWS, and hence we wanted to experiment with it and now we’re sharing some early results. But AWS&#x27;s own stack didn&#x27;t support the model: vLLM Neuron&#x27;s latest release did not register any GLM model, and NxDI, AWS&#x27;s own distributed inference framework, is no longer under active development. We also saw the drop of SGLang Neuron implementation yesterday, but there is no good support for Trn2, which is the only chip available for public use right now. We ran semiAnalysis&#x27;s AgentX benchmarks, which replays real coding agent sessions: - 1 box served 28.9 RPM(requests per minute) with 32 agents at batch 12 (also known as concurrency) -The P50 TTFT with a cached prompt at 16 agents is ~1.24 seconds with a decode of 35.9 tps. Initially, the recurrence in one kda (linear attention) layer was ~2% of the layer&#x27;s attention time at batch 1, and the rest was projections, transposes and XLA glue between small kernels. So we wrote the megakernel so that it covers the whole layer in 2 kernel dispatch, which made decode 25% faster at batch 8. The sparse attention kernel keep a layer’s working weights in SBUF, distributing weighted streaming across the cores and handling the interchip communication within There’s an approximation in the sparse-attention prefill, affecting about 1.2% of block selections. You can refer to the write-up for the profiling results: https:&#x2F;&#x2F;runanywhere.ai&#x2F;blog&#x2F;glm-5-3-flash-trainium2-nki-mega... Please give it a try yourself on a trn2.48xlarge and reproduce the AgentX results by following the steps in docs&#x2F;RESULTS.md. Happy to collaborate and hear any feedback. Deploying high performant dedicated inference at lab like performance and half the price for open models such as the GLM-5.3 family, Kimi K3, Deepseek flash etc. is how we make money. You can talk to us regarding the same at founders@runanywhere.ai. We hope you find this useful. If you are working with Trainium or have experience with NKI kernels, we&#x27;d love to get your honest feedback. Feel free to share the models you want support for next, and we welcome any contributions to the repository.",
-          "why": "Linus Torvalds threatening to crack down on AI-generated kernel patches is a real-world signal that AI coding agents are now producing code at a scale that overwhelms human review — not a theoretical future, but today's bottleneck."
+          "publishedAt": "2026-11-24T20:44:15Z",
+          "score": 301,
+          "summary": "Hey HN, we’re Harshith, Param, and Vishnu and we&#x27;re building Versine ( https:&#x2F;&#x2F;versine.com ). Versine lets you send and request money just by talking or texting with your AI (think Venmo with an MCP). We’re software engineers who have worked on distributed systems at Stripe, Databricks, and Amazon. Versine is an MCP that sits in front of a wallet with a balance. With it, your agent can do things like: - Send money to someone with your approval (via passkey in our app) - Send and request money to&#x2F;from up to 100 people at once - Send money to people without a Versine account (they cash out to their bank in 2 mins) - Pay people without your explicit approval to trusted contacts (you can set this) Here’s a demo: https:&#x2F;&#x2F;youtube.com&#x2F;shorts&#x2F;Q9X7zioEqi0 We started working on this because assistants are frustratingly hands-off when it comes to finance and money movement. You can have your assistant go through a receipt and map out all the amounts owed taking care of splitting the subtotal, taxes, tips, but at the end of it the assistant hands back work to you when you have to go out and make the Venmo transfer. Our current solution is oriented towards power users: those who want to automate everything through their agent use us to split dinners, group trips, or settle poker ledgers. We see ourselves unlocking more value for the general consumer as 1. More people turn into power users of agents, and 2. We expand to a more complete banking solution: deposits, transfers, wires, everything you can (and more) do with your bank offered as an MCP. Behind the scenes, each user has a self-custodial stablecoin wallet storing USDC on Base. With self-custodial wallets, users own their keys, meaning money can’t be sent without their approval. Interestingly, we were almost forced into this solution because we had around 4 weeks to build this product (after a pivot), and traditional fiat with a partner bank would have caused far too many regulatory and compliance slowdowns. Because of that, the only fast option that remained was using stablecoin wallets. It also ensures we aren&#x27;t a Money Services Business (MSB) since we don’t hold control or access to the user’s funds. Each call to the wallet creates what we call one-time or recurring standing permissions. For a one-time payment, your agent makes an MCP call, and you receive a notification in our mobile app. Once you swipe up in the app and approve with a passkey (or your device’s biometric method), we create a one-time permission that instructs your wallet to send $X to your recipient’s address. Trusted contacts let your agent send money to people that you’ve previously authorized without explicit passkey approval. Generally, these are people that you’d trust to send your money back even if your agent made a mistake. We’re also able to support sending money to someone off Versine using claim forwarding, where the user authorizes us to forward a specific amount to a future address (which we create once we verify a recipient&#x27;s OTP). Param worked on scaling vector search at Databricks and harness evals at Glean. Harshith worked on core Stripe Connect fee-processing infrastructure and built an AWS Fargate autoscaler at Amazon. Vishnu worked on intent-based agent testing infrastructure at Amazon. None of us were experienced in stablecoin or crypto infra before working on Versine but our distributed systems experience has helped us a lot. We&#x27;d love for you guys to try it! It&#x27;s available on iOS and Android and as an MCP on ChatGPT and Claude. We also support a public MCP and REST API for other agents. Please let us know how you find it and if it works as you&#x27;d hoped! https:&#x2F;&#x2F;versine.com",
+          "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
+        },
+        {
+          "title": "Show HN: Brickie – Deploy sandboxes in your own AWS account",
+          "source": "Hacker News",
+          "url": "https://github.com/hatchet-dev/brickie",
+          "meta": "26 pts · 5 comments",
+          "topics": [
+            "Tool use",
+            "Multi-agent workflows",
+            "Memory and state",
+            "Open weights"
+          ],
+          "publishedAt": "2026-11-24T15:48:34Z",
+          "score": 162,
+          "summary": "Hey HN, this is Alexander from Hatchet ( https:&#x2F;&#x2F;github.com&#x2F;hatchet-dev&#x2F;hatchet ). We’re releasing a new open-source project today called Brickie. Brickie lets you run sandboxes in your own cloud account, primarily targeting EKS on AWS. Sandboxes are an incredibly useful primitive for agentic applications. They serve two main functions: (1) a way for the agent to safely execute untrusted code, and (2) a durable filesystem for agents to preserve their state via snapshots. We decided to start building this after we started on a package called `@hatchet-dev&#x2F;sandbox` to integrate more directly with various sandbox providers, like E2B, Daytona, Archil, and Modal. We discovered that a lot of users had a requirement to self-host their sandbox infra for part of (or all of) their stack, due to a self-host requirement for enterprises. We searched around for the easiest way for users to self-host a sandbox stack and agent-sandbox ( https:&#x2F;&#x2F;agent-sandbox.sigs.k8s.io ) was the closest thing to what we had in mind: it’s a kubernetes-sigs project implementing a Kubernetes operator which spawns sandboxes as pods on supported isolation layers like Firecracker, gVisor, and Kata Containers. We learned that many platform teams were adopting this because it&#x27;s a standard k8s-based deployment model and is pretty easy to customize the isolation layer, network config, etc. However, it was missing some necessary features. brickie builds on top of the agent-sandbox project and extends it to support proper sandbox (filesystem-based) snapshots, fork, pause, and resume, all while bundling a proper orchestration and observability layer via Hatchet. Zooming out a bit, Hatchet is an orchestration engine which supports durable execution ( https:&#x2F;&#x2F;hatchet.run&#x2F;blog&#x2F;durable-execution ). Throughout 2026, we saw high adoption from users building agents using durable workflows as the statefulness layer and execution model. But as sandboxes became more popular, something didn’t sit right with us. Sandboxes _also_ provide a durability layer, but at the filesystem level, and it became important to disambiguate what we call session state from filesystem state . I wrote a lot more about this here: https:&#x2F;&#x2F;hatchet.run&#x2F;blog&#x2F;agent-statefulness . The problem with having state in multiple places is that it needs coordination, which adds complexity to your application. This was part of the motivation behind `@hatchet-dev&#x2F;sandbox`: we wanted to provide an easy way to take coordinated snapshots of agent state, even when using an external sandbox provider. So when we started looking at self-hosted sandbox options, it was critical that this architecture was supported well. We decided to support this in brickie using a pretty simple snapshotting mechanism which tars and stores snapshots in an object store (S3). This is something we’re actively working to improve and make more performant. Brickie is early and in beta, we&#x27;re looking for testers, contributors, and feedback on the deployment model. Thanks in advance!",
+          "why": "Self-hosted sandboxes and MCP tunnels solve the enterprise 'my data in your sandbox' blocker that has been the single biggest friction point for production agent deployments."
         }
       ]
     },
@@ -214,7 +255,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "109050 stars · updated Tue, 24 Nov 2026 03:54:31 UTC",
+          "meta": "109065 stars · updated Wed, 25 Nov 2026 00:08:03 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -222,7 +263,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 684418,
+          "score": 684508,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -230,7 +271,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9643 stars · updated Tue, 24 Nov 2026 04:28:44 UTC",
+          "meta": "9649 stars · updated Wed, 25 Nov 2026 00:28:02 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -238,7 +279,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 59862,
+          "score": 59902,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -246,14 +287,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6485 stars · updated Sun, 08 Nov 2026 08:23:11 UTC",
+          "meta": "6487 stars · updated Sun, 08 Nov 2026 08:23:11 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 39616,
+          "score": 39628,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -261,13 +302,13 @@
           "title": "EL4CTEO/fast-anything",
           "source": "GitHub",
           "url": "https://github.com/EL4CTEO/fast-anything",
-          "meta": "3488 stars · updated Tue, 24 Nov 2026 14:30:11 UTC",
+          "meta": "3601 stars · updated Tue, 24 Nov 2026 15:28:28 UTC",
           "topics": [
             "Tool use",
             "Coding agents"
           ],
-          "publishedAt": "2026-11-24T14:30:11Z",
-          "score": 21590,
+          "publishedAt": "2026-11-24T15:28:28Z",
+          "score": 22296,
           "summary": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -276,63 +317,63 @@
   ],
   "tangentRadar": [
     {
-      "topic": "Coding agents",
-      "signalCount": 30,
-      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
-      "signals": [
-        "OpenAI: The Codex Sandbox",
-        "Hacker News: Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
-        "OpenAI: Explore the Codex Security Plugin"
-      ]
-    },
-    {
       "topic": "Tool use",
-      "signalCount": 26,
+      "signalCount": 30,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "OpenAI: The Codex Sandbox",
-        "OpenAI: Explore the Codex Security Plugin",
-        "Google AI: Introducing Tool Retrieval in the Gemini API"
+        "Hacker News: Launch HN: Versine (YC F26) – MCP to send and receive money",
+        "Hacker News: Show HN: Brickie – Deploy sandboxes in your own AWS account"
       ]
     },
     {
-      "topic": "Open weights",
-      "signalCount": 18,
-      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "topic": "Coding agents",
+      "signalCount": 27,
+      "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "Hacker News: Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
-        "GitHub: nkjDSLcvanv/antigravity-codex-theme",
-        "GitHub: JimLiu/open-artifact"
+        "OpenAI: The Codex Sandbox",
+        "OpenAI: How iFood scales coding agents across 15,000 repositories",
+        "OpenAI: Clay helps sales teams win with Codex and ChatGPT"
       ]
     },
     {
       "topic": "Major labs",
-      "signalCount": 17,
+      "signalCount": 21,
       "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
       "signals": [
         "OpenAI: The Codex Sandbox",
-        "OpenAI: Explore the Codex Security Plugin",
-        "Google AI: Introducing Tool Retrieval in the Gemini API"
+        "OpenAI: How iFood scales coding agents across 15,000 repositories",
+        "OpenAI: Clay helps sales teams win with Codex and ChatGPT"
+      ]
+    },
+    {
+      "topic": "Open weights",
+      "signalCount": 17,
+      "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
+      "signals": [
+        "Hacker News: Show HN: Brickie – Deploy sandboxes in your own AWS account",
+        "GitHub: Underspace1/relais",
+        "GitHub: w01fb0ss/PiBot"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 17,
+      "signalCount": 16,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
+        "Hacker News: Launch HN: Versine (YC F26) – MCP to send and receive money",
         "GitHub: xikhar/papercraft",
-        "GitHub: JimLiu/open-artifact",
         "GitHub: ankitjha67/JARVIS"
       ]
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 10,
+      "signalCount": 14,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
+        "Hacker News: Show HN: Brickie – Deploy sandboxes in your own AWS account",
         "GitHub: Robot2050/Awesome-Speculative-Inference",
-        "GitHub: Underspace1/relais",
-        "GitHub: ankitjha67/JARVIS"
+        "GitHub: Underspace1/relais"
       ]
     }
   ],
