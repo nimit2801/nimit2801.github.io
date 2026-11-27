@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-26T13:40:27Z",
+  "generatedAt": "2026-11-27T00:25:59Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, event-driven and browser/MCP plumbing is becoming part of the agent conversation. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 51,
+    "items": 47,
     "sources": {
-      "GitHub": 44,
-      "Google AI": 2,
+      "GitHub": 42,
+      "Google AI": 1,
       "Hacker News": 2,
-      "OpenAI": 3
+      "OpenAI": 2
     }
   },
   "highlights": [
@@ -28,21 +28,6 @@
       "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
     },
     {
-      "title": "Inside The Codex Sandbox",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/inside-the-codex-sandbox/",
-      "meta": "2 pts · 0 comments",
-      "topics": [
-        "Tool use",
-        "Major labs",
-        "Coding agents"
-      ],
-      "publishedAt": "2026-11-19T18:49:11Z",
-      "score": 94,
-      "summary": "",
-      "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
-    },
-    {
       "title": "How iFood scales coding agents across 15,000 repositories",
       "url": "https://openai.com/business/customer-stories/ifood",
       "publishedAt": "Tue, 24 Nov 2026 00:00:00 GMT",
@@ -57,17 +42,31 @@
       "why": "Major lab launches still reshape the practical design space for agent builders almost overnight."
     },
     {
+      "title": "How Gemini is changing the game for Golden State's organization and fans.",
+      "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+      "publishedAt": "Tue, 24 Nov 2026 16:00:00 +0000",
+      "source": "Google AI",
+      "meta": "Tue, 24 Nov 2026 16:00:00 GMT",
+      "topics": [
+        "Memory and state",
+        "Major labs"
+      ],
+      "score": 180,
+      "summary": "How Gemini is changing the game for Golden State's organization and fans.",
+      "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
+    },
+    {
       "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
       "source": "Hacker News",
       "url": "https://news.ycombinator.com/item?id=50634426",
-      "meta": "106 pts · 105 comments",
+      "meta": "106 pts · 107 comments",
       "topics": [
         "Tool use",
         "Evaluation",
         "Interfaces"
       ],
       "publishedAt": "2026-11-24T20:44:15Z",
-      "score": 582,
+      "score": 588,
       "summary": "Hey HN, we’re Harshith, Param, and Vishnu and we&#x27;re building Versine ( https:&#x2F;&#x2F;versine.com ). Versine lets you send and request money just by talking or texting with your AI (think Venmo with an MCP). We’re software engineers who have worked on distributed systems at Stripe, Databricks, and Amazon. Versine is an MCP that sits in front of a wallet with a balance. With it, your agent can do things like: - Send money to someone with your approval (via passkey in our app) - Send and request money to&#x2F;from up to 100 people at once - Send money to people without a Versine account (they cash out to their bank in 2 mins) - Pay people without your explicit approval to trusted contacts (you can set this) Here’s a demo: https:&#x2F;&#x2F;youtube.com&#x2F;shorts&#x2F;Q9X7zioEqi0 We started working on this because assistants are frustratingly hands-off when it comes to finance and money movement. You can have your assistant go through a receipt and map out all the amounts owed taking care of splitting the subtotal, taxes, tips, but at the end of it the assistant hands back work to you when you have to go out and make the Venmo transfer. Our current solution is oriented towards power users: those who want to automate everything through their agent use us to split dinners, group trips, or settle poker ledgers. We see ourselves unlocking more value for the general consumer as 1. More people turn into power users of agents, and 2. We expand to a more complete banking solution: deposits, transfers, wires, everything you can (and more) do with your bank offered as an MCP. Behind the scenes, each user has a self-custodial stablecoin wallet storing USDC on Base. With self-custodial wallets, users own their keys, meaning money can’t be sent without their approval. Interestingly, we were almost forced into this solution because we had around 4 weeks to build this product (after a pivot), and traditional fiat with a partner bank would have caused far too many regulatory and compliance slowdowns. Because of that, the only fast option that remained was using stablecoin wallets. It also ensures we aren&#x27;t a Money Services Business (MSB) since we don’t hold control or access to the user’s funds. Each call to the wallet creates what we call one-time or recurring standing permissions. For a one-time payment, your agent makes an MCP call, and you receive a notification in our mobile app. Once you swipe up in the app and approve with a passkey (or your device’s biometric method), we create a one-time permission that instructs your wallet to send $X to your recipient’s address. Trusted contacts let your agent send money to people that you’ve previously authorized without explicit passkey approval. Generally, these are people that you’d trust to send your money back even if your agent made a mistake. We’re also able to support sending money to someone off Versine using claim forwarding, where the user authorizes us to forward a specific amount to a future address (which we create once we verify a recipient&#x27;s OTP). Param worked on scaling vector search at Databricks and harness evals at Glean. Harshith worked on core Stripe Connect fee-processing infrastructure and built an AWS Fargate autoscaler at Amazon. Vishnu worked on intent-based agent testing infrastructure at Amazon. None of us were experienced in stablecoin or crypto infra before working on Versine but our distributed systems experience has helped us a lot. We&#x27;d love for you guys to try it! It&#x27;s available on iOS and Android and as an MCP on ChatGPT and Claude. We also support a public MCP and REST API for other agents. Please let us know how you find it and if it works as you&#x27;d hoped! https:&#x2F;&#x2F;versine.com",
       "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
     },
@@ -75,7 +74,7 @@
       "title": "Show HN: Brickie – Deploy sandboxes in your own AWS account",
       "source": "Hacker News",
       "url": "https://github.com/hatchet-dev/brickie",
-      "meta": "32 pts · 9 comments",
+      "meta": "35 pts · 13 comments",
       "topics": [
         "Tool use",
         "Multi-agent workflows",
@@ -83,7 +82,7 @@
         "Open weights"
       ],
       "publishedAt": "2026-11-24T15:48:34Z",
-      "score": 186,
+      "score": 204,
       "summary": "Hey HN, this is Alexander from Hatchet ( https:&#x2F;&#x2F;github.com&#x2F;hatchet-dev&#x2F;hatchet ). We’re releasing a new open-source project today called Brickie. Brickie lets you run sandboxes in your own cloud account, primarily targeting EKS on AWS. Sandboxes are an incredibly useful primitive for agentic applications. They serve two main functions: (1) a way for the agent to safely execute untrusted code, and (2) a durable filesystem for agents to preserve their state via snapshots. We decided to start building this after we started on a package called `@hatchet-dev&#x2F;sandbox` to integrate more directly with various sandbox providers, like E2B, Daytona, Archil, and Modal. We discovered that a lot of users had a requirement to self-host their sandbox infra for part of (or all of) their stack, due to a self-host requirement for enterprises. We searched around for the easiest way for users to self-host a sandbox stack and agent-sandbox ( https:&#x2F;&#x2F;agent-sandbox.sigs.k8s.io ) was the closest thing to what we had in mind: it’s a kubernetes-sigs project implementing a Kubernetes operator which spawns sandboxes as pods on supported isolation layers like Firecracker, gVisor, and Kata Containers. We learned that many platform teams were adopting this because it&#x27;s a standard k8s-based deployment model and is pretty easy to customize the isolation layer, network config, etc. However, it was missing some necessary features. brickie builds on top of the agent-sandbox project and extends it to support proper sandbox (filesystem-based) snapshots, fork, pause, and resume, all while bundling a proper orchestration and observability layer via Hatchet. Zooming out a bit, Hatchet is an orchestration engine which supports durable execution ( https:&#x2F;&#x2F;hatchet.run&#x2F;blog&#x2F;durable-execution ). Throughout 2026, we saw high adoption from users building agents using durable workflows as the statefulness layer and execution model. But as sandboxes became more popular, something didn’t sit right with us. Sandboxes _also_ provide a durability layer, but at the filesystem level, and it became important to disambiguate what we call session state from filesystem state . I wrote a lot more about this here: https:&#x2F;&#x2F;hatchet.run&#x2F;blog&#x2F;agent-statefulness . The problem with having state in multiple places is that it needs coordination, which adds complexity to your application. This was part of the motivation behind `@hatchet-dev&#x2F;sandbox`: we wanted to provide an easy way to take coordinated snapshots of agent state, even when using an external sandbox provider. So when we started looking at self-hosted sandbox options, it was critical that this architecture was supported well. We decided to support this in brickie using a pretty simple snapshotting mechanism which tars and stores snapshots in an object store (S3). This is something we’re actively working to improve and make more performant. Brickie is early and in beta, we&#x27;re looking for testers, contributors, and feedback on the deployment model. Thanks in advance!",
       "why": "Self-hosted sandboxes and MCP tunnels solve the enterprise 'my data in your sandbox' blocker that has been the single biggest friction point for production agent deployments."
     },
@@ -91,7 +90,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "109171 stars · updated Thu, 26 Nov 2026 01:12:06 UTC",
+      "meta": "109197 stars · updated Thu, 26 Nov 2026 01:12:06 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -99,7 +98,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 685190,
+      "score": 685338,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -107,7 +106,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9659 stars · updated Thu, 26 Nov 2026 08:10:43 UTC",
+      "meta": "9670 stars · updated Fri, 27 Nov 2026 00:23:09 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -115,7 +114,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 59974,
+      "score": 60042,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -167,37 +166,6 @@
           "score": 180,
           "summary": "How Gemini is changing the game for Golden State's organization and fans.",
           "why": "A lot of the quality gap in agents still comes down to state handling, durability, and clearer control flow."
-        },
-        {
-          "title": "Introducing Tool Retrieval in the Gemini API",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
-          "publishedAt": "Thu, 19 Nov 2026 18:00:00 +0000",
-          "source": "Google AI",
-          "meta": "Thu, 19 Nov 2026 18:00:00 GMT",
-          "topics": [
-            "Tool use",
-            "Evaluation",
-            "Major labs",
-            "Coding agents"
-          ],
-          "score": 180,
-          "summary": "Introducing Tool Retrieval in the Gemini API",
-          "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
-        },
-        {
-          "title": "Inside The Codex Sandbox",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/inside-the-codex-sandbox/",
-          "meta": "2 pts · 0 comments",
-          "topics": [
-            "Tool use",
-            "Major labs",
-            "Coding agents"
-          ],
-          "publishedAt": "2026-11-19T18:49:11Z",
-          "score": 94,
-          "summary": "",
-          "why": "OpenAI is turning coding agents into a more deployable systems product. The sandbox angle matters because agent adoption increasingly depends on guardrails, not raw model quality alone."
         }
       ]
     },
@@ -209,14 +177,14 @@
           "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
           "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=50634426",
-          "meta": "106 pts · 105 comments",
+          "meta": "106 pts · 107 comments",
           "topics": [
             "Tool use",
             "Evaluation",
             "Interfaces"
           ],
           "publishedAt": "2026-11-24T20:44:15Z",
-          "score": 582,
+          "score": 588,
           "summary": "Hey HN, we’re Harshith, Param, and Vishnu and we&#x27;re building Versine ( https:&#x2F;&#x2F;versine.com ). Versine lets you send and request money just by talking or texting with your AI (think Venmo with an MCP). We’re software engineers who have worked on distributed systems at Stripe, Databricks, and Amazon. Versine is an MCP that sits in front of a wallet with a balance. With it, your agent can do things like: - Send money to someone with your approval (via passkey in our app) - Send and request money to&#x2F;from up to 100 people at once - Send money to people without a Versine account (they cash out to their bank in 2 mins) - Pay people without your explicit approval to trusted contacts (you can set this) Here’s a demo: https:&#x2F;&#x2F;youtube.com&#x2F;shorts&#x2F;Q9X7zioEqi0 We started working on this because assistants are frustratingly hands-off when it comes to finance and money movement. You can have your assistant go through a receipt and map out all the amounts owed taking care of splitting the subtotal, taxes, tips, but at the end of it the assistant hands back work to you when you have to go out and make the Venmo transfer. Our current solution is oriented towards power users: those who want to automate everything through their agent use us to split dinners, group trips, or settle poker ledgers. We see ourselves unlocking more value for the general consumer as 1. More people turn into power users of agents, and 2. We expand to a more complete banking solution: deposits, transfers, wires, everything you can (and more) do with your bank offered as an MCP. Behind the scenes, each user has a self-custodial stablecoin wallet storing USDC on Base. With self-custodial wallets, users own their keys, meaning money can’t be sent without their approval. Interestingly, we were almost forced into this solution because we had around 4 weeks to build this product (after a pivot), and traditional fiat with a partner bank would have caused far too many regulatory and compliance slowdowns. Because of that, the only fast option that remained was using stablecoin wallets. It also ensures we aren&#x27;t a Money Services Business (MSB) since we don’t hold control or access to the user’s funds. Each call to the wallet creates what we call one-time or recurring standing permissions. For a one-time payment, your agent makes an MCP call, and you receive a notification in our mobile app. Once you swipe up in the app and approve with a passkey (or your device’s biometric method), we create a one-time permission that instructs your wallet to send $X to your recipient’s address. Trusted contacts let your agent send money to people that you’ve previously authorized without explicit passkey approval. Generally, these are people that you’d trust to send your money back even if your agent made a mistake. We’re also able to support sending money to someone off Versine using claim forwarding, where the user authorizes us to forward a specific amount to a future address (which we create once we verify a recipient&#x27;s OTP). Param worked on scaling vector search at Databricks and harness evals at Glean. Harshith worked on core Stripe Connect fee-processing infrastructure and built an AWS Fargate autoscaler at Amazon. Vishnu worked on intent-based agent testing infrastructure at Amazon. None of us were experienced in stablecoin or crypto infra before working on Versine but our distributed systems experience has helped us a lot. We&#x27;d love for you guys to try it! It&#x27;s available on iOS and Android and as an MCP on ChatGPT and Claude. We also support a public MCP and REST API for other agents. Please let us know how you find it and if it works as you&#x27;d hoped! https:&#x2F;&#x2F;versine.com",
           "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
         },
@@ -224,7 +192,7 @@
           "title": "Show HN: Brickie – Deploy sandboxes in your own AWS account",
           "source": "Hacker News",
           "url": "https://github.com/hatchet-dev/brickie",
-          "meta": "32 pts · 9 comments",
+          "meta": "35 pts · 13 comments",
           "topics": [
             "Tool use",
             "Multi-agent workflows",
@@ -232,7 +200,7 @@
             "Open weights"
           ],
           "publishedAt": "2026-11-24T15:48:34Z",
-          "score": 186,
+          "score": 204,
           "summary": "Hey HN, this is Alexander from Hatchet ( https:&#x2F;&#x2F;github.com&#x2F;hatchet-dev&#x2F;hatchet ). We’re releasing a new open-source project today called Brickie. Brickie lets you run sandboxes in your own cloud account, primarily targeting EKS on AWS. Sandboxes are an incredibly useful primitive for agentic applications. They serve two main functions: (1) a way for the agent to safely execute untrusted code, and (2) a durable filesystem for agents to preserve their state via snapshots. We decided to start building this after we started on a package called `@hatchet-dev&#x2F;sandbox` to integrate more directly with various sandbox providers, like E2B, Daytona, Archil, and Modal. We discovered that a lot of users had a requirement to self-host their sandbox infra for part of (or all of) their stack, due to a self-host requirement for enterprises. We searched around for the easiest way for users to self-host a sandbox stack and agent-sandbox ( https:&#x2F;&#x2F;agent-sandbox.sigs.k8s.io ) was the closest thing to what we had in mind: it’s a kubernetes-sigs project implementing a Kubernetes operator which spawns sandboxes as pods on supported isolation layers like Firecracker, gVisor, and Kata Containers. We learned that many platform teams were adopting this because it&#x27;s a standard k8s-based deployment model and is pretty easy to customize the isolation layer, network config, etc. However, it was missing some necessary features. brickie builds on top of the agent-sandbox project and extends it to support proper sandbox (filesystem-based) snapshots, fork, pause, and resume, all while bundling a proper orchestration and observability layer via Hatchet. Zooming out a bit, Hatchet is an orchestration engine which supports durable execution ( https:&#x2F;&#x2F;hatchet.run&#x2F;blog&#x2F;durable-execution ). Throughout 2026, we saw high adoption from users building agents using durable workflows as the statefulness layer and execution model. But as sandboxes became more popular, something didn’t sit right with us. Sandboxes _also_ provide a durability layer, but at the filesystem level, and it became important to disambiguate what we call session state from filesystem state . I wrote a lot more about this here: https:&#x2F;&#x2F;hatchet.run&#x2F;blog&#x2F;agent-statefulness . The problem with having state in multiple places is that it needs coordination, which adds complexity to your application. This was part of the motivation behind `@hatchet-dev&#x2F;sandbox`: we wanted to provide an easy way to take coordinated snapshots of agent state, even when using an external sandbox provider. So when we started looking at self-hosted sandbox options, it was critical that this architecture was supported well. We decided to support this in brickie using a pretty simple snapshotting mechanism which tars and stores snapshots in an object store (S3). This is something we’re actively working to improve and make more performant. Brickie is early and in beta, we&#x27;re looking for testers, contributors, and feedback on the deployment model. Thanks in advance!",
           "why": "Self-hosted sandboxes and MCP tunnels solve the enterprise 'my data in your sandbox' blocker that has been the single biggest friction point for production agent deployments."
         }
@@ -256,7 +224,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "109171 stars · updated Thu, 26 Nov 2026 01:12:06 UTC",
+          "meta": "109197 stars · updated Thu, 26 Nov 2026 01:12:06 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -264,7 +232,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 685190,
+          "score": 685338,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -272,7 +240,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9659 stars · updated Thu, 26 Nov 2026 08:10:43 UTC",
+          "meta": "9670 stars · updated Fri, 27 Nov 2026 00:23:09 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -280,7 +248,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 59974,
+          "score": 60042,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -288,14 +256,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6497 stars · updated Wed, 25 Nov 2026 18:03:45 UTC",
+          "meta": "6498 stars · updated Wed, 25 Nov 2026 18:03:45 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 39692,
+          "score": 39700,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -303,13 +271,13 @@
           "title": "EL4CTEO/fast-anything",
           "source": "GitHub",
           "url": "https://github.com/EL4CTEO/fast-anything",
-          "meta": "4132 stars · updated Wed, 25 Nov 2026 16:23:36 UTC",
+          "meta": "4229 stars · updated Thu, 26 Nov 2026 22:46:32 UTC",
           "topics": [
             "Tool use",
             "Coding agents"
           ],
-          "publishedAt": "2026-11-25T16:23:36Z",
-          "score": 25566,
+          "publishedAt": "2026-11-26T22:46:32Z",
+          "score": 26162,
           "summary": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -319,52 +287,52 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 35,
+      "signalCount": 31,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
-        "OpenAI: Inside The Codex Sandbox",
         "Hacker News: Launch HN: Versine (YC F26) – MCP to send and receive money",
-        "Hacker News: Show HN: Brickie – Deploy sandboxes in your own AWS account"
+        "Hacker News: Show HN: Brickie – Deploy sandboxes in your own AWS account",
+        "OpenAI: Clay helps sales teams win with Codex and ChatGPT"
       ]
     },
     {
       "topic": "Coding agents",
-      "signalCount": 29,
+      "signalCount": 26,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
-        "OpenAI: Inside The Codex Sandbox",
         "OpenAI: How iFood scales coding agents across 15,000 repositories",
-        "OpenAI: Clay helps sales teams win with Codex and ChatGPT"
-      ]
-    },
-    {
-      "topic": "Major labs",
-      "signalCount": 19,
-      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
-      "signals": [
-        "OpenAI: Inside The Codex Sandbox",
-        "OpenAI: How iFood scales coding agents across 15,000 repositories",
-        "OpenAI: Clay helps sales teams win with Codex and ChatGPT"
+        "OpenAI: Clay helps sales teams win with Codex and ChatGPT",
+        "GitHub: EL4CTEO/fast-anything"
       ]
     },
     {
       "topic": "Interfaces",
-      "signalCount": 19,
+      "signalCount": 18,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Hacker News: Launch HN: Versine (YC F26) – MCP to send and receive money",
-        "GitHub: qianyiai/kurocat",
-        "GitHub: xikhar/papercraft"
+        "GitHub: qianyiai/KuroCat",
+        "GitHub: nexu-io/opengame"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 19,
+      "signalCount": 17,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Show HN: Brickie – Deploy sandboxes in your own AWS account",
-        "GitHub: qianyiai/kurocat",
-        "GitHub: w01fb0ss/PiBot"
+        "GitHub: qianyiai/KuroCat",
+        "GitHub: nexu-io/opengame"
+      ]
+    },
+    {
+      "topic": "Major labs",
+      "signalCount": 15,
+      "whyItMatters": "Major lab launches still reshape the practical design space for agent builders almost overnight.",
+      "signals": [
+        "OpenAI: How iFood scales coding agents across 15,000 repositories",
+        "OpenAI: Clay helps sales teams win with Codex and ChatGPT",
+        "Google AI: How Gemini is changing the game for Golden State's organization and fans."
       ]
     },
     {
