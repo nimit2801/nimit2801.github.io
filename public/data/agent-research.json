@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-27T00:25:59Z",
+  "generatedAt": "2026-11-27T13:37:37Z",
   "windowDays": 7,
   "summary": "This cycle says major labs are packaging agent workflows for broader adoption (Gemini Spark, Codex mobile), Codex keeps expanding — mobile, enterprise, and deeper agent-loop engineering, event-driven and browser/MCP plumbing is becoming part of the agent conversation. The deeper pattern is that agentic AI is being compressed, packaged, and made more inspectable at the same time.",
   "sourceStats": {
-    "items": 47,
+    "items": 45,
     "sources": {
-      "GitHub": 42,
+      "GitHub": 40,
       "Google AI": 1,
       "Hacker News": 2,
       "OpenAI": 2
@@ -59,14 +59,14 @@
       "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
       "source": "Hacker News",
       "url": "https://news.ycombinator.com/item?id=50634426",
-      "meta": "106 pts · 107 comments",
+      "meta": "109 pts · 110 comments",
       "topics": [
         "Tool use",
         "Evaluation",
         "Interfaces"
       ],
       "publishedAt": "2026-11-24T20:44:15Z",
-      "score": 588,
+      "score": 603,
       "summary": "Hey HN, we’re Harshith, Param, and Vishnu and we&#x27;re building Versine ( https:&#x2F;&#x2F;versine.com ). Versine lets you send and request money just by talking or texting with your AI (think Venmo with an MCP). We’re software engineers who have worked on distributed systems at Stripe, Databricks, and Amazon. Versine is an MCP that sits in front of a wallet with a balance. With it, your agent can do things like: - Send money to someone with your approval (via passkey in our app) - Send and request money to&#x2F;from up to 100 people at once - Send money to people without a Versine account (they cash out to their bank in 2 mins) - Pay people without your explicit approval to trusted contacts (you can set this) Here’s a demo: https:&#x2F;&#x2F;youtube.com&#x2F;shorts&#x2F;Q9X7zioEqi0 We started working on this because assistants are frustratingly hands-off when it comes to finance and money movement. You can have your assistant go through a receipt and map out all the amounts owed taking care of splitting the subtotal, taxes, tips, but at the end of it the assistant hands back work to you when you have to go out and make the Venmo transfer. Our current solution is oriented towards power users: those who want to automate everything through their agent use us to split dinners, group trips, or settle poker ledgers. We see ourselves unlocking more value for the general consumer as 1. More people turn into power users of agents, and 2. We expand to a more complete banking solution: deposits, transfers, wires, everything you can (and more) do with your bank offered as an MCP. Behind the scenes, each user has a self-custodial stablecoin wallet storing USDC on Base. With self-custodial wallets, users own their keys, meaning money can’t be sent without their approval. Interestingly, we were almost forced into this solution because we had around 4 weeks to build this product (after a pivot), and traditional fiat with a partner bank would have caused far too many regulatory and compliance slowdowns. Because of that, the only fast option that remained was using stablecoin wallets. It also ensures we aren&#x27;t a Money Services Business (MSB) since we don’t hold control or access to the user’s funds. Each call to the wallet creates what we call one-time or recurring standing permissions. For a one-time payment, your agent makes an MCP call, and you receive a notification in our mobile app. Once you swipe up in the app and approve with a passkey (or your device’s biometric method), we create a one-time permission that instructs your wallet to send $X to your recipient’s address. Trusted contacts let your agent send money to people that you’ve previously authorized without explicit passkey approval. Generally, these are people that you’d trust to send your money back even if your agent made a mistake. We’re also able to support sending money to someone off Versine using claim forwarding, where the user authorizes us to forward a specific amount to a future address (which we create once we verify a recipient&#x27;s OTP). Param worked on scaling vector search at Databricks and harness evals at Glean. Harshith worked on core Stripe Connect fee-processing infrastructure and built an AWS Fargate autoscaler at Amazon. Vishnu worked on intent-based agent testing infrastructure at Amazon. None of us were experienced in stablecoin or crypto infra before working on Versine but our distributed systems experience has helped us a lot. We&#x27;d love for you guys to try it! It&#x27;s available on iOS and Android and as an MCP on ChatGPT and Claude. We also support a public MCP and REST API for other agents. Please let us know how you find it and if it works as you&#x27;d hoped! https:&#x2F;&#x2F;versine.com",
       "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
     },
@@ -90,7 +90,7 @@
       "title": "google-gemini/gemini-cli",
       "source": "GitHub",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "meta": "109197 stars · updated Thu, 26 Nov 2026 01:12:06 UTC",
+      "meta": "109228 stars · updated Fri, 27 Nov 2026 10:00:19 UTC",
       "topics": [
         "Tool use",
         "Open weights",
@@ -98,7 +98,7 @@
         "Coding agents"
       ],
       "publishedAt": "2025-04-17T17:04:31Z",
-      "score": 685338,
+      "score": 685540,
       "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     },
@@ -106,7 +106,7 @@
       "title": "LearningCircuit/local-deep-research",
       "source": "GitHub",
       "url": "https://github.com/LearningCircuit/local-deep-research",
-      "meta": "9670 stars · updated Fri, 27 Nov 2026 00:23:09 UTC",
+      "meta": "9681 stars · updated Fri, 27 Nov 2026 11:23:46 UTC",
       "topics": [
         "Tool use",
         "Evaluation",
@@ -114,7 +114,7 @@
         "Major labs"
       ],
       "publishedAt": "2025-02-09T15:41:32Z",
-      "score": 60042,
+      "score": 60112,
       "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
     }
@@ -177,14 +177,14 @@
           "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
           "source": "Hacker News",
           "url": "https://news.ycombinator.com/item?id=50634426",
-          "meta": "106 pts · 107 comments",
+          "meta": "109 pts · 110 comments",
           "topics": [
             "Tool use",
             "Evaluation",
             "Interfaces"
           ],
           "publishedAt": "2026-11-24T20:44:15Z",
-          "score": 588,
+          "score": 603,
           "summary": "Hey HN, we’re Harshith, Param, and Vishnu and we&#x27;re building Versine ( https:&#x2F;&#x2F;versine.com ). Versine lets you send and request money just by talking or texting with your AI (think Venmo with an MCP). We’re software engineers who have worked on distributed systems at Stripe, Databricks, and Amazon. Versine is an MCP that sits in front of a wallet with a balance. With it, your agent can do things like: - Send money to someone with your approval (via passkey in our app) - Send and request money to&#x2F;from up to 100 people at once - Send money to people without a Versine account (they cash out to their bank in 2 mins) - Pay people without your explicit approval to trusted contacts (you can set this) Here’s a demo: https:&#x2F;&#x2F;youtube.com&#x2F;shorts&#x2F;Q9X7zioEqi0 We started working on this because assistants are frustratingly hands-off when it comes to finance and money movement. You can have your assistant go through a receipt and map out all the amounts owed taking care of splitting the subtotal, taxes, tips, but at the end of it the assistant hands back work to you when you have to go out and make the Venmo transfer. Our current solution is oriented towards power users: those who want to automate everything through their agent use us to split dinners, group trips, or settle poker ledgers. We see ourselves unlocking more value for the general consumer as 1. More people turn into power users of agents, and 2. We expand to a more complete banking solution: deposits, transfers, wires, everything you can (and more) do with your bank offered as an MCP. Behind the scenes, each user has a self-custodial stablecoin wallet storing USDC on Base. With self-custodial wallets, users own their keys, meaning money can’t be sent without their approval. Interestingly, we were almost forced into this solution because we had around 4 weeks to build this product (after a pivot), and traditional fiat with a partner bank would have caused far too many regulatory and compliance slowdowns. Because of that, the only fast option that remained was using stablecoin wallets. It also ensures we aren&#x27;t a Money Services Business (MSB) since we don’t hold control or access to the user’s funds. Each call to the wallet creates what we call one-time or recurring standing permissions. For a one-time payment, your agent makes an MCP call, and you receive a notification in our mobile app. Once you swipe up in the app and approve with a passkey (or your device’s biometric method), we create a one-time permission that instructs your wallet to send $X to your recipient’s address. Trusted contacts let your agent send money to people that you’ve previously authorized without explicit passkey approval. Generally, these are people that you’d trust to send your money back even if your agent made a mistake. We’re also able to support sending money to someone off Versine using claim forwarding, where the user authorizes us to forward a specific amount to a future address (which we create once we verify a recipient&#x27;s OTP). Param worked on scaling vector search at Databricks and harness evals at Glean. Harshith worked on core Stripe Connect fee-processing infrastructure and built an AWS Fargate autoscaler at Amazon. Vishnu worked on intent-based agent testing infrastructure at Amazon. None of us were experienced in stablecoin or crypto infra before working on Versine but our distributed systems experience has helped us a lot. We&#x27;d love for you guys to try it! It&#x27;s available on iOS and Android and as an MCP on ChatGPT and Claude. We also support a public MCP and REST API for other agents. Please let us know how you find it and if it works as you&#x27;d hoped! https:&#x2F;&#x2F;versine.com",
           "why": "MCP keeps surfacing as the connective tissue for more grounded agent workflows — standard tool surfaces are still one of the cleanest leverage points in the stack."
         },
@@ -224,7 +224,7 @@
           "title": "google-gemini/gemini-cli",
           "source": "GitHub",
           "url": "https://github.com/google-gemini/gemini-cli",
-          "meta": "109197 stars · updated Thu, 26 Nov 2026 01:12:06 UTC",
+          "meta": "109228 stars · updated Fri, 27 Nov 2026 10:00:19 UTC",
           "topics": [
             "Tool use",
             "Open weights",
@@ -232,7 +232,7 @@
             "Coding agents"
           ],
           "publishedAt": "2025-04-17T17:04:31Z",
-          "score": 685338,
+          "score": 685540,
           "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -240,7 +240,7 @@
           "title": "LearningCircuit/local-deep-research",
           "source": "GitHub",
           "url": "https://github.com/LearningCircuit/local-deep-research",
-          "meta": "9670 stars · updated Fri, 27 Nov 2026 00:23:09 UTC",
+          "meta": "9681 stars · updated Fri, 27 Nov 2026 11:23:46 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
@@ -248,7 +248,7 @@
             "Major labs"
           ],
           "publishedAt": "2025-02-09T15:41:32Z",
-          "score": 60042,
+          "score": 60112,
           "summary": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
           "why": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate."
         },
@@ -256,14 +256,14 @@
           "title": "MinishLab/semble",
           "source": "GitHub",
           "url": "https://github.com/MinishLab/semble",
-          "meta": "6498 stars · updated Wed, 25 Nov 2026 18:03:45 UTC",
+          "meta": "6499 stars · updated Fri, 27 Nov 2026 08:49:08 UTC",
           "topics": [
             "Tool use",
             "Evaluation",
             "Coding agents"
           ],
           "publishedAt": "2026-04-06T14:56:45Z",
-          "score": 39700,
+          "score": 39706,
           "summary": "Fast and Accurate Code Search for Agents. Uses 99% fewer tokens than grep+read",
           "why": "This is a strong agent-engineering efficiency signal: giving coding agents semantic code search instead of grep-based token waste directly reduces cost and improves latency on every agent loop."
         },
@@ -271,13 +271,13 @@
           "title": "EL4CTEO/fast-anything",
           "source": "GitHub",
           "url": "https://github.com/EL4CTEO/fast-anything",
-          "meta": "4229 stars · updated Thu, 26 Nov 2026 22:46:32 UTC",
+          "meta": "4396 stars · updated Thu, 26 Nov 2026 22:46:32 UTC",
           "topics": [
             "Tool use",
             "Coding agents"
           ],
           "publishedAt": "2026-11-26T22:46:32Z",
-          "score": 26162,
+          "score": 27186,
           "summary": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
           "why": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions."
         }
@@ -287,7 +287,7 @@
   "tangentRadar": [
     {
       "topic": "Tool use",
-      "signalCount": 31,
+      "signalCount": 29,
       "whyItMatters": "The strongest practical signal right now is still better tooling around how models call, sequence, and recover from actions.",
       "signals": [
         "Hacker News: Launch HN: Versine (YC F26) – MCP to send and receive money",
@@ -297,7 +297,7 @@
     },
     {
       "topic": "Coding agents",
-      "signalCount": 26,
+      "signalCount": 25,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "OpenAI: How iFood scales coding agents across 15,000 repositories",
@@ -307,22 +307,22 @@
     },
     {
       "topic": "Interfaces",
-      "signalCount": 18,
+      "signalCount": 19,
       "whyItMatters": "Agent UX is moving beyond chat boxes — interface design is becoming part of the research frontier.",
       "signals": [
         "Hacker News: Launch HN: Versine (YC F26) – MCP to send and receive money",
-        "GitHub: qianyiai/KuroCat",
-        "GitHub: nexu-io/opengame"
+        "GitHub: nexu-io/opengame",
+        "GitHub: qianyiai/KuroCat"
       ]
     },
     {
       "topic": "Open weights",
-      "signalCount": 17,
+      "signalCount": 16,
       "whyItMatters": "The local/open-weight ecosystem keeps making serious agent workflows cheaper to run, inspect, and iterate.",
       "signals": [
         "Hacker News: Show HN: Brickie – Deploy sandboxes in your own AWS account",
-        "GitHub: qianyiai/KuroCat",
-        "GitHub: nexu-io/opengame"
+        "GitHub: nexu-io/opengame",
+        "GitHub: qianyiai/KuroCat"
       ]
     },
     {
@@ -337,7 +337,7 @@
     },
     {
       "topic": "Multi-agent workflows",
-      "signalCount": 11,
+      "signalCount": 10,
       "whyItMatters": "The comment volume makes this a good proxy for what technically engaged builders think is worth paying attention to.",
       "signals": [
         "Hacker News: Show HN: Brickie – Deploy sandboxes in your own AWS account",
